@@ -11,12 +11,10 @@ In your lakefile.lean add `Unicode.lean` as dependency:
 
 ```lean
 package foo {
-  dependencies := #[
-    {
-      name := `Unicode
-      src := Source.git "https://github.com/xubaiw/Unicode.lean" "<hash>"
-    }
-  ]
+  dependencies := #[{
+    name := `Unicode
+    src := Source.git "https://github.com/xubaiw/Unicode.lean" "main" 
+  }]
 }
 ```
 
