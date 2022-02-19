@@ -285,7 +285,7 @@ instance : Hashable Char := ⟨ λ c => String.hash $ Char.toString c ⟩
 /-- Parse data file `String` into `HashMap`, the unit in parameter is left for `Thunk`. -/
 def parseStrToMapFn (s : String) (unit : Unit) : HashMap Char (List String) := Id.run do
   let mut map := HashMap.empty
-  for line in unicodeDataStr.splitOn "\n" do
+  for line in unicodeDataStr.splitOn "\n" |>.filter (· ≠ "") do
     let splits := line.splitOn ";" |>.map String.trim
     let char := Char.ofNat $ decodeHex! $ splits.get! 0
     map := map.insert char (splits.tail!)
