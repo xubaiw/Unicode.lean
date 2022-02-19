@@ -5,6 +5,8 @@ Unicode related operations for Lean 4.
 - [x] Unicode General Category
 - [ ] TODO
 
+*NOTE:* As Unicode is a huge specification, it will take a long time to implement all its features. If you feel some feature is more urgent, feel free to open an issue or a pull request!
+
 ## Installation
 
 In your lakefile.lean add `Unicode.lean` as dependency:
