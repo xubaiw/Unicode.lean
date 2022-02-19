@@ -1,0 +1,1666 @@
+<html lang="en">
+<head>
+<link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><title>Init.Data.ToString</title>
+<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta></head>
+<body>
+<input id="nav_toggle" type="checkbox"></input><header>
+<h1>
+<label for="nav_toggle">
+</label>
+Documentation</h1>
+<p class="header_filename break_within">Init.Data.ToString</p>
+<form action="https://google.com/search" method="get" id="search_form">
+<input type="hidden" name="sitesearch" value="https://leanprover-community.github.io/mathlib_docs"></input><input type="text" name="q" autocomplete="off"></input><button>Google site search</button>
+</form>
+</header>
+<nav class="internal_nav">
+<h3>
+<a class="break_within" href="#top">Init.Data.ToString</a>
+</h3>
+<p class="gh_nav_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Data/ToString.lean">source</a>
+</p>
+<div class="imports">
+<details>
+<summary>Imports</summary>
+<ul>
+<li>
+<a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
+</li>
+<li>
+<a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
+</li>
+</ul>
+</details>
+<details>
+<summary>Imported by</summary>
+<ul>
+<li>
+<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</li>
+<li>
+<a href="/Unicode.lean/Init/NotationExtra.html">Init.NotationExtra</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Elab/BuiltinNotation.html">Lean.Elab.BuiltinNotation</a>
+</li>
+</ul>
+</details>
+</div>
+</nav>
+<main>
+</main>
+<nav class="nav">
+<h3>General documentation</h3>
+<div class="nav_link">
+<a href="/Unicode.lean/">index</a>
+</div>
+<h3>Library</h3>
+<div class="module_list">
+<details class="nav_sect" data-path="/Unicode.lean/Init.html" open="">
+<summary>Init</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
+<summary>Init.Control</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/Basic.html">Init.Control.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/EState.html">Init.Control.EState</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/Except.html">Init.Control.Except</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/ExceptCps.html">Init.Control.ExceptCps</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/Id.html">Init.Control.Id</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/Lawful.html">Init.Control.Lawful</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/Option.html">Init.Control.Option</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/Reader.html">Init.Control.Reader</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/State.html">Init.Control.State</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/StateCps.html">Init.Control.StateCps</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/StateRef.html">Init.Control.StateRef</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data.html" open="">
+<summary>Init.Data</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
+<summary>Init.Data.Array</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Basic.html">Init.Data.Array.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/BinSearch.html">Init.Data.Array.BinSearch</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/DecidableEq.html">Init.Data.Array.DecidableEq</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Subarray.html">Init.Data.Array.Subarray</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/ByteArray.html">
+<summary>Init.Data.ByteArray</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/ByteArray/Basic.html">Init.Data.ByteArray.Basic</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Char.html">
+<summary>Init.Data.Char</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Char/Basic.html">Init.Data.Char.Basic</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Fin.html">
+<summary>Init.Data.Fin</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Fin/Basic.html">Init.Data.Fin.Basic</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/FloatArray.html">
+<summary>Init.Data.FloatArray</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/FloatArray/Basic.html">Init.Data.FloatArray.Basic</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Format.html">
+<summary>Init.Data.Format</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Format/Basic.html">Init.Data.Format.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Format/Instances.html">Init.Data.Format.Instances</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Format/Macro.html">Init.Data.Format.Macro</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Format/Syntax.html">Init.Data.Format.Syntax</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Int.html">
+<summary>Init.Data.Int</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Int/Basic.html">Init.Data.Int.Basic</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/List.html">
+<summary>Init.Data.List</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/List/Basic.html">Init.Data.List.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/List/BasicAux.html">Init.Data.List.BasicAux</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/List/Control.html">Init.Data.List.Control</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Nat.html">
+<summary>Init.Data.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Basic.html">Init.Data.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Bitwise.html">Init.Data.Nat.Bitwise</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Control.html">Init.Data.Nat.Control</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Div.html">Init.Data.Nat.Div</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Option.html">
+<summary>Init.Data.Option</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Option/Basic.html">Init.Data.Option.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Option/BasicAux.html">Init.Data.Option.BasicAux</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Option/Instances.html">Init.Data.Option.Instances</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/String.html">
+<summary>Init.Data.String</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/String/Basic.html">Init.Data.String.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/String/Extra.html">Init.Data.String.Extra</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/ToString.html" open="">
+<summary>Init.Data.ToString</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Float.html">Init.Data.Float</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Hashable.html">Init.Data.Hashable</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/OfScientific.html">Init.Data.OfScientific</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Range.html">Init.Data.Range</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Repr.html">Init.Data.Repr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Stream.html">Init.Data.Stream</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
+</div>
+<div class="nav_link" visible="">
+<a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/UInt.html">Init.Data.UInt</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/System.html">
+<summary>Init.System</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/System/FilePath.html">Init.System.FilePath</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/System/IO.html">Init.System.IO</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/System/IOError.html">Init.System.IOError</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/System/Platform.html">Init.System.Platform</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/System/ST.html">Init.System.ST</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Classical.html">Init.Classical</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Coe.html">Init.Coe</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control.html">Init.Control</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Conv.html">Init.Conv</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Core.html">Init.Core</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Fix.html">Init.Fix</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Hints.html">Init.Hints</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Meta.html">Init.Meta</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Notation.html">Init.Notation</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/NotationExtra.html">Init.NotationExtra</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Prelude.html">Init.Prelude</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SimpLemmas.html">Init.SimpLemmas</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/System.html">Init.System</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Util.html">Init.Util</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/WF.html">Init.WF</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/WFTactics.html">Init.WFTactics</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean.html">
+<summary>Lean</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
+<summary>Lean.Compiler</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
+<summary>Lean.Compiler.IR</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/Basic.html">Lean.Compiler.IR.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html">Lean.Compiler.IR.Borrow</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/Boxing.html">Lean.Compiler.IR.Boxing</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/Checker.html">Lean.Compiler.IR.Checker</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/CompilerM.html">Lean.Compiler.IR.CompilerM</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/CtorLayout.html">Lean.Compiler.IR.CtorLayout</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/ElimDeadBranches.html">Lean.Compiler.IR.ElimDeadBranches</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/ElimDeadVars.html">Lean.Compiler.IR.ElimDeadVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/EmitC.html">Lean.Compiler.IR.EmitC</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/EmitUtil.html">Lean.Compiler.IR.EmitUtil</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/ExpandResetReuse.html">Lean.Compiler.IR.ExpandResetReuse</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/Format.html">Lean.Compiler.IR.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/FreeVars.html">Lean.Compiler.IR.FreeVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/LiveVars.html">Lean.Compiler.IR.LiveVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/NormIds.html">Lean.Compiler.IR.NormIds</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/PushProj.html">Lean.Compiler.IR.PushProj</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/RC.html">Lean.Compiler.IR.RC</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/ResetReuse.html">Lean.Compiler.IR.ResetReuse</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/SimpCase.html">Lean.Compiler.IR.SimpCase</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/Sorry.html">Lean.Compiler.IR.Sorry</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/UnboxResult.html">Lean.Compiler.IR.UnboxResult</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/BorrowedAnnotation.html">Lean.Compiler.BorrowedAnnotation</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/CSimpAttr.html">Lean.Compiler.CSimpAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/ClosedTermCache.html">Lean.Compiler.ClosedTermCache</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/ConstFolding.html">Lean.Compiler.ConstFolding</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/ExportAttr.html">Lean.Compiler.ExportAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/ExternAttr.html">Lean.Compiler.ExternAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/FFI.html">Lean.Compiler.FFI</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/ImplementedByAttr.html">Lean.Compiler.ImplementedByAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/InitAttr.html">Lean.Compiler.InitAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/InlineAttrs.html">Lean.Compiler.InlineAttrs</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/NameMangling.html">Lean.Compiler.NameMangling</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/NeverExtractAttr.html">Lean.Compiler.NeverExtractAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/NoncomputableAttr.html">Lean.Compiler.NoncomputableAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/Specialize.html">Lean.Compiler.Specialize</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/Util.html">Lean.Compiler.Util</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Data.html">
+<summary>Lean.Data</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
+<summary>Lean.Data.Json</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Json/Basic.html">Lean.Data.Json.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Json/FromToJson.html">Lean.Data.Json.FromToJson</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Json/Parser.html">Lean.Data.Json.Parser</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Json/Printer.html">Lean.Data.Json.Printer</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Json/Stream.html">Lean.Data.Json.Stream</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Lsp.html">
+<summary>Lean.Data.Lsp</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Basic.html">Lean.Data.Lsp.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Capabilities.html">Lean.Data.Lsp.Capabilities</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Client.html">Lean.Data.Lsp.Client</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Communication.html">Lean.Data.Lsp.Communication</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Diagnostics.html">Lean.Data.Lsp.Diagnostics</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Extra.html">Lean.Data.Lsp.Extra</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/InitShutdown.html">Lean.Data.Lsp.InitShutdown</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Internal.html">Lean.Data.Lsp.Internal</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Ipc.html">Lean.Data.Lsp.Ipc</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html">Lean.Data.Lsp.LanguageFeatures</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/TextSync.html">Lean.Data.Lsp.TextSync</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html">Lean.Data.Lsp.Utf16</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Workspace.html">Lean.Data.Lsp.Workspace</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Xml.html">
+<summary>Lean.Data.Xml</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Xml/Basic.html">Lean.Data.Xml.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Xml/Parser.html">Lean.Data.Xml.Parser</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/KVMap.html">Lean.Data.KVMap</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/LBool.html">Lean.Data.LBool</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/LOption.html">Lean.Data.LOption</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Name.html">Lean.Data.Name</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/NameTrie.html">Lean.Data.NameTrie</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Occurrences.html">Lean.Data.Occurrences</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/OpenDecl.html">Lean.Data.OpenDecl</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Options.html">Lean.Data.Options</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Parsec.html">Lean.Data.Parsec</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Position.html">Lean.Data.Position</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/PrefixTree.html">Lean.Data.PrefixTree</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Rat.html">Lean.Data.Rat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/SMap.html">Lean.Data.SMap</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/SSet.html">Lean.Data.SSet</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Trie.html">Lean.Data.Trie</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab.html">
+<summary>Lean.Elab</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
+<summary>Lean.Elab.Deriving</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/BEq.html">Lean.Elab.Deriving.BEq</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/Basic.html">Lean.Elab.Deriving.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/DecEq.html">Lean.Elab.Deriving.DecEq</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/FromToJson.html">Lean.Elab.Deriving.FromToJson</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/Hashable.html">Lean.Elab.Deriving.Hashable</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/Inhabited.html">Lean.Elab.Deriving.Inhabited</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/Ord.html">Lean.Elab.Deriving.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/Repr.html">Lean.Elab.Deriving.Repr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/SizeOf.html">Lean.Elab.Deriving.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/Util.html">Lean.Elab.Deriving.Util</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition.html">
+<summary>Lean.Elab.PreDefinition</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
+<summary>Lean.Elab.PreDefinition.Structural</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/BRecOn.html">Lean.Elab.PreDefinition.Structural.BRecOn</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/Basic.html">Lean.Elab.PreDefinition.Structural.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/Eqns.html">Lean.Elab.PreDefinition.Structural.Eqns</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/FindRecArg.html">Lean.Elab.PreDefinition.Structural.FindRecArg</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/IndPred.html">Lean.Elab.PreDefinition.Structural.IndPred</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/Main.html">Lean.Elab.PreDefinition.Structural.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/Preprocess.html">Lean.Elab.PreDefinition.Structural.Preprocess</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/SmartUnfolding.html">Lean.Elab.PreDefinition.Structural.SmartUnfolding</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">
+<summary>Lean.Elab.PreDefinition.WF</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html">Lean.Elab.PreDefinition.WF.Eqns</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/PackDomain.html">Lean.Elab.PreDefinition.WF.PackDomain</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/PackMutual.html">Lean.Elab.PreDefinition.WF.PackMutual</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Rel.html">Lean.Elab.PreDefinition.WF.Rel</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/TerminationHint.html">Lean.Elab.PreDefinition.WF.TerminationHint</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html">Lean.Elab.PreDefinition.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html">Lean.Elab.PreDefinition.Eqns</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Main.html">Lean.Elab.PreDefinition.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/MkInhabitant.html">Lean.Elab.PreDefinition.MkInhabitant</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Quotation.html">
+<summary>Lean.Elab.Quotation</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html">Lean.Elab.Quotation.Precheck</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Quotation/Util.html">Lean.Elab.Quotation.Util</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic.html">
+<summary>Lean.Elab.Tactic</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
+<summary>Lean.Elab.Tactic.Conv</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Change.html">Lean.Elab.Tactic.Conv.Change</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Congr.html">Lean.Elab.Tactic.Conv.Congr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Delta.html">Lean.Elab.Tactic.Conv.Delta</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Pattern.html">Lean.Elab.Tactic.Conv.Pattern</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Rewrite.html">Lean.Elab.Tactic.Conv.Rewrite</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Simp.html">Lean.Elab.Tactic.Conv.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Unfold.html">Lean.Elab.Tactic.Conv.Unfold</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html">Lean.Elab.Tactic.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Delta.html">Lean.Elab.Tactic.Delta</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html">Lean.Elab.Tactic.ElabTerm</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Generalize.html">Lean.Elab.Tactic.Generalize</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Induction.html">Lean.Elab.Tactic.Induction</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Injection.html">Lean.Elab.Tactic.Injection</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Location.html">Lean.Elab.Tactic.Location</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Match.html">Lean.Elab.Tactic.Match</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Meta.html">Lean.Elab.Tactic.Meta</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Rewrite.html">Lean.Elab.Tactic.Rewrite</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Simp.html">Lean.Elab.Tactic.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Split.html">Lean.Elab.Tactic.Split</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Unfold.html">Lean.Elab.Tactic.Unfold</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/App.html">Lean.Elab.App</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Arg.html">Lean.Elab.Arg</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Attributes.html">Lean.Elab.Attributes</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AutoBound.html">Lean.Elab.AutoBound</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/BindersUtil.html">Lean.Elab.BindersUtil</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/BuiltinCommand.html">Lean.Elab.BuiltinCommand</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/BuiltinNotation.html">Lean.Elab.BuiltinNotation</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html">Lean.Elab.BuiltinTerm</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Command.html">Lean.Elab.Command</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Config.html">Lean.Elab.Config</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/DeclModifiers.html">Lean.Elab.DeclModifiers</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/DeclUtil.html">Lean.Elab.DeclUtil</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Declaration.html">Lean.Elab.Declaration</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/DeclarationRange.html">Lean.Elab.DeclarationRange</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/DefView.html">Lean.Elab.DefView</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/ElabRules.html">Lean.Elab.ElabRules</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Exception.html">Lean.Elab.Exception</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Extra.html">Lean.Elab.Extra</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Frontend.html">Lean.Elab.Frontend</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/GenInjective.html">Lean.Elab.GenInjective</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Import.html">Lean.Elab.Import</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Inductive.html">Lean.Elab.Inductive</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/InfoTree.html">Lean.Elab.InfoTree</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/LetRec.html">Lean.Elab.LetRec</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Level.html">Lean.Elab.Level</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Log.html">Lean.Elab.Log</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Macro.html">Lean.Elab.Macro</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/MacroArgUtil.html">Lean.Elab.MacroArgUtil</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/MacroRules.html">Lean.Elab.MacroRules</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Match.html">Lean.Elab.Match</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/MatchAltView.html">Lean.Elab.MatchAltView</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Mixfix.html">Lean.Elab.Mixfix</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/MutualDef.html">Lean.Elab.MutualDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Notation.html">Lean.Elab.Notation</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Open.html">Lean.Elab.Open</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Print.html">Lean.Elab.Print</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/RecAppSyntax.html">Lean.Elab.RecAppSyntax</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/SetOption.html">Lean.Elab.SetOption</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/StructInst.html">Lean.Elab.StructInst</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Structure.html">Lean.Elab.Structure</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Syntax.html">Lean.Elab.Syntax</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html">Lean.Elab.SyntheticMVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Term.html">Lean.Elab.Term</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Util.html">Lean.Elab.Util</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta.html">
+<summary>Lean.Meta</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
+<summary>Lean.Meta.Match</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/Basic.html">Lean.Meta.Match.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/CaseArraySizes.html">Lean.Meta.Match.CaseArraySizes</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/CaseValues.html">Lean.Meta.Match.CaseValues</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MVarRenaming.html">Lean.Meta.Match.MVarRenaming</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/Match.html">Lean.Meta.Match.Match</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatcherInfo.html">Lean.Meta.Match.MatcherInfo</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/Value.html">Lean.Meta.Match.Value</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
+<summary>Lean.Meta.Tactic</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+<summary>Lean.Meta.Tactic.LinearArith</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
+<summary>Lean.Meta.Tactic.Simp</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html">Lean.Meta.Tactic.Simp.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Rewrite.html">Lean.Meta.Tactic.Simp.Rewrite</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpAll.html">Lean.Meta.Tactic.Simp.SimpAll</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpCongrTheorems.html">Lean.Meta.Tactic.Simp.SimpCongrTheorems</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html">Lean.Meta.Tactic.Simp.SimpTheorems</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Assert.html">Lean.Meta.Tactic.Assert</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Assumption.html">Lean.Meta.Tactic.Assumption</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AuxLemma.html">Lean.Meta.Tactic.AuxLemma</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Cases.html">Lean.Meta.Tactic.Cases</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Cleanup.html">Lean.Meta.Tactic.Cleanup</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Clear.html">Lean.Meta.Tactic.Clear</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Constructor.html">Lean.Meta.Tactic.Constructor</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Contradiction.html">Lean.Meta.Tactic.Contradiction</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Delta.html">Lean.Meta.Tactic.Delta</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/ElimInfo.html">Lean.Meta.Tactic.ElimInfo</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/FVarSubst.html">Lean.Meta.Tactic.FVarSubst</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Generalize.html">Lean.Meta.Tactic.Generalize</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Induction.html">Lean.Meta.Tactic.Induction</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Injection.html">Lean.Meta.Tactic.Injection</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Rename.html">Lean.Meta.Tactic.Rename</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Replace.html">Lean.Meta.Tactic.Replace</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Revert.html">Lean.Meta.Tactic.Revert</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Rewrite.html">Lean.Meta.Tactic.Rewrite</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Split.html">Lean.Meta.Tactic.Split</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/SplitIf.html">Lean.Meta.Tactic.SplitIf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Subst.html">Lean.Meta.Tactic.Subst</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Unfold.html">Lean.Meta.Tactic.Unfold</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Util.html">Lean.Meta.Tactic.Util</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/ACLt.html">Lean.Meta.ACLt</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/AbstractMVars.html">Lean.Meta.AbstractMVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/AbstractNestedProofs.html">Lean.Meta.AbstractNestedProofs</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/AppBuilder.html">Lean.Meta.AppBuilder</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Basic.html">Lean.Meta.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Check.html">Lean.Meta.Check</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Closure.html">Lean.Meta.Closure</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Coe.html">Lean.Meta.Coe</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/CollectFVars.html">Lean.Meta.CollectFVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/CollectMVars.html">Lean.Meta.CollectMVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/CongrTheorems.html">Lean.Meta.CongrTheorems</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Constructions.html">Lean.Meta.Constructions</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/DecLevel.html">Lean.Meta.DecLevel</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/DiscrTree.html">Lean.Meta.DiscrTree</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/DiscrTreeTypes.html">Lean.Meta.DiscrTreeTypes</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Eqns.html">Lean.Meta.Eqns</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/ExprDefEq.html">Lean.Meta.ExprDefEq</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/ForEachExpr.html">Lean.Meta.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/FunInfo.html">Lean.Meta.FunInfo</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/GeneralizeTelescope.html">Lean.Meta.GeneralizeTelescope</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/GeneralizeVars.html">Lean.Meta.GeneralizeVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/GetConst.html">Lean.Meta.GetConst</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/GlobalInstances.html">Lean.Meta.GlobalInstances</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/IndPredBelow.html">Lean.Meta.IndPredBelow</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Inductive.html">Lean.Meta.Inductive</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/InferType.html">Lean.Meta.InferType</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Injective.html">Lean.Meta.Injective</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Instances.html">Lean.Meta.Instances</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/MatchUtil.html">Lean.Meta.MatchUtil</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Offset.html">Lean.Meta.Offset</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/PPGoal.html">Lean.Meta.PPGoal</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/RecursorInfo.html">Lean.Meta.RecursorInfo</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Reduce.html">Lean.Meta.Reduce</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/ReduceEval.html">Lean.Meta.ReduceEval</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Transform.html">Lean.Meta.Transform</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/TransparencyMode.html">Lean.Meta.TransparencyMode</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/UnificationHint.html">Lean.Meta.UnificationHint</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/WHNF.html">Lean.Meta.WHNF</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Parser.html">
+<summary>Lean.Parser</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Attr.html">Lean.Parser.Attr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Basic.html">Lean.Parser.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Command.html">Lean.Parser.Command</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Do.html">Lean.Parser.Do</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Extension.html">Lean.Parser.Extension</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Extra.html">Lean.Parser.Extra</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Level.html">Lean.Parser.Level</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Module.html">Lean.Parser.Module</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/StrInterpolation.html">Lean.Parser.StrInterpolation</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Syntax.html">Lean.Parser.Syntax</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Tactic.html">Lean.Parser.Tactic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Term.html">Lean.Parser.Term</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/ParserCompiler.html">
+<summary>Lean.ParserCompiler</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html">Lean.ParserCompiler.Attribute</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter.html">
+<summary>Lean.PrettyPrinter</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
+<summary>Lean.PrettyPrinter.Delaborator</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html">Lean.PrettyPrinter.Delaborator.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Builtins.html">Lean.PrettyPrinter.Delaborator.Builtins</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Options.html">Lean.PrettyPrinter.Delaborator.Options</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html">Lean.PrettyPrinter.Delaborator.SubExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/TopDownAnalyze.html">Lean.PrettyPrinter.Delaborator.TopDownAnalyze</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Basic.html">Lean.PrettyPrinter.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Formatter.html">Lean.PrettyPrinter.Formatter</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Parenthesizer.html">Lean.PrettyPrinter.Parenthesizer</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Server.html">
+<summary>Lean.Server</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
+<summary>Lean.Server.FileWorker</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html">Lean.Server.FileWorker.RequestHandling</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/FileWorker/Utils.html">Lean.Server.FileWorker.Utils</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html">Lean.Server.FileWorker.WidgetRequests</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/Rpc.html">
+<summary>Lean.Server.Rpc</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Rpc/Basic.html">Lean.Server.Rpc.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Rpc/Deriving.html">Lean.Server.Rpc.Deriving</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Rpc/RequestHandling.html">Lean.Server.Rpc.RequestHandling</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/AsyncList.html">Lean.Server.AsyncList</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Completion.html">Lean.Server.Completion</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/FileSource.html">Lean.Server.FileSource</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/References.html">Lean.Server.References</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Requests.html">Lean.Server.Requests</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Snapshots.html">Lean.Server.Snapshots</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Utils.html">Lean.Server.Utils</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Watchdog.html">Lean.Server.Watchdog</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Util.html">
+<summary>Lean.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/CollectFVars.html">Lean.Util.CollectFVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/CollectLevelParams.html">Lean.Util.CollectLevelParams</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/CollectMVars.html">Lean.Util.CollectMVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/FindExpr.html">Lean.Util.FindExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/FindLevelMVar.html">Lean.Util.FindLevelMVar</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/FindMVar.html">Lean.Util.FindMVar</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/FoldConsts.html">Lean.Util.FoldConsts</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/MonadCache.html">Lean.Util.MonadCache</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/OccursCheck.html">Lean.Util.OccursCheck</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/PPExt.html">Lean.Util.PPExt</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/Path.html">Lean.Util.Path</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/Paths.html">Lean.Util.Paths</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/Profile.html">Lean.Util.Profile</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/RecDepth.html">Lean.Util.RecDepth</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/Recognizers.html">Lean.Util.Recognizers</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/ReplaceExpr.html">Lean.Util.ReplaceExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/ReplaceLevel.html">Lean.Util.ReplaceLevel</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/SCC.html">Lean.Util.SCC</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/Sorry.html">Lean.Util.Sorry</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/Trace.html">Lean.Util.Trace</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Widget.html">
+<summary>Lean.Widget</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Widget/InteractiveCode.html">Lean.Widget.InteractiveCode</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Widget/InteractiveDiagnostic.html">Lean.Widget.InteractiveDiagnostic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Widget/InteractiveGoal.html">Lean.Widget.InteractiveGoal</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Widget/TaggedText.html">Lean.Widget.TaggedText</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Attributes.html">Lean.Attributes</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/AuxRecursor.html">Lean.AuxRecursor</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Class.html">Lean.Class</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/CoreM.html">Lean.CoreM</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Declaration.html">Lean.Declaration</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/DeclarationRange.html">Lean.DeclarationRange</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/DocString.html">Lean.DocString</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Eval.html">Lean.Eval</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Exception.html">Lean.Exception</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Expr.html">Lean.Expr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/HeadIndex.html">Lean.HeadIndex</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Hygiene.html">Lean.Hygiene</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ImportingFlag.html">Lean.ImportingFlag</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/InternalExceptionId.html">Lean.InternalExceptionId</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/KeyedDeclsAttribute.html">Lean.KeyedDeclsAttribute</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/LazyInitExtension.html">Lean.LazyInitExtension</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Level.html">Lean.Level</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/LoadDynlib.html">Lean.LoadDynlib</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/LocalContext.html">Lean.LocalContext</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Message.html">Lean.Message</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/MetavarContext.html">Lean.MetavarContext</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Modifiers.html">Lean.Modifiers</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/MonadEnv.html">Lean.MonadEnv</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ProjFns.html">Lean.ProjFns</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ReducibilityAttrs.html">Lean.ReducibilityAttrs</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ResolveName.html">Lean.ResolveName</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Runtime.html">Lean.Runtime</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ScopedEnvExtension.html">Lean.ScopedEnvExtension</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Structure.html">Lean.Structure</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Syntax.html">Lean.Syntax</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ToExpr.html">Lean.ToExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Std.html">
+<summary>Std</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
+<summary>Std.Data</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/AssocList.html">Std.Data.AssocList</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/HashMap.html">Std.Data.HashMap</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/HashSet.html">Std.Data.HashSet</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/PersistentArray.html">Std.Data.PersistentArray</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/PersistentHashMap.html">Std.Data.PersistentHashMap</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/PersistentHashSet.html">Std.Data.PersistentHashSet</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/RBMap.html">Std.Data.RBMap</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/RBTree.html">Std.Data.RBTree</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/ShareCommon.html">Std.ShareCommon</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Unicode.html">
+<summary>Unicode</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
+<summary>Unicode.General</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/Includes.html">Unicode.Includes</a>
+</div>
+</details>
+</div>
+</nav>
+<script>
+siteRoot = "/Unicode.lean/";
+      </script>
+<script src="/Unicode.lean/nav.js">
+</script>
+<script src="/Unicode.lean/search.js">
+</script>
+<script src="/Unicode.lean/mathjax-config.js">
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,3685 @@
+<html lang="en">
+<head>
+<link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><title>Lean.Data.Lsp.Basic</title>
+<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta></head>
+<body>
+<input id="nav_toggle" type="checkbox"></input><header>
+<h1>
+<label for="nav_toggle">
+</label>
+Documentation</h1>
+<p class="header_filename break_within">Lean.Data.Lsp.Basic</p>
+<form action="https://google.com/search" method="get" id="search_form">
+<input type="hidden" name="sitesearch" value="https://leanprover-community.github.io/mathlib_docs"></input><input type="text" name="q" autocomplete="off"></input><button>Google site search</button>
+</form>
+</header>
+<nav class="internal_nav">
+<h3>
+<a class="break_within" href="#top">Lean.Data.Lsp.Basic</a>
+</h3>
+<p class="gh_nav_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean">source</a>
+</p>
+<div class="imports">
+<details>
+<summary>Imports</summary>
+<ul>
+<li>
+<a href="/Unicode.lean/Init.html">Init</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
+</li>
+</ul>
+</details>
+<details>
+<summary>Imported by</summary>
+<ul>
+<li>
+<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Data/Lsp/Client.html">Lean.Data.Lsp.Client</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Data/Lsp/Diagnostics.html">Lean.Data.Lsp.Diagnostics</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Data/Lsp/Extra.html">Lean.Data.Lsp.Extra</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Data/Lsp/Internal.html">Lean.Data.Lsp.Internal</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html">Lean.Data.Lsp.LanguageFeatures</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Data/Lsp/TextSync.html">Lean.Data.Lsp.TextSync</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html">Lean.Data.Lsp.Utf16</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Data/Lsp/Workspace.html">Lean.Data.Lsp.Workspace</a>
+</li>
+</ul>
+</details>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.CancelParams">Lean.Lsp.CancelParams</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instInhabitedCancelParams">Lean.Lsp.instInhabitedCancelParams</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instBEqCancelParams">Lean.Lsp.instBEqCancelParams</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonCancelParams">Lean.Lsp.instToJsonCancelParams</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonCancelParams">Lean.Lsp.instFromJsonCancelParams</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.DocumentUri">Lean.Lsp.DocumentUri</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.Position">Lean.Lsp.Position</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instInhabitedPosition">Lean.Lsp.instInhabitedPosition</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instBEqPosition">Lean.Lsp.instBEqPosition</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instOrdPosition">Lean.Lsp.instOrdPosition</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instHashablePosition">Lean.Lsp.instHashablePosition</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonPosition">Lean.Lsp.instToJsonPosition</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonPosition">Lean.Lsp.instFromJsonPosition</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToStringPosition">Lean.Lsp.instToStringPosition</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instLTPosition">Lean.Lsp.instLTPosition</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instLEPosition">Lean.Lsp.instLEPosition</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.Range">Lean.Lsp.Range</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instInhabitedRange">Lean.Lsp.instInhabitedRange</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instBEqRange">Lean.Lsp.instBEqRange</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instHashableRange">Lean.Lsp.instHashableRange</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonRange">Lean.Lsp.instToJsonRange</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonRange">Lean.Lsp.instFromJsonRange</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instOrdRange">Lean.Lsp.instOrdRange</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instLTRange">Lean.Lsp.instLTRange</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instLERange">Lean.Lsp.instLERange</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.Location">Lean.Lsp.Location</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instInhabitedLocation">Lean.Lsp.instInhabitedLocation</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instBEqLocation">Lean.Lsp.instBEqLocation</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonLocation">Lean.Lsp.instToJsonLocation</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonLocation">Lean.Lsp.instFromJsonLocation</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.LocationLink">Lean.Lsp.LocationLink</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonLocationLink">Lean.Lsp.instToJsonLocationLink</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonLocationLink">Lean.Lsp.instFromJsonLocationLink</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.Command">Lean.Lsp.Command</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonCommand">Lean.Lsp.instToJsonCommand</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonCommand">Lean.Lsp.instFromJsonCommand</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.TextEdit">Lean.Lsp.TextEdit</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonTextEdit">Lean.Lsp.instToJsonTextEdit</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonTextEdit">Lean.Lsp.instFromJsonTextEdit</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.TextEditBatch">Lean.Lsp.TextEditBatch</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonTextEditBatch">Lean.Lsp.instFromJsonTextEditBatch</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonTextEditBatch">Lean.Lsp.instToJsonTextEditBatch</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.TextDocumentIdentifier">Lean.Lsp.TextDocumentIdentifier</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonTextDocumentIdentifier">Lean.Lsp.instToJsonTextDocumentIdentifier</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonTextDocumentIdentifier">Lean.Lsp.instFromJsonTextDocumentIdentifier</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.VersionedTextDocumentIdentifier">Lean.Lsp.VersionedTextDocumentIdentifier</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonVersionedTextDocumentIdentifier">Lean.Lsp.instToJsonVersionedTextDocumentIdentifier</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonVersionedTextDocumentIdentifier">Lean.Lsp.instFromJsonVersionedTextDocumentIdentifier</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.TextDocumentEdit">Lean.Lsp.TextDocumentEdit</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonTextDocumentEdit">Lean.Lsp.instToJsonTextDocumentEdit</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonTextDocumentEdit">Lean.Lsp.instFromJsonTextDocumentEdit</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.TextDocumentItem">Lean.Lsp.TextDocumentItem</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonTextDocumentItem">Lean.Lsp.instToJsonTextDocumentItem</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonTextDocumentItem">Lean.Lsp.instFromJsonTextDocumentItem</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.TextDocumentPositionParams">Lean.Lsp.TextDocumentPositionParams</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonTextDocumentPositionParams">Lean.Lsp.instToJsonTextDocumentPositionParams</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonTextDocumentPositionParams">Lean.Lsp.instFromJsonTextDocumentPositionParams</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.DocumentFilter">Lean.Lsp.DocumentFilter</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonDocumentFilter">Lean.Lsp.instToJsonDocumentFilter</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonDocumentFilter">Lean.Lsp.instFromJsonDocumentFilter</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.DocumentSelector">Lean.Lsp.DocumentSelector</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonDocumentSelector">Lean.Lsp.instFromJsonDocumentSelector</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonDocumentSelector">Lean.Lsp.instToJsonDocumentSelector</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.StaticRegistrationOptions">Lean.Lsp.StaticRegistrationOptions</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonStaticRegistrationOptions">Lean.Lsp.instToJsonStaticRegistrationOptions</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonStaticRegistrationOptions">Lean.Lsp.instFromJsonStaticRegistrationOptions</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.TextDocumentRegistrationOptions">Lean.Lsp.TextDocumentRegistrationOptions</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonTextDocumentRegistrationOptions">Lean.Lsp.instToJsonTextDocumentRegistrationOptions</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonTextDocumentRegistrationOptions">Lean.Lsp.instFromJsonTextDocumentRegistrationOptions</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.MarkupKind">Lean.Lsp.MarkupKind</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonMarkupKind">Lean.Lsp.instFromJsonMarkupKind</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonMarkupKind">Lean.Lsp.instToJsonMarkupKind</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.MarkupContent">Lean.Lsp.MarkupContent</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonMarkupContent">Lean.Lsp.instToJsonMarkupContent</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonMarkupContent">Lean.Lsp.instFromJsonMarkupContent</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.ProgressParams">Lean.Lsp.ProgressParams</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonProgressParams">Lean.Lsp.instToJsonProgressParams</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.WorkDoneProgressReport">Lean.Lsp.WorkDoneProgressReport</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonWorkDoneProgressReport">Lean.Lsp.instToJsonWorkDoneProgressReport</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.WorkDoneProgressBegin">Lean.Lsp.WorkDoneProgressBegin</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonWorkDoneProgressBegin">Lean.Lsp.instToJsonWorkDoneProgressBegin</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.WorkDoneProgressEnd">Lean.Lsp.WorkDoneProgressEnd</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonWorkDoneProgressEnd">Lean.Lsp.instToJsonWorkDoneProgressEnd</a>
+</div>
+</nav>
+<main>
+<div class="mod_doc">
+<p>Defines most of the 'Basic Structures' in the LSP specification
+(https://microsoft.github.io/language-server-protocol/specifications/specification-current/),
+as well as some utilities.</p><p>Since LSP is Json-based, Ints/Nats are represented by Floats on the wire.</p></div>
+<div class="decl" id="Lean.Lsp.CancelParams">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L21-L23">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.CancelParams">Lean.Lsp.CancelParams</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.CancelParams.mk">
+<li class="structure_field" id="Lean.Lsp.CancelParams.id">
+id : <a href="/Unicode.lean/Lean/Data/JsonRpc.html#Lean.JsonRpc.RequestID">Lean.JsonRpc.RequestID</a></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instInhabitedCancelParams">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L23-L23">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instInhabitedCancelParams">Lean.Lsp.instInhabitedCancelParams</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.CancelParams">Lean.Lsp.CancelParams</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instInhabitedCancelParams">Lean.Lsp.instInhabitedCancelParams</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn">{ id := <span class="fn">default</span> }</span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instBEqCancelParams">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L23-L23">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instBEqCancelParams">Lean.Lsp.instBEqCancelParams</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#BEq">BEq</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.CancelParams">Lean.Lsp.CancelParams</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instBEqCancelParams">Lean.Lsp.instBEqCancelParams</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.beqCancelParams._@.Lean.Data.Lsp.Basic._hyg.26">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonCancelParams">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L23-L23">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonCancelParams">Lean.Lsp.instToJsonCancelParams</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.CancelParams">Lean.Lsp.CancelParams</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonCancelParams">Lean.Lsp.instToJsonCancelParams</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonCancelParams._@.Lean.Data.Lsp.Basic._hyg.79">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonCancelParams">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L23-L23">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonCancelParams">Lean.Lsp.instFromJsonCancelParams</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.CancelParams">Lean.Lsp.CancelParams</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonCancelParams">Lean.Lsp.instFromJsonCancelParams</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonCancelParams._@.Lean.Data.Lsp.Basic._hyg.108">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.DocumentUri">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L25-L25">source</a>
+</div>
+<div class="attributes">@[inline]</div>
+<div class="decl_header">
+<span class="decl_kind">abbrev</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentUri">Lean.Lsp.DocumentUri</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentUri">Lean.Lsp.DocumentUri</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#String">String</a></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.Position">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L31-L34">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.Position.mk">
+<li class="structure_field" id="Lean.Lsp.Position.line">
+line : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
+<li class="structure_field" id="Lean.Lsp.Position.character">
+character : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
+</ul>
+<p>We adopt the convention that zero-based UTF-16 positions as sent by LSP clients
+are represented by <code><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lsp.Position</a></code> while internally we mostly use <code><a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a></code> UTF-8
+offsets. For diagnostics, one-based <code><a href="/Unicode.lean/Lean/Data/Position.html#Lean.Position">Lean.Position</a></code>s are used internally.
+<code>character</code> is accepted liberally: actual character := min(line length, character)</p></div>
+</div>
+<div class="decl" id="Lean.Lsp.instInhabitedPosition">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L34-L34">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instInhabitedPosition">Lean.Lsp.instInhabitedPosition</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instInhabitedPosition">Lean.Lsp.instInhabitedPosition</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn">{ line := <span class="fn">default</span>, character := <span class="fn">default</span> }</span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instBEqPosition">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L34-L34">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instBEqPosition">Lean.Lsp.instBEqPosition</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#BEq">BEq</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instBEqPosition">Lean.Lsp.instBEqPosition</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.beqPosition._@.Lean.Data.Lsp.Basic._hyg.175">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instOrdPosition">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L34-L34">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instOrdPosition">Lean.Lsp.instOrdPosition</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Data/Ord.html#Ord">Ord</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instOrdPosition">Lean.Lsp.instOrdPosition</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ compare := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.ordPosition._@.Lean.Data.Lsp.Basic._hyg.244">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instHashablePosition">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L34-L34">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instHashablePosition">Lean.Lsp.instHashablePosition</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable">Hashable</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instHashablePosition">Lean.Lsp.instHashablePosition</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ hash := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.hashPosition._@.Lean.Data.Lsp.Basic._hyg.318">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonPosition">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L34-L34">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonPosition">Lean.Lsp.instToJsonPosition</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonPosition">Lean.Lsp.instToJsonPosition</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonPosition._@.Lean.Data.Lsp.Basic._hyg.355">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonPosition">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L34-L34">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonPosition">Lean.Lsp.instFromJsonPosition</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonPosition">Lean.Lsp.instFromJsonPosition</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonPosition._@.Lean.Data.Lsp.Basic._hyg.395">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToStringPosition">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L36-L37">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToStringPosition">Lean.Lsp.instToStringPosition</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString">ToString</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToStringPosition">Lean.Lsp.instToStringPosition</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toString := <span class="fn">fun <span class="fn">p</span> => <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">"("</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn"><span class="fn">p</span>.line</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">", "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn"><span class="fn">p</span>.character</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">")"</span></span></span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instLTPosition">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L39-L39">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instLTPosition">Lean.Lsp.instLTPosition</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#LT">LT</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instLTPosition">Lean.Lsp.instLTPosition</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">ltOfOrd</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instLEPosition">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L40-L40">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instLEPosition">Lean.Lsp.instLEPosition</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#LE">LE</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instLEPosition">Lean.Lsp.instLEPosition</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">leOfOrd</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.Range">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L42-L45">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.Range.mk">
+<li class="structure_field" id="Lean.Lsp.Range.start">
+start : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a></li>
+<li class="structure_field" id="Lean.Lsp.Range.end">
+end : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instInhabitedRange">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L45-L45">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instInhabitedRange">Lean.Lsp.instInhabitedRange</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instInhabitedRange">Lean.Lsp.instInhabitedRange</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn">{ start := <span class="fn">default</span>, end := <span class="fn">default</span> }</span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instBEqRange">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L45-L45">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instBEqRange">Lean.Lsp.instBEqRange</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#BEq">BEq</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instBEqRange">Lean.Lsp.instBEqRange</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.beqRange._@.Lean.Data.Lsp.Basic._hyg.505">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instHashableRange">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L45-L45">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instHashableRange">Lean.Lsp.instHashableRange</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable">Hashable</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instHashableRange">Lean.Lsp.instHashableRange</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ hash := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.hashRange._@.Lean.Data.Lsp.Basic._hyg.574">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonRange">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L45-L45">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonRange">Lean.Lsp.instToJsonRange</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonRange">Lean.Lsp.instToJsonRange</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonRange._@.Lean.Data.Lsp.Basic._hyg.611">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonRange">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L45-L45">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonRange">Lean.Lsp.instFromJsonRange</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonRange">Lean.Lsp.instFromJsonRange</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonRange._@.Lean.Data.Lsp.Basic._hyg.651">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instOrdRange">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L45-L45">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instOrdRange">Lean.Lsp.instOrdRange</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Data/Ord.html#Ord">Ord</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instOrdRange">Lean.Lsp.instOrdRange</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ compare := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.ordRange._@.Lean.Data.Lsp.Basic._hyg.703">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instLTRange">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L47-L47">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instLTRange">Lean.Lsp.instLTRange</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#LT">LT</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instLTRange">Lean.Lsp.instLTRange</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">ltOfOrd</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instLERange">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L48-L48">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instLERange">Lean.Lsp.instLERange</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#LE">LE</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instLERange">Lean.Lsp.instLERange</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">leOfOrd</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.Location">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L50-L53">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Location">Lean.Lsp.Location</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.Location.mk">
+<li class="structure_field" id="Lean.Lsp.Location.uri">
+uri : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentUri">Lean.Lsp.DocumentUri</a></li>
+<li class="structure_field" id="Lean.Lsp.Location.range">
+range : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instInhabitedLocation">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L53-L53">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instInhabitedLocation">Lean.Lsp.instInhabitedLocation</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Location">Lean.Lsp.Location</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instInhabitedLocation">Lean.Lsp.instInhabitedLocation</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn">{ uri := <span class="fn">default</span>, range := <span class="fn">default</span> }</span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instBEqLocation">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L53-L53">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instBEqLocation">Lean.Lsp.instBEqLocation</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#BEq">BEq</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Location">Lean.Lsp.Location</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instBEqLocation">Lean.Lsp.instBEqLocation</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.beqLocation._@.Lean.Data.Lsp.Basic._hyg.814">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonLocation">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L53-L53">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonLocation">Lean.Lsp.instToJsonLocation</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Location">Lean.Lsp.Location</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonLocation">Lean.Lsp.instToJsonLocation</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonLocation._@.Lean.Data.Lsp.Basic._hyg.883">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonLocation">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L53-L53">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonLocation">Lean.Lsp.instFromJsonLocation</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Location">Lean.Lsp.Location</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonLocation">Lean.Lsp.instFromJsonLocation</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonLocation._@.Lean.Data.Lsp.Basic._hyg.923">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.LocationLink">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L55-L60">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.LocationLink">Lean.Lsp.LocationLink</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.LocationLink.mk">
+<li class="structure_field" id="Lean.Lsp.LocationLink.originSelectionRange?">
+originSelectionRange? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></span></li>
+<li class="structure_field" id="Lean.Lsp.LocationLink.targetUri">
+targetUri : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentUri">Lean.Lsp.DocumentUri</a></li>
+<li class="structure_field" id="Lean.Lsp.LocationLink.targetRange">
+targetRange : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></li>
+<li class="structure_field" id="Lean.Lsp.LocationLink.targetSelectionRange">
+targetSelectionRange : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonLocationLink">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L60-L60">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonLocationLink">Lean.Lsp.instToJsonLocationLink</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.LocationLink">Lean.Lsp.LocationLink</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonLocationLink">Lean.Lsp.instToJsonLocationLink</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonLocationLink._@.Lean.Data.Lsp.Basic._hyg.1011">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonLocationLink">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L60-L60">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonLocationLink">Lean.Lsp.instFromJsonLocationLink</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.LocationLink">Lean.Lsp.LocationLink</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonLocationLink">Lean.Lsp.instFromJsonLocationLink</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonLocationLink._@.Lean.Data.Lsp.Basic._hyg.1066">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.Command">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L66-L70">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Command">Lean.Lsp.Command</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.Command.mk">
+<li class="structure_field" id="Lean.Lsp.Command.title">
+title : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
+<li class="structure_field" id="Lean.Lsp.Command.command">
+command : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
+<li class="structure_field" id="Lean.Lsp.Command.arguments?">
+arguments? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Json/Basic.html#Lean.Json">Lean.Json</a></span>)</span></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonCommand">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L70-L70">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonCommand">Lean.Lsp.instToJsonCommand</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Command">Lean.Lsp.Command</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonCommand">Lean.Lsp.instToJsonCommand</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonCommand._@.Lean.Data.Lsp.Basic._hyg.1184">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonCommand">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L70-L70">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonCommand">Lean.Lsp.instFromJsonCommand</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Command">Lean.Lsp.Command</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonCommand">Lean.Lsp.instFromJsonCommand</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonCommand._@.Lean.Data.Lsp.Basic._hyg.1228">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.TextEdit">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L72-L75">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextEdit">Lean.Lsp.TextEdit</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.TextEdit.mk">
+<li class="structure_field" id="Lean.Lsp.TextEdit.range">
+range : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></li>
+<li class="structure_field" id="Lean.Lsp.TextEdit.newText">
+newText : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonTextEdit">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L75-L75">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonTextEdit">Lean.Lsp.instToJsonTextEdit</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextEdit">Lean.Lsp.TextEdit</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonTextEdit">Lean.Lsp.instToJsonTextEdit</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonTextEdit._@.Lean.Data.Lsp.Basic._hyg.1316">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonTextEdit">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L75-L75">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonTextEdit">Lean.Lsp.instFromJsonTextEdit</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextEdit">Lean.Lsp.TextEdit</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonTextEdit">Lean.Lsp.instFromJsonTextEdit</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonTextEdit._@.Lean.Data.Lsp.Basic._hyg.1356">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.TextEditBatch">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L77-L77">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">noncomputable def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextEditBatch">Lean.Lsp.TextEditBatch</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextEditBatch">Lean.Lsp.TextEditBatch</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextEdit">Lean.Lsp.TextEdit</a></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonTextEditBatch">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L79-L80">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonTextEditBatch">Lean.Lsp.instFromJsonTextEditBatch</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextEditBatch">Lean.Lsp.TextEditBatch</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonTextEditBatch">Lean.Lsp.instFromJsonTextEditBatch</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <span class="fn">Lean.fromJson?</span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonTextEditBatch">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L82-L83">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonTextEditBatch">Lean.Lsp.instToJsonTextEditBatch</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextEditBatch">Lean.Lsp.TextEditBatch</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonTextEditBatch">Lean.Lsp.instToJsonTextEditBatch</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <span class="fn">Lean.toJson</span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.TextDocumentIdentifier">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L85-L87">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentIdentifier">Lean.Lsp.TextDocumentIdentifier</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.TextDocumentIdentifier.mk">
+<li class="structure_field" id="Lean.Lsp.TextDocumentIdentifier.uri">
+uri : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentUri">Lean.Lsp.DocumentUri</a></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonTextDocumentIdentifier">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L87-L87">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonTextDocumentIdentifier">Lean.Lsp.instToJsonTextDocumentIdentifier</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentIdentifier">Lean.Lsp.TextDocumentIdentifier</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonTextDocumentIdentifier">Lean.Lsp.instToJsonTextDocumentIdentifier</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonTextDocumentIdentifier._@.Lean.Data.Lsp.Basic._hyg.1443">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonTextDocumentIdentifier">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L87-L87">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonTextDocumentIdentifier">Lean.Lsp.instFromJsonTextDocumentIdentifier</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentIdentifier">Lean.Lsp.TextDocumentIdentifier</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonTextDocumentIdentifier">Lean.Lsp.instFromJsonTextDocumentIdentifier</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonTextDocumentIdentifier._@.Lean.Data.Lsp.Basic._hyg.1472">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.VersionedTextDocumentIdentifier">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L89-L92">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.VersionedTextDocumentIdentifier">Lean.Lsp.VersionedTextDocumentIdentifier</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.VersionedTextDocumentIdentifier.mk">
+<li class="structure_field" id="Lean.Lsp.VersionedTextDocumentIdentifier.uri">
+uri : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentUri">Lean.Lsp.DocumentUri</a></li>
+<li class="structure_field" id="Lean.Lsp.VersionedTextDocumentIdentifier.version?">
+version? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></span></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonVersionedTextDocumentIdentifier">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L92-L92">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonVersionedTextDocumentIdentifier">Lean.Lsp.instToJsonVersionedTextDocumentIdentifier</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.VersionedTextDocumentIdentifier">Lean.Lsp.VersionedTextDocumentIdentifier</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonVersionedTextDocumentIdentifier">Lean.Lsp.instToJsonVersionedTextDocumentIdentifier</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonVersionedTextDocumentIdentifier._@.Lean.Data.Lsp.Basic._hyg.1528">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonVersionedTextDocumentIdentifier">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L92-L92">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonVersionedTextDocumentIdentifier">Lean.Lsp.instFromJsonVersionedTextDocumentIdentifier</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.VersionedTextDocumentIdentifier">Lean.Lsp.VersionedTextDocumentIdentifier</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonVersionedTextDocumentIdentifier">Lean.Lsp.instFromJsonVersionedTextDocumentIdentifier</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonVersionedTextDocumentIdentifier._@.Lean.Data.Lsp.Basic._hyg.1561">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.TextDocumentEdit">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L94-L97">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentEdit">Lean.Lsp.TextDocumentEdit</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.TextDocumentEdit.mk">
+<li class="structure_field" id="Lean.Lsp.TextDocumentEdit.textDocument">
+textDocument : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.VersionedTextDocumentIdentifier">Lean.Lsp.VersionedTextDocumentIdentifier</a></li>
+<li class="structure_field" id="Lean.Lsp.TextDocumentEdit.edits">
+edits : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextEditBatch">Lean.Lsp.TextEditBatch</a></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonTextDocumentEdit">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L97-L97">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonTextDocumentEdit">Lean.Lsp.instToJsonTextDocumentEdit</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentEdit">Lean.Lsp.TextDocumentEdit</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonTextDocumentEdit">Lean.Lsp.instToJsonTextDocumentEdit</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonTextDocumentEdit._@.Lean.Data.Lsp.Basic._hyg.1632">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonTextDocumentEdit">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L97-L97">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonTextDocumentEdit">Lean.Lsp.instFromJsonTextDocumentEdit</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentEdit">Lean.Lsp.TextDocumentEdit</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonTextDocumentEdit">Lean.Lsp.instFromJsonTextDocumentEdit</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonTextDocumentEdit._@.Lean.Data.Lsp.Basic._hyg.1672">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.TextDocumentItem">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L104-L109">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentItem">Lean.Lsp.TextDocumentItem</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.TextDocumentItem.mk">
+<li class="structure_field" id="Lean.Lsp.TextDocumentItem.uri">
+uri : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentUri">Lean.Lsp.DocumentUri</a></li>
+<li class="structure_field" id="Lean.Lsp.TextDocumentItem.languageId">
+languageId : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
+<li class="structure_field" id="Lean.Lsp.TextDocumentItem.version">
+version : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
+<li class="structure_field" id="Lean.Lsp.TextDocumentItem.text">
+text : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonTextDocumentItem">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L109-L109">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonTextDocumentItem">Lean.Lsp.instToJsonTextDocumentItem</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentItem">Lean.Lsp.TextDocumentItem</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonTextDocumentItem">Lean.Lsp.instToJsonTextDocumentItem</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonTextDocumentItem._@.Lean.Data.Lsp.Basic._hyg.1759">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonTextDocumentItem">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L109-L109">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonTextDocumentItem">Lean.Lsp.instFromJsonTextDocumentItem</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentItem">Lean.Lsp.TextDocumentItem</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonTextDocumentItem">Lean.Lsp.instFromJsonTextDocumentItem</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonTextDocumentItem._@.Lean.Data.Lsp.Basic._hyg.1821">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.TextDocumentPositionParams">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L111-L114">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentPositionParams">Lean.Lsp.TextDocumentPositionParams</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.TextDocumentPositionParams.mk">
+<li class="structure_field" id="Lean.Lsp.TextDocumentPositionParams.textDocument">
+textDocument : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentIdentifier">Lean.Lsp.TextDocumentIdentifier</a></li>
+<li class="structure_field" id="Lean.Lsp.TextDocumentPositionParams.position">
+position : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonTextDocumentPositionParams">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L114-L114">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonTextDocumentPositionParams">Lean.Lsp.instToJsonTextDocumentPositionParams</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentPositionParams">Lean.Lsp.TextDocumentPositionParams</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonTextDocumentPositionParams">Lean.Lsp.instToJsonTextDocumentPositionParams</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonTextDocumentPositionParams._@.Lean.Data.Lsp.Basic._hyg.1926">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonTextDocumentPositionParams">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L114-L114">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonTextDocumentPositionParams">Lean.Lsp.instFromJsonTextDocumentPositionParams</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentPositionParams">Lean.Lsp.TextDocumentPositionParams</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonTextDocumentPositionParams">Lean.Lsp.instFromJsonTextDocumentPositionParams</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonTextDocumentPositionParams._@.Lean.Data.Lsp.Basic._hyg.1966">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.DocumentFilter">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L116-L120">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentFilter">Lean.Lsp.DocumentFilter</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.DocumentFilter.mk">
+<li class="structure_field" id="Lean.Lsp.DocumentFilter.language?">
+language? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#String">String</a></span></li>
+<li class="structure_field" id="Lean.Lsp.DocumentFilter.scheme?">
+scheme? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#String">String</a></span></li>
+<li class="structure_field" id="Lean.Lsp.DocumentFilter.pattern?">
+pattern? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#String">String</a></span></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonDocumentFilter">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L120-L120">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonDocumentFilter">Lean.Lsp.instToJsonDocumentFilter</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentFilter">Lean.Lsp.DocumentFilter</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonDocumentFilter">Lean.Lsp.instToJsonDocumentFilter</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonDocumentFilter._@.Lean.Data.Lsp.Basic._hyg.2051">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonDocumentFilter">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L120-L120">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonDocumentFilter">Lean.Lsp.instFromJsonDocumentFilter</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentFilter">Lean.Lsp.DocumentFilter</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonDocumentFilter">Lean.Lsp.instFromJsonDocumentFilter</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonDocumentFilter._@.Lean.Data.Lsp.Basic._hyg.2081">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.DocumentSelector">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L122-L122">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">noncomputable def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentSelector">Lean.Lsp.DocumentSelector</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentSelector">Lean.Lsp.DocumentSelector</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentFilter">Lean.Lsp.DocumentFilter</a></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonDocumentSelector">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L124-L125">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonDocumentSelector">Lean.Lsp.instFromJsonDocumentSelector</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentSelector">Lean.Lsp.DocumentSelector</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonDocumentSelector">Lean.Lsp.instFromJsonDocumentSelector</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <span class="fn">Lean.fromJson?</span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonDocumentSelector">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L127-L128">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonDocumentSelector">Lean.Lsp.instToJsonDocumentSelector</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentSelector">Lean.Lsp.DocumentSelector</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonDocumentSelector">Lean.Lsp.instToJsonDocumentSelector</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <span class="fn">Lean.toJson</span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.StaticRegistrationOptions">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L130-L132">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.StaticRegistrationOptions">Lean.Lsp.StaticRegistrationOptions</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.StaticRegistrationOptions.mk">
+<li class="structure_field" id="Lean.Lsp.StaticRegistrationOptions.id?">
+id? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#String">String</a></span></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonStaticRegistrationOptions">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L132-L132">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonStaticRegistrationOptions">Lean.Lsp.instToJsonStaticRegistrationOptions</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.StaticRegistrationOptions">Lean.Lsp.StaticRegistrationOptions</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonStaticRegistrationOptions">Lean.Lsp.instToJsonStaticRegistrationOptions</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonStaticRegistrationOptions._@.Lean.Data.Lsp.Basic._hyg.2187">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonStaticRegistrationOptions">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L132-L132">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonStaticRegistrationOptions">Lean.Lsp.instFromJsonStaticRegistrationOptions</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.StaticRegistrationOptions">Lean.Lsp.StaticRegistrationOptions</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonStaticRegistrationOptions">Lean.Lsp.instFromJsonStaticRegistrationOptions</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonStaticRegistrationOptions._@.Lean.Data.Lsp.Basic._hyg.2209">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.TextDocumentRegistrationOptions">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L134-L136">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentRegistrationOptions">Lean.Lsp.TextDocumentRegistrationOptions</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.TextDocumentRegistrationOptions.mk">
+<li class="structure_field" id="Lean.Lsp.TextDocumentRegistrationOptions.documentSelector?">
+documentSelector? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentSelector">Lean.Lsp.DocumentSelector</a></span></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonTextDocumentRegistrationOptions">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L136-L136">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonTextDocumentRegistrationOptions">Lean.Lsp.instToJsonTextDocumentRegistrationOptions</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentRegistrationOptions">Lean.Lsp.TextDocumentRegistrationOptions</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonTextDocumentRegistrationOptions">Lean.Lsp.instToJsonTextDocumentRegistrationOptions</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonTextDocumentRegistrationOptions._@.Lean.Data.Lsp.Basic._hyg.2257">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonTextDocumentRegistrationOptions">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L136-L136">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonTextDocumentRegistrationOptions">Lean.Lsp.instFromJsonTextDocumentRegistrationOptions</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentRegistrationOptions">Lean.Lsp.TextDocumentRegistrationOptions</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonTextDocumentRegistrationOptions">Lean.Lsp.instFromJsonTextDocumentRegistrationOptions</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonTextDocumentRegistrationOptions._@.Lean.Data.Lsp.Basic._hyg.2279">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.MarkupKind">
+<div class="inductive">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L138-L139">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">inductive</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupKind">Lean.Lsp.MarkupKind</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="constructors">
+<li class="constructor" id="Lean.Lsp.MarkupKind.plaintext">
+plaintext: <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupKind">Lean.Lsp.MarkupKind</a></li>
+<li class="constructor" id="Lean.Lsp.MarkupKind.markdown">
+markdown: <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupKind">Lean.Lsp.MarkupKind</a></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonMarkupKind">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L141-L144">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonMarkupKind">Lean.Lsp.instFromJsonMarkupKind</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupKind">Lean.Lsp.MarkupKind</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonMarkupKind">Lean.Lsp.instFromJsonMarkupKind</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ fromJson? := <span class="fn">fun <span class="fn">x</span> =>
+      <span class="fn">match <span class="fn">x</span> with
+      | <span class="fn"><a href="/Unicode.lean/Lean/Data/Json/Basic.html#Lean.Json.str">Lean.Json.str</a> <span class="fn">"plaintext"</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Except.ok">Except.ok</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupKind.plaintext">Lean.Lsp.MarkupKind.plaintext</a></span>
+      | <span class="fn"><a href="/Unicode.lean/Lean/Data/Json/Basic.html#Lean.Json.str">Lean.Json.str</a> <span class="fn">"markdown"</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Except.ok">Except.ok</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupKind.markdown">Lean.Lsp.MarkupKind.markdown</a></span>
+      | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.throw">throw</a> <span class="fn">"unknown MarkupKind"</span></span></span></span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonMarkupKind">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L146-L148">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonMarkupKind">Lean.Lsp.instToJsonMarkupKind</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupKind">Lean.Lsp.MarkupKind</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonMarkupKind">Lean.Lsp.instToJsonMarkupKind</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ toJson := <span class="fn">fun <span class="fn">x</span> =>
+      <span class="fn">match <span class="fn">x</span> with
+      | <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupKind.markdown">Lean.Lsp.MarkupKind.plaintext</a> => <span class="fn"><a href="/Unicode.lean/Lean/Data/Json/Basic.html#Lean.Json.str">Lean.Json.str</a> <span class="fn">"plaintext"</span></span>
+      | <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupKind.markdown">Lean.Lsp.MarkupKind.markdown</a> => <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupKind.markdown"><a href="/Unicode.lean/Lean/Data/Json/Basic.html#Lean.Json.str">Lean.Json.str</a> <span class="fn">"markdown"</span></a></span></span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.MarkupContent">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L150-L153">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupContent">Lean.Lsp.MarkupContent</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.MarkupContent.mk">
+<li class="structure_field" id="Lean.Lsp.MarkupContent.kind">
+kind : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupKind">Lean.Lsp.MarkupKind</a></li>
+<li class="structure_field" id="Lean.Lsp.MarkupContent.value">
+value : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonMarkupContent">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L153-L153">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonMarkupContent">Lean.Lsp.instToJsonMarkupContent</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupContent">Lean.Lsp.MarkupContent</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonMarkupContent">Lean.Lsp.instToJsonMarkupContent</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonMarkupContent._@.Lean.Data.Lsp.Basic._hyg.2393">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonMarkupContent">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L153-L153">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonMarkupContent">Lean.Lsp.instFromJsonMarkupContent</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupContent">Lean.Lsp.MarkupContent</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instFromJsonMarkupContent">Lean.Lsp.instFromJsonMarkupContent</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.fromJsonMarkupContent._@.Lean.Data.Lsp.Basic._hyg.2433">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.ProgressParams">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L155-L158">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.ProgressParams">Lean.Lsp.ProgressParams</a>
+</span>
+<span class="decl_args">
+<span class="fn">(α : <span class="fn">Type</span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.ProgressParams.mk">
+<li class="structure_field" id="Lean.Lsp.ProgressParams.token">
+token : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
+<li class="structure_field" id="Lean.Lsp.ProgressParams.value">
+value : <span class="fn">α</span></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonProgressParams">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L158-L158">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonProgressParams">Lean.Lsp.instToJsonProgressParams</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">{α : <span class="fn">Type</span>} → <span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <span class="fn">α</span></span>] → <span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> (<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.ProgressParams">Lean.Lsp.ProgressParams</a> <span class="fn">α</span></span>)</span></span></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn">Lean.Lsp.instToJsonProgressParams</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <span class="fn">[anonymous]</span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.WorkDoneProgressReport">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L160-L165">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.WorkDoneProgressReport">Lean.Lsp.WorkDoneProgressReport</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.WorkDoneProgressReport.mk">
+<li class="structure_field" id="Lean.Lsp.WorkDoneProgressReport.kind">
+kind : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
+<li class="structure_field" id="Lean.Lsp.WorkDoneProgressReport.message?">
+message? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#String">String</a></span></li>
+<li class="structure_field" id="Lean.Lsp.WorkDoneProgressReport.cancellable">
+cancellable : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
+<li class="structure_field" id="Lean.Lsp.WorkDoneProgressReport.percentage?">
+percentage? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></span></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonWorkDoneProgressReport">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L165-L165">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonWorkDoneProgressReport">Lean.Lsp.instToJsonWorkDoneProgressReport</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.WorkDoneProgressReport">Lean.Lsp.WorkDoneProgressReport</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonWorkDoneProgressReport">Lean.Lsp.instToJsonWorkDoneProgressReport</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonWorkDoneProgressReport._@.Lean.Data.Lsp.Basic._hyg.2599">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.WorkDoneProgressBegin">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L167-L170">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.WorkDoneProgressBegin">Lean.Lsp.WorkDoneProgressBegin</a>
+</span>
+<span class="decl_extends">extends</span>
+<span class="decl_parent">
+<span class="fn"><a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.WorkDoneProgressReport">Lean.Lsp.WorkDoneProgressReport</a>
+</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.WorkDoneProgressBegin.mk">
+<li class="structure_field" id="Lean.Lsp.WorkDoneProgressBegin.title">
+title : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonWorkDoneProgressBegin">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L170-L170">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonWorkDoneProgressBegin">Lean.Lsp.instToJsonWorkDoneProgressBegin</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.WorkDoneProgressBegin">Lean.Lsp.WorkDoneProgressBegin</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonWorkDoneProgressBegin">Lean.Lsp.instToJsonWorkDoneProgressBegin</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonWorkDoneProgressBegin._@.Lean.Data.Lsp.Basic._hyg.2667">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.WorkDoneProgressEnd">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L172-L175">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.WorkDoneProgressEnd">Lean.Lsp.WorkDoneProgressEnd</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.WorkDoneProgressEnd.mk">
+<li class="structure_field" id="Lean.Lsp.WorkDoneProgressEnd.kind">
+kind : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
+<li class="structure_field" id="Lean.Lsp.WorkDoneProgressEnd.message?">
+message? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#String">String</a></span></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonWorkDoneProgressEnd">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Basic.lean#L175-L175">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonWorkDoneProgressEnd">Lean.Lsp.instToJsonWorkDoneProgressEnd</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.WorkDoneProgressEnd">Lean.Lsp.WorkDoneProgressEnd</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToJsonWorkDoneProgressEnd">Lean.Lsp.instToJsonWorkDoneProgressEnd</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#_private.Lean.Data.Lsp.Basic.0.Lean.Lsp.toJsonWorkDoneProgressEnd._@.Lean.Data.Lsp.Basic._hyg.2747">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+</main>
+<nav class="nav">
+<h3>General documentation</h3>
+<div class="nav_link">
+<a href="/Unicode.lean/">index</a>
+</div>
+<h3>Library</h3>
+<div class="module_list">
+<details class="nav_sect" data-path="/Unicode.lean/Init.html">
+<summary>Init</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
+<summary>Init.Control</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/Basic.html">Init.Control.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/EState.html">Init.Control.EState</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/Except.html">Init.Control.Except</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/ExceptCps.html">Init.Control.ExceptCps</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/Id.html">Init.Control.Id</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/Lawful.html">Init.Control.Lawful</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/Option.html">Init.Control.Option</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/Reader.html">Init.Control.Reader</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/State.html">Init.Control.State</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/StateCps.html">Init.Control.StateCps</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control/StateRef.html">Init.Control.StateRef</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data.html">
+<summary>Init.Data</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
+<summary>Init.Data.Array</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Basic.html">Init.Data.Array.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/BinSearch.html">Init.Data.Array.BinSearch</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/DecidableEq.html">Init.Data.Array.DecidableEq</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Subarray.html">Init.Data.Array.Subarray</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/ByteArray.html">
+<summary>Init.Data.ByteArray</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/ByteArray/Basic.html">Init.Data.ByteArray.Basic</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Char.html">
+<summary>Init.Data.Char</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Char/Basic.html">Init.Data.Char.Basic</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Fin.html">
+<summary>Init.Data.Fin</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Fin/Basic.html">Init.Data.Fin.Basic</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/FloatArray.html">
+<summary>Init.Data.FloatArray</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/FloatArray/Basic.html">Init.Data.FloatArray.Basic</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Format.html">
+<summary>Init.Data.Format</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Format/Basic.html">Init.Data.Format.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Format/Instances.html">Init.Data.Format.Instances</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Format/Macro.html">Init.Data.Format.Macro</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Format/Syntax.html">Init.Data.Format.Syntax</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Int.html">
+<summary>Init.Data.Int</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Int/Basic.html">Init.Data.Int.Basic</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/List.html">
+<summary>Init.Data.List</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/List/Basic.html">Init.Data.List.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/List/BasicAux.html">Init.Data.List.BasicAux</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/List/Control.html">Init.Data.List.Control</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Nat.html">
+<summary>Init.Data.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Basic.html">Init.Data.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Bitwise.html">Init.Data.Nat.Bitwise</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Control.html">Init.Data.Nat.Control</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Div.html">Init.Data.Nat.Div</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Option.html">
+<summary>Init.Data.Option</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Option/Basic.html">Init.Data.Option.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Option/BasicAux.html">Init.Data.Option.BasicAux</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Option/Instances.html">Init.Data.Option.Instances</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/String.html">
+<summary>Init.Data.String</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/String/Basic.html">Init.Data.String.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/String/Extra.html">Init.Data.String.Extra</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/Data/ToString.html">
+<summary>Init.Data.ToString</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Float.html">Init.Data.Float</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Hashable.html">Init.Data.Hashable</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/OfScientific.html">Init.Data.OfScientific</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Range.html">Init.Data.Range</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Repr.html">Init.Data.Repr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Stream.html">Init.Data.Stream</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/UInt.html">Init.Data.UInt</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Init/System.html">
+<summary>Init.System</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/System/FilePath.html">Init.System.FilePath</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/System/IO.html">Init.System.IO</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/System/IOError.html">Init.System.IOError</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/System/Platform.html">Init.System.Platform</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/System/ST.html">Init.System.ST</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Classical.html">Init.Classical</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Coe.html">Init.Coe</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Control.html">Init.Control</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Conv.html">Init.Conv</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Core.html">Init.Core</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Fix.html">Init.Fix</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Hints.html">Init.Hints</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Meta.html">Init.Meta</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Notation.html">Init.Notation</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/NotationExtra.html">Init.NotationExtra</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Prelude.html">Init.Prelude</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SimpLemmas.html">Init.SimpLemmas</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/System.html">Init.System</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Util.html">Init.Util</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/WF.html">Init.WF</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/WFTactics.html">Init.WFTactics</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean.html" open="">
+<summary>Lean</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
+<summary>Lean.Compiler</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
+<summary>Lean.Compiler.IR</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/Basic.html">Lean.Compiler.IR.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html">Lean.Compiler.IR.Borrow</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/Boxing.html">Lean.Compiler.IR.Boxing</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/Checker.html">Lean.Compiler.IR.Checker</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/CompilerM.html">Lean.Compiler.IR.CompilerM</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/CtorLayout.html">Lean.Compiler.IR.CtorLayout</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/ElimDeadBranches.html">Lean.Compiler.IR.ElimDeadBranches</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/ElimDeadVars.html">Lean.Compiler.IR.ElimDeadVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/EmitC.html">Lean.Compiler.IR.EmitC</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/EmitUtil.html">Lean.Compiler.IR.EmitUtil</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/ExpandResetReuse.html">Lean.Compiler.IR.ExpandResetReuse</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/Format.html">Lean.Compiler.IR.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/FreeVars.html">Lean.Compiler.IR.FreeVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/LiveVars.html">Lean.Compiler.IR.LiveVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/NormIds.html">Lean.Compiler.IR.NormIds</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/PushProj.html">Lean.Compiler.IR.PushProj</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/RC.html">Lean.Compiler.IR.RC</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/ResetReuse.html">Lean.Compiler.IR.ResetReuse</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/SimpCase.html">Lean.Compiler.IR.SimpCase</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/Sorry.html">Lean.Compiler.IR.Sorry</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR/UnboxResult.html">Lean.Compiler.IR.UnboxResult</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/BorrowedAnnotation.html">Lean.Compiler.BorrowedAnnotation</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/CSimpAttr.html">Lean.Compiler.CSimpAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/ClosedTermCache.html">Lean.Compiler.ClosedTermCache</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/ConstFolding.html">Lean.Compiler.ConstFolding</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/ExportAttr.html">Lean.Compiler.ExportAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/ExternAttr.html">Lean.Compiler.ExternAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/FFI.html">Lean.Compiler.FFI</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/ImplementedByAttr.html">Lean.Compiler.ImplementedByAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/InitAttr.html">Lean.Compiler.InitAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/InlineAttrs.html">Lean.Compiler.InlineAttrs</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/NameMangling.html">Lean.Compiler.NameMangling</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/NeverExtractAttr.html">Lean.Compiler.NeverExtractAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/NoncomputableAttr.html">Lean.Compiler.NoncomputableAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/Specialize.html">Lean.Compiler.Specialize</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler/Util.html">Lean.Compiler.Util</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Data.html" open="">
+<summary>Lean.Data</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
+<summary>Lean.Data.Json</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Json/Basic.html">Lean.Data.Json.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Json/FromToJson.html">Lean.Data.Json.FromToJson</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Json/Parser.html">Lean.Data.Json.Parser</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Json/Printer.html">Lean.Data.Json.Printer</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Json/Stream.html">Lean.Data.Json.Stream</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Lsp.html" open="">
+<summary>Lean.Data.Lsp</summary>
+<div class="nav_link" visible="">
+<a href="/Unicode.lean/Lean/Data/Lsp/Basic.html">Lean.Data.Lsp.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Capabilities.html">Lean.Data.Lsp.Capabilities</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Client.html">Lean.Data.Lsp.Client</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Communication.html">Lean.Data.Lsp.Communication</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Diagnostics.html">Lean.Data.Lsp.Diagnostics</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Extra.html">Lean.Data.Lsp.Extra</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/InitShutdown.html">Lean.Data.Lsp.InitShutdown</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Internal.html">Lean.Data.Lsp.Internal</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Ipc.html">Lean.Data.Lsp.Ipc</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html">Lean.Data.Lsp.LanguageFeatures</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/TextSync.html">Lean.Data.Lsp.TextSync</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html">Lean.Data.Lsp.Utf16</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp/Workspace.html">Lean.Data.Lsp.Workspace</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Xml.html">
+<summary>Lean.Data.Xml</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Xml/Basic.html">Lean.Data.Xml.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Xml/Parser.html">Lean.Data.Xml.Parser</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/KVMap.html">Lean.Data.KVMap</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/LBool.html">Lean.Data.LBool</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/LOption.html">Lean.Data.LOption</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Name.html">Lean.Data.Name</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/NameTrie.html">Lean.Data.NameTrie</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Occurrences.html">Lean.Data.Occurrences</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/OpenDecl.html">Lean.Data.OpenDecl</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Options.html">Lean.Data.Options</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Parsec.html">Lean.Data.Parsec</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Position.html">Lean.Data.Position</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/PrefixTree.html">Lean.Data.PrefixTree</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Rat.html">Lean.Data.Rat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/SMap.html">Lean.Data.SMap</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/SSet.html">Lean.Data.SSet</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Trie.html">Lean.Data.Trie</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab.html">
+<summary>Lean.Elab</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
+<summary>Lean.Elab.Deriving</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/BEq.html">Lean.Elab.Deriving.BEq</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/Basic.html">Lean.Elab.Deriving.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/DecEq.html">Lean.Elab.Deriving.DecEq</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/FromToJson.html">Lean.Elab.Deriving.FromToJson</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/Hashable.html">Lean.Elab.Deriving.Hashable</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/Inhabited.html">Lean.Elab.Deriving.Inhabited</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/Ord.html">Lean.Elab.Deriving.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/Repr.html">Lean.Elab.Deriving.Repr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/SizeOf.html">Lean.Elab.Deriving.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving/Util.html">Lean.Elab.Deriving.Util</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition.html">
+<summary>Lean.Elab.PreDefinition</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
+<summary>Lean.Elab.PreDefinition.Structural</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/BRecOn.html">Lean.Elab.PreDefinition.Structural.BRecOn</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/Basic.html">Lean.Elab.PreDefinition.Structural.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/Eqns.html">Lean.Elab.PreDefinition.Structural.Eqns</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/FindRecArg.html">Lean.Elab.PreDefinition.Structural.FindRecArg</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/IndPred.html">Lean.Elab.PreDefinition.Structural.IndPred</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/Main.html">Lean.Elab.PreDefinition.Structural.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/Preprocess.html">Lean.Elab.PreDefinition.Structural.Preprocess</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/SmartUnfolding.html">Lean.Elab.PreDefinition.Structural.SmartUnfolding</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">
+<summary>Lean.Elab.PreDefinition.WF</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html">Lean.Elab.PreDefinition.WF.Eqns</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/PackDomain.html">Lean.Elab.PreDefinition.WF.PackDomain</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/PackMutual.html">Lean.Elab.PreDefinition.WF.PackMutual</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Rel.html">Lean.Elab.PreDefinition.WF.Rel</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/TerminationHint.html">Lean.Elab.PreDefinition.WF.TerminationHint</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html">Lean.Elab.PreDefinition.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html">Lean.Elab.PreDefinition.Eqns</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Main.html">Lean.Elab.PreDefinition.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/MkInhabitant.html">Lean.Elab.PreDefinition.MkInhabitant</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Quotation.html">
+<summary>Lean.Elab.Quotation</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html">Lean.Elab.Quotation.Precheck</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Quotation/Util.html">Lean.Elab.Quotation.Util</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic.html">
+<summary>Lean.Elab.Tactic</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
+<summary>Lean.Elab.Tactic.Conv</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Change.html">Lean.Elab.Tactic.Conv.Change</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Congr.html">Lean.Elab.Tactic.Conv.Congr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Delta.html">Lean.Elab.Tactic.Conv.Delta</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Pattern.html">Lean.Elab.Tactic.Conv.Pattern</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Rewrite.html">Lean.Elab.Tactic.Conv.Rewrite</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Simp.html">Lean.Elab.Tactic.Conv.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Unfold.html">Lean.Elab.Tactic.Conv.Unfold</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html">Lean.Elab.Tactic.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Delta.html">Lean.Elab.Tactic.Delta</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html">Lean.Elab.Tactic.ElabTerm</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Generalize.html">Lean.Elab.Tactic.Generalize</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Induction.html">Lean.Elab.Tactic.Induction</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Injection.html">Lean.Elab.Tactic.Injection</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Location.html">Lean.Elab.Tactic.Location</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Match.html">Lean.Elab.Tactic.Match</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Meta.html">Lean.Elab.Tactic.Meta</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Rewrite.html">Lean.Elab.Tactic.Rewrite</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Simp.html">Lean.Elab.Tactic.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Split.html">Lean.Elab.Tactic.Split</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Unfold.html">Lean.Elab.Tactic.Unfold</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/App.html">Lean.Elab.App</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Arg.html">Lean.Elab.Arg</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Attributes.html">Lean.Elab.Attributes</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AutoBound.html">Lean.Elab.AutoBound</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/BindersUtil.html">Lean.Elab.BindersUtil</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/BuiltinCommand.html">Lean.Elab.BuiltinCommand</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/BuiltinNotation.html">Lean.Elab.BuiltinNotation</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html">Lean.Elab.BuiltinTerm</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Command.html">Lean.Elab.Command</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Config.html">Lean.Elab.Config</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/DeclModifiers.html">Lean.Elab.DeclModifiers</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/DeclUtil.html">Lean.Elab.DeclUtil</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Declaration.html">Lean.Elab.Declaration</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/DeclarationRange.html">Lean.Elab.DeclarationRange</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/DefView.html">Lean.Elab.DefView</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/ElabRules.html">Lean.Elab.ElabRules</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Exception.html">Lean.Elab.Exception</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Extra.html">Lean.Elab.Extra</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Frontend.html">Lean.Elab.Frontend</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/GenInjective.html">Lean.Elab.GenInjective</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Import.html">Lean.Elab.Import</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Inductive.html">Lean.Elab.Inductive</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/InfoTree.html">Lean.Elab.InfoTree</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/LetRec.html">Lean.Elab.LetRec</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Level.html">Lean.Elab.Level</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Log.html">Lean.Elab.Log</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Macro.html">Lean.Elab.Macro</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/MacroArgUtil.html">Lean.Elab.MacroArgUtil</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/MacroRules.html">Lean.Elab.MacroRules</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Match.html">Lean.Elab.Match</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/MatchAltView.html">Lean.Elab.MatchAltView</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Mixfix.html">Lean.Elab.Mixfix</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/MutualDef.html">Lean.Elab.MutualDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Notation.html">Lean.Elab.Notation</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Open.html">Lean.Elab.Open</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Print.html">Lean.Elab.Print</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/RecAppSyntax.html">Lean.Elab.RecAppSyntax</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/SetOption.html">Lean.Elab.SetOption</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/StructInst.html">Lean.Elab.StructInst</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Structure.html">Lean.Elab.Structure</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Syntax.html">Lean.Elab.Syntax</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html">Lean.Elab.SyntheticMVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Term.html">Lean.Elab.Term</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Util.html">Lean.Elab.Util</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta.html">
+<summary>Lean.Meta</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
+<summary>Lean.Meta.Match</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/Basic.html">Lean.Meta.Match.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/CaseArraySizes.html">Lean.Meta.Match.CaseArraySizes</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/CaseValues.html">Lean.Meta.Match.CaseValues</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MVarRenaming.html">Lean.Meta.Match.MVarRenaming</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/Match.html">Lean.Meta.Match.Match</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatcherInfo.html">Lean.Meta.Match.MatcherInfo</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/Value.html">Lean.Meta.Match.Value</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
+<summary>Lean.Meta.Tactic</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+<summary>Lean.Meta.Tactic.LinearArith</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
+<summary>Lean.Meta.Tactic.Simp</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html">Lean.Meta.Tactic.Simp.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Rewrite.html">Lean.Meta.Tactic.Simp.Rewrite</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpAll.html">Lean.Meta.Tactic.Simp.SimpAll</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpCongrTheorems.html">Lean.Meta.Tactic.Simp.SimpCongrTheorems</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html">Lean.Meta.Tactic.Simp.SimpTheorems</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Assert.html">Lean.Meta.Tactic.Assert</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Assumption.html">Lean.Meta.Tactic.Assumption</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AuxLemma.html">Lean.Meta.Tactic.AuxLemma</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Cases.html">Lean.Meta.Tactic.Cases</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Cleanup.html">Lean.Meta.Tactic.Cleanup</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Clear.html">Lean.Meta.Tactic.Clear</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Constructor.html">Lean.Meta.Tactic.Constructor</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Contradiction.html">Lean.Meta.Tactic.Contradiction</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Delta.html">Lean.Meta.Tactic.Delta</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/ElimInfo.html">Lean.Meta.Tactic.ElimInfo</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/FVarSubst.html">Lean.Meta.Tactic.FVarSubst</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Generalize.html">Lean.Meta.Tactic.Generalize</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Induction.html">Lean.Meta.Tactic.Induction</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Injection.html">Lean.Meta.Tactic.Injection</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Rename.html">Lean.Meta.Tactic.Rename</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Replace.html">Lean.Meta.Tactic.Replace</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Revert.html">Lean.Meta.Tactic.Revert</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Rewrite.html">Lean.Meta.Tactic.Rewrite</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Split.html">Lean.Meta.Tactic.Split</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/SplitIf.html">Lean.Meta.Tactic.SplitIf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Subst.html">Lean.Meta.Tactic.Subst</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Unfold.html">Lean.Meta.Tactic.Unfold</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Util.html">Lean.Meta.Tactic.Util</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/ACLt.html">Lean.Meta.ACLt</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/AbstractMVars.html">Lean.Meta.AbstractMVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/AbstractNestedProofs.html">Lean.Meta.AbstractNestedProofs</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/AppBuilder.html">Lean.Meta.AppBuilder</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Basic.html">Lean.Meta.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Check.html">Lean.Meta.Check</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Closure.html">Lean.Meta.Closure</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Coe.html">Lean.Meta.Coe</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/CollectFVars.html">Lean.Meta.CollectFVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/CollectMVars.html">Lean.Meta.CollectMVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/CongrTheorems.html">Lean.Meta.CongrTheorems</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Constructions.html">Lean.Meta.Constructions</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/DecLevel.html">Lean.Meta.DecLevel</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/DiscrTree.html">Lean.Meta.DiscrTree</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/DiscrTreeTypes.html">Lean.Meta.DiscrTreeTypes</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Eqns.html">Lean.Meta.Eqns</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/ExprDefEq.html">Lean.Meta.ExprDefEq</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/ForEachExpr.html">Lean.Meta.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/FunInfo.html">Lean.Meta.FunInfo</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/GeneralizeTelescope.html">Lean.Meta.GeneralizeTelescope</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/GeneralizeVars.html">Lean.Meta.GeneralizeVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/GetConst.html">Lean.Meta.GetConst</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/GlobalInstances.html">Lean.Meta.GlobalInstances</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/IndPredBelow.html">Lean.Meta.IndPredBelow</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Inductive.html">Lean.Meta.Inductive</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/InferType.html">Lean.Meta.InferType</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Injective.html">Lean.Meta.Injective</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Instances.html">Lean.Meta.Instances</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/MatchUtil.html">Lean.Meta.MatchUtil</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Offset.html">Lean.Meta.Offset</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/PPGoal.html">Lean.Meta.PPGoal</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/RecursorInfo.html">Lean.Meta.RecursorInfo</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Reduce.html">Lean.Meta.Reduce</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/ReduceEval.html">Lean.Meta.ReduceEval</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Transform.html">Lean.Meta.Transform</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/TransparencyMode.html">Lean.Meta.TransparencyMode</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/UnificationHint.html">Lean.Meta.UnificationHint</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/WHNF.html">Lean.Meta.WHNF</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Parser.html">
+<summary>Lean.Parser</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Attr.html">Lean.Parser.Attr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Basic.html">Lean.Parser.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Command.html">Lean.Parser.Command</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Do.html">Lean.Parser.Do</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Extension.html">Lean.Parser.Extension</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Extra.html">Lean.Parser.Extra</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Level.html">Lean.Parser.Level</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Module.html">Lean.Parser.Module</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/StrInterpolation.html">Lean.Parser.StrInterpolation</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Syntax.html">Lean.Parser.Syntax</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Tactic.html">Lean.Parser.Tactic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser/Term.html">Lean.Parser.Term</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/ParserCompiler.html">
+<summary>Lean.ParserCompiler</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html">Lean.ParserCompiler.Attribute</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter.html">
+<summary>Lean.PrettyPrinter</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
+<summary>Lean.PrettyPrinter.Delaborator</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html">Lean.PrettyPrinter.Delaborator.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Builtins.html">Lean.PrettyPrinter.Delaborator.Builtins</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Options.html">Lean.PrettyPrinter.Delaborator.Options</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html">Lean.PrettyPrinter.Delaborator.SubExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/TopDownAnalyze.html">Lean.PrettyPrinter.Delaborator.TopDownAnalyze</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Basic.html">Lean.PrettyPrinter.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Formatter.html">Lean.PrettyPrinter.Formatter</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter/Parenthesizer.html">Lean.PrettyPrinter.Parenthesizer</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Server.html">
+<summary>Lean.Server</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
+<summary>Lean.Server.FileWorker</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html">Lean.Server.FileWorker.RequestHandling</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/FileWorker/Utils.html">Lean.Server.FileWorker.Utils</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html">Lean.Server.FileWorker.WidgetRequests</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/Rpc.html">
+<summary>Lean.Server.Rpc</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Rpc/Basic.html">Lean.Server.Rpc.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Rpc/Deriving.html">Lean.Server.Rpc.Deriving</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Rpc/RequestHandling.html">Lean.Server.Rpc.RequestHandling</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/AsyncList.html">Lean.Server.AsyncList</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Completion.html">Lean.Server.Completion</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/FileSource.html">Lean.Server.FileSource</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/References.html">Lean.Server.References</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Requests.html">Lean.Server.Requests</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Snapshots.html">Lean.Server.Snapshots</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Utils.html">Lean.Server.Utils</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server/Watchdog.html">Lean.Server.Watchdog</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Util.html">
+<summary>Lean.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/CollectFVars.html">Lean.Util.CollectFVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/CollectLevelParams.html">Lean.Util.CollectLevelParams</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/CollectMVars.html">Lean.Util.CollectMVars</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/FindExpr.html">Lean.Util.FindExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/FindLevelMVar.html">Lean.Util.FindLevelMVar</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/FindMVar.html">Lean.Util.FindMVar</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/FoldConsts.html">Lean.Util.FoldConsts</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/MonadCache.html">Lean.Util.MonadCache</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/OccursCheck.html">Lean.Util.OccursCheck</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/PPExt.html">Lean.Util.PPExt</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/Path.html">Lean.Util.Path</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/Paths.html">Lean.Util.Paths</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/Profile.html">Lean.Util.Profile</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/RecDepth.html">Lean.Util.RecDepth</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/Recognizers.html">Lean.Util.Recognizers</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/ReplaceExpr.html">Lean.Util.ReplaceExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/ReplaceLevel.html">Lean.Util.ReplaceLevel</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/SCC.html">Lean.Util.SCC</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/Sorry.html">Lean.Util.Sorry</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/Trace.html">Lean.Util.Trace</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Widget.html">
+<summary>Lean.Widget</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Widget/InteractiveCode.html">Lean.Widget.InteractiveCode</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Widget/InteractiveDiagnostic.html">Lean.Widget.InteractiveDiagnostic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Widget/InteractiveGoal.html">Lean.Widget.InteractiveGoal</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Widget/TaggedText.html">Lean.Widget.TaggedText</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Attributes.html">Lean.Attributes</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/AuxRecursor.html">Lean.AuxRecursor</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Class.html">Lean.Class</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/CoreM.html">Lean.CoreM</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Declaration.html">Lean.Declaration</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/DeclarationRange.html">Lean.DeclarationRange</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/DocString.html">Lean.DocString</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Eval.html">Lean.Eval</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Exception.html">Lean.Exception</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Expr.html">Lean.Expr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/HeadIndex.html">Lean.HeadIndex</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Hygiene.html">Lean.Hygiene</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ImportingFlag.html">Lean.ImportingFlag</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/InternalExceptionId.html">Lean.InternalExceptionId</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/KeyedDeclsAttribute.html">Lean.KeyedDeclsAttribute</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/LazyInitExtension.html">Lean.LazyInitExtension</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Level.html">Lean.Level</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/LoadDynlib.html">Lean.LoadDynlib</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/LocalContext.html">Lean.LocalContext</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Message.html">Lean.Message</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/MetavarContext.html">Lean.MetavarContext</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Modifiers.html">Lean.Modifiers</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/MonadEnv.html">Lean.MonadEnv</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ProjFns.html">Lean.ProjFns</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ReducibilityAttrs.html">Lean.ReducibilityAttrs</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ResolveName.html">Lean.ResolveName</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Runtime.html">Lean.Runtime</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ScopedEnvExtension.html">Lean.ScopedEnvExtension</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Structure.html">Lean.Structure</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Syntax.html">Lean.Syntax</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/ToExpr.html">Lean.ToExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Std.html">
+<summary>Std</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
+<summary>Std.Data</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/AssocList.html">Std.Data.AssocList</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/HashMap.html">Std.Data.HashMap</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/HashSet.html">Std.Data.HashSet</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/PersistentArray.html">Std.Data.PersistentArray</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/PersistentHashMap.html">Std.Data.PersistentHashMap</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/PersistentHashSet.html">Std.Data.PersistentHashSet</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/RBMap.html">Std.Data.RBMap</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/Data/RBTree.html">Std.Data.RBTree</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Std/ShareCommon.html">Std.ShareCommon</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Unicode.html">
+<summary>Unicode</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
+<summary>Unicode.General</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+</details>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/Includes.html">Unicode.Includes</a>
+</div>
+</details>
+</div>
+</nav>
+<script>
+siteRoot = "/Unicode.lean/";
+      </script>
+<script src="/Unicode.lean/nav.js">
+</script>
+<script src="/Unicode.lean/search.js">
+</script>
+<script src="/Unicode.lean/mathjax-config.js">
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</body>
+</html>
