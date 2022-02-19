@@ -264,15 +264,32 @@ def unihanVariantsStr := include_str% "./UCD/Unihan/Unihan_Variants.txt"
   ## HashMap Thunks
 -/
 
+/-- Decode hex string into number. -/
+private def decodeHex! (s : String) : Nat :=
+  s.data.map char2Nat
+  |>.foldl foldlHexDigits 0
+  where
+    char2Nat c := match c with
+    | '0' => 0 | '1' => 1 | '2' => 2 | '3' => 3 | '4' => 4
+    | '5' => 5 | '6' => 6 | '7' => 7 | '8' => 8 | '9' => 9
+    | 'a' => 10 | 'b' => 11 | 'c' => 12 | 'd' => 13 | 'e' => 14 | 'f' => 15
+    | 'A' => 10 | 'B' => 11 | 'C' => 12 | 'D' => 13 | 'E' => 14 | 'F' => 15
+    | _ => panic! "Invalid hex digit"
+    foldlHexDigits acc d := 16 * acc + d
+
+/-- Make `Char` `Hashable` as key of `HashMap`. -/
+instance : Hashable Char := ⟨ λ c => String.hash $ Char.toString c ⟩ 
+
 /-- Parse data file `String` into `HashMap`, the unit in parameter is left for `Thunk`. -/
-def parseStrToMapFn (s : String) (unit : Unit) : HashMap String (List String) := Id.run do
+def parseStrToMapFn (s : String) (unit : Unit) : HashMap Char (List String) := Id.run do
   let mut map := HashMap.empty
   for line in unicodeDataStr.splitOn "\n" do
     let splits := line.splitOn ";" |>.map String.trim
-    map := map.insert (splits.get! 0) (splits.tail!)
+    let char := Char.ofNat $ decodeHex! $ splits.get! 0
+    map := map.insert char (splits.tail!)
   return map
 
 /-- Includes the UnicodeData.txt data. -/
-def unicodeDataMap : Thunk (HashMap String (List String)) := ⟨ parseStrToMapFn unicodeDataStr ⟩ 
+def unicodeDataMap : Thunk (HashMap Char (List String)) := ⟨ parseStrToMapFn unicodeDataStr ⟩ 
 
 end Unicode
