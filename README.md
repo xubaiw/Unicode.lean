@@ -33,3 +33,5 @@ open Unicode
 #eval getGeneralCategory '-' -- Pd, dash punctuation
 #eval getGeneralCategory $ Char.mk 0x10ead (by decide) -- Pd, dash punctuation
 ```
+
+More examples can be found in the examples folder, and the [documentation](https://xubaiw.github.io/Unicode.lean/Unicode.html) is redered through `doc-gen4`.

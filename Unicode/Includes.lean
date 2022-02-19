@@ -49,7 +49,6 @@ def arabicShapingStr := include_str% "../UCD/ArabicShaping.txt"
 def namedSequencesStr := include_str% "../UCD/NamedSequences.txt"
 
 /-- Includes the BidiBrackets.txt string. -/
-
 def bidiBracketsStr := include_str% "../UCD/BidiBrackets.txt"
 
 /-- Includes the NamedSequencesProv.txt string. -/
