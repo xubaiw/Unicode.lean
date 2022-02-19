@@ -133,7 +133,7 @@ def uSourceDataStr := include_str% "./UCD/USourceData.txt"
 /-- Includes the HangulSyllableType.txt string. -/
 def hangulSyllableTypeStr := include_str% "./UCD/HangulSyllableType.txt"
 
-/-- Includes the UnicodeData.txt string. -/
+/-- Includes the UnicodeData.txt string. See `unicodeDataMap`. -/
 def unicodeDataStr := include_str% "./UCD/UnicodeData.txt"
 
 /-- Includes the Index.txt string. -/
@@ -259,5 +259,20 @@ def unihanNumericValuesStr := include_str% "./UCD/Unihan/Unihan_NumericValues.tx
 
 /-- Includes the SentenceBreakTest.txt string. -/
 def unihanVariantsStr := include_str% "./UCD/Unihan/Unihan_Variants.txt"
+
+/-!
+  ## HashMap Thunks
+-/
+
+/-- Parse data file `String` into `HashMap`, the unit in parameter is left for `Thunk`. -/
+def parseStrToMapFn (s : String) (unit : Unit) : HashMap String (List String) := Id.run do
+  let mut map := HashMap.empty
+  for line in unicodeDataStr.splitOn "\n" do
+    let splits := line.splitOn ";" |>.map String.trim
+    map := map.insert (splits.get! 0) (splits.tail!)
+  return map
+
+/-- Includes the UnicodeData.txt data. -/
+def unicodeDataMap : Thunk (HashMap String (List String)) := ⟨ parseStrToMapFn unicodeDataStr ⟩ 
 
 end Unicode
