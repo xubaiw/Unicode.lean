@@ -363,10 +363,10 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Parser.Term.letEqnsDecl">Lean.Parser.Term.letEqnsDecl</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Parser.Term.letrec">Lean.Parser.Term.letrec</a>
+<a class="break_within" href="#Lean.Parser.Term.letDecl">Lean.Parser.Term.letDecl</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Parser.Term.letDecl">Lean.Parser.Term.letDecl</a>
+<a class="break_within" href="#Lean.Parser.Term.letrec">Lean.Parser.Term.letrec</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Parser.Term.noindex">Lean.Parser.Term.noindex</a>
@@ -2848,6 +2848,30 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Parser.Term.letDecl">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L197-L197">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letDecl">Lean.Parser.Term.letDecl</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.Parser">Lean.Parser.Parser</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letDecl">Lean.Parser.Term.letDecl</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.nodeWithAntiquot">Lean.Parser.nodeWithAntiquot</a> <span class="fn">"letDecl"</span> <span class="fn">`Lean.Parser.Term.letDecl</span>
+    (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HAndThen.hAndThen">HAndThen.hAndThen</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.notFollowedBy">Lean.Parser.notFollowedBy</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.nonReservedSymbol">Lean.Parser.nonReservedSymbol</a> <span class="fn">"rec"</span></span>) <span class="fn">"rec"</span></span>) <span class="fn">fun <span class="fn">x</span> =>
+      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letIdDecl">Lean.Parser.Term.letIdDecl</a> <span class="fn">fun <span class="fn">x</span> =>
+        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letPatDecl">Lean.Parser.Term.letPatDecl</a> <span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letEqnsDecl">Lean.Parser.Term.letEqnsDecl</a></span></span></span></span></span></span>)</span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Parser.Term.letrec">
 <div class="def">
 <div class="gh_link">
@@ -2873,30 +2897,6 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
               (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HAndThen.hAndThen">HAndThen.hAndThen</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.symbol">Lean.Parser.symbol</a> <span class="fn">"let "</span></span>) <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.nonReservedSymbol">Lean.Parser.nonReservedSymbol</a> <span class="fn">"rec "</span></span></span></span>)</span>)
             <span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letRecDecls">Lean.Parser.Term.letRecDecls</a></span></span>)</span>)
         <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.optSemicolon">Lean.Parser.Term.optSemicolon</a> <span class="fn">Lean.Parser.termParser</span></span></span></span>)</span>)</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Parser.Term.letDecl">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L197-L197">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letDecl">Lean.Parser.Term.letDecl</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.Parser">Lean.Parser.Parser</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letDecl">Lean.Parser.Term.letDecl</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.nodeWithAntiquot">Lean.Parser.nodeWithAntiquot</a> <span class="fn">"letDecl"</span> <span class="fn">`Lean.Parser.Term.letDecl</span>
-    (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HAndThen.hAndThen">HAndThen.hAndThen</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.notFollowedBy">Lean.Parser.notFollowedBy</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.nonReservedSymbol">Lean.Parser.nonReservedSymbol</a> <span class="fn">"rec"</span></span>) <span class="fn">"rec"</span></span>) <span class="fn">fun <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letIdDecl">Lean.Parser.Term.letIdDecl</a> <span class="fn">fun <span class="fn">x</span> =>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letPatDecl">Lean.Parser.Term.letPatDecl</a> <span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letEqnsDecl">Lean.Parser.Term.letEqnsDecl</a></span></span></span></span></span></span>)</span></span></li>
 </ul>
 </details>
 </div>
