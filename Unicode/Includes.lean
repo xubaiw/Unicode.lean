@@ -3,7 +3,7 @@ import Std.Data.HashMap
 
 namespace Unicode
 
-open Lean System IO Lean.Elab.Term Std
+open Lean System IO Lean.Elab.Term Std FS
 
 /-!
   # Include UCD Data
@@ -19,13 +19,35 @@ open Lean System IO Lean.Elab.Term Std
   This macro is copied from https://github.com/leanprover/doc-gen4/blob/main/DocGen4/IncludeStr.lean by Henrik Böving
 -/
 
+deriving instance DecidableEq for FileType
+
+/--
+  Traverse all subdirectories fo `f` to find if one satisfies `p`.
+-/
+partial def traverseDir (f : FilePath) (p : FilePath → IO Bool) : IO (Option FilePath) := do
+  if (← p f) then
+    return f
+  for d in (← System.FilePath.readDir f) do
+    let subDir := d.path
+    let metadata ← subDir.metadata
+    if metadata.type = FileType.dir then
+      if let some p ← traverseDir subDir p then
+        return p
+  return none
+
 syntax (name := includeStr) "include_str%" str : term
 
 @[termElab includeStr] def includeStrImpl : TermElab := λ stx expectedType? => do
   let str := stx[1].isStrLit?.get!
   let srcPath := (FilePath.mk (← read).fileName)
-  if let some srcDir := srcPath.parent then
-    let path := srcDir / str
+  let currentDir ← IO.currentDir
+  -- HACK: Currently we cannot get current file path in VSCode, we have to traversely find the matched subdirectory in the current directory.
+  if let some path ← match srcPath.parent with
+  | some p => pure $ some $ p / str
+  | none => do
+    let foundDir ← traverseDir currentDir λ p => p / str |>.pathExists 
+    pure $ foundDir.map (· / str)
+  then 
     if ←path.pathExists then
       if ←path.isDir then
         throwError s!"{str} is a directory"
@@ -34,7 +56,8 @@ syntax (name := includeStr) "include_str%" str : term
         pure $ mkStrLit content
     else
       throwError s!"{path} does not exist as a file"
-  else throwError "{srcPath} not in a valid directory"
+  else
+    throwError s!"No such file in whole directory: {str}"
 
 /-!
   ## Included Raw Strings
