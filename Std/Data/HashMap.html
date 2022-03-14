@@ -1,7 +1,19 @@
 <html lang="en">
 <head>
-<link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><title>Std.Data.HashMap</title>
-<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta></head>
+<title>Std.Data.HashMap</title>
+<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><link rel="prefetch" href="/Unicode.lean/declaration-data.bmp"></link><script defer="true" src="/Unicode.lean/mathjax-config.js">
+</script>
+<script defer="true" src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script defer="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script type="module" src="/Unicode.lean/nav.js">
+</script>
+<script type="module" src="/Unicode.lean/search.js">
+</script>
+<script type="module" src="/Unicode.lean/how-about.js">
+</script>
+</head>
 <body>
 <input id="nav_toggle" type="checkbox"></input><header>
 <h1>
@@ -18,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Std.Data.HashMap</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -196,10 +208,10 @@ Documentation</h1>
 <div class="decl" id="Std.HashMapBucket">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L10-L11">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L10-L11">source</a>
 </div>
 <div class="decl_header">
-<span class="decl_kind">noncomputable def</span>
+<span class="decl_kind">def</span>
 <span class="decl_name">
 <a class="break_within" href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapBucket">Std.HashMapBucket</a>
 </span>
@@ -213,7 +225,7 @@ Documentation</h1>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapBucket">Std.HashMapBucket</a> <span class="fn">α</span> <span class="fn">β</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ b // <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span> }</span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapBucket">Std.HashMapBucket</a> <span class="fn">α</span> <span class="fn">β</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ b // <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">&gt</a> <span class="fn">0</span></span> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -221,7 +233,7 @@ Documentation</h1>
 <div class="decl" id="Std.HashMapBucket.update">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L13-L15">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L13-L15">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -243,14 +255,14 @@ Documentation</h1>
 <span class="decl_args">
 <span class="fn">(d : <span class="fn"><a href="/Unicode.lean/Std/Data/AssocList.html#Std.AssocList">Std.AssocList</a> <span class="fn">α</span> <span class="fn">β</span></span>)</span></span>
 <span class="decl_args">
-<span class="fn">(h : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <span class="fn">i</span></span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">data</span>.val</span></span></span>)</span></span>
+<span class="fn">(h : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <span class="fn">i</span></span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt">&lt</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">data</span>.val</span></span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapBucket">Std.HashMapBucket</a> <span class="fn">α</span> <span class="fn">β</span></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapBucket.update">Std.HashMapBucket.update</a> <span class="fn">data</span> <span class="fn">i</span> <span class="fn">d</span> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.uset">Array.uset</a> <span class="fn"><span class="fn">data</span>.val</span> <span class="fn">i</span> <span class="fn">d</span> <span class="fn">h</span></span>, property := (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.uset">Array.uset</a> <span class="fn"><span class="fn">data</span>.val</span> <span class="fn">i</span> <span class="fn">d</span> <span class="fn">h</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span>) }</span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapBucket.update">Std.HashMapBucket.update</a> <span class="fn">data</span> <span class="fn">i</span> <span class="fn">d</span> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.uset">Array.uset</a> <span class="fn"><span class="fn">data</span>.val</span> <span class="fn">i</span> <span class="fn">d</span> <span class="fn">h</span></span>, property := (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.uset">Array.uset</a> <span class="fn"><span class="fn">data</span>.val</span> <span class="fn">i</span> <span class="fn">d</span> <span class="fn">h</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">&gt</a> <span class="fn">0</span></span>) }</span></span></li>
 </ul>
 </details>
 </div>
@@ -258,7 +270,7 @@ Documentation</h1>
 <div class="decl" id="Std.HashMapImp">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L17-L19">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L17-L19">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -282,7 +294,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.mkHashMapImp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L25-L31">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L25-L31">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -304,11 +316,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.mkHashMapImp">Std.mkHashMapImp</a> <span class="fn">capacity</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let_fun nbuckets := <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#_private.Std.Data.HashMap.0.Std.numBucketsForCapacity">Std.numBucketsForCapacity</a> <span class="fn">capacity</span></span>;
-  <span class="fn">let n := <span class="fn">if <span class="fn"><span class="fn">nbuckets</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">0</span></span> then <span class="fn">8</span> else <span class="fn">nbuckets</span></span>;
-  <span class="fn">{ size := <span class="fn">0</span>,
-    buckets := <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mkArray">mkArray</a> <span class="fn">n</span> <span class="fn">Std.AssocList.nil</span></span>, property := (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mkArray">mkArray</a> <span class="fn">n</span> <span class="fn">Std.AssocList.nil</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span>) }</span> }</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -316,7 +324,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.mkIdx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L36-L37">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L36-L37">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -328,16 +336,16 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <span class="fn">{n : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a>}</span></span>
 </span>
 <span class="decl_args">
-<span class="fn">(h : <span class="fn"><span class="fn">n</span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span>)</span></span>
+<span class="fn">(h : <span class="fn"><span class="fn">n</span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">&gt</a> <span class="fn">0</span></span>)</span></span>
 <span class="decl_args">
 <span class="fn">(u : <a href="/Unicode.lean/Init/Prelude.html#USize">USize</a>)</span></span>
 <span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">{ u // <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn">n</span></span> }</span></div></div>
+<div class="decl_type"><span class="fn">{ u // <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt">&lt</a> <span class="fn">n</span></span> }</span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.mkIdx">Std.HashMapImp.mkIdx</a> <span class="fn">h</span> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ val := <span class="fn"><span class="fn">u</span> <a href="/Unicode.lean/Init/Prelude.html#HMod.hMod">%</a> <span class="fn">n</span></span>, property := (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> (<span class="fn"><span class="fn">u</span> <a href="/Unicode.lean/Init/Prelude.html#HMod.hMod">%</a> <span class="fn">n</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn">n</span></span>) }</span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.mkIdx">Std.HashMapImp.mkIdx</a> <span class="fn">h</span> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ val := <span class="fn"><span class="fn">u</span> <a href="/Unicode.lean/Init/Prelude.html#HMod.hMod">%</a> <span class="fn">n</span></span>, property := (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> (<span class="fn"><span class="fn">u</span> <a href="/Unicode.lean/Init/Prelude.html#HMod.hMod">%</a> <span class="fn">n</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt">&lt</a> <span class="fn">n</span></span>) }</span></span></li>
 </ul>
 </details>
 </div>
@@ -345,7 +353,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.reinsertAux">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L39-L41">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L39-L41">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -374,10 +382,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.reinsertAux">Std.HashMapImp.reinsertAux</a> <span class="fn">hashFn</span> <span class="fn">data</span> <span class="fn">a</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let x := <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.mkIdx">Std.HashMapImp.mkIdx</a> (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">data</span>.val</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#UInt64.toUSize">UInt64.toUSize</a> (<span class="fn"><span class="fn">hashFn</span> <span class="fn">a</span></span>)</span>)</span>;
-  <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn">{ val := <span class="fn">i</span>, property := <span class="fn">h</span> }</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapBucket.update">Std.HashMapBucket.update</a> <span class="fn">data</span> <span class="fn">i</span> (<span class="fn"><a href="/Unicode.lean/Std/Data/AssocList.html#Std.AssocList.cons">Std.AssocList.cons</a> <span class="fn">a</span> <span class="fn">b</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.uget">Array.uget</a> <span class="fn"><span class="fn">data</span>.val</span> <span class="fn">i</span> <span class="fn">h</span></span>)</span>) <span class="fn">h</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -385,7 +390,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.foldBucketsM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L43-L44">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L43-L44">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -425,7 +430,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.foldBucketsM">Std.HashMapImp.foldBucketsM</a> <span class="fn">data</span> <span class="fn">d</span> <span class="fn">f</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.foldlM">Array.foldlM</a> (<span class="fn">fun <span class="fn">d</span> <span class="fn">b</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/AssocList.html#Std.AssocList.foldlM">Std.AssocList.foldlM</a> <span class="fn">f</span> <span class="fn">d</span> <span class="fn">b</span></span></span>) <span class="fn">d</span> <span class="fn"><span class="fn">data</span>.val</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">data</span>.val</span></span>)</span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.foldBucketsM">Std.HashMapImp.foldBucketsM</a> <span class="fn">data</span> <span class="fn">d</span> <span class="fn">f</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.foldlM">Array.foldlM</a> (<span class="fn">fun <span class="fn">d</span> <span class="fn">b</span> =&gt <span class="fn"><a href="/Unicode.lean/Std/Data/AssocList.html#Std.AssocList.foldlM">Std.AssocList.foldlM</a> <span class="fn">f</span> <span class="fn">d</span> <span class="fn">b</span></span></span>) <span class="fn">d</span> <span class="fn"><span class="fn">data</span>.val</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">data</span>.val</span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -433,7 +438,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.foldBuckets">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L46-L47">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L46-L47">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -473,7 +478,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.foldM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L49-L50">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L49-L50">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -521,7 +526,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.fold">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L52-L53">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L52-L53">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -561,7 +566,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.forBucketsM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L55-L56">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L55-L56">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -595,7 +600,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.forBucketsM">Std.HashMapImp.forBucketsM</a> <span class="fn">data</span> <span class="fn">f</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.forM">Array.forM</a> (<span class="fn">fun <span class="fn">b</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/AssocList.html#Std.AssocList.forM">Std.AssocList.forM</a> <span class="fn">f</span> <span class="fn">b</span></span></span>) <span class="fn"><span class="fn">data</span>.val</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">data</span>.val</span></span>)</span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.forBucketsM">Std.HashMapImp.forBucketsM</a> <span class="fn">data</span> <span class="fn">f</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.forM">Array.forM</a> (<span class="fn">fun <span class="fn">b</span> =&gt <span class="fn"><a href="/Unicode.lean/Std/Data/AssocList.html#Std.AssocList.forM">Std.AssocList.forM</a> <span class="fn">f</span> <span class="fn">b</span></span></span>) <span class="fn"><span class="fn">data</span>.val</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">data</span>.val</span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -603,7 +608,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.forM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L58-L59">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L58-L59">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -645,7 +650,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.findEntry?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L61-L65">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L61-L65">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -677,12 +682,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.findEntry?">Std.HashMapImp.findEntry?</a> <span class="fn">m</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">m</span> with
-  | <span class="fn">{ size := <span class="fn">x</span>, buckets := <span class="fn">buckets</span> }</span> =>
-    <span class="fn">let x := <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.mkIdx">Std.HashMapImp.mkIdx</a> (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">buckets</span>.val</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#UInt64.toUSize">UInt64.toUSize</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">a</span></span>)</span>)</span>;
-    <span class="fn">match <span class="fn">x</span> with
-    | <span class="fn">{ val := <span class="fn">i</span>, property := <span class="fn">h</span> }</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/AssocList.html#Std.AssocList.findEntry?">Std.AssocList.findEntry?</a> <span class="fn">a</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.uget">Array.uget</a> <span class="fn"><span class="fn">buckets</span>.val</span> <span class="fn">i</span> <span class="fn">h</span></span>)</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -690,7 +690,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.find?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L67-L71">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L67-L71">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -722,12 +722,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.find?">Std.HashMapImp.find?</a> <span class="fn">m</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">m</span> with
-  | <span class="fn">{ size := <span class="fn">x</span>, buckets := <span class="fn">buckets</span> }</span> =>
-    <span class="fn">let x := <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.mkIdx">Std.HashMapImp.mkIdx</a> (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">buckets</span>.val</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#UInt64.toUSize">UInt64.toUSize</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">a</span></span>)</span>)</span>;
-    <span class="fn">match <span class="fn">x</span> with
-    | <span class="fn">{ val := <span class="fn">i</span>, property := <span class="fn">h</span> }</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/AssocList.html#Std.AssocList.find?">Std.AssocList.find?</a> <span class="fn">a</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.uget">Array.uget</a> <span class="fn"><span class="fn">buckets</span>.val</span> <span class="fn">i</span> <span class="fn">h</span></span>)</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -735,7 +730,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.contains">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L73-L77">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L73-L77">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -767,12 +762,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.contains">Std.HashMapImp.contains</a> <span class="fn">m</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">m</span> with
-  | <span class="fn">{ size := <span class="fn">x</span>, buckets := <span class="fn">buckets</span> }</span> =>
-    <span class="fn">let x := <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.mkIdx">Std.HashMapImp.mkIdx</a> (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">buckets</span>.val</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#UInt64.toUSize">UInt64.toUSize</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">a</span></span>)</span>)</span>;
-    <span class="fn">match <span class="fn">x</span> with
-    | <span class="fn">{ val := <span class="fn">i</span>, property := <span class="fn">h</span> }</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/AssocList.html#Std.AssocList.contains">Std.AssocList.contains</a> <span class="fn">a</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.uget">Array.uget</a> <span class="fn"><span class="fn">buckets</span>.val</span> <span class="fn">i</span> <span class="fn">h</span></span>)</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -780,7 +770,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.moveEntries">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L80-L88">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L80-L88">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -812,7 +802,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.expand">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L90-L95">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L90-L95">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -840,13 +830,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.expand">Std.HashMapImp.expand</a> <span class="fn">size</span> <span class="fn">buckets</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let nbuckets := <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">buckets</span>.val</span></span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn">2</span></span>;
-  <span class="fn">let_fun this := (_ : <span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">buckets</span>.val</span></span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn">2</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span>);
-  <span class="fn">let new_buckets :=
-    <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mkArray">mkArray</a> <span class="fn">nbuckets</span> <span class="fn">Std.AssocList.nil</span></span>,
-      property := (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mkArray">mkArray</a> <span class="fn">nbuckets</span> <span class="fn">Std.AssocList.nil</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span>) }</span>;
-  <span class="fn">{ size := <span class="fn">size</span>, buckets := <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.moveEntries">Std.HashMapImp.moveEntries</a> <span class="fn">0</span> <span class="fn"><span class="fn">buckets</span>.val</span> <span class="fn">new_buckets</span></span> }</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -854,7 +838,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.insert">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L97-L110">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L97-L110">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -889,20 +873,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.insert">Std.HashMapImp.insert</a> <span class="fn">m</span> <span class="fn">a</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">m</span> with
-  | <span class="fn">{ size := <span class="fn">size</span>, buckets := <span class="fn">buckets</span> }</span> =>
-    <span class="fn">let x := <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.mkIdx">Std.HashMapImp.mkIdx</a> (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">buckets</span>.val</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#UInt64.toUSize">UInt64.toUSize</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">a</span></span>)</span>)</span>;
-    <span class="fn">match <span class="fn">x</span> with
-    | <span class="fn">{ val := <span class="fn">i</span>, property := <span class="fn">h</span> }</span> =>
-      <span class="fn">let bkt := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.uget">Array.uget</a> <span class="fn"><span class="fn">buckets</span>.val</span> <span class="fn">i</span> <span class="fn">h</span></span>;
-      <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/AssocList.html#Std.AssocList.contains">Std.AssocList.contains</a> <span class="fn">a</span> <span class="fn">bkt</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-        <span class="fn">(<span class="fn">{ size := <span class="fn">size</span>, buckets := <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapBucket.update">Std.HashMapBucket.update</a> <span class="fn">buckets</span> <span class="fn">i</span> (<span class="fn"><a href="/Unicode.lean/Std/Data/AssocList.html#Std.AssocList.replace">Std.AssocList.replace</a> <span class="fn">a</span> <span class="fn">b</span> <span class="fn">bkt</span></span>) <span class="fn">h</span></span> }</span>, <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>)</span>
-      else
-        <span class="fn">let size' := <span class="fn"><span class="fn">size</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>;
-        <span class="fn">let buckets' := <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapBucket.update">Std.HashMapBucket.update</a> <span class="fn">buckets</span> <span class="fn">i</span> (<span class="fn"><a href="/Unicode.lean/Std/Data/AssocList.html#Std.AssocList.cons">Std.AssocList.cons</a> <span class="fn">a</span> <span class="fn">b</span> <span class="fn">bkt</span></span>) <span class="fn">h</span></span>;
-        <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#_private.Std.Data.HashMap.0.Std.numBucketsForCapacity">Std.numBucketsForCapacity</a> <span class="fn">size'</span></span> <a href="/Unicode.lean/Init/Prelude.html#LE.le">≤</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">buckets</span>.val</span></span></span> then <span class="fn">(<span class="fn">{ size := <span class="fn">size'</span>, buckets := <span class="fn">buckets'</span> }</span>, <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a>)</span>
-        else <span class="fn">(<span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.expand">Std.HashMapImp.expand</a> <span class="fn">size'</span> <span class="fn">buckets'</span></span>, <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a>)</span></span></span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -910,7 +881,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.erase">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L112-L118">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L112-L118">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -942,16 +913,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.erase">Std.HashMapImp.erase</a> <span class="fn">m</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">m</span> with
-  | <span class="fn">{ size := <span class="fn">size</span>, buckets := <span class="fn">buckets</span> }</span> =>
-    <span class="fn">let x := <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.mkIdx">Std.HashMapImp.mkIdx</a> (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">buckets</span>.val</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#UInt64.toUSize">UInt64.toUSize</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">a</span></span>)</span>)</span>;
-    <span class="fn">match <span class="fn">x</span> with
-    | <span class="fn">{ val := <span class="fn">i</span>, property := <span class="fn">h</span> }</span> =>
-      <span class="fn">let bkt := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.uget">Array.uget</a> <span class="fn"><span class="fn">buckets</span>.val</span> <span class="fn">i</span> <span class="fn">h</span></span>;
-      <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/AssocList.html#Std.AssocList.contains">Std.AssocList.contains</a> <span class="fn">a</span> <span class="fn">bkt</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-        <span class="fn">{ size := <span class="fn"><span class="fn">size</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">1</span></span>, buckets := <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapBucket.update">Std.HashMapBucket.update</a> <span class="fn">buckets</span> <span class="fn">i</span> (<span class="fn"><a href="/Unicode.lean/Std/Data/AssocList.html#Std.AssocList.erase">Std.AssocList.erase</a> <span class="fn">a</span> <span class="fn">bkt</span></span>) <span class="fn">h</span></span> }</span>
-      else <span class="fn">m</span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -959,7 +921,7 @@ buckets : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.Hash
 <div class="decl" id="Std.HashMapImp.WellFormed">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L120-L123">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L120-L123">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -1000,10 +962,10 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L127-L128">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L127-L128">source</a>
 </div>
 <div class="decl_header">
-<span class="decl_kind">noncomputable def</span>
+<span class="decl_kind">def</span>
 <span class="decl_name">
 <a class="break_within" href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap">Std.HashMap</a>
 </span>
@@ -1033,7 +995,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.mkHashMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L132-L133">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L132-L133">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1072,7 +1034,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.instInhabitedHashMap">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L136-L137">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L136-L137">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1109,7 +1071,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.instEmptyCollectionHashMap">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L139-L139">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L139-L139">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1146,7 +1108,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.empty">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L141-L142">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L141-L142">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1184,7 +1146,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.insert">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L146-L150">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L146-L150">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1204,11 +1166,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.insert">Std.HashMap.insert</a> <span class="fn">m</span> <span class="fn">a</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">m</span> with
-  | <span class="fn">{ val := <span class="fn">m</span>, property := <span class="fn">hw</span> }</span> =>
-    <span class="fn">match <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.insert">Std.HashMapImp.insert</a> <span class="fn">m</span> <span class="fn">a</span> <span class="fn">b</span></span>, (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.insert">Std.HashMapImp.insert</a> <span class="fn">m</span> <span class="fn">a</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.insert">Std.HashMapImp.insert</a> <span class="fn">m</span> <span class="fn">a</span> <span class="fn">b</span></span></span>) with
-    | <span class="fn">(<span class="fn">m'</span>, <span class="fn">x</span>)</span>, <span class="fn">h</span> => <span class="fn">{ val := <span class="fn">m'</span>, property := (_ : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.WellFormed">Std.HashMapImp.WellFormed</a> <span class="fn"><span class="fn">(<span class="fn">m'</span>, <span class="fn">x</span>)</span>.fst</span></span>) }</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1216,7 +1174,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.insert'">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L153-L157">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L153-L157">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1233,22 +1191,18 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn">{x : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#BEq">BEq</a> <span class="fn">α</span></span>} → <span class="fn">{x_1 : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable">Hashable</a> <span class="fn">α</span></span>} → <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap">Std.HashMap</a> <span class="fn">α</span> <span class="fn">β</span></span> → <span class="fn"><span class="fn">α</span> → <span class="fn"><span class="fn">β</span> → <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap">Std.HashMap</a> <span class="fn">α</span> <span class="fn">β</span></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></span></span></span></span></span></div></div>
-<details>
+<p>Similar to <code><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.insert">insert</a></code>, but also returns a Boolean flad indicating whether an existing entry has been replaced with <code>a -> b</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.insert'">Std.HashMap.insert'</a> <span class="fn">m</span> <span class="fn">a</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">m</span> with
-  | <span class="fn">{ val := <span class="fn">m</span>, property := <span class="fn">hw</span> }</span> =>
-    <span class="fn">match <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.insert">Std.HashMapImp.insert</a> <span class="fn">m</span> <span class="fn">a</span> <span class="fn">b</span></span>, (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.insert">Std.HashMapImp.insert</a> <span class="fn">m</span> <span class="fn">a</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.insert">Std.HashMapImp.insert</a> <span class="fn">m</span> <span class="fn">a</span> <span class="fn">b</span></span></span>) with
-    | <span class="fn">(<span class="fn">m'</span>, <span class="fn">replaced</span>)</span>, <span class="fn">h</span> => <span class="fn">(<span class="fn">{ val := <span class="fn">m'</span>, property := (_ : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.WellFormed">Std.HashMapImp.WellFormed</a> <span class="fn"><span class="fn">(<span class="fn">m'</span>, <span class="fn">replaced</span>)</span>.fst</span></span>) }</span>, <span class="fn">replaced</span>)</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>Similar to <code><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.insert">insert</a></code>, but also returns a Boolean flad indicating whether an existing entry has been replaced with <code>a->b</code>.</p></div>
+</div>
 </div>
 <div class="decl" id="Std.HashMap.erase">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L159-L161">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L159-L161">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1271,7 +1225,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.erase">Std.HashMap.erase</a> <span class="fn">m</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">m</span> with
-  | <span class="fn">{ val := <span class="fn">m</span>, property := <span class="fn">hw</span> }</span> =>
+  | <span class="fn">{ val := <span class="fn">m</span>, property := <span class="fn">hw</span> }</span> =&gt
     <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.erase">Std.HashMapImp.erase</a> <span class="fn">m</span> <span class="fn">a</span></span>, property := (_ : <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.WellFormed">Std.HashMapImp.WellFormed</a> (<span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.erase">Std.HashMapImp.erase</a> <span class="fn">m</span> <span class="fn">a</span></span>)</span>) }</span></span></span></li>
 </ul>
 </details>
@@ -1280,7 +1234,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.findEntry?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L163-L165">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L163-L165">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1303,7 +1257,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.findEntry?">Std.HashMap.findEntry?</a> <span class="fn">m</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">m</span> with
-  | <span class="fn">{ val := <span class="fn">m</span>, property := <span class="fn">x</span> }</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.findEntry?">Std.HashMapImp.findEntry?</a> <span class="fn">m</span> <span class="fn">a</span></span></span></span></li>
+  | <span class="fn">{ val := <span class="fn">m</span>, property := <span class="fn">x</span> }</span> =&gt <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.findEntry?">Std.HashMapImp.findEntry?</a> <span class="fn">m</span> <span class="fn">a</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1311,7 +1265,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.find?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L167-L169">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L167-L169">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1334,7 +1288,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.find?">Std.HashMap.find?</a> <span class="fn">m</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">m</span> with
-  | <span class="fn">{ val := <span class="fn">m</span>, property := <span class="fn">x</span> }</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.find?">Std.HashMapImp.find?</a> <span class="fn">m</span> <span class="fn">a</span></span></span></span></li>
+  | <span class="fn">{ val := <span class="fn">m</span>, property := <span class="fn">x</span> }</span> =&gt <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.find?">Std.HashMapImp.find?</a> <span class="fn">m</span> <span class="fn">a</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1342,7 +1296,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.findD">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L171-L172">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L171-L172">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1372,7 +1326,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.find!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L174-L177">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L174-L177">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1393,10 +1347,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.find!">Std.HashMap.find!</a> <span class="fn">m</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.find?">Std.HashMap.find?</a> <span class="fn">m</span> <span class="fn">a</span></span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">b</span></span> => <span class="fn">b</span>
-  | <span class="fn">none</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Std.Data.HashMap"</span> <span class="fn">"Std.HashMap.find!"</span> <span class="fn">177</span> <span class="fn">14</span> <span class="fn">"key is not in the map"</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1404,7 +1355,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.getOp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L179-L180">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L179-L180">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1434,7 +1385,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.contains">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L182-L184">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L182-L184">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1457,7 +1408,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.contains">Std.HashMap.contains</a> <span class="fn">m</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">m</span> with
-  | <span class="fn">{ val := <span class="fn">m</span>, property := <span class="fn">x</span> }</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.contains">Std.HashMapImp.contains</a> <span class="fn">m</span> <span class="fn">a</span></span></span></span></li>
+  | <span class="fn">{ val := <span class="fn">m</span>, property := <span class="fn">x</span> }</span> =&gt <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.contains">Std.HashMapImp.contains</a> <span class="fn">m</span> <span class="fn">a</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1465,7 +1416,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.foldM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L186-L188">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L186-L188">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1490,7 +1441,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.foldM">Std.HashMap.foldM</a> <span class="fn">f</span> <span class="fn">init</span> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">h</span> with
-  | <span class="fn">{ val := <span class="fn">h</span>, property := <span class="fn">x</span> }</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.foldM">Std.HashMapImp.foldM</a> <span class="fn">f</span> <span class="fn">init</span> <span class="fn">h</span></span></span></span></li>
+  | <span class="fn">{ val := <span class="fn">h</span>, property := <span class="fn">x</span> }</span> =&gt <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.foldM">Std.HashMapImp.foldM</a> <span class="fn">f</span> <span class="fn">init</span> <span class="fn">h</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1498,7 +1449,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.fold">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L190-L192">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L190-L192">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1521,7 +1472,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.fold">Std.HashMap.fold</a> <span class="fn">f</span> <span class="fn">init</span> <span class="fn">m</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">m</span> with
-  | <span class="fn">{ val := <span class="fn">m</span>, property := <span class="fn">x</span> }</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.fold">Std.HashMapImp.fold</a> <span class="fn">f</span> <span class="fn">init</span> <span class="fn">m</span></span></span></span></li>
+  | <span class="fn">{ val := <span class="fn">m</span>, property := <span class="fn">x</span> }</span> =&gt <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.fold">Std.HashMapImp.fold</a> <span class="fn">f</span> <span class="fn">init</span> <span class="fn">m</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1529,7 +1480,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.forM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L194-L196">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L194-L196">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1553,7 +1504,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.forM">Std.HashMap.forM</a> <span class="fn">f</span> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">h</span> with
-  | <span class="fn">{ val := <span class="fn">h</span>, property := <span class="fn">x</span> }</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.forM">Std.HashMapImp.forM</a> <span class="fn">f</span> <span class="fn">h</span></span></span></span></li>
+  | <span class="fn">{ val := <span class="fn">h</span>, property := <span class="fn">x</span> }</span> =&gt <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMapImp.forM">Std.HashMapImp.forM</a> <span class="fn">f</span> <span class="fn">h</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1561,7 +1512,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.size">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L198-L200">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L198-L200">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1584,7 +1535,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.size">Std.HashMap.size</a> <span class="fn">m</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">m</span> with
-  | <span class="fn">{ val := <span class="fn">{ size := <span class="fn">sz</span>, buckets := <span class="fn">x</span> }</span>, property := <span class="fn">x_1</span> }</span> => <span class="fn">sz</span></span></span></li>
+  | <span class="fn">{ val := <span class="fn">{ size := <span class="fn">sz</span>, buckets := <span class="fn">x</span> }</span>, property := <span class="fn">x_1</span> }</span> =&gt <span class="fn">sz</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1592,7 +1543,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.isEmpty">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L202-L203">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L202-L203">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1622,7 +1573,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.toList">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L205-L206">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L205-L206">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1643,7 +1594,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.toList">Std.HashMap.toList</a> <span class="fn">m</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.fold">Std.HashMap.fold</a> (<span class="fn">fun <span class="fn">r</span> <span class="fn">k</span> <span class="fn">v</span> => <span class="fn"><span class="fn">(<span class="fn">k</span>, <span class="fn">v</span>)</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">r</span></span></span>) <span class="fn">[]</span> <span class="fn">m</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.toList">Std.HashMap.toList</a> <span class="fn">m</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.fold">Std.HashMap.fold</a> (<span class="fn">fun <span class="fn">r</span> <span class="fn">k</span> <span class="fn">v</span> =&gt <span class="fn"><span class="fn">(<span class="fn">k</span>, <span class="fn">v</span>)</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">r</span></span></span>) <span class="fn">[]</span> <span class="fn">m</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1651,7 +1602,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.toArray">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L208-L209">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L208-L209">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1672,7 +1623,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.toArray">Std.HashMap.toArray</a> <span class="fn">m</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.fold">Std.HashMap.fold</a> (<span class="fn">fun <span class="fn">r</span> <span class="fn">k</span> <span class="fn">v</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">r</span> <span class="fn">(<span class="fn">k</span>, <span class="fn">v</span>)</span></span></span>) <span class="fn">#[]</span> <span class="fn">m</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.toArray">Std.HashMap.toArray</a> <span class="fn">m</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.fold">Std.HashMap.fold</a> (<span class="fn">fun <span class="fn">r</span> <span class="fn">k</span> <span class="fn">v</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">r</span> <span class="fn">(<span class="fn">k</span>, <span class="fn">v</span>)</span></span></span>) <span class="fn">#[]</span> <span class="fn">m</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1680,7 +1631,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.numBuckets">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L211-L212">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L211-L212">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1709,7 +1660,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="decl" id="Std.HashMap.ofList">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L215-L216">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L215-L216">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1726,19 +1677,19 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn">{x : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#BEq">BEq</a> <span class="fn">α</span></span>} → <span class="fn">{x_1 : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable">Hashable</a> <span class="fn">α</span></span>} → <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> (<span class="fn"><span class="fn">α</span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn">β</span></span>)</span> → <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap">Std.HashMap</a> <span class="fn">α</span> <span class="fn">β</span></span></span></span></span></div></div>
-<details>
+<p>Builds a <code><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap">HashMap</a></code> from a list of key-value pairs. Values of duplicated keys are replaced by their respective last occurrences.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.ofList">Std.HashMap.ofList</a> <span class="fn">l</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List.foldl">List.foldl</a> (<span class="fn">fun <span class="fn">m</span> <span class="fn">p</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.insert">Std.HashMap.insert</a> <span class="fn">m</span> <span class="fn"><span class="fn">p</span>.fst</span> <span class="fn"><span class="fn">p</span>.snd</span></span></span>) <span class="fn">Std.HashMap.empty</span> <span class="fn">l</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.ofList">Std.HashMap.ofList</a> <span class="fn">l</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List.foldl">List.foldl</a> (<span class="fn">fun <span class="fn">m</span> <span class="fn">p</span> =&gt <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.insert">Std.HashMap.insert</a> <span class="fn">m</span> <span class="fn"><span class="fn">p</span>.fst</span> <span class="fn"><span class="fn">p</span>.snd</span></span></span>) <span class="fn">Std.HashMap.empty</span> <span class="fn">l</span></span></span></li>
 </ul>
 </details>
-<p>Builds a <code><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap">HashMap</a></code> from a list of key-value pairs. Values of duplicated keys are replaced by their respective last occurrences.</p></div>
+</div>
 </div>
 <div class="decl" id="Std.HashMap.ofListWith">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/HashMap.lean#L219-L224">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/HashMap.lean#L219-L224">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1755,19 +1706,13 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn">{x : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#BEq">BEq</a> <span class="fn">α</span></span>} → <span class="fn">{x_1 : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable">Hashable</a> <span class="fn">α</span></span>} → <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> (<span class="fn"><span class="fn">α</span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn">β</span></span>)</span> → <span class="fn">(<span class="fn"><span class="fn">β</span> → <span class="fn">β</span> → <span class="fn">β</span></span>) → <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap">Std.HashMap</a> <span class="fn">α</span> <span class="fn">β</span></span></span></span></span></span></div></div>
-<details>
+<p>Variant of <code><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.ofList">ofList</a></code> which accepts a function that combines values of duplicated keys.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.ofListWith">Std.HashMap.ofListWith</a> <span class="fn">l</span> <span class="fn">f</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List.foldl">List.foldl</a>
-    (<span class="fn">fun <span class="fn">m</span> <span class="fn">p</span> =>
-      <span class="fn">match <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.find?">Std.HashMap.find?</a> <span class="fn">m</span> <span class="fn"><span class="fn">p</span>.fst</span></span> with
-      | <span class="fn">none</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.insert">Std.HashMap.insert</a> <span class="fn">m</span> <span class="fn"><span class="fn">p</span>.fst</span> <span class="fn"><span class="fn">p</span>.snd</span></span>
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">v</span></span> => <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.insert">Std.HashMap.insert</a> <span class="fn">m</span> <span class="fn"><span class="fn">p</span>.fst</span> (<span class="fn"><span class="fn">f</span> <span class="fn">v</span> <span class="fn"><span class="fn">p</span>.snd</span></span>)</span></span></span>)
-    <span class="fn">Std.HashMap.empty</span> <span class="fn">l</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>Variant of <code><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.ofList">ofList</a></code> which accepts a function that combines values of duplicated keys.</p></div>
+</div>
 </div>
 </main>
 <nav class="nav">
@@ -1778,10 +1723,10 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <h3>Library</h3>
 <div class="module_list">
 <details class="nav_sect" data-path="/Unicode.lean/Init.html">
-<summary>Init</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
-<summary>Init.Control</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init.html">Init</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
+<summary><a href="/Unicode.lean/Init/Control.html">Init.Control</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Control/Basic.html">Init.Control.Basic</a>
 </div>
 <div class="nav_link">
@@ -1816,10 +1761,10 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data.html">
-<summary>Init.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
-<summary>Init.Data.Array</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
+<summary><a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/Basic.html">Init.Data.Array.Basic</a>
 </div>
 <div class="nav_link">
@@ -1842,32 +1787,32 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ByteArray.html">
-<summary>Init.Data.ByteArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ByteArray/Basic.html">Init.Data.ByteArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Char.html">
-<summary>Init.Data.Char</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Char/Basic.html">Init.Data.Char.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Fin.html">
-<summary>Init.Data.Fin</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Fin/Basic.html">Init.Data.Fin.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/FloatArray.html">
-<summary>Init.Data.FloatArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/FloatArray/Basic.html">Init.Data.FloatArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Format.html">
-<summary>Init.Data.Format</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Format/Basic.html">Init.Data.Format.Basic</a>
 </div>
 <div class="nav_link">
@@ -1881,14 +1826,14 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Int.html">
-<summary>Init.Data.Int</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Int/Basic.html">Init.Data.Int.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/List.html">
-<summary>Init.Data.List</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/List/Basic.html">Init.Data.List.Basic</a>
 </div>
 <div class="nav_link">
@@ -1899,8 +1844,8 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Nat.html">
-<summary>Init.Data.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Basic.html">Init.Data.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -1923,8 +1868,8 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Option.html">
-<summary>Init.Data.Option</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Option/Basic.html">Init.Data.Option.Basic</a>
 </div>
 <div class="nav_link">
@@ -1935,8 +1880,8 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/String.html">
-<summary>Init.Data.String</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/String/Basic.html">Init.Data.String.Basic</a>
 </div>
 <div class="nav_link">
@@ -1944,8 +1889,8 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ToString.html">
-<summary>Init.Data.ToString</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
 </div>
 <div class="nav_link">
@@ -1953,46 +1898,16 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Float.html">Init.Data.Float</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Hashable.html">Init.Data.Hashable</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/OfScientific.html">Init.Data.OfScientific</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
@@ -2013,18 +1928,12 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Init/Data/Stream.html">Init.Data.Stream</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/UInt.html">Init.Data.UInt</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/System.html">
-<summary>Init.System</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/System.html">Init.System</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/System/FilePath.html">Init.System.FilePath</a>
 </div>
 <div class="nav_link">
@@ -2047,16 +1956,10 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Init/Coe.html">Init.Coe</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Control.html">Init.Control</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Conv.html">Init.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Core.html">Init.Core</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Fix.html">Init.Fix</a>
@@ -2086,9 +1989,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/System.html">Init.System</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Util.html">Init.Util</a>
 </div>
 <div class="nav_link">
@@ -2099,12 +1999,12 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean.html">
-<summary>Lean</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
-<summary>Lean.Compiler</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
-<summary>Lean.Compiler.IR</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean.html">Lean</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
+<summary><a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
+<summary><a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html">Lean.Compiler.IR.Basic</a>
 </div>
 <div class="nav_link">
@@ -2190,9 +2090,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Lean/Compiler/FFI.html">Lean.Compiler.FFI</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/ImplementedByAttr.html">Lean.Compiler.ImplementedByAttr</a>
 </div>
 <div class="nav_link">
@@ -2218,10 +2115,10 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data.html">
-<summary>Lean.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
-<summary>Lean.Data.Json</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
+<summary><a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json/Basic.html">Lean.Data.Json.Basic</a>
 </div>
 <div class="nav_link">
@@ -2238,8 +2135,8 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Lsp.html">
-<summary>Lean.Data.Lsp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html">Lean.Data.Lsp.Basic</a>
 </div>
 <div class="nav_link">
@@ -2280,8 +2177,8 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Xml.html">
-<summary>Lean.Data.Xml</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Xml/Basic.html">Lean.Data.Xml.Basic</a>
 </div>
 <div class="nav_link">
@@ -2295,9 +2192,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
 </div>
 <div class="nav_link">
@@ -2308,9 +2202,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/LOption.html">Lean.Data.LOption</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Name.html">Lean.Data.Name</a>
@@ -2348,15 +2239,12 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Trie.html">Lean.Data.Trie</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab.html">
-<summary>Lean.Elab</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
-<summary>Lean.Elab.Deriving</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Deriving/BEq.html">Lean.Elab.Deriving.BEq</a>
 </div>
 <div class="nav_link">
@@ -2388,10 +2276,10 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition.html">
-<summary>Lean.Elab.PreDefinition</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
-<summary>Lean.Elab.PreDefinition.Structural</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/BRecOn.html">Lean.Elab.PreDefinition.Structural.BRecOn</a>
 </div>
 <div class="nav_link">
@@ -2417,8 +2305,8 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">
-<summary>Lean.Elab.PreDefinition.WF</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html">Lean.Elab.PreDefinition.WF.Eqns</a>
 </div>
 <div class="nav_link">
@@ -2452,16 +2340,10 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/MkInhabitant.html">Lean.Elab.PreDefinition.MkInhabitant</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Quotation.html">
-<summary>Lean.Elab.Quotation</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html">Lean.Elab.Quotation.Precheck</a>
 </div>
 <div class="nav_link">
@@ -2469,10 +2351,10 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic.html">
-<summary>Lean.Elab.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
-<summary>Lean.Elab.Tactic.Conv</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
 </div>
 <div class="nav_link">
@@ -2505,9 +2387,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Delta.html">Lean.Elab.Tactic.Delta</a>
@@ -2598,9 +2477,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Lean/Elab/DefView.html">Lean.Elab.DefView</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
 </div>
 <div class="nav_link">
@@ -2667,13 +2543,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Print.html">Lean.Elab.Print</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/RecAppSyntax.html">Lean.Elab.RecAppSyntax</a>
@@ -2694,9 +2564,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html">Lean.Elab.SyntheticMVars</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Term.html">Lean.Elab.Term</a>
 </div>
 <div class="nav_link">
@@ -2704,10 +2571,10 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta.html">
-<summary>Lean.Meta</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
-<summary>Lean.Meta.Match</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/Basic.html">Lean.Meta.Match.Basic</a>
 </div>
 <div class="nav_link">
@@ -2736,12 +2603,12 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
-<summary>Lean.Meta.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
-<summary>Lean.Meta.Tactic.LinearArith</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
-<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -2758,9 +2625,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
 </div>
 <div class="nav_link">
@@ -2768,8 +2632,8 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
-<summary>Lean.Meta.Tactic.Simp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html">Lean.Meta.Tactic.Simp.Main</a>
 </div>
 <div class="nav_link">
@@ -2840,9 +2704,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rename.html">Lean.Meta.Tactic.Rename</a>
 </div>
 <div class="nav_link">
@@ -2853,9 +2714,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rewrite.html">Lean.Meta.Tactic.Rewrite</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Split.html">Lean.Meta.Tactic.Split</a>
@@ -2967,9 +2825,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/MatchUtil.html">Lean.Meta.MatchUtil</a>
 </div>
 <div class="nav_link">
@@ -2997,9 +2852,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Transform.html">Lean.Meta.Transform</a>
 </div>
 <div class="nav_link">
@@ -3013,8 +2865,8 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Parser.html">
-<summary>Lean.Parser</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Parser/Attr.html">Lean.Parser.Attr</a>
 </div>
 <div class="nav_link">
@@ -3052,16 +2904,16 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/ParserCompiler.html">
-<summary>Lean.ParserCompiler</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html">Lean.ParserCompiler.Attribute</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter.html">
-<summary>Lean.PrettyPrinter</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
-<summary>Lean.PrettyPrinter.Delaborator</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html">Lean.PrettyPrinter.Delaborator.Basic</a>
 </div>
 <div class="nav_link">
@@ -3081,9 +2933,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Lean/PrettyPrinter/Basic.html">Lean.PrettyPrinter.Basic</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Formatter.html">Lean.PrettyPrinter.Formatter</a>
 </div>
 <div class="nav_link">
@@ -3091,10 +2940,10 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server.html">
-<summary>Lean.Server</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
-<summary>Lean.Server.FileWorker</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
+<summary><a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html">Lean.Server.FileWorker.RequestHandling</a>
 </div>
 <div class="nav_link">
@@ -3105,8 +2954,8 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server/Rpc.html">
-<summary>Lean.Server.Rpc</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Rpc/Basic.html">Lean.Server.Rpc.Basic</a>
 </div>
 <div class="nav_link">
@@ -3126,9 +2975,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Lean/Server/FileSource.html">Lean.Server.FileSource</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
 </div>
 <div class="nav_link">
@@ -3136,9 +2982,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Requests.html">Lean.Server.Requests</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Snapshots.html">Lean.Server.Snapshots</a>
@@ -3151,8 +2994,8 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Util.html">
-<summary>Lean.Util</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/CollectFVars.html">Lean.Util.CollectFVars</a>
 </div>
 <div class="nav_link">
@@ -3220,8 +3063,8 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Widget.html">
-<summary>Lean.Widget</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html">Lean.Widget.InteractiveCode</a>
 </div>
 <div class="nav_link">
@@ -3244,13 +3087,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Lean/Class.html">Lean.Class</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/CoreM.html">Lean.CoreM</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Declaration.html">Lean.Declaration</a>
@@ -3260,9 +3097,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/DocString.html">Lean.DocString</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
@@ -3307,9 +3141,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Lean/Message.html">Lean.Message</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/MetavarContext.html">Lean.MetavarContext</a>
 </div>
 <div class="nav_link">
@@ -3317,15 +3148,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/MonadEnv.html">Lean.MonadEnv</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ProjFns.html">Lean.ProjFns</a>
@@ -3343,9 +3165,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <a href="/Unicode.lean/Lean/ScopedEnvExtension.html">Lean.ScopedEnvExtension</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Structure.html">Lean.Structure</a>
 </div>
 <div class="nav_link">
@@ -3353,12 +3172,6 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ToExpr.html">Lean.ToExpr</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
@@ -3377,7 +3190,7 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 <div class="nav_link">
 <a href="/Unicode.lean/Std/Data/AssocList.html">Std.Data.AssocList</a>
 </div>
-<div class="nav_link" visible="">
+<div class="nav_link visible">
 <a href="/Unicode.lean/Std/Data/HashMap.html">Std.Data.HashMap</a>
 </div>
 <div class="nav_link">
@@ -3404,10 +3217,10 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Unicode.html">
-<summary>Unicode</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
-<summary>Unicode.General</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Unicode.html">Unicode</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
+<summary><a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
 </div>
 <div class="nav_link">
@@ -3415,26 +3228,10 @@ eraseWff: <span class="fn">∀ {α : <span class="fn">Type u</span>} {β : <span
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Unicode/Includes.html">Unicode.Includes</a>
 </div>
 </details>
 </div>
 </nav>
-<script>
-siteRoot = "/Unicode.lean/";
-      </script>
-<script src="/Unicode.lean/nav.js">
-</script>
-<script src="/Unicode.lean/search.js">
-</script>
-<script src="/Unicode.lean/mathjax-config.js">
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </body>
 </html>

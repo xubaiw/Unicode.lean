@@ -1,7 +1,19 @@
 <html lang="en">
 <head>
-<link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><title>Lean.Meta.AppBuilder</title>
-<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta></head>
+<title>Lean.Meta.AppBuilder</title>
+<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><link rel="prefetch" href="/Unicode.lean/declaration-data.bmp"></link><script defer="true" src="/Unicode.lean/mathjax-config.js">
+</script>
+<script defer="true" src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script defer="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script type="module" src="/Unicode.lean/nav.js">
+</script>
+<script type="module" src="/Unicode.lean/search.js">
+</script>
+<script type="module" src="/Unicode.lean/how-about.js">
+</script>
+</head>
 <body>
 <input id="nav_toggle" type="checkbox"></input><header>
 <h1>
@@ -18,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Meta.AppBuilder</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -283,7 +295,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.mkId">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L15-L18">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L15-L18">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -294,7 +306,7 @@ Documentation</h1>
 <span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code><a href="/Unicode.lean/Init/Prelude.html#id">id</a> e</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -304,12 +316,12 @@ Documentation</h1>
   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp2">Lean.mkApp2</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`id</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">type</span> <span class="fn">e</span></span>)</span></span></span></li>
 </ul>
 </details>
-<p>Return <code><a href="/Unicode.lean/Init/Prelude.html#id">id</a><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkPure">e</a></code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkExpectedTypeHint">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L23-L25">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L23-L25">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -322,7 +334,8 @@ Documentation</h1>
 <span class="fn">(expectedType : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Given <code>e</code> s.t. <code>inferType e</code> is definitionally equal to <code>expectedType</code>, return
+term <code>@id expectedType e</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -331,13 +344,12 @@ Documentation</h1>
   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp2">Lean.mkApp2</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`id</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">expectedType</span> <span class="fn">e</span></span>)</span></span></span></li>
 </ul>
 </details>
-<p>Given <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkPure">e</a></code> s.t. <code>inferType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkPure">e</a></code> is definitionally equal to <code>expectedType</code>, return
-term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkPure">e</a></code>.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkEq">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L27-L30">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L27-L30">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -365,7 +377,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <div class="decl" id="Lean.Meta.mkHEq">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L32-L36">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L32-L36">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -394,7 +406,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <div class="decl" id="Lean.Meta.mkEqRefl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L38-L41">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L38-L41">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -420,7 +432,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <div class="decl" id="Lean.Meta.mkHEqRefl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L43-L46">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L43-L46">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -446,7 +458,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <div class="decl" id="Lean.Meta.mkAbsurd">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L48-L51">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L48-L51">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -476,7 +488,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <div class="decl" id="Lean.Meta.mkFalseElim">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L53-L55">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L53-L55">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -503,7 +515,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <div class="decl" id="Lean.Meta.mkEqSymm">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L67-L76">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L67-L76">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -517,17 +529,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqSymm">Lean.Meta.mkEqSymm</a> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">h</span> <span class="fn">`Eq.refl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">h</span></span>
-  else <span class="fn">do
-    let hType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">h</span></span>
-    <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.eq?">Lean.Expr.eq?</a> <span class="fn">hType</span></span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">α</span>, <span class="fn">a</span>, <span class="fn">b</span>)</span></span> => <span class="fn">do
-        let u ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> <span class="fn">α</span></span>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp4">Lean.mkApp4</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`Eq.symm</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">α</span> <span class="fn">a</span> <span class="fn">b</span> <span class="fn">h</span></span>)</span></span>
-      | <span class="fn">none</span> =>
-        <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`Eq.symm</span>
-          (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"equality proof expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>             <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">Lean.Meta.hasTypeMsg</a> <span class="fn">h</span> <span class="fn">hType</span></span></span>)</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -535,7 +537,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <div class="decl" id="Lean.Meta.mkEqTrans">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L78-L91">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L78-L91">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -551,24 +553,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqTrans">Lean.Meta.mkEqTrans</a> <span class="fn">h₁</span> <span class="fn">h₂</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">h₁</span> <span class="fn">`Eq.refl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">h₂</span></span>
-  else
-    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">h₂</span> <span class="fn">`Eq.refl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">h₁</span></span>
-    else <span class="fn">do
-      let hType₁ ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">h₁</span></span>
-      let hType₂ ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">h₂</span></span>
-      let _discr : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span>)</span> := <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.eq?">Lean.Expr.eq?</a> <span class="fn">hType₂</span></span>
-      <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.eq?">Lean.Expr.eq?</a> <span class="fn">hType₁</span></span>, <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.eq?">Lean.Expr.eq?</a> <span class="fn">hType₂</span></span> with
-        | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">α</span>, <span class="fn">a</span>, <span class="fn">b</span>)</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">x</span>, <span class="fn">x_1</span>, <span class="fn">c</span>)</span></span> => <span class="fn">do
-          let u ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> <span class="fn">α</span></span>
-          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp6">Lean.mkApp6</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`Eq.trans</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">α</span> <span class="fn">a</span> <span class="fn">b</span> <span class="fn">c</span> <span class="fn">h₁</span> <span class="fn">h₂</span></span>)</span></span>
-        | <span class="fn">none</span>, <span class="fn">x</span> =>
-          <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`Eq.trans</span>
-            (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"equality proof expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>               <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.hasTypeMsg">Lean.Meta.hasTypeMsg</a> <span class="fn">h₁</span> <span class="fn">hType₁</span></span></span>)</span>
-        | <span class="fn">x</span>, <span class="fn">none</span> =>
-          <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`Eq.trans</span>
-            (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"equality proof expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>               <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.hasTypeMsg">Lean.Meta.hasTypeMsg</a> <span class="fn">h₂</span> <span class="fn">hType₂</span></span></span>)</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -576,7 +561,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <div class="decl" id="Lean.Meta.mkHEqSymm">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L93-L103">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L93-L103">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -590,17 +575,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkHEqSymm">Lean.Meta.mkHEqSymm</a> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">h</span> <span class="fn">`HEq.refl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">h</span></span>
-  else <span class="fn">do
-    let hType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">h</span></span>
-    <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.heq?">Lean.Expr.heq?</a> <span class="fn">hType</span></span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">α</span>, <span class="fn">a</span>, <span class="fn">β</span>, <span class="fn">b</span>)</span></span> => <span class="fn">do
-        let u ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> <span class="fn">α</span></span>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp5">Lean.mkApp5</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`HEq.symm</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">α</span> <span class="fn">β</span> <span class="fn">a</span> <span class="fn">b</span> <span class="fn">h</span></span>)</span></span>
-      | <span class="fn">none</span> =>
-        <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`HEq.symm</span>
-          (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"heterogeneous equality proof expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>             <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.hasTypeMsg">Lean.Meta.hasTypeMsg</a> <span class="fn">h</span> <span class="fn">hType</span></span></span>)</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -608,7 +583,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <div class="decl" id="Lean.Meta.mkHEqTrans">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L105-L118">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L105-L118">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -624,24 +599,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkHEqTrans">Lean.Meta.mkHEqTrans</a> <span class="fn">h₁</span> <span class="fn">h₂</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">h₁</span> <span class="fn">`HEq.refl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">h₂</span></span>
-  else
-    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">h₂</span> <span class="fn">`HEq.refl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">h₁</span></span>
-    else <span class="fn">do
-      let hType₁ ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">h₁</span></span>
-      let hType₂ ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">h₂</span></span>
-      let _discr : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span></span>)</span> := <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.heq?">Lean.Expr.heq?</a> <span class="fn">hType₂</span></span>
-      <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.heq?">Lean.Expr.heq?</a> <span class="fn">hType₁</span></span>, <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.heq?">Lean.Expr.heq?</a> <span class="fn">hType₂</span></span> with
-        | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">α</span>, <span class="fn">a</span>, <span class="fn">β</span>, <span class="fn">b</span>)</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">x</span>, <span class="fn">x_1</span>, <span class="fn">γ</span>, <span class="fn">c</span>)</span></span> => <span class="fn">do
-          let u ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> <span class="fn">α</span></span>
-          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp8">Lean.mkApp8</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`HEq.trans</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">α</span> <span class="fn">β</span> <span class="fn">γ</span> <span class="fn">a</span> <span class="fn">b</span> <span class="fn">c</span> <span class="fn">h₁</span> <span class="fn">h₂</span></span>)</span></span>
-        | <span class="fn">none</span>, <span class="fn">x</span> =>
-          <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`HEq.trans</span>
-            (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"heterogeneous equality proof expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>               <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.hasTypeMsg">Lean.Meta.hasTypeMsg</a> <span class="fn">h₁</span> <span class="fn">hType₁</span></span></span>)</span>
-        | <span class="fn">x</span>, <span class="fn">none</span> =>
-          <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`HEq.trans</span>
-            (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"heterogeneous equality proof expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>               <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.hasTypeMsg">Lean.Meta.hasTypeMsg</a> <span class="fn">h₂</span> <span class="fn">hType₂</span></span></span>)</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -649,7 +607,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <div class="decl" id="Lean.Meta.mkEqOfHEq">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L120-L129">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L120-L129">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -663,26 +621,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqOfHEq">Lean.Meta.mkEqOfHEq</a> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let hType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">h</span></span>
-  <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.heq?">Lean.Expr.heq?</a> <span class="fn">hType</span></span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">α</span>, <span class="fn">a</span>, <span class="fn">β</span>, <span class="fn">b</span>)</span></span> => <span class="fn">do
-      let a_1 ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.isDefEq">Lean.Meta.isDefEq</a> <span class="fn">α</span> <span class="fn">β</span></span>
-      let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn">do
-        let u ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> <span class="fn">α</span></span>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp4">Lean.mkApp4</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`eq_of_heq</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">α</span> <span class="fn">a</span> <span class="fn">b</span> <span class="fn">h</span></span>)</span></span></span>
-      <span class="fn">if <span class="fn"><span class="fn">a_1</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-          let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-        else <span class="fn">do
-          let y ←
-            <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`eq_of_heq</span>
-                (<span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"heterogeneous equality types are not definitionally equal"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                         <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.indentExpr">Lean.indentExpr</a> <span class="fn">α</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                       <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"\nis not definitionally equal to"</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                     <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.indentExpr">Lean.indentExpr</a> <span class="fn">β</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                   <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
-    | <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`HEq.trans</span>
-        (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"heterogeneous equality proof expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.indentExpr">Lean.indentExpr</a> <span class="fn">h</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>           <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -690,7 +629,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <div class="decl" id="Lean.Meta.mkCongrArg">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L131-L143">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L131-L143">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -706,23 +645,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkCongrArg">Lean.Meta.mkCongrArg</a> <span class="fn">f</span> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">h</span> <span class="fn">`Eq.refl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqRefl">Lean.Meta.mkEqRefl</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp">Lean.mkApp</a> <span class="fn">f</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.appArg!">Lean.Expr.appArg!</a> <span class="fn">h</span></span>)</span>)</span>
-  else <span class="fn">do
-    let hType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">h</span></span>
-    let fType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">f</span></span>
-    let _discr : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span>)</span> := <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.eq?">Lean.Expr.eq?</a> <span class="fn">hType</span></span>
-    <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.arrow?">Lean.Expr.arrow?</a> <span class="fn">fType</span></span>, <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.eq?">Lean.Expr.eq?</a> <span class="fn">hType</span></span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">α</span>, <span class="fn">β</span>)</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">x</span>, <span class="fn">a</span>, <span class="fn">b</span>)</span></span> => <span class="fn">do
-        let u ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> <span class="fn">α</span></span>
-        let v ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> <span class="fn">β</span></span>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp6">Lean.mkApp6</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`congrArg</span> <span class="fn">[<span class="fn">u</span>, <span class="fn">v</span>]</span></span>) <span class="fn">α</span> <span class="fn">β</span> <span class="fn">a</span> <span class="fn">b</span> <span class="fn">f</span> <span class="fn">h</span></span>)</span></span>
-      | <span class="fn">none</span>, <span class="fn">x</span> =>
-        <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`congrArg</span>
-          (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"non-dependent function expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>             <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.hasTypeMsg">Lean.Meta.hasTypeMsg</a> <span class="fn">f</span> <span class="fn">fType</span></span></span>)</span>
-      | <span class="fn">x</span>, <span class="fn">none</span> =>
-        <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`congrArg</span>
-          (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"equality proof expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>             <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.hasTypeMsg">Lean.Meta.hasTypeMsg</a> <span class="fn">h</span> <span class="fn">hType</span></span></span>)</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -730,7 +653,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <div class="decl" id="Lean.Meta.mkCongrFun">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L145-L160">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L145-L160">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -746,26 +669,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkCongrFun">Lean.Meta.mkCongrFun</a> <span class="fn">h</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">h</span> <span class="fn">`Eq.refl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqRefl">Lean.Meta.mkEqRefl</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp">Lean.mkApp</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.appArg!">Lean.Expr.appArg!</a> <span class="fn">h</span></span>) <span class="fn">a</span></span>)</span>
-  else <span class="fn">do
-    let hType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">h</span></span>
-    <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.eq?">Lean.Expr.eq?</a> <span class="fn">hType</span></span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">ρ</span>, <span class="fn">f</span>, <span class="fn">g</span>)</span></span> => <span class="fn">do
-        let ρ ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.whnfD">Lean.Meta.whnfD</a> <span class="fn">ρ</span></span>
-        <span class="fn">match <span class="fn">ρ</span> with
-          | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.forallE">Lean.Expr.forallE</a> <span class="fn">n</span> <span class="fn">α</span> <span class="fn">β</span> <span class="fn">x</span></span> =>
-            <span class="fn">let β' := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkLambda">Lean.mkLambda</a> <span class="fn">n</span> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.default">Lean.BinderInfo.default</a> <span class="fn">α</span> <span class="fn">β</span></span>;
-            <span class="fn">do
-            let u ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> <span class="fn">α</span></span>
-            let v ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp">Lean.mkApp</a> <span class="fn">β'</span> <span class="fn">a</span></span>)</span>
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp6">Lean.mkApp6</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`congrFun</span> <span class="fn">[<span class="fn">u</span>, <span class="fn">v</span>]</span></span>) <span class="fn">α</span> <span class="fn">β'</span> <span class="fn">f</span> <span class="fn">g</span> <span class="fn">h</span> <span class="fn">a</span></span>)</span></span></span>
-          | <span class="fn">x</span> =>
-            <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`congrFun</span>
-              (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"equality proof between functions expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                 <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.hasTypeMsg">Lean.Meta.hasTypeMsg</a> <span class="fn">h</span> <span class="fn">hType</span></span></span>)</span></span></span>
-      | <span class="fn">x</span> =>
-        <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`congrFun</span>
-          (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"equality proof expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>             <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">Lean.Meta.hasTypeMsg</a> <span class="fn">h</span> <span class="fn">hType</span></span></span>)</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -773,7 +677,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <div class="decl" id="Lean.Meta.mkCongr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L162-L180">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L162-L180">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -789,31 +693,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkCongr">Lean.Meta.mkCongr</a> <span class="fn">h₁</span> <span class="fn">h₂</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">h₁</span> <span class="fn">`Eq.refl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkCongrArg">Lean.Meta.mkCongrArg</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.appArg!">Lean.Expr.appArg!</a> <span class="fn">h₁</span></span>) <span class="fn">h₂</span></span>
-  else
-    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">h₂</span> <span class="fn">`Eq.refl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkCongrFun">Lean.Meta.mkCongrFun</a> <span class="fn">h₁</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.appArg!">Lean.Expr.appArg!</a> <span class="fn">h₂</span></span>)</span>
-    else <span class="fn">do
-      let hType₁ ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">h₁</span></span>
-      let hType₂ ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">h₂</span></span>
-      let _discr : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span>)</span> := <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.eq?">Lean.Expr.eq?</a> <span class="fn">hType₂</span></span>
-      <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.eq?">Lean.Expr.eq?</a> <span class="fn">hType₁</span></span>, <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.eq?">Lean.Expr.eq?</a> <span class="fn">hType₂</span></span> with
-        | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">ρ</span>, <span class="fn">f</span>, <span class="fn">g</span>)</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">α</span>, <span class="fn">a</span>, <span class="fn">b</span>)</span></span> => <span class="fn">do
-          let ρ ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.whnfD">Lean.Meta.whnfD</a> <span class="fn">ρ</span></span>
-          <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.arrow?">Lean.Expr.arrow?</a> <span class="fn">ρ</span></span> with
-            | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">x</span>, <span class="fn">β</span>)</span></span> => <span class="fn">do
-              let u ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> <span class="fn">α</span></span>
-              let v ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> <span class="fn">β</span></span>
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp8">Lean.mkApp8</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`congr</span> <span class="fn">[<span class="fn">u</span>, <span class="fn">v</span>]</span></span>) <span class="fn">α</span> <span class="fn">β</span> <span class="fn">f</span> <span class="fn">g</span> <span class="fn">a</span> <span class="fn">b</span> <span class="fn">h₁</span> <span class="fn">h₂</span></span>)</span></span>
-            | <span class="fn">x</span> =>
-              <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`congr</span>
-                (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"non-dependent function expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                   <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.hasTypeMsg">Lean.Meta.hasTypeMsg</a> <span class="fn">h₁</span> <span class="fn">hType₁</span></span></span>)</span></span></span>
-        | <span class="fn">none</span>, <span class="fn">x</span> =>
-          <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`congr</span>
-            (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"equality proof expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>               <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.hasTypeMsg">Lean.Meta.hasTypeMsg</a> <span class="fn">h₁</span> <span class="fn">hType₁</span></span></span>)</span>
-        | <span class="fn">x</span>, <span class="fn">none</span> =>
-          <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`congr</span>
-            (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"equality proof expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>               <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.hasTypeMsg">Lean.Meta.hasTypeMsg</a> <span class="fn">h₂</span> <span class="fn">hType₂</span></span></span>)</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -821,7 +701,7 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <div class="decl" id="Lean.Meta.mkAppM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L240-L245">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L240-L245">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -834,40 +714,22 @@ term <code>@idexpectedType<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.
 <span class="fn">(xs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return the application <code>constName xs</code>.
+It tries to fill the implicit arguments before the last element in <code>xs</code>.</p><p>Remark:
+<code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">mkAppM</a> `arbitrary #[α]</code> returns <code>@arbitrary.{u} α</code> without synthesizing
+the implicit argument occurring after <code>α</code>.
+Given a <code>x : (([Decidable p] → Bool) × <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></code>, <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">mkAppM</a> `Prod.fst #[x]</code> returns <code>@Prod.fst ([Decidable p] → Bool) <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> x</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">Lean.Meta.mkAppM</a> <span class="fn">constName</span> <span class="fn">xs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.traceCtx">Lean.traceCtx</a> <span class="fn">`Meta.appBuilder</span>
-    (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withNewMCtxDepth">Lean.Meta.withNewMCtxDepth</a> <span class="fn">do
-      let discr ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.mkFun">Lean.Meta.mkFun</a> <span class="fn">constName</span></span>
-      let x : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> := <span class="fn">discr</span>
-      <span class="fn">match <span class="fn">x</span> with
-        | <span class="fn">(<span class="fn">f</span>, <span class="fn">fType</span>)</span> => <span class="fn">do
-          let <span class="fn">r</span> ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.mkAppMArgs">Lean.Meta.mkAppMArgs</a> <span class="fn">f</span> <span class="fn">fType</span> <span class="fn">xs</span></span>
-          let cls : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> := <span class="fn">`Meta.appBuilder</span>
-          let a ← <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.isTracingEnabledFor">Lean.isTracingEnabledFor</a> <span class="fn">cls</span></span>
-          let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">r</span></span></span>
-          <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-              let y ←
-                <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.addTrace">Lean.addTrace</a> <span class="fn">cls</span>
-                    (<span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"constName: "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">constName</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">", xs: "</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                             <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">xs</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                           <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">", result: "</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                         <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">r</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                       <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>
-              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-            else <span class="fn">do
-              let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span>)</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>Return the application <code>constNamexs</code>.
-It tries to fill the implicit arguments before the last element in <code>xs</code>.</p><p>Remark:
-<code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">mkAppM</a>`arbitrary#[α]</code> returns <code>@arbitrary.{u}α</code> without synthesizing
-the implicit argument occurring after <code>α</code>.
-Given a <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkImpCongrCtx">x</a>:(([Decidablep]→Bool)×<a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></code>, <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">mkAppM</a>`Prod.fst#[x]</code> returns <code>@Prod.fst([Decidablep]→Bool)<a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkImpCongrCtx">x</a></code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkAppM'">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L248-L253">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L248-L253">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -880,34 +742,18 @@ Given a <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkImpCo
 <span class="fn">(xs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Similar to <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">mkAppM</a></code>, but takes an <code>Expr</code> instead of a constant name.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM'">Lean.Meta.mkAppM'</a> <span class="fn">f</span> <span class="fn">xs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let fType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">f</span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.traceCtx">Lean.traceCtx</a> <span class="fn">`Meta.appBuilder</span>
-      (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withNewMCtxDepth">Lean.Meta.withNewMCtxDepth</a> <span class="fn">do
-        let r ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.mkAppMArgs">Lean.Meta.mkAppMArgs</a> <span class="fn">f</span> <span class="fn">fType</span> <span class="fn">xs</span></span>
-        let cls : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> := <span class="fn">`Meta.appBuilder</span>
-        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.isTracingEnabledFor">Lean.isTracingEnabledFor</a> <span class="fn">cls</span></span>
-        let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">r</span></span></span>
-        <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-            let y ←
-              <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.addTrace">Lean.addTrace</a> <span class="fn">cls</span>
-                  (<span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"f: "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">f</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">", xs: "</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                           <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">xs</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                         <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">", result: "</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                       <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">r</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                     <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-          else <span class="fn">do
-            let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span>)</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>Similar to <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">mkAppM</a></code>, but takes an <code>Expr</code> instead of a constant name.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkAppOptM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L301-L304">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L301-L304">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -920,30 +766,24 @@ Given a <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkImpCo
 <span class="fn">(xs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppOptM">Lean.Meta.mkAppOptM</a> <span class="fn">constName</span> <span class="fn">xs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.traceCtx">Lean.traceCtx</a> <span class="fn">`Meta.appBuilder</span>
-    (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withNewMCtxDepth">Lean.Meta.withNewMCtxDepth</a> <span class="fn">do
-      let discr ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.mkFun">Lean.Meta.mkFun</a> <span class="fn">constName</span></span>
-      let x : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> := <span class="fn">discr</span>
-      <span class="fn">match <span class="fn">x</span> with
-        | <span class="fn">(<span class="fn">f</span>, <span class="fn">fType</span>)</span> => <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.mkAppOptMAux">Lean.Meta.mkAppOptMAux</a> <span class="fn">f</span> <span class="fn">xs</span> <span class="fn">0</span> <span class="fn">#[]</span> <span class="fn">0</span> <span class="fn">#[]</span> <span class="fn">fType</span></span></span></span></span>)</span></span></li>
-</ul>
-</details>
 <p>Similar to <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">mkAppM</a></code>, but it allows us to specify which arguments are provided explicitly using <code><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a></code> type.
 Example:
-Given <code><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">Pure.pure</a>{m:Typeu→Typev}[Purem]{α:Typeu}(a:α):<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkFalseElim">m</a>α</code>,</p><pre><code>mkAppOptM `Pure.pure #[m, none, none, a]
-</code></pre><p>returns a <code><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">Pure.pure</a></code> application if the instance <code><a href="/Unicode.lean/Init/Prelude.html#Pure">Pure</a><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkFalseElim">m</a></code> can be synthesized, and the universe match.
-Note that,</p><pre><code>mkAppM `Pure.pure #[a]
-</code></pre><p>fails because the only explicit argument <code>(a:α)</code> is not sufficient for inferring the remaining arguments,
-we would need the expected type.</p></div>
+Given <code><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">Pure.pure</a> {m : Type u → Type v} [Pure m] {α : Type u} (a : α) : m α</code>,</p><pre><code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppOptM">mkAppOptM</a> `Pure.pure #[m, none, none, a]
+</code></pre><p>returns a <code><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">Pure.pure</a></code> application if the instance <code><a href="/Unicode.lean/Init/Prelude.html#Pure">Pure</a> m</code> can be synthesized, and the universe match.
+Note that,</p><pre><code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">mkAppM</a> `Pure.pure #[a]
+</code></pre><p>fails because the only explicit argument <code>(a : α)</code> is not sufficient for inferring the remaining arguments,
+we would need the expected type.</p><details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
+</ul>
+</details>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkAppOptM'">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L307-L310">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L307-L310">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -956,7 +796,7 @@ we would need the expected type.</p></div>
 <span class="fn">(xs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Similar to <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppOptM">mkAppOptM</a></code>, but takes an <code>Expr</code> instead of a constant name</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -965,12 +805,12 @@ we would need the expected type.</p></div>
   <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.traceCtx">Lean.traceCtx</a> <span class="fn">`Meta.appBuilder</span> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withNewMCtxDepth">Lean.Meta.withNewMCtxDepth</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.mkAppOptMAux">Lean.Meta.mkAppOptMAux</a> <span class="fn">f</span> <span class="fn">xs</span> <span class="fn">0</span> <span class="fn">#[]</span> <span class="fn">0</span> <span class="fn">#[]</span> <span class="fn">fType</span></span>)</span>)</span></span></span></li>
 </ul>
 </details>
-<p>Similar to <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppOptM">mkAppOptM</a></code>, but takes an <code>Expr</code> instead of a constant name</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkEqNDRec">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L312-L325">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L312-L325">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -988,23 +828,7 @@ we would need the expected type.</p></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqNDRec">Lean.Meta.mkEqNDRec</a> <span class="fn">motive</span> <span class="fn">h1</span> <span class="fn">h2</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">h2</span> <span class="fn">`Eq.refl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">h1</span></span>
-  else <span class="fn">do
-    let h2Type ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">h2</span></span>
-    <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.eq?">Lean.Expr.eq?</a> <span class="fn">h2Type</span></span> with
-      | <span class="fn">none</span> =>
-        <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`Eq.ndrec</span>
-          (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"equality proof expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>             <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.hasTypeMsg">Lean.Meta.hasTypeMsg</a> <span class="fn">h2</span> <span class="fn">h2Type</span></span></span>)</span>
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">α</span>, <span class="fn">a</span>, <span class="fn">b</span>)</span></span> => <span class="fn">do
-        let <span class="fn">u2</span> ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> <span class="fn">α</span></span>
-        let <span class="fn">motiveType</span> ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">motive</span></span>
-        <span class="fn">match <span class="fn">motiveType</span> with
-          | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.forallE">Lean.Expr.forallE</a> <span class="fn">x</span> <span class="fn">x_1</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.sort">Lean.Expr.sort</a> <span class="fn">u1</span> <span class="fn">x_2</span></span>) <span class="fn">x_3</span></span> =>
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkAppN">Lean.mkAppN</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`Eq.ndrec</span> <span class="fn">[<span class="fn">u1</span>, <span class="fn">u2</span>]</span></span>) <span class="fn">#[<span class="fn">α</span>, <span class="fn">a</span>, <span class="fn">motive</span>, <span class="fn">h1</span>, <span class="fn">b</span>, <span class="fn">h2</span>]</span></span>)</span>
-          | <span class="fn">x</span> =>
-            <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`Eq.ndrec</span>
-              (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"invalid motive"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.indentExpr">Lean.indentExpr</a> <span class="fn">motive</span></span></span>)</span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1012,7 +836,7 @@ we would need the expected type.</p></div>
 <div class="decl" id="Lean.Meta.mkEqRec">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L327-L341">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L327-L341">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1030,23 +854,7 @@ we would need the expected type.</p></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqRec">Lean.Meta.mkEqRec</a> <span class="fn">motive</span> <span class="fn">h1</span> <span class="fn">h2</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">h2</span> <span class="fn">`Eq.refl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">h1</span></span>
-  else <span class="fn">do
-    let h2Type ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">h2</span></span>
-    <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.eq?">Lean.Expr.eq?</a> <span class="fn">h2Type</span></span> with
-      | <span class="fn">none</span> =>
-        <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`Eq.rec</span>
-          (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"equality proof expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.indentExpr">Lean.indentExpr</a> <span class="fn">h2</span></span></span>)</span>
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">α</span>, <span class="fn">a</span>, <span class="fn">b</span>)</span></span> => <span class="fn">do
-        let <span class="fn">u2</span> ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> <span class="fn">α</span></span>
-        let <span class="fn">motiveType</span> ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.infer">Lean.Meta.infer</a> <span class="fn">motive</span></span>
-        <span class="fn">match <span class="fn">motiveType</span> with
-          | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.forallE">Lean.Expr.forallE</a> <span class="fn">x</span> <span class="fn">x_1</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.forallE">Lean.Expr.forallE</a> <span class="fn">x_2</span> <span class="fn">x_3</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.sort">Lean.Expr.sort</a> <span class="fn">u1</span> <span class="fn">x_4</span></span>) <span class="fn">x_5</span></span>) <span class="fn">x_6</span></span> =>
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkAppN">Lean.mkAppN</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`Eq.rec</span> <span class="fn">[<span class="fn">u1</span>, <span class="fn">u2</span>]</span></span>) <span class="fn">#[<span class="fn">α</span>, <span class="fn">a</span>, <span class="fn">motive</span>, <span class="fn">h1</span>, <span class="fn">b</span>, <span class="fn">h2</span>]</span></span>)</span>
-          | <span class="fn">x</span> =>
-            <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`Eq.rec</span>
-              (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"invalid motive"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.indentExpr">Lean.indentExpr</a> <span class="fn">motive</span></span></span>)</span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1054,7 +862,7 @@ we would need the expected type.</p></div>
 <div class="decl" id="Lean.Meta.mkEqMP">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L343-L344">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L343-L344">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1079,7 +887,7 @@ we would need the expected type.</p></div>
 <div class="decl" id="Lean.Meta.mkEqMPR">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L346-L347">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L346-L347">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1104,7 +912,7 @@ we would need the expected type.</p></div>
 <div class="decl" id="Lean.Meta.mkNoConfusion">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L349-L358">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L349-L358">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1120,25 +928,7 @@ we would need the expected type.</p></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkNoConfusion">Lean.Meta.mkNoConfusion</a> <span class="fn">target</span> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let type ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">h</span></span>
-  let type ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.whnf">Lean.Meta.whnf</a> <span class="fn">type</span></span>
-  <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.eq?">Lean.Expr.eq?</a> <span class="fn">type</span></span> with
-    | <span class="fn">none</span> =>
-      <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`noConfusion</span>
-        (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"equality expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.hasTypeMsg">Lean.Meta.hasTypeMsg</a> <span class="fn">h</span> <span class="fn">type</span></span></span>)</span>
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">α</span>, <span class="fn">a</span>, <span class="fn">b</span>)</span></span> => <span class="fn">do
-      let <span class="fn">α</span> ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.whnfD">Lean.Meta.whnfD</a> <span class="fn">α</span></span>
-      <span class="fn"><a href="/Unicode.lean/Lean/MonadEnv.html#Lean.matchConstInduct">Lean.matchConstInduct</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.getAppFn">Lean.Expr.getAppFn</a> <span class="fn">α</span></span>)
-          (<span class="fn">fun <span class="fn">x</span> =>
-            <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.throwAppBuilderException">Lean.Meta.throwAppBuilderException</a> <span class="fn">`noConfusion</span>
-              (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"inductive type expected"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.indentExpr">Lean.indentExpr</a> <span class="fn">α</span></span></span>)</span></span>)
-          <span class="fn">fun <span class="fn">v</span> <span class="fn">us</span> => <span class="fn">do
-          let u ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> <span class="fn">target</span></span>
-          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a>
-              (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkAppN">Lean.mkAppN</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.mkStr">Lean.Name.mkStr</a> <span class="fn"><span class="fn"><span class="fn">v</span>.toConstantVal</span>.name</span> <span class="fn">"noConfusion"</span></span>) (<span class="fn"><span class="fn">u</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">us</span></span>)</span>)
-                (<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.getAppArgs">Lean.Expr.getAppArgs</a> <span class="fn">α</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">#[<span class="fn">target</span>, <span class="fn">a</span>, <span class="fn">b</span>, <span class="fn">h</span>]</span></span>)</span>)</span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1146,7 +936,7 @@ we would need the expected type.</p></div>
 <div class="decl" id="Lean.Meta.mkPure">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L360-L361">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L360-L361">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1171,7 +961,7 @@ we would need the expected type.</p></div>
 <div class="decl" id="Lean.Meta.mkProjection">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L366-L392">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L366-L392">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1180,13 +970,13 @@ we would need the expected type.</p></div>
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span></span></div></div>
-<p><code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkProjection">mkProjection</a><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqTrans">s</a>fieldName</code> return an expression for accessing field <code>fieldName</code> of the structure <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqTrans">s</a></code>.
-Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqTrans">s</a></code>.</p></div>
+<p><code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkProjection">mkProjection</a> s fieldName</code> return an expression for accessing field <code>fieldName</code> of the structure <code>s</code>.
+Remark: <code>fieldName</code> may be a subfield of <code>s</code>.</p></div>
 </div>
 <div class="decl" id="Lean.Meta.mkListLit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L398-L405">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L398-L405">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1202,15 +992,7 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkListLit">Lean.Meta.mkListLit</a> <span class="fn">type</span> <span class="fn">xs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let u ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/DecLevel.html#Lean.Meta.getDecLevel">Lean.Meta.getDecLevel</a> <span class="fn">type</span></span>
-  let nil : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp">Lean.mkApp</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`List.nil</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">type</span></span>
-  <span class="fn">match <span class="fn">xs</span> with
-    | <span class="fn">[]</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">nil</span></span>
-    | <span class="fn">x</span> =>
-      <span class="fn">let cons := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp">Lean.mkApp</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`List.cons</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">type</span></span>;
-      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.mkListLitAux">Lean.Meta.mkListLitAux</a> <span class="fn">nil</span> <span class="fn">cons</span> <span class="fn">xs</span></span>)</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1218,7 +1000,7 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <div class="decl" id="Lean.Meta.mkArrayLit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L407-L410">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L407-L410">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1246,7 +1028,7 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <div class="decl" id="Lean.Meta.mkSorry">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L412-L414">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L412-L414">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1273,7 +1055,7 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <div class="decl" id="Lean.Meta.mkDecide">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L417-L418">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L417-L418">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1284,19 +1066,19 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(p : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">Decidable.decide</a> p</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkDecide">Lean.Meta.mkDecide</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppOptM">Lean.Meta.mkAppOptM</a> <span class="fn">`Decidable.decide</span> <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">p</span></span>, <span class="fn">none</span>]</span></span></span></li>
 </ul>
 </details>
-<p>Return <code><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">Decidable.decide</a>p</code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkDecideProof">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L421-L426">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L421-L426">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1307,24 +1089,18 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(p : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return a proof for <code>p : Prop</code> using <code>decide p</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkDecideProof">Lean.Meta.mkDecideProof</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let decP ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkDecide">Lean.Meta.mkDecide</a> <span class="fn">p</span></span>
-  let decEqTrue ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEq">Lean.Meta.mkEq</a> <span class="fn">decP</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`Bool.true</span></span>)</span>
-  let h ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqRefl">Lean.Meta.mkEqRefl</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`Bool.true</span></span>)</span>
-  let h ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkExpectedTypeHint">Lean.Meta.mkExpectedTypeHint</a> <span class="fn">h</span> <span class="fn">decEqTrue</span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">Lean.Meta.mkAppM</a> <span class="fn">`of_decide_eq_true</span> <span class="fn">#[<span class="fn">h</span>]</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>Return a proof for <code>p:Prop</code> using <code>decidep</code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkLt">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L429-L430">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L429-L430">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1337,19 +1113,19 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(b : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code>a < b</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkLt">Lean.Meta.mkLt</a> <span class="fn">a</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">Lean.Meta.mkAppM</a> <span class="fn">`LT.lt</span> <span class="fn">#[<span class="fn">a</span>, <span class="fn">b</span>]</span></span></span></li>
 </ul>
 </details>
-<p>Return <code>a<<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkSub">b</a></code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkLe">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L433-L434">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L433-L434">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1362,19 +1138,19 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(b : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code>a <= b</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkLe">Lean.Meta.mkLe</a> <span class="fn">a</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">Lean.Meta.mkAppM</a> <span class="fn">`LE.le</span> <span class="fn">#[<span class="fn">a</span>, <span class="fn">b</span>]</span></span></span></li>
 </ul>
 </details>
-<p>Return <code>a<=<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkSub">b</a></code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkDefault">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L437-L438">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L437-L438">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1385,19 +1161,19 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(α : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code><a href="/Unicode.lean/Init/Prelude.html#Inhabited.default">Inhabited.default</a> α</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkDefault">Lean.Meta.mkDefault</a> <span class="fn">α</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppOptM">Lean.Meta.mkAppOptM</a> <span class="fn">`Inhabited.default</span> <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">α</span></span>, <span class="fn">none</span>]</span></span></span></li>
 </ul>
 </details>
-<p>Return <code><a href="/Unicode.lean/Init/Prelude.html#Inhabited.default">Inhabited.default</a>α</code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkOfNonempty">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L441-L442">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L441-L442">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1408,19 +1184,19 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(α : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code>@Classical.ofNonempty α _</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkOfNonempty">Lean.Meta.mkOfNonempty</a> <span class="fn">α</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppOptM">Lean.Meta.mkAppOptM</a> <span class="fn">`Classical.ofNonempty</span> <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">α</span></span>, <span class="fn">none</span>]</span></span></span></li>
 </ul>
 </details>
-<p>Return <code>@Classical.ofNonemptyα_</code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkSyntheticSorry">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L445-L446">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L445-L446">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1431,7 +1207,7 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(type : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code><a href="/Unicode.lean/Init/Prelude.html#sorryAx">sorryAx</a> type</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -1440,12 +1216,12 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp2">Lean.mkApp2</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`sorryAx</span> <span class="fn">[<span class="fn">a</span>]</span></span>) <span class="fn">type</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`Bool.true</span></span>)</span>)</span></span></span></li>
 </ul>
 </details>
-<p>Return <code><a href="/Unicode.lean/Init/Prelude.html#sorryAx">sorryAx</a>type</code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkFunExt">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L449-L450">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L449-L450">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1456,19 +1232,19 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(h : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code><a href="/Unicode.lean/Init/Core.html#funext">funext</a> h</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkFunExt">Lean.Meta.mkFunExt</a> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">Lean.Meta.mkAppM</a> <span class="fn">`funext</span> <span class="fn">#[<span class="fn">h</span>]</span></span></span></li>
 </ul>
 </details>
-<p>Return <code><a href="/Unicode.lean/Init/Core.html#funext">funext</a>h</code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkPropExt">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L453-L454">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L453-L454">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1479,19 +1255,19 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(h : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code><a href="/Unicode.lean/Init/Core.html#propext">propext</a> h</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkPropExt">Lean.Meta.mkPropExt</a> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">Lean.Meta.mkAppM</a> <span class="fn">`propext</span> <span class="fn">#[<span class="fn">h</span>]</span></span></span></li>
 </ul>
 </details>
-<p>Return <code><a href="/Unicode.lean/Init/Core.html#propext">propext</a>h</code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkLetCongr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L457-L458">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L457-L458">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1504,19 +1280,19 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(h₂ : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code><a href="/Unicode.lean/Init/SimpLemmas.html#let_congr">let_congr</a> h₁ h₂</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkLetCongr">Lean.Meta.mkLetCongr</a> <span class="fn">h₁</span> <span class="fn">h₂</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">Lean.Meta.mkAppM</a> <span class="fn">`let_congr</span> <span class="fn">#[<span class="fn">h₁</span>, <span class="fn">h₂</span>]</span></span></span></li>
 </ul>
 </details>
-<p>Return <code><a href="/Unicode.lean/Init/SimpLemmas.html#let_congr">let_congr</a>h₁h₂</code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkLetValCongr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L461-L462">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L461-L462">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1529,19 +1305,19 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(h : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code><a href="/Unicode.lean/Init/SimpLemmas.html#let_val_congr">let_val_congr</a> b h</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkLetValCongr">Lean.Meta.mkLetValCongr</a> <span class="fn">b</span> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">Lean.Meta.mkAppM</a> <span class="fn">`let_val_congr</span> <span class="fn">#[<span class="fn">b</span>, <span class="fn">h</span>]</span></span></span></li>
 </ul>
 </details>
-<p>Return <code><a href="/Unicode.lean/Init/SimpLemmas.html#let_val_congr">let_val_congr</a><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkSub">b</a>h</code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkLetBodyCongr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L465-L466">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L465-L466">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1554,19 +1330,19 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(h : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code><a href="/Unicode.lean/Init/SimpLemmas.html#let_body_congr">let_body_congr</a> a h</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkLetBodyCongr">Lean.Meta.mkLetBodyCongr</a> <span class="fn">a</span> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">Lean.Meta.mkAppM</a> <span class="fn">`let_body_congr</span> <span class="fn">#[<span class="fn">a</span>, <span class="fn">h</span>]</span></span></span></li>
 </ul>
 </details>
-<p>Return <code><a href="/Unicode.lean/Init/SimpLemmas.html#let_body_congr">let_body_congr</a>ah</code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkOfEqTrue">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L469-L470">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L469-L470">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1577,19 +1353,19 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(h : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code><a href="/Unicode.lean/Init/SimpLemmas.html#of_eq_true">of_eq_true</a> h</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkOfEqTrue">Lean.Meta.mkOfEqTrue</a> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">Lean.Meta.mkAppM</a> <span class="fn">`of_eq_true</span> <span class="fn">#[<span class="fn">h</span>]</span></span></span></li>
 </ul>
 </details>
-<p>Return <code><a href="/Unicode.lean/Init/SimpLemmas.html#of_eq_true">of_eq_true</a>h</code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkEqTrue">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L473-L474">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L473-L474">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1600,19 +1376,19 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(h : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code><a href="/Unicode.lean/Init/SimpLemmas.html#eq_true">eq_true</a> h</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqTrue">Lean.Meta.mkEqTrue</a> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">Lean.Meta.mkAppM</a> <span class="fn">`eq_true</span> <span class="fn">#[<span class="fn">h</span>]</span></span></span></li>
 </ul>
 </details>
-<p>Return <code><a href="/Unicode.lean/Init/SimpLemmas.html#eq_true">eq_true</a>h</code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkEqFalse">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L480-L481">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L480-L481">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1623,21 +1399,21 @@ Remark: <code>fieldName</code> may be a subfield of <code><a href="/Unicode.lean
 <span class="fn">(h : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code><a href="/Unicode.lean/Init/SimpLemmas.html#eq_false">eq_false</a> h</code>
+<code>h</code> must have type definitionally equal to <code>¬ p</code> in the current
+reducibility setting.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqFalse">Lean.Meta.mkEqFalse</a> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">Lean.Meta.mkAppM</a> <span class="fn">`eq_false</span> <span class="fn">#[<span class="fn">h</span>]</span></span></span></li>
 </ul>
 </details>
-<p>Return <code><a href="/Unicode.lean/Init/SimpLemmas.html#eq_false">eq_false</a>h</code>
-<code>h</code> must have type definitionally equal to <code>¬p</code> in the current
-reducibility setting.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkEqFalse'">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L487-L488">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L487-L488">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1648,21 +1424,21 @@ reducibility setting.</p></div>
 <span class="fn">(h : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code><a href="/Unicode.lean/Init/SimpLemmas.html#eq_false'">eq_false'</a> h</code>
+<code>h</code> must have type definitionally equal to <code>p → <a href="/Unicode.lean/Init/Prelude.html#False">False</a></code> in the current
+reducibility setting.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqFalse'">Lean.Meta.mkEqFalse'</a> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">Lean.Meta.mkAppM</a> <span class="fn">`eq_false'</span> <span class="fn">#[<span class="fn">h</span>]</span></span></span></li>
 </ul>
 </details>
-<p>Return <code><a href="/Unicode.lean/Init/SimpLemmas.html#eq_false'">eq_false'</a>h</code>
-<code>h</code> must have type definitionally equal to <code>p→<a href="/Unicode.lean/Init/Prelude.html#False">False</a></code> in the current
-reducibility setting.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkImpCongr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L490-L491">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L490-L491">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1687,7 +1463,7 @@ reducibility setting.</p></div>
 <div class="decl" id="Lean.Meta.mkImpCongrCtx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L493-L494">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L493-L494">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1712,7 +1488,7 @@ reducibility setting.</p></div>
 <div class="decl" id="Lean.Meta.mkImpDepCongrCtx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L496-L497">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L496-L497">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1737,7 +1513,7 @@ reducibility setting.</p></div>
 <div class="decl" id="Lean.Meta.mkForallCongr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L499-L500">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L499-L500">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1760,7 +1536,7 @@ reducibility setting.</p></div>
 <div class="decl" id="Lean.Meta.isMonad?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L503-L511">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L503-L511">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1771,26 +1547,18 @@ reducibility setting.</p></div>
 <span class="fn">(m : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></div></div>
-<details>
+<p>Return instance for <code>[Monad m]</code> if there is one</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.isMonad?">Lean.Meta.isMonad?</a> <span class="fn">m</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.tryCatch">tryCatch</a>
-    (<span class="fn">do
-      let monadType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAppM">Lean.Meta.mkAppM</a> <span class="fn">`Monad</span> <span class="fn">#[<span class="fn">m</span>]</span></span>
-      let result ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/SynthInstance.html#Lean.Meta.trySynthInstance">Lean.Meta.trySynthInstance</a> <span class="fn">monadType</span> <span class="fn">none</span></span>
-      <span class="fn">match <span class="fn">result</span> with
-        | <span class="fn"><a href="/Unicode.lean/Lean/Data/LOption.html#Lean.LOption.some">Lean.LOption.some</a> <span class="fn">inst</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">inst</span></span>)</span>
-        | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span></span>)
-    <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>Return instance for <code>[Monadm]</code> if there is one</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkNumeral">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L514-L517">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L514-L517">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1803,22 +1571,18 @@ reducibility setting.</p></div>
 <span class="fn">(n : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code>(n : type)</code>, a numeric literal of type <code>type</code>. The method fails if we don't have an instance <code><a href="/Unicode.lean/Init/Prelude.html#OfNat">OfNat</a> type n</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkNumeral">Lean.Meta.mkNumeral</a> <span class="fn">type</span> <span class="fn">n</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let u ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/DecLevel.html#Lean.Meta.getDecLevel">Lean.Meta.getDecLevel</a> <span class="fn">type</span></span>
-  let inst ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/SynthInstance.html#Lean.Meta.synthInstance">Lean.Meta.synthInstance</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp2">Lean.mkApp2</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`OfNat</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">type</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkRawNatLit">Lean.mkRawNatLit</a> <span class="fn">n</span></span>)</span>) <span class="fn">none</span></span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp3">Lean.mkApp3</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`OfNat.ofNat</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">type</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkRawNatLit">Lean.mkRawNatLit</a> <span class="fn">n</span></span>) <span class="fn">inst</span></span>)</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>Return <code>(n:type)</code>, a numeric literal of type <code>type</code>. The method fails if we don't have an instance <code><a href="/Unicode.lean/Init/Prelude.html#OfNat">OfNat</a>type<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkCongrFun">n</a></code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkAdd">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L532-L532">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L532-L532">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1831,19 +1595,19 @@ reducibility setting.</p></div>
 <span class="fn">(b : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code>a + b</code> using a heterogeneous <code>+</code>. This method assumes <code>a</code> and <code>b</code> have the same type.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAdd">Lean.Meta.mkAdd</a> <span class="fn">a</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.mkBinaryOp">Lean.Meta.mkBinaryOp</a> <span class="fn">`HAdd</span> <span class="fn">`HAdd.hAdd</span> <span class="fn">a</span> <span class="fn">b</span></span></span></li>
 </ul>
 </details>
-<p>Return <code>a+<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkSub">b</a></code> using a heterogeneous <code>+</code>. This method assumes <code>a</code> and <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkSub">b</a></code> have the same type.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkSub">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L535-L535">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L535-L535">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1856,19 +1620,19 @@ reducibility setting.</p></div>
 <span class="fn">(b : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code>a - b</code> using a heterogeneous <code>-</code>. This method assumes <code>a</code> and <code>b</code> have the same type.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkSub">Lean.Meta.mkSub</a> <span class="fn">a</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.mkBinaryOp">Lean.Meta.mkBinaryOp</a> <span class="fn">`HSub</span> <span class="fn">`HSub.hSub</span> <span class="fn">a</span> <span class="fn">b</span></span></span></li>
 </ul>
 </details>
-<p>Return <code>a-<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkSub">b</a></code> using a heterogeneous <code>-</code>. This method assumes <code>a</code> and <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkSub">b</a></code> have the same type.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkMul">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L538-L538">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L538-L538">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1881,19 +1645,19 @@ reducibility setting.</p></div>
 <span class="fn">(b : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code>a * b</code> using a heterogeneous <code>*</code>. This method assumes <code>a</code> and <code>b</code> have the same type.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkMul">Lean.Meta.mkMul</a> <span class="fn">a</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.mkBinaryOp">Lean.Meta.mkBinaryOp</a> <span class="fn">`HMul</span> <span class="fn">`HMul.hMul</span> <span class="fn">a</span> <span class="fn">b</span></span></span></li>
 </ul>
 </details>
-<p>Return <code>a*<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkSub">b</a></code> using a heterogeneous <code>*</code>. This method assumes <code>a</code> and <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkSub">b</a></code> have the same type.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkLE">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L553-L553">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L553-L553">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1906,19 +1670,19 @@ reducibility setting.</p></div>
 <span class="fn">(b : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code>a ≤ b</code>. This method assumes <code>a</code> and <code>b</code> have the same type.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkLE">Lean.Meta.mkLE</a> <span class="fn">a</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.mkBinaryRel">Lean.Meta.mkBinaryRel</a> <span class="fn">`LE</span> <span class="fn">`LE.le</span> <span class="fn">a</span> <span class="fn">b</span></span></span></li>
 </ul>
 </details>
-<p>Return <code>a≤<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkSub">b</a></code>. This method assumes <code>a</code> and <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkSub">b</a></code> have the same type.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkLT">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/AppBuilder.lean#L556-L556">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/AppBuilder.lean#L556-L556">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1931,14 +1695,14 @@ reducibility setting.</p></div>
 <span class="fn">(b : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return <code>a < b</code>. This method assumes <code>a</code> and <code>b</code> have the same type.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkLT">Lean.Meta.mkLT</a> <span class="fn">a</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#_private.Lean.Meta.AppBuilder.0.Lean.Meta.mkBinaryRel">Lean.Meta.mkBinaryRel</a> <span class="fn">`LT</span> <span class="fn">`LT.lt</span> <span class="fn">a</span> <span class="fn">b</span></span></span></li>
 </ul>
 </details>
-<p>Return <code>a<<a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkSub">b</a></code>. This method assumes <code>a</code> and <code><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkSub">b</a></code> have the same type.</p></div>
+</div>
 </div>
 </main>
 <nav class="nav">
@@ -1949,10 +1713,10 @@ reducibility setting.</p></div>
 <h3>Library</h3>
 <div class="module_list">
 <details class="nav_sect" data-path="/Unicode.lean/Init.html">
-<summary>Init</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
-<summary>Init.Control</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init.html">Init</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
+<summary><a href="/Unicode.lean/Init/Control.html">Init.Control</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Control/Basic.html">Init.Control.Basic</a>
 </div>
 <div class="nav_link">
@@ -1987,10 +1751,10 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data.html">
-<summary>Init.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
-<summary>Init.Data.Array</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
+<summary><a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/Basic.html">Init.Data.Array.Basic</a>
 </div>
 <div class="nav_link">
@@ -2013,32 +1777,32 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ByteArray.html">
-<summary>Init.Data.ByteArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ByteArray/Basic.html">Init.Data.ByteArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Char.html">
-<summary>Init.Data.Char</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Char/Basic.html">Init.Data.Char.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Fin.html">
-<summary>Init.Data.Fin</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Fin/Basic.html">Init.Data.Fin.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/FloatArray.html">
-<summary>Init.Data.FloatArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/FloatArray/Basic.html">Init.Data.FloatArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Format.html">
-<summary>Init.Data.Format</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Format/Basic.html">Init.Data.Format.Basic</a>
 </div>
 <div class="nav_link">
@@ -2052,14 +1816,14 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Int.html">
-<summary>Init.Data.Int</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Int/Basic.html">Init.Data.Int.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/List.html">
-<summary>Init.Data.List</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/List/Basic.html">Init.Data.List.Basic</a>
 </div>
 <div class="nav_link">
@@ -2070,8 +1834,8 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Nat.html">
-<summary>Init.Data.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Basic.html">Init.Data.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -2094,8 +1858,8 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Option.html">
-<summary>Init.Data.Option</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Option/Basic.html">Init.Data.Option.Basic</a>
 </div>
 <div class="nav_link">
@@ -2106,8 +1870,8 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/String.html">
-<summary>Init.Data.String</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/String/Basic.html">Init.Data.String.Basic</a>
 </div>
 <div class="nav_link">
@@ -2115,8 +1879,8 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ToString.html">
-<summary>Init.Data.ToString</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
 </div>
 <div class="nav_link">
@@ -2124,46 +1888,16 @@ reducibility setting.</p></div>
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Float.html">Init.Data.Float</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Hashable.html">Init.Data.Hashable</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/OfScientific.html">Init.Data.OfScientific</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
@@ -2184,18 +1918,12 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Init/Data/Stream.html">Init.Data.Stream</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/UInt.html">Init.Data.UInt</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/System.html">
-<summary>Init.System</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/System.html">Init.System</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/System/FilePath.html">Init.System.FilePath</a>
 </div>
 <div class="nav_link">
@@ -2218,16 +1946,10 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Init/Coe.html">Init.Coe</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Control.html">Init.Control</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Conv.html">Init.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Core.html">Init.Core</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Fix.html">Init.Fix</a>
@@ -2257,9 +1979,6 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/System.html">Init.System</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Util.html">Init.Util</a>
 </div>
 <div class="nav_link">
@@ -2270,12 +1989,12 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean.html" open="">
-<summary>Lean</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
-<summary>Lean.Compiler</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
-<summary>Lean.Compiler.IR</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean.html">Lean</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
+<summary><a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
+<summary><a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html">Lean.Compiler.IR.Basic</a>
 </div>
 <div class="nav_link">
@@ -2361,9 +2080,6 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Lean/Compiler/FFI.html">Lean.Compiler.FFI</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/ImplementedByAttr.html">Lean.Compiler.ImplementedByAttr</a>
 </div>
 <div class="nav_link">
@@ -2389,10 +2105,10 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data.html">
-<summary>Lean.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
-<summary>Lean.Data.Json</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
+<summary><a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json/Basic.html">Lean.Data.Json.Basic</a>
 </div>
 <div class="nav_link">
@@ -2409,8 +2125,8 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Lsp.html">
-<summary>Lean.Data.Lsp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html">Lean.Data.Lsp.Basic</a>
 </div>
 <div class="nav_link">
@@ -2451,8 +2167,8 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Xml.html">
-<summary>Lean.Data.Xml</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Xml/Basic.html">Lean.Data.Xml.Basic</a>
 </div>
 <div class="nav_link">
@@ -2466,9 +2182,6 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
 </div>
 <div class="nav_link">
@@ -2479,9 +2192,6 @@ reducibility setting.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/LOption.html">Lean.Data.LOption</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Name.html">Lean.Data.Name</a>
@@ -2519,15 +2229,12 @@ reducibility setting.</p></div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Trie.html">Lean.Data.Trie</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab.html">
-<summary>Lean.Elab</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
-<summary>Lean.Elab.Deriving</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Deriving/BEq.html">Lean.Elab.Deriving.BEq</a>
 </div>
 <div class="nav_link">
@@ -2559,10 +2266,10 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition.html">
-<summary>Lean.Elab.PreDefinition</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
-<summary>Lean.Elab.PreDefinition.Structural</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/BRecOn.html">Lean.Elab.PreDefinition.Structural.BRecOn</a>
 </div>
 <div class="nav_link">
@@ -2588,8 +2295,8 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">
-<summary>Lean.Elab.PreDefinition.WF</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html">Lean.Elab.PreDefinition.WF.Eqns</a>
 </div>
 <div class="nav_link">
@@ -2623,16 +2330,10 @@ reducibility setting.</p></div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/MkInhabitant.html">Lean.Elab.PreDefinition.MkInhabitant</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Quotation.html">
-<summary>Lean.Elab.Quotation</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html">Lean.Elab.Quotation.Precheck</a>
 </div>
 <div class="nav_link">
@@ -2640,10 +2341,10 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic.html">
-<summary>Lean.Elab.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
-<summary>Lean.Elab.Tactic.Conv</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
 </div>
 <div class="nav_link">
@@ -2676,9 +2377,6 @@ reducibility setting.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Delta.html">Lean.Elab.Tactic.Delta</a>
@@ -2769,9 +2467,6 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Lean/Elab/DefView.html">Lean.Elab.DefView</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
 </div>
 <div class="nav_link">
@@ -2838,13 +2533,7 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Print.html">Lean.Elab.Print</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/RecAppSyntax.html">Lean.Elab.RecAppSyntax</a>
@@ -2865,9 +2554,6 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html">Lean.Elab.SyntheticMVars</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Term.html">Lean.Elab.Term</a>
 </div>
 <div class="nav_link">
@@ -2875,10 +2561,10 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta.html" open="">
-<summary>Lean.Meta</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
-<summary>Lean.Meta.Match</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/Basic.html">Lean.Meta.Match.Basic</a>
 </div>
 <div class="nav_link">
@@ -2907,12 +2593,12 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
-<summary>Lean.Meta.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
-<summary>Lean.Meta.Tactic.LinearArith</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
-<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -2929,9 +2615,6 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
 </div>
 <div class="nav_link">
@@ -2939,8 +2622,8 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
-<summary>Lean.Meta.Tactic.Simp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html">Lean.Meta.Tactic.Simp.Main</a>
 </div>
 <div class="nav_link">
@@ -3011,9 +2694,6 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rename.html">Lean.Meta.Tactic.Rename</a>
 </div>
 <div class="nav_link">
@@ -3024,9 +2704,6 @@ reducibility setting.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rewrite.html">Lean.Meta.Tactic.Rewrite</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Split.html">Lean.Meta.Tactic.Split</a>
@@ -3053,7 +2730,7 @@ reducibility setting.</p></div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/AbstractNestedProofs.html">Lean.Meta.AbstractNestedProofs</a>
 </div>
-<div class="nav_link" visible="">
+<div class="nav_link visible">
 <a href="/Unicode.lean/Lean/Meta/AppBuilder.html">Lean.Meta.AppBuilder</a>
 </div>
 <div class="nav_link">
@@ -3138,9 +2815,6 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/MatchUtil.html">Lean.Meta.MatchUtil</a>
 </div>
 <div class="nav_link">
@@ -3168,9 +2842,6 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Transform.html">Lean.Meta.Transform</a>
 </div>
 <div class="nav_link">
@@ -3184,8 +2855,8 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Parser.html">
-<summary>Lean.Parser</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Parser/Attr.html">Lean.Parser.Attr</a>
 </div>
 <div class="nav_link">
@@ -3223,16 +2894,16 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/ParserCompiler.html">
-<summary>Lean.ParserCompiler</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html">Lean.ParserCompiler.Attribute</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter.html">
-<summary>Lean.PrettyPrinter</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
-<summary>Lean.PrettyPrinter.Delaborator</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html">Lean.PrettyPrinter.Delaborator.Basic</a>
 </div>
 <div class="nav_link">
@@ -3252,9 +2923,6 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Lean/PrettyPrinter/Basic.html">Lean.PrettyPrinter.Basic</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Formatter.html">Lean.PrettyPrinter.Formatter</a>
 </div>
 <div class="nav_link">
@@ -3262,10 +2930,10 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server.html">
-<summary>Lean.Server</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
-<summary>Lean.Server.FileWorker</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
+<summary><a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html">Lean.Server.FileWorker.RequestHandling</a>
 </div>
 <div class="nav_link">
@@ -3276,8 +2944,8 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server/Rpc.html">
-<summary>Lean.Server.Rpc</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Rpc/Basic.html">Lean.Server.Rpc.Basic</a>
 </div>
 <div class="nav_link">
@@ -3297,9 +2965,6 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Lean/Server/FileSource.html">Lean.Server.FileSource</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
 </div>
 <div class="nav_link">
@@ -3307,9 +2972,6 @@ reducibility setting.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Requests.html">Lean.Server.Requests</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Snapshots.html">Lean.Server.Snapshots</a>
@@ -3322,8 +2984,8 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Util.html">
-<summary>Lean.Util</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/CollectFVars.html">Lean.Util.CollectFVars</a>
 </div>
 <div class="nav_link">
@@ -3391,8 +3053,8 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Widget.html">
-<summary>Lean.Widget</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html">Lean.Widget.InteractiveCode</a>
 </div>
 <div class="nav_link">
@@ -3415,13 +3077,7 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Lean/Class.html">Lean.Class</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/CoreM.html">Lean.CoreM</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Declaration.html">Lean.Declaration</a>
@@ -3431,9 +3087,6 @@ reducibility setting.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/DocString.html">Lean.DocString</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
@@ -3478,9 +3131,6 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Lean/Message.html">Lean.Message</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/MetavarContext.html">Lean.MetavarContext</a>
 </div>
 <div class="nav_link">
@@ -3488,15 +3138,6 @@ reducibility setting.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/MonadEnv.html">Lean.MonadEnv</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ProjFns.html">Lean.ProjFns</a>
@@ -3514,9 +3155,6 @@ reducibility setting.</p></div>
 <a href="/Unicode.lean/Lean/ScopedEnvExtension.html">Lean.ScopedEnvExtension</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Structure.html">Lean.Structure</a>
 </div>
 <div class="nav_link">
@@ -3524,12 +3162,6 @@ reducibility setting.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ToExpr.html">Lean.ToExpr</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
@@ -3575,10 +3207,10 @@ reducibility setting.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Unicode.html">
-<summary>Unicode</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
-<summary>Unicode.General</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Unicode.html">Unicode</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
+<summary><a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
 </div>
 <div class="nav_link">
@@ -3586,26 +3218,10 @@ reducibility setting.</p></div>
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Unicode/Includes.html">Unicode.Includes</a>
 </div>
 </details>
 </div>
 </nav>
-<script>
-siteRoot = "/Unicode.lean/";
-      </script>
-<script src="/Unicode.lean/nav.js">
-</script>
-<script src="/Unicode.lean/search.js">
-</script>
-<script src="/Unicode.lean/mathjax-config.js">
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </body>
 </html>

@@ -1,7 +1,19 @@
 <html lang="en">
 <head>
-<link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><title>Lean.Declaration</title>
-<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta></head>
+<title>Lean.Declaration</title>
+<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><link rel="prefetch" href="/Unicode.lean/declaration-data.bmp"></link><script defer="true" src="/Unicode.lean/mathjax-config.js">
+</script>
+<script defer="true" src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script defer="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script type="module" src="/Unicode.lean/nav.js">
+</script>
+<script type="module" src="/Unicode.lean/search.js">
+</script>
+<script type="module" src="/Unicode.lean/how-about.js">
+</script>
+</head>
 <body>
 <input id="nav_toggle" type="checkbox"></input><header>
 <h1>
@@ -18,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Declaration</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -298,7 +310,7 @@ Documentation</h1>
 <div class="decl" id="Lean.ReducibilityHints">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L33-L37">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L33-L37">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -331,7 +343,7 @@ Moreover, the ReducibilityHints cannot be changed after a declaration is added t
 <div class="decl" id="Lean.instInhabitedReducibilityHints">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L37-L37">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L37-L37">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -352,7 +364,7 @@ Moreover, the ReducibilityHints cannot be changed after a declaration is added t
 <div class="decl" id="Lean.mkReducibilityHintsRegularEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L40-L41">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L40-L41">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -375,7 +387,7 @@ Moreover, the ReducibilityHints cannot be changed after a declaration is added t
 <div class="decl" id="Lean.ReducibilityHints.getHeightEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L44-L47">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L44-L47">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -391,8 +403,8 @@ Moreover, the ReducibilityHints cannot be changed after a declaration is added t
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints.getHeightEx">Lean.ReducibilityHints.getHeightEx</a> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">h</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints.regular">Lean.ReducibilityHints.regular</a> <span class="fn">h</span></span> => <span class="fn">h</span>
-  | <span class="fn">x</span> => <span class="fn">0</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints.regular">Lean.ReducibilityHints.regular</a> <span class="fn">h</span></span> =&gt <span class="fn">h</span>
+  | <span class="fn">x</span> =&gt <span class="fn">0</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -400,7 +412,7 @@ Moreover, the ReducibilityHints cannot be changed after a declaration is added t
 <div class="decl" id="Lean.ReducibilityHints.lt">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L51-L56">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L51-L56">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -412,13 +424,7 @@ Moreover, the ReducibilityHints cannot be changed after a declaration is added t
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints.lt">Lean.ReducibilityHints.lt</a> <span class="fn">x</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span>, <span class="fn">x</span> with
-  | <span class="fn">Lean.ReducibilityHints.abbrev</span>, <a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints.opaque">Lean.ReducibilityHints.abbrev</a> => <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a>
-  | <span class="fn">Lean.ReducibilityHints.abbrev</span>, <a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints.opaque">x</a> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints.regular">Lean.ReducibilityHints.regular</a> <span class="fn">d₁</span></span>, <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints.regular">Lean.ReducibilityHints.regular</a> <span class="fn">d₂</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn">d₁</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn">d₂</span></span>)</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints.regular">Lean.ReducibilityHints.regular</a> <span class="fn">x</span></span>, <a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints.opaque">Lean.ReducibilityHints.opaque</a> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span>, <span class="fn">x_1</span> => <span class="fn">false</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -426,7 +432,7 @@ Moreover, the ReducibilityHints cannot be changed after a declaration is added t
 <div class="decl" id="Lean.ReducibilityHints.isAbbrev">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L58-L60">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L58-L60">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -440,8 +446,8 @@ Moreover, the ReducibilityHints cannot be changed after a declaration is added t
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints.isAbbrev">Lean.ReducibilityHints.isAbbrev</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn">Lean.ReducibilityHints.abbrev</span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+  | <span class="fn">Lean.ReducibilityHints.abbrev</span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+  | <span class="fn">x</span> =&gt <span class="fn">false</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -449,7 +455,7 @@ Moreover, the ReducibilityHints cannot be changed after a declaration is added t
 <div class="decl" id="Lean.ReducibilityHints.isRegular">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L62-L64">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L62-L64">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -463,8 +469,8 @@ Moreover, the ReducibilityHints cannot be changed after a declaration is added t
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints.isRegular">Lean.ReducibilityHints.isRegular</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints.regular">Lean.ReducibilityHints.regular</a> <span class="fn">x</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints.regular">Lean.ReducibilityHints.regular</a> <span class="fn">x</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+  | <span class="fn">x</span> =&gt <span class="fn">false</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -472,7 +478,7 @@ Moreover, the ReducibilityHints cannot be changed after a declaration is added t
 <div class="decl" id="Lean.ConstantVal">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L69-L73">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L69-L73">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -494,7 +500,7 @@ type : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.instInhabitedConstantVal">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L73-L73">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L73-L73">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -515,7 +521,7 @@ type : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.AxiomVal">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L75-L77">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L75-L77">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -537,7 +543,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.instInhabitedAxiomVal">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L77-L77">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L77-L77">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -558,7 +564,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.mkAxiomValEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L80-L85">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L80-L85">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -587,7 +593,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.AxiomVal.isUnsafeEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L87-L88">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L87-L88">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -610,7 +616,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.DefinitionSafety">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L90-L92">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L90-L92">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -632,7 +638,7 @@ partial: <a href="/Unicode.lean/Lean/Declaration.html#Lean.DefinitionSafety">Lea
 <div class="decl" id="Lean.instInhabitedDefinitionSafety">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L92-L92">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L92-L92">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -653,7 +659,7 @@ partial: <a href="/Unicode.lean/Lean/Declaration.html#Lean.DefinitionSafety">Lea
 <div class="decl" id="Lean.instBEqDefinitionSafety">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L92-L92">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L92-L92">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -674,7 +680,7 @@ partial: <a href="/Unicode.lean/Lean/Declaration.html#Lean.DefinitionSafety">Lea
 <div class="decl" id="Lean.instReprDefinitionSafety">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L92-L92">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L92-L92">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -695,7 +701,7 @@ partial: <a href="/Unicode.lean/Lean/Declaration.html#Lean.DefinitionSafety">Lea
 <div class="decl" id="Lean.DefinitionVal">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L94-L98">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L94-L98">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -721,7 +727,7 @@ safety : <a href="/Unicode.lean/Lean/Declaration.html#Lean.DefinitionSafety">Lea
 <div class="decl" id="Lean.instInhabitedDefinitionVal">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L98-L98">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L98-L98">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -742,7 +748,7 @@ safety : <a href="/Unicode.lean/Lean/Declaration.html#Lean.DefinitionSafety">Lea
 <div class="decl" id="Lean.mkDefinitionValEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L101-L108">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L101-L108">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -776,7 +782,7 @@ safety : <a href="/Unicode.lean/Lean/Declaration.html#Lean.DefinitionSafety">Lea
 <div class="decl" id="Lean.DefinitionVal.getSafetyEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L110-L111">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L110-L111">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -799,7 +805,7 @@ safety : <a href="/Unicode.lean/Lean/Declaration.html#Lean.DefinitionSafety">Lea
 <div class="decl" id="Lean.TheoremVal">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L113-L115">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L113-L115">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -821,7 +827,7 @@ value : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.instInhabitedTheoremVal">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L115-L115">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L115-L115">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -842,7 +848,7 @@ value : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.OpaqueVal">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L118-L121">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L118-L121">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -866,7 +872,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.instInhabitedOpaqueVal">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L121-L121">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L121-L121">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -887,7 +893,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.mkOpaqueValEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L124-L130">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L124-L130">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -918,7 +924,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.OpaqueVal.isUnsafeEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L132-L133">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L132-L133">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -941,7 +947,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.Constructor">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L135-L138">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L135-L138">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -961,7 +967,7 @@ type : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.instInhabitedConstructor">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L138-L138">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L138-L138">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -982,7 +988,7 @@ type : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.InductiveType">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L140-L144">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L140-L144">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1004,7 +1010,7 @@ ctors : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a>
 <div class="decl" id="Lean.instInhabitedInductiveType">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L144-L144">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L144-L144">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1025,7 +1031,7 @@ ctors : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a>
 <div class="decl" id="Lean.Declaration">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L147-L155">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L147-L155">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -1055,7 +1061,7 @@ inductDecl: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelud
 <div class="decl" id="Lean.instInhabitedDeclaration">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L155-L155">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L155-L155">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1076,7 +1082,7 @@ inductDecl: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelud
 <div class="decl" id="Lean.mkInductiveDeclEs">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L158-L159">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L158-L159">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1105,7 +1111,7 @@ inductDecl: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelud
 <div class="decl" id="Lean.Declaration.isUnsafeInductiveDeclEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L162-L164">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L162-L164">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1119,8 +1125,8 @@ inductDecl: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelud
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.isUnsafeInductiveDeclEx">Lean.Declaration.isUnsafeInductiveDeclEx</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.inductDecl">Lean.Declaration.inductDecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">isUnsafe</span></span> => <span class="fn">isUnsafe</span>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.inductDecl">Lean.Declaration.inductDecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">isUnsafe</span></span> =&gt <span class="fn">isUnsafe</span>
+  | <span class="fn">x</span> =&gt <span class="fn">false</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1128,7 +1134,7 @@ inductDecl: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelud
 <div class="decl" id="Lean.Declaration.foldExprM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L166-L179">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L166-L179">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1159,39 +1165,7 @@ inductDecl: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelud
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.foldExprM">Lean.Declaration.foldExprM</a> <span class="fn">d</span> <span class="fn">f</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">d</span> with
-  | <span class="fn">Lean.Declaration.quotDecl</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.thmDecl">Lean.Declaration.axiomDecl</a> <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">x</span>, levelParams := <span class="fn">x_1</span>, type := <span class="fn">type</span> }</span>, isUnsafe := <span class="fn">x_2</span> }</span></span> =>
-    <span class="fn"><span class="fn">f</span> <span class="fn">a</span> <span class="fn">type</span></span>
-  |
-  <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.defnDecl">Lean.Declaration.defnDecl</a>
-      <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">x</span>, levelParams := <span class="fn">x_1</span>, type := <span class="fn">type</span> }</span>, value := <span class="fn">value</span>, hints := <span class="fn">x_2</span>,
-        safety := <span class="fn">x_3</span> }</span></span> =>
-    <span class="fn">do
-    let a ← <span class="fn"><span class="fn">f</span> <span class="fn">a</span> <span class="fn">type</span></span>
-    <span class="fn"><span class="fn">f</span> <span class="fn">a</span> <span class="fn">value</span></span></span>
-  |
-  <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.opaqueDecl">Lean.Declaration.opaqueDecl</a>
-      <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">x</span>, levelParams := <span class="fn">x_1</span>, type := <span class="fn">type</span> }</span>, value := <span class="fn">value</span>, isUnsafe := <span class="fn">x_2</span> }</span></span> =>
-    <span class="fn">do
-    let a ← <span class="fn"><span class="fn">f</span> <span class="fn">a</span> <span class="fn">type</span></span>
-    <span class="fn"><span class="fn">f</span> <span class="fn">a</span> <span class="fn">value</span></span></span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.thmDecl">Lean.Declaration.thmDecl</a> <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">x</span>, levelParams := <span class="fn">x_1</span>, type := <span class="fn">type</span> }</span>, value := <span class="fn">value</span> }</span></span> => <span class="fn">do
-    let a ← <span class="fn"><span class="fn">f</span> <span class="fn">a</span> <span class="fn">type</span></span>
-    <span class="fn"><span class="fn">f</span> <span class="fn">a</span> <span class="fn">value</span></span></span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.mutualDefnDecl">Lean.Declaration.mutualDefnDecl</a> <span class="fn">vals</span></span> =>
-    <span class="fn"><a href="/Unicode.lean/Init/Data/List/Control.html#List.foldlM">List.foldlM</a>
-      (<span class="fn">fun <span class="fn">a</span> <span class="fn">v</span> => <span class="fn">do
-        let a ← <span class="fn"><span class="fn">f</span> <span class="fn">a</span> <span class="fn"><span class="fn"><span class="fn">v</span>.toConstantVal</span>.type</span></span>
-        <span class="fn"><span class="fn">f</span> <span class="fn">a</span> <span class="fn"><span class="fn">v</span>.value</span></span></span></span>)
-      <span class="fn">a</span> <span class="fn">vals</span></span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.inductDecl">Lean.Declaration.inductDecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">inductTypes</span> <span class="fn">x_2</span></span> =>
-    <span class="fn"><a href="/Unicode.lean/Init/Data/List/Control.html#List.foldlM">List.foldlM</a>
-      (<span class="fn">fun <span class="fn">a</span> <span class="fn">inductType</span> => <span class="fn">do
-        let a ← <span class="fn"><span class="fn">f</span> <span class="fn">a</span> <span class="fn"><span class="fn">inductType</span>.type</span></span>
-        <span class="fn"><a href="/Unicode.lean/Init/Data/List/Control.html#List.foldlM">List.foldlM</a> (<span class="fn">fun <span class="fn">a</span> <span class="fn">ctor</span> => <span class="fn"><span class="fn">f</span> <span class="fn">a</span> <span class="fn"><span class="fn">ctor</span>.type</span></span></span>) <span class="fn">a</span> <span class="fn"><span class="fn">inductType</span>.ctors</span></span></span></span>)
-      <span class="fn">a</span> <span class="fn">inductTypes</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1199,7 +1173,7 @@ inductDecl: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelud
 <div class="decl" id="Lean.Declaration.forExprM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L181-L182">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L181-L182">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1225,7 +1199,7 @@ inductDecl: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelud
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.forExprM">Lean.Declaration.forExprM</a> <span class="fn">d</span> <span class="fn">f</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.foldExprM">Lean.Declaration.foldExprM</a> <span class="fn">d</span> (<span class="fn">fun <span class="fn">x</span> <span class="fn">a</span> => <span class="fn"><span class="fn">f</span> <span class="fn">a</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.forExprM">Lean.Declaration.forExprM</a> <span class="fn">d</span> <span class="fn">f</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.foldExprM">Lean.Declaration.foldExprM</a> <span class="fn">d</span> (<span class="fn">fun <span class="fn">x</span> <span class="fn">a</span> =&gt <span class="fn"><span class="fn">f</span> <span class="fn">a</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span></span></li>
 </ul>
 </details>
 </div>
@@ -1233,7 +1207,7 @@ inductDecl: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelud
 <div class="decl" id="Lean.InductiveVal">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L194-L203">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L194-L203">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1267,17 +1241,17 @@ isNested : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <p>The kernel compiles (mutual) inductive declarations (see <code>inductiveDecls</code>) into a set of
 - <code>Declaration.inductDecl</code> (for each inductive datatype in the mutual Declaration),
 - <code>Declaration.ctorDecl</code> (for each Constructor in the mutual Declaration),
-- <code>Declaration.recDecl</code> (automatically generated recursors).</p><pre><code>This data is used to implement iota-reduction efficiently and compile nested inductive
+- <code>Declaration.recDecl</code> (automatically generated recursors).</p><pre><code>This data is used to implement iota-reduction efficiently <a href="/Unicode.lean/Init/Prelude.html#and">and</a> compile nested inductive
 declarations.
 
 A series of checks are performed by the kernel to check whether a `inductiveDecls`
-is valid or not. 
+is valid <a href="/Unicode.lean/Init/Prelude.html#or">or</a> not. 
 </code></pre></div>
 </div>
 <div class="decl" id="Lean.instInhabitedInductiveVal">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L203-L203">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L203-L203">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1289,10 +1263,7 @@ is valid or not.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.instInhabitedInductiveVal">Lean.instInhabitedInductiveVal</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ default :=
-      <span class="fn">{ toConstantVal := <span class="fn">default</span>, numParams := <span class="fn">default</span>, numIndices := <span class="fn">default</span>, all := <span class="fn">default</span>, ctors := <span class="fn">default</span>,
-        isRec := <span class="fn">default</span>, isUnsafe := <span class="fn">default</span>, isReflexive := <span class="fn">default</span>, isNested := <span class="fn">default</span> }</span> }</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1300,7 +1271,7 @@ is valid or not.
 <div class="decl" id="Lean.mkInductiveValEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L206-L219">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L206-L219">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1334,10 +1305,7 @@ is valid or not.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.mkInductiveValEx">Lean.mkInductiveValEx</a> <span class="fn">name</span> <span class="fn">levelParams</span> <span class="fn">type</span> <span class="fn">numParams</span> <span class="fn">numIndices</span> <span class="fn">all</span> <span class="fn">ctors</span> <span class="fn">isRec</span> <span class="fn">isUnsafe</span> <span class="fn">isReflexive</span> <span class="fn">isNested</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">name</span>, levelParams := <span class="fn">levelParams</span>, type := <span class="fn">type</span> }</span>, numParams := <span class="fn">numParams</span>,
-    numIndices := <span class="fn">numIndices</span>, all := <span class="fn">all</span>, ctors := <span class="fn">ctors</span>, isRec := <span class="fn">isRec</span>, isUnsafe := <span class="fn">isUnsafe</span>,
-    isReflexive := <span class="fn">isReflexive</span>, isNested := <span class="fn">isNested</span> }</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1345,7 +1313,7 @@ is valid or not.
 <div class="decl" id="Lean.InductiveVal.isRecEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L221-L221">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L221-L221">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1368,7 +1336,7 @@ is valid or not.
 <div class="decl" id="Lean.InductiveVal.isUnsafeEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L222-L222">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L222-L222">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1391,7 +1359,7 @@ is valid or not.
 <div class="decl" id="Lean.InductiveVal.isReflexiveEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L223-L223">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L223-L223">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1414,7 +1382,7 @@ is valid or not.
 <div class="decl" id="Lean.InductiveVal.isNestedEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L224-L224">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L224-L224">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1437,7 +1405,7 @@ is valid or not.
 <div class="decl" id="Lean.InductiveVal.numCtors">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L226-L226">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L226-L226">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1460,7 +1428,7 @@ is valid or not.
 <div class="decl" id="Lean.ConstructorVal">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L228-L234">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L228-L234">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1490,7 +1458,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.instInhabitedConstructorVal">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L234-L234">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L234-L234">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1513,7 +1481,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.mkConstructorValEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L237-L246">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L237-L246">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1541,9 +1509,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.mkConstructorValEx">Lean.mkConstructorValEx</a> <span class="fn">name</span> <span class="fn">levelParams</span> <span class="fn">type</span> <span class="fn">induct</span> <span class="fn">cidx</span> <span class="fn">numParams</span> <span class="fn">numFields</span> <span class="fn">isUnsafe</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">name</span>, levelParams := <span class="fn">levelParams</span>, type := <span class="fn">type</span> }</span>, induct := <span class="fn">induct</span>, cidx := <span class="fn">cidx</span>,
-    numParams := <span class="fn">numParams</span>, numFields := <span class="fn">numFields</span>, isUnsafe := <span class="fn">isUnsafe</span> }</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1551,7 +1517,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.ConstructorVal.isUnsafeEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L248-L248">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L248-L248">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1574,7 +1540,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.RecursorRule">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L251-L255">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L251-L255">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1596,7 +1562,7 @@ rhs : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.instInhabitedRecursorRule">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L255-L255">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L255-L255">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1617,7 +1583,7 @@ rhs : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.RecursorVal">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L257-L266">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L257-L266">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1653,7 +1619,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.instInhabitedRecursorVal">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L266-L266">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L266-L266">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1665,10 +1631,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.instInhabitedRecursorVal">Lean.instInhabitedRecursorVal</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ default :=
-      <span class="fn">{ toConstantVal := <span class="fn">default</span>, all := <span class="fn">default</span>, numParams := <span class="fn">default</span>, numIndices := <span class="fn">default</span>, numMotives := <span class="fn">default</span>,
-        numMinors := <span class="fn">default</span>, rules := <span class="fn">default</span>, k := <span class="fn">default</span>, isUnsafe := <span class="fn">default</span> }</span> }</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1676,7 +1639,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.mkRecursorValEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L269-L273">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L269-L273">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1710,10 +1673,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.mkRecursorValEx">Lean.mkRecursorValEx</a> <span class="fn">name</span> <span class="fn">levelParams</span> <span class="fn">type</span> <span class="fn">all</span> <span class="fn">numParams</span> <span class="fn">numIndices</span> <span class="fn">numMotives</span> <span class="fn">numMinors</span> <span class="fn">rules</span> <span class="fn">k</span> <span class="fn">isUnsafe</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">name</span>, levelParams := <span class="fn">levelParams</span>, type := <span class="fn">type</span> }</span>, all := <span class="fn">all</span>, numParams := <span class="fn">numParams</span>,
-    numIndices := <span class="fn">numIndices</span>, numMotives := <span class="fn">numMotives</span>, numMinors := <span class="fn">numMinors</span>, rules := <span class="fn">rules</span>, k := <span class="fn">k</span>,
-    isUnsafe := <span class="fn">isUnsafe</span> }</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1721,7 +1681,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.RecursorVal.kEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L275-L275">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L275-L275">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1744,7 +1704,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.RecursorVal.isUnsafeEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L276-L276">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L276-L276">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1767,7 +1727,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.RecursorVal.getMajorIdx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L278-L279">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L278-L279">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1790,7 +1750,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.RecursorVal.getFirstIndexIdx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L281-L282">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L281-L282">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1813,7 +1773,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.RecursorVal.getFirstMinorIdx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L284-L285">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L284-L285">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1836,7 +1796,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.RecursorVal.getInduct">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L287-L288">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L287-L288">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1859,7 +1819,7 @@ isUnsafe : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.QuotKind">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L290-L295">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L290-L295">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -1883,7 +1843,7 @@ ind: <a href="/Unicode.lean/Lean/Declaration.html#Lean.QuotKind">Lean.QuotKind</
 <div class="decl" id="Lean.instInhabitedQuotKind">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L295-L295">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L295-L295">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1904,7 +1864,7 @@ ind: <a href="/Unicode.lean/Lean/Declaration.html#Lean.QuotKind">Lean.QuotKind</
 <div class="decl" id="Lean.QuotVal">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L297-L299">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L297-L299">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1926,7 +1886,7 @@ kind : <a href="/Unicode.lean/Lean/Declaration.html#Lean.QuotKind">Lean.QuotKind
 <div class="decl" id="Lean.instInhabitedQuotVal">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L299-L299">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L299-L299">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1947,7 +1907,7 @@ kind : <a href="/Unicode.lean/Lean/Declaration.html#Lean.QuotKind">Lean.QuotKind
 <div class="decl" id="Lean.mkQuotValEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L302-L304">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L302-L304">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1976,7 +1936,7 @@ kind : <a href="/Unicode.lean/Lean/Declaration.html#Lean.QuotKind">Lean.QuotKind
 <div class="decl" id="Lean.QuotVal.kindEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L306-L306">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L306-L306">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1999,7 +1959,7 @@ kind : <a href="/Unicode.lean/Lean/Declaration.html#Lean.QuotKind">Lean.QuotKind
 <div class="decl" id="Lean.ConstantInfo">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L309-L318">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L309-L318">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -2031,7 +1991,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.instInhabitedConstantInfo">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L318-L318">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L318-L318">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -2052,7 +2012,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.ConstantInfo.toConstantVal">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L322-L330">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L322-L330">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2064,27 +2024,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.toConstantVal">Lean.ConstantInfo.toConstantVal</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.defnInfo">Lean.ConstantInfo.defnInfo</a> <span class="fn">{ toConstantVal := <span class="fn">d</span>, value := <span class="fn">x</span>, hints := <span class="fn">x_1</span>, safety := <span class="fn">x_2</span> }</span></span> => <span class="fn">d</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.quotInfo">Lean.ConstantInfo.axiomInfo</a> <span class="fn">{ toConstantVal := <span class="fn">d</span>, isUnsafe := <span class="fn">x</span> }</span></span> => <span class="fn">d</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.quotInfo">Lean.ConstantInfo.thmInfo</a> <span class="fn">{ toConstantVal := <span class="fn">d</span>, value := <span class="fn">x</span> }</span></span> => <span class="fn">d</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.opaqueInfo">Lean.ConstantInfo.opaqueInfo</a> <span class="fn">{ toConstantVal := <span class="fn">d</span>, value := <span class="fn">x</span>, isUnsafe := <span class="fn">x_1</span> }</span></span> => <span class="fn">d</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.quotInfo">Lean.ConstantInfo.quotInfo</a> <span class="fn">{ toConstantVal := <span class="fn">d</span>, kind := <span class="fn">x</span> }</span></span> => <span class="fn">d</span>
-  |
-  <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.recInfo">Lean.ConstantInfo.inductInfo</a>
-      <span class="fn">{ toConstantVal := <span class="fn">d</span>, numParams := <span class="fn">x</span>, numIndices := <span class="fn">x_1</span>, all := <span class="fn">x_2</span>, ctors := <span class="fn">x_3</span>, isRec := <span class="fn">x_4</span>, isUnsafe := <span class="fn">x_5</span>,
-        isReflexive := <span class="fn">x_6</span>, isNested := <span class="fn">x_7</span> }</span></span> =>
-    <span class="fn">d</span>
-  |
-  <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.ctorInfo">Lean.ConstantInfo.ctorInfo</a>
-      <span class="fn">{ toConstantVal := <span class="fn">d</span>, induct := <span class="fn">x</span>, cidx := <span class="fn">x_1</span>, numParams := <span class="fn">x_2</span>, numFields := <span class="fn">x_3</span>, isUnsafe := <span class="fn">x_4</span> }</span></span> =>
-    <span class="fn">d</span>
-  |
-  <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.recInfo">Lean.ConstantInfo.recInfo</a>
-      <span class="fn">{ toConstantVal := <span class="fn">d</span>, all := <span class="fn">x</span>, numParams := <span class="fn">x_1</span>, numIndices := <span class="fn">x_2</span>, numMotives := <span class="fn">x_3</span>, numMinors := <span class="fn">x_4</span>,
-        rules := <span class="fn">x_5</span>, k := <span class="fn">x_6</span>, isUnsafe := <span class="fn">x_7</span> }</span></span> =>
-    <span class="fn">d</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2092,7 +2032,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.ConstantInfo.isUnsafe">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L332-L340">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L332-L340">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2104,16 +2044,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.isUnsafe">Lean.ConstantInfo.isUnsafe</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.recInfo">Lean.ConstantInfo.defnInfo</a> <span class="fn">v</span></span> => <span class="fn"><span class="fn"><span class="fn">v</span>.safety</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Declaration.html#Lean.DefinitionSafety.unsafe">Lean.DefinitionSafety.unsafe</a></span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.recInfo">Lean.ConstantInfo.axiomInfo</a> <span class="fn">v</span></span> => <span class="fn"><span class="fn">v</span>.isUnsafe</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.recInfo">Lean.ConstantInfo.thmInfo</a> <span class="fn">v</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.recInfo">Lean.ConstantInfo.opaqueInfo</a> <span class="fn">v</span></span> => <span class="fn"><span class="fn">v</span>.isUnsafe</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.recInfo">Lean.ConstantInfo.quotInfo</a> <span class="fn">v</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.recInfo">Lean.ConstantInfo.inductInfo</a> <span class="fn">v</span></span> => <span class="fn"><span class="fn">v</span>.isUnsafe</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.recInfo">Lean.ConstantInfo.ctorInfo</a> <span class="fn">v</span></span> => <span class="fn"><span class="fn">v</span>.isUnsafe</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.recInfo">Lean.ConstantInfo.recInfo</a> <span class="fn">v</span></span> => <span class="fn"><span class="fn">v</span>.isUnsafe</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2121,7 +2052,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.ConstantInfo.name">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L342-L343">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L342-L343">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2144,7 +2075,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.ConstantInfo.levelParams">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L345-L346">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L345-L346">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2167,7 +2098,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.ConstantInfo.numLevelParams">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L348-L349">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L348-L349">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2190,7 +2121,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.ConstantInfo.type">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L351-L352">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L351-L352">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2213,7 +2144,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.ConstantInfo.value?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L354-L357">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L354-L357">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2225,14 +2156,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.value?">Lean.ConstantInfo.value?</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  |
-  <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.defnInfo">Lean.ConstantInfo.defnInfo</a>
-      <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">x</span>, levelParams := <span class="fn">x_1</span>, type := <span class="fn">x_2</span> }</span>, value := <span class="fn">r</span>, hints := <span class="fn">x_3</span>, safety := <span class="fn">x_4</span> }</span></span> =>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.thmInfo">Lean.ConstantInfo.thmInfo</a> <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">x</span>, levelParams := <span class="fn">x_1</span>, type := <span class="fn">x_2</span> }</span>, value := <span class="fn">r</span> }</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span>
-  | <span class="fn">x</span> => <span class="fn">none</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2240,7 +2164,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.ConstantInfo.hasValue">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L359-L362">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L359-L362">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2252,14 +2176,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.hasValue">Lean.ConstantInfo.hasValue</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  |
-  <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.defnInfo">Lean.ConstantInfo.defnInfo</a>
-      <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">x</span>, levelParams := <span class="fn">x_1</span>, type := <span class="fn">x_2</span> }</span>, value := <span class="fn">r</span>, hints := <span class="fn">x_3</span>, safety := <span class="fn">x_4</span> }</span></span> =>
-    <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.thmInfo">Lean.ConstantInfo.thmInfo</a> <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">x</span>, levelParams := <span class="fn">x_1</span>, type := <span class="fn">x_2</span> }</span>, value := <span class="fn">r</span> }</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2267,7 +2184,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.ConstantInfo.value!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L364-L367">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L364-L367">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2279,14 +2196,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.value!">Lean.ConstantInfo.value!</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  |
-  <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.defnInfo">Lean.ConstantInfo.defnInfo</a>
-      <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">x</span>, levelParams := <span class="fn">x_1</span>, type := <span class="fn">x_2</span> }</span>, value := <span class="fn">r</span>, hints := <span class="fn">x_3</span>, safety := <span class="fn">x_4</span> }</span></span> =>
-    <span class="fn">r</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.thmInfo">Lean.ConstantInfo.thmInfo</a> <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">x</span>, levelParams := <span class="fn">x_1</span>, type := <span class="fn">x_2</span> }</span>, value := <span class="fn">r</span> }</span></span> => <span class="fn">r</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Declaration"</span> <span class="fn">"Lean.ConstantInfo.value!"</span> <span class="fn">367</span> <span class="fn">33</span> <span class="fn">"declaration with value expected"</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2294,7 +2204,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.ConstantInfo.hints">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L369-L371">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L369-L371">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2306,13 +2216,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.hints">Lean.ConstantInfo.hints</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  |
-  <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.defnInfo">Lean.ConstantInfo.defnInfo</a>
-      <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">x</span>, levelParams := <span class="fn">x_1</span>, type := <span class="fn">x_2</span> }</span>, value := <span class="fn">x_3</span>, hints := <span class="fn">r</span>, safety := <span class="fn">x_4</span> }</span></span> =>
-    <span class="fn">r</span>
-  | <span class="fn">x</span> => <span class="fn">Lean.ReducibilityHints.opaque</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2320,7 +2224,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.ConstantInfo.isCtor">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L373-L375">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L373-L375">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2334,8 +2238,8 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.isCtor">Lean.ConstantInfo.isCtor</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.ctorInfo">Lean.ConstantInfo.ctorInfo</a> <span class="fn">x</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.ctorInfo">Lean.ConstantInfo.ctorInfo</a> <span class="fn">x</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+  | <span class="fn">x</span> =&gt <span class="fn">false</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -2343,7 +2247,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.ConstantInfo.isInductive">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L377-L379">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L377-L379">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2357,8 +2261,8 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.isInductive">Lean.ConstantInfo.isInductive</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.inductInfo">Lean.ConstantInfo.inductInfo</a> <span class="fn">x</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.inductInfo">Lean.ConstantInfo.inductInfo</a> <span class="fn">x</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+  | <span class="fn">x</span> =&gt <span class="fn">false</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -2366,7 +2270,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.ConstantInfo.instantiateTypeLevelParams">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L382-L382">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L382-L382">source</a>
 </div>
 <div class="attributes">@[extern  lean_instantiate_type_lparams]</div>
 <div class="decl_header">
@@ -2385,7 +2289,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.ConstantInfo.instantiateValueLevelParams">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L385-L385">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L385-L385">source</a>
 </div>
 <div class="attributes">@[extern  lean_instantiate_value_lparams]</div>
 <div class="decl_header">
@@ -2404,7 +2308,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="decl" id="Lean.mkRecName">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Declaration.lean#L389-L390">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Declaration.lean#L389-L390">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2419,7 +2323,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.mkRecName">Lean.mkRecName</a> <span class="fn">declName</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.mkStr">Lean.Name.mkStr</a> <span class="fn">declName</span> <span class="fn">"rec"</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.mkRecName">Lean.mkRecName</a> <span class="fn">declName</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.mkStr">Lean.Name.mkStr</a> <span class="fn">declName</span> <span class="fn">&quotrec&quot</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -2433,10 +2337,10 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <h3>Library</h3>
 <div class="module_list">
 <details class="nav_sect" data-path="/Unicode.lean/Init.html">
-<summary>Init</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
-<summary>Init.Control</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init.html">Init</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
+<summary><a href="/Unicode.lean/Init/Control.html">Init.Control</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Control/Basic.html">Init.Control.Basic</a>
 </div>
 <div class="nav_link">
@@ -2471,10 +2375,10 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data.html">
-<summary>Init.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
-<summary>Init.Data.Array</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
+<summary><a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/Basic.html">Init.Data.Array.Basic</a>
 </div>
 <div class="nav_link">
@@ -2497,32 +2401,32 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ByteArray.html">
-<summary>Init.Data.ByteArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ByteArray/Basic.html">Init.Data.ByteArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Char.html">
-<summary>Init.Data.Char</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Char/Basic.html">Init.Data.Char.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Fin.html">
-<summary>Init.Data.Fin</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Fin/Basic.html">Init.Data.Fin.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/FloatArray.html">
-<summary>Init.Data.FloatArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/FloatArray/Basic.html">Init.Data.FloatArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Format.html">
-<summary>Init.Data.Format</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Format/Basic.html">Init.Data.Format.Basic</a>
 </div>
 <div class="nav_link">
@@ -2536,14 +2440,14 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Int.html">
-<summary>Init.Data.Int</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Int/Basic.html">Init.Data.Int.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/List.html">
-<summary>Init.Data.List</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/List/Basic.html">Init.Data.List.Basic</a>
 </div>
 <div class="nav_link">
@@ -2554,8 +2458,8 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Nat.html">
-<summary>Init.Data.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Basic.html">Init.Data.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -2578,8 +2482,8 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Option.html">
-<summary>Init.Data.Option</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Option/Basic.html">Init.Data.Option.Basic</a>
 </div>
 <div class="nav_link">
@@ -2590,8 +2494,8 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/String.html">
-<summary>Init.Data.String</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/String/Basic.html">Init.Data.String.Basic</a>
 </div>
 <div class="nav_link">
@@ -2599,8 +2503,8 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ToString.html">
-<summary>Init.Data.ToString</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
 </div>
 <div class="nav_link">
@@ -2608,46 +2512,16 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Float.html">Init.Data.Float</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Hashable.html">Init.Data.Hashable</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/OfScientific.html">Init.Data.OfScientific</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
@@ -2668,18 +2542,12 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Init/Data/Stream.html">Init.Data.Stream</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/UInt.html">Init.Data.UInt</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/System.html">
-<summary>Init.System</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/System.html">Init.System</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/System/FilePath.html">Init.System.FilePath</a>
 </div>
 <div class="nav_link">
@@ -2702,16 +2570,10 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Init/Coe.html">Init.Coe</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Control.html">Init.Control</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Conv.html">Init.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Core.html">Init.Core</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Fix.html">Init.Fix</a>
@@ -2741,9 +2603,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/System.html">Init.System</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Util.html">Init.Util</a>
 </div>
 <div class="nav_link">
@@ -2754,12 +2613,12 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean.html" open="">
-<summary>Lean</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
-<summary>Lean.Compiler</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
-<summary>Lean.Compiler.IR</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean.html">Lean</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
+<summary><a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
+<summary><a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html">Lean.Compiler.IR.Basic</a>
 </div>
 <div class="nav_link">
@@ -2845,9 +2704,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Lean/Compiler/FFI.html">Lean.Compiler.FFI</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/ImplementedByAttr.html">Lean.Compiler.ImplementedByAttr</a>
 </div>
 <div class="nav_link">
@@ -2873,10 +2729,10 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data.html">
-<summary>Lean.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
-<summary>Lean.Data.Json</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
+<summary><a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json/Basic.html">Lean.Data.Json.Basic</a>
 </div>
 <div class="nav_link">
@@ -2893,8 +2749,8 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Lsp.html">
-<summary>Lean.Data.Lsp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html">Lean.Data.Lsp.Basic</a>
 </div>
 <div class="nav_link">
@@ -2935,8 +2791,8 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Xml.html">
-<summary>Lean.Data.Xml</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Xml/Basic.html">Lean.Data.Xml.Basic</a>
 </div>
 <div class="nav_link">
@@ -2950,9 +2806,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
 </div>
 <div class="nav_link">
@@ -2963,9 +2816,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/LOption.html">Lean.Data.LOption</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Name.html">Lean.Data.Name</a>
@@ -3003,15 +2853,12 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Trie.html">Lean.Data.Trie</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab.html">
-<summary>Lean.Elab</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
-<summary>Lean.Elab.Deriving</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Deriving/BEq.html">Lean.Elab.Deriving.BEq</a>
 </div>
 <div class="nav_link">
@@ -3043,10 +2890,10 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition.html">
-<summary>Lean.Elab.PreDefinition</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
-<summary>Lean.Elab.PreDefinition.Structural</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/BRecOn.html">Lean.Elab.PreDefinition.Structural.BRecOn</a>
 </div>
 <div class="nav_link">
@@ -3072,8 +2919,8 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">
-<summary>Lean.Elab.PreDefinition.WF</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html">Lean.Elab.PreDefinition.WF.Eqns</a>
 </div>
 <div class="nav_link">
@@ -3107,16 +2954,10 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/MkInhabitant.html">Lean.Elab.PreDefinition.MkInhabitant</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Quotation.html">
-<summary>Lean.Elab.Quotation</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html">Lean.Elab.Quotation.Precheck</a>
 </div>
 <div class="nav_link">
@@ -3124,10 +2965,10 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic.html">
-<summary>Lean.Elab.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
-<summary>Lean.Elab.Tactic.Conv</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
 </div>
 <div class="nav_link">
@@ -3160,9 +3001,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Delta.html">Lean.Elab.Tactic.Delta</a>
@@ -3253,9 +3091,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Lean/Elab/DefView.html">Lean.Elab.DefView</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
 </div>
 <div class="nav_link">
@@ -3322,13 +3157,7 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Print.html">Lean.Elab.Print</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/RecAppSyntax.html">Lean.Elab.RecAppSyntax</a>
@@ -3349,9 +3178,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html">Lean.Elab.SyntheticMVars</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Term.html">Lean.Elab.Term</a>
 </div>
 <div class="nav_link">
@@ -3359,10 +3185,10 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta.html">
-<summary>Lean.Meta</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
-<summary>Lean.Meta.Match</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/Basic.html">Lean.Meta.Match.Basic</a>
 </div>
 <div class="nav_link">
@@ -3391,12 +3217,12 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
-<summary>Lean.Meta.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
-<summary>Lean.Meta.Tactic.LinearArith</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
-<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -3413,9 +3239,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
 </div>
 <div class="nav_link">
@@ -3423,8 +3246,8 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
-<summary>Lean.Meta.Tactic.Simp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html">Lean.Meta.Tactic.Simp.Main</a>
 </div>
 <div class="nav_link">
@@ -3495,9 +3318,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rename.html">Lean.Meta.Tactic.Rename</a>
 </div>
 <div class="nav_link">
@@ -3508,9 +3328,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rewrite.html">Lean.Meta.Tactic.Rewrite</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Split.html">Lean.Meta.Tactic.Split</a>
@@ -3622,9 +3439,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/MatchUtil.html">Lean.Meta.MatchUtil</a>
 </div>
 <div class="nav_link">
@@ -3652,9 +3466,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Transform.html">Lean.Meta.Transform</a>
 </div>
 <div class="nav_link">
@@ -3668,8 +3479,8 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Parser.html">
-<summary>Lean.Parser</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Parser/Attr.html">Lean.Parser.Attr</a>
 </div>
 <div class="nav_link">
@@ -3707,16 +3518,16 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/ParserCompiler.html">
-<summary>Lean.ParserCompiler</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html">Lean.ParserCompiler.Attribute</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter.html">
-<summary>Lean.PrettyPrinter</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
-<summary>Lean.PrettyPrinter.Delaborator</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html">Lean.PrettyPrinter.Delaborator.Basic</a>
 </div>
 <div class="nav_link">
@@ -3736,9 +3547,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Lean/PrettyPrinter/Basic.html">Lean.PrettyPrinter.Basic</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Formatter.html">Lean.PrettyPrinter.Formatter</a>
 </div>
 <div class="nav_link">
@@ -3746,10 +3554,10 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server.html">
-<summary>Lean.Server</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
-<summary>Lean.Server.FileWorker</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
+<summary><a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html">Lean.Server.FileWorker.RequestHandling</a>
 </div>
 <div class="nav_link">
@@ -3760,8 +3568,8 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server/Rpc.html">
-<summary>Lean.Server.Rpc</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Rpc/Basic.html">Lean.Server.Rpc.Basic</a>
 </div>
 <div class="nav_link">
@@ -3781,9 +3589,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Lean/Server/FileSource.html">Lean.Server.FileSource</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
 </div>
 <div class="nav_link">
@@ -3791,9 +3596,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Requests.html">Lean.Server.Requests</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Snapshots.html">Lean.Server.Snapshots</a>
@@ -3806,8 +3608,8 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Util.html">
-<summary>Lean.Util</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/CollectFVars.html">Lean.Util.CollectFVars</a>
 </div>
 <div class="nav_link">
@@ -3875,8 +3677,8 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Widget.html">
-<summary>Lean.Widget</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html">Lean.Widget.InteractiveCode</a>
 </div>
 <div class="nav_link">
@@ -3899,15 +3701,9 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Lean/Class.html">Lean.Class</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/CoreM.html">Lean.CoreM</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
-</div>
-<div class="nav_link" visible="">
+<div class="nav_link visible">
 <a href="/Unicode.lean/Lean/Declaration.html">Lean.Declaration</a>
 </div>
 <div class="nav_link">
@@ -3915,9 +3711,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/DocString.html">Lean.DocString</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
@@ -3962,9 +3755,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Lean/Message.html">Lean.Message</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/MetavarContext.html">Lean.MetavarContext</a>
 </div>
 <div class="nav_link">
@@ -3972,15 +3762,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/MonadEnv.html">Lean.MonadEnv</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ProjFns.html">Lean.ProjFns</a>
@@ -3998,9 +3779,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 <a href="/Unicode.lean/Lean/ScopedEnvExtension.html">Lean.ScopedEnvExtension</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Structure.html">Lean.Structure</a>
 </div>
 <div class="nav_link">
@@ -4008,12 +3786,6 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ToExpr.html">Lean.ToExpr</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
@@ -4059,10 +3831,10 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Unicode.html">
-<summary>Unicode</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
-<summary>Unicode.General</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Unicode.html">Unicode</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
+<summary><a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
 </div>
 <div class="nav_link">
@@ -4070,26 +3842,10 @@ recInfo: <span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Recu
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Unicode/Includes.html">Unicode.Includes</a>
 </div>
 </details>
 </div>
 </nav>
-<script>
-siteRoot = "/Unicode.lean/";
-      </script>
-<script src="/Unicode.lean/nav.js">
-</script>
-<script src="/Unicode.lean/search.js">
-</script>
-<script src="/Unicode.lean/mathjax-config.js">
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </body>
 </html>

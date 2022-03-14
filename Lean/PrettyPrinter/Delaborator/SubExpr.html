@@ -1,7 +1,19 @@
 <html lang="en">
 <head>
-<link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><title>Lean.PrettyPrinter.Delaborator.SubExpr</title>
-<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta></head>
+<title>Lean.PrettyPrinter.Delaborator.SubExpr</title>
+<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><link rel="prefetch" href="/Unicode.lean/declaration-data.bmp"></link><script defer="true" src="/Unicode.lean/mathjax-config.js">
+</script>
+<script defer="true" src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script defer="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script type="module" src="/Unicode.lean/nav.js">
+</script>
+<script type="module" src="/Unicode.lean/search.js">
+</script>
+<script type="module" src="/Unicode.lean/how-about.js">
+</script>
+</head>
 <body>
 <input id="nav_toggle" type="checkbox"></input><header>
 <h1>
@@ -18,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.PrettyPrinter.Delaborator.SubExpr</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -138,14 +150,14 @@ Documentation</h1>
 <main>
 <div class="mod_doc"><p>This file defines utilities for <code>MetaM</code> computations to traverse subexpressions of an expression
 in sync with the <code><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></code> "position" values that refer to them.  We use a simple encoding scheme:
-every <code><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr">Expr</a></code> constructor has at most 3 direct expression children. Considering an expression's type
+every <code>Expr</code> constructor has at most 3 direct expression children. Considering an expression's type
 to be one extra child as well, we can injectively map a path of <code>childIdxs</code> to a natural number
-by computing the value of the 4-ary representation <code>1::childIdxs</code>, since n-ary representations
-without leading zeros are unique. Note that <code>pos</code> is initialized to <code>1</code> (case <code>childIdxs==[]</code>).</p></div>
+by computing the value of the 4-ary representation <code>1 :: childIdxs</code>, since n-ary representations
+without leading zeros are unique. Note that <code>pos</code> is initialized to <code>1</code> (case <code>childIdxs == []</code>).</p></div>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.Pos">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L20-L20">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L20-L20">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -167,7 +179,7 @@ without leading zeros are unique. Note that <code>pos</code> is initialized to <
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.OptionsPerPos">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L22-L22">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L22-L22">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -189,7 +201,7 @@ without leading zeros are unique. Note that <code>pos</code> is initialized to <
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L24-L27">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L24-L27">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -209,7 +221,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.instInhabitedSubExpr">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L27-L27">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L27-L27">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -230,7 +242,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.maxChildren">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L31-L31">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L31-L31">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -252,7 +264,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.mkRoot">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L42-L42">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L42-L42">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -275,7 +287,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.getExpr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L44-L44">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L44-L44">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -310,7 +322,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.getPos">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L45-L45">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L45-L45">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -345,7 +357,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.descend">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L47-L48">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L47-L48">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -375,9 +387,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.descend">Lean.PrettyPrinter.Delaborator.SubExpr.descend</a> <span class="fn">child</span> <span class="fn">childIdx</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#withTheReader">withTheReader</a> <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr">Lean.PrettyPrinter.Delaborator.SubExpr</a>
-    (<span class="fn">fun <span class="fn">cfg</span> => <span class="fn">{ expr := <span class="fn">child</span>, pos := <span class="fn"><span class="fn"><span class="fn"><span class="fn">cfg</span>.pos</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.maxChildren">Lean.PrettyPrinter.Delaborator.SubExpr.maxChildren</a></span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">childIdx</span></span> }</span></span>) <span class="fn">x</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -385,7 +395,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.withAppFn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L50-L50">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L50-L50">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -430,7 +440,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.withAppArg">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L51-L51">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L51-L51">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -475,7 +485,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.withType">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L53-L54">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L53-L54">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -513,11 +523,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withType">Lean.PrettyPrinter.Delaborator.SubExpr.withType</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let a ← <span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.getExpr</span>
-  let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">a</span></span>)</span>
-  <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.descend">Lean.PrettyPrinter.Delaborator.SubExpr.descend</a> <span class="fn">a</span> (<span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.maxChildren">Lean.PrettyPrinter.Delaborator.SubExpr.maxChildren</a> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">1</span></span>) <span class="fn">x</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -525,7 +531,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.withAppFnArgs">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L56-L60">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L56-L60">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -563,7 +569,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.withBindingDomain">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L62-L62">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L62-L62">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -597,10 +603,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withBindingDomain">Lean.PrettyPrinter.Delaborator.SubExpr.withBindingDomain</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let a ← <span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.getExpr</span>
-  <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.descend">Lean.PrettyPrinter.Delaborator.SubExpr.descend</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.bindingDomain!">Lean.Expr.bindingDomain!</a> <span class="fn">a</span></span>) <span class="fn">0</span> <span class="fn">x</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -608,7 +611,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.withBindingBody">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L64-L67">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L64-L67">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -648,11 +651,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withBindingBody">Lean.PrettyPrinter.Delaborator.SubExpr.withBindingBody</a> <span class="fn">n</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let e ← <span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.getExpr</span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLocalDecl">Lean.Meta.withLocalDecl</a> <span class="fn">n</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.binderInfo">Lean.Expr.binderInfo</a> <span class="fn">e</span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.bindingDomain!">Lean.Expr.bindingDomain!</a> <span class="fn">e</span></span>) <span class="fn">fun <span class="fn">fvar</span> =>
-      <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.descend">Lean.PrettyPrinter.Delaborator.SubExpr.descend</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.instantiate1">Lean.Expr.instantiate1</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.bindingBody!">Lean.Expr.bindingBody!</a> <span class="fn">e</span></span>) <span class="fn">fvar</span></span>) <span class="fn">1</span> <span class="fn">x</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -660,7 +659,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.withProj">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L69-L71">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L69-L71">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -698,14 +697,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withProj">Lean.PrettyPrinter.Delaborator.SubExpr.withProj</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let discr ← <span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.getExpr</span>
-  <span class="fn">match <span class="fn">discr</span> with
-    | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.proj">Lean.Expr.proj</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">e</span> <span class="fn">x_2</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.descend">Lean.PrettyPrinter.Delaborator.SubExpr.descend</a> <span class="fn">e</span> <span class="fn">0</span> <span class="fn">x</span></span>
-    | <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.PrettyPrinter.Delaborator.SubExpr"</span> <span class="fn">"Lean.PrettyPrinter.Delaborator.SubExpr.withProj"</span> <span class="fn">70</span>
-        <span class="fn">36</span> <span class="fn">"unreachable code has been reached"</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -713,7 +705,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.withMDataExpr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L73-L75">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L73-L75">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -751,15 +743,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withMDataExpr">Lean.PrettyPrinter.Delaborator.SubExpr.withMDataExpr</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let discr ← <span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.getExpr</span>
-  <span class="fn">match <span class="fn">discr</span> with
-    | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mdata">Lean.Expr.mdata</a> <span class="fn">x</span> <span class="fn">e</span> <span class="fn">x_1</span></span> =>
-      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#withTheReader">withTheReader</a> <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr">Lean.PrettyPrinter.Delaborator.SubExpr</a> (<span class="fn">fun <span class="fn">ctx</span> => <span class="fn">{ expr := <span class="fn">e</span>, pos := <span class="fn"><span class="fn">ctx</span>.pos</span> }</span></span>) <span class="fn">x</span></span>
-    | <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.PrettyPrinter.Delaborator.SubExpr"</span>
-        <span class="fn">"Lean.PrettyPrinter.Delaborator.SubExpr.withMDataExpr"</span> <span class="fn">74</span> <span class="fn">35</span> <span class="fn">"unreachable code has been reached"</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -767,7 +751,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.withLetVarType">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L77-L79">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L77-L79">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -805,14 +789,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withLetVarType">Lean.PrettyPrinter.Delaborator.SubExpr.withLetVarType</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let discr ← <span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.getExpr</span>
-  <span class="fn">match <span class="fn">discr</span> with
-    | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.letE">Lean.Expr.letE</a> <span class="fn">x</span> <span class="fn">t</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.descend">Lean.PrettyPrinter.Delaborator.SubExpr.descend</a> <span class="fn">t</span> <span class="fn">0</span> <span class="fn">x</span></span>
-    | <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.PrettyPrinter.Delaborator.SubExpr"</span>
-        <span class="fn">"Lean.PrettyPrinter.Delaborator.SubExpr.withLetVarType"</span> <span class="fn">78</span> <span class="fn">38</span> <span class="fn">"unreachable code has been reached"</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -820,7 +797,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.withLetValue">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L81-L83">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L81-L83">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -858,14 +835,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withLetValue">Lean.PrettyPrinter.Delaborator.SubExpr.withLetValue</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let discr ← <span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.getExpr</span>
-  <span class="fn">match <span class="fn">discr</span> with
-    | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.letE">Lean.Expr.letE</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">v</span> <span class="fn">x_2</span> <span class="fn">x_3</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.descend">Lean.PrettyPrinter.Delaborator.SubExpr.descend</a> <span class="fn">v</span> <span class="fn">1</span> <span class="fn">x</span></span>
-    | <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.PrettyPrinter.Delaborator.SubExpr"</span>
-        <span class="fn">"Lean.PrettyPrinter.Delaborator.SubExpr.withLetValue"</span> <span class="fn">82</span> <span class="fn">38</span> <span class="fn">"unreachable code has been reached"</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -873,7 +843,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.withLetBody">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L85-L89">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L85-L89">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -915,17 +885,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withLetBody">Lean.PrettyPrinter.Delaborator.SubExpr.withLetBody</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let discr ← <span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.getExpr</span>
-  <span class="fn">match <span class="fn">discr</span> with
-    | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.letE">Lean.Expr.letE</a> <span class="fn">n</span> <span class="fn">t</span> <span class="fn">v</span> <span class="fn">b</span> <span class="fn">x</span></span> =>
-      <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLetDecl">Lean.Meta.withLetDecl</a> <span class="fn">n</span> <span class="fn">t</span> <span class="fn">v</span> <span class="fn">fun <span class="fn">fvar</span> =>
-        <span class="fn">let b := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.instantiate1">Lean.Expr.instantiate1</a> <span class="fn">b</span> <span class="fn">fvar</span></span>;
-        <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.descend">Lean.PrettyPrinter.Delaborator.SubExpr.descend</a> <span class="fn">b</span> <span class="fn">2</span> <span class="fn">x</span></span></span></span></span>
-    | <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.PrettyPrinter.Delaborator.SubExpr"</span> <span class="fn">"Lean.PrettyPrinter.Delaborator.SubExpr.withLetBody"</span>
-        <span class="fn">86</span> <span class="fn">38</span> <span class="fn">"unreachable code has been reached"</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -933,7 +893,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.withNaryFn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L91-L95">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L91-L95">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -967,13 +927,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withNaryFn">Lean.PrettyPrinter.Delaborator.SubExpr.withNaryFn</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let e ← <span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.getExpr</span>
-  let n : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.getAppNumArgs">Lean.Expr.getAppNumArgs</a> <span class="fn">e</span></span>
-  let a ← <span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.getPos</span>
-  let newPos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.Pos">Lean.PrettyPrinter.Delaborator.Pos</a> := <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.maxChildren">Lean.PrettyPrinter.Delaborator.SubExpr.maxChildren</a> <a href="/Unicode.lean/Init/Prelude.html#HPow.hPow">^</a> <span class="fn">n</span></span></span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#withTheReader">withTheReader</a> <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr">Lean.PrettyPrinter.Delaborator.SubExpr</a> (<span class="fn">fun <span class="fn">cfg</span> => <span class="fn">{ expr := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.getAppFn">Lean.Expr.getAppFn</a> <span class="fn">e</span></span>, pos := <span class="fn">newPos</span> }</span></span>) <span class="fn">x</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -981,7 +935,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.withNaryArg">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L97-L101">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L97-L101">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1017,14 +971,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withNaryArg">Lean.PrettyPrinter.Delaborator.SubExpr.withNaryArg</a> <span class="fn">argIdx</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let e ← <span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.getExpr</span>
-  let args : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.getAppArgs">Lean.Expr.getAppArgs</a> <span class="fn">e</span></span>
-  let a ← <span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.getPos</span>
-  let newPos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.Pos">Lean.PrettyPrinter.Delaborator.Pos</a> :=
-    <span class="fn"><span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.maxChildren">Lean.PrettyPrinter.Delaborator.SubExpr.maxChildren</a> <a href="/Unicode.lean/Init/Prelude.html#HPow.hPow">^</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">args</span></span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">argIdx</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#withTheReader">withTheReader</a> <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr">Lean.PrettyPrinter.Delaborator.SubExpr</a> (<span class="fn">fun <span class="fn">cfg</span> => <span class="fn">{ expr := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn">args</span> <span class="fn">argIdx</span></span>, pos := <span class="fn">newPos</span> }</span></span>) <span class="fn">x</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1032,7 +979,7 @@ pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.Pr
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L105-L108">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L105-L108">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1052,7 +999,7 @@ top : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.instInhabitedHoleIterator">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L108-L108">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L108-L108">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1073,7 +1020,7 @@ top : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator.toPos">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L116-L117">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L116-L117">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1096,7 +1043,7 @@ top : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator.next">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L119-L122">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L119-L122">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1110,10 +1057,7 @@ top : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator.next">Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator.next</a> <span class="fn">iter</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><span class="fn"><span class="fn">iter</span>.curr</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn"><span class="fn">iter</span>.top</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-    <span class="fn">{ curr := <span class="fn"><span class="fn">2</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn"><span class="fn">iter</span>.top</span></span>, top := <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.maxChildren">Lean.PrettyPrinter.Delaborator.SubExpr.maxChildren</a> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn"><span class="fn">iter</span>.top</span></span> }</span>
-  else <span class="fn">{ curr := <span class="fn"><span class="fn"><span class="fn">iter</span>.curr</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>, top := <span class="fn"><span class="fn">iter</span>.top</span> }</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1121,7 +1065,7 @@ top : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.SubExpr.nextExtraPos">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L127-L131">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/PrettyPrinter/Delaborator/SubExpr.lean#L127-L131">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1142,20 +1086,15 @@ top : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.Pos">Lean.PrettyPrinter.Delaborator.Pos</a></span></div></div>
-<details>
+<p>The positioning scheme guarantees that there will be an infinite number of extra positions
+which are never used by <code>Expr</code>s. The <code><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator">HoleIterator</a></code> always points at the next such "hole".
+We use these to attach additional <code>Elab.Info</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.nextExtraPos</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let iter ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#getThe">getThe</a> <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator">Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator</a></span>
-  let pos : <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.Pos">Lean.PrettyPrinter.Delaborator.Pos</a> := <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator.toPos">Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator.toPos</a> <span class="fn">iter</span></span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modifyThe">modifyThe</a> <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator">Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator</a> <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator.next">Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator.next</a></span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">pos</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>The positioning scheme guarantees that there will be an infinite number of extra positions
-which are never used by <code><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr">Expr</a></code>s. The <code><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.HoleIterator">HoleIterator</a></code> always points at the next such "hole".
-We use these to attach additional <code>Elab.Info</code>.</p></div>
+</div>
 </div>
 </main>
 <nav class="nav">
@@ -1166,10 +1105,10 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <h3>Library</h3>
 <div class="module_list">
 <details class="nav_sect" data-path="/Unicode.lean/Init.html">
-<summary>Init</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
-<summary>Init.Control</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init.html">Init</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
+<summary><a href="/Unicode.lean/Init/Control.html">Init.Control</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Control/Basic.html">Init.Control.Basic</a>
 </div>
 <div class="nav_link">
@@ -1204,10 +1143,10 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data.html">
-<summary>Init.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
-<summary>Init.Data.Array</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
+<summary><a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/Basic.html">Init.Data.Array.Basic</a>
 </div>
 <div class="nav_link">
@@ -1230,32 +1169,32 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ByteArray.html">
-<summary>Init.Data.ByteArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ByteArray/Basic.html">Init.Data.ByteArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Char.html">
-<summary>Init.Data.Char</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Char/Basic.html">Init.Data.Char.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Fin.html">
-<summary>Init.Data.Fin</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Fin/Basic.html">Init.Data.Fin.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/FloatArray.html">
-<summary>Init.Data.FloatArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/FloatArray/Basic.html">Init.Data.FloatArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Format.html">
-<summary>Init.Data.Format</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Format/Basic.html">Init.Data.Format.Basic</a>
 </div>
 <div class="nav_link">
@@ -1269,14 +1208,14 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Int.html">
-<summary>Init.Data.Int</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Int/Basic.html">Init.Data.Int.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/List.html">
-<summary>Init.Data.List</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/List/Basic.html">Init.Data.List.Basic</a>
 </div>
 <div class="nav_link">
@@ -1287,8 +1226,8 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Nat.html">
-<summary>Init.Data.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Basic.html">Init.Data.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -1311,8 +1250,8 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Option.html">
-<summary>Init.Data.Option</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Option/Basic.html">Init.Data.Option.Basic</a>
 </div>
 <div class="nav_link">
@@ -1323,8 +1262,8 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/String.html">
-<summary>Init.Data.String</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/String/Basic.html">Init.Data.String.Basic</a>
 </div>
 <div class="nav_link">
@@ -1332,8 +1271,8 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ToString.html">
-<summary>Init.Data.ToString</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
 </div>
 <div class="nav_link">
@@ -1341,46 +1280,16 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Float.html">Init.Data.Float</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Hashable.html">Init.Data.Hashable</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/OfScientific.html">Init.Data.OfScientific</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
@@ -1401,18 +1310,12 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Init/Data/Stream.html">Init.Data.Stream</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/UInt.html">Init.Data.UInt</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/System.html">
-<summary>Init.System</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/System.html">Init.System</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/System/FilePath.html">Init.System.FilePath</a>
 </div>
 <div class="nav_link">
@@ -1435,16 +1338,10 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Init/Coe.html">Init.Coe</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Control.html">Init.Control</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Conv.html">Init.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Core.html">Init.Core</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Fix.html">Init.Fix</a>
@@ -1474,9 +1371,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/System.html">Init.System</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Util.html">Init.Util</a>
 </div>
 <div class="nav_link">
@@ -1487,12 +1381,12 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean.html" open="">
-<summary>Lean</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
-<summary>Lean.Compiler</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
-<summary>Lean.Compiler.IR</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean.html">Lean</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
+<summary><a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
+<summary><a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html">Lean.Compiler.IR.Basic</a>
 </div>
 <div class="nav_link">
@@ -1578,9 +1472,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Lean/Compiler/FFI.html">Lean.Compiler.FFI</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/ImplementedByAttr.html">Lean.Compiler.ImplementedByAttr</a>
 </div>
 <div class="nav_link">
@@ -1606,10 +1497,10 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data.html">
-<summary>Lean.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
-<summary>Lean.Data.Json</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
+<summary><a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json/Basic.html">Lean.Data.Json.Basic</a>
 </div>
 <div class="nav_link">
@@ -1626,8 +1517,8 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Lsp.html">
-<summary>Lean.Data.Lsp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html">Lean.Data.Lsp.Basic</a>
 </div>
 <div class="nav_link">
@@ -1668,8 +1559,8 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Xml.html">
-<summary>Lean.Data.Xml</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Xml/Basic.html">Lean.Data.Xml.Basic</a>
 </div>
 <div class="nav_link">
@@ -1683,9 +1574,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
 </div>
 <div class="nav_link">
@@ -1696,9 +1584,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/LOption.html">Lean.Data.LOption</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Name.html">Lean.Data.Name</a>
@@ -1736,15 +1621,12 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Trie.html">Lean.Data.Trie</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab.html">
-<summary>Lean.Elab</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
-<summary>Lean.Elab.Deriving</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Deriving/BEq.html">Lean.Elab.Deriving.BEq</a>
 </div>
 <div class="nav_link">
@@ -1776,10 +1658,10 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition.html">
-<summary>Lean.Elab.PreDefinition</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
-<summary>Lean.Elab.PreDefinition.Structural</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/BRecOn.html">Lean.Elab.PreDefinition.Structural.BRecOn</a>
 </div>
 <div class="nav_link">
@@ -1805,8 +1687,8 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">
-<summary>Lean.Elab.PreDefinition.WF</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html">Lean.Elab.PreDefinition.WF.Eqns</a>
 </div>
 <div class="nav_link">
@@ -1840,16 +1722,10 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/MkInhabitant.html">Lean.Elab.PreDefinition.MkInhabitant</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Quotation.html">
-<summary>Lean.Elab.Quotation</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html">Lean.Elab.Quotation.Precheck</a>
 </div>
 <div class="nav_link">
@@ -1857,10 +1733,10 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic.html">
-<summary>Lean.Elab.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
-<summary>Lean.Elab.Tactic.Conv</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
 </div>
 <div class="nav_link">
@@ -1893,9 +1769,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Delta.html">Lean.Elab.Tactic.Delta</a>
@@ -1986,9 +1859,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Lean/Elab/DefView.html">Lean.Elab.DefView</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
 </div>
 <div class="nav_link">
@@ -2055,13 +1925,7 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Print.html">Lean.Elab.Print</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/RecAppSyntax.html">Lean.Elab.RecAppSyntax</a>
@@ -2082,9 +1946,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html">Lean.Elab.SyntheticMVars</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Term.html">Lean.Elab.Term</a>
 </div>
 <div class="nav_link">
@@ -2092,10 +1953,10 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta.html">
-<summary>Lean.Meta</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
-<summary>Lean.Meta.Match</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/Basic.html">Lean.Meta.Match.Basic</a>
 </div>
 <div class="nav_link">
@@ -2124,12 +1985,12 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
-<summary>Lean.Meta.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
-<summary>Lean.Meta.Tactic.LinearArith</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
-<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -2146,9 +2007,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
 </div>
 <div class="nav_link">
@@ -2156,8 +2014,8 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
-<summary>Lean.Meta.Tactic.Simp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html">Lean.Meta.Tactic.Simp.Main</a>
 </div>
 <div class="nav_link">
@@ -2228,9 +2086,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rename.html">Lean.Meta.Tactic.Rename</a>
 </div>
 <div class="nav_link">
@@ -2241,9 +2096,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rewrite.html">Lean.Meta.Tactic.Rewrite</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Split.html">Lean.Meta.Tactic.Split</a>
@@ -2355,9 +2207,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/MatchUtil.html">Lean.Meta.MatchUtil</a>
 </div>
 <div class="nav_link">
@@ -2385,9 +2234,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Transform.html">Lean.Meta.Transform</a>
 </div>
 <div class="nav_link">
@@ -2401,8 +2247,8 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Parser.html">
-<summary>Lean.Parser</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Parser/Attr.html">Lean.Parser.Attr</a>
 </div>
 <div class="nav_link">
@@ -2440,16 +2286,16 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/ParserCompiler.html">
-<summary>Lean.ParserCompiler</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html">Lean.ParserCompiler.Attribute</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter.html" open="">
-<summary>Lean.PrettyPrinter</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html" open="">
-<summary>Lean.PrettyPrinter.Delaborator</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html" open="">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html">Lean.PrettyPrinter.Delaborator.Basic</a>
 </div>
 <div class="nav_link">
@@ -2458,7 +2304,7 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Options.html">Lean.PrettyPrinter.Delaborator.Options</a>
 </div>
-<div class="nav_link" visible="">
+<div class="nav_link visible">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html">Lean.PrettyPrinter.Delaborator.SubExpr</a>
 </div>
 <div class="nav_link">
@@ -2469,9 +2315,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Lean/PrettyPrinter/Basic.html">Lean.PrettyPrinter.Basic</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Formatter.html">Lean.PrettyPrinter.Formatter</a>
 </div>
 <div class="nav_link">
@@ -2479,10 +2322,10 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server.html">
-<summary>Lean.Server</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
-<summary>Lean.Server.FileWorker</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
+<summary><a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html">Lean.Server.FileWorker.RequestHandling</a>
 </div>
 <div class="nav_link">
@@ -2493,8 +2336,8 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server/Rpc.html">
-<summary>Lean.Server.Rpc</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Rpc/Basic.html">Lean.Server.Rpc.Basic</a>
 </div>
 <div class="nav_link">
@@ -2514,9 +2357,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Lean/Server/FileSource.html">Lean.Server.FileSource</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
 </div>
 <div class="nav_link">
@@ -2524,9 +2364,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Requests.html">Lean.Server.Requests</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Snapshots.html">Lean.Server.Snapshots</a>
@@ -2539,8 +2376,8 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Util.html">
-<summary>Lean.Util</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/CollectFVars.html">Lean.Util.CollectFVars</a>
 </div>
 <div class="nav_link">
@@ -2608,8 +2445,8 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Widget.html">
-<summary>Lean.Widget</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html">Lean.Widget.InteractiveCode</a>
 </div>
 <div class="nav_link">
@@ -2632,13 +2469,7 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Lean/Class.html">Lean.Class</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/CoreM.html">Lean.CoreM</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Declaration.html">Lean.Declaration</a>
@@ -2648,9 +2479,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/DocString.html">Lean.DocString</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
@@ -2695,9 +2523,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Lean/Message.html">Lean.Message</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/MetavarContext.html">Lean.MetavarContext</a>
 </div>
 <div class="nav_link">
@@ -2705,15 +2530,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/MonadEnv.html">Lean.MonadEnv</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ProjFns.html">Lean.ProjFns</a>
@@ -2731,9 +2547,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 <a href="/Unicode.lean/Lean/ScopedEnvExtension.html">Lean.ScopedEnvExtension</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Structure.html">Lean.Structure</a>
 </div>
 <div class="nav_link">
@@ -2741,12 +2554,6 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ToExpr.html">Lean.ToExpr</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
@@ -2792,10 +2599,10 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Unicode.html">
-<summary>Unicode</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
-<summary>Unicode.General</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Unicode.html">Unicode</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
+<summary><a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
 </div>
 <div class="nav_link">
@@ -2803,26 +2610,10 @@ We use these to attach additional <code>Elab.Info</code>.</p></div>
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Unicode/Includes.html">Unicode.Includes</a>
 </div>
 </details>
 </div>
 </nav>
-<script>
-siteRoot = "/Unicode.lean/";
-      </script>
-<script src="/Unicode.lean/nav.js">
-</script>
-<script src="/Unicode.lean/search.js">
-</script>
-<script src="/Unicode.lean/mathjax-config.js">
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </body>
 </html>

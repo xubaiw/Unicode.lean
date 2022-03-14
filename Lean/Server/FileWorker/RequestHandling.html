@@ -1,7 +1,19 @@
 <html lang="en">
 <head>
-<link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><title>Lean.Server.FileWorker.RequestHandling</title>
-<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta></head>
+<title>Lean.Server.FileWorker.RequestHandling</title>
+<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><link rel="prefetch" href="/Unicode.lean/declaration-data.bmp"></link><script defer="true" src="/Unicode.lean/mathjax-config.js">
+</script>
+<script defer="true" src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script defer="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script type="module" src="/Unicode.lean/nav.js">
+</script>
+<script type="module" src="/Unicode.lean/search.js">
+</script>
+<script type="module" src="/Unicode.lean/how-about.js">
+</script>
+</head>
 <body>
 <input id="nav_toggle" type="checkbox"></input><header>
 <h1>
@@ -18,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Server.FileWorker.RequestHandling</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -166,7 +178,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Server.FileWorker.handleCompletion">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L24-L38">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L24-L38">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -180,23 +192,7 @@ Documentation</h1>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleCompletion">Lean.Server.FileWorker.handleCompletion</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let doc ← <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.readDoc">Lean.Server.RequestM.readDoc</a>
-  let text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap</a> := <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span>
-  let pos : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a> := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.lspPosToUtf8Pos">Lean.FileMap.lspPosToUtf8Pos</a> <span class="fn">text</span> <span class="fn"><span class="fn"><span class="fn">p</span>.toTextDocumentPositionParams</span>.position</span></span>
-  let a ← <span class="fn">read</span>
-  let caps : <a href="/Unicode.lean/Lean/Data/Lsp/Capabilities.html#Lean.Lsp.ClientCapabilities">Lean.Lsp.ClientCapabilities</a> := <span class="fn"><span class="fn"><span class="fn">a</span>.initParams</span>.capabilities</span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.withWaitFindSnap">Lean.Server.RequestM.withWaitFindSnap</a> <span class="fn">doc</span> (<span class="fn">fun <span class="fn">a</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.endPos">Lean.Server.Snapshots.Snapshot.endPos</a> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span> <a href="/Unicode.lean/Init/Prelude.html#GE.ge">≥</a> <span class="fn">pos</span></span>)</span></span>)
-      (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">{ isIncomplete := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>, items := <span class="fn">#[]</span> }</span></span>) <span class="fn">fun <span class="fn">snap</span> => <span class="fn">do
-      let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.find?">Lean.Server.Completion.find?</a> <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span> <span class="fn">pos</span> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.infoTree">Lean.Server.Snapshots.Snapshot.infoTree</a> <span class="fn">snap</span></span>) <span class="fn">caps</span></span>)</span>
-      let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.CompletionList">Lean.Lsp.CompletionList</a></span></span> := <span class="fn">fun <span class="fn">y</span> =>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">{ isIncomplete := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>, items := <span class="fn">#[]</span> }</span></span></span>
-      <span class="fn">match <span class="fn">a</span> with
-        | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">r</span></span>
-        | <span class="fn">x</span> => <span class="fn">do
-          let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -204,7 +200,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Server.FileWorker.handleHover">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L41-L58">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L41-L58">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -218,32 +214,7 @@ Documentation</h1>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleHover">Lean.Server.FileWorker.handleHover</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let doc ← <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.readDoc">Lean.Server.RequestM.readDoc</a>
-  let text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap</a> := <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span>
-  let mkHover : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String">String</a> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a> → <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a> → <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.Hover">Lean.Lsp.Hover</a></span></span> := <span class="fn">fun <span class="fn">s</span> <span class="fn">f</span> <span class="fn">t</span> =>
-    <span class="fn">{ contents := <span class="fn">{ kind := <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.MarkupKind.markdown">Lean.Lsp.MarkupKind.markdown</a>, value := <span class="fn">s</span> }</span>,
-      range? := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">{ start := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.utf8PosToLspPos">Lean.FileMap.utf8PosToLspPos</a> <span class="fn">text</span> <span class="fn">f</span></span>, end := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.utf8PosToLspPos">Lean.FileMap.utf8PosToLspPos</a> <span class="fn">text</span> <span class="fn">t</span></span> }</span></span> }</span></span>
-  let hoverPos : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a> := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.lspPosToUtf8Pos">Lean.FileMap.lspPosToUtf8Pos</a> <span class="fn">text</span> <span class="fn"><span class="fn"><span class="fn">p</span>.toTextDocumentPositionParams</span>.position</span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.withWaitFindSnap">Lean.Server.RequestM.withWaitFindSnap</a> <span class="fn">doc</span> (<span class="fn">fun <span class="fn">s</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.endPos">Lean.Server.Snapshots.Snapshot.endPos</a> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">hoverPos</span></span>)</span></span>)
-      (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span>) <span class="fn">fun <span class="fn">snap</span> =>
-      <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span>;
-      <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.InfoTree.hoverableInfoAt?">Lean.Elab.InfoTree.hoverableInfoAt?</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.infoTree">Lean.Server.Snapshots.Snapshot.infoTree</a> <span class="fn">snap</span></span>) <span class="fn">hoverPos</span></span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">ci</span>, <span class="fn">i</span>)</span></span> => <span class="fn">do
-        let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.fmtHover?">Lean.Elab.Info.fmtHover?</a> <span class="fn">ci</span> <span class="fn">i</span></span>)</span>
-        <span class="fn">match <span class="fn">a</span> with
-          | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">hoverFmt</span></span> =>
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a>
-              (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a>
-                (<span class="fn"><span class="fn">mkHover</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">hoverFmt</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Data/Option/BasicAux.html#Option.get!">Option.get!</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.pos?">Lean.Elab.Info.pos?</a> <span class="fn">i</span></span>)</span>)
-                  (<span class="fn"><a href="/Unicode.lean/Init/Data/Option/BasicAux.html#Option.get!">Option.get!</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.tailPos?">Lean.Elab.Info.tailPos?</a> <span class="fn">i</span></span>)</span>)</span>)</span>)</span>
-          | <span class="fn">x</span> => <span class="fn">do
-            let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
-      | <span class="fn">x</span> => <span class="fn">do
-        let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -251,7 +222,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Server.FileWorker.GoToKind">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L60-L62">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L60-L62">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -273,7 +244,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <div class="decl" id="Lean.Server.FileWorker.instBEqGoToKind">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L62-L62">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L62-L62">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -294,7 +265,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <div class="decl" id="Lean.Server.FileWorker.handleDefinition">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L65-L157">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L65-L157">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -310,195 +281,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleDefinition">Lean.Server.FileWorker.handleDefinition</a> <span class="fn">kind</span> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let rc ← <span class="fn">read</span>
-  let doc ← <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.readDoc">Lean.Server.RequestM.readDoc</a>
-  let text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap</a> := <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span>
-  let hoverPos : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a> := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.lspPosToUtf8Pos">Lean.FileMap.lspPosToUtf8Pos</a> <span class="fn">text</span> <span class="fn"><span class="fn">p</span>.position</span></span>
-  let documentUriFromModule : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentUri">Lean.Lsp.DocumentUri</a></span>)</span></span> := <span class="fn">fun <span class="fn">modName</span> => <span class="fn">do
-    let discr ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Util/Path.html#Lean.SearchPath.findWithExt">Lean.SearchPath.findWithExt</a> <span class="fn"><span class="fn">rc</span>.srcSearchPath</span> <span class="fn">"lean"</span> <span class="fn">modName</span></span>)</span>
-    <span class="fn">match <span class="fn">discr</span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">modFname</span></span> => <span class="fn">do
-        let modFname ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.FS.realPath">IO.FS.realPath</a> <span class="fn">modFname</span></span>)</span>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Utils.html#Lean.Lsp.DocumentUri.ofPath">Lean.Lsp.DocumentUri.ofPath</a> <span class="fn">modFname</span></span>)</span>)</span></span>
-      | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span></span></span>
-  let locationLinksFromDecl : <span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.Info">Lean.Elab.Info</a> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.LocationLink">Lean.Lsp.LocationLink</a></span>)</span></span></span> := <span class="fn">fun <span class="fn">i</span> <span class="fn">n</span> => <span class="fn">do
-    let mod? ← <span class="fn"><a href="/Unicode.lean/Lean/MonadEnv.html#Lean.findModuleOf?">Lean.findModuleOf?</a> <span class="fn">n</span></span>
-    let _do_jp : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentUri">Lean.Lsp.DocumentUri</a></span> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.LocationLink">Lean.Lsp.LocationLink</a></span>)</span></span> := <span class="fn">fun <span class="fn">modUri?</span> => <span class="fn">do
-      let ranges? ← <span class="fn"><a href="/Unicode.lean/Lean/DeclarationRange.html#Lean.findDeclarationRanges?">Lean.findDeclarationRanges?</a> <span class="fn">n</span></span>
-      let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.LocationLink">Lean.Lsp.LocationLink</a></span>)</span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">#[]</span></span></span>
-      <span class="fn">match <span class="fn">(<span class="fn">ranges?</span>, <span class="fn">modUri?</span>)</span> with
-        | <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">ranges</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">modUri</span></span>)</span> =>
-          <span class="fn">let declRangeToLspRange := <span class="fn">fun <span class="fn">r</span> =>
-            <span class="fn">{ start := <span class="fn">{ line := <span class="fn"><span class="fn"><span class="fn"><span class="fn">r</span>.pos</span>.line</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">1</span></span>, character := <span class="fn"><span class="fn">r</span>.charUtf16</span> }</span>,
-              end := <span class="fn">{ line := <span class="fn"><span class="fn"><span class="fn"><span class="fn">r</span>.endPos</span>.line</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">1</span></span>, character := <span class="fn"><span class="fn">r</span>.endCharUtf16</span> }</span> }</span></span>;
-          <span class="fn">let ll :=
-            <span class="fn">{ originSelectionRange? := <span class="fn">(<span class="fn">fun <span class="fn">a</span> => <span class="fn"><a href="/Unicode.lean/Lean/Server/Utils.html#String.Range.toLspRange">String.Range.toLspRange</a> <span class="fn">text</span> <span class="fn">a</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Functor.map"><$></a> <span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.range?">Lean.Elab.Info.range?</a> <span class="fn">i</span></span></span>,
-              targetUri := <span class="fn">modUri</span>, targetRange := <span class="fn"><span class="fn">declRangeToLspRange</span> <span class="fn"><span class="fn">ranges</span>.range</span></span>,
-              targetSelectionRange := <span class="fn"><span class="fn">declRangeToLspRange</span> <span class="fn"><span class="fn">ranges</span>.selectionRange</span></span> }</span>;
-          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">#[<span class="fn">ll</span>]</span></span></span></span>
-        | <span class="fn">x</span> => <span class="fn">do
-          let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span>
-    <span class="fn">match <span class="fn">mod?</span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">modName</span></span> => <span class="fn">do
-        let y ← <span class="fn"><span class="fn">documentUriFromModule</span> <span class="fn">modName</span></span>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-      | <span class="fn">none</span> => <span class="fn">do
-        let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.uri</span></span>)</span>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span>
-  let locationLinksFromBinder :
-    <span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.InfoTree">Lean.Elab.InfoTree</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.Info">Lean.Elab.Info</a> → <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.LocationLink">Lean.Lsp.LocationLink</a></span>)</span></span></span></span> := <span class="fn">fun <span class="fn">t</span> <span class="fn">i</span> <span class="fn">id</span> =>
-    <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">#[]</span></span></span>;
-    <span class="fn">match
-      <span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.InfoTree.findInfo?">Lean.Elab.InfoTree.findInfo?</a>
-        (<span class="fn">fun <span class="fn">x</span> =>
-          <span class="fn">match <span class="fn">x</span> with
-          |
-          <span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.Info.ofTermInfo">Lean.Elab.Info.ofTermInfo</a>
-              <span class="fn">{ toElabInfo := <span class="fn">{ elaborator := <span class="fn">x</span>, stx := <span class="fn">x_1</span> }</span>, lctx := <span class="fn">x_2</span>, expectedType? := <span class="fn">x_3</span>,
-                expr := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.fvar">Lean.Expr.fvar</a> <span class="fn">id'</span> <span class="fn">x_4</span></span>, isBinder := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> }</span></span> =>
-            <span class="fn"><span class="fn">id'</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">id</span></span>
-          | <span class="fn">x</span> => <span class="fn">false</span></span></span>)
-        <span class="fn">t</span></span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">i'</span></span> =>
-      <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.range?">Lean.Elab.Info.range?</a> <span class="fn">i'</span></span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span> =>
-        <span class="fn">let r := <span class="fn"><a href="/Unicode.lean/Lean/Server/Utils.html#String.Range.toLspRange">String.Range.toLspRange</a> <span class="fn">text</span> <span class="fn">r</span></span>;
-        <span class="fn">let ll :=
-          <span class="fn">{ originSelectionRange? := <span class="fn">(<span class="fn">fun <span class="fn">a</span> => <span class="fn"><a href="/Unicode.lean/Lean/Server/Utils.html#String.Range.toLspRange">String.Range.toLspRange</a> <span class="fn">text</span> <span class="fn">a</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Functor.map"><$></a> <span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.range?">Lean.Elab.Info.range?</a> <span class="fn">i</span></span></span>,
-            targetUri := <span class="fn"><span class="fn"><span class="fn">p</span>.textDocument</span>.uri</span>, targetRange := <span class="fn">r</span>, targetSelectionRange := <span class="fn">r</span> }</span>;
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">#[<span class="fn">ll</span>]</span></span></span></span>
-      | <span class="fn">x</span> => <span class="fn">do
-        let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span>
-    | <span class="fn">x</span> => <span class="fn">do
-      let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span>
-  let locationLinksFromImport : <span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.Info">Lean.Elab.Info</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.LocationLink">Lean.Lsp.LocationLink</a></span>)</span></span> := <span class="fn">fun <span class="fn">i</span> =>
-    <span class="fn">let name := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getId">Lean.Syntax.getId</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.stx">Lean.Elab.Info.stx</a> <span class="fn">i</span></span>) <span class="fn">2</span></span>)</span>;
-    <span class="fn">do
-    let a ← <span class="fn"><span class="fn">documentUriFromModule</span> <span class="fn">name</span></span>
-    let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.LocationLink">Lean.Lsp.LocationLink</a></span>)</span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">#[]</span></span></span>
-    <span class="fn">match <span class="fn">a</span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">modUri</span></span> =>
-        <span class="fn">let range := <span class="fn">{ start := <span class="fn">{ line := <span class="fn">0</span>, character := <span class="fn">0</span> }</span>, end := <span class="fn">{ line := <span class="fn">0</span>, character := <span class="fn">0</span> }</span> }</span>;
-        <span class="fn">let ll :=
-          <span class="fn">{ originSelectionRange? := <span class="fn">none</span>, targetUri := <span class="fn">modUri</span>, targetRange := <span class="fn">range</span>, targetSelectionRange := <span class="fn">range</span> }</span>;
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">#[<span class="fn">ll</span>]</span></span></span></span>
-      | <span class="fn">x</span> => <span class="fn">do
-        let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.withWaitFindSnap">Lean.Server.RequestM.withWaitFindSnap</a> <span class="fn">doc</span> (<span class="fn">fun <span class="fn">s</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.endPos">Lean.Server.Snapshots.Snapshot.endPos</a> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">hoverPos</span></span>)</span></span>)
-      (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">#[]</span></span>) <span class="fn">fun <span class="fn">snap</span> =>
-      <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">#[]</span></span></span>;
-      <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.InfoTree.hoverableInfoAt?">Lean.Elab.InfoTree.hoverableInfoAt?</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.infoTree">Lean.Server.Snapshots.Snapshot.infoTree</a> <span class="fn">snap</span></span>) <span class="fn">hoverPos</span></span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">ci</span>, <span class="fn">i</span>)</span></span> =>
-        <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> =>
-          <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> =>
-            <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> =>
-              <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.Info.toElabInfo?">Lean.Elab.Info.toElabInfo?</a> <span class="fn">i</span></span> with
-              | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">ei</span></span> =>
-                <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> =>
-                  <span class="fn">if
-                      <span class="fn">(<span class="fn"><span class="fn"><span class="fn">kind</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.GoToKind.definition">Lean.Server.FileWorker.GoToKind.definition</a></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a>                           <span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.Environment.contains">Lean.Environment.contains</a> <span class="fn"><span class="fn">ci</span>.env</span> <span class="fn"><span class="fn">ei</span>.elaborator</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>                         <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-                    <span class="fn">do
-                    let a ←
-                      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a>
-                          (<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.ContextInfo.runMetaM">Lean.Elab.ContextInfo.runMetaM</a> <span class="fn">ci</span> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.lctx">Lean.Elab.Info.lctx</a> <span class="fn">i</span></span>)
-                            (<span class="fn"><span class="fn">locationLinksFromDecl</span> <span class="fn">i</span> <span class="fn"><span class="fn">ei</span>.elaborator</span></span>)</span>)</span>
-                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span>
-                  else <span class="fn">do
-                    let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                    <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>;
-                <span class="fn">if
-                    <span class="fn">(<span class="fn"><span class="fn"><span class="fn">kind</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.GoToKind.declaration">Lean.Server.FileWorker.GoToKind.declaration</a></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a>                         <span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.Environment.contains">Lean.Environment.contains</a> <span class="fn"><span class="fn">ci</span>.env</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getKind">Lean.Syntax.getKind</a> <span class="fn"><span class="fn">ei</span>.stx</span></span>)</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>                       <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-                  <span class="fn">do
-                  let a ←
-                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a>
-                        (<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.ContextInfo.runMetaM">Lean.Elab.ContextInfo.runMetaM</a> <span class="fn">ci</span> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.lctx">Lean.Elab.Info.lctx</a> <span class="fn">i</span></span>)
-                          (<span class="fn"><span class="fn">locationLinksFromDecl</span> <span class="fn">i</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getKind">Lean.Syntax.getKind</a> <span class="fn"><span class="fn">ei</span>.stx</span></span>)</span>)</span>)</span>
-                  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span>
-                else <span class="fn">do
-                  let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                  <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
-              | <span class="fn">x</span> => <span class="fn">do
-                let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>;
-            <span class="fn">match <span class="fn">i</span> with
-            |
-            <span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.Info.ofCommandInfo">Lean.Elab.Info.ofCommandInfo</a>
-                <span class="fn">{ toElabInfo := <span class="fn">{ elaborator := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a> <span class="fn">"import"</span> <span class="fn">x</span></span>, stx := <span class="fn">x_1</span> }</span> }</span></span> =>
-              <span class="fn">if
-                  <span class="fn">(<span class="fn"><span class="fn"><span class="fn">kind</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.GoToKind.definition">Lean.Server.FileWorker.GoToKind.definition</a></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a>                       <span class="fn"><span class="fn">kind</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.GoToKind.declaration">Lean.Server.FileWorker.GoToKind.declaration</a></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>                     <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-                <span class="fn">do
-                let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.ContextInfo.runMetaM">Lean.Elab.ContextInfo.runMetaM</a> <span class="fn">ci</span> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.lctx">Lean.Elab.Info.lctx</a> <span class="fn">i</span></span>) (<span class="fn"><span class="fn">locationLinksFromImport</span> <span class="fn">i</span></span>)</span>)</span>
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span>
-              else <span class="fn">do
-                let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span>
-            | <span class="fn">x</span> => <span class="fn">do
-              let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-              <span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.CommandInfo.mk">_do_jp</a> <span class="fn">y</span></span></span></span></span></span>;
-          <span class="fn">match <span class="fn">i</span> with
-          | <span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.Info.ofFieldInfo">Lean.Elab.Info.ofFieldInfo</a> <span class="fn">fi</span></span> =>
-            <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">kind</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.GoToKind.type">Lean.Server.FileWorker.GoToKind.type</a></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-              let expr ←
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a>
-                    (<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.ContextInfo.runMetaM">Lean.Elab.ContextInfo.runMetaM</a> <span class="fn">ci</span> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.lctx">Lean.Elab.Info.lctx</a> <span class="fn">i</span></span>) <span class="fn">do
-                      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn"><span class="fn">fi</span>.val</span></span>
-                      <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> <span class="fn">a</span></span></span></span>)</span>
-              <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.constName?">Lean.Expr.constName?</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.getAppFn">Lean.Expr.getAppFn</a> <span class="fn">expr</span></span>)</span> with
-                | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">n</span></span> => <span class="fn">do
-                  let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.ContextInfo.runMetaM">Lean.Elab.ContextInfo.runMetaM</a> <span class="fn">ci</span> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.lctx">Lean.Elab.Info.lctx</a> <span class="fn">i</span></span>) (<span class="fn"><span class="fn">locationLinksFromDecl</span> <span class="fn">i</span> <span class="fn">n</span></span>)</span>)</span>
-                  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span>
-                | <span class="fn">x</span> => <span class="fn">do
-                  let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                  <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
-            else <span class="fn">do
-              let a ←
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.ContextInfo.runMetaM">Lean.Elab.ContextInfo.runMetaM</a> <span class="fn">ci</span> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.lctx">Lean.Elab.Info.lctx</a> <span class="fn">i</span></span>) (<span class="fn"><span class="fn">locationLinksFromDecl</span> <span class="fn">i</span> <span class="fn"><span class="fn">fi</span>.projName</span></span>)</span>)</span>
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span></span>
-          | <span class="fn">x</span> => <span class="fn">do
-            let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span>;
-        <span class="fn">match <span class="fn">i</span> with
-        | <span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.Info.ofTermInfo">Lean.Elab.Info.ofTermInfo</a> <span class="fn">ti</span></span> =>
-          <span class="fn">let expr := <span class="fn"><span class="fn">ti</span>.expr</span>;
-          <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">expr</span> <span class="fn">y</span> =>
-            <span class="fn">match <span class="fn">expr</span> with
-            | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.const">Lean.Expr.const</a> <span class="fn">n</span> <span class="fn">x</span> <span class="fn">x_1</span></span> => <span class="fn">do
-              let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.ContextInfo.runMetaM">Lean.Elab.ContextInfo.runMetaM</a> <span class="fn">ci</span> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.lctx">Lean.Elab.Info.lctx</a> <span class="fn">i</span></span>) (<span class="fn"><span class="fn">locationLinksFromDecl</span> <span class="fn">i</span> <span class="fn">n</span></span>)</span>)</span>
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span>
-            | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.fvar">Lean.Expr.fvar</a> <span class="fn">id</span> <span class="fn">x</span></span> => <span class="fn">do
-              let a ←
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a>
-                    (<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.ContextInfo.runMetaM">Lean.Elab.ContextInfo.runMetaM</a> <span class="fn">ci</span> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.lctx">Lean.Elab.Info.lctx</a> <span class="fn">i</span></span>)
-                      (<span class="fn"><span class="fn">locationLinksFromBinder</span> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.infoTree">Lean.Server.Snapshots.Snapshot.infoTree</a> <span class="fn">snap</span></span>) <span class="fn">i</span> <span class="fn">id</span></span>)</span>)</span>
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span>
-            | <span class="fn">x</span> => <span class="fn">do
-              let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>
-              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>;
-          <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">kind</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.GoToKind.type">Lean.Server.FileWorker.GoToKind.type</a></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-            let r ←
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a>
-                  (<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.ContextInfo.runMetaM">Lean.Elab.ContextInfo.runMetaM</a> <span class="fn">ci</span> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.lctx">Lean.Elab.Info.lctx</a> <span class="fn">i</span></span>) <span class="fn">do
-                    let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">expr</span></span>
-                    let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> <span class="fn">a</span></span>
-                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.getAppFn">Lean.Expr.getAppFn</a> <span class="fn">a</span></span>)</span></span></span>)</span>
-            let expr : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> := <span class="fn">r</span>
-            let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">expr</span> <span class="fn">y</span></span></span>
-          else <span class="fn">do
-            let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">expr</span> <span class="fn">y</span></span></span></span></span></span>
-        | <span class="fn">x</span> => <span class="fn">do
-          let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
-      | <span class="fn">x</span> => <span class="fn">do
-        let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -506,7 +289,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <div class="decl" id="Lean.Server.FileWorker.getInteractiveGoals">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L160-L174">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L160-L174">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -520,44 +303,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.getInteractiveGoals">Lean.Server.FileWorker.getInteractiveGoals</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let doc ← <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.readDoc">Lean.Server.RequestM.readDoc</a>
-  let text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap</a> := <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span>
-  let hoverPos : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a> := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.lspPosToUtf8Pos">Lean.FileMap.lspPosToUtf8Pos</a> <span class="fn">text</span> <span class="fn"><span class="fn"><span class="fn">p</span>.toTextDocumentPositionParams</span>.position</span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.withWaitFindSnap">Lean.Server.RequestM.withWaitFindSnap</a> <span class="fn">doc</span> (<span class="fn">fun <span class="fn">s</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.endPos">Lean.Server.Snapshots.Snapshot.endPos</a> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#GE.ge">≥</a> <span class="fn">hoverPos</span></span>)</span></span>)
-      (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span>) <span class="fn">fun <span class="fn">snap</span> =>
-      <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.InfoTree.goalsAt?">Lean.Elab.InfoTree.goalsAt?</a> <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.infoTree">Lean.Server.Snapshots.Snapshot.infoTree</a> <span class="fn">snap</span></span>) <span class="fn">hoverPos</span></span> with
-      | <span class="fn"><span class="fn">rs</span>@h:(<span class="fn"><span class="fn">x</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">x_1</span></span>)</span> => <span class="fn">do
-        let goals ←
-          <span class="fn"><span class="fn">List.join</span> <a href="/Unicode.lean/Init/Prelude.html#Functor.map"><$></a>               <span class="fn"><a href="/Unicode.lean/Init/Data/List/Control.html#List.mapM">List.mapM</a>
-                (<span class="fn">fun <span class="fn">x</span> =>
-                  <span class="fn">match <span class="fn">x</span> with
-                  | <span class="fn">{ ctxInfo := <span class="fn">ci</span>, tacticInfo := <span class="fn">ti</span>, useAfter := <span class="fn">useAfter</span> }</span> =>
-                    <span class="fn">let ci :=
-                      <span class="fn">if <span class="fn"><span class="fn">useAfter</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-                        <span class="fn">{ env := <span class="fn"><span class="fn">ci</span>.env</span>, fileMap := <span class="fn"><span class="fn">ci</span>.fileMap</span>, mctx := <span class="fn"><span class="fn">ti</span>.mctxAfter</span>, options := <span class="fn"><span class="fn">ci</span>.options</span>,
-                          currNamespace := <span class="fn"><span class="fn">ci</span>.currNamespace</span>, openDecls := <span class="fn"><span class="fn">ci</span>.openDecls</span> }</span>
-                      else
-                        <span class="fn">{ env := <span class="fn"><span class="fn">ci</span>.env</span>, fileMap := <span class="fn"><span class="fn">ci</span>.fileMap</span>, mctx := <span class="fn"><span class="fn">ti</span>.mctxBefore</span>, options := <span class="fn"><span class="fn">ci</span>.options</span>,
-                          currNamespace := <span class="fn"><span class="fn">ci</span>.currNamespace</span>, openDecls := <span class="fn"><span class="fn">ci</span>.openDecls</span> }</span></span>;
-                    <span class="fn">let goals := <span class="fn">if <span class="fn"><span class="fn">useAfter</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><span class="fn">ti</span>.goalsAfter</span> else <span class="fn"><span class="fn">ti</span>.goalsBefore</span></span>;
-                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a>
-                      (<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.ContextInfo.runMetaM">Lean.Elab.ContextInfo.runMetaM</a> <span class="fn">ci</span>
-                        <span class="fn">{ fvarIdToDecl :=
-                            <span class="fn">{ root := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#Std.PersistentHashMap.Node.entries">Std.PersistentHashMap.Node.entries</a> <span class="fn">Std.PersistentHashMap.mkEmptyEntriesArray</span></span>,
-                              size := <span class="fn">0</span> }</span>,
-                          decls :=
-                            <span class="fn">{ root :=
-                                <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArrayNode.node">Std.PersistentArrayNode.node</a>
-                                  (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.mkEmpty">Array.mkEmpty</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.branching">Std.PersistentArray.branching</a></span>)</span>)</span>,
-                              tail := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.mkEmpty">Array.mkEmpty</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.branching">Std.PersistentArray.branching</a></span>)</span>, size := <span class="fn">0</span>,
-                              shift := <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.initShift">Std.PersistentArray.initShift</a>, tailOff := <span class="fn">0</span> }</span> }</span>
-                        (<span class="fn"><a href="/Unicode.lean/Init/Data/List/Control.html#List.mapM">List.mapM</a> (<span class="fn">fun <span class="fn">g</span> => <span class="fn"><a href="/Unicode.lean/Lean/Meta/PPGoal.html#Lean.Meta.withPPInaccessibleNames">Lean.Meta.withPPInaccessibleNames</a> (<span class="fn"><a href="/Unicode.lean/Lean/Widget/InteractiveGoal.html#Lean.Widget.goalToInteractive">Lean.Widget.goalToInteractive</a> <span class="fn">g</span></span>)</span></span>)
-                          <span class="fn">goals</span></span>)</span>)</span></span></span></span></span>)
-                <span class="fn">rs</span></span></span>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">{ goals := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List.toArray">List.toArray</a> <span class="fn">goals</span></span> }</span></span>)</span></span>
-      | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -565,7 +311,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <div class="decl" id="Lean.Server.FileWorker.handlePlainGoal">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L177-L189">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L177-L189">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -579,23 +325,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handlePlainGoal">Lean.Server.FileWorker.handlePlainGoal</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let t ← <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.getInteractiveGoals">Lean.Server.FileWorker.getInteractiveGoals</a> <span class="fn">p</span></span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a>
-      (<span class="fn"><a href="/Unicode.lean/Init/Core.html#Task.map">Task.map</a>
-        (<span class="fn"><a href="/Unicode.lean/Init/Control/Except.html#Except.map">Except.map</a>
-          (<span class="fn"><a href="/Unicode.lean/Init/Data/Option/Basic.html#Option.map">Option.map</a> <span class="fn">fun <span class="fn">x</span> =>
-            <span class="fn">match <span class="fn">x</span> with
-            | <span class="fn">{ goals := <span class="fn">goals</span> }</span> =>
-              <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.isEmpty">Array.isEmpty</a> <span class="fn">goals</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">{ rendered := <span class="fn">"no goals"</span>, goals := <span class="fn">#[]</span> }</span>
-              else
-                <span class="fn">let goalStrs := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a> (<span class="fn">fun <span class="fn">a</span> => <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> (<span class="fn"><a href="/Unicode.lean/Lean/Widget/InteractiveGoal.html#Lean.Widget.InteractiveGoal.pretty">Lean.Widget.InteractiveGoal.pretty</a> <span class="fn">a</span></span>)</span></span>) <span class="fn">goals</span></span>;
-                <span class="fn">let goalBlocks :=
-                  <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a> (<span class="fn">fun <span class="fn">goal</span> => <span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">"```lean\n"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">goal</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">"\n```"</span></span></span></span>) <span class="fn">goalStrs</span></span>;
-                <span class="fn">let md := <span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.intercalate">String.intercalate</a> <span class="fn">"\n---\n"</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.toList">Array.toList</a> <span class="fn">goalBlocks</span></span>)</span>;
-                <span class="fn">{ rendered := <span class="fn">md</span>, goals := <span class="fn">goalStrs</span> }</span></span></span></span></span></span></span></span>)</span>)
-        <span class="fn">t</span></span>)</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -603,7 +333,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <div class="decl" id="Lean.Server.FileWorker.getInteractiveTermGoal">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L191-L208">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L191-L208">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -617,33 +347,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.getInteractiveTermGoal">Lean.Server.FileWorker.getInteractiveTermGoal</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let doc ← <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.readDoc">Lean.Server.RequestM.readDoc</a>
-  let text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap</a> := <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span>
-  let hoverPos : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a> := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.lspPosToUtf8Pos">Lean.FileMap.lspPosToUtf8Pos</a> <span class="fn">text</span> <span class="fn"><span class="fn"><span class="fn">p</span>.toTextDocumentPositionParams</span>.position</span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.withWaitFindSnap">Lean.Server.RequestM.withWaitFindSnap</a> <span class="fn">doc</span> (<span class="fn">fun <span class="fn">s</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.endPos">Lean.Server.Snapshots.Snapshot.endPos</a> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">hoverPos</span></span>)</span></span>)
-      (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span>) <span class="fn">fun <span class="fn">snap</span> =>
-      <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.InfoTree.termGoalAt?">Lean.Elab.InfoTree.termGoalAt?</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.infoTree">Lean.Server.Snapshots.Snapshot.infoTree</a> <span class="fn">snap</span></span>) <span class="fn">hoverPos</span></span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">ci</span>, <span class="fn"><span class="fn">i</span>@h:(<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.Info.ofTermInfo">Lean.Elab.Info.ofTermInfo</a> <span class="fn">ti</span></span>)</span>)</span></span> => <span class="fn">do
-        let ty ←
-          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a>
-              (<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.ContextInfo.runMetaM">Lean.Elab.ContextInfo.runMetaM</a> <span class="fn">ci</span> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.lctx">Lean.Elab.Info.lctx</a> <span class="fn">i</span></span>) <span class="fn">do
-                let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn"><span class="fn">ti</span>.expr</span></span>
-                <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.getD">Option.getD</a> <span class="fn"><span class="fn">ti</span>.expectedType?</span> <span class="fn">a</span></span>)</span></span></span>)</span>
-        let lctx' : <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext">Lean.LocalContext</a> :=
-          <span class="fn">if <span class="fn"><span class="fn"><span class="fn">ti</span>.isBinder</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext.pop">Lean.LocalContext.pop</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.lctx">Lean.Elab.Info.lctx</a> <span class="fn">i</span></span>)</span> else <span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.lctx">Lean.Elab.Info.lctx</a> <span class="fn">i</span></span></span>
-        let goal ←
-          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a>
-              (<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.ContextInfo.runMetaM">Lean.Elab.ContextInfo.runMetaM</a> <span class="fn">ci</span> <span class="fn">lctx'</span> <span class="fn">do
-                let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkFreshExprMVar">Lean.Meta.mkFreshExprMVar</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">ty</span></span>) <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind.natural">Lean.MetavarKind.natural</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a></span>
-                <span class="fn"><a href="/Unicode.lean/Lean/Meta/PPGoal.html#Lean.Meta.withPPInaccessibleNames">Lean.Meta.withPPInaccessibleNames</a> (<span class="fn"><a href="/Unicode.lean/Lean/Widget/InteractiveGoal.html#Lean.Widget.goalToInteractive">Lean.Widget.goalToInteractive</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mvarId!">Lean.Expr.mvarId!</a> <span class="fn">a</span></span>)</span>)</span></span></span>)</span>
-        let range : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a> :=
-          <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.range?">Lean.Elab.Info.range?</a> <span class="fn">i</span></span> with
-          | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/Server/Utils.html#String.Range.toLspRange">String.Range.toLspRange</a> <span class="fn">text</span> <span class="fn">r</span></span>
-          | <span class="fn">x</span> => <span class="fn">{ start := <span class="fn"><span class="fn"><span class="fn">p</span>.toTextDocumentPositionParams</span>.position</span>, end := <span class="fn"><span class="fn"><span class="fn">p</span>.toTextDocumentPositionParams</span>.position</span> }</span></span>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">{ hyps := <span class="fn"><span class="fn">goal</span>.hyps</span>, type := <span class="fn"><span class="fn">goal</span>.type</span>, range := <span class="fn">range</span> }</span></span>)</span></span>
-      | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -651,7 +355,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <div class="decl" id="Lean.Server.FileWorker.handlePlainTermGoal">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L210-L216">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L210-L216">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -665,17 +369,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handlePlainTermGoal">Lean.Server.FileWorker.handlePlainTermGoal</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let t ← <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.getInteractiveTermGoal">Lean.Server.FileWorker.getInteractiveTermGoal</a> <span class="fn">p</span></span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a>
-      (<span class="fn"><a href="/Unicode.lean/Init/Core.html#Task.map">Task.map</a>
-        (<span class="fn"><a href="/Unicode.lean/Init/Control/Except.html#Except.map">Except.map</a>
-          (<span class="fn"><a href="/Unicode.lean/Init/Data/Option/Basic.html#Option.map">Option.map</a> <span class="fn">fun <span class="fn">goal</span> =>
-            <span class="fn">{ goal :=
-                <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> (<span class="fn"><a href="/Unicode.lean/Lean/Widget/InteractiveGoal.html#Lean.Widget.InteractiveGoal.pretty">Lean.Widget.InteractiveGoal.pretty</a> (<span class="fn"><a href="/Unicode.lean/Lean/Widget/InteractiveGoal.html#Lean.Widget.InteractiveTermGoal.toInteractiveGoal">Lean.Widget.InteractiveTermGoal.toInteractiveGoal</a> <span class="fn">goal</span></span>)</span>)</span>,
-              range := <span class="fn"><span class="fn">goal</span>.range</span> }</span></span></span>)</span>)
-        <span class="fn">t</span></span>)</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -683,7 +377,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <div class="decl" id="Lean.Server.FileWorker.handleDocumentHighlight">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L218-L253">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L218-L253">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -697,74 +391,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleDocumentHighlight">Lean.Server.FileWorker.handleDocumentHighlight</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let doc ← <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.readDoc">Lean.Server.RequestM.readDoc</a>
-  let text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap</a> := <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span>
-  let pos : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a> := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.lspPosToUtf8Pos">Lean.FileMap.lspPosToUtf8Pos</a> <span class="fn">text</span> <span class="fn"><span class="fn"><span class="fn">p</span>.toTextDocumentPositionParams</span>.position</span></span>
-  let highlightRefs? :
-    <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a></span> → <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.DocumentHighlight">Lean.Lsp.DocumentHighlight</a></span>)</span></span></span> :=
-    <span class="fn">fun <span class="fn">snaps</span> <span class="fn">pos</span> =>
-    <span class="fn"><a href="/Unicode.lean/Init/Control/Id.html#Id.run">Id.run</a>
-      (<span class="fn">let trees := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a> (<span class="fn">fun <span class="fn">a</span> => <span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.infoTree">Lean.Server.Snapshots.Snapshot.infoTree</a> <span class="fn">a</span></span></span>) <span class="fn">snaps</span></span>;
-      <span class="fn">let refs := <span class="fn"><a href="/Unicode.lean/Lean/Server/References.html#Lean.Server.findModuleRefs">Lean.Server.findModuleRefs</a> <span class="fn">text</span> <span class="fn">trees</span></span>;
-      <span class="fn">let ranges := <span class="fn">#[]</span>;
-      <span class="fn">do
-      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Server/References.html#Lean.Lsp.ModuleRefs.findAt">Lean.Lsp.ModuleRefs.findAt</a> <span class="fn">refs</span> <span class="fn"><span class="fn"><span class="fn">p</span>.toTextDocumentPositionParams</span>.position</span></span>
-      let r ←
-        <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">a</span> <span class="fn">ranges</span> <span class="fn">fun <span class="fn">ident</span> <span class="fn">r</span> =>
-            <span class="fn">let ranges := <span class="fn">r</span>;
-            <span class="fn">do
-            let a ← <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.find?">Std.HashMap.find?</a> <span class="fn">refs</span> <span class="fn">ident</span></span>
-            <span class="fn">match <span class="fn">a</span> with
-              | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">info</span></span> =>
-                <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">ranges</span> <span class="fn">y</span> =>
-                  <span class="fn">let ranges := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.append">Array.append</a> <span class="fn">ranges</span> <span class="fn"><span class="fn">info</span>.usages</span></span>;
-                  <span class="fn">do
-                  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">ranges</span></span>)</span></span></span></span>;
-                <span class="fn">match <span class="fn"><span class="fn">info</span>.definition</span> with
-                | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">definition</span></span> =>
-                  <span class="fn">let ranges := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">ranges</span> <span class="fn">definition</span></span>;
-                  <span class="fn">do
-                  let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                  <span class="fn"><span class="fn">_do_jp</span> <span class="fn">ranges</span> <span class="fn">y</span></span></span></span>
-                | <span class="fn">x</span> => <span class="fn">do
-                  let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                  <span class="fn"><span class="fn">_do_jp</span> <span class="fn">ranges</span> <span class="fn">y</span></span></span></span></span>
-              | <span class="fn">x</span> => <span class="fn">do
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">ranges</span></span>)</span></span></span></span></span></span></span>
-      let x : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></span> := <span class="fn">r</span>
-      let ranges : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Range">Lean.Lsp.Range</a></span> := <span class="fn">x</span>
-      let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Init/Control/Id.html#Id">Id</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.DocumentHighlight">Lean.Lsp.DocumentHighlight</a></span>)</span>)</span></span> := <span class="fn">fun <span class="fn">y</span> =>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a> (<span class="fn">fun <span class="fn">a</span> => <span class="fn">{ range := <span class="fn">a</span>, kind? := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.DocumentHighlightKind.text">Lean.Lsp.DocumentHighlightKind.text</a></span> }</span></span>) <span class="fn">ranges</span></span>)</span></span>
-      <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.isEmpty">Array.isEmpty</a> <span class="fn">ranges</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span>
-        else <span class="fn">do
-          let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span>)</span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.withWaitFindSnap">Lean.Server.RequestM.withWaitFindSnap</a> <span class="fn">doc</span> (<span class="fn">fun <span class="fn">s</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.endPos">Lean.Server.Snapshots.Snapshot.endPos</a> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">pos</span></span>)</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">#[]</span></span>)
-      <span class="fn">fun <span class="fn">snap</span> => <span class="fn">do
-      let discr ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/AsyncList.html#IO.AsyncList.updateFinishedPrefix">IO.AsyncList.updateFinishedPrefix</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/Utils.html#Lean.Server.FileWorker.EditableDocument.allSnaps">Lean.Server.FileWorker.EditableDocument.allSnaps</a> <span class="fn">doc</span></span>)</span>)</span>
-      let x :
-        <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/AsyncList.html#IO.AsyncList">IO.AsyncList</a> <a href="/Unicode.lean/Lean/Server/FileWorker/Utils.html#Lean.Server.FileWorker.ElabTaskError">Lean.Server.FileWorker.ElabTaskError</a> <a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a>           <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Server/FileWorker/Utils.html#Lean.Server.FileWorker.ElabTaskError">Lean.Server.FileWorker.ElabTaskError</a></span></span> :=
-        <span class="fn">discr</span>
-      <span class="fn">match <span class="fn">x</span> with
-        | <span class="fn">(<span class="fn">snaps</span>, <span class="fn">x</span>)</span> =>
-          <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> =>
-            <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">#[]</span></span></span>;
-            <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleDocumentHighlight.highlightReturn?">Lean.Server.FileWorker.handleDocumentHighlight.highlightReturn?</a> <span class="fn">text</span> <span class="fn">pos</span> <span class="fn">none</span> <span class="fn"><span class="fn">snap</span>.stx</span></span> with
-            | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">hi</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">#[<span class="fn">hi</span>]</span></span>
-            | <span class="fn">x</span> => <span class="fn">do
-              let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span>;
-          <span class="fn">match
-            <span class="fn"><span class="fn">highlightRefs?</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List.toArray">List.toArray</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/AsyncList.html#IO.AsyncList.finishedPrefix">IO.AsyncList.finishedPrefix</a> <span class="fn">snaps</span></span>)</span>)
-              <span class="fn"><span class="fn"><span class="fn">p</span>.toTextDocumentPositionParams</span>.position</span></span> with
-          | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">his</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">his</span></span>
-          | <span class="fn">x</span> => <span class="fn">do
-            let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -772,7 +399,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <div class="decl" id="Lean.Server.FileWorker.handleDocumentHighlight.highlightReturn?">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L224-L231">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L224-L231">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -792,7 +419,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <div class="decl" id="Lean.Server.FileWorker.handleDocumentSymbol">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L256-L314">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L256-L314">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -806,36 +433,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleDocumentSymbol">Lean.Server.FileWorker.handleDocumentSymbol</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let doc ← <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.readDoc">Lean.Server.RequestM.readDoc</a>
-  <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.asTask">Lean.Server.RequestM.asTask</a> <span class="fn">do
-      let discr ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/AsyncList.html#IO.AsyncList.updateFinishedPrefix">IO.AsyncList.updateFinishedPrefix</a> <span class="fn"><span class="fn">doc</span>.cmdSnaps</span></span>)</span>
-      let x :
-        <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/AsyncList.html#IO.AsyncList">IO.AsyncList</a> <a href="/Unicode.lean/Lean/Server/FileWorker/Utils.html#Lean.Server.FileWorker.ElabTaskError">Lean.Server.FileWorker.ElabTaskError</a> <a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a>           <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Server/FileWorker/Utils.html#Lean.Server.FileWorker.ElabTaskError">Lean.Server.FileWorker.ElabTaskError</a></span></span> :=
-        <span class="fn">discr</span>
-      <span class="fn">match <span class="fn">x</span> with
-        | <span class="fn">(<span class="fn">cmdSnaps</span>, <span class="fn">e?</span>)</span> =>
-          <span class="fn">let stxs := <span class="fn"><a href="/Unicode.lean/Init/Data/List/Basic.html#List.map">List.map</a> (<span class="fn">fun <span class="fn">a</span> => <span class="fn"><span class="fn">a</span>.stx</span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Server/AsyncList.html#IO.AsyncList.finishedPrefix">IO.AsyncList.finishedPrefix</a> <span class="fn">cmdSnaps</span></span>)</span>;
-          <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">stxs</span> <span class="fn">y</span> =>
-            <span class="fn">let lastSnap := <span class="fn"><a href="/Unicode.lean/Init/Data/List/BasicAux.html#List.getLastD">List.getLastD</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/AsyncList.html#IO.AsyncList.finishedPrefix">IO.AsyncList.finishedPrefix</a> <span class="fn">cmdSnaps</span></span>) <span class="fn"><span class="fn">doc</span>.headerSnap</span></span>;
-            <span class="fn">do
-            let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.parseAhead">Lean.Server.Snapshots.parseAhead</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Utils.html#Lean.Server.DocumentMeta.mkInputContext">Lean.Server.DocumentMeta.mkInputContext</a> <span class="fn"><span class="fn">doc</span>.meta</span></span>) <span class="fn">lastSnap</span></span>)</span>
-            let stxs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></span> := <span class="fn"><span class="fn">stxs</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.toList">Array.toList</a> <span class="fn">a</span></span></span>
-            let x : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.DocumentSymbol">Lean.Lsp.DocumentSymbol</a></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></span></span> :=
-              <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleDocumentSymbol.toDocumentSymbols">Lean.Server.FileWorker.handleDocumentSymbol.toDocumentSymbols</a> <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span> <span class="fn">stxs</span></span>
-            <span class="fn">match <span class="fn">x</span> with
-              | <span class="fn">(<span class="fn">syms</span>, <span class="fn">x</span>)</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Prod.mk">pure</a> <span class="fn">{ syms := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List.toArray">List.toArray</a> <span class="fn">syms</span></span> }</span></span></span></span></span></span>;
-          <span class="fn">match <span class="fn">e?</span> with
-          | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">Lean.Server.FileWorker.ElabTaskError.aborted</span></span> => <span class="fn">do
-            let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.throw">throw</a> <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestError.fileChanged">Lean.Server.RequestError.fileChanged</a></span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">stxs</span> <span class="fn">y</span></span></span>
-          | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/Utils.html#Lean.Server.FileWorker.ElabTaskError.ioError">Lean.Server.FileWorker.ElabTaskError.ioError</a> <span class="fn">e</span></span>)</span> => <span class="fn">do
-            let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.throw">throw</a> <span class="fn">{ code := <a href="/Unicode.lean/Lean/Data/JsonRpc.html#Lean.JsonRpc.ErrorCode.internalError">Lean.JsonRpc.ErrorCode.internalError</a>, message := <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">e</span></span> }</span></span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">stxs</span> <span class="fn">y</span></span></span>
-          | <span class="fn">x</span> => <span class="fn">do
-            let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">stxs</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -843,7 +441,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <div class="decl" id="Lean.Server.FileWorker.handleDocumentSymbol.toDocumentSymbols">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L274-L298">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L274-L298">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -859,7 +457,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <div class="decl" id="Lean.Server.FileWorker.handleDocumentSymbol.sectionLikeToDocumentSymbols">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L299-L314">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L299-L314">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -885,7 +483,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <div class="decl" id="Lean.Server.FileWorker.noHighlightKinds">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L316-L323">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L316-L323">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -907,7 +505,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <div class="decl" id="Lean.Server.FileWorker.SemanticTokensContext">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L325-L329">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L325-L329">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -931,7 +529,7 @@ snap : <a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.S
 <div class="decl" id="Lean.Server.FileWorker.SemanticTokensState">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L331-L333">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L331-L333">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -951,7 +549,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleSemanticTokens">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L335-L401">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L335-L401">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -967,30 +565,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleSemanticTokens">Lean.Server.FileWorker.handleSemanticTokens</a> <span class="fn">beginPos</span> <span class="fn">endPos</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let doc ← <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.readDoc">Lean.Server.RequestM.readDoc</a>
-  let text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap</a> := <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span>
-  let t ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/AsyncList.html#IO.AsyncList.waitAll">IO.AsyncList.waitAll</a> (<span class="fn">fun <span class="fn">a</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn"><span class="fn">a</span>.beginPos</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn">endPos</span></span>)</span></span>) <span class="fn"><span class="fn">doc</span>.cmdSnaps</span></span>)</span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.mapTask">Lean.Server.RequestM.mapTask</a> <span class="fn">t</span> <span class="fn">fun <span class="fn">x</span> =>
-      <span class="fn">match <span class="fn">x</span> with
-      | <span class="fn">(<span class="fn">snaps</span>, <span class="fn">x</span>)</span> =>
-        <span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT.run'">StateT.run'</a>
-          (<span class="fn">do
-            let r ←
-              <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">snaps</span> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> <span class="fn">fun <span class="fn">s</span> <span class="fn">r</span> =>
-                  <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn">do
-                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#ReaderT.run">ReaderT.run</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleSemanticTokens.go">Lean.Server.FileWorker.handleSemanticTokens.go</a> <span class="fn"><span class="fn">s</span>.stx</span></span>)
-                        <span class="fn">{ beginPos := <span class="fn">beginPos</span>, endPos := <span class="fn">endPos</span>, text := <span class="fn">text</span>, snap := <span class="fn">s</span> }</span></span>
-                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span></span></span>;
-                  <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.endPos">Lean.Server.Snapshots.Snapshot.endPos</a> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#LE.le">≤</a> <span class="fn">beginPos</span></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span>
-                  else <span class="fn">do
-                    let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                    <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span>
-            let x : <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> := <span class="fn">r</span>
-            let a ← <span class="fn">get</span>
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">{ data := <span class="fn"><span class="fn">a</span>.data</span> }</span></span></span>)
-          <span class="fn">{ data := <span class="fn">#[]</span>, lastLspPos := <span class="fn">{ line := <span class="fn">0</span>, character := <span class="fn">0</span> }</span> }</span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -998,7 +573,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleSemanticTokens.go">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L349-L361">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L349-L361">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1015,7 +590,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleSemanticTokens.highlightId">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L362-L380">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L362-L380">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1030,49 +605,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleSemanticTokens.highlightId">Lean.Server.FileWorker.handleSemanticTokens.highlightId</a> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Syntax.getRange?">Lean.Syntax.getRange?</a> <span class="fn">stx</span></span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">range</span></span> =>
-    <span class="fn">let lastPos := <span class="fn"><span class="fn">range</span>.start</span>;
-    <span class="fn">do
-    let a ← <span class="fn">read</span>
-    let r ←
-      <span class="fn">let col :=
-          <span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.InfoTree.deepestNodes">Lean.Elab.InfoTree.deepestNodes</a>
-            (<span class="fn">fun <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> =>
-              <span class="fn">match <span class="fn">x</span>, <span class="fn">x_1</span>, <span class="fn">x_2</span> with
-              | <span class="fn">x</span>, <span class="fn"><span class="fn">i</span>@h:(<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.Info.ofTermInfo">Lean.Elab.Info.ofTermInfo</a> <span class="fn">ti</span></span>)</span>, <span class="fn">x_3</span> =>
-                <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#Lean.Elab.Info.pos?">Lean.Elab.Info.pos?</a> <span class="fn">i</span></span> with
-                | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">ipos</span></span> => <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/InfoUtils.html#String.Range.contains">String.Range.contains</a> <span class="fn">range</span> <span class="fn">ipos</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">ti</span></span> else <span class="fn">none</span></span>
-                | <span class="fn">x</span> => <span class="fn">none</span></span>
-              | <span class="fn">x</span>, <span class="fn">x_3</span>, <span class="fn">x_4</span> => <span class="fn">none</span></span></span>)
-            (<span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.infoTree">Lean.Server.Snapshots.Snapshot.infoTree</a> <span class="fn"><span class="fn">a</span>.snap</span></span>)</span>;
-        <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">col</span> <span class="fn">lastPos</span> <span class="fn">fun <span class="fn">ti</span> <span class="fn">r</span> =>
-          <span class="fn">let lastPos := <span class="fn">r</span>;
-          <span class="fn">let pos := <span class="fn"><a href="/Unicode.lean/Init/Data/Option/BasicAux.html#Option.get!">Option.get!</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getPos?">Lean.Syntax.getPos?</a> <span class="fn"><span class="fn"><span class="fn">ti</span>.toElabInfo</span>.stx</span></span>)</span>;
-          <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">lastPos</span> <span class="fn">y</span> =>
-            <span class="fn">match <span class="fn"><span class="fn">ti</span>.expr</span> with
-            | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.fvar">Lean.Expr.fvar</a> <span class="fn">x</span> <span class="fn">x_1</span></span> => <span class="fn">do
-              <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleSemanticTokens.addToken">Lean.Server.FileWorker.handleSemanticTokens.addToken</a> <span class="fn"><span class="fn"><span class="fn">ti</span>.toElabInfo</span>.stx</span> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.SemanticTokenType.variable">Lean.Lsp.SemanticTokenType.variable</a></span>
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">lastPos</span></span>)</span></span>
-            | <span class="fn">x</span> =>
-              <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Option/BasicAux.html#Option.get!">Option.get!</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getPos?">Lean.Syntax.getPos?</a> <span class="fn"><span class="fn"><span class="fn">ti</span>.toElabInfo</span>.stx</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">lastPos</span></span> then <span class="fn">do
-                <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleSemanticTokens.addToken">Lean.Server.FileWorker.handleSemanticTokens.addToken</a> <span class="fn"><span class="fn"><span class="fn">ti</span>.toElabInfo</span>.stx</span>
-                    <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.SemanticTokenType.property">Lean.Lsp.SemanticTokenType.property</a></span>
-                let lastPos : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a> := <span class="fn"><a href="/Unicode.lean/Init/Data/Option/BasicAux.html#Option.get!">Option.get!</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getPos?">Lean.Syntax.getPos?</a> <span class="fn"><span class="fn"><span class="fn">ti</span>.toElabInfo</span>.stx</span></span>)</span>
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">lastPos</span></span>)</span></span>
-              else <span class="fn">do
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">lastPos</span></span>)</span></span></span></span></span>;
-          <span class="fn">if <span class="fn"><span class="fn">pos</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn">lastPos</span></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">lastPos</span></span>)</span>
-          else <span class="fn">do
-            let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">lastPos</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></span>
-    let x : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a> := <span class="fn">r</span>
-    let lastPos : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a> := <span class="fn">x</span>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span></span></span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">PUnit.unit</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1080,7 +613,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleSemanticTokens.highlightKeyword">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L381-L386">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L381-L386">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1095,14 +628,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleSemanticTokens.highlightKeyword">Lean.Server.FileWorker.handleSemanticTokens.highlightKeyword</a> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">stx</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">val</span></span> =>
-    <span class="fn">if
-        <span class="fn">(<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.length">String.length</a> <span class="fn">val</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Init/Data/Char/Basic.html#Char.isAlpha">Char.isAlpha</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.getOp">String.getOp</a> <span class="fn">val</span> <span class="fn">0</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a>             <span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.length">String.length</a> <span class="fn">val</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">1</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.getOp">String.getOp</a> <span class="fn">val</span> <span class="fn">0</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Char.ofNat">Char.ofNat</a> <span class="fn">35</span></span></span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a>               <span class="fn"><a href="/Unicode.lean/Init/Data/Char/Basic.html#Char.isAlpha">Char.isAlpha</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.getOp">String.getOp</a> <span class="fn">val</span> <span class="fn">1</span></span>)</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>           <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-      <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleSemanticTokens.addToken">Lean.Server.FileWorker.handleSemanticTokens.addToken</a> <span class="fn">stx</span> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.SemanticTokenType.keyword">Lean.Lsp.SemanticTokenType.keyword</a></span>
-    else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span></span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">PUnit.unit</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1110,7 +636,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleSemanticTokens.addToken">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L387-L401">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L387-L401">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1127,28 +653,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleSemanticTokens.addToken">Lean.Server.FileWorker.handleSemanticTokens.addToken</a> <span class="fn">stx</span> <span class="fn">type</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let discr ← <span class="fn">read</span>
-  let x : <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.SemanticTokensContext">Lean.Server.FileWorker.SemanticTokensContext</a> := <span class="fn">discr</span>
-  <span class="fn">match <span class="fn">x</span> with
-    | <span class="fn">{ beginPos := <span class="fn">beginPos</span>, endPos := <span class="fn">endPos</span>, text := <span class="fn">text</span>, snap := <span class="fn">x</span> }</span> =>
-      <span class="fn">match <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getPos?">Lean.Syntax.getPos?</a> <span class="fn">stx</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getTailPos?">Lean.Syntax.getTailPos?</a> <span class="fn">stx</span></span>)</span> with
-      | <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">pos</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">tailPos</span></span>)</span> =>
-        <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn">beginPos</span> <a href="/Unicode.lean/Init/Prelude.html#LE.le">≤</a> <span class="fn">pos</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn">pos</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn">endPos</span></span>)</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-          let a ← <span class="fn">get</span>
-          let lspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a> := <span class="fn"><span class="fn">a</span>.lastLspPos</span>
-          let lspPos' : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">Lean.Lsp.Position</a> := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.utf8PosToLspPos">Lean.FileMap.utf8PosToLspPos</a> <span class="fn">text</span> <span class="fn">pos</span></span>
-          let deltaLine : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> := <span class="fn"><span class="fn"><span class="fn">lspPos'</span>.line</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn"><span class="fn">lspPos</span>.line</span></span>
-          let deltaStart : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> :=
-            <span class="fn"><span class="fn"><span class="fn">lspPos'</span>.character</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><span class="fn">lspPos'</span>.line</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn"><span class="fn">lspPos</span>.line</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><span class="fn">lspPos</span>.character</span> else <span class="fn">0</span></span></span>
-          let length : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> := <span class="fn"><span class="fn">(<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.utf8PosToLspPos">Lean.FileMap.utf8PosToLspPos</a> <span class="fn">text</span> <span class="fn">tailPos</span></span>).character</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn"><span class="fn">lspPos'</span>.character</span></span>
-          let tokenType : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.SemanticTokenType.toNat">Lean.Lsp.SemanticTokenType.toNat</a> <span class="fn">type</span></span>
-          let tokenModifiers : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> := <span class="fn">0</span>
-          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">st</span> =>
-              <span class="fn">{ data := <span class="fn"><span class="fn"><span class="fn">st</span>.data</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">#[<span class="fn">deltaLine</span>, <span class="fn">deltaStart</span>, <span class="fn">length</span>, <span class="fn">tokenType</span>, <span class="fn">tokenModifiers</span>]</span></span>, lastLspPos := <span class="fn">lspPos'</span> }</span></span></span></span>
-        else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span></span>
-      | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">PUnit.unit</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1156,7 +661,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleSemanticTokensFull">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L403-L405">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L403-L405">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1171,7 +676,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleSemanticTokensFull">Lean.Server.FileWorker.handleSemanticTokensFull</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleSemanticTokens">Lean.Server.FileWorker.handleSemanticTokens</a> <span class="fn">0</span> (<span class="fn"><span class="fn">1</span> <a href="/Unicode.lean/Init/Prelude.html#HShiftLeft.hShiftLeft"><<<</a> <span class="fn">16</span></span>)</span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleSemanticTokensFull">Lean.Server.FileWorker.handleSemanticTokensFull</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleSemanticTokens">Lean.Server.FileWorker.handleSemanticTokens</a> <span class="fn">0</span> (<span class="fn"><span class="fn">1</span> <a href="/Unicode.lean/Init/Prelude.html#HShiftLeft.hShiftLeft">&lt&lt&lt</a> <span class="fn">16</span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -1179,7 +684,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleSemanticTokensRange">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L407-L413">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L407-L413">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1193,13 +698,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleSemanticTokensRange">Lean.Server.FileWorker.handleSemanticTokensRange</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let doc ← <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.readDoc">Lean.Server.RequestM.readDoc</a>
-  let text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap</a> := <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span>
-  let beginPos : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a> := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.lspPosToUtf8Pos">Lean.FileMap.lspPosToUtf8Pos</a> <span class="fn">text</span> <span class="fn"><span class="fn"><span class="fn">p</span>.range</span>.start</span></span>
-  let endPos : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a> := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.lspPosToUtf8Pos">Lean.FileMap.lspPosToUtf8Pos</a> <span class="fn">text</span> <span class="fn"><span class="fn"><span class="fn">p</span>.range</span>.end</span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleSemanticTokens">Lean.Server.FileWorker.handleSemanticTokens</a> <span class="fn">beginPos</span> <span class="fn">endPos</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1207,7 +706,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleFoldingRange">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L415-L479">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L415-L479">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1221,19 +720,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange">Lean.Server.FileWorker.handleFoldingRange</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let doc ← <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.readDoc">Lean.Server.RequestM.readDoc</a>
-  let t ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/AsyncList.html#IO.AsyncList.waitAll">IO.AsyncList.waitAll</a> (<span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/Utils.html#Lean.Server.FileWorker.EditableDocument.allSnaps">Lean.Server.FileWorker.EditableDocument.allSnaps</a> <span class="fn">doc</span></span>)</span>)</span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.mapTask">Lean.Server.RequestM.mapTask</a> <span class="fn">t</span> <span class="fn">fun <span class="fn">x</span> =>
-      <span class="fn">match <span class="fn">x</span> with
-      | <span class="fn">(<span class="fn">snaps</span>, <span class="fn">x</span>)</span> =>
-        <span class="fn">let stxs := <span class="fn"><a href="/Unicode.lean/Init/Data/List/Basic.html#List.map">List.map</a> (<span class="fn">fun <span class="fn">a</span> => <span class="fn"><span class="fn">a</span>.stx</span></span>) <span class="fn">snaps</span></span>;
-        <span class="fn">do
-        let discr ← <span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT.run">StateT.run</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRanges">Lean.Server.FileWorker.handleFoldingRange.addRanges</a> <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span> <span class="fn">[]</span> <span class="fn">stxs</span></span>) <span class="fn">#[]</span></span>
-        let x : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRange">Lean.Lsp.FoldingRange</a></span></span> := <span class="fn">discr</span>
-        <span class="fn">match <span class="fn">x</span> with
-          | <span class="fn">(<span class="fn">x</span>, <span class="fn">ranges</span>)</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Prod.mk">pure</a> <span class="fn">ranges</span></span></span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1241,7 +728,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleFoldingRange.isImport">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L424-L424">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L424-L424">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1264,7 +751,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleFoldingRange.addRanges">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L426-L449">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L426-L449">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1282,7 +769,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleFoldingRange.addCommandRange">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L451-L467">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L451-L467">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1298,39 +785,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addCommandRange">Lean.Server.FileWorker.handleFoldingRange.addCommandRange</a> <span class="fn">text</span> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getKind">Lean.Syntax.getKind</a> <span class="fn">stx</span></span> with
-  |
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a> <span class="fn">"Lean"</span> <span class="fn">x</span></span>) <span class="fn">"Parser"</span> <span class="fn">x_1</span></span>) <span class="fn">"Command"</span> <span class="fn">x_2</span></span>)
-      <span class="fn">"moduleDoc"</span> <span class="fn">x_3</span></span> =>
-    <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a> <span class="fn">text</span> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.comment">Lean.Lsp.FoldingRangeKind.comment</a> <span class="fn">stx</span></span>
-  |
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a> <span class="fn">"Lean"</span> <span class="fn">x</span></span>) <span class="fn">"Parser"</span> <span class="fn">x_1</span></span>) <span class="fn">"Command"</span> <span class="fn">x_2</span></span>)
-      <span class="fn">"declaration"</span> <span class="fn">x_3</span></span> =>
-    <span class="fn">let discr := <span class="fn">stx</span>;
-    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isOfKind">Lean.Syntax.isOfKind</a> <span class="fn">discr</span> <span class="fn">`Lean.Parser.Command.declaration</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-      <span class="fn">let discr_1 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">0</span></span>;
-      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#cond">cond</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isOfKind">Lean.Syntax.isOfKind</a> <span class="fn">discr_1</span> <span class="fn">`Lean.Parser.Command.declModifiers</span></span>)
-        (<span class="fn">let discr := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">1</span></span>;
-        <span class="fn">let decl := <span class="fn">discr</span>;
-        <span class="fn">let dm := <span class="fn">discr_1</span>;
-        <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> =>
-          <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a> <span class="fn">text</span> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.region">Lean.Lsp.FoldingRangeKind.region</a> <span class="fn">decl</span></span></span>;
-        <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.getOptional?">Lean.Syntax.getOptional?</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">dm</span> <span class="fn">0</span></span>)</span> with
-        | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">comment</span></span> => <span class="fn">do
-          let y ←
-            <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a> <span class="fn">text</span> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.comment">Lean.Lsp.FoldingRangeKind.comment</a> <span class="fn">comment</span></span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-        | <span class="fn">x</span> => <span class="fn">do
-          let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span>)
-        (<span class="fn">let discr_2 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">0</span></span>;
-        <span class="fn">let discr := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">1</span></span>;
-        <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a> <span class="fn">text</span> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.region">Lean.Lsp.FoldingRangeKind.region</a> <span class="fn">stx</span></span></span></span>)</span></span>
-    else
-      <span class="fn">let discr := <span class="fn">stx</span>;
-      <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a> <span class="fn">text</span> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.region">Lean.Lsp.FoldingRangeKind.region</a> <span class="fn">stx</span></span></span></span></span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a> <span class="fn">text</span> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.region">Lean.Lsp.FoldingRangeKind.region</a> <span class="fn">stx</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1338,7 +793,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L469-L469">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L469-L469">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1365,7 +820,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleFoldingRange.addRange">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L471-L479">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L471-L479">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1385,15 +840,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRange">Lean.Server.FileWorker.handleFoldingRange.addRange</a> <span class="fn">text</span> <span class="fn">kind</span> <span class="fn">start?</span> <span class="fn">stop?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">(<span class="fn">start?</span>, <span class="fn">stop?</span>)</span> with
-  | <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">startP</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">endP</span></span>)</span> =>
-    <span class="fn">let startP := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.utf8PosToLspPos">Lean.FileMap.utf8PosToLspPos</a> <span class="fn">text</span> <span class="fn">startP</span></span>;
-    <span class="fn">let endP := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.utf8PosToLspPos">Lean.FileMap.utf8PosToLspPos</a> <span class="fn">text</span> <span class="fn">endP</span></span>;
-    <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><span class="fn">startP</span>.line</span> <a href="/Unicode.lean/Init/Core.html#bne">!=</a> <span class="fn"><span class="fn">endP</span>.line</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">st</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">st</span> <span class="fn">{ startLine := <span class="fn"><span class="fn">startP</span>.line</span>, endLine := <span class="fn"><span class="fn">endP</span>.line</span>, kind? := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">kind</span></span> }</span></span></span></span>
-    else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span></span></span></span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">PUnit.unit</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1401,7 +848,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleWaitForDiagnostics">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L481-L494">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L481-L494">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1415,13 +862,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleWaitForDiagnostics">Lean.Server.FileWorker.handleWaitForDiagnostics</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let t ← <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.asTask">Lean.Server.RequestM.asTask</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleWaitForDiagnostics.waitLoop">Lean.Server.FileWorker.handleWaitForDiagnostics.waitLoop</a> <span class="fn">p</span></span>)</span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.bindTask">Lean.Server.RequestM.bindTask</a> <span class="fn">t</span> <span class="fn">fun <span class="fn">doc?</span> => <span class="fn">do
-      let doc ← <span class="fn"><a href="/Unicode.lean/Init/Control/Except.html#liftExcept">liftExcept</a> <span class="fn">doc?</span></span>
-      let t₁ ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/AsyncList.html#IO.AsyncList.waitAll">IO.AsyncList.waitAll</a> (<span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>) <span class="fn"><span class="fn">doc</span>.cmdSnaps</span></span>)</span>
-      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#Task.map">Task.map</a> (<span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Lean/Data/Lsp/Extra.html#Lean.Lsp.WaitForDiagnostics.mk">{  }</a>   </span></span>) <span class="fn">t₁</span></span>)</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1429,7 +870,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleWaitForDiagnostics.waitLoop">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L483-L489">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/FileWorker/RequestHandling.lean#L483-L489">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1451,10 +892,10 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <h3>Library</h3>
 <div class="module_list">
 <details class="nav_sect" data-path="/Unicode.lean/Init.html">
-<summary>Init</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
-<summary>Init.Control</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init.html">Init</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
+<summary><a href="/Unicode.lean/Init/Control.html">Init.Control</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Control/Basic.html">Init.Control.Basic</a>
 </div>
 <div class="nav_link">
@@ -1489,10 +930,10 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data.html">
-<summary>Init.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
-<summary>Init.Data.Array</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
+<summary><a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/Basic.html">Init.Data.Array.Basic</a>
 </div>
 <div class="nav_link">
@@ -1515,32 +956,32 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ByteArray.html">
-<summary>Init.Data.ByteArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ByteArray/Basic.html">Init.Data.ByteArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Char.html">
-<summary>Init.Data.Char</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Char/Basic.html">Init.Data.Char.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Fin.html">
-<summary>Init.Data.Fin</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Fin/Basic.html">Init.Data.Fin.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/FloatArray.html">
-<summary>Init.Data.FloatArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/FloatArray/Basic.html">Init.Data.FloatArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Format.html">
-<summary>Init.Data.Format</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Format/Basic.html">Init.Data.Format.Basic</a>
 </div>
 <div class="nav_link">
@@ -1554,14 +995,14 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Int.html">
-<summary>Init.Data.Int</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Int/Basic.html">Init.Data.Int.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/List.html">
-<summary>Init.Data.List</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/List/Basic.html">Init.Data.List.Basic</a>
 </div>
 <div class="nav_link">
@@ -1572,8 +1013,8 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Nat.html">
-<summary>Init.Data.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Basic.html">Init.Data.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -1596,8 +1037,8 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Option.html">
-<summary>Init.Data.Option</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Option/Basic.html">Init.Data.Option.Basic</a>
 </div>
 <div class="nav_link">
@@ -1608,8 +1049,8 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/String.html">
-<summary>Init.Data.String</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/String/Basic.html">Init.Data.String.Basic</a>
 </div>
 <div class="nav_link">
@@ -1617,8 +1058,8 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ToString.html">
-<summary>Init.Data.ToString</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
 </div>
 <div class="nav_link">
@@ -1626,46 +1067,16 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Float.html">Init.Data.Float</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Hashable.html">Init.Data.Hashable</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/OfScientific.html">Init.Data.OfScientific</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
@@ -1686,18 +1097,12 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Init/Data/Stream.html">Init.Data.Stream</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/UInt.html">Init.Data.UInt</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/System.html">
-<summary>Init.System</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/System.html">Init.System</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/System/FilePath.html">Init.System.FilePath</a>
 </div>
 <div class="nav_link">
@@ -1720,16 +1125,10 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Init/Coe.html">Init.Coe</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Control.html">Init.Control</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Conv.html">Init.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Core.html">Init.Core</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Fix.html">Init.Fix</a>
@@ -1759,9 +1158,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/System.html">Init.System</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Util.html">Init.Util</a>
 </div>
 <div class="nav_link">
@@ -1772,12 +1168,12 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean.html" open="">
-<summary>Lean</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
-<summary>Lean.Compiler</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
-<summary>Lean.Compiler.IR</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean.html">Lean</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
+<summary><a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
+<summary><a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html">Lean.Compiler.IR.Basic</a>
 </div>
 <div class="nav_link">
@@ -1863,9 +1259,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Compiler/FFI.html">Lean.Compiler.FFI</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/ImplementedByAttr.html">Lean.Compiler.ImplementedByAttr</a>
 </div>
 <div class="nav_link">
@@ -1891,10 +1284,10 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data.html">
-<summary>Lean.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
-<summary>Lean.Data.Json</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
+<summary><a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json/Basic.html">Lean.Data.Json.Basic</a>
 </div>
 <div class="nav_link">
@@ -1911,8 +1304,8 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Lsp.html">
-<summary>Lean.Data.Lsp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html">Lean.Data.Lsp.Basic</a>
 </div>
 <div class="nav_link">
@@ -1953,8 +1346,8 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Xml.html">
-<summary>Lean.Data.Xml</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Xml/Basic.html">Lean.Data.Xml.Basic</a>
 </div>
 <div class="nav_link">
@@ -1968,9 +1361,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
 </div>
 <div class="nav_link">
@@ -1981,9 +1371,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/LOption.html">Lean.Data.LOption</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Name.html">Lean.Data.Name</a>
@@ -2021,15 +1408,12 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Trie.html">Lean.Data.Trie</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab.html">
-<summary>Lean.Elab</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
-<summary>Lean.Elab.Deriving</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Deriving/BEq.html">Lean.Elab.Deriving.BEq</a>
 </div>
 <div class="nav_link">
@@ -2061,10 +1445,10 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition.html">
-<summary>Lean.Elab.PreDefinition</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
-<summary>Lean.Elab.PreDefinition.Structural</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/BRecOn.html">Lean.Elab.PreDefinition.Structural.BRecOn</a>
 </div>
 <div class="nav_link">
@@ -2090,8 +1474,8 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">
-<summary>Lean.Elab.PreDefinition.WF</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html">Lean.Elab.PreDefinition.WF.Eqns</a>
 </div>
 <div class="nav_link">
@@ -2125,16 +1509,10 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/MkInhabitant.html">Lean.Elab.PreDefinition.MkInhabitant</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Quotation.html">
-<summary>Lean.Elab.Quotation</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html">Lean.Elab.Quotation.Precheck</a>
 </div>
 <div class="nav_link">
@@ -2142,10 +1520,10 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic.html">
-<summary>Lean.Elab.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
-<summary>Lean.Elab.Tactic.Conv</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
 </div>
 <div class="nav_link">
@@ -2178,9 +1556,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Delta.html">Lean.Elab.Tactic.Delta</a>
@@ -2271,9 +1646,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Elab/DefView.html">Lean.Elab.DefView</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
 </div>
 <div class="nav_link">
@@ -2340,13 +1712,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Print.html">Lean.Elab.Print</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/RecAppSyntax.html">Lean.Elab.RecAppSyntax</a>
@@ -2367,9 +1733,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html">Lean.Elab.SyntheticMVars</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Term.html">Lean.Elab.Term</a>
 </div>
 <div class="nav_link">
@@ -2377,10 +1740,10 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta.html">
-<summary>Lean.Meta</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
-<summary>Lean.Meta.Match</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/Basic.html">Lean.Meta.Match.Basic</a>
 </div>
 <div class="nav_link">
@@ -2409,12 +1772,12 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
-<summary>Lean.Meta.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
-<summary>Lean.Meta.Tactic.LinearArith</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
-<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -2431,9 +1794,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
 </div>
 <div class="nav_link">
@@ -2441,8 +1801,8 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
-<summary>Lean.Meta.Tactic.Simp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html">Lean.Meta.Tactic.Simp.Main</a>
 </div>
 <div class="nav_link">
@@ -2513,9 +1873,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rename.html">Lean.Meta.Tactic.Rename</a>
 </div>
 <div class="nav_link">
@@ -2526,9 +1883,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rewrite.html">Lean.Meta.Tactic.Rewrite</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Split.html">Lean.Meta.Tactic.Split</a>
@@ -2640,9 +1994,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/MatchUtil.html">Lean.Meta.MatchUtil</a>
 </div>
 <div class="nav_link">
@@ -2670,9 +2021,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Transform.html">Lean.Meta.Transform</a>
 </div>
 <div class="nav_link">
@@ -2686,8 +2034,8 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Parser.html">
-<summary>Lean.Parser</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Parser/Attr.html">Lean.Parser.Attr</a>
 </div>
 <div class="nav_link">
@@ -2725,16 +2073,16 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/ParserCompiler.html">
-<summary>Lean.ParserCompiler</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html">Lean.ParserCompiler.Attribute</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter.html">
-<summary>Lean.PrettyPrinter</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
-<summary>Lean.PrettyPrinter.Delaborator</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html">Lean.PrettyPrinter.Delaborator.Basic</a>
 </div>
 <div class="nav_link">
@@ -2754,9 +2102,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Basic.html">Lean.PrettyPrinter.Basic</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Formatter.html">Lean.PrettyPrinter.Formatter</a>
 </div>
 <div class="nav_link">
@@ -2764,10 +2109,10 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server.html" open="">
-<summary>Lean.Server</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html" open="">
-<summary>Lean.Server.FileWorker</summary>
-<div class="nav_link" visible="">
+<summary><a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html" open="">
+<summary><a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
+</summary><div class="nav_link visible">
 <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html">Lean.Server.FileWorker.RequestHandling</a>
 </div>
 <div class="nav_link">
@@ -2778,8 +2123,8 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server/Rpc.html">
-<summary>Lean.Server.Rpc</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Rpc/Basic.html">Lean.Server.Rpc.Basic</a>
 </div>
 <div class="nav_link">
@@ -2799,9 +2144,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Server/FileSource.html">Lean.Server.FileSource</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
 </div>
 <div class="nav_link">
@@ -2809,9 +2151,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Requests.html">Lean.Server.Requests</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Snapshots.html">Lean.Server.Snapshots</a>
@@ -2824,8 +2163,8 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Util.html">
-<summary>Lean.Util</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/CollectFVars.html">Lean.Util.CollectFVars</a>
 </div>
 <div class="nav_link">
@@ -2893,8 +2232,8 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Widget.html">
-<summary>Lean.Widget</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html">Lean.Widget.InteractiveCode</a>
 </div>
 <div class="nav_link">
@@ -2917,13 +2256,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Class.html">Lean.Class</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/CoreM.html">Lean.CoreM</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Declaration.html">Lean.Declaration</a>
@@ -2933,9 +2266,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/DocString.html">Lean.DocString</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
@@ -2980,9 +2310,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Message.html">Lean.Message</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/MetavarContext.html">Lean.MetavarContext</a>
 </div>
 <div class="nav_link">
@@ -2990,15 +2317,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/MonadEnv.html">Lean.MonadEnv</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ProjFns.html">Lean.ProjFns</a>
@@ -3016,9 +2334,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/ScopedEnvExtension.html">Lean.ScopedEnvExtension</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Structure.html">Lean.Structure</a>
 </div>
 <div class="nav_link">
@@ -3026,12 +2341,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ToExpr.html">Lean.ToExpr</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
@@ -3077,10 +2386,10 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Unicode.html">
-<summary>Unicode</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
-<summary>Unicode.General</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Unicode.html">Unicode</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
+<summary><a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
 </div>
 <div class="nav_link">
@@ -3088,26 +2397,10 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Unicode/Includes.html">Unicode.Includes</a>
 </div>
 </details>
 </div>
 </nav>
-<script>
-siteRoot = "/Unicode.lean/";
-      </script>
-<script src="/Unicode.lean/nav.js">
-</script>
-<script src="/Unicode.lean/search.js">
-</script>
-<script src="/Unicode.lean/mathjax-config.js">
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </body>
 </html>

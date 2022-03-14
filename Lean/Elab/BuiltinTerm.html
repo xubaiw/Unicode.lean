@@ -1,7 +1,19 @@
 <html lang="en">
 <head>
-<link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><title>Lean.Elab.BuiltinTerm</title>
-<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta></head>
+<title>Lean.Elab.BuiltinTerm</title>
+<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><link rel="prefetch" href="/Unicode.lean/declaration-data.bmp"></link><script defer="true" src="/Unicode.lean/mathjax-config.js">
+</script>
+<script defer="true" src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script defer="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script type="module" src="/Unicode.lean/nav.js">
+</script>
+<script type="module" src="/Unicode.lean/search.js">
+</script>
+<script type="module" src="/Unicode.lean/how-about.js">
+</script>
+</head>
 <body>
 <input id="nav_toggle" type="checkbox"></input><header>
 <h1>
@@ -18,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Elab.BuiltinTerm</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -124,7 +136,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabProp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L12-L13">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L12-L13">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -133,19 +145,19 @@ Documentation</h1>
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElab">Lean.Elab.Term.TermElab</a></div></div>
-<details>
+<p>The universe of propositions. <code>Prop ≡ Sort 0</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabProp">Lean.Elab.Term.elabProp</a> <span class="fn">x</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkSort">Lean.mkSort</a> <a href="/Unicode.lean/Lean/Level.html#Lean.levelZero">Lean.levelZero</a></span>)</span></span></li>
 </ul>
 </details>
-<p>The universe of propositions. <code><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabProp">Prop</a>≡<a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabSort">Sort</a>0</code>.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Elab.Term.elabSort">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L22-L23">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L22-L23">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -154,7 +166,7 @@ Documentation</h1>
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElab">Lean.Elab.Term.TermElab</a></div></div>
-<details>
+<p>A specific universe in Lean's infinite hierarchy of universes.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -163,12 +175,12 @@ Documentation</h1>
   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkSort">Lean.mkSort</a> <span class="fn">a</span></span>)</span></span></span></li>
 </ul>
 </details>
-<p>A specific universe in Lean's infinite hierarchy of universes.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Elab.Term.elabTypeStx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L26-L27">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L26-L27">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -177,7 +189,7 @@ Documentation</h1>
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElab">Lean.Elab.Term.TermElab</a></div></div>
-<details>
+<p>A type universe. <code>Type ≡ Type 0</code>, <code>Type u ≡ Sort (u + 1)</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -186,12 +198,12 @@ Documentation</h1>
   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkSort">Lean.mkSort</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.mkLevelSucc">Lean.mkLevelSucc</a> <span class="fn">a</span></span>)</span>)</span></span></span></li>
 </ul>
 </details>
-<p>A type universe. <code><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabEnsureExpectedType">Type</a>≡<a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabEnsureExpectedType">Type</a>0</code>, <code><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabEnsureExpectedType">Type</a>u≡<a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabSort">Sort</a>(u+1)</code>.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Elab.Term.elabPipeCompletion">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L35-L39">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L35-L39">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -203,18 +215,7 @@ Documentation</h1>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabPipeCompletion">Lean.Elab.Term.elabPipeCompletion</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let e ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">0</span></span>) <span class="fn">none</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
-  let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span> := <span class="fn">fun <span class="fn">y</span> =>
-    <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwErrorAt">Lean.throwErrorAt</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">1</span></span>)
-      (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"invalid field notation, identifier or numeral expected"</span></span>)</span></span>
-  <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Util/Sorry.html#Lean.Expr.isSorry">Lean.Expr.isSorry</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-      let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-    else <span class="fn">do
-      let y ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.addDotCompletionInfo">Lean.Elab.Term.addDotCompletionInfo</a> <span class="fn">stx</span> <span class="fn">e</span> <span class="fn">expectedType?</span> <span class="fn">none</span></span>
-      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -222,7 +223,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabCompletion">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L41-L56">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L41-L56">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -234,21 +235,7 @@ Documentation</h1>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabCompletion">Lean.Elab.Term.elabCompletion</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isIdent">Lean.Syntax.isIdent</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">0</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-    let s ← <span class="fn">Lean.saveState</span>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.tryCatch">tryCatch</a>
-        (<span class="fn">do
-          let e ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">0</span></span>) <span class="fn">none</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
-          <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.addDotCompletionInfo">Lean.Elab.Term.addDotCompletionInfo</a> <span class="fn">stx</span> <span class="fn">e</span> <span class="fn">expectedType?</span> <span class="fn">none</span></span></span>)
-        <span class="fn">fun <span class="fn">x</span> => <span class="fn">do
-        <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.SavedState.restore">Lean.Elab.Term.SavedState.restore</a> <span class="fn">s</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>
-        let a ← <span class="fn">Lean.getLCtx</span>
-        <span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.addCompletionInfo">Lean.Elab.addCompletionInfo</a>
-            (<span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.CompletionInfo.id">Lean.Elab.CompletionInfo.id</a> <span class="fn">stx</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getId">Lean.Syntax.getId</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">0</span></span>)</span>) <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <span class="fn">a</span> <span class="fn">expectedType?</span></span>)</span></span></span></span>
-    <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwErrorAt">Lean.throwErrorAt</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">1</span></span>)
-        (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"invalid field notation, identifier or numeral expected"</span></span>)</span></span>
-  else <span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabPipeCompletion">Lean.Elab.Term.elabPipeCompletion</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -256,7 +243,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabHole">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L59-L62">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L59-L62">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -265,22 +252,18 @@ Documentation</h1>
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElab">Lean.Elab.Term.TermElab</a></div></div>
-<details>
+<p>A placeholder term, to be synthesized by unification.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabHole">Lean.Elab.Term.elabHole</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let mvar ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkFreshExprMVar">Lean.Meta.mkFreshExprMVar</a> <span class="fn">expectedType?</span> <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind.natural">Lean.MetavarKind.natural</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a></span>)</span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.registerMVarErrorHoleInfo">Lean.Elab.Term.registerMVarErrorHoleInfo</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mvarId!">Lean.Expr.mvarId!</a> <span class="fn">mvar</span></span>) <span class="fn">stx</span></span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">mvar</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>A placeholder term, to be synthesized by unification.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Elab.Term.elabSyntheticHole">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L64-L100">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L64-L100">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -292,52 +275,7 @@ Documentation</h1>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabSyntheticHole">Lean.Elab.Term.elabSyntheticHole</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let arg := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">1</span></span>;
-  <span class="fn">let userName := <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isIdent">Lean.Syntax.isIdent</a> <span class="fn">arg</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getId">Lean.Syntax.getId</a> <span class="fn">arg</span></span> else <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a></span>;
-  <span class="fn">let mkNewHole := <span class="fn">fun <span class="fn">x</span> => <span class="fn">do
-    let a ← <span class="fn">read</span>
-    let kind : <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind">Lean.MetavarKind</a> :=
-      <span class="fn">if <span class="fn"><span class="fn"><span class="fn">a</span>.inPattern</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind.natural">Lean.MetavarKind.natural</a> else <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind.syntheticOpaque">Lean.MetavarKind.syntheticOpaque</a></span>
-    let mvar ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkFreshExprMVar">Lean.Meta.mkFreshExprMVar</a> <span class="fn">expectedType?</span> <span class="fn">kind</span> <span class="fn">userName</span></span>)</span>
-    <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.registerMVarErrorHoleInfo">Lean.Elab.Term.registerMVarErrorHoleInfo</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mvarId!">Lean.Expr.mvarId!</a> <span class="fn">mvar</span></span>) <span class="fn">stx</span></span>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">mvar</span></span></span></span>;
-  <span class="fn">do
-  let a ← <span class="fn">read</span>
-  <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.isAnonymous">Lean.Name.isAnonymous</a> <span class="fn">userName</span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><span class="fn">a</span>.inPattern</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><span class="fn">mkNewHole</span> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>
-    else <span class="fn">do
-      let mctx ← <span class="fn">Lean.getMCtx</span>
-      <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.findUserName?">Lean.MetavarContext.findUserName?</a> <span class="fn">mctx</span> <span class="fn">userName</span></span> with
-        | <span class="fn">none</span> => <span class="fn"><span class="fn">mkNewHole</span> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>
-        | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">mvarId</span></span> =>
-          <span class="fn">let mvar := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkMVar">Lean.mkMVar</a> <span class="fn">mvarId</span></span>;
-          <span class="fn">do
-          let mvarDecl ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.getMVarDecl">Lean.Elab.Term.getMVarDecl</a> <span class="fn">mvarId</span></span>
-          let lctx ← <span class="fn">Lean.getLCtx</span>
-          <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext.isSubPrefixOf">Lean.LocalContext.isSubPrefixOf</a> <span class="fn"><span class="fn">mvarDecl</span>.lctx</span> <span class="fn">lctx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">mvar</span></span>
-            else
-              <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.getExprAssignment?">Lean.MetavarContext.getExprAssignment?</a> <span class="fn">mctx</span> <span class="fn">mvarId</span></span> with
-              | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">val</span></span> => <span class="fn">do
-                let val ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> <span class="fn">val</span></span>)</span>
-                <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.isWellFormed">Lean.MetavarContext.isWellFormed</a> <span class="fn">mctx</span> <span class="fn">lctx</span> <span class="fn">val</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">val</span></span>
-                  else
-                    <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLCtx">Lean.Meta.withLCtx</a> <span class="fn"><span class="fn">mvarDecl</span>.lctx</span> <span class="fn"><span class="fn">mvarDecl</span>.localInstances</span>
-                      (<span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a>
-                        (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a>
-                              <span class="fn">"synthetic hole has already been defined and assigned to value incompatible with the current context"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                             <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.indentExpr">Lean.indentExpr</a> <span class="fn">val</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                           <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>)</span></span></span>
-              | <span class="fn">none</span> =>
-                <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.isDelayedAssigned">Lean.MetavarContext.isDelayedAssigned</a> <span class="fn">mctx</span> <span class="fn">mvarId</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-                  <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a>
-                    (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a>
-                      <span class="fn">"synthetic hole has already beend defined and delayed assigned with an incompatible local context"</span></span>)</span>
-                else
-                  <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext.isSubPrefixOf">Lean.LocalContext.isSubPrefixOf</a> <span class="fn">lctx</span> <span class="fn"><span class="fn">mvarDecl</span>.lctx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-                    let mvarNew ← <span class="fn"><span class="fn">mkNewHole</span> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>
-                    <span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MonadMCtx.modifyMCtx">Lean.modifyMCtx</a> <span class="fn">fun <span class="fn">mctx</span> => <span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.assignExpr">Lean.MetavarContext.assignExpr</a> <span class="fn">mctx</span> <span class="fn">mvarId</span> <span class="fn">mvarNew</span></span></span></span>
-                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">mvarNew</span></span></span>
-                  else
-                    <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a>
-                      (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"synthetic hole has already been defined with an incompatible local context"</span></span>)</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -345,7 +283,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabLetMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L102-L113">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L102-L113">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -357,35 +295,7 @@ Documentation</h1>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabLetMVar">Lean.Elab.Term.elabLetMVar</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let discr := <span class="fn">stx</span>;
-  <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isOfKind">Lean.Syntax.isOfKind</a> <span class="fn">discr</span> <span class="fn">`Lean.Parser.Term.letMVar</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-    <span class="fn">let discr_1 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">0</span></span>;
-    <span class="fn">let discr_2 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">1</span></span>;
-    <span class="fn">let discr_3 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">2</span></span>;
-    <span class="fn">let discr_4 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">3</span></span>;
-    <span class="fn">let discr_5 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">4</span></span>;
-    <span class="fn">let discr_6 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">5</span></span>;
-    <span class="fn">let discr := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">6</span></span>;
-    <span class="fn">let b := <span class="fn">discr</span>;
-    <span class="fn">let e := <span class="fn">discr_5</span>;
-    <span class="fn">let n := <span class="fn">discr_3</span>;
-    <span class="fn">do
-    let a ← <span class="fn">Lean.getMCtx</span>
-    <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.findUserName?">Lean.MetavarContext.findUserName?</a> <span class="fn">a</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getId">Lean.Syntax.getId</a> <span class="fn">n</span></span>)</span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">x</span></span> =>
-        <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a>
-          (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"invalid 'let_mvar%', metavariable '?"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getId">Lean.Syntax.getId</a> <span class="fn">n</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>             <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"' has already been used"</span></span></span>)</span>
-      | <span class="fn">none</span> => <span class="fn">do
-        let <span class="fn">e</span> ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> <span class="fn">e</span> <span class="fn">none</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
-        let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">e</span></span>)</span>
-        let mvar ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkFreshExprMVar">Lean.Meta.mkFreshExprMVar</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span>) <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind.syntheticOpaque">Lean.MetavarKind.syntheticOpaque</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getId">Lean.Syntax.getId</a> <span class="fn">n</span></span>)</span>)</span>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.assignExprMVar">Lean.Meta.assignExprMVar</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mvarId!">Lean.Expr.mvarId!</a> <span class="fn">mvar</span></span>) <span class="fn">e</span></span>)</span>
-        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> <span class="fn">b</span> <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.mkSaveInfoAnnotation">Lean.Elab.Term.mkSaveInfoAnnotation</a> <span class="fn">a</span></span>)</span></span></span></span></span></span></span></span></span></span></span></span></span></span>
-  else
-    <span class="fn">let discr := <span class="fn">stx</span>;
-    <span class="fn">Lean.Elab.throwUnsupportedSyntax</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -393,7 +303,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabWaitIfTypeMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L121-L126">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L121-L126">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -405,24 +315,7 @@ Documentation</h1>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabWaitIfTypeMVar">Lean.Elab.Term.elabWaitIfTypeMVar</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let discr := <span class="fn">stx</span>;
-  <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isOfKind">Lean.Syntax.isOfKind</a> <span class="fn">discr</span> <span class="fn">`Lean.Parser.Term.waitIfTypeMVar</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-    <span class="fn">let discr_1 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">0</span></span>;
-    <span class="fn">let discr_2 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">1</span></span>;
-    <span class="fn">let discr_3 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">2</span></span>;
-    <span class="fn">let discr_4 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">3</span></span>;
-    <span class="fn">let discr := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">4</span></span>;
-    <span class="fn">let b := <span class="fn">discr</span>;
-    <span class="fn">let n := <span class="fn">discr_3</span>;
-    <span class="fn">do
-    let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#_private.Lean.Elab.BuiltinTerm.0.Lean.Elab.Term.getMVarFromUserName">Lean.Elab.Term.getMVarFromUserName</a> <span class="fn">n</span></span>)</span>
-    let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">a</span></span>)</span>
-    <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.tryPostponeIfMVar">Lean.Elab.Term.tryPostponeIfMVar</a> <span class="fn">a</span></span>
-    <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> <span class="fn">b</span> <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></span></span></span></span></span></span></span>
-  else
-    <span class="fn">let discr := <span class="fn">stx</span>;
-    <span class="fn">Lean.Elab.throwUnsupportedSyntax</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -430,7 +323,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabWaitIfTypeContainsMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L128-L134">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L128-L134">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -442,30 +335,7 @@ Documentation</h1>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabWaitIfTypeContainsMVar">Lean.Elab.Term.elabWaitIfTypeContainsMVar</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let discr := <span class="fn">stx</span>;
-  <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isOfKind">Lean.Syntax.isOfKind</a> <span class="fn">discr</span> <span class="fn">`Lean.Parser.Term.waitIfTypeContainsMVar</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-    <span class="fn">let discr_1 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">0</span></span>;
-    <span class="fn">let discr_2 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">1</span></span>;
-    <span class="fn">let discr_3 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">2</span></span>;
-    <span class="fn">let discr_4 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">3</span></span>;
-    <span class="fn">let discr := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">4</span></span>;
-    <span class="fn">let b := <span class="fn">discr</span>;
-    <span class="fn">let n := <span class="fn">discr_3</span>;
-    <span class="fn">do
-    let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#_private.Lean.Elab.BuiltinTerm.0.Lean.Elab.Term.getMVarFromUserName">Lean.Elab.Term.getMVarFromUserName</a> <span class="fn">n</span></span>)</span>
-    let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">a</span></span>)</span>
-    let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> <span class="fn">a</span></span>)</span>
-    let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> <span class="fn">b</span> <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span>
-    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.hasExprMVar">Lean.Expr.hasExprMVar</a> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-        let y ← <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.tryPostpone">Lean.Elab.Term.tryPostpone</a>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-      else <span class="fn">do
-        let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></span></span></span>
-  else
-    <span class="fn">let discr := <span class="fn">stx</span>;
-    <span class="fn">Lean.Elab.throwUnsupportedSyntax</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -473,7 +343,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabWaitIfContainsMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L136-L142">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L136-L142">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -485,28 +355,7 @@ Documentation</h1>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabWaitIfContainsMVar">Lean.Elab.Term.elabWaitIfContainsMVar</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let discr := <span class="fn">stx</span>;
-  <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isOfKind">Lean.Syntax.isOfKind</a> <span class="fn">discr</span> <span class="fn">`Lean.Parser.Term.waitIfContainsMVar</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-    <span class="fn">let discr_1 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">0</span></span>;
-    <span class="fn">let discr_2 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">1</span></span>;
-    <span class="fn">let discr_3 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">2</span></span>;
-    <span class="fn">let discr_4 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">3</span></span>;
-    <span class="fn">let discr := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">4</span></span>;
-    <span class="fn">let b := <span class="fn">discr</span>;
-    <span class="fn">let n := <span class="fn">discr_3</span>;
-    <span class="fn">do
-    let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#_private.Lean.Elab.BuiltinTerm.0.Lean.Elab.Term.getMVarFromUserName">Lean.Elab.Term.getMVarFromUserName</a> <span class="fn">n</span></span>)</span>
-    let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> <span class="fn">b</span> <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span>
-    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.hasExprMVar">Lean.Expr.hasExprMVar</a> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-        let y ← <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.tryPostpone">Lean.Elab.Term.tryPostpone</a>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-      else <span class="fn">do
-        let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></span></span></span>
-  else
-    <span class="fn">let discr := <span class="fn">stx</span>;
-    <span class="fn">Lean.Elab.throwUnsupportedSyntax</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -514,7 +363,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabByTactic">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L153-L156">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L153-L156">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -523,23 +372,18 @@ Documentation</h1>
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElab">Lean.Elab.Term.TermElab</a></div></div>
-<details>
+<p><code>by tac</code> constructs a term of the expected type by running the tactic(s) <code>tac</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabByTactic">Lean.Elab.Term.elabByTactic</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">expectedType?</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">expectedType</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#_private.Lean.Elab.BuiltinTerm.0.Lean.Elab.Term.mkTacticMVar">Lean.Elab.Term.mkTacticMVar</a> <span class="fn">expectedType</span> <span class="fn">stx</span></span>
-  | <span class="fn">none</span> =>
-    <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a>
-      (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"invalid 'by' tactic, expected type has not been provided"</span></span>)</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p><code>bytac</code> constructs a term of the expected type by running the tactic(s) <code>tac</code>.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Elab.Term.elabNoImplicitLambda">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L158-L159">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L158-L159">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -552,7 +396,7 @@ Documentation</h1>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabNoImplicitLambda">Lean.Elab.Term.elabNoImplicitLambda</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">1</span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.mkNoImplicitLambdaAnnotation">Lean.Elab.Term.mkNoImplicitLambdaAnnotation</a> <a href="/Unicode.lean/Init/Prelude.html#Functor.map"><$></a> <span class="fn">expectedType?</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabNoImplicitLambda">Lean.Elab.Term.elabNoImplicitLambda</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">1</span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.mkNoImplicitLambdaAnnotation">Lean.Elab.Term.mkNoImplicitLambdaAnnotation</a> <a href="/Unicode.lean/Init/Prelude.html#Functor.map">&lt$&gt</a> <span class="fn">expectedType?</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
     <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></li>
 </ul>
 </details>
@@ -561,7 +405,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabBadCDot">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L161-L162">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L161-L162">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -575,7 +419,7 @@ Documentation</h1>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabBadCDot">Lean.Elab.Term.elabBadCDot</a> <span class="fn">stx</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a>
-    (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"invalid occurrence of `·` notation, it must be surrounded by parentheses (e.g. `(· + 1)`)"</span></span>)</span></span></li>
+    (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">&quotinvalid occurrence of `·` notation, it must be surrounded by parentheses (e.g. `(· + 1)`)&quot</span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -583,7 +427,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabStrLit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L164-L167">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L164-L167">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -597,8 +441,8 @@ Documentation</h1>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabStrLit">Lean.Elab.Term.elabStrLit</a> <span class="fn">stx</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.isStrLit?">Lean.Syntax.isStrLit?</a> <span class="fn">stx</span></span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">val</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkStrLit">Lean.mkStrLit</a> <span class="fn">val</span></span>)</span>
-  | <span class="fn">none</span> => <span class="fn">Lean.Elab.throwIllFormedSyntax</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">val</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkStrLit">Lean.mkStrLit</a> <span class="fn">val</span></span>)</span>
+  | <span class="fn">none</span> =&gt <span class="fn">Lean.Elab.throwIllFormedSyntax</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -606,7 +450,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabNumLit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L176-L185">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L176-L185">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -618,21 +462,7 @@ Documentation</h1>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabNumLit">Lean.Elab.Term.elabNumLit</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">val</span> => <span class="fn">do
-    let typeMVar ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#_private.Lean.Elab.BuiltinTerm.0.Lean.Elab.Term.mkFreshTypeMVarFor">Lean.Elab.Term.mkFreshTypeMVarFor</a> <span class="fn">expectedType?</span></span>
-    let u ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/DecLevel.html#Lean.Meta.getDecLevel">Lean.Meta.getDecLevel</a> <span class="fn">typeMVar</span></span>)</span>
-    let mvar ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.mkInstMVar">Lean.Elab.Term.mkInstMVar</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp2">Lean.mkApp2</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`OfNat</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">typeMVar</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkRawNatLit">Lean.mkRawNatLit</a> <span class="fn">val</span></span>)</span>)</span>
-    let r : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp3">Lean.mkApp3</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`OfNat.ofNat</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">typeMVar</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkRawNatLit">Lean.mkRawNatLit</a> <span class="fn">val</span></span>) <span class="fn">mvar</span></span>
-    <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.registerMVarErrorImplicitArgInfo">Lean.Elab.Term.registerMVarErrorImplicitArgInfo</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mvarId!">Lean.Expr.mvarId!</a> <span class="fn">mvar</span></span>) <span class="fn">stx</span> <span class="fn">r</span></span>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">r</span></span></span></span>;
-  <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.isNatLit?">Lean.Syntax.isNatLit?</a> <span class="fn">stx</span></span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">val</span></span> => <span class="fn">do
-    let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">val</span></span>
-    <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-  | <span class="fn">none</span> => <span class="fn">do
-    let <span class="fn">y</span> ← <span class="fn">Lean.Elab.throwIllFormedSyntax</span>
-    <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -640,7 +470,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabRawNatLit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L187-L190">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L187-L190">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -652,10 +482,7 @@ Documentation</h1>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabRawNatLit">Lean.Elab.Term.elabRawNatLit</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.isNatLit?">Lean.Syntax.isNatLit?</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">1</span></span>)</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">val</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkRawNatLit">Lean.mkRawNatLit</a> <span class="fn">val</span></span>)</span>
-  | <span class="fn">none</span> => <span class="fn">Lean.Elab.throwIllFormedSyntax</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -663,7 +490,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabScientificLit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L193-L202">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L193-L202">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -675,18 +502,7 @@ Documentation</h1>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabScientificLit">Lean.Elab.Term.elabScientificLit</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.isScientificLit?">Lean.Syntax.isScientificLit?</a> <span class="fn">stx</span></span> with
-  | <span class="fn">none</span> => <span class="fn">Lean.Elab.throwIllFormedSyntax</span>
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">m</span>, <span class="fn">sign</span>, <span class="fn">e</span>)</span></span> => <span class="fn">do
-    let <span class="fn">typeMVar</span> ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#_private.Lean.Elab.BuiltinTerm.0.Lean.Elab.Term.mkFreshTypeMVarFor">Lean.Elab.Term.mkFreshTypeMVarFor</a> <span class="fn">expectedType?</span></span>
-    let <span class="fn">u</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/DecLevel.html#Lean.Meta.getDecLevel">Lean.Meta.getDecLevel</a> <span class="fn">typeMVar</span></span>)</span>
-    let mvar ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.mkInstMVar">Lean.Elab.Term.mkInstMVar</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp">Lean.mkApp</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`OfScientific</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">typeMVar</span></span>)</span>
-    let r : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> :=
-      <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp5">Lean.mkApp5</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`OfScientific.ofScientific</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <span class="fn">typeMVar</span> <span class="fn">mvar</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkRawNatLit">Lean.mkRawNatLit</a> <span class="fn">m</span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/ToExpr.html#Lean.ToExpr.toExpr">Lean.toExpr</a> <span class="fn">sign</span></span>)
-        (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkRawNatLit">Lean.mkRawNatLit</a> <span class="fn">e</span></span>)</span>
-    <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.registerMVarErrorImplicitArgInfo">Lean.Elab.Term.registerMVarErrorImplicitArgInfo</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mvarId!">Lean.Expr.mvarId!</a> <span class="fn">mvar</span></span>) <span class="fn">stx</span> <span class="fn">r</span></span>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">r</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -694,7 +510,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabCharLit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L204-L207">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L204-L207">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -706,10 +522,7 @@ Documentation</h1>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabCharLit">Lean.Elab.Term.elabCharLit</a> <span class="fn">stx</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.isCharLit?">Lean.Syntax.isCharLit?</a> <span class="fn">stx</span></span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">val</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp">Lean.mkApp</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`Char.ofNat</span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkRawNatLit">Lean.mkRawNatLit</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Char/Basic.html#Char.toNat">Char.toNat</a> <span class="fn">val</span></span>)</span>)</span>)</span>
-  | <span class="fn">none</span> => <span class="fn">Lean.Elab.throwIllFormedSyntax</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -717,7 +530,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabQuotedName">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L210-L213">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L210-L213">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -731,8 +544,8 @@ Documentation</h1>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabQuotedName">Lean.Elab.Term.elabQuotedName</a> <span class="fn">stx</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.isNameLit?">Lean.Syntax.isNameLit?</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">0</span></span>)</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">val</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/ToExpr.html#Lean.ToExpr.toExpr">Lean.toExpr</a> <span class="fn">val</span></span>)</span>
-  | <span class="fn">none</span> => <span class="fn">Lean.Elab.throwIllFormedSyntax</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">val</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/ToExpr.html#Lean.ToExpr.toExpr">Lean.toExpr</a> <span class="fn">val</span></span>)</span>
+  | <span class="fn">none</span> =&gt <span class="fn">Lean.Elab.throwIllFormedSyntax</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -740,7 +553,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.elabDoubleQuotedName">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L218-L219">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L218-L219">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -749,7 +562,8 @@ Documentation</h1>
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElab">Lean.Elab.Term.TermElab</a></div></div>
-<details>
+<p>A resolved name literal. Evaluates to the full name of the given constant if
+existent in the current context, or else fails.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -758,13 +572,12 @@ Documentation</h1>
   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/ToExpr.html#Lean.ToExpr.toExpr">Lean.toExpr</a> <span class="fn">a</span></span>)</span></span></span></li>
 </ul>
 </details>
-<p>A resolved name literal. Evaluates to the full name of the given constant if
-existent in the current context, or else fails.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Elab.Term.elabTypeOf">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L221-L222">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L221-L222">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -787,7 +600,7 @@ existent in the current context, or else fails.</p></div>
 <div class="decl" id="Lean.Elab.Term.elabEnsureTypeOf">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L224-L230">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L224-L230">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -799,13 +612,7 @@ existent in the current context, or else fails.</p></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabEnsureTypeOf">Lean.Elab.Term.elabEnsureTypeOf</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.isStrLit?">Lean.Syntax.isStrLit?</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">2</span></span>)</span> with
-  | <span class="fn">none</span> => <span class="fn">Lean.Elab.throwIllFormedSyntax</span>
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">msg</span></span> => <span class="fn">do
-    let <span class="fn">refTerm</span> ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">1</span></span>) <span class="fn">none</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
-    let refTermType ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">refTerm</span></span>)</span>
-    <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTermEnsuringType">Lean.Elab.Term.elabTermEnsuringType</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">3</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">refTermType</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">msg</span></span>)</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -813,7 +620,7 @@ existent in the current context, or else fails.</p></div>
 <div class="decl" id="Lean.Elab.Term.elabEnsureExpectedType">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L232-L235">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L232-L235">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -825,10 +632,7 @@ existent in the current context, or else fails.</p></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabEnsureExpectedType">Lean.Elab.Term.elabEnsureExpectedType</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.isStrLit?">Lean.Syntax.isStrLit?</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">1</span></span>)</span> with
-  | <span class="fn">none</span> => <span class="fn">Lean.Elab.throwIllFormedSyntax</span>
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">msg</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTermEnsuringType">Lean.Elab.Term.elabTermEnsuringType</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">2</span></span>) <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">msg</span></span>)</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -836,7 +640,7 @@ existent in the current context, or else fails.</p></div>
 <div class="decl" id="Lean.Elab.Term.elabOpen">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L238-L245">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L238-L245">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -845,29 +649,18 @@ existent in the current context, or else fails.</p></div>
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElab">Lean.Elab.Term.TermElab</a></div></div>
-<details>
+<p><code>open ... in e</code> makes the given namespaces available in the term <code>e</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabOpen">Lean.Elab.Term.elabOpen</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Control/Except.html#tryFinally">tryFinally</a>
-    (<span class="fn">do
-      <span class="fn">Lean.pushScope</span>
-      let openDecls ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Open.html#Lean.Elab.OpenDecl.elabOpenDecl">Lean.Elab.elabOpenDecl</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">1</span></span>)</span>
-      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#withTheReader">withTheReader</a> <a href="/Unicode.lean/Lean/CoreM.html#Lean.Core.Context">Lean.Core.Context</a>
-          (<span class="fn">fun <span class="fn">ctx</span> =>
-            <span class="fn">{ options := <span class="fn"><span class="fn">ctx</span>.options</span>, currRecDepth := <span class="fn"><span class="fn">ctx</span>.currRecDepth</span>, maxRecDepth := <span class="fn"><span class="fn">ctx</span>.maxRecDepth</span>, ref := <span class="fn"><span class="fn">ctx</span>.ref</span>,
-              currNamespace := <span class="fn"><span class="fn">ctx</span>.currNamespace</span>, openDecls := <span class="fn">openDecls</span>, initHeartbeats := <span class="fn"><span class="fn">ctx</span>.initHeartbeats</span>,
-              maxHeartbeats := <span class="fn"><span class="fn">ctx</span>.maxHeartbeats</span>, currMacroScope := <span class="fn"><span class="fn">ctx</span>.currMacroScope</span> }</span></span>)
-          (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">3</span></span>) <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span>)
-    <span class="fn">Lean.popScope</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p><code>open...in<a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabHole">e</a></code> makes the given namespaces available in the term <code><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabHole">e</a></code>.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Elab.Term.elabSetOption">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/BuiltinTerm.lean#L248-L251">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BuiltinTerm.lean#L248-L251">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -876,22 +669,13 @@ existent in the current context, or else fails.</p></div>
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElab">Lean.Elab.Term.TermElab</a></div></div>
-<details>
+<p><code>set_option opt val in e</code> sets the option <code>opt</code> to the value <code>val</code> in the term <code>e</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabSetOption">Lean.Elab.Term.elabSetOption</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let options ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/SetOption.html#Lean.Elab.elabSetOption">Lean.Elab.elabSetOption</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">1</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">2</span></span>)</span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#withTheReader">withTheReader</a> <a href="/Unicode.lean/Lean/CoreM.html#Lean.Core.Context">Lean.Core.Context</a>
-      (<span class="fn">fun <span class="fn">ctx</span> =>
-        <span class="fn">{ options := <span class="fn">options</span>, currRecDepth := <span class="fn"><span class="fn">ctx</span>.currRecDepth</span>, maxRecDepth := <span class="fn"><a href="/Unicode.lean/Lean/Data/Options.html#Lean.Option.get">Lean.Option.get</a> <span class="fn">options</span> <a href="/Unicode.lean/Lean/Util/RecDepth.html#Lean.maxRecDepth">Lean.maxRecDepth</a></span>,
-          ref := <span class="fn"><span class="fn">ctx</span>.ref</span>, currNamespace := <span class="fn"><span class="fn">ctx</span>.currNamespace</span>, openDecls := <span class="fn"><span class="fn">ctx</span>.openDecls</span>,
-          initHeartbeats := <span class="fn"><span class="fn">ctx</span>.initHeartbeats</span>, maxHeartbeats := <span class="fn"><span class="fn">ctx</span>.maxHeartbeats</span>,
-          currMacroScope := <span class="fn"><span class="fn">ctx</span>.currMacroScope</span> }</span></span>)
-      (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">4</span></span>) <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p><code>set_optionoptvalin<a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabHole">e</a></code> sets the option <code>opt</code> to the value <code>val</code> in the term <code><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabHole">e</a></code>.</p></div>
+</div>
 </div>
 </main>
 <nav class="nav">
@@ -902,10 +686,10 @@ existent in the current context, or else fails.</p></div>
 <h3>Library</h3>
 <div class="module_list">
 <details class="nav_sect" data-path="/Unicode.lean/Init.html">
-<summary>Init</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
-<summary>Init.Control</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init.html">Init</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
+<summary><a href="/Unicode.lean/Init/Control.html">Init.Control</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Control/Basic.html">Init.Control.Basic</a>
 </div>
 <div class="nav_link">
@@ -940,10 +724,10 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data.html">
-<summary>Init.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
-<summary>Init.Data.Array</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
+<summary><a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/Basic.html">Init.Data.Array.Basic</a>
 </div>
 <div class="nav_link">
@@ -966,32 +750,32 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ByteArray.html">
-<summary>Init.Data.ByteArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ByteArray/Basic.html">Init.Data.ByteArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Char.html">
-<summary>Init.Data.Char</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Char/Basic.html">Init.Data.Char.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Fin.html">
-<summary>Init.Data.Fin</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Fin/Basic.html">Init.Data.Fin.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/FloatArray.html">
-<summary>Init.Data.FloatArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/FloatArray/Basic.html">Init.Data.FloatArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Format.html">
-<summary>Init.Data.Format</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Format/Basic.html">Init.Data.Format.Basic</a>
 </div>
 <div class="nav_link">
@@ -1005,14 +789,14 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Int.html">
-<summary>Init.Data.Int</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Int/Basic.html">Init.Data.Int.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/List.html">
-<summary>Init.Data.List</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/List/Basic.html">Init.Data.List.Basic</a>
 </div>
 <div class="nav_link">
@@ -1023,8 +807,8 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Nat.html">
-<summary>Init.Data.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Basic.html">Init.Data.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -1047,8 +831,8 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Option.html">
-<summary>Init.Data.Option</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Option/Basic.html">Init.Data.Option.Basic</a>
 </div>
 <div class="nav_link">
@@ -1059,8 +843,8 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/String.html">
-<summary>Init.Data.String</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/String/Basic.html">Init.Data.String.Basic</a>
 </div>
 <div class="nav_link">
@@ -1068,8 +852,8 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ToString.html">
-<summary>Init.Data.ToString</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
 </div>
 <div class="nav_link">
@@ -1077,46 +861,16 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Float.html">Init.Data.Float</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Hashable.html">Init.Data.Hashable</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/OfScientific.html">Init.Data.OfScientific</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
@@ -1137,18 +891,12 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Init/Data/Stream.html">Init.Data.Stream</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/UInt.html">Init.Data.UInt</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/System.html">
-<summary>Init.System</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/System.html">Init.System</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/System/FilePath.html">Init.System.FilePath</a>
 </div>
 <div class="nav_link">
@@ -1171,16 +919,10 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Init/Coe.html">Init.Coe</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Control.html">Init.Control</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Conv.html">Init.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Core.html">Init.Core</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Fix.html">Init.Fix</a>
@@ -1210,9 +952,6 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/System.html">Init.System</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Util.html">Init.Util</a>
 </div>
 <div class="nav_link">
@@ -1223,12 +962,12 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean.html" open="">
-<summary>Lean</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
-<summary>Lean.Compiler</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
-<summary>Lean.Compiler.IR</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean.html">Lean</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
+<summary><a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
+<summary><a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html">Lean.Compiler.IR.Basic</a>
 </div>
 <div class="nav_link">
@@ -1314,9 +1053,6 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/Compiler/FFI.html">Lean.Compiler.FFI</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/ImplementedByAttr.html">Lean.Compiler.ImplementedByAttr</a>
 </div>
 <div class="nav_link">
@@ -1342,10 +1078,10 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data.html">
-<summary>Lean.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
-<summary>Lean.Data.Json</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
+<summary><a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json/Basic.html">Lean.Data.Json.Basic</a>
 </div>
 <div class="nav_link">
@@ -1362,8 +1098,8 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Lsp.html">
-<summary>Lean.Data.Lsp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html">Lean.Data.Lsp.Basic</a>
 </div>
 <div class="nav_link">
@@ -1404,8 +1140,8 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Xml.html">
-<summary>Lean.Data.Xml</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Xml/Basic.html">Lean.Data.Xml.Basic</a>
 </div>
 <div class="nav_link">
@@ -1419,9 +1155,6 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
 </div>
 <div class="nav_link">
@@ -1432,9 +1165,6 @@ existent in the current context, or else fails.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/LOption.html">Lean.Data.LOption</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Name.html">Lean.Data.Name</a>
@@ -1472,15 +1202,12 @@ existent in the current context, or else fails.</p></div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Trie.html">Lean.Data.Trie</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab.html" open="">
-<summary>Lean.Elab</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
-<summary>Lean.Elab.Deriving</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Deriving/BEq.html">Lean.Elab.Deriving.BEq</a>
 </div>
 <div class="nav_link">
@@ -1512,10 +1239,10 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition.html">
-<summary>Lean.Elab.PreDefinition</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
-<summary>Lean.Elab.PreDefinition.Structural</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/BRecOn.html">Lean.Elab.PreDefinition.Structural.BRecOn</a>
 </div>
 <div class="nav_link">
@@ -1541,8 +1268,8 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">
-<summary>Lean.Elab.PreDefinition.WF</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html">Lean.Elab.PreDefinition.WF.Eqns</a>
 </div>
 <div class="nav_link">
@@ -1576,16 +1303,10 @@ existent in the current context, or else fails.</p></div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/MkInhabitant.html">Lean.Elab.PreDefinition.MkInhabitant</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Quotation.html">
-<summary>Lean.Elab.Quotation</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html">Lean.Elab.Quotation.Precheck</a>
 </div>
 <div class="nav_link">
@@ -1593,10 +1314,10 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic.html">
-<summary>Lean.Elab.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
-<summary>Lean.Elab.Tactic.Conv</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
 </div>
 <div class="nav_link">
@@ -1629,9 +1350,6 @@ existent in the current context, or else fails.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Delta.html">Lean.Elab.Tactic.Delta</a>
@@ -1697,7 +1415,7 @@ existent in the current context, or else fails.</p></div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/BuiltinNotation.html">Lean.Elab.BuiltinNotation</a>
 </div>
-<div class="nav_link" visible="">
+<div class="nav_link visible">
 <a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html">Lean.Elab.BuiltinTerm</a>
 </div>
 <div class="nav_link">
@@ -1720,9 +1438,6 @@ existent in the current context, or else fails.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/DefView.html">Lean.Elab.DefView</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
@@ -1791,13 +1506,7 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Print.html">Lean.Elab.Print</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/RecAppSyntax.html">Lean.Elab.RecAppSyntax</a>
@@ -1818,9 +1527,6 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html">Lean.Elab.SyntheticMVars</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Term.html">Lean.Elab.Term</a>
 </div>
 <div class="nav_link">
@@ -1828,10 +1534,10 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta.html">
-<summary>Lean.Meta</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
-<summary>Lean.Meta.Match</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/Basic.html">Lean.Meta.Match.Basic</a>
 </div>
 <div class="nav_link">
@@ -1860,12 +1566,12 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
-<summary>Lean.Meta.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
-<summary>Lean.Meta.Tactic.LinearArith</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
-<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -1882,9 +1588,6 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
 </div>
 <div class="nav_link">
@@ -1892,8 +1595,8 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
-<summary>Lean.Meta.Tactic.Simp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html">Lean.Meta.Tactic.Simp.Main</a>
 </div>
 <div class="nav_link">
@@ -1964,9 +1667,6 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rename.html">Lean.Meta.Tactic.Rename</a>
 </div>
 <div class="nav_link">
@@ -1977,9 +1677,6 @@ existent in the current context, or else fails.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rewrite.html">Lean.Meta.Tactic.Rewrite</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Split.html">Lean.Meta.Tactic.Split</a>
@@ -2091,9 +1788,6 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/MatchUtil.html">Lean.Meta.MatchUtil</a>
 </div>
 <div class="nav_link">
@@ -2121,9 +1815,6 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Transform.html">Lean.Meta.Transform</a>
 </div>
 <div class="nav_link">
@@ -2137,8 +1828,8 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Parser.html">
-<summary>Lean.Parser</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Parser/Attr.html">Lean.Parser.Attr</a>
 </div>
 <div class="nav_link">
@@ -2176,16 +1867,16 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/ParserCompiler.html">
-<summary>Lean.ParserCompiler</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html">Lean.ParserCompiler.Attribute</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter.html">
-<summary>Lean.PrettyPrinter</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
-<summary>Lean.PrettyPrinter.Delaborator</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html">Lean.PrettyPrinter.Delaborator.Basic</a>
 </div>
 <div class="nav_link">
@@ -2205,9 +1896,6 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/PrettyPrinter/Basic.html">Lean.PrettyPrinter.Basic</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Formatter.html">Lean.PrettyPrinter.Formatter</a>
 </div>
 <div class="nav_link">
@@ -2215,10 +1903,10 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server.html">
-<summary>Lean.Server</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
-<summary>Lean.Server.FileWorker</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
+<summary><a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html">Lean.Server.FileWorker.RequestHandling</a>
 </div>
 <div class="nav_link">
@@ -2229,8 +1917,8 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server/Rpc.html">
-<summary>Lean.Server.Rpc</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Rpc/Basic.html">Lean.Server.Rpc.Basic</a>
 </div>
 <div class="nav_link">
@@ -2250,9 +1938,6 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/Server/FileSource.html">Lean.Server.FileSource</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
 </div>
 <div class="nav_link">
@@ -2260,9 +1945,6 @@ existent in the current context, or else fails.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Requests.html">Lean.Server.Requests</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Snapshots.html">Lean.Server.Snapshots</a>
@@ -2275,8 +1957,8 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Util.html">
-<summary>Lean.Util</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/CollectFVars.html">Lean.Util.CollectFVars</a>
 </div>
 <div class="nav_link">
@@ -2344,8 +2026,8 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Widget.html">
-<summary>Lean.Widget</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html">Lean.Widget.InteractiveCode</a>
 </div>
 <div class="nav_link">
@@ -2368,13 +2050,7 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/Class.html">Lean.Class</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/CoreM.html">Lean.CoreM</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Declaration.html">Lean.Declaration</a>
@@ -2384,9 +2060,6 @@ existent in the current context, or else fails.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/DocString.html">Lean.DocString</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
@@ -2431,9 +2104,6 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/Message.html">Lean.Message</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/MetavarContext.html">Lean.MetavarContext</a>
 </div>
 <div class="nav_link">
@@ -2441,15 +2111,6 @@ existent in the current context, or else fails.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/MonadEnv.html">Lean.MonadEnv</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ProjFns.html">Lean.ProjFns</a>
@@ -2467,9 +2128,6 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/ScopedEnvExtension.html">Lean.ScopedEnvExtension</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Structure.html">Lean.Structure</a>
 </div>
 <div class="nav_link">
@@ -2477,12 +2135,6 @@ existent in the current context, or else fails.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ToExpr.html">Lean.ToExpr</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
@@ -2528,10 +2180,10 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Unicode.html">
-<summary>Unicode</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
-<summary>Unicode.General</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Unicode.html">Unicode</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
+<summary><a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
 </div>
 <div class="nav_link">
@@ -2539,26 +2191,10 @@ existent in the current context, or else fails.</p></div>
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Unicode/Includes.html">Unicode.Includes</a>
 </div>
 </details>
 </div>
 </nav>
-<script>
-siteRoot = "/Unicode.lean/";
-      </script>
-<script src="/Unicode.lean/nav.js">
-</script>
-<script src="/Unicode.lean/search.js">
-</script>
-<script src="/Unicode.lean/mathjax-config.js">
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </body>
 </html>

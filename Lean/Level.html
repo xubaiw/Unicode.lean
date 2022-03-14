@@ -1,7 +1,19 @@
 <html lang="en">
 <head>
-<link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><title>Lean.Level</title>
-<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta></head>
+<title>Lean.Level</title>
+<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><link rel="prefetch" href="/Unicode.lean/declaration-data.bmp"></link><script defer="true" src="/Unicode.lean/mathjax-config.js">
+</script>
+<script defer="true" src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script defer="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script type="module" src="/Unicode.lean/nav.js">
+</script>
+<script type="module" src="/Unicode.lean/search.js">
+</script>
+<script type="module" src="/Unicode.lean/how-about.js">
+</script>
+</head>
 <body>
 <input id="nav_toggle" type="checkbox"></input><header>
 <h1>
@@ -18,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Level</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -382,7 +394,7 @@ Documentation</h1>
 <div class="decl" id="Nat.imax">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L14-L15">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L14-L15">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -407,32 +419,32 @@ Documentation</h1>
 <div class="decl" id="Lean.Level.Data">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L25-L25">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L25-L25">source</a>
 </div>
 <div class="decl_header">
-<span class="decl_kind">noncomputable def</span>
+<span class="decl_kind">def</span>
 <span class="decl_name">
 <a class="break_within" href="/Unicode.lean/Lean/Level.html#Lean.Level.Data">Lean.Level.Data</a>
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn">Type</span></div></div>
-<details>
+<p>Cached hash code, cached results, and other data for <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">Level</a></code>.
+hash      : 32-bits
+hasMVar   : 1-bit
+hasParam  : 1-bit
+depth     : 24-bits</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.Data">Lean.Level.Data</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#UInt64">UInt64</a></span></li>
 </ul>
 </details>
-<p>Cached hash code, cached results, and other data for <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">Level</a></code>.
-hash      : 32-bits
-hasMVar   : 1-bit
-hasParam  : 1-bit
-depth     : 24-bits</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.instInhabitedData">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L27-L28">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L27-L28">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -453,7 +465,7 @@ depth     : 24-bits</p></div>
 <div class="decl" id="Lean.Level.Data.hash">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L30-L31">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L30-L31">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -476,7 +488,7 @@ depth     : 24-bits</p></div>
 <div class="decl" id="Lean.instBEqData">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L33-L34">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L33-L34">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -489,7 +501,7 @@ depth     : 24-bits</p></div>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.instBEqData">Lean.instBEqData</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <span class="fn">fun <span class="fn">a</span> <span class="fn">b</span> => <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">b</span></span></span> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.instBEqData">Lean.instBEqData</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <span class="fn">fun <span class="fn">a</span> <span class="fn">b</span> =&gt <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">b</span></span></span> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -497,7 +509,7 @@ depth     : 24-bits</p></div>
 <div class="decl" id="Lean.Level.Data.depth">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L36-L37">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L36-L37">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -520,7 +532,7 @@ depth     : 24-bits</p></div>
 <div class="decl" id="Lean.Level.Data.hasMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L39-L40">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L39-L40">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -543,7 +555,7 @@ depth     : 24-bits</p></div>
 <div class="decl" id="Lean.Level.Data.hasParam">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L42-L43">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L42-L43">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -566,7 +578,7 @@ depth     : 24-bits</p></div>
 <div class="decl" id="Lean.Level.mkData">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L45-L49">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L45-L49">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -586,13 +598,7 @@ depth     : 24-bits</p></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.mkData">Lean.Level.mkData</a> <span class="fn">h</span> <span class="fn">depth</span> <span class="fn">hasMVar</span> <span class="fn">hasParam</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn">depth</span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat.pow">Nat.pow</a> <span class="fn">2</span> <span class="fn">24</span></span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">1</span></span></span> then
-    <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Level"</span> <span class="fn">"Lean.Level.mkData"</span> <span class="fn">46</span> <span class="fn">35</span> <span class="fn">"universe level depth is too big"</span></span>
-  else
-    <span class="fn">let r :=
-      <span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#UInt32.toUInt64">UInt32.toUInt64</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#UInt64.toUInt32">UInt64.toUInt32</a> <span class="fn">h</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#UInt64.shiftLeft">UInt64.shiftLeft</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#Bool.toUInt64">Bool.toUInt64</a> <span class="fn">hasMVar</span></span>) <span class="fn">32</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a>           <span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#UInt64.shiftLeft">UInt64.shiftLeft</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#Bool.toUInt64">Bool.toUInt64</a> <span class="fn">hasParam</span></span>) <span class="fn">33</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a>         <span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#UInt64.shiftLeft">UInt64.shiftLeft</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#Nat.toUInt64">Nat.toUInt64</a> <span class="fn">depth</span></span>) <span class="fn">40</span></span></span>;
-    <span class="fn">r</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -600,7 +606,7 @@ depth     : 24-bits</p></div>
 <div class="decl" id="Lean.instReprData">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L51-L60">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L51-L60">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -612,37 +618,7 @@ depth     : 24-bits</p></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.instReprData">Lean.instReprData</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ reprPrec := <span class="fn">fun <span class="fn">v</span> <span class="fn">prec</span> =>
-      <span class="fn"><a href="/Unicode.lean/Init/Control/Id.html#Id.run">Id.run</a>
-        (<span class="fn">let r := <span class="fn"><span class="fn">"Level.mkData "</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.Data.hash">Lean.Level.Data.hash</a> <span class="fn">v</span></span>)</span></span>;
-        <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">r</span> <span class="fn">y</span> =>
-          <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">r</span> <span class="fn">y</span> =>
-            <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">r</span> <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Data/Repr.html#Repr.addAppParen">Repr.addAppParen</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.Format.text">Std.Format.text</a> <span class="fn">r</span></span>) <span class="fn">prec</span></span></span>;
-            <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.Data.hasParam">Lean.Level.Data.hasParam</a> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-              <span class="fn">let r := <span class="fn"><span class="fn"><span class="fn"><span class="fn">r</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">" (hasParam := "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.Data.hasParam">Lean.Level.Data.hasParam</a> <span class="fn">v</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">")"</span></span>;
-              <span class="fn">do
-              let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">r</span> <span class="fn">y</span></span></span></span>
-            else <span class="fn">do
-              let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">r</span> <span class="fn">y</span></span></span></span></span></span>;
-          <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.Data.hasMVar">Lean.Level.Data.hasMVar</a> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-            <span class="fn">let r := <span class="fn"><span class="fn"><span class="fn"><span class="fn">r</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">" (hasMVar := "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.Data.hasMVar">Lean.Level.Data.hasMVar</a> <span class="fn">v</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">")"</span></span>;
-            <span class="fn">do
-            let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">r</span> <span class="fn">y</span></span></span></span>
-          else <span class="fn">do
-            let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">r</span> <span class="fn">y</span></span></span></span></span></span>;
-        <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.Data.depth">Lean.Level.Data.depth</a> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Core.html#bne">!=</a> <span class="fn">0</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-          <span class="fn">let r := <span class="fn"><span class="fn"><span class="fn"><span class="fn">r</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">" (depth := "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.Data.depth">Lean.Level.Data.depth</a> <span class="fn">v</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">")"</span></span>;
-          <span class="fn">do
-          let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">r</span> <span class="fn">y</span></span></span></span>
-        else <span class="fn">do
-          let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">r</span> <span class="fn">y</span></span></span></span></span></span>)</span></span> }</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -650,7 +626,7 @@ depth     : 24-bits</p></div>
 <div class="decl" id="Lean.MVarId">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L64-L66">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L64-L66">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -668,7 +644,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <div class="decl" id="Lean.instInhabitedMVarId">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L66-L66">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L66-L66">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -689,7 +665,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <div class="decl" id="Lean.instBEqMVarId">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L66-L66">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L66-L66">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -710,7 +686,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <div class="decl" id="Lean.instHashableMVarId">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L66-L66">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L66-L66">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -731,7 +707,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <div class="decl" id="Lean.instReprMVarId">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L66-L66">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L66-L66">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -752,7 +728,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <div class="decl" id="Lean.instReprMVarId_1">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L68-L69">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L68-L69">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -765,7 +741,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.instReprMVarId_1">Lean.instReprMVarId_1</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <span class="fn">fun <span class="fn">n</span> <span class="fn">p</span> => <span class="fn"><a href="/Unicode.lean/Init/Data/Repr.html#Repr.reprPrec">reprPrec</a> <span class="fn"><span class="fn">n</span>.name</span> <span class="fn">p</span></span></span> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.instReprMVarId_1">Lean.instReprMVarId_1</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <span class="fn">fun <span class="fn">n</span> <span class="fn">p</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Data/Repr.html#Repr.reprPrec">reprPrec</a> <span class="fn"><span class="fn">n</span>.name</span> <span class="fn">p</span></span></span> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -773,10 +749,10 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <div class="decl" id="Lean.MVarIdSet">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L71-L72">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L71-L72">source</a>
 </div>
 <div class="decl_header">
-<span class="decl_kind">noncomputable def</span>
+<span class="decl_kind">def</span>
 <span class="decl_name">
 <a class="break_within" href="/Unicode.lean/Lean/Level.html#Lean.MVarIdSet">Lean.MVarIdSet</a>
 </span>
@@ -786,7 +762,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarIdSet">Lean.MVarIdSet</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Std/Data/RBTree.html#Std.RBTree">Std.RBTree</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> <span class="fn">fun <span class="fn">a</span> <span class="fn">a_1</span> => <span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.quickCmp">Lean.Name.quickCmp</a> <span class="fn"><span class="fn">a</span>.name</span> <span class="fn"><span class="fn">a_1</span>.name</span></span></span></span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarIdSet">Lean.MVarIdSet</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Std/Data/RBTree.html#Std.RBTree">Std.RBTree</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> <span class="fn">fun <span class="fn">a</span> <span class="fn">a_1</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.quickCmp">Lean.Name.quickCmp</a> <span class="fn"><span class="fn">a</span>.name</span> <span class="fn"><span class="fn">a_1</span>.name</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -794,7 +770,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <div class="decl" id="Lean.instForInMVarIdSetMVarId">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L74-L74">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L74-L74">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -811,7 +787,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn">Lean.instForInMVarIdSetMVarId</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#inferInstanceAs">inferInstanceAs</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn">ForIn</a> <span class="fn">m</span> (<span class="fn"><a href="/Unicode.lean/Std/Data/RBTree.html#Std.RBTree">Std.RBTree</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> <span class="fn">fun <span class="fn">a</span> <span class="fn">a_1</span> => <span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.quickCmp">Lean.Name.quickCmp</a> <span class="fn"><span class="fn">a</span>.name</span> <span class="fn"><span class="fn">a_1</span>.name</span></span></span></span>) <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span>)</span></span></li>
+<span class="fn"><span class="fn">Lean.instForInMVarIdSetMVarId</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#inferInstanceAs">inferInstanceAs</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn">ForIn</a> <span class="fn">m</span> (<span class="fn"><a href="/Unicode.lean/Std/Data/RBTree.html#Std.RBTree">Std.RBTree</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> <span class="fn">fun <span class="fn">a</span> <span class="fn">a_1</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.quickCmp">Lean.Name.quickCmp</a> <span class="fn"><span class="fn">a</span>.name</span> <span class="fn"><span class="fn">a_1</span>.name</span></span></span></span>) <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -819,10 +795,10 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <div class="decl" id="Lean.MVarIdMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L76-L76">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L76-L76">source</a>
 </div>
 <div class="decl_header">
-<span class="decl_kind">noncomputable def</span>
+<span class="decl_kind">def</span>
 <span class="decl_name">
 <a class="break_within" href="/Unicode.lean/Lean/Level.html#Lean.MVarIdMap">Lean.MVarIdMap</a>
 </span>
@@ -834,7 +810,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarIdMap">Lean.MVarIdMap</a> <span class="fn">α</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Std/Data/RBMap.html#Std.RBMap">Std.RBMap</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> <span class="fn">α</span> <span class="fn">fun <span class="fn">a</span> <span class="fn">a_1</span> => <span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.quickCmp">Lean.Name.quickCmp</a> <span class="fn"><span class="fn">a</span>.name</span> <span class="fn"><span class="fn">a_1</span>.name</span></span></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarIdMap">Lean.MVarIdMap</a> <span class="fn">α</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Std/Data/RBMap.html#Std.RBMap">Std.RBMap</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> <span class="fn">α</span> <span class="fn">fun <span class="fn">a</span> <span class="fn">a_1</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.quickCmp">Lean.Name.quickCmp</a> <span class="fn"><span class="fn">a</span>.name</span> <span class="fn"><span class="fn">a_1</span>.name</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -842,7 +818,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <div class="decl" id="Lean.instEmptyCollectionMVarIdMap">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L78-L78">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L78-L78">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -859,7 +835,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn">Lean.instEmptyCollectionMVarIdMap</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#inferInstanceAs">inferInstanceAs</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection">EmptyCollection</a> (<span class="fn"><a href="/Unicode.lean/Std/Data/RBMap.html#Std.RBMap">Std.RBMap</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> <span class="fn">α</span> <span class="fn">fun <span class="fn">a</span> <span class="fn">a_1</span> => <span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.quickCmp">Lean.Name.quickCmp</a> <span class="fn"><span class="fn">a</span>.name</span> <span class="fn"><span class="fn">a_1</span>.name</span></span></span></span>)</span>)</span></span></li>
+<span class="fn"><span class="fn">Lean.instEmptyCollectionMVarIdMap</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#inferInstanceAs">inferInstanceAs</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection">EmptyCollection</a> (<span class="fn"><a href="/Unicode.lean/Std/Data/RBMap.html#Std.RBMap">Std.RBMap</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> <span class="fn">α</span> <span class="fn">fun <span class="fn">a</span> <span class="fn">a_1</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.quickCmp">Lean.Name.quickCmp</a> <span class="fn"><span class="fn">a</span>.name</span> <span class="fn"><span class="fn">a_1</span>.name</span></span></span></span>)</span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -867,7 +843,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <div class="decl" id="Lean.instForInMVarIdMapProdMVarId">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L80-L80">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L80-L80">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -888,7 +864,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn">Lean.instForInMVarIdMapProdMVarId</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#inferInstanceAs">inferInstanceAs</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn">ForIn</a> <span class="fn">m</span> (<span class="fn"><a href="/Unicode.lean/Std/Data/RBMap.html#Std.RBMap">Std.RBMap</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> <span class="fn">α</span> <span class="fn">fun <span class="fn">a</span> <span class="fn">a_1</span> => <span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.quickCmp">Lean.Name.quickCmp</a> <span class="fn"><span class="fn">a</span>.name</span> <span class="fn"><span class="fn">a_1</span>.name</span></span></span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn">α</span></span>)</span>)</span></span></li>
+<span class="fn"><span class="fn">Lean.instForInMVarIdMapProdMVarId</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#inferInstanceAs">inferInstanceAs</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn">ForIn</a> <span class="fn">m</span> (<span class="fn"><a href="/Unicode.lean/Std/Data/RBMap.html#Std.RBMap">Std.RBMap</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> <span class="fn">α</span> <span class="fn">fun <span class="fn">a</span> <span class="fn">a_1</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.quickCmp">Lean.Name.quickCmp</a> <span class="fn"><span class="fn">a</span>.name</span> <span class="fn"><span class="fn">a_1</span>.name</span></span></span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn">α</span></span>)</span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -896,7 +872,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <div class="decl" id="Lean.instInhabitedMVarIdMap">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L82-L83">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L82-L83">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -921,7 +897,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <div class="decl" id="Lean.Level">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L85-L92">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L85-L92">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -949,7 +925,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.instInhabitedLevel">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L92-L92">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L92-L92">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -970,7 +946,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.instReprLevel">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L92-L92">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L92-L92">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -991,7 +967,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.data">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L96-L102">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L96-L102">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1004,14 +980,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.data">Lean.Level.data</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.zero">Lean.Level.zero</a> <span class="fn">d</span></span> => <span class="fn">d</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.mvar</a> <span class="fn">x</span> <span class="fn">d</span></span> => <span class="fn">d</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.param</a> <span class="fn">x</span> <span class="fn">d</span></span> => <span class="fn">d</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.succ</a> <span class="fn">x</span> <span class="fn">d</span></span> => <span class="fn">d</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.max</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">d</span></span> => <span class="fn">d</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">d</span></span> => <span class="fn">d</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1019,7 +988,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.hash">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L104-L105">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L104-L105">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1042,7 +1011,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.instHashableLevel">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L107-L107">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L107-L107">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1063,7 +1032,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.depth">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L109-L110">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L109-L110">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1086,7 +1055,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.hasMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L112-L113">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L112-L113">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1109,7 +1078,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.hasParam">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L115-L116">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L115-L116">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1132,7 +1101,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.hashEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L118-L118">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L118-L118">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1155,7 +1124,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.hasMVarEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L119-L119">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L119-L119">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1176,7 +1145,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.hasParamEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L120-L120">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L120-L120">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1197,7 +1166,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.depthEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L121-L121">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L121-L121">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1220,7 +1189,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.levelZero">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L125-L126">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L125-L126">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1241,7 +1210,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.mkLevelMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L128-L129">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L128-L129">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1264,7 +1233,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.mkLevelParam">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L131-L132">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L131-L132">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1287,7 +1256,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.mkLevelSucc">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L134-L135">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L134-L135">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1311,7 +1280,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.mkLevelMax">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L137-L140">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L137-L140">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1327,11 +1296,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.mkLevelMax">Lean.mkLevelMax</a> <span class="fn">u</span> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.max">Lean.Level.max</a> <span class="fn">u</span> <span class="fn">v</span>
-    (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.mkData">Lean.Level.mkData</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#mixHash">mixHash</a> <span class="fn">2251</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#mixHash">mixHash</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">u</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">v</span></span>)</span>)</span>)
-      (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Nat/Basic.html#Nat.max">Nat.max</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.depth">Lean.Level.depth</a> <span class="fn">u</span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.depth">Lean.Level.depth</a> <span class="fn">v</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) (<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.hasMVar">Lean.Level.hasMVar</a> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.hasMVar">Lean.Level.hasMVar</a> <span class="fn">v</span></span></span>)
-      (<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.hasParam">Lean.Level.hasParam</a> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.hasParam">Lean.Level.hasParam</a> <span class="fn">v</span></span></span>)</span>)</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1339,7 +1304,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.mkLevelIMax">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L142-L145">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L142-L145">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1355,11 +1320,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.mkLevelIMax">Lean.mkLevelIMax</a> <span class="fn">u</span> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">u</span> <span class="fn">v</span>
-    (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.mkData">Lean.Level.mkData</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#mixHash">mixHash</a> <span class="fn">2267</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#mixHash">mixHash</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">u</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">v</span></span>)</span>)</span>)
-      (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Nat/Basic.html#Nat.max">Nat.max</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.depth">Lean.Level.depth</a> <span class="fn">u</span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.depth">Lean.Level.depth</a> <span class="fn">v</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) (<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.hasMVar">Lean.Level.hasMVar</a> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.hasMVar">Lean.Level.hasMVar</a> <span class="fn">v</span></span></span>)
-      (<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.hasParam">Lean.Level.hasParam</a> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.hasParam">Lean.Level.hasParam</a> <span class="fn">v</span></span></span>)</span>)</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1367,7 +1328,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.levelOne">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L147-L147">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L147-L147">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1388,7 +1349,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.mkLevelZeroEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L149-L149">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L149-L149">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1409,7 +1370,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.mkLevelSuccEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L150-L150">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L150-L150">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1430,7 +1391,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.mkLevelMVarEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L151-L151">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L151-L151">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1451,7 +1412,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.mkLevelParamEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L152-L152">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L152-L152">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1472,7 +1433,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.mkLevelMaxEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L153-L153">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L153-L153">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1493,7 +1454,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.mkLevelIMaxEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L154-L154">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L154-L154">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1514,7 +1475,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.isZero">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L158-L160">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L158-L160">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1528,8 +1489,8 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isZero">Lean.Level.isZero</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.zero">Lean.Level.zero</a> <span class="fn">x</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.zero">Lean.Level.zero</a> <span class="fn">x</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+  | <span class="fn">x</span> =&gt <span class="fn">false</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1537,7 +1498,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.isSucc">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L162-L164">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L162-L164">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1551,8 +1512,8 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isSucc">Lean.Level.isSucc</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.succ</a> <span class="fn">x</span> <span class="fn">x_1</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.succ</a> <span class="fn">x</span> <span class="fn">x_1</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+  | <span class="fn">x</span> =&gt <span class="fn">false</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1560,7 +1521,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.isMax">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L166-L168">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L166-L168">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1574,8 +1535,8 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isMax">Lean.Level.isMax</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.max">Lean.Level.max</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.max">Lean.Level.max</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+  | <span class="fn">x</span> =&gt <span class="fn">false</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1583,7 +1544,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.isIMax">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L170-L172">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L170-L172">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1597,8 +1558,8 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isIMax">Lean.Level.isIMax</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+  | <span class="fn">x</span> =&gt <span class="fn">false</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1606,7 +1567,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.isMaxIMax">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L174-L177">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L174-L177">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1620,9 +1581,9 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isMaxIMax">Lean.Level.isMaxIMax</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.max</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.max</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+  | <span class="fn">x</span> =&gt <span class="fn">false</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1630,7 +1591,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.isParam">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L179-L181">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L179-L181">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1644,8 +1605,8 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isParam">Lean.Level.isParam</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.param">Lean.Level.param</a> <span class="fn">x</span> <span class="fn">x_1</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.param">Lean.Level.param</a> <span class="fn">x</span> <span class="fn">x_1</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+  | <span class="fn">x</span> =&gt <span class="fn">false</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1653,7 +1614,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.isMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L183-L185">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L183-L185">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1667,8 +1628,8 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isMVar">Lean.Level.isMVar</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.mvar">Lean.Level.mvar</a> <span class="fn">x</span> <span class="fn">x_1</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.mvar">Lean.Level.mvar</a> <span class="fn">x</span> <span class="fn">x_1</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+  | <span class="fn">x</span> =&gt <span class="fn">false</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1676,7 +1637,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.mvarId!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L187-L189">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L187-L189">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1690,8 +1651,8 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.mvarId!">Lean.Level.mvarId!</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.mvar">Lean.Level.mvar</a> <span class="fn">mvarId</span> <span class="fn">x</span></span> => <span class="fn">mvarId</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Level"</span> <span class="fn">"Lean.Level.mvarId!"</span> <span class="fn">189</span> <span class="fn">21</span> <span class="fn">"metavariable expected"</span></span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.mvar">Lean.Level.mvar</a> <span class="fn">mvarId</span> <span class="fn">x</span></span> =&gt <span class="fn">mvarId</span>
+  | <span class="fn">x</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">&quotLean.Level&quot</span> <span class="fn">&quotLean.Level.mvarId!&quot</span> <span class="fn">189</span> <span class="fn">21</span> <span class="fn">&quotmetavariable expected&quot</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1699,7 +1660,7 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <div class="decl" id="Lean.Level.isNeverZero">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L193-L199">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L193-L199">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1708,7 +1669,8 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level">Lean.Level</a> → <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></div></div>
-<details>
+<p>If result is true, then forall assignments <code>A</code> which assigns all parameters and metavariables occuring
+in <code>l</code>, <code>l[A] != zero</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -1725,13 +1687,12 @@ mvar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isNeverZero">Lean.Level.isNeverZero</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">l₁</span> <span class="fn">l₂</span> <span class="fn">x_1</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isNeverZero">Lean.Level.isNeverZero</a> <span class="fn">l₂</span></span></span></li>
 </ul>
 </details>
-<p>If result is true, then forall assignments <code>A</code> which assigns all parameters and metavariables occuring
-in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>l[A]!=zero</code></p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Level.ofNat">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L201-L203">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L201-L203">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1754,7 +1715,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <div class="decl" id="Lean.Level.addOffsetAux">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L205-L207">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L205-L207">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1777,7 +1738,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <div class="decl" id="Lean.Level.addOffset">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L209-L210">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L209-L210">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1802,7 +1763,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <div class="decl" id="Lean.Level.isExplicit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L212-L215">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L212-L215">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1817,7 +1778,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isExplicit">Lean.Level.isExplicit</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.zero">Lean.Level.zero</a> <span class="fn">x_1</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></li>
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isExplicit">Lean.Level.isExplicit</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.succ</a> <span class="fn">u</span> <span class="fn">x_1</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.hasMVar">Lean.Level.hasMVar</a> <span class="fn">u</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.hasParam">Lean.Level.hasParam</a> <span class="fn">u</span></span></span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isExplicit">Lean.Level.isExplicit</a> <span class="fn">u</span></span></span>)</span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isExplicit">Lean.Level.isExplicit</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.succ</a> <span class="fn">u</span> <span class="fn">x_1</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.hasMVar">Lean.Level.hasMVar</a> <span class="fn">u</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&amp&amp</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.hasParam">Lean.Level.hasParam</a> <span class="fn">u</span></span></span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&amp&amp</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isExplicit">Lean.Level.isExplicit</a> <span class="fn">u</span></span></span>)</span></li>
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isExplicit">Lean.Level.isExplicit</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span></li>
 </ul>
@@ -1827,7 +1788,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <div class="decl" id="Lean.Level.getOffsetAux">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L217-L219">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L217-L219">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1850,7 +1811,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <div class="decl" id="Lean.Level.getOffset">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L221-L222">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L221-L222">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1873,7 +1834,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <div class="decl" id="Lean.Level.getLevelOffset">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L224-L226">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L224-L226">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1896,7 +1857,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <div class="decl" id="Lean.Level.toNat">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L228-L231">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L228-L231">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1912,8 +1873,8 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.toNat">Lean.Level.toNat</a> <span class="fn">lvl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.getLevelOffset">Lean.Level.getLevelOffset</a> <span class="fn">lvl</span></span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.zero">Lean.Level.zero</a> <span class="fn">x</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.getOffset">Lean.Level.getOffset</a> <span class="fn">lvl</span></span>)</span>
-  | <span class="fn">x</span> => <span class="fn">none</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.zero">Lean.Level.zero</a> <span class="fn">x</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.getOffset">Lean.Level.getOffset</a> <span class="fn">lvl</span></span>)</span>
+  | <span class="fn">x</span> =&gt <span class="fn">none</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1921,7 +1882,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <div class="decl" id="Lean.Level.beq">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L234-L234">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L234-L234">source</a>
 </div>
 <div class="attributes">@[extern  lean_level_eq]</div>
 <div class="decl_header">
@@ -1940,7 +1901,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <div class="decl" id="Lean.Level.instBEqLevel">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L236-L236">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L236-L236">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1961,7 +1922,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <div class="decl" id="Lean.Level.occurs">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L239-L243">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L239-L243">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1970,7 +1931,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level">Lean.Level</a> → <a href="/Unicode.lean/Lean/Level.html#Lean.Level">Lean.Level</a> → <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></div></div>
-<details>
+<p><code><a href="/Unicode.lean/Lean/Level.html#Lean.Level.occurs">occurs</a> u l</code> return <code>true</code> iff <code>u</code> occurs in <code>l</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -1983,12 +1944,12 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.occurs">Lean.Level.occurs</a> <span class="fn">x</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> (<span class="fn"><span class="fn">x</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">x</span></span>)</span></li>
 </ul>
 </details>
-<p><code><a href="/Unicode.lean/Lean/Level.html#Lean.Level.occurs">occurs</a>u<a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code> return <code>true</code> iff <code>u</code> occurs in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Level.ctorToNat">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L245-L251">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L245-L251">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2000,14 +1961,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.ctorToNat">Lean.Level.ctorToNat</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.zero">Lean.Level.zero</a> <span class="fn">x</span></span> => <span class="fn">0</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.param</a> <span class="fn">x</span> <span class="fn">x_1</span></span> => <span class="fn">1</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.mvar</a> <span class="fn">x</span> <span class="fn">x_1</span></span> => <span class="fn">2</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.succ</a> <span class="fn">x</span> <span class="fn">x_1</span></span> => <span class="fn">3</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.max</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span></span> => <span class="fn">4</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span></span> => <span class="fn">5</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2015,7 +1969,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <div class="decl" id="Lean.Level.normLtAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L254-L267">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L254-L267">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -2029,7 +1983,7 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <div class="decl" id="Lean.Level.normLt">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L274-L275">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L274-L275">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2042,23 +1996,23 @@ in <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>, <code>
 <span class="fn">(l₂ : <a href="/Unicode.lean/Lean/Level.html#Lean.Level">Lean.Level</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
-<details>
+<p>A total order on level expressions that has the following properties</p><ul>
+<li><code><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.succ">succ</a> l</code> is an immediate successor of <code>l</code>.</li>
+<li><code>zero</code> is the minimal element.
+This total order is used in the normalization procedure.</li>
+</ul><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.normLt">Lean.Level.normLt</a> <span class="fn">l₁</span> <span class="fn">l₂</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.normLtAux">Lean.Level.normLtAux</a> <span class="fn">l₁</span> <span class="fn">0</span> <span class="fn">l₂</span> <span class="fn">0</span></span></span></li>
 </ul>
 </details>
-<p>A total order on level expressions that has the following properties</p><ul>
-<li><code><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.succ">succ</a><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code> is an immediate successor of <code><a href="/Unicode.lean/Lean/Level.html#Lean.Level">l</a></code>.</li>
-<li><code>zero</code> is the minimal element.
-This total order is used in the normalization procedure.</li>
-</ul></div>
+</div>
 </div>
 <div class="decl" id="Lean.Level.normalize">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L351-L373">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L351-L373">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -2074,7 +2028,7 @@ This total order is used in the normalization procedure.</li>
 <div class="decl" id="Lean.Level.isEquiv">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L377-L378">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L377-L378">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2099,7 +2053,7 @@ This total order is used in the normalization procedure.</li>
 <div class="decl" id="Lean.Level.dec">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L381-L389">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L381-L389">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2108,7 +2062,7 @@ This total order is used in the normalization procedure.</li>
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level">Lean.Level</a> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Level.html#Lean.Level">Lean.Level</a></span></span></div></div>
-<details>
+<p>Reduce (if possible) universe level by 1</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -2131,12 +2085,12 @@ This total order is used in the normalization procedure.</li>
     <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.mkLevelMax">Lean.mkLevelMax</a> <span class="fn">a</span> <span class="fn">a_1</span></span>)</span></span></span></span></li>
 </ul>
 </details>
-<p>Reduce (if possible) universe level by 1</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Level.PP.Result">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L394-L399">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L394-L399">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -2162,7 +2116,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.PP.Result.succ">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L401-L404">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L401-L404">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2174,11 +2128,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.succ">Lean.Level.PP.Result.succ</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.offset">Lean.Level.PP.Result.offset</a> <span class="fn">f</span> <span class="fn">k</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.offset">Lean.Level.PP.Result.offset</a> <span class="fn">f</span> (<span class="fn"><span class="fn">k</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>)</span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.num">Lean.Level.PP.Result.num</a> <span class="fn">k</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.num">Lean.Level.PP.Result.num</a> (<span class="fn"><span class="fn">k</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>)</span>
-  | <span class="fn">f</span> => <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.offset">Lean.Level.PP.Result.offset</a> <span class="fn">f</span> <span class="fn">1</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2186,7 +2136,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.PP.Result.max">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L406-L408">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L406-L408">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2200,8 +2150,8 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.max">Lean.Level.PP.Result.max</a> <span class="fn">x</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span>, <span class="fn">x</span> with
-  | <span class="fn">f</span>, <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.maxNode">Lean.Level.PP.Result.maxNode</a> <span class="fn">Fs</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.maxNode">Lean.Level.PP.Result.maxNode</a> (<span class="fn"><span class="fn">f</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">Fs</span></span>)</span>
-  | <span class="fn">f₁</span>, <span class="fn">f₂</span> => <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.maxNode">Lean.Level.PP.Result.maxNode</a> <span class="fn">[<span class="fn">f₁</span>, <span class="fn">f₂</span>]</span></span></span></span></li>
+  | <span class="fn">f</span>, <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.maxNode">Lean.Level.PP.Result.maxNode</a> <span class="fn">Fs</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.maxNode">Lean.Level.PP.Result.maxNode</a> (<span class="fn"><span class="fn">f</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">Fs</span></span>)</span>
+  | <span class="fn">f₁</span>, <span class="fn">f₂</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.maxNode">Lean.Level.PP.Result.maxNode</a> <span class="fn">[<span class="fn">f₁</span>, <span class="fn">f₂</span>]</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -2209,7 +2159,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.PP.Result.imax">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L410-L412">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L410-L412">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2223,8 +2173,8 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.imax">Lean.Level.PP.Result.imax</a> <span class="fn">x</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span>, <span class="fn">x</span> with
-  | <span class="fn">f</span>, <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.imaxNode">Lean.Level.PP.Result.imaxNode</a> <span class="fn">Fs</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.imaxNode">Lean.Level.PP.Result.imaxNode</a> (<span class="fn"><span class="fn">f</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">Fs</span></span>)</span>
-  | <span class="fn">f₁</span>, <span class="fn">f₂</span> => <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.imaxNode">Lean.Level.PP.Result.imaxNode</a> <span class="fn">[<span class="fn">f₁</span>, <span class="fn">f₂</span>]</span></span></span></span></li>
+  | <span class="fn">f</span>, <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.imaxNode">Lean.Level.PP.Result.imaxNode</a> <span class="fn">Fs</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.imaxNode">Lean.Level.PP.Result.imaxNode</a> (<span class="fn"><span class="fn">f</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">Fs</span></span>)</span>
+  | <span class="fn">f₁</span>, <span class="fn">f₂</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.imaxNode">Lean.Level.PP.Result.imaxNode</a> <span class="fn">[<span class="fn">f₁</span>, <span class="fn">f₂</span>]</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -2232,7 +2182,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.PP.toResult">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L414-L422">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L414-L422">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2255,8 +2205,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.toResult">Lean.Level.PP.toResult</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.param">Lean.Level.param</a> <span class="fn">a</span> <span class="fn">a_1</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.leaf">Lean.Level.PP.Result.leaf</a> <span class="fn">a</span></span></span></li>
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.toResult">Lean.Level.PP.toResult</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.mvar">Lean.Level.mvar</a> <span class="fn">a</span> <span class="fn">a_1</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let n := <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Name.replacePrefix">Lean.Name.replacePrefix</a> <span class="fn"><span class="fn">a</span>.name</span> <span class="fn">`_uniq</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.mkSimple">Lean.Name.mkSimple</a> <span class="fn">"?u"</span></span>)</span>;
-  <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.leaf">Lean.Level.PP.Result.leaf</a> <span class="fn">n</span></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.toResult">Lean.Level.PP.toResult</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.mvar">Lean.Level.mvar</a> <span class="fn">a</span> <span class="fn">a_1</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.PP.Result.leaf">Lean.Level.PP.Result.leaf</a> (<span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Name.replacePrefix">Lean.Name.replacePrefix</a> <span class="fn"><span class="fn">a</span>.name</span> <span class="fn">`_uniq</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.mkSimple">Lean.Name.mkSimple</a> <span class="fn">&quot?u&quot</span></span>)</span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -2264,7 +2213,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.PP.Result.format">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L433-L441">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L433-L441">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -2278,7 +2227,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.PP.Result.quote">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L444-L453">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L444-L453">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -2296,7 +2245,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.format">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L457-L458">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L457-L458">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2319,7 +2268,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.instToFormatLevel">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L460-L461">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L460-L461">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -2332,7 +2281,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.instToFormatLevel">Lean.Level.instToFormatLevel</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ format := <span class="fn">fun <span class="fn">u</span> => <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.format">Lean.Level.format</a> <span class="fn">u</span></span></span> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.instToFormatLevel">Lean.Level.instToFormatLevel</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ format := <span class="fn">fun <span class="fn">u</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.format">Lean.Level.format</a> <span class="fn">u</span></span></span> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -2340,7 +2289,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.instToStringLevel">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L463-L464">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L463-L464">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -2353,7 +2302,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.instToStringLevel">Lean.Level.instToStringLevel</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toString := <span class="fn">fun <span class="fn">u</span> => <span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.Format.pretty">Lean.Format.pretty</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.format">Lean.Level.format</a> <span class="fn">u</span></span>)</span></span> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.instToStringLevel">Lean.Level.instToStringLevel</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toString := <span class="fn">fun <span class="fn">u</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.Format.pretty">Lean.Format.pretty</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.format">Lean.Level.format</a> <span class="fn">u</span></span>)</span></span> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -2361,7 +2310,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.quote">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L466-L467">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L466-L467">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2386,7 +2335,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.instQuoteLevel">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L469-L470">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L469-L470">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -2399,7 +2348,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.instQuoteLevel">Lean.Level.instQuoteLevel</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ quote := <span class="fn">fun <span class="fn">u</span> => <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.quote">Lean.Level.quote</a> <span class="fn">u</span></span></span> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.instQuoteLevel">Lean.Level.instQuoteLevel</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ quote := <span class="fn">fun <span class="fn">u</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.quote">Lean.Level.quote</a> <span class="fn">u</span></span></span> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -2407,7 +2356,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.mkLevelMax'">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L476-L490">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L476-L490">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2423,26 +2372,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.mkLevelMax'">Lean.mkLevelMax'</a> <span class="fn">u</span> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let subsumes := <span class="fn">fun <span class="fn">u</span> <span class="fn">v</span> =>
-    <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isExplicit">Lean.Level.isExplicit</a> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.getOffset">Lean.Level.getOffset</a> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#GE.ge">≥</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.getOffset">Lean.Level.getOffset</a> <span class="fn">v</span></span></span>)</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-    else
-      <span class="fn">match <span class="fn">u</span> with
-      | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.max">Lean.Level.max</a> <span class="fn">u₁</span> <span class="fn">u₂</span> <span class="fn">x</span></span> => <span class="fn"><span class="fn"><span class="fn">v</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">u₁</span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><span class="fn">v</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">u₂</span></span></span>
-      | <span class="fn">x</span> => <span class="fn">false</span></span></span></span>;
-  <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">u</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">v</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">u</span>
-  else
-    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isZero">Lean.Level.isZero</a> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">v</span>
-    else
-      <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isZero">Lean.Level.isZero</a> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">u</span>
-      else
-        <span class="fn">if <span class="fn"><span class="fn"><span class="fn">subsumes</span> <span class="fn">u</span> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">u</span>
-        else
-          <span class="fn">if <span class="fn"><span class="fn"><span class="fn">subsumes</span> <span class="fn">v</span> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">v</span>
-          else
-            <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.getLevelOffset">Lean.Level.getLevelOffset</a> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.getLevelOffset">Lean.Level.getLevelOffset</a> <span class="fn">v</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-              <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.getOffset">Lean.Level.getOffset</a> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#GE.ge">≥</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.getOffset">Lean.Level.getOffset</a> <span class="fn">v</span></span></span> then <span class="fn">u</span> else <span class="fn">v</span></span>
-            else <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.mkLevelMax">Lean.mkLevelMax</a> <span class="fn">u</span> <span class="fn">v</span></span></span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2450,7 +2380,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.mkLevelIMax'">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L494-L499">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L494-L499">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2466,11 +2396,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.mkLevelIMax'">Lean.mkLevelIMax'</a> <span class="fn">u</span> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isNeverZero">Lean.Level.isNeverZero</a> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.mkLevelMax'">Lean.mkLevelMax'</a> <span class="fn">u</span> <span class="fn">v</span></span>
-  else
-    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isZero">Lean.Level.isZero</a> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">v</span>
-    else <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isZero">Lean.Level.isZero</a> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">v</span> else <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">u</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">v</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">u</span> else <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.mkLevelIMax">Lean.mkLevelIMax</a> <span class="fn">u</span> <span class="fn">v</span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2478,7 +2404,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.updateSucc">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L513-L514">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L513-L514">source</a>
 </div>
 <div class="attributes">@[extern  lean_level_update_succ]</div>
 <div class="decl_header">
@@ -2506,7 +2432,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.updateSucc!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L516-L519">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L516-L519">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2523,12 +2449,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.updateSucc!">Lean.Level.updateSucc!</a> <span class="fn">lvl</span> <span class="fn">newLvl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">lvl</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.succ</a> <span class="fn">lvl</span> <span class="fn">d</span></span> =>
-    <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.updateSucc">Lean.Level.updateSucc</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.succ</a> <span class="fn">lvl</span> <span class="fn">d</span></span>) <span class="fn">newLvl</span>
-      (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isSucc">Lean.Level.isSucc</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.succ</a> <span class="fn">lvl</span> <span class="fn">d</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isSucc">Lean.Level.isSucc</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.succ</a> <span class="fn">lvl</span> <span class="fn">d</span></span>)</span></span>)</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Level"</span> <span class="fn">"Lean.Level.updateSucc!"</span> <span class="fn">519</span> <span class="fn">18</span> <span class="fn">"succ level expected"</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2536,7 +2457,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.updateMax">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L522-L523">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L522-L523">source</a>
 </div>
 <div class="attributes">@[extern  lean_level_update_max]</div>
 <div class="decl_header">
@@ -2566,7 +2487,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.updateMax!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L525-L528">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L525-L528">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2585,12 +2506,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.updateMax!">Lean.Level.updateMax!</a> <span class="fn">lvl</span> <span class="fn">newLhs</span> <span class="fn">newRhs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">lvl</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.max">Lean.Level.max</a> <span class="fn">lhs</span> <span class="fn">rhs</span> <span class="fn">d</span></span> =>
-    <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.updateMax">Lean.Level.updateMax</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.max">Lean.Level.max</a> <span class="fn">lhs</span> <span class="fn">rhs</span> <span class="fn">d</span></span>) <span class="fn">newLhs</span> <span class="fn">newRhs</span>
-      (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isMax">Lean.Level.isMax</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.max">Lean.Level.max</a> <span class="fn">lhs</span> <span class="fn">rhs</span> <span class="fn">d</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isMax">Lean.Level.isMax</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.max">Lean.Level.max</a> <span class="fn">lhs</span> <span class="fn">rhs</span> <span class="fn">d</span></span>)</span></span>)</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Level"</span> <span class="fn">"Lean.Level.updateMax!"</span> <span class="fn">528</span> <span class="fn">21</span> <span class="fn">"max level expected"</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2598,7 +2514,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.updateIMax">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L531-L532">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L531-L532">source</a>
 </div>
 <div class="attributes">@[extern  lean_level_update_imax]</div>
 <div class="decl_header">
@@ -2628,7 +2544,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.updateIMax!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L534-L537">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L534-L537">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2647,12 +2563,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.updateIMax!">Lean.Level.updateIMax!</a> <span class="fn">lvl</span> <span class="fn">newLhs</span> <span class="fn">newRhs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">lvl</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">lhs</span> <span class="fn">rhs</span> <span class="fn">d</span></span> =>
-    <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.updateIMax">Lean.Level.updateIMax</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">lhs</span> <span class="fn">rhs</span> <span class="fn">d</span></span>) <span class="fn">newLhs</span> <span class="fn">newRhs</span>
-      (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isIMax">Lean.Level.isIMax</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">lhs</span> <span class="fn">rhs</span> <span class="fn">d</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.isIMax">Lean.Level.isIMax</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">lhs</span> <span class="fn">rhs</span> <span class="fn">d</span></span>)</span></span>)</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Level"</span> <span class="fn">"Lean.Level.updateIMax!"</span> <span class="fn">537</span> <span class="fn">22</span> <span class="fn">"imax level expected"</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2660,7 +2571,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.mkNaryMax">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L539-L542">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L539-L542">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2685,7 +2596,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.instantiateParams">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L546-L554">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L546-L554">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -2702,7 +2613,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.LevelMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L560-L560">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L560-L560">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2726,7 +2637,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.PersistentLevelMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L561-L561">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L561-L561">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2750,7 +2661,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.LevelSet">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L562-L562">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L562-L562">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2772,7 +2683,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.PersistentLevelSet">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L563-L563">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L563-L563">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2794,7 +2705,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.PLevelSet">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L564-L564">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L564-L564">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2816,7 +2727,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.collectMVars">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L566-L572">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L566-L572">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2849,7 +2760,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.find?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L574-L583">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L574-L583">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2874,7 +2785,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.find?.visit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L575-L582">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L575-L582">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2890,14 +2801,9 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.find?.visit">Lean.Level.find?.visit</a> <span class="fn">p</span> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.succ</a> <span class="fn">v</span> <span class="fn">x</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><span class="fn">p</span> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.succ</a> <span class="fn">v</span> <span class="fn">x</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.succ">Lean.Level.succ</a> <span class="fn">v</span> <span class="fn">x</span></span>)</span> else <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.find?.visit">Lean.Level.find?.visit</a> <span class="fn">p</span> <span class="fn">v</span></span></span></span></li>
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.find?.visit">Lean.Level.find?.visit</a> <span class="fn">p</span> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.max">Lean.Level.max</a> <span class="fn">u_2</span> <span class="fn">v</span> <span class="fn">x</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><span class="fn">p</span> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.max">Lean.Level.max</a> <span class="fn">u_2</span> <span class="fn">v</span> <span class="fn">x</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.max">Lean.Level.max</a> <span class="fn">u_2</span> <span class="fn">v</span> <span class="fn">x</span></span>)</span>
-  else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.find?.visit">Lean.Level.find?.visit</a> <span class="fn">p</span> <span class="fn">u_2</span></span>) <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.find?.visit">Lean.Level.find?.visit</a> <span class="fn">p</span> <span class="fn">v</span></span></span></span></span></span></li>
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.find?.visit">Lean.Level.find?.visit</a> <span class="fn">p</span> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">u_2</span> <span class="fn">v</span> <span class="fn">x</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><span class="fn">p</span> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">u_2</span> <span class="fn">v</span> <span class="fn">x</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.imax">Lean.Level.imax</a> <span class="fn">u_2</span> <span class="fn">v</span> <span class="fn">x</span></span>)</span>
-  else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.find?.visit">Lean.Level.find?.visit</a> <span class="fn">p</span> <span class="fn">u_2</span></span>) <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.find?.visit">Lean.Level.find?.visit</a> <span class="fn">p</span> <span class="fn">v</span></span></span></span></span></span></li>
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level.find?.visit">Lean.Level.find?.visit</a> <span class="fn">p</span> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">if <span class="fn"><span class="fn"><span class="fn">p</span> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">u</span></span> else <span class="fn">failure</span></span></span></li>
 </ul>
@@ -2907,7 +2813,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Lean.Level.any">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L585-L586">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L585-L586">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2932,7 +2838,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="decl" id="Nat.toLevel">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Level.lean#L590-L591">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Level.lean#L590-L591">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2962,10 +2868,10 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <h3>Library</h3>
 <div class="module_list">
 <details class="nav_sect" data-path="/Unicode.lean/Init.html">
-<summary>Init</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
-<summary>Init.Control</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init.html">Init</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
+<summary><a href="/Unicode.lean/Init/Control.html">Init.Control</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Control/Basic.html">Init.Control.Basic</a>
 </div>
 <div class="nav_link">
@@ -3000,10 +2906,10 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data.html">
-<summary>Init.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
-<summary>Init.Data.Array</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
+<summary><a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/Basic.html">Init.Data.Array.Basic</a>
 </div>
 <div class="nav_link">
@@ -3026,32 +2932,32 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ByteArray.html">
-<summary>Init.Data.ByteArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ByteArray/Basic.html">Init.Data.ByteArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Char.html">
-<summary>Init.Data.Char</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Char/Basic.html">Init.Data.Char.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Fin.html">
-<summary>Init.Data.Fin</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Fin/Basic.html">Init.Data.Fin.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/FloatArray.html">
-<summary>Init.Data.FloatArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/FloatArray/Basic.html">Init.Data.FloatArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Format.html">
-<summary>Init.Data.Format</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Format/Basic.html">Init.Data.Format.Basic</a>
 </div>
 <div class="nav_link">
@@ -3065,14 +2971,14 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Int.html">
-<summary>Init.Data.Int</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Int/Basic.html">Init.Data.Int.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/List.html">
-<summary>Init.Data.List</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/List/Basic.html">Init.Data.List.Basic</a>
 </div>
 <div class="nav_link">
@@ -3083,8 +2989,8 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Nat.html">
-<summary>Init.Data.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Basic.html">Init.Data.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -3107,8 +3013,8 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Option.html">
-<summary>Init.Data.Option</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Option/Basic.html">Init.Data.Option.Basic</a>
 </div>
 <div class="nav_link">
@@ -3119,8 +3025,8 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/String.html">
-<summary>Init.Data.String</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/String/Basic.html">Init.Data.String.Basic</a>
 </div>
 <div class="nav_link">
@@ -3128,8 +3034,8 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ToString.html">
-<summary>Init.Data.ToString</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
 </div>
 <div class="nav_link">
@@ -3137,46 +3043,16 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Float.html">Init.Data.Float</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Hashable.html">Init.Data.Hashable</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/OfScientific.html">Init.Data.OfScientific</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
@@ -3197,18 +3073,12 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Init/Data/Stream.html">Init.Data.Stream</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/UInt.html">Init.Data.UInt</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/System.html">
-<summary>Init.System</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/System.html">Init.System</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/System/FilePath.html">Init.System.FilePath</a>
 </div>
 <div class="nav_link">
@@ -3231,16 +3101,10 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Init/Coe.html">Init.Coe</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Control.html">Init.Control</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Conv.html">Init.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Core.html">Init.Core</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Fix.html">Init.Fix</a>
@@ -3270,9 +3134,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/System.html">Init.System</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Util.html">Init.Util</a>
 </div>
 <div class="nav_link">
@@ -3283,12 +3144,12 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean.html" open="">
-<summary>Lean</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
-<summary>Lean.Compiler</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
-<summary>Lean.Compiler.IR</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean.html">Lean</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
+<summary><a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
+<summary><a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html">Lean.Compiler.IR.Basic</a>
 </div>
 <div class="nav_link">
@@ -3374,9 +3235,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Lean/Compiler/FFI.html">Lean.Compiler.FFI</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/ImplementedByAttr.html">Lean.Compiler.ImplementedByAttr</a>
 </div>
 <div class="nav_link">
@@ -3402,10 +3260,10 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data.html">
-<summary>Lean.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
-<summary>Lean.Data.Json</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
+<summary><a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json/Basic.html">Lean.Data.Json.Basic</a>
 </div>
 <div class="nav_link">
@@ -3422,8 +3280,8 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Lsp.html">
-<summary>Lean.Data.Lsp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html">Lean.Data.Lsp.Basic</a>
 </div>
 <div class="nav_link">
@@ -3464,8 +3322,8 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Xml.html">
-<summary>Lean.Data.Xml</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Xml/Basic.html">Lean.Data.Xml.Basic</a>
 </div>
 <div class="nav_link">
@@ -3479,9 +3337,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
 </div>
 <div class="nav_link">
@@ -3492,9 +3347,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/LOption.html">Lean.Data.LOption</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Name.html">Lean.Data.Name</a>
@@ -3532,15 +3384,12 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Trie.html">Lean.Data.Trie</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab.html">
-<summary>Lean.Elab</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
-<summary>Lean.Elab.Deriving</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Deriving/BEq.html">Lean.Elab.Deriving.BEq</a>
 </div>
 <div class="nav_link">
@@ -3572,10 +3421,10 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition.html">
-<summary>Lean.Elab.PreDefinition</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
-<summary>Lean.Elab.PreDefinition.Structural</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/BRecOn.html">Lean.Elab.PreDefinition.Structural.BRecOn</a>
 </div>
 <div class="nav_link">
@@ -3601,8 +3450,8 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">
-<summary>Lean.Elab.PreDefinition.WF</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html">Lean.Elab.PreDefinition.WF.Eqns</a>
 </div>
 <div class="nav_link">
@@ -3636,16 +3485,10 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/MkInhabitant.html">Lean.Elab.PreDefinition.MkInhabitant</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Quotation.html">
-<summary>Lean.Elab.Quotation</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html">Lean.Elab.Quotation.Precheck</a>
 </div>
 <div class="nav_link">
@@ -3653,10 +3496,10 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic.html">
-<summary>Lean.Elab.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
-<summary>Lean.Elab.Tactic.Conv</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
 </div>
 <div class="nav_link">
@@ -3689,9 +3532,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Delta.html">Lean.Elab.Tactic.Delta</a>
@@ -3782,9 +3622,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Lean/Elab/DefView.html">Lean.Elab.DefView</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
 </div>
 <div class="nav_link">
@@ -3851,13 +3688,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Print.html">Lean.Elab.Print</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/RecAppSyntax.html">Lean.Elab.RecAppSyntax</a>
@@ -3878,9 +3709,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html">Lean.Elab.SyntheticMVars</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Term.html">Lean.Elab.Term</a>
 </div>
 <div class="nav_link">
@@ -3888,10 +3716,10 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta.html">
-<summary>Lean.Meta</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
-<summary>Lean.Meta.Match</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/Basic.html">Lean.Meta.Match.Basic</a>
 </div>
 <div class="nav_link">
@@ -3920,12 +3748,12 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
-<summary>Lean.Meta.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
-<summary>Lean.Meta.Tactic.LinearArith</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
-<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -3942,9 +3770,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
 </div>
 <div class="nav_link">
@@ -3952,8 +3777,8 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
-<summary>Lean.Meta.Tactic.Simp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html">Lean.Meta.Tactic.Simp.Main</a>
 </div>
 <div class="nav_link">
@@ -4024,9 +3849,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rename.html">Lean.Meta.Tactic.Rename</a>
 </div>
 <div class="nav_link">
@@ -4037,9 +3859,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rewrite.html">Lean.Meta.Tactic.Rewrite</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Split.html">Lean.Meta.Tactic.Split</a>
@@ -4151,9 +3970,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/MatchUtil.html">Lean.Meta.MatchUtil</a>
 </div>
 <div class="nav_link">
@@ -4181,9 +3997,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Transform.html">Lean.Meta.Transform</a>
 </div>
 <div class="nav_link">
@@ -4197,8 +4010,8 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Parser.html">
-<summary>Lean.Parser</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Parser/Attr.html">Lean.Parser.Attr</a>
 </div>
 <div class="nav_link">
@@ -4236,16 +4049,16 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/ParserCompiler.html">
-<summary>Lean.ParserCompiler</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html">Lean.ParserCompiler.Attribute</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter.html">
-<summary>Lean.PrettyPrinter</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
-<summary>Lean.PrettyPrinter.Delaborator</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html">Lean.PrettyPrinter.Delaborator.Basic</a>
 </div>
 <div class="nav_link">
@@ -4265,9 +4078,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Lean/PrettyPrinter/Basic.html">Lean.PrettyPrinter.Basic</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Formatter.html">Lean.PrettyPrinter.Formatter</a>
 </div>
 <div class="nav_link">
@@ -4275,10 +4085,10 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server.html">
-<summary>Lean.Server</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
-<summary>Lean.Server.FileWorker</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
+<summary><a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html">Lean.Server.FileWorker.RequestHandling</a>
 </div>
 <div class="nav_link">
@@ -4289,8 +4099,8 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server/Rpc.html">
-<summary>Lean.Server.Rpc</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Rpc/Basic.html">Lean.Server.Rpc.Basic</a>
 </div>
 <div class="nav_link">
@@ -4310,9 +4120,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Lean/Server/FileSource.html">Lean.Server.FileSource</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
 </div>
 <div class="nav_link">
@@ -4320,9 +4127,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Requests.html">Lean.Server.Requests</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Snapshots.html">Lean.Server.Snapshots</a>
@@ -4335,8 +4139,8 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Util.html">
-<summary>Lean.Util</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/CollectFVars.html">Lean.Util.CollectFVars</a>
 </div>
 <div class="nav_link">
@@ -4404,8 +4208,8 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Widget.html">
-<summary>Lean.Widget</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html">Lean.Widget.InteractiveCode</a>
 </div>
 <div class="nav_link">
@@ -4428,13 +4232,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Lean/Class.html">Lean.Class</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/CoreM.html">Lean.CoreM</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Declaration.html">Lean.Declaration</a>
@@ -4444,9 +4242,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/DocString.html">Lean.DocString</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
@@ -4478,7 +4273,7 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/LazyInitExtension.html">Lean.LazyInitExtension</a>
 </div>
-<div class="nav_link" visible="">
+<div class="nav_link visible">
 <a href="/Unicode.lean/Lean/Level.html">Lean.Level</a>
 </div>
 <div class="nav_link">
@@ -4491,9 +4286,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Lean/Message.html">Lean.Message</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/MetavarContext.html">Lean.MetavarContext</a>
 </div>
 <div class="nav_link">
@@ -4501,15 +4293,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/MonadEnv.html">Lean.MonadEnv</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ProjFns.html">Lean.ProjFns</a>
@@ -4527,9 +4310,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 <a href="/Unicode.lean/Lean/ScopedEnvExtension.html">Lean.ScopedEnvExtension</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Structure.html">Lean.Structure</a>
 </div>
 <div class="nav_link">
@@ -4537,12 +4317,6 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ToExpr.html">Lean.ToExpr</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
@@ -4588,10 +4362,10 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Unicode.html">
-<summary>Unicode</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
-<summary>Unicode.General</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Unicode.html">Unicode</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
+<summary><a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
 </div>
 <div class="nav_link">
@@ -4599,26 +4373,10 @@ imaxNode: <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Unicode/Includes.html">Unicode.Includes</a>
 </div>
 </details>
 </div>
 </nav>
-<script>
-siteRoot = "/Unicode.lean/";
-      </script>
-<script src="/Unicode.lean/nav.js">
-</script>
-<script src="/Unicode.lean/search.js">
-</script>
-<script src="/Unicode.lean/mathjax-config.js">
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </body>
 </html>

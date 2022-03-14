@@ -1,7 +1,19 @@
 <html lang="en">
 <head>
-<link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><title>Std.Data.PersistentArray</title>
-<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta></head>
+<title>Std.Data.PersistentArray</title>
+<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><link rel="prefetch" href="/Unicode.lean/declaration-data.bmp"></link><script defer="true" src="/Unicode.lean/mathjax-config.js">
+</script>
+<script defer="true" src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script defer="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script type="module" src="/Unicode.lean/nav.js">
+</script>
+<script type="module" src="/Unicode.lean/search.js">
+</script>
+<script type="module" src="/Unicode.lean/how-about.js">
+</script>
+</head>
 <body>
 <input id="nav_toggle" type="checkbox"></input><header>
 <h1>
@@ -18,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Std.Data.PersistentArray</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -244,7 +256,7 @@ Documentation</h1>
 <div class="decl" id="Std.PersistentArrayNode">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L10-L13">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L10-L13">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -266,7 +278,7 @@ leaf: <span class="fn">{α : <span class="fn">Type u</span>} → <span class="fn
 <div class="decl" id="Std.instInhabitedPersistentArrayNode">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L13-L13">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L13-L13">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -287,7 +299,7 @@ leaf: <span class="fn">{α : <span class="fn">Type u</span>} → <span class="fn
 <div class="decl" id="Std.PersistentArrayNode.isNode">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L17-L19">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L17-L19">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -305,8 +317,8 @@ leaf: <span class="fn">{α : <span class="fn">Type u</span>} → <span class="fn
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArrayNode.isNode">Std.PersistentArrayNode.isNode</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArrayNode.leaf">Std.PersistentArrayNode.node</a> <span class="fn">x</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArrayNode.leaf">Std.PersistentArrayNode.leaf</a> <span class="fn">x</span></span> => <span class="fn">false</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArrayNode.leaf">Std.PersistentArrayNode.node</a> <span class="fn">x</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+  | <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArrayNode.leaf">Std.PersistentArrayNode.leaf</a> <span class="fn">x</span></span> =&gt <span class="fn">false</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -314,7 +326,7 @@ leaf: <span class="fn">{α : <span class="fn">Type u</span>} → <span class="fn
 <div class="decl" id="Std.PersistentArray.initShift">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L23-L23">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L23-L23">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -336,7 +348,7 @@ leaf: <span class="fn">{α : <span class="fn">Type u</span>} → <span class="fn
 <div class="decl" id="Std.PersistentArray.branching">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L24-L24">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L24-L24">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -358,7 +370,7 @@ leaf: <span class="fn">{α : <span class="fn">Type u</span>} → <span class="fn
 <div class="decl" id="Std.PersistentArray">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L26-L36">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L26-L36">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -386,7 +398,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.instInhabitedPersistentArray">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L36-L36">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L36-L36">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -407,7 +419,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PArray">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L38-L38">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L38-L38">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -431,7 +443,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.empty">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L46-L46">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L46-L46">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -447,10 +459,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn">Std.PersistentArray.empty</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ root := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArrayNode.node">Std.PersistentArrayNode.node</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.mkEmpty">Array.mkEmpty</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.branching">Std.PersistentArray.branching</a></span>)</span>)</span>,
-    tail := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.mkEmpty">Array.mkEmpty</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.branching">Std.PersistentArray.branching</a></span>)</span>, size := <span class="fn">0</span>,
-    shift := <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.initShift">Std.PersistentArray.initShift</a>, tailOff := <span class="fn">0</span> }</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -458,7 +467,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.isEmpty">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L48-L48">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L48-L48">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -485,7 +494,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.mkEmptyArray">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L50-L50">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L50-L50">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -510,7 +519,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.mul2Shift">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L52-L52">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L52-L52">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -536,7 +545,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.div2Shift">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L53-L53">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L53-L53">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -562,7 +571,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.mod2Shift">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L54-L54">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L54-L54">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -588,7 +597,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.getAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L56-L58">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L56-L58">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -610,7 +619,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.get!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L60-L64">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L60-L64">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -643,7 +652,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.getOp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L66-L67">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L66-L67">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -676,7 +685,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.setAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L69-L75">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L69-L75">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -694,7 +703,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.set">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L77-L81">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L77-L81">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -716,13 +725,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.set">Std.PersistentArray.set</a> <span class="fn">t</span> <span class="fn">i</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn">i</span> <a href="/Unicode.lean/Init/Prelude.html#GE.ge">≥</a> <span class="fn"><span class="fn">t</span>.tailOff</span></span> then
-    <span class="fn">{ root := <span class="fn"><span class="fn">t</span>.root</span>, tail := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.set!">Array.set!</a> <span class="fn"><span class="fn">t</span>.tail</span> (<span class="fn"><span class="fn">i</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn"><span class="fn">t</span>.tailOff</span></span>) <span class="fn">a</span></span>, size := <span class="fn"><span class="fn">t</span>.size</span>, shift := <span class="fn"><span class="fn">t</span>.shift</span>,
-      tailOff := <span class="fn"><span class="fn">t</span>.tailOff</span> }</span>
-  else
-    <span class="fn">{ root := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.setAux">Std.PersistentArray.setAux</a> <span class="fn"><span class="fn">t</span>.root</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.ofNat">USize.ofNat</a> <span class="fn">i</span></span>) <span class="fn"><span class="fn">t</span>.shift</span> <span class="fn">a</span></span>, tail := <span class="fn"><span class="fn">t</span>.tail</span>, size := <span class="fn"><span class="fn">t</span>.size</span>,
-      shift := <span class="fn"><span class="fn">t</span>.shift</span>, tailOff := <span class="fn"><span class="fn">t</span>.tailOff</span> }</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -730,7 +733,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.modifyAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L83-L89">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L83-L89">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -755,7 +758,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.modify">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L91-L95">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L91-L95">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -782,13 +785,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.modify">Std.PersistentArray.modify</a> <span class="fn">t</span> <span class="fn">i</span> <span class="fn">f</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn">i</span> <a href="/Unicode.lean/Init/Prelude.html#GE.ge">≥</a> <span class="fn"><span class="fn">t</span>.tailOff</span></span> then
-    <span class="fn">{ root := <span class="fn"><span class="fn">t</span>.root</span>, tail := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.modify">Array.modify</a> <span class="fn"><span class="fn">t</span>.tail</span> (<span class="fn"><span class="fn">i</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn"><span class="fn">t</span>.tailOff</span></span>) <span class="fn">f</span></span>, size := <span class="fn"><span class="fn">t</span>.size</span>, shift := <span class="fn"><span class="fn">t</span>.shift</span>,
-      tailOff := <span class="fn"><span class="fn">t</span>.tailOff</span> }</span>
-  else
-    <span class="fn">{ root := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.modifyAux">Std.PersistentArray.modifyAux</a> <span class="fn">f</span> <span class="fn"><span class="fn">t</span>.root</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.ofNat">USize.ofNat</a> <span class="fn">i</span></span>) <span class="fn"><span class="fn">t</span>.shift</span></span>, tail := <span class="fn"><span class="fn">t</span>.tail</span>, size := <span class="fn"><span class="fn">t</span>.size</span>,
-      shift := <span class="fn"><span class="fn">t</span>.shift</span>, tailOff := <span class="fn"><span class="fn">t</span>.tailOff</span> }</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -796,7 +793,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.mkNewPath">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L97-L101">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L97-L101">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -818,7 +815,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.insertNewLeaf">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L103-L115">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L103-L115">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -836,7 +833,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.mkNewTail">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L117-L128">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L117-L128">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -854,15 +851,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.mkNewTail">Std.PersistentArray.mkNewTail</a> <span class="fn">t</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><span class="fn">t</span>.size</span> <a href="/Unicode.lean/Init/Prelude.html#LE.le">≤</a> <span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> (<span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.mul2Shift">Std.PersistentArray.mul2Shift</a> <span class="fn">1</span> (<span class="fn"><span class="fn"><span class="fn">t</span>.shift</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.initShift">Std.PersistentArray.initShift</a></span>)</span>)</span></span> then
-    <span class="fn">{ root := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.insertNewLeaf">Std.PersistentArray.insertNewLeaf</a> <span class="fn"><span class="fn">t</span>.root</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.ofNat">USize.ofNat</a> (<span class="fn"><span class="fn"><span class="fn">t</span>.size</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">1</span></span>)</span>) <span class="fn"><span class="fn">t</span>.shift</span> <span class="fn"><span class="fn">t</span>.tail</span></span>,
-      tail := <span class="fn">Std.PersistentArray.mkEmptyArray</span>, size := <span class="fn"><span class="fn">t</span>.size</span>, shift := <span class="fn"><span class="fn">t</span>.shift</span>, tailOff := <span class="fn"><span class="fn">t</span>.size</span> }</span>
-  else
-    <span class="fn">{ root :=
-        <span class="fn">let n := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">Std.PersistentArray.mkEmptyArray</span> <span class="fn"><span class="fn">t</span>.root</span></span>;
-        <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArrayNode.node">Std.PersistentArrayNode.node</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">n</span> (<span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.mkNewPath">Std.PersistentArray.mkNewPath</a> <span class="fn"><span class="fn">t</span>.shift</span> <span class="fn"><span class="fn">t</span>.tail</span></span>)</span>)</span></span>,
-      tail := <span class="fn">#[]</span>, size := <span class="fn"><span class="fn">t</span>.size</span>, shift := <span class="fn"><span class="fn"><span class="fn">t</span>.shift</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.initShift">Std.PersistentArray.initShift</a></span>, tailOff := <span class="fn"><span class="fn">t</span>.size</span> }</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -870,7 +859,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.tooBig">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L130-L130">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L130-L130">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -891,7 +880,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.push">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L132-L137">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L132-L137">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -911,12 +900,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.push">Std.PersistentArray.push</a> <span class="fn">t</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let r := <span class="fn">{ root := <span class="fn"><span class="fn">t</span>.root</span>, tail := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn"><span class="fn">t</span>.tail</span> <span class="fn">a</span></span>, size := <span class="fn"><span class="fn"><span class="fn">t</span>.size</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>, shift := <span class="fn"><span class="fn">t</span>.shift</span>, tailOff := <span class="fn"><span class="fn">t</span>.tailOff</span> }</span>;
-  <span class="fn">if
-      <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">r</span>.tail</span></span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.branching">Std.PersistentArray.branching</a></span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a>           <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn"><span class="fn">t</span>.size</span> <a href="/Unicode.lean/Init/Prelude.html#GE.ge">≥</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.tooBig">Std.PersistentArray.tooBig</a></span>)</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>         <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-    <span class="fn">r</span>
-  else <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.mkNewTail">Std.PersistentArray.mkNewTail</a> <span class="fn">r</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -924,7 +908,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.popLeaf">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L142-L158">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L142-L158">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -942,7 +926,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.pop">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L160-L181">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L160-L181">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -960,22 +944,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.pop">Std.PersistentArray.pop</a> <span class="fn">t</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">t</span>.tail</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span> then
-    <span class="fn">{ root := <span class="fn"><span class="fn">t</span>.root</span>, tail := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.pop">Array.pop</a> <span class="fn"><span class="fn">t</span>.tail</span></span>, size := <span class="fn"><span class="fn"><span class="fn">t</span>.size</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">1</span></span>, shift := <span class="fn"><span class="fn">t</span>.shift</span>, tailOff := <span class="fn"><span class="fn">t</span>.tailOff</span> }</span>
-  else
-    <span class="fn">match <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.popLeaf">Std.PersistentArray.popLeaf</a> <span class="fn"><span class="fn">t</span>.root</span></span> with
-    | <span class="fn">(<span class="fn">none</span>, <span class="fn">x</span>)</span> => <span class="fn">t</span>
-    | <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">last</span></span>, <span class="fn">newRoots</span>)</span> =>
-      <span class="fn">let last := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.pop">Array.pop</a> <span class="fn">last</span></span>;
-      <span class="fn">let newSize := <span class="fn"><span class="fn"><span class="fn">t</span>.size</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">1</span></span>;
-      <span class="fn">let newTailOff := <span class="fn"><span class="fn">newSize</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">last</span></span></span>;
-      <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">newRoots</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">1</span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArrayNode.isNode">Std.PersistentArrayNode.isNode</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.get!">Array.get!</a> <span class="fn">newRoots</span> <span class="fn">0</span></span>)</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-        <span class="fn">{ root := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.get!">Array.get!</a> <span class="fn">newRoots</span> <span class="fn">0</span></span>, tail := <span class="fn">last</span>, size := <span class="fn">newSize</span>,
-          shift := <span class="fn"><span class="fn"><span class="fn">t</span>.shift</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.initShift">Std.PersistentArray.initShift</a></span>, tailOff := <span class="fn">newTailOff</span> }</span>
-      else
-        <span class="fn">{ root := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArrayNode.node">Std.PersistentArrayNode.node</a> <span class="fn">newRoots</span></span>, tail := <span class="fn">last</span>, size := <span class="fn">newSize</span>, shift := <span class="fn"><span class="fn">t</span>.shift</span>,
-          tailOff := <span class="fn">newTailOff</span> }</span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -983,7 +952,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.foldlM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L198-L206">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L198-L206">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1020,15 +989,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.foldlM">Std.PersistentArray.foldlM</a> <span class="fn">t</span> <span class="fn">f</span> <span class="fn">init</span> <span class="fn">start</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">start</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">0</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-    let b ← <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#_private.Std.Data.PersistentArray.0.Std.PersistentArray.foldlMAux">Std.PersistentArray.foldlMAux</a> <span class="fn">f</span> <span class="fn"><span class="fn">t</span>.root</span> <span class="fn">init</span></span>
-    <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.foldlM">Array.foldlM</a> <span class="fn">f</span> <span class="fn">b</span> <span class="fn"><span class="fn">t</span>.tail</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">t</span>.tail</span></span>)</span></span>
-  else
-    <span class="fn">if <span class="fn"><span class="fn">start</span> <a href="/Unicode.lean/Init/Prelude.html#GE.ge">≥</a> <span class="fn"><span class="fn">t</span>.tailOff</span></span> then <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.foldlM">Array.foldlM</a> <span class="fn">f</span> <span class="fn">init</span> <span class="fn"><span class="fn">t</span>.tail</span> (<span class="fn"><span class="fn">start</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn"><span class="fn">t</span>.tailOff</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">t</span>.tail</span></span>)</span>
-    else <span class="fn">do
-      let b ← <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#_private.Std.Data.PersistentArray.0.Std.PersistentArray.foldlFromMAux">Std.PersistentArray.foldlFromMAux</a> <span class="fn">f</span> <span class="fn"><span class="fn">t</span>.root</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.ofNat">USize.ofNat</a> <span class="fn">start</span></span>) <span class="fn"><span class="fn">t</span>.shift</span> <span class="fn">init</span></span>
-      <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.foldlM">Array.foldlM</a> <span class="fn">f</span> <span class="fn">b</span> <span class="fn"><span class="fn">t</span>.tail</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">t</span>.tail</span></span>)</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1036,7 +997,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.foldrM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L212-L213">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L212-L213">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1082,7 +1043,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.forInAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L216-L231">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L216-L231">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1123,7 +1084,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.forIn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L233-L242">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L233-L242">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1158,36 +1119,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.forIn">Std.PersistentArray.forIn</a> <span class="fn">t</span> <span class="fn">init</span> <span class="fn">f</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let a ← <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.forInAux">Std.PersistentArray.forInAux</a> <span class="fn">f</span> <span class="fn"><span class="fn">t</span>.root</span> <span class="fn">init</span></span>
-  <span class="fn">match <span class="fn">a</span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.done</a> <span class="fn">b</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">b</span></span>
-    | <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">b</span></span> =>
-      <span class="fn">let b := <span class="fn">b</span>;
-      <span class="fn">do
-      let r ←
-        <span class="fn">let col := <span class="fn"><span class="fn">t</span>.tail</span>;
-          <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">col</span> <span class="fn">{ fst := <span class="fn">none</span>, snd := <span class="fn">b</span> }</span> <span class="fn">fun <span class="fn">v</span> <span class="fn">r</span> =>
-            <span class="fn">let r := <span class="fn"><span class="fn">r</span>.snd</span>;
-            <span class="fn">let b := <span class="fn">r</span>;
-            <span class="fn">do
-            let a ← <span class="fn"><span class="fn">f</span> <span class="fn">v</span> <span class="fn">b</span></span>
-            <span class="fn">match <span class="fn">a</span> with
-              | <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.done</a> <span class="fn">r</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span>, snd := <span class="fn">b</span> }</span></span>)</span>
-              | <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">bNew</span></span> =>
-                <span class="fn">let b := <span class="fn">bNew</span>;
-                <span class="fn">do
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <span class="fn">b</span> }</span></span>)</span></span></span></span></span></span></span></span></span></span>
-      let x : <span class="fn">β</span> := <span class="fn"><span class="fn">r</span>.snd</span>
-      let b : <span class="fn">β</span> := <span class="fn">x</span>
-      let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><span class="fn">m</span> <span class="fn">β</span></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">b</span></span></span>
-      <span class="fn">match <span class="fn"><span class="fn">r</span>.fst</span> with
-        | <span class="fn">none</span> => <span class="fn">do
-          let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-        | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1195,7 +1127,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.instForInPersistentArray">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L244-L245">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L244-L245">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1216,7 +1148,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn">Std.PersistentArray.instForInPersistentArray</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ forIn := <span class="fn">fun {β} [<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Monad">Monad</a> <span class="fn">m</span></span>] => <span class="fn">Std.PersistentArray.forIn</span></span> }</span></span></li>
+<span class="fn"><span class="fn">Std.PersistentArray.instForInPersistentArray</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ forIn := <span class="fn">fun {β} [<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Monad">Monad</a> <span class="fn">m</span></span>] =&gt <span class="fn">Std.PersistentArray.forIn</span></span> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -1224,7 +1156,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.findSomeMAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L247-L249">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L247-L249">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1257,7 +1189,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.findSomeM?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L251-L254">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L251-L254">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1294,8 +1226,8 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.findSomeM?">Std.PersistentArray.findSomeM?</a> <span class="fn">t</span> <span class="fn">f</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let a ← <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.findSomeMAux">Std.PersistentArray.findSomeMAux</a> <span class="fn">f</span> <span class="fn"><span class="fn">t</span>.root</span></span>
   <span class="fn">match <span class="fn">a</span> with
-    | <span class="fn">none</span> => <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.findSomeM?">Array.findSomeM?</a> <span class="fn"><span class="fn">t</span>.tail</span> <span class="fn">f</span></span>
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">b</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">b</span></span>)</span></span></span></span></li>
+    | <span class="fn">none</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.findSomeM?">Array.findSomeM?</a> <span class="fn"><span class="fn">t</span>.tail</span> <span class="fn">f</span></span>
+    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">b</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">b</span></span>)</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1303,7 +1235,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.findSomeRevMAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L256-L258">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L256-L258">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1336,7 +1268,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.findSomeRevM?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L260-L263">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L260-L263">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1373,8 +1305,8 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.findSomeRevM?">Std.PersistentArray.findSomeRevM?</a> <span class="fn">t</span> <span class="fn">f</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let a ← <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.findSomeRevM?">Array.findSomeRevM?</a> <span class="fn"><span class="fn">t</span>.tail</span> <span class="fn">f</span></span>
   <span class="fn">match <span class="fn">a</span> with
-    | <span class="fn">none</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.findSomeRevMAux">Std.PersistentArray.findSomeRevMAux</a> <span class="fn">f</span> <span class="fn"><span class="fn">t</span>.root</span></span>
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">b</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">b</span></span>)</span></span></span></span></li>
+    | <span class="fn">none</span> =&gt <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.findSomeRevMAux">Std.PersistentArray.findSomeRevMAux</a> <span class="fn">f</span> <span class="fn"><span class="fn">t</span>.root</span></span>
+    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">b</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">b</span></span>)</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1382,7 +1314,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.forMAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L265-L267">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L265-L267">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1411,7 +1343,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.forM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L269-L270">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L269-L270">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1441,7 +1373,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.forM">Std.PersistentArray.forM</a> <span class="fn">t</span> <span class="fn">f</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.forMAux">Std.PersistentArray.forMAux</a> <span class="fn">f</span> <span class="fn"><span class="fn">t</span>.root</span></span>) <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.forM">Array.forM</a> <span class="fn">f</span> <span class="fn"><span class="fn">t</span>.tail</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">t</span>.tail</span></span>)</span></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.forM">Std.PersistentArray.forM</a> <span class="fn">t</span> <span class="fn">f</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.forMAux">Std.PersistentArray.forMAux</a> <span class="fn">f</span> <span class="fn"><span class="fn">t</span>.root</span></span>) <span class="fn">fun <span class="fn">x</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.forM">Array.forM</a> <span class="fn">f</span> <span class="fn"><span class="fn">t</span>.tail</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">t</span>.tail</span></span>)</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1449,7 +1381,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.foldl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L274-L275">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L274-L275">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1487,7 +1419,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.foldr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L277-L278">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L277-L278">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1523,7 +1455,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.filter">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L280-L281">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L280-L281">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1544,11 +1476,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.filter">Std.PersistentArray.filter</a> <span class="fn">as</span> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.foldl">Std.PersistentArray.foldl</a> <span class="fn">as</span> (<span class="fn">fun <span class="fn">asNew</span> <span class="fn">a</span> => <span class="fn">if <span class="fn"><span class="fn"><span class="fn">p</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.push">Std.PersistentArray.push</a> <span class="fn">asNew</span> <span class="fn">a</span></span> else <span class="fn">asNew</span></span></span>)
-    <span class="fn">{ root := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArrayNode.node">Std.PersistentArrayNode.node</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.mkEmpty">Array.mkEmpty</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.branching">Std.PersistentArray.branching</a></span>)</span>)</span>,
-      tail := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.mkEmpty">Array.mkEmpty</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.branching">Std.PersistentArray.branching</a></span>)</span>, size := <span class="fn">0</span>,
-      shift := <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.initShift">Std.PersistentArray.initShift</a>, tailOff := <span class="fn">0</span> }</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1556,7 +1484,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.toArray">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L283-L284">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L283-L284">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1583,7 +1511,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.append">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L286-L290">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L286-L290">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1612,7 +1540,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.instAppendPersistentArray">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L292-L292">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L292-L292">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1637,7 +1565,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.findSome?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L294-L295">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L294-L295">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1671,7 +1599,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.findSomeRev?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L297-L298">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L297-L298">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1705,7 +1633,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.toList">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L300-L301">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L300-L301">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1724,7 +1652,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.toList">Std.PersistentArray.toList</a> <span class="fn">t</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Data/List/Basic.html#List.reverse">List.reverse</a> (<span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.foldl">Std.PersistentArray.foldl</a> <span class="fn">t</span> (<span class="fn">fun <span class="fn">xs</span> <span class="fn">x</span> => <span class="fn"><span class="fn">x</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">xs</span></span></span>) <span class="fn">[]</span></span>)</span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.toList">Std.PersistentArray.toList</a> <span class="fn">t</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Data/List/Basic.html#List.reverse">List.reverse</a> (<span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.foldl">Std.PersistentArray.foldl</a> <span class="fn">t</span> (<span class="fn">fun <span class="fn">xs</span> <span class="fn">x</span> =&gt <span class="fn"><span class="fn">x</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">xs</span></span></span>) <span class="fn">[]</span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -1732,7 +1660,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.anyMAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L305-L307">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L305-L307">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1761,7 +1689,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.anyM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L309-L310">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L309-L310">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1791,7 +1719,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.anyM">Std.PersistentArray.anyM</a> <span class="fn">t</span> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.anyMAux">Std.PersistentArray.anyMAux</a> <span class="fn">p</span> <span class="fn"><span class="fn">t</span>.root</span></span> <a href="/Unicode.lean/Init/Control/Basic.html#orM"><||></a> <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.anyM">Array.anyM</a> <span class="fn">p</span> <span class="fn"><span class="fn">t</span>.tail</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">t</span>.tail</span></span>)</span></span>)</span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.anyM">Std.PersistentArray.anyM</a> <span class="fn">t</span> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.anyMAux">Std.PersistentArray.anyMAux</a> <span class="fn">p</span> <span class="fn"><span class="fn">t</span>.root</span></span> <a href="/Unicode.lean/Init/Control/Basic.html#orM">&lt||&gt</a> <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.anyM">Array.anyM</a> <span class="fn">p</span> <span class="fn"><span class="fn">t</span>.tail</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">t</span>.tail</span></span>)</span></span>)</span></li>
 </ul>
 </details>
 </div>
@@ -1799,7 +1727,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.allM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L312-L314">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L312-L314">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1831,7 +1759,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.allM">Std.PersistentArray.allM</a> <span class="fn">a</span> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let b ←
-    <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.anyM">Std.PersistentArray.anyM</a> <span class="fn">a</span> <span class="fn">fun <span class="fn">v</span> => <span class="fn">do
+    <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.anyM">Std.PersistentArray.anyM</a> <span class="fn">a</span> <span class="fn">fun <span class="fn">v</span> =&gt <span class="fn">do
         let b ← <span class="fn"><span class="fn">p</span> <span class="fn">v</span></span>
         <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn">b</span></span></span></span></span></span>
   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn">b</span></span></span></span></span></li>
@@ -1842,7 +1770,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.any">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L318-L319">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L318-L319">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1872,7 +1800,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.all">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L321-L322">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L321-L322">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1894,7 +1822,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.all">Std.PersistentArray.all</a> <span class="fn">a</span> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.any">Std.PersistentArray.any</a> <span class="fn">a</span> <span class="fn">fun <span class="fn">v</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><span class="fn">p</span> <span class="fn">v</span></span></span></span></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.all">Std.PersistentArray.all</a> <span class="fn">a</span> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.any">Std.PersistentArray.any</a> <span class="fn">a</span> <span class="fn">fun <span class="fn">v</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><span class="fn">p</span> <span class="fn">v</span></span></span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1902,7 +1830,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.mapMAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L328-L330">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L328-L330">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1935,7 +1863,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.mapM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L332-L335">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L332-L335">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1968,11 +1896,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.mapM">Std.PersistentArray.mapM</a> <span class="fn">f</span> <span class="fn">t</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let root ← <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.mapMAux">Std.PersistentArray.mapMAux</a> <span class="fn">f</span> <span class="fn"><span class="fn">t</span>.root</span></span>
-  let tail ← <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mapM">Array.mapM</a> <span class="fn">f</span> <span class="fn"><span class="fn">t</span>.tail</span></span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">{ root := <span class="fn">root</span>, tail := <span class="fn">tail</span>, size := <span class="fn"><span class="fn">t</span>.size</span>, shift := <span class="fn"><span class="fn">t</span>.shift</span>, tailOff := <span class="fn"><span class="fn">t</span>.tailOff</span> }</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1980,7 +1904,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.map">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L339-L340">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L339-L340">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2014,7 +1938,7 @@ tailOff : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.Stats">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L342-L345">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L342-L345">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -2036,7 +1960,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.collectStats">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L347-L353">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L347-L353">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -2054,7 +1978,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.stats">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L355-L356">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L355-L356">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2081,7 +2005,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.Stats.toString">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L358-L359">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L358-L359">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2095,8 +2019,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.Stats.toString">Std.PersistentArray.Stats.toString</a> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">"{nodes := "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn"><span class="fn">s</span>.numNodes</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">", depth := "</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn"><span class="fn">s</span>.depth</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>         <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">", tail size := "</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>       <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn"><span class="fn">s</span>.tailSize</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>     <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">"}"</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2104,7 +2027,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.PersistentArray.instToStringStats">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L361-L361">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L361-L361">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -2125,7 +2048,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.mkPersistentArray">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L365-L366">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L365-L366">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2146,7 +2069,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.mkPersistentArray">Std.mkPersistentArray</a> <span class="fn">n</span> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Data/Nat/Basic.html#Nat.fold">Nat.fold</a> (<span class="fn">fun <span class="fn">i</span> <span class="fn">p</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.push">Std.PersistentArray.push</a> <span class="fn">p</span> <span class="fn">v</span></span></span>) <span class="fn">n</span> <span class="fn">Std.PersistentArray.empty</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.mkPersistentArray">Std.mkPersistentArray</a> <span class="fn">n</span> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Data/Nat/Basic.html#Nat.fold">Nat.fold</a> (<span class="fn">fun <span class="fn">i</span> <span class="fn">p</span> =&gt <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.push">Std.PersistentArray.push</a> <span class="fn">p</span> <span class="fn">v</span></span></span>) <span class="fn">n</span> <span class="fn">Std.PersistentArray.empty</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -2154,7 +2077,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Std.mkPArray">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L368-L369">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L368-L369">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2184,7 +2107,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="List.toPersistentArrayAux">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L375-L377">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L375-L377">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2211,7 +2134,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="List.toPersistentArray">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L379-L380">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L379-L380">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2229,11 +2152,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#List.toPersistentArray">List.toPersistentArray</a> <span class="fn">xs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#List.toPersistentArrayAux">List.toPersistentArrayAux</a> <span class="fn">xs</span>
-    <span class="fn">{ root := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArrayNode.node">Std.PersistentArrayNode.node</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.mkEmpty">Array.mkEmpty</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.branching">Std.PersistentArray.branching</a></span>)</span>)</span>,
-      tail := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.mkEmpty">Array.mkEmpty</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.branching">Std.PersistentArray.branching</a></span>)</span>, size := <span class="fn">0</span>,
-      shift := <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.initShift">Std.PersistentArray.initShift</a>, tailOff := <span class="fn">0</span> }</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2241,7 +2160,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Array.toPersistentArray">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L382-L383">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L382-L383">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2260,7 +2179,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Array.toPersistentArray">Array.toPersistentArray</a> <span class="fn">xs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.foldl">Array.foldl</a> (<span class="fn">fun <span class="fn">p</span> <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.push">Std.PersistentArray.push</a> <span class="fn">p</span> <span class="fn">x</span></span></span>) <span class="fn">Std.PersistentArray.empty</span> <span class="fn">xs</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">xs</span></span>)</span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Array.toPersistentArray">Array.toPersistentArray</a> <span class="fn">xs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.foldl">Array.foldl</a> (<span class="fn">fun <span class="fn">p</span> <span class="fn">x</span> =&gt <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.push">Std.PersistentArray.push</a> <span class="fn">p</span> <span class="fn">x</span></span></span>) <span class="fn">Std.PersistentArray.empty</span> <span class="fn">xs</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">xs</span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -2268,7 +2187,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Array.toPArray">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Std/Data/PersistentArray.lean#L385-L386">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Std/Data/PersistentArray.lean#L385-L386">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2302,10 +2221,10 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <h3>Library</h3>
 <div class="module_list">
 <details class="nav_sect" data-path="/Unicode.lean/Init.html">
-<summary>Init</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
-<summary>Init.Control</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init.html">Init</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
+<summary><a href="/Unicode.lean/Init/Control.html">Init.Control</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Control/Basic.html">Init.Control.Basic</a>
 </div>
 <div class="nav_link">
@@ -2340,10 +2259,10 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data.html">
-<summary>Init.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
-<summary>Init.Data.Array</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
+<summary><a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/Basic.html">Init.Data.Array.Basic</a>
 </div>
 <div class="nav_link">
@@ -2366,32 +2285,32 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ByteArray.html">
-<summary>Init.Data.ByteArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ByteArray/Basic.html">Init.Data.ByteArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Char.html">
-<summary>Init.Data.Char</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Char/Basic.html">Init.Data.Char.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Fin.html">
-<summary>Init.Data.Fin</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Fin/Basic.html">Init.Data.Fin.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/FloatArray.html">
-<summary>Init.Data.FloatArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/FloatArray/Basic.html">Init.Data.FloatArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Format.html">
-<summary>Init.Data.Format</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Format/Basic.html">Init.Data.Format.Basic</a>
 </div>
 <div class="nav_link">
@@ -2405,14 +2324,14 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Int.html">
-<summary>Init.Data.Int</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Int/Basic.html">Init.Data.Int.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/List.html">
-<summary>Init.Data.List</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/List/Basic.html">Init.Data.List.Basic</a>
 </div>
 <div class="nav_link">
@@ -2423,8 +2342,8 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Nat.html">
-<summary>Init.Data.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Basic.html">Init.Data.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -2447,8 +2366,8 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Option.html">
-<summary>Init.Data.Option</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Option/Basic.html">Init.Data.Option.Basic</a>
 </div>
 <div class="nav_link">
@@ -2459,8 +2378,8 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/String.html">
-<summary>Init.Data.String</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/String/Basic.html">Init.Data.String.Basic</a>
 </div>
 <div class="nav_link">
@@ -2468,8 +2387,8 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ToString.html">
-<summary>Init.Data.ToString</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
 </div>
 <div class="nav_link">
@@ -2477,46 +2396,16 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Float.html">Init.Data.Float</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Hashable.html">Init.Data.Hashable</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/OfScientific.html">Init.Data.OfScientific</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
@@ -2537,18 +2426,12 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Init/Data/Stream.html">Init.Data.Stream</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/UInt.html">Init.Data.UInt</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/System.html">
-<summary>Init.System</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/System.html">Init.System</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/System/FilePath.html">Init.System.FilePath</a>
 </div>
 <div class="nav_link">
@@ -2571,16 +2454,10 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Init/Coe.html">Init.Coe</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Control.html">Init.Control</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Conv.html">Init.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Core.html">Init.Core</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Fix.html">Init.Fix</a>
@@ -2610,9 +2487,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/System.html">Init.System</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Util.html">Init.Util</a>
 </div>
 <div class="nav_link">
@@ -2623,12 +2497,12 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean.html">
-<summary>Lean</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
-<summary>Lean.Compiler</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
-<summary>Lean.Compiler.IR</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean.html">Lean</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
+<summary><a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
+<summary><a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html">Lean.Compiler.IR.Basic</a>
 </div>
 <div class="nav_link">
@@ -2714,9 +2588,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Compiler/FFI.html">Lean.Compiler.FFI</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/ImplementedByAttr.html">Lean.Compiler.ImplementedByAttr</a>
 </div>
 <div class="nav_link">
@@ -2742,10 +2613,10 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data.html">
-<summary>Lean.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
-<summary>Lean.Data.Json</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
+<summary><a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json/Basic.html">Lean.Data.Json.Basic</a>
 </div>
 <div class="nav_link">
@@ -2762,8 +2633,8 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Lsp.html">
-<summary>Lean.Data.Lsp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html">Lean.Data.Lsp.Basic</a>
 </div>
 <div class="nav_link">
@@ -2804,8 +2675,8 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Xml.html">
-<summary>Lean.Data.Xml</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Xml/Basic.html">Lean.Data.Xml.Basic</a>
 </div>
 <div class="nav_link">
@@ -2819,9 +2690,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
 </div>
 <div class="nav_link">
@@ -2832,9 +2700,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/LOption.html">Lean.Data.LOption</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Name.html">Lean.Data.Name</a>
@@ -2872,15 +2737,12 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Trie.html">Lean.Data.Trie</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab.html">
-<summary>Lean.Elab</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
-<summary>Lean.Elab.Deriving</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Deriving/BEq.html">Lean.Elab.Deriving.BEq</a>
 </div>
 <div class="nav_link">
@@ -2912,10 +2774,10 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition.html">
-<summary>Lean.Elab.PreDefinition</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
-<summary>Lean.Elab.PreDefinition.Structural</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/BRecOn.html">Lean.Elab.PreDefinition.Structural.BRecOn</a>
 </div>
 <div class="nav_link">
@@ -2941,8 +2803,8 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">
-<summary>Lean.Elab.PreDefinition.WF</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html">Lean.Elab.PreDefinition.WF.Eqns</a>
 </div>
 <div class="nav_link">
@@ -2976,16 +2838,10 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/MkInhabitant.html">Lean.Elab.PreDefinition.MkInhabitant</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Quotation.html">
-<summary>Lean.Elab.Quotation</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html">Lean.Elab.Quotation.Precheck</a>
 </div>
 <div class="nav_link">
@@ -2993,10 +2849,10 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic.html">
-<summary>Lean.Elab.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
-<summary>Lean.Elab.Tactic.Conv</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
 </div>
 <div class="nav_link">
@@ -3029,9 +2885,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Delta.html">Lean.Elab.Tactic.Delta</a>
@@ -3122,9 +2975,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Elab/DefView.html">Lean.Elab.DefView</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
 </div>
 <div class="nav_link">
@@ -3191,13 +3041,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Print.html">Lean.Elab.Print</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/RecAppSyntax.html">Lean.Elab.RecAppSyntax</a>
@@ -3218,9 +3062,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html">Lean.Elab.SyntheticMVars</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Term.html">Lean.Elab.Term</a>
 </div>
 <div class="nav_link">
@@ -3228,10 +3069,10 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta.html">
-<summary>Lean.Meta</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
-<summary>Lean.Meta.Match</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/Basic.html">Lean.Meta.Match.Basic</a>
 </div>
 <div class="nav_link">
@@ -3260,12 +3101,12 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
-<summary>Lean.Meta.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
-<summary>Lean.Meta.Tactic.LinearArith</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
-<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -3282,9 +3123,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
 </div>
 <div class="nav_link">
@@ -3292,8 +3130,8 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
-<summary>Lean.Meta.Tactic.Simp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html">Lean.Meta.Tactic.Simp.Main</a>
 </div>
 <div class="nav_link">
@@ -3364,9 +3202,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rename.html">Lean.Meta.Tactic.Rename</a>
 </div>
 <div class="nav_link">
@@ -3377,9 +3212,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rewrite.html">Lean.Meta.Tactic.Rewrite</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Split.html">Lean.Meta.Tactic.Split</a>
@@ -3491,9 +3323,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/MatchUtil.html">Lean.Meta.MatchUtil</a>
 </div>
 <div class="nav_link">
@@ -3521,9 +3350,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Transform.html">Lean.Meta.Transform</a>
 </div>
 <div class="nav_link">
@@ -3537,8 +3363,8 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Parser.html">
-<summary>Lean.Parser</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Parser/Attr.html">Lean.Parser.Attr</a>
 </div>
 <div class="nav_link">
@@ -3576,16 +3402,16 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/ParserCompiler.html">
-<summary>Lean.ParserCompiler</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html">Lean.ParserCompiler.Attribute</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter.html">
-<summary>Lean.PrettyPrinter</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
-<summary>Lean.PrettyPrinter.Delaborator</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html">Lean.PrettyPrinter.Delaborator.Basic</a>
 </div>
 <div class="nav_link">
@@ -3605,9 +3431,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/PrettyPrinter/Basic.html">Lean.PrettyPrinter.Basic</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Formatter.html">Lean.PrettyPrinter.Formatter</a>
 </div>
 <div class="nav_link">
@@ -3615,10 +3438,10 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server.html">
-<summary>Lean.Server</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
-<summary>Lean.Server.FileWorker</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
+<summary><a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html">Lean.Server.FileWorker.RequestHandling</a>
 </div>
 <div class="nav_link">
@@ -3629,8 +3452,8 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server/Rpc.html">
-<summary>Lean.Server.Rpc</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Rpc/Basic.html">Lean.Server.Rpc.Basic</a>
 </div>
 <div class="nav_link">
@@ -3650,9 +3473,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Server/FileSource.html">Lean.Server.FileSource</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
 </div>
 <div class="nav_link">
@@ -3660,9 +3480,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Requests.html">Lean.Server.Requests</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Snapshots.html">Lean.Server.Snapshots</a>
@@ -3675,8 +3492,8 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Util.html">
-<summary>Lean.Util</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/CollectFVars.html">Lean.Util.CollectFVars</a>
 </div>
 <div class="nav_link">
@@ -3744,8 +3561,8 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Widget.html">
-<summary>Lean.Widget</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html">Lean.Widget.InteractiveCode</a>
 </div>
 <div class="nav_link">
@@ -3768,13 +3585,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Class.html">Lean.Class</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/CoreM.html">Lean.CoreM</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Declaration.html">Lean.Declaration</a>
@@ -3784,9 +3595,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/DocString.html">Lean.DocString</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
@@ -3831,9 +3639,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Message.html">Lean.Message</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/MetavarContext.html">Lean.MetavarContext</a>
 </div>
 <div class="nav_link">
@@ -3841,15 +3646,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/MonadEnv.html">Lean.MonadEnv</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ProjFns.html">Lean.ProjFns</a>
@@ -3867,9 +3663,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/ScopedEnvExtension.html">Lean.ScopedEnvExtension</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Structure.html">Lean.Structure</a>
 </div>
 <div class="nav_link">
@@ -3877,12 +3670,6 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ToExpr.html">Lean.ToExpr</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
@@ -3907,7 +3694,7 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="nav_link">
 <a href="/Unicode.lean/Std/Data/HashSet.html">Std.Data.HashSet</a>
 </div>
-<div class="nav_link" visible="">
+<div class="nav_link visible">
 <a href="/Unicode.lean/Std/Data/PersistentArray.html">Std.Data.PersistentArray</a>
 </div>
 <div class="nav_link">
@@ -3928,10 +3715,10 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Unicode.html">
-<summary>Unicode</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
-<summary>Unicode.General</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Unicode.html">Unicode</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
+<summary><a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
 </div>
 <div class="nav_link">
@@ -3939,26 +3726,10 @@ tailSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Unicode/Includes.html">Unicode.Includes</a>
 </div>
 </details>
 </div>
 </nav>
-<script>
-siteRoot = "/Unicode.lean/";
-      </script>
-<script src="/Unicode.lean/nav.js">
-</script>
-<script src="/Unicode.lean/search.js">
-</script>
-<script src="/Unicode.lean/mathjax-config.js">
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </body>
 </html>

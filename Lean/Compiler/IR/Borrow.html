@@ -1,7 +1,19 @@
 <html lang="en">
 <head>
-<link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><title>Lean.Compiler.IR.Borrow</title>
-<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta></head>
+<title>Lean.Compiler.IR.Borrow</title>
+<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><link rel="prefetch" href="/Unicode.lean/declaration-data.bmp"></link><script defer="true" src="/Unicode.lean/mathjax-config.js">
+</script>
+<script defer="true" src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script defer="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script type="module" src="/Unicode.lean/nav.js">
+</script>
+<script type="module" src="/Unicode.lean/search.js">
+</script>
+<script type="module" src="/Unicode.lean/how-about.js">
+</script>
+</head>
 <body>
 <input id="nav_toggle" type="checkbox"></input><header>
 <h1>
@@ -18,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Compiler.IR.Borrow</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -193,7 +205,7 @@ Documentation</h1>
 <div class="decl" id="Lean.IR.Borrow.OwnedSet.Key">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L15-L15">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L15-L15">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -215,7 +227,7 @@ Documentation</h1>
 <div class="decl" id="Lean.IR.Borrow.OwnedSet.beq">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L17-L18">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L17-L18">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -229,7 +241,7 @@ Documentation</h1>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.OwnedSet.beq">Lean.IR.Borrow.OwnedSet.beq</a> <span class="fn">x</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span>, <span class="fn">x</span> with
-  | <span class="fn">(<span class="fn">f₁</span>, <span class="fn">x₁</span>)</span>, <span class="fn">(<span class="fn">f₂</span>, <span class="fn">x₂</span>)</span> => <span class="fn"><span class="fn"><span class="fn">f₁</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">f₂</span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><span class="fn">x₁</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">x₂</span></span></span></span></span></li>
+  | <span class="fn">(<span class="fn">f₁</span>, <span class="fn">x₁</span>)</span>, <span class="fn">(<span class="fn">f₂</span>, <span class="fn">x₂</span>)</span> =&gt <span class="fn"><span class="fn"><span class="fn">f₁</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">f₂</span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&amp&amp</a> <span class="fn"><span class="fn">x₁</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">x₂</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -237,7 +249,7 @@ Documentation</h1>
 <div class="decl" id="Lean.IR.Borrow.OwnedSet.instBEqKey">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L20-L20">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L20-L20">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -258,7 +270,7 @@ Documentation</h1>
 <div class="decl" id="Lean.IR.Borrow.OwnedSet.getHash">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L22-L23">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L22-L23">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -272,7 +284,7 @@ Documentation</h1>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.OwnedSet.getHash">Lean.IR.Borrow.OwnedSet.getHash</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn">(<span class="fn">f</span>, <span class="fn">x</span>)</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#mixHash">mixHash</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">f</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">x</span></span>)</span></span></span></li>
+  | <span class="fn">(<span class="fn">f</span>, <span class="fn">x</span>)</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#mixHash">mixHash</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">f</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">x</span></span>)</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -280,7 +292,7 @@ Documentation</h1>
 <div class="decl" id="Lean.IR.Borrow.OwnedSet.instHashableKey">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L24-L24">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L24-L24">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -301,7 +313,7 @@ Documentation</h1>
 <div class="decl" id="Lean.IR.Borrow.OwnedSet">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L28-L28">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L28-L28">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -323,7 +335,7 @@ Documentation</h1>
 <div class="decl" id="Lean.IR.Borrow.OwnedSet.insert">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L29-L29">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L29-L29">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -348,7 +360,7 @@ Documentation</h1>
 <div class="decl" id="Lean.IR.Borrow.OwnedSet.contains">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L30-L30">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L30-L30">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -373,7 +385,7 @@ Documentation</h1>
 <div class="decl" id="Lean.IR.Borrow.ParamMap.Key">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L38-L41">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L38-L41">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -393,7 +405,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.ParamMap.instBEqKey">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L41-L41">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L41-L41">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -414,7 +426,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.ParamMap.getHash">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L43-L45">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L43-L45">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -428,8 +440,8 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.getHash">Lean.IR.Borrow.ParamMap.getHash</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.Key.decl">Lean.IR.Borrow.ParamMap.Key.decl</a> <span class="fn">n</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">n</span></span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.Key.jp">Lean.IR.Borrow.ParamMap.Key.jp</a> <span class="fn">n</span> <span class="fn">id</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.Key.jp">mixHash</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">n</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">id</span></span>)</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.Key.decl">Lean.IR.Borrow.ParamMap.Key.decl</a> <span class="fn">n</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">n</span></span>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.Key.jp">Lean.IR.Borrow.ParamMap.Key.jp</a> <span class="fn">n</span> <span class="fn">id</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.Key.jp">mixHash</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">n</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">id</span></span>)</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -437,7 +449,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.ParamMap.instHashableKey">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L47-L47">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L47-L47">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -458,7 +470,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.ParamMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L51-L51">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L51-L51">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -480,7 +492,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.ParamMap.fmt">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L53-L60">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L53-L60">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -494,17 +506,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.fmt">Lean.IR.Borrow.ParamMap.fmt</a> <span class="fn">map</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let fmts :=
-    <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.fold">Std.HashMap.fold</a>
-      (<span class="fn">fun <span class="fn">fmt</span> <span class="fn">k</span> <span class="fn">ps</span> =>
-        <span class="fn">let k :=
-          <span class="fn">match <span class="fn">k</span> with
-          | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.Key.decl">Lean.IR.Borrow.ParamMap.Key.decl</a> <span class="fn">n</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.ToFormat.format">Lean.format</a> <span class="fn">n</span></span>
-          | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.Key.jp">Lean.IR.Borrow.ParamMap.Key.jp</a> <span class="fn">n</span> <span class="fn">id</span></span> => <span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.ToFormat.format">Lean.format</a> <span class="fn">n</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.Format.text">Std.Format.text</a> <span class="fn">":"</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.ToFormat.format">Lean.format</a> <span class="fn">id</span></span></span></span>;
-        <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">fmt</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.Format.line">Lean.Format.line</a></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">k</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.Format.text">Std.Format.text</a> <span class="fn">" -> "</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Format.html#Lean.IR.formatParams">Lean.IR.formatParams</a> <span class="fn">ps</span></span></span></span></span>)
-      <a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.Format.nil">Lean.Format.nil</a> <span class="fn">map</span></span>;
-  <span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.Format.text">Std.Format.text</a> <span class="fn">"{"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.Format.nest">Lean.Format.nest</a> <span class="fn">1</span> <span class="fn">fmts</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.Format.text">Std.Format.text</a> <span class="fn">"}"</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -512,7 +514,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.instToFormatParamMap">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L62-L62">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L62-L62">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -533,7 +535,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.instToStringParamMap">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L63-L63">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L63-L63">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -546,7 +548,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.instToStringParamMap">Lean.IR.Borrow.instToStringParamMap</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toString := <span class="fn">fun <span class="fn">m</span> => <span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.Format.pretty">Lean.Format.pretty</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.ToFormat.format">Lean.format</a> <span class="fn">m</span></span>)</span></span> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.instToStringParamMap">Lean.IR.Borrow.instToStringParamMap</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toString := <span class="fn">fun <span class="fn">m</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.Format.pretty">Lean.Format.pretty</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Format/Basic.html#Std.ToFormat.format">Lean.format</a> <span class="fn">m</span></span>)</span></span> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -554,7 +556,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.InitParamMap.initBorrow">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L67-L68">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L67-L68">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -569,7 +571,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.InitParamMap.initBorrow">Lean.IR.Borrow.InitParamMap.initBorrow</a> <span class="fn">ps</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a> (<span class="fn">fun <span class="fn">p</span> => <span class="fn">{ x := <span class="fn"><span class="fn">p</span>.x</span>, borrow := <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.isObj">Lean.IR.IRType.isObj</a> <span class="fn"><span class="fn">p</span>.ty</span></span>, ty := <span class="fn"><span class="fn">p</span>.ty</span> }</span></span>) <span class="fn">ps</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.InitParamMap.initBorrow">Lean.IR.Borrow.InitParamMap.initBorrow</a> <span class="fn">ps</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a> (<span class="fn">fun <span class="fn">p</span> =&gt <span class="fn">{ x := <span class="fn"><span class="fn">p</span>.x</span>, borrow := <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.isObj">Lean.IR.IRType.isObj</a> <span class="fn"><span class="fn">p</span>.ty</span></span>, ty := <span class="fn"><span class="fn">p</span>.ty</span> }</span></span>) <span class="fn">ps</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -577,7 +579,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.InitParamMap.initBorrowIfNotExported">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L77-L78">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L77-L78">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -602,7 +604,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.InitParamMap.visitFnBody">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L80-L89">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L80-L89">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -618,7 +620,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.InitParamMap.visitDecls">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L91-L97">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L91-L97">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -634,19 +636,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.InitParamMap.visitDecls">Lean.IR.Borrow.InitParamMap.visitDecls</a> <span class="fn">env</span> <span class="fn">decls</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.forM">Array.forM</a>
-    (<span class="fn">fun <span class="fn">decl</span> =>
-      <span class="fn">match <span class="fn">decl</span> with
-      | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Decl.fdecl">Lean.IR.Decl.fdecl</a> <span class="fn">f</span> <span class="fn">xs</span> <span class="fn">x</span> <span class="fn">b</span> <span class="fn">x_1</span></span> =>
-        <span class="fn">let exported := <span class="fn"><a href="/Unicode.lean/Lean/Compiler/ExportAttr.html#Lean.isExport">Lean.isExport</a> <span class="fn">env</span> <span class="fn">f</span></span>;
-        <span class="fn">do
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">m</span> =>
-            <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.insert">Std.HashMap.insert</a> <span class="fn">m</span> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.Key.decl">Lean.IR.Borrow.ParamMap.Key.decl</a> <span class="fn">f</span></span>)
-              (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.InitParamMap.initBorrowIfNotExported">Lean.IR.Borrow.InitParamMap.initBorrowIfNotExported</a> <span class="fn">exported</span> <span class="fn">xs</span></span>)</span></span></span>
-        <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.InitParamMap.visitFnBody">Lean.IR.Borrow.InitParamMap.visitFnBody</a> <span class="fn">f</span> <span class="fn">b</span></span></span></span>
-      | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span></span></span>)
-    <span class="fn">decls</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">decls</span></span>)</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -654,7 +644,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.mkInitParamMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L100-L101">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L100-L101">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -671,7 +661,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.mkInitParamMap">Lean.IR.Borrow.mkInitParamMap</a> <span class="fn">env</span> <span class="fn">decls</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT.run'">StateT.run'</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.InitParamMap.visitDecls">Lean.IR.Borrow.InitParamMap.visitDecls</a> <span class="fn">env</span> <span class="fn">decls</span></span>) <span class="fn">fun <span class="fn">x</span> => <span class="fn">get</span></span></span>) <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.mkInitParamMap">Lean.IR.Borrow.mkInitParamMap</a> <span class="fn">env</span> <span class="fn">decls</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT.run'">StateT.run'</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.InitParamMap.visitDecls">Lean.IR.Borrow.InitParamMap.visitDecls</a> <span class="fn">env</span> <span class="fn">decls</span></span>) <span class="fn">fun <span class="fn">x</span> =&gt <span class="fn">get</span></span></span>) <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -679,7 +669,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.ApplyParamMap.visitFnBody">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L107-L121">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L107-L121">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -697,7 +687,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.ApplyParamMap.visitDecls">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L123-L130">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L123-L130">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -713,19 +703,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ApplyParamMap.visitDecls">Lean.IR.Borrow.ApplyParamMap.visitDecls</a> <span class="fn">decls</span> <span class="fn">paramMap</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a>
-    (<span class="fn">fun <span class="fn">decl</span> =>
-      <span class="fn">match <span class="fn">decl</span> with
-      | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Decl.fdecl">Lean.IR.Decl.fdecl</a> <span class="fn">f</span> <span class="fn">xs</span> <span class="fn">ty</span> <span class="fn">b</span> <span class="fn">info</span></span> =>
-        <span class="fn">let b := <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ApplyParamMap.visitFnBody">Lean.IR.Borrow.ApplyParamMap.visitFnBody</a> <span class="fn">f</span> <span class="fn">paramMap</span> <span class="fn">b</span></span>;
-        <span class="fn">match <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.find?">Std.HashMap.find?</a> <span class="fn">paramMap</span> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.Key.decl">Lean.IR.Borrow.ParamMap.Key.decl</a> <span class="fn">f</span></span>)</span> with
-        | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">xs</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Decl.fdecl">Lean.IR.Decl.fdecl</a> <span class="fn">f</span> <span class="fn">xs</span> <span class="fn">ty</span> <span class="fn">b</span> <span class="fn">info</span></span>
-        | <span class="fn">none</span> =>
-          <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Compiler.IR.Borrow"</span> <span class="fn">"Lean.IR.Borrow.ApplyParamMap.visitDecls"</span> <span class="fn">129</span> <span class="fn">19</span>
-            <span class="fn">"unreachable code has been reached"</span></span></span></span>
-      | <span class="fn">other</span> => <span class="fn">other</span></span></span>)
-    <span class="fn">decls</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -733,7 +711,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.applyParamMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L134-L135">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L134-L135">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -758,7 +736,7 @@ jp: <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.
 <div class="decl" id="Lean.IR.Borrow.BorrowInfCtx">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L137-L141">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L137-L141">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -782,7 +760,7 @@ paramSet : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet">
 <div class="decl" id="Lean.IR.Borrow.BorrowInfState">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L143-L147">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L143-L147">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -804,7 +782,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.M">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L149-L149">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L149-L149">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -828,7 +806,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.getCurrFn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L151-L153">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L151-L153">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -851,7 +829,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.markModified">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L155-L156">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L155-L156">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -864,7 +842,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.markModified">Lean.IR.Borrow.markModified</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">s</span> => <span class="fn">{ owned := <span class="fn"><span class="fn">s</span>.owned</span>, modified := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>, paramMap := <span class="fn"><span class="fn">s</span>.paramMap</span> }</span></span></span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.markModified">Lean.IR.Borrow.markModified</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">s</span> =&gt <span class="fn">{ owned := <span class="fn"><span class="fn">s</span>.owned</span>, modified := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>, paramMap := <span class="fn"><span class="fn">s</span>.paramMap</span> }</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -872,7 +850,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.ownVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L158-L162">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L158-L162">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -886,12 +864,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let currFn ← <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.getCurrFn">Lean.IR.Borrow.getCurrFn</a>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">s</span> =>
-      <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.OwnedSet.contains">Lean.IR.Borrow.OwnedSet.contains</a> <span class="fn"><span class="fn">s</span>.owned</span> <span class="fn">(<span class="fn">currFn</span>, <span class="fn"><span class="fn">x</span>.idx</span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">s</span>
-      else <span class="fn">{ owned := <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.OwnedSet.insert">Lean.IR.Borrow.OwnedSet.insert</a> <span class="fn"><span class="fn">s</span>.owned</span> <span class="fn">(<span class="fn">currFn</span>, <span class="fn"><span class="fn">x</span>.idx</span>)</span></span>, modified := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>, paramMap := <span class="fn"><span class="fn">s</span>.paramMap</span> }</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -899,7 +872,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.ownArg">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L164-L167">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L164-L167">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -915,8 +888,8 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownArg">Lean.IR.Borrow.ownArg</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Arg.var">Lean.IR.Arg.var</a> <span class="fn">x</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">x</span></span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">()</span></span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Arg.var">Lean.IR.Arg.var</a> <span class="fn">x</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">x</span></span>
+  | <span class="fn">x</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">()</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -924,7 +897,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.ownArgs">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L169-L170">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L169-L170">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -947,7 +920,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.isOwned">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L172-L175">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L172-L175">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -973,7 +946,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.updateParamMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L178-L191">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L178-L191">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -987,25 +960,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.updateParamMap">Lean.IR.Borrow.updateParamMap</a> <span class="fn">k</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let _ ← <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.getCurrFn">Lean.IR.Borrow.getCurrFn</a>
-  let s ← <span class="fn">get</span>
-  <span class="fn">match <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.find?">Std.HashMap.find?</a> <span class="fn"><span class="fn">s</span>.paramMap</span> <span class="fn">k</span></span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">ps</span></span> => <span class="fn">do
-      let ps ←
-        <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mapM">Array.mapM</a>
-            (<span class="fn">fun <span class="fn">p</span> =>
-              <span class="fn">if <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><span class="fn">p</span>.borrow</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">p</span></span>
-              else <span class="fn">do
-                let a ← <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.isOwned">Lean.IR.Borrow.isOwned</a> <span class="fn"><span class="fn">p</span>.x</span></span>
-                <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-                    <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.markModified">Lean.IR.Borrow.markModified</a>
-                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">{ x := <span class="fn"><span class="fn">p</span>.x</span>, borrow := <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a>, ty := <span class="fn"><span class="fn">p</span>.ty</span> }</span></span></span>
-                  else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">p</span></span></span></span></span></span>)
-            <span class="fn">ps</span></span>
-      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">s</span> => <span class="fn">{ owned := <span class="fn"><span class="fn">s</span>.owned</span>, modified := <span class="fn"><span class="fn">s</span>.modified</span>, paramMap := <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.insert">Std.HashMap.insert</a> <span class="fn"><span class="fn">s</span>.paramMap</span> <span class="fn">k</span> <span class="fn">ps</span></span> }</span></span></span></span>
-    | <span class="fn">none</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">()</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1013,7 +968,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.getParamInfo">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L193-L204">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L193-L204">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1027,23 +982,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.getParamInfo">Lean.IR.Borrow.getParamInfo</a> <span class="fn">k</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let s ← <span class="fn">get</span>
-  <span class="fn">match <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.find?">Std.HashMap.find?</a> <span class="fn"><span class="fn">s</span>.paramMap</span> <span class="fn">k</span></span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">ps</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">ps</span></span>
-    | <span class="fn">none</span> =>
-      <span class="fn">match <span class="fn">k</span> with
-      | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.Key.decl">Lean.IR.Borrow.ParamMap.Key.decl</a> <span class="fn">fn</span></span> => <span class="fn">do
-        let ctx ← <span class="fn">read</span>
-        <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/CompilerM.html#Lean.IR.findEnvDecl">Lean.IR.findEnvDecl</a> <span class="fn"><span class="fn">ctx</span>.env</span> <span class="fn">fn</span></span> with
-          | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">decl</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Decl.params">Lean.IR.Decl.params</a> <span class="fn">decl</span></span>)</span>
-          | <span class="fn">none</span> =>
-            <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Compiler.IR.Borrow"</span> <span class="fn">"Lean.IR.Borrow.getParamInfo"</span> <span class="fn">203</span> <span class="fn">21</span>
-              <span class="fn">"unreachable code has been reached"</span></span></span></span>
-      | <span class="fn">x</span> =>
-        <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Compiler.IR.Borrow"</span> <span class="fn">"Lean.IR.Borrow.getParamInfo"</span> <span class="fn">204</span> <span class="fn">11</span>
-          <span class="fn">"unreachable code has been reached"</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1051,7 +990,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.ownArgsUsingParams">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L207-L211">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L207-L211">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1067,11 +1006,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownArgsUsingParams">Lean.IR.Borrow.ownArgsUsingParams</a> <span class="fn">xs</span> <span class="fn">ps</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Nat/Control.html#Nat.forM">Nat.forM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">xs</span></span>) <span class="fn">fun <span class="fn">i</span> =>
-    <span class="fn">let x := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn">xs</span> <span class="fn">i</span></span>;
-    <span class="fn">let p := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn">ps</span> <span class="fn">i</span></span>;
-    <span class="fn">if <span class="fn"><span class="fn"><span class="fn">p</span>.borrow</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span> else <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownArg">Lean.IR.Borrow.ownArg</a> <span class="fn">x</span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1079,7 +1014,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.ownParamsUsingArgs">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L218-L224">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L218-L224">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1095,15 +1030,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownParamsUsingArgs">Lean.IR.Borrow.ownParamsUsingArgs</a> <span class="fn">xs</span> <span class="fn">ps</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Nat/Control.html#Nat.forM">Nat.forM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">xs</span></span>) <span class="fn">fun <span class="fn">i</span> =>
-    <span class="fn">let x := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn">xs</span> <span class="fn">i</span></span>;
-    <span class="fn">let p := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn">ps</span> <span class="fn">i</span></span>;
-    <span class="fn">match <span class="fn">x</span> with
-    | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Arg.var">Lean.IR.Arg.var</a> <span class="fn">x</span></span> => <span class="fn">do
-      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.isOwned">Lean.IR.Borrow.isOwned</a> <span class="fn">x</span></span>
-      <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn"><span class="fn">p</span>.x</span></span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span></span></span>
-    | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">()</span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1111,7 +1038,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.ownArgsIfParam">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L236-L241">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L236-L241">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1125,16 +1052,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownArgsIfParam">Lean.IR.Borrow.ownArgsIfParam</a> <span class="fn">xs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let ctx ← <span class="fn">read</span>
-  <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.forM">Array.forM</a>
-      (<span class="fn">fun <span class="fn">x</span> =>
-        <span class="fn">match <span class="fn">x</span> with
-        | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Arg.var">Lean.IR.Arg.var</a> <span class="fn">x</span></span> =>
-          <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Std/Data/RBTree.html#Std.RBTree.contains">Std.RBTree.contains</a> <span class="fn"><span class="fn">ctx</span>.paramSet</span> <span class="fn"><span class="fn">x</span>.idx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">x</span></span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span></span>
-        | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">()</span></span></span></span>)
-      <span class="fn">xs</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">xs</span></span>)</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1142,7 +1060,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.collectExpr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L243-L255">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L243-L255">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1156,32 +1074,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.collectExpr">Lean.IR.Borrow.collectExpr</a> <span class="fn">z</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.pap">Lean.IR.Expr.reset</a> <span class="fn">x</span> <span class="fn">x_1</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">z</span></span>) <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">x_1</span></span></span></span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.reuse">Lean.IR.Expr.reuse</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">ys</span></span> =>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">z</span></span>) <span class="fn">fun <span class="fn">x_3</span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">x</span></span></span></span>) <span class="fn">fun <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownArgsIfParam">Lean.IR.Borrow.ownArgsIfParam</a> <span class="fn">ys</span></span></span></span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.pap">Lean.IR.Expr.ctor</a> <span class="fn">x</span> <span class="fn">xs</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">z</span></span>) <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownArgsIfParam">Lean.IR.Borrow.ownArgsIfParam</a> <span class="fn">xs</span></span></span></span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.pap">Lean.IR.Expr.proj</a> <span class="fn">x</span> <span class="fn">x_1</span></span> => <span class="fn">do
-    let a ← <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.isOwned">Lean.IR.Borrow.isOwned</a> <span class="fn">x_1</span></span>
-    let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.M">Lean.IR.Borrow.M</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn">do
-      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.isOwned">Lean.IR.Borrow.isOwned</a> <span class="fn">z</span></span>
-      <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">x_1</span></span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span></span></span></span>
-    <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-        let y ← <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">z</span></span>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-      else <span class="fn">do
-        let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.pap">Lean.IR.Expr.fap</a> <span class="fn">g</span> <span class="fn">xs</span></span> => <span class="fn">do
-    let ps ← <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.getParamInfo">Lean.IR.Borrow.getParamInfo</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.Key.decl">Lean.IR.Borrow.ParamMap.Key.decl</a> <span class="fn">g</span></span>)</span>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">z</span></span>) <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownArgsUsingParams">Lean.IR.Borrow.ownArgsUsingParams</a> <span class="fn">xs</span> <span class="fn">ps</span></span></span></span></span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.pap">Lean.IR.Expr.ap</a> <span class="fn">x</span> <span class="fn">ys</span></span> =>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">z</span></span>) <span class="fn">fun <span class="fn">x_1</span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">x</span></span></span></span>) <span class="fn">fun <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownArgs">Lean.IR.Borrow.ownArgs</a> <span class="fn">ys</span></span></span></span>
-  | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.pap">Lean.IR.Expr.pap</a> <span class="fn">x</span> <span class="fn">xs</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownVar">Lean.IR.Borrow.ownVar</a> <span class="fn">z</span></span>) <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownArgs">Lean.IR.Borrow.ownArgs</a> <span class="fn">xs</span></span></span></span>
-  | <span class="fn">other</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">()</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1189,7 +1082,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.preserveTailCall">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L257-L264">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L257-L264">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1207,16 +1100,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.preserveTailCall">Lean.IR.Borrow.preserveTailCall</a> <span class="fn">x</span> <span class="fn">v</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let ctx ← <span class="fn">read</span>
-  <span class="fn">match <span class="fn">v</span>, <span class="fn">b</span> with
-    | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.fap">Lean.IR.Expr.fap</a> <span class="fn">g</span> <span class="fn">ys</span></span>, <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.FnBody.ret">Lean.IR.FnBody.ret</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Arg.var">Lean.IR.Arg.var</a> <span class="fn">z</span></span>)</span> =>
-      <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.any">Array.any</a> <span class="fn"><span class="fn">ctx</span>.decls</span> (<span class="fn">fun <span class="fn">a</span> => <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Decl.name">Lean.IR.Decl.name</a> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">g</span></span></span>) <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">ctx</span>.decls</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><span class="fn">x</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">z</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-        let ps ← <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.getParamInfo">Lean.IR.Borrow.getParamInfo</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.Key.decl">Lean.IR.Borrow.ParamMap.Key.decl</a> <span class="fn">g</span></span>)</span>
-        <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ownParamsUsingArgs">Lean.IR.Borrow.ownParamsUsingArgs</a> <span class="fn">ys</span> <span class="fn">ps</span></span></span>
-      else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span></span>
-    | <span class="fn">x</span>, <span class="fn">x_1</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">()</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1224,7 +1108,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.updateParamSet">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L266-L267">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L266-L267">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1240,9 +1124,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.updateParamSet">Lean.IR.Borrow.updateParamSet</a> <span class="fn">ctx</span> <span class="fn">ps</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ env := <span class="fn"><span class="fn">ctx</span>.env</span>, decls := <span class="fn"><span class="fn">ctx</span>.decls</span>, currFn := <span class="fn"><span class="fn">ctx</span>.currFn</span>,
-    paramSet := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.foldl">Array.foldl</a> (<span class="fn">fun <span class="fn">s</span> <span class="fn">p</span> => <span class="fn"><a href="/Unicode.lean/Std/Data/RBTree.html#Std.RBTree.insert">Std.RBTree.insert</a> <span class="fn">s</span> <span class="fn"><span class="fn"><span class="fn">p</span>.x</span>.idx</span></span></span>) <span class="fn"><span class="fn">ctx</span>.paramSet</span> <span class="fn">ps</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">ps</span></span>)</span> }</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1250,7 +1132,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.collectFnBody">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L269-L282">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L269-L282">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1264,7 +1146,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.collectDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L284-L289">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L284-L289">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1276,17 +1158,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.collectDecl">Lean.IR.Borrow.collectDecl</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Decl.fdecl">Lean.IR.Decl.fdecl</a> <span class="fn">f</span> <span class="fn">ys</span> <span class="fn">x</span> <span class="fn">b</span> <span class="fn">x_1</span></span> =>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadWithReader.withReader">withReader</a>
-      (<span class="fn">fun <span class="fn">ctx</span> =>
-        <span class="fn">let ctx := <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.updateParamSet">Lean.IR.Borrow.updateParamSet</a> <span class="fn">ctx</span> <span class="fn">ys</span></span>;
-        <span class="fn">{ env := <span class="fn"><span class="fn">ctx</span>.env</span>, decls := <span class="fn"><span class="fn">ctx</span>.decls</span>, currFn := <span class="fn">f</span>, paramSet := <span class="fn"><span class="fn">ctx</span>.paramSet</span> }</span></span></span>)
-      <span class="fn">do
-      <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.collectFnBody">Lean.IR.Borrow.collectFnBody</a> <span class="fn">b</span></span>
-      <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.updateParamMap">Lean.IR.Borrow.updateParamMap</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.ParamMap.Key.decl">Lean.IR.Borrow.ParamMap.Key.decl</a> <span class="fn">f</span></span>)</span></span></span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1294,7 +1166,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.whileModifing">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L292-L299">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L292-L299">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1311,7 +1183,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.collectDecls">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L301-L304">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L301-L304">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1336,7 +1208,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.Borrow.infer">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L306-L307">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L306-L307">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1352,9 +1224,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.infer">Lean.IR.Borrow.infer</a> <span class="fn">env</span> <span class="fn">decls</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT.run'">StateT.run'</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.collectDecls">Lean.IR.Borrow.collectDecls</a> <span class="fn">{ env := <span class="fn">env</span>, decls := <span class="fn">decls</span>, currFn := <span class="fn">default</span>, paramSet := <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span> }</span></span>)
-    <span class="fn">{ owned := <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span>, modified := <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a>, paramMap := <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.mkInitParamMap">Lean.IR.Borrow.mkInitParamMap</a> <span class="fn">env</span> <span class="fn">decls</span></span> }</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1362,7 +1232,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="decl" id="Lean.IR.inferBorrow">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Borrow.lean#L311-L314">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Compiler/IR/Borrow.lean#L311-L314">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1394,10 +1264,10 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <h3>Library</h3>
 <div class="module_list">
 <details class="nav_sect" data-path="/Unicode.lean/Init.html">
-<summary>Init</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
-<summary>Init.Control</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init.html">Init</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
+<summary><a href="/Unicode.lean/Init/Control.html">Init.Control</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Control/Basic.html">Init.Control.Basic</a>
 </div>
 <div class="nav_link">
@@ -1432,10 +1302,10 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data.html">
-<summary>Init.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
-<summary>Init.Data.Array</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
+<summary><a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/Basic.html">Init.Data.Array.Basic</a>
 </div>
 <div class="nav_link">
@@ -1458,32 +1328,32 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ByteArray.html">
-<summary>Init.Data.ByteArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ByteArray/Basic.html">Init.Data.ByteArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Char.html">
-<summary>Init.Data.Char</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Char/Basic.html">Init.Data.Char.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Fin.html">
-<summary>Init.Data.Fin</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Fin/Basic.html">Init.Data.Fin.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/FloatArray.html">
-<summary>Init.Data.FloatArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/FloatArray/Basic.html">Init.Data.FloatArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Format.html">
-<summary>Init.Data.Format</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Format/Basic.html">Init.Data.Format.Basic</a>
 </div>
 <div class="nav_link">
@@ -1497,14 +1367,14 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Int.html">
-<summary>Init.Data.Int</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Int/Basic.html">Init.Data.Int.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/List.html">
-<summary>Init.Data.List</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/List/Basic.html">Init.Data.List.Basic</a>
 </div>
 <div class="nav_link">
@@ -1515,8 +1385,8 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Nat.html">
-<summary>Init.Data.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Basic.html">Init.Data.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -1539,8 +1409,8 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Option.html">
-<summary>Init.Data.Option</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Option/Basic.html">Init.Data.Option.Basic</a>
 </div>
 <div class="nav_link">
@@ -1551,8 +1421,8 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/String.html">
-<summary>Init.Data.String</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/String/Basic.html">Init.Data.String.Basic</a>
 </div>
 <div class="nav_link">
@@ -1560,8 +1430,8 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ToString.html">
-<summary>Init.Data.ToString</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
 </div>
 <div class="nav_link">
@@ -1569,46 +1439,16 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Float.html">Init.Data.Float</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Hashable.html">Init.Data.Hashable</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/OfScientific.html">Init.Data.OfScientific</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
@@ -1629,18 +1469,12 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Init/Data/Stream.html">Init.Data.Stream</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/UInt.html">Init.Data.UInt</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/System.html">
-<summary>Init.System</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/System.html">Init.System</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/System/FilePath.html">Init.System.FilePath</a>
 </div>
 <div class="nav_link">
@@ -1663,16 +1497,10 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Init/Coe.html">Init.Coe</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Control.html">Init.Control</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Conv.html">Init.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Core.html">Init.Core</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Fix.html">Init.Fix</a>
@@ -1702,9 +1530,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/System.html">Init.System</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Util.html">Init.Util</a>
 </div>
 <div class="nav_link">
@@ -1715,15 +1540,15 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean.html" open="">
-<summary>Lean</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html" open="">
-<summary>Lean.Compiler</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html" open="">
-<summary>Lean.Compiler.IR</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean.html">Lean</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html" open="">
+<summary><a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html" open="">
+<summary><a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html">Lean.Compiler.IR.Basic</a>
 </div>
-<div class="nav_link" visible="">
+<div class="nav_link visible">
 <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html">Lean.Compiler.IR.Borrow</a>
 </div>
 <div class="nav_link">
@@ -1806,9 +1631,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Lean/Compiler/FFI.html">Lean.Compiler.FFI</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/ImplementedByAttr.html">Lean.Compiler.ImplementedByAttr</a>
 </div>
 <div class="nav_link">
@@ -1834,10 +1656,10 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data.html">
-<summary>Lean.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
-<summary>Lean.Data.Json</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
+<summary><a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json/Basic.html">Lean.Data.Json.Basic</a>
 </div>
 <div class="nav_link">
@@ -1854,8 +1676,8 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Lsp.html">
-<summary>Lean.Data.Lsp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html">Lean.Data.Lsp.Basic</a>
 </div>
 <div class="nav_link">
@@ -1896,8 +1718,8 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Xml.html">
-<summary>Lean.Data.Xml</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Xml/Basic.html">Lean.Data.Xml.Basic</a>
 </div>
 <div class="nav_link">
@@ -1911,9 +1733,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
 </div>
 <div class="nav_link">
@@ -1924,9 +1743,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/LOption.html">Lean.Data.LOption</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Name.html">Lean.Data.Name</a>
@@ -1964,15 +1780,12 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Trie.html">Lean.Data.Trie</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab.html">
-<summary>Lean.Elab</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
-<summary>Lean.Elab.Deriving</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Deriving/BEq.html">Lean.Elab.Deriving.BEq</a>
 </div>
 <div class="nav_link">
@@ -2004,10 +1817,10 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition.html">
-<summary>Lean.Elab.PreDefinition</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
-<summary>Lean.Elab.PreDefinition.Structural</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/BRecOn.html">Lean.Elab.PreDefinition.Structural.BRecOn</a>
 </div>
 <div class="nav_link">
@@ -2033,8 +1846,8 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">
-<summary>Lean.Elab.PreDefinition.WF</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html">Lean.Elab.PreDefinition.WF.Eqns</a>
 </div>
 <div class="nav_link">
@@ -2068,16 +1881,10 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/MkInhabitant.html">Lean.Elab.PreDefinition.MkInhabitant</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Quotation.html">
-<summary>Lean.Elab.Quotation</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html">Lean.Elab.Quotation.Precheck</a>
 </div>
 <div class="nav_link">
@@ -2085,10 +1892,10 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic.html">
-<summary>Lean.Elab.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
-<summary>Lean.Elab.Tactic.Conv</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
 </div>
 <div class="nav_link">
@@ -2121,9 +1928,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Delta.html">Lean.Elab.Tactic.Delta</a>
@@ -2214,9 +2018,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Lean/Elab/DefView.html">Lean.Elab.DefView</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
 </div>
 <div class="nav_link">
@@ -2283,13 +2084,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Print.html">Lean.Elab.Print</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/RecAppSyntax.html">Lean.Elab.RecAppSyntax</a>
@@ -2310,9 +2105,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html">Lean.Elab.SyntheticMVars</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Term.html">Lean.Elab.Term</a>
 </div>
 <div class="nav_link">
@@ -2320,10 +2112,10 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta.html">
-<summary>Lean.Meta</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
-<summary>Lean.Meta.Match</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/Basic.html">Lean.Meta.Match.Basic</a>
 </div>
 <div class="nav_link">
@@ -2352,12 +2144,12 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
-<summary>Lean.Meta.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
-<summary>Lean.Meta.Tactic.LinearArith</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
-<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -2374,9 +2166,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
 </div>
 <div class="nav_link">
@@ -2384,8 +2173,8 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
-<summary>Lean.Meta.Tactic.Simp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html">Lean.Meta.Tactic.Simp.Main</a>
 </div>
 <div class="nav_link">
@@ -2456,9 +2245,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rename.html">Lean.Meta.Tactic.Rename</a>
 </div>
 <div class="nav_link">
@@ -2469,9 +2255,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rewrite.html">Lean.Meta.Tactic.Rewrite</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Split.html">Lean.Meta.Tactic.Split</a>
@@ -2583,9 +2366,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/MatchUtil.html">Lean.Meta.MatchUtil</a>
 </div>
 <div class="nav_link">
@@ -2613,9 +2393,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Transform.html">Lean.Meta.Transform</a>
 </div>
 <div class="nav_link">
@@ -2629,8 +2406,8 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Parser.html">
-<summary>Lean.Parser</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Parser/Attr.html">Lean.Parser.Attr</a>
 </div>
 <div class="nav_link">
@@ -2668,16 +2445,16 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/ParserCompiler.html">
-<summary>Lean.ParserCompiler</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html">Lean.ParserCompiler.Attribute</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter.html">
-<summary>Lean.PrettyPrinter</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
-<summary>Lean.PrettyPrinter.Delaborator</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html">Lean.PrettyPrinter.Delaborator.Basic</a>
 </div>
 <div class="nav_link">
@@ -2697,9 +2474,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Lean/PrettyPrinter/Basic.html">Lean.PrettyPrinter.Basic</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Formatter.html">Lean.PrettyPrinter.Formatter</a>
 </div>
 <div class="nav_link">
@@ -2707,10 +2481,10 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server.html">
-<summary>Lean.Server</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
-<summary>Lean.Server.FileWorker</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
+<summary><a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html">Lean.Server.FileWorker.RequestHandling</a>
 </div>
 <div class="nav_link">
@@ -2721,8 +2495,8 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server/Rpc.html">
-<summary>Lean.Server.Rpc</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Rpc/Basic.html">Lean.Server.Rpc.Basic</a>
 </div>
 <div class="nav_link">
@@ -2742,9 +2516,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Lean/Server/FileSource.html">Lean.Server.FileSource</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
 </div>
 <div class="nav_link">
@@ -2752,9 +2523,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Requests.html">Lean.Server.Requests</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Snapshots.html">Lean.Server.Snapshots</a>
@@ -2767,8 +2535,8 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Util.html">
-<summary>Lean.Util</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/CollectFVars.html">Lean.Util.CollectFVars</a>
 </div>
 <div class="nav_link">
@@ -2836,8 +2604,8 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Widget.html">
-<summary>Lean.Widget</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html">Lean.Widget.InteractiveCode</a>
 </div>
 <div class="nav_link">
@@ -2860,13 +2628,7 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Lean/Class.html">Lean.Class</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/CoreM.html">Lean.CoreM</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Declaration.html">Lean.Declaration</a>
@@ -2876,9 +2638,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/DocString.html">Lean.DocString</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
@@ -2923,9 +2682,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Lean/Message.html">Lean.Message</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/MetavarContext.html">Lean.MetavarContext</a>
 </div>
 <div class="nav_link">
@@ -2933,15 +2689,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/MonadEnv.html">Lean.MonadEnv</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ProjFns.html">Lean.ProjFns</a>
@@ -2959,9 +2706,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 <a href="/Unicode.lean/Lean/ScopedEnvExtension.html">Lean.ScopedEnvExtension</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Structure.html">Lean.Structure</a>
 </div>
 <div class="nav_link">
@@ -2969,12 +2713,6 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ToExpr.html">Lean.ToExpr</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
@@ -3020,10 +2758,10 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Unicode.html">
-<summary>Unicode</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
-<summary>Unicode.General</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Unicode.html">Unicode</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
+<summary><a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
 </div>
 <div class="nav_link">
@@ -3031,26 +2769,10 @@ paramMap : <a href="/Unicode.lean/Lean/Compiler/IR/Borrow.html#Lean.IR.Borrow.Pa
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Unicode/Includes.html">Unicode.Includes</a>
 </div>
 </details>
 </div>
 </nav>
-<script>
-siteRoot = "/Unicode.lean/";
-      </script>
-<script src="/Unicode.lean/nav.js">
-</script>
-<script src="/Unicode.lean/search.js">
-</script>
-<script src="/Unicode.lean/mathjax-config.js">
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </body>
 </html>

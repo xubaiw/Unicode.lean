@@ -1,7 +1,19 @@
 <html lang="en">
 <head>
-<link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><title>Lean.Meta.CongrTheorems</title>
-<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta></head>
+<title>Lean.Meta.CongrTheorems</title>
+<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><link rel="prefetch" href="/Unicode.lean/declaration-data.bmp"></link><script defer="true" src="/Unicode.lean/mathjax-config.js">
+</script>
+<script defer="true" src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script defer="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script type="module" src="/Unicode.lean/nav.js">
+</script>
+<script type="module" src="/Unicode.lean/search.js">
+</script>
+<script type="module" src="/Unicode.lean/how-about.js">
+</script>
+</head>
 <body>
 <input id="nav_toggle" type="checkbox"></input><header>
 <h1>
@@ -18,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Meta.CongrTheorems</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -97,7 +109,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.CongrArgKind">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L10-L33">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L10-L33">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -125,7 +137,7 @@ subsingletonInst: <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.
 <div class="decl" id="Lean.Meta.instInhabitedCongrArgKind">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L33-L33">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L33-L33">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -146,7 +158,7 @@ subsingletonInst: <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.
 <div class="decl" id="Lean.Meta.CongrTheorem">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L35-L38">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L35-L38">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -168,7 +180,7 @@ argKinds : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arra
 <div class="decl" id="Lean.Meta.mkHCongrWithArity">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L54-L113">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L54-L113">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -184,57 +196,7 @@ argKinds : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arra
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.mkHCongrWithArity">Lean.Meta.mkHCongrWithArity</a> <span class="fn">f</span> <span class="fn">numArgs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let fType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">f</span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallBoundedTelescope">Lean.Meta.forallBoundedTelescope</a> <span class="fn">fType</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">numArgs</span></span>) <span class="fn">fun <span class="fn">xs</span> <span class="fn">xType</span> =>
-      <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallBoundedTelescope">Lean.Meta.forallBoundedTelescope</a> <span class="fn">fType</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">numArgs</span></span>) <span class="fn">fun <span class="fn">ys</span> <span class="fn">yType</span> =>
-        <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">xs</span></span> <a href="/Unicode.lean/Init/Core.html#bne">!=</a> <span class="fn">numArgs</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-          <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a> (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"failed to generate hcongr theorem, insufficient number of arguments"</span></span>)</span>
-        else <span class="fn">do
-          let a ← <span class="fn">Lean.getLCtx</span>
-          let lctx : <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext">Lean.LocalContext</a> :=
-            <span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#_private.Lean.Meta.CongrTheorems.0.Lean.Meta.setBinderInfosD">Lean.Meta.setBinderInfosD</a> <span class="fn">xs</span> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#_private.Lean.Meta.CongrTheorems.0.Lean.Meta.setBinderInfosD">Lean.Meta.setBinderInfosD</a> <span class="fn">ys</span> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#_private.Lean.Meta.CongrTheorems.0.Lean.Meta.addPrimeToFVarUserNames">Lean.Meta.addPrimeToFVarUserNames</a> <span class="fn">ys</span> <span class="fn">a</span></span>)</span>)</span>
-          let a ← <a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.getLocalInstances">Lean.Meta.getLocalInstances</a>
-          <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLCtx">Lean.Meta.withLCtx</a> <span class="fn">lctx</span> <span class="fn">a</span>
-              (<span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.mkHCongrWithArity.withNewEqs">Lean.Meta.mkHCongrWithArity.withNewEqs</a> <span class="fn">xs</span> <span class="fn">ys</span> <span class="fn">fun <span class="fn">eqs</span> <span class="fn">argKinds</span> =>
-                <span class="fn">let hs := <span class="fn">#[]</span>;
-                <span class="fn">let s := <span class="fn"><a href="/Unicode.lean/Init/Data/Stream.html#ToStream.toStream">toStream</a> <span class="fn">ys</span></span>;
-                <span class="fn">let s_1 := <span class="fn"><a href="/Unicode.lean/Init/Data/Stream.html#ToStream.toStream">toStream</a> <span class="fn">eqs</span></span>;
-                <span class="fn">do
-                let r ←
-                  <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">xs</span> <span class="fn">{ fst := <span class="fn">s</span>, snd := <span class="fn">{ fst := <span class="fn">s_1</span>, snd := <span class="fn">hs</span> }</span> }</span> <span class="fn">fun <span class="fn">x</span> <span class="fn">r</span> =>
-                      <span class="fn">let s := <span class="fn"><span class="fn">r</span>.fst</span>;
-                      <span class="fn">let x_1 := <span class="fn"><span class="fn">r</span>.snd</span>;
-                      <span class="fn">let s_2 := <span class="fn"><span class="fn">x_1</span>.fst</span>;
-                      <span class="fn">let hs := <span class="fn"><span class="fn">x_1</span>.snd</span>;
-                      <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Data/Stream.html#Stream.next?">Stream.next?</a> <span class="fn">s_2</span></span> with
-                      | <span class="fn">none</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn">s</span>, snd := <span class="fn">{ fst := <span class="fn">s_2</span>, snd := <span class="fn">hs</span> }</span> }</span></span>)</span>
-                      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">eq</span>, <span class="fn">s'</span>)</span></span> =>
-                        <span class="fn">let s_3 := <span class="fn">s'</span>;
-                        <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Data/Stream.html#Stream.next?">Stream.next?</a> <span class="fn">s</span></span> with
-                        | <span class="fn">none</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn">s</span>, snd := <span class="fn">{ fst := <span class="fn">s_3</span>, snd := <span class="fn">hs</span> }</span> }</span></span>)</span>
-                        | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">y</span>, <span class="fn">s'</span>)</span></span> =>
-                          <span class="fn">let s := <span class="fn">s'</span>;
-                          <span class="fn">let hs := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">hs</span> <span class="fn">x</span></span>) <span class="fn">y</span></span>) <span class="fn">eq</span></span>;
-                          <span class="fn">do
-                          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">s</span>, snd := <span class="fn">{ fst := <span class="fn">s_3</span>, snd := <span class="fn">hs</span> }</span> }</span></span>)</span></span></span></span></span></span></span></span></span></span></span></span></span>
-                let x : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MProd">MProd</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Subarray">Subarray</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MProd">MProd</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Subarray">Subarray</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span>)</span> := <span class="fn">r</span>
-                <span class="fn">match <span class="fn">x</span> with
-                  | <span class="fn">{ fst := <span class="fn">s</span>, snd := <span class="fn">{ fst := <span class="fn">s_2</span>, snd := <span class="fn">hs</span> }</span> }</span> =>
-                    <span class="fn">let xType := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.consumeTypeAnnotations">Lean.Expr.consumeTypeAnnotations</a> <span class="fn">xType</span></span>;
-                    <span class="fn">let yType := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.consumeTypeAnnotations">Lean.Expr.consumeTypeAnnotations</a> <span class="fn">yType</span></span>;
-                    <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">resultType</span> => <span class="fn">do
-                      let congrType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">hs</span> <span class="fn">resultType</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
-                      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.mkHCongrWithArity.mkProof">Lean.Meta.mkHCongrWithArity.mkProof</a> <span class="fn">congrType</span></span>
-                      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">{ type := <span class="fn">congrType</span>, proof := <span class="fn">a</span>, argKinds := <span class="fn">argKinds</span> }</span></span></span></span>;
-                    <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">xType</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">yType</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-                      let y ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEq">Lean.Meta.mkEq</a> <span class="fn">xType</span> <span class="fn">yType</span></span>
-                      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-                    else <span class="fn">do
-                      let y ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkHEq">Lean.Meta.mkHEq</a> <span class="fn">xType</span> <span class="fn">yType</span></span>
-                      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></span></span></span></span></span>)</span></span></span></span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -242,7 +204,7 @@ argKinds : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arra
 <div class="decl" id="Lean.Meta.mkHCongrWithArity.withNewEqs">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L77-L92">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L77-L92">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -273,7 +235,7 @@ argKinds : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arra
 <div class="decl" id="Lean.Meta.mkHCongrWithArity.withNewEqs.loop">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L78-L91">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L78-L91">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -303,7 +265,7 @@ argKinds : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arra
 <div class="decl" id="Lean.Meta.mkHCongrWithArity.mkProof">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L94-L113">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L94-L113">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -319,7 +281,7 @@ argKinds : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arra
 <div class="decl" id="Lean.Meta.mkHCongr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L115-L116">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L115-L116">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -344,7 +306,7 @@ argKinds : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arra
 <div class="decl" id="Lean.Meta.getCongrSimpKinds">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L173-L195">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L173-L195">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -358,45 +320,7 @@ argKinds : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arra
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.getCongrSimpKinds">Lean.Meta.getCongrSimpKinds</a> <span class="fn">info</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Control/Id.html#Id.run">Id.run</a>
-    (<span class="fn">let result := <span class="fn">#[]</span>;
-    <span class="fn">do
-    let r ←
-      <span class="fn">let col := <span class="fn">{ start := <span class="fn">0</span>, stop := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">info</span>.paramInfo</span></span>, step := <span class="fn">1</span> }</span>;
-        <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">col</span> <span class="fn">result</span> <span class="fn">fun <span class="fn">i</span> <span class="fn">r</span> =>
-          <span class="fn">let result := <span class="fn">r</span>;
-          <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.contains">Array.contains</a> <span class="fn"><span class="fn">info</span>.resultDeps</span> <span class="fn">i</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-            <span class="fn">let result := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">result</span> <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.CongrArgKind.fixed">Lean.Meta.CongrArgKind.fixed</a></span>;
-            <span class="fn">do
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">result</span></span>)</span></span></span>
-          else
-            <span class="fn">if <span class="fn"><span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn"><span class="fn">info</span>.paramInfo</span> <span class="fn">i</span></span>).isProp</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-              <span class="fn">let result := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">result</span> <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.CongrArgKind.cast">Lean.Meta.CongrArgKind.cast</a></span>;
-              <span class="fn">do
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">result</span></span>)</span></span></span>
-            else
-              <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.ParamInfo.isInstImplicit">Lean.Meta.ParamInfo.isInstImplicit</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn"><span class="fn">info</span>.paramInfo</span> <span class="fn">i</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-                <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#_private.Lean.Meta.CongrTheorems.0.Lean.Meta.shouldUseSubsingletonInst">Lean.Meta.shouldUseSubsingletonInst</a> <span class="fn">info</span> <span class="fn">result</span> <span class="fn">i</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-                  <span class="fn">let result := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">result</span> <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.CongrArgKind.subsingletonInst">Lean.Meta.CongrArgKind.subsingletonInst</a></span>;
-                  <span class="fn">do
-                  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">result</span></span>)</span></span></span>
-                else
-                  <span class="fn">let result := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">result</span> <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.CongrArgKind.fixed">Lean.Meta.CongrArgKind.fixed</a></span>;
-                  <span class="fn">do
-                  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">result</span></span>)</span></span></span></span>
-              else
-                <span class="fn">let result := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">result</span> <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.CongrArgKind.eq">Lean.Meta.CongrArgKind.eq</a></span>;
-                <span class="fn">do
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">result</span></span>)</span></span></span></span></span></span></span></span></span></span>
-    let x : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.CongrArgKind">Lean.Meta.CongrArgKind</a></span> := <span class="fn">r</span>
-    let result : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.CongrArgKind">Lean.Meta.CongrArgKind</a></span> := <span class="fn">x</span>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#_private.Lean.Meta.CongrTheorems.0.Lean.Meta.fixKindsForDependencies">Lean.Meta.fixKindsForDependencies</a> <span class="fn">info</span> <span class="fn">result</span></span>)</span></span></span>)</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -404,7 +328,7 @@ argKinds : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arra
 <div class="decl" id="Lean.Meta.mkCongrSimpCore?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L200-L279">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L200-L279">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -419,38 +343,18 @@ argKinds : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arra
 <span class="fn">(kinds : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.CongrArgKind">Lean.Meta.CongrArgKind</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.CongrTheorem">Lean.Meta.CongrTheorem</a></span>)</span></div></div>
-<details>
+<p>Create a congruence theorem that is useful for the simplifier.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.mkCongrSimpCore?">Lean.Meta.mkCongrSimpCore?</a> <span class="fn">f</span> <span class="fn">info</span> <span class="fn">kinds</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.mkCongrSimpCore?.mk?">Lean.Meta.mkCongrSimpCore?.mk?</a> <span class="fn">f</span> <span class="fn">info</span> <span class="fn">kinds</span></span>
-  <span class="fn">match <span class="fn">a</span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">result</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">result</span></span>)</span>
-    | <span class="fn">x</span> =>
-      <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#_private.Lean.Meta.CongrTheorems.0.Lean.Meta.hasCastLike">Lean.Meta.hasCastLike</a> <span class="fn">kinds</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-        <span class="fn">let kinds :=
-          <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a>
-            (<span class="fn">fun <span class="fn">kind</span> =>
-              <span class="fn">if
-                  <span class="fn">(<span class="fn">(<span class="fn">match <span class="fn">kind</span> with
-                      | <span class="fn">Lean.Meta.CongrArgKind.cast</span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-                      | <span class="fn">x</span> => <span class="fn">false</span></span>) <a href="/Unicode.lean/Init/Prelude.html#or">||</a>                       <span class="fn">match <span class="fn">kind</span> with
-                      | <span class="fn">Lean.Meta.CongrArgKind.subsingletonInst</span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-                      | <span class="fn">x</span> => <span class="fn">false</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>                     <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-                <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.CongrArgKind.fixed">Lean.Meta.CongrArgKind.fixed</a>
-              else <span class="fn">kind</span></span></span>)
-            <span class="fn">kinds</span></span>;
-        <span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.mkCongrSimpCore?.mk?">Lean.Meta.mkCongrSimpCore?.mk?</a> <span class="fn">f</span> <span class="fn">info</span> <span class="fn">kinds</span></span></span>
-      else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>Create a congruence theorem that is useful for the simplifier.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkCongrSimpCore?.mk?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L218-L251">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L218-L251">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -465,46 +369,23 @@ argKinds : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arra
 <span class="fn">(kinds : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.CongrArgKind">Lean.Meta.CongrArgKind</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.CongrTheorem">Lean.Meta.CongrTheorem</a></span>)</span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.mkCongrSimpCore?.mk?">Lean.Meta.mkCongrSimpCore?.mk?</a> <span class="fn">f</span> <span class="fn">info</span> <span class="fn">kinds</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let r ←
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.tryCatch">tryCatch</a>
-        (<span class="fn">do
-          let fType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">f</span></span>
-          let y ←
-            <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallBoundedTelescope">Lean.Meta.forallBoundedTelescope</a> <span class="fn">fType</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">kinds</span></span>)</span>) <span class="fn">fun <span class="fn">lhss</span> <span class="fn">xType</span> =>
-                <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn">do
-                  let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/CongrTheorems.html#Lean.Meta.mkCongrSimpCore?.mk?.go">Lean.Meta.mkCongrSimpCore?.mk?.go</a> <span class="fn">f</span> <span class="fn">info</span> <span class="fn">kinds</span> <span class="fn">lhss</span> <span class="fn">0</span> <span class="fn">#[]</span> <span class="fn">#[]</span> <span class="fn">#[]</span></span>
-                  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span>)</span></span></span>;
-                <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">lhss</span></span> <a href="/Unicode.lean/Init/Core.html#bne">!=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">kinds</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span>
-                else <span class="fn">do
-                  let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                  <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span>
-          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.pure">DoResultPR.pure</a> <span class="fn">y</span> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span></span>)
-        <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.return">DoResultPR.return</a> <span class="fn">none</span> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span></span></span>
-  <span class="fn">match <span class="fn">r</span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.return">DoResultPR.pure</a> <span class="fn">a</span> <span class="fn">u</span></span> =>
-      <span class="fn">let x := <span class="fn">u</span>;
-      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span>
-    | <span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.return">DoResultPR.return</a> <span class="fn">b</span> <span class="fn">u</span></span> =>
-      <span class="fn">let x := <span class="fn">u</span>;
-      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">b</span></span></span></span></span></span></li>
-</ul>
-</details>
 <p>Create a congruence theorem that is useful for the simplifier.
 In this kind of theorem, if the i-th argument is a <code><a href="/Unicode.lean/Init/Prelude.html#cast">cast</a></code> argument, then the theorem
 contains an input <code>a_i</code> representing the i-th argument in the left-hand-side, and
-it appears with a cast (e.g., <code>Eq.drec...a_i...</code>) in the right-hand-side.
+it appears with a cast (e.g., <code>Eq.drec ... a_i ...</code>) in the right-hand-side.
 The idea is that the right-hand-side of this theorem "tells" the simplifier
-how the resulting term looks like.</p></div>
+how the resulting term looks like.</p><details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
+</ul>
+</details>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.mkCongrSimpCore?.mk?.go">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L223-L248">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L223-L248">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -534,7 +415,7 @@ how the resulting term looks like.</p></div>
 <div class="decl" id="Lean.Meta.mkCongrSimpCore?.mkProof">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L253-L279">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L253-L279">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -559,7 +440,7 @@ how the resulting term looks like.</p></div>
 <div class="decl" id="Lean.Meta.mkCongrSimpCore?.mkProof.go">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L254-L278">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L254-L278">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -579,7 +460,7 @@ how the resulting term looks like.</p></div>
 <div class="decl" id="Lean.Meta.mkCongrSimp?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/CongrTheorems.lean#L281-L283">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CongrTheorems.lean#L281-L283">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -610,10 +491,10 @@ how the resulting term looks like.</p></div>
 <h3>Library</h3>
 <div class="module_list">
 <details class="nav_sect" data-path="/Unicode.lean/Init.html">
-<summary>Init</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
-<summary>Init.Control</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init.html">Init</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
+<summary><a href="/Unicode.lean/Init/Control.html">Init.Control</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Control/Basic.html">Init.Control.Basic</a>
 </div>
 <div class="nav_link">
@@ -648,10 +529,10 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data.html">
-<summary>Init.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
-<summary>Init.Data.Array</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
+<summary><a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/Basic.html">Init.Data.Array.Basic</a>
 </div>
 <div class="nav_link">
@@ -674,32 +555,32 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ByteArray.html">
-<summary>Init.Data.ByteArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ByteArray/Basic.html">Init.Data.ByteArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Char.html">
-<summary>Init.Data.Char</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Char/Basic.html">Init.Data.Char.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Fin.html">
-<summary>Init.Data.Fin</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Fin/Basic.html">Init.Data.Fin.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/FloatArray.html">
-<summary>Init.Data.FloatArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/FloatArray/Basic.html">Init.Data.FloatArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Format.html">
-<summary>Init.Data.Format</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Format/Basic.html">Init.Data.Format.Basic</a>
 </div>
 <div class="nav_link">
@@ -713,14 +594,14 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Int.html">
-<summary>Init.Data.Int</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Int/Basic.html">Init.Data.Int.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/List.html">
-<summary>Init.Data.List</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/List/Basic.html">Init.Data.List.Basic</a>
 </div>
 <div class="nav_link">
@@ -731,8 +612,8 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Nat.html">
-<summary>Init.Data.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Basic.html">Init.Data.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -755,8 +636,8 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Option.html">
-<summary>Init.Data.Option</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Option/Basic.html">Init.Data.Option.Basic</a>
 </div>
 <div class="nav_link">
@@ -767,8 +648,8 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/String.html">
-<summary>Init.Data.String</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/String/Basic.html">Init.Data.String.Basic</a>
 </div>
 <div class="nav_link">
@@ -776,8 +657,8 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ToString.html">
-<summary>Init.Data.ToString</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
 </div>
 <div class="nav_link">
@@ -785,46 +666,16 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Float.html">Init.Data.Float</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Hashable.html">Init.Data.Hashable</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/OfScientific.html">Init.Data.OfScientific</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
@@ -845,18 +696,12 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Init/Data/Stream.html">Init.Data.Stream</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/UInt.html">Init.Data.UInt</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/System.html">
-<summary>Init.System</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/System.html">Init.System</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/System/FilePath.html">Init.System.FilePath</a>
 </div>
 <div class="nav_link">
@@ -879,16 +724,10 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Init/Coe.html">Init.Coe</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Control.html">Init.Control</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Conv.html">Init.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Core.html">Init.Core</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Fix.html">Init.Fix</a>
@@ -918,9 +757,6 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/System.html">Init.System</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Util.html">Init.Util</a>
 </div>
 <div class="nav_link">
@@ -931,12 +767,12 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean.html" open="">
-<summary>Lean</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
-<summary>Lean.Compiler</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
-<summary>Lean.Compiler.IR</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean.html">Lean</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
+<summary><a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
+<summary><a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html">Lean.Compiler.IR.Basic</a>
 </div>
 <div class="nav_link">
@@ -1022,9 +858,6 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Lean/Compiler/FFI.html">Lean.Compiler.FFI</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/ImplementedByAttr.html">Lean.Compiler.ImplementedByAttr</a>
 </div>
 <div class="nav_link">
@@ -1050,10 +883,10 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data.html">
-<summary>Lean.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
-<summary>Lean.Data.Json</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
+<summary><a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json/Basic.html">Lean.Data.Json.Basic</a>
 </div>
 <div class="nav_link">
@@ -1070,8 +903,8 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Lsp.html">
-<summary>Lean.Data.Lsp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html">Lean.Data.Lsp.Basic</a>
 </div>
 <div class="nav_link">
@@ -1112,8 +945,8 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Xml.html">
-<summary>Lean.Data.Xml</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Xml/Basic.html">Lean.Data.Xml.Basic</a>
 </div>
 <div class="nav_link">
@@ -1127,9 +960,6 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
 </div>
 <div class="nav_link">
@@ -1140,9 +970,6 @@ how the resulting term looks like.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/LOption.html">Lean.Data.LOption</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Name.html">Lean.Data.Name</a>
@@ -1180,15 +1007,12 @@ how the resulting term looks like.</p></div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Trie.html">Lean.Data.Trie</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab.html">
-<summary>Lean.Elab</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
-<summary>Lean.Elab.Deriving</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Deriving/BEq.html">Lean.Elab.Deriving.BEq</a>
 </div>
 <div class="nav_link">
@@ -1220,10 +1044,10 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition.html">
-<summary>Lean.Elab.PreDefinition</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
-<summary>Lean.Elab.PreDefinition.Structural</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/BRecOn.html">Lean.Elab.PreDefinition.Structural.BRecOn</a>
 </div>
 <div class="nav_link">
@@ -1249,8 +1073,8 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">
-<summary>Lean.Elab.PreDefinition.WF</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html">Lean.Elab.PreDefinition.WF.Eqns</a>
 </div>
 <div class="nav_link">
@@ -1284,16 +1108,10 @@ how the resulting term looks like.</p></div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/MkInhabitant.html">Lean.Elab.PreDefinition.MkInhabitant</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Quotation.html">
-<summary>Lean.Elab.Quotation</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html">Lean.Elab.Quotation.Precheck</a>
 </div>
 <div class="nav_link">
@@ -1301,10 +1119,10 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic.html">
-<summary>Lean.Elab.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
-<summary>Lean.Elab.Tactic.Conv</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
 </div>
 <div class="nav_link">
@@ -1337,9 +1155,6 @@ how the resulting term looks like.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Delta.html">Lean.Elab.Tactic.Delta</a>
@@ -1430,9 +1245,6 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Lean/Elab/DefView.html">Lean.Elab.DefView</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
 </div>
 <div class="nav_link">
@@ -1499,13 +1311,7 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Print.html">Lean.Elab.Print</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/RecAppSyntax.html">Lean.Elab.RecAppSyntax</a>
@@ -1526,9 +1332,6 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html">Lean.Elab.SyntheticMVars</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Term.html">Lean.Elab.Term</a>
 </div>
 <div class="nav_link">
@@ -1536,10 +1339,10 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta.html" open="">
-<summary>Lean.Meta</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
-<summary>Lean.Meta.Match</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/Basic.html">Lean.Meta.Match.Basic</a>
 </div>
 <div class="nav_link">
@@ -1568,12 +1371,12 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
-<summary>Lean.Meta.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
-<summary>Lean.Meta.Tactic.LinearArith</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
-<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -1590,9 +1393,6 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
 </div>
 <div class="nav_link">
@@ -1600,8 +1400,8 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
-<summary>Lean.Meta.Tactic.Simp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html">Lean.Meta.Tactic.Simp.Main</a>
 </div>
 <div class="nav_link">
@@ -1672,9 +1472,6 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rename.html">Lean.Meta.Tactic.Rename</a>
 </div>
 <div class="nav_link">
@@ -1685,9 +1482,6 @@ how the resulting term looks like.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rewrite.html">Lean.Meta.Tactic.Rewrite</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Split.html">Lean.Meta.Tactic.Split</a>
@@ -1735,7 +1529,7 @@ how the resulting term looks like.</p></div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/CollectMVars.html">Lean.Meta.CollectMVars</a>
 </div>
-<div class="nav_link" visible="">
+<div class="nav_link visible">
 <a href="/Unicode.lean/Lean/Meta/CongrTheorems.html">Lean.Meta.CongrTheorems</a>
 </div>
 <div class="nav_link">
@@ -1799,9 +1593,6 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/MatchUtil.html">Lean.Meta.MatchUtil</a>
 </div>
 <div class="nav_link">
@@ -1829,9 +1620,6 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Transform.html">Lean.Meta.Transform</a>
 </div>
 <div class="nav_link">
@@ -1845,8 +1633,8 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Parser.html">
-<summary>Lean.Parser</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Parser/Attr.html">Lean.Parser.Attr</a>
 </div>
 <div class="nav_link">
@@ -1884,16 +1672,16 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/ParserCompiler.html">
-<summary>Lean.ParserCompiler</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html">Lean.ParserCompiler.Attribute</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter.html">
-<summary>Lean.PrettyPrinter</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
-<summary>Lean.PrettyPrinter.Delaborator</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html">Lean.PrettyPrinter.Delaborator.Basic</a>
 </div>
 <div class="nav_link">
@@ -1913,9 +1701,6 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Lean/PrettyPrinter/Basic.html">Lean.PrettyPrinter.Basic</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Formatter.html">Lean.PrettyPrinter.Formatter</a>
 </div>
 <div class="nav_link">
@@ -1923,10 +1708,10 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server.html">
-<summary>Lean.Server</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
-<summary>Lean.Server.FileWorker</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
+<summary><a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html">Lean.Server.FileWorker.RequestHandling</a>
 </div>
 <div class="nav_link">
@@ -1937,8 +1722,8 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server/Rpc.html">
-<summary>Lean.Server.Rpc</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Rpc/Basic.html">Lean.Server.Rpc.Basic</a>
 </div>
 <div class="nav_link">
@@ -1958,9 +1743,6 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Lean/Server/FileSource.html">Lean.Server.FileSource</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
 </div>
 <div class="nav_link">
@@ -1968,9 +1750,6 @@ how the resulting term looks like.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Requests.html">Lean.Server.Requests</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Snapshots.html">Lean.Server.Snapshots</a>
@@ -1983,8 +1762,8 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Util.html">
-<summary>Lean.Util</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/CollectFVars.html">Lean.Util.CollectFVars</a>
 </div>
 <div class="nav_link">
@@ -2052,8 +1831,8 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Widget.html">
-<summary>Lean.Widget</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html">Lean.Widget.InteractiveCode</a>
 </div>
 <div class="nav_link">
@@ -2076,13 +1855,7 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Lean/Class.html">Lean.Class</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/CoreM.html">Lean.CoreM</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Declaration.html">Lean.Declaration</a>
@@ -2092,9 +1865,6 @@ how the resulting term looks like.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/DocString.html">Lean.DocString</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
@@ -2139,9 +1909,6 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Lean/Message.html">Lean.Message</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/MetavarContext.html">Lean.MetavarContext</a>
 </div>
 <div class="nav_link">
@@ -2149,15 +1916,6 @@ how the resulting term looks like.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/MonadEnv.html">Lean.MonadEnv</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ProjFns.html">Lean.ProjFns</a>
@@ -2175,9 +1933,6 @@ how the resulting term looks like.</p></div>
 <a href="/Unicode.lean/Lean/ScopedEnvExtension.html">Lean.ScopedEnvExtension</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Structure.html">Lean.Structure</a>
 </div>
 <div class="nav_link">
@@ -2185,12 +1940,6 @@ how the resulting term looks like.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ToExpr.html">Lean.ToExpr</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
@@ -2236,10 +1985,10 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Unicode.html">
-<summary>Unicode</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
-<summary>Unicode.General</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Unicode.html">Unicode</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
+<summary><a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
 </div>
 <div class="nav_link">
@@ -2247,26 +1996,10 @@ how the resulting term looks like.</p></div>
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Unicode/Includes.html">Unicode.Includes</a>
 </div>
 </details>
 </div>
 </nav>
-<script>
-siteRoot = "/Unicode.lean/";
-      </script>
-<script src="/Unicode.lean/nav.js">
-</script>
-<script src="/Unicode.lean/search.js">
-</script>
-<script src="/Unicode.lean/mathjax-config.js">
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </body>
 </html>

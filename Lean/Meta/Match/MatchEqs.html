@@ -1,7 +1,19 @@
 <html lang="en">
 <head>
-<link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><title>Lean.Meta.Match.MatchEqs</title>
-<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta></head>
+<title>Lean.Meta.Match.MatchEqs</title>
+<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><link rel="prefetch" href="/Unicode.lean/declaration-data.bmp"></link><script defer="true" src="/Unicode.lean/mathjax-config.js">
+</script>
+<script defer="true" src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script defer="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script type="module" src="/Unicode.lean/nav.js">
+</script>
+<script type="module" src="/Unicode.lean/search.js">
+</script>
+<script type="module" src="/Unicode.lean/how-about.js">
+</script>
+</head>
 <body>
 <input id="nav_toggle" type="checkbox"></input><header>
 <h1>
@@ -18,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Meta.Match.MatchEqs</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -127,7 +139,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.casesOnStuckLHS">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L18-L48">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L18-L48">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -138,37 +150,19 @@ Documentation</h1>
 <span class="fn">(mvarId : <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span>)</span></div></div>
-<details>
+<p>Helper method for <code><a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.Match.proveCondEqThm">proveCondEqThm</a></code>. Given a goal of the form <code>C.rec ... xMajor = rhs</code>,
+apply <code>cases xMajor</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.casesOnStuckLHS">Lean.Meta.casesOnStuckLHS</a> <span class="fn">mvarId</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let target ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.getMVarType">Lean.Meta.getMVarType</a> <span class="fn">mvarId</span></span>
-  let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/MatchUtil.html#Lean.Meta.matchEq?">Lean.Meta.matchEq?</a> <span class="fn">target</span></span>
-  let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span>)</span></span> := <span class="fn">fun <span class="fn">y</span> =>
-    <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a> (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"'casesOnStuckLHS' failed"</span></span>)</span></span>
-  <span class="fn">match <span class="fn">a</span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">x</span>, <span class="fn">lhs</span>, <span class="fn">rhs</span>)</span></span> => <span class="fn">do
-      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.casesOnStuckLHS.findFVar?">Lean.Meta.casesOnStuckLHS.findFVar?</a> <span class="fn">lhs</span></span>
-      <span class="fn">match <span class="fn">a</span> with
-        | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">fvarId</span></span> => <span class="fn">do
-          let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Cases.html#Lean.Meta.cases">Lean.Meta.cases</a> <span class="fn">mvarId</span> <span class="fn">fvarId</span> <span class="fn">#[]</span></span>
-          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a> (<span class="fn">fun <span class="fn">s</span> => <span class="fn"><span class="fn"><span class="fn">s</span>.toInductionSubgoal</span>.mvarId</span></span>) <span class="fn">a</span></span>)</span></span>
-        | <span class="fn">x</span> => <span class="fn">do
-          let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
-    | <span class="fn">x</span> => <span class="fn">do
-      let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>Helper method for <code><a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.Match.proveCondEqThm">proveCondEqThm</a></code>. Given a goal of the form <code>C.rec...xMajor=rhs</code>,
-apply <code>casesxMajor</code>.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.casesOnStuckLHS.findFVar?">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L25-L48">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L25-L48">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -184,7 +178,7 @@ apply <code>casesxMajor</code>.</p></div>
 <div class="decl" id="Lean.Meta.casesOnStuckLHS?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L50-L51">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L50-L51">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -198,21 +192,7 @@ apply <code>casesxMajor</code>.</p></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.casesOnStuckLHS?">Lean.Meta.casesOnStuckLHS?</a> <span class="fn">mvarId</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let r ←
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.tryCatch">tryCatch</a>
-        (<span class="fn">do
-          let y ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.casesOnStuckLHS">Lean.Meta.casesOnStuckLHS</a> <span class="fn">mvarId</span></span>
-          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.pure">DoResultPR.pure</a> <span class="fn">y</span> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span></span>)
-        <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.return">DoResultPR.return</a> <span class="fn">none</span> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span></span></span>
-  <span class="fn">match <span class="fn">r</span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.return">DoResultPR.pure</a> <span class="fn">a</span> <span class="fn">u</span></span> =>
-      <span class="fn">let x := <span class="fn">u</span>;
-      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span>)</span></span>
-    | <span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.return">DoResultPR.return</a> <span class="fn">b</span> <span class="fn">u</span></span> =>
-      <span class="fn">let x := <span class="fn">u</span>;
-      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">b</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -220,7 +200,7 @@ apply <code>casesxMajor</code>.</p></div>
 <div class="decl" id="Lean.Meta.Match.MatchEqns">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L55-L59">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L55-L59">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -242,7 +222,7 @@ splitterAltNumParams : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html
 <div class="decl" id="Lean.Meta.Match.instInhabitedMatchEqns">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L59-L59">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L59-L59">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -263,7 +243,7 @@ splitterAltNumParams : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html
 <div class="decl" id="Lean.Meta.Match.instReprMatchEqns">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L59-L59">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L59-L59">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -284,7 +264,7 @@ splitterAltNumParams : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html
 <div class="decl" id="Lean.Meta.Match.MatchEqnsExtState">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L61-L63">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L61-L63">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -302,7 +282,7 @@ map : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#St
 <div class="decl" id="Lean.Meta.Match.instInhabitedMatchEqnsExtState">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L63-L63">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L63-L63">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -323,7 +303,7 @@ map : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#St
 <div class="decl" id="Lean.Meta.Match.matchEqnsExt">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L66-L66">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L66-L66">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -337,7 +317,7 @@ map : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#St
 <div class="decl" id="Lean.Meta.Match.unfoldNamedPattern">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L72-L78">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L72-L78">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -351,20 +331,7 @@ map : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#St
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.Match.unfoldNamedPattern">Lean.Meta.Match.unfoldNamedPattern</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let visit := <span class="fn">fun <span class="fn">e</span> =>
-    <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Transform.html#Lean.TransformStep.visit">Lean.TransformStep.visit</a> <span class="fn">e</span></span>)</span></span>;
-    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOfArity">Lean.Expr.isAppOfArity</a> <span class="fn">e</span> <span class="fn">`namedPattern</span> <span class="fn">4</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/WHNF.html#Lean.Meta.unfoldDefinition?">Lean.Meta.unfoldDefinition?</a> <span class="fn">e</span></span>
-      <span class="fn">match <span class="fn">a</span> with
-        | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">eNew</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Transform.html#Lean.TransformStep.visit">Lean.TransformStep.visit</a> <span class="fn">eNew</span></span>)</span>
-        | <span class="fn">x</span> => <span class="fn">do
-          let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
-    else <span class="fn">do
-      let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span>;
-  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Transform.html#Lean.Meta.transform">Lean.Meta.transform</a> <span class="fn">e</span> <span class="fn">visit</span> <span class="fn">fun <span class="fn">e</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Transform.html#Lean.TransformStep.done">Lean.TransformStep.done</a> <span class="fn">e</span></span>)</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -372,7 +339,7 @@ map : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#St
 <div class="decl" id="Lean.Meta.Match.forallAltTelescope">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L90-L121">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L90-L121">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -389,25 +356,25 @@ map : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#St
 <span class="fn">(k : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> → <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span> → <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <span class="fn">α</span></span></span></span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <span class="fn">α</span></span></div></div>
-<details>
+<p>Similar to <code>forallTelescopeReducing</code>, but eliminates arguments for named parameters and the associated
+equation proofs. The continuation <code>k</code> takes four arguments <code>ys args mask type</code>.</p><ul>
+<li><code>ys</code> are variables for the hypotheses that have not been eliminated.</li>
+<li><code>args</code> are the arguments for the alternative <code>alt</code> that has type <code>altType</code>. <code>ys.size <= args.size</code></li>
+<li><code>mask[i]</code> is true if the hypotheses has not been eliminated. <code>mask.size == args.size</code>.</li>
+<li><code>type</code> is the resulting type for <code>altType</code>.</li>
+</ul><p>We use the <code>mask</code> to build the splitter proof. See <code>mkSplitterProof</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.Match.forallAltTelescope">Lean.Meta.Match.forallAltTelescope</a> <span class="fn">altType</span> <span class="fn">k</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.Match.forallAltTelescope.go">Lean.Meta.Match.forallAltTelescope.go</a> <span class="fn">k</span> <span class="fn">#[]</span> <span class="fn">#[]</span> <span class="fn">#[]</span> <span class="fn">altType</span></span></span></li>
 </ul>
 </details>
-<p>Similar to <code>forallTelescopeReducing</code>, but eliminates arguments for named parameters and the associated
-equation proofs. The continuation <code>k</code> takes four arguments <code>ysargsmasktype</code>.</p><ul>
-<li><code>ys</code> are variables for the hypotheses that have not been eliminated.</li>
-<li><code>args</code> are the arguments for the alternative <code>alt</code> that has type <code>altType</code>. <code>ys.size<=args.size</code></li>
-<li><code>mask[i]</code> is true if the hypotheses has not been eliminated. <code>mask.size==args.size</code>.</li>
-<li><code>type</code> is the resulting type for <code>altType</code>.</li>
-</ul><p>We use the <code>mask</code> to build the splitter proof. See <code>mkSplitterProof</code>.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.Match.forallAltTelescope.go">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L93-L117">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L93-L117">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -435,7 +402,7 @@ equation proofs. The continuation <code>k</code> takes four arguments <code>ysar
 <div class="decl" id="Lean.Meta.Match.forallAltTelescope.isNamedPatternProof">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L119-L121">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L119-L121">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -452,7 +419,7 @@ equation proofs. The continuation <code>k</code> takes four arguments <code>ysar
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.Match.forallAltTelescope.isNamedPatternProof">Lean.Meta.Match.forallAltTelescope.isNamedPatternProof</a> <span class="fn">type</span> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Option/Basic.html#Option.isSome">Option.isSome</a> (<span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.find?">Lean.Expr.find?</a> (<span class="fn">fun <span class="fn">e</span> => <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOfArity">Lean.Expr.isAppOfArity</a> <span class="fn">e</span> <span class="fn">`namedPattern</span> <span class="fn">4</span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.appArg!">Lean.Expr.appArg!</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">h</span></span></span></span>) <span class="fn">type</span></span>)</span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.Match.forallAltTelescope.isNamedPatternProof">Lean.Meta.Match.forallAltTelescope.isNamedPatternProof</a> <span class="fn">type</span> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Option/Basic.html#Option.isSome">Option.isSome</a> (<span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.find?">Lean.Expr.find?</a> (<span class="fn">fun <span class="fn">e</span> =&gt <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOfArity">Lean.Expr.isAppOfArity</a> <span class="fn">e</span> <span class="fn">`namedPattern</span> <span class="fn">4</span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&amp&amp</a> <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.appArg!">Lean.Expr.appArg!</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">h</span></span></span></span>) <span class="fn">type</span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -460,7 +427,7 @@ equation proofs. The continuation <code>k</code> takes four arguments <code>ysar
 <div class="decl" id="Lean.Meta.Match.SimpH.State">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L135-L139">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L135-L139">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -480,12 +447,12 @@ eqs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <
 eqsNew : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></span></li>
 </ul>
 <p>State for the equational theorem hypothesis simplifier.</p><p>Recall that each equation contains additional hypotheses to ensure the associated case does not taken by previous cases.
-We have one hypothesis for each previous case.</p><p>Each hypothesis is of the form <code>forallxs,eqs→<a href="/Unicode.lean/Init/Prelude.html#False">False</a></code></p><p>We use tactics to minimize code duplication.</p></div>
+We have one hypothesis for each previous case.</p><p>Each hypothesis is of the form <code>forall xs, eqs → <a href="/Unicode.lean/Init/Prelude.html#False">False</a></code></p><p>We use tactics to minimize code duplication.</p></div>
 </div>
 <div class="decl" id="Lean.Meta.Match.SimpH.M">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L141-L141">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L141-L141">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -509,7 +476,7 @@ We have one hypothesis for each previous case.</p><p>Each hypothesis is of the f
 <div class="decl" id="Lean.Meta.Match.SimpH.trySubstVarsAndContradiction">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L177-L186">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L177-L186">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -526,7 +493,7 @@ We use it to discard redundant hypotheses.</p></div>
 <div class="decl" id="Lean.Meta.Match.SimpH.go">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L221-L227">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L221-L227">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -540,7 +507,7 @@ We use it to discard redundant hypotheses.</p></div>
 <div class="decl" id="Lean.Meta.Match.proveCondEqThm">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L266-L298">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L266-L298">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -553,46 +520,19 @@ We use it to discard redundant hypotheses.</p></div>
 <span class="fn">(type : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Helper method for proving a conditional equational theorem associated with an alternative of
+the <code>match</code>-eliminator <code>matchDeclName</code>. <code>type</code> contains the type of the theorem.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.Match.proveCondEqThm">Lean.Meta.Match.proveCondEqThm</a> <span class="fn">matchDeclName</span> <span class="fn">type</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let type ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> <span class="fn">type</span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLCtx">Lean.Meta.withLCtx</a>
-      <span class="fn">{ fvarIdToDecl :=
-          <span class="fn">{ root := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#Std.PersistentHashMap.Node.entries">Std.PersistentHashMap.Node.entries</a> <span class="fn">Std.PersistentHashMap.mkEmptyEntriesArray</span></span>, size := <span class="fn">0</span> }</span>,
-        decls :=
-          <span class="fn">{ root := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArrayNode.node">Std.PersistentArrayNode.node</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.mkEmpty">Array.mkEmpty</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.branching">Std.PersistentArray.branching</a></span>)</span>)</span>,
-            tail := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.mkEmpty">Array.mkEmpty</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#USize.toNat">USize.toNat</a> <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.branching">Std.PersistentArray.branching</a></span>)</span>, size := <span class="fn">0</span>,
-            shift := <a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.initShift">Std.PersistentArray.initShift</a>, tailOff := <span class="fn">0</span> }</span> }</span>
-      <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span>
-      (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallTelescope">Lean.Meta.forallTelescope</a> <span class="fn">type</span> <span class="fn">fun <span class="fn">ys</span> <span class="fn">target</span> => <span class="fn">do
-        let mvar0 ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.mkFreshExprSyntheticOpaqueMVar">Lean.Meta.mkFreshExprSyntheticOpaqueMVar</a> <span class="fn">target</span> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a></span>
-        let mvarId ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Delta.html#Lean.Meta.deltaTarget">Lean.Meta.deltaTarget</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mvarId!">Lean.Expr.mvarId!</a> <span class="fn">mvar0</span></span>) <span class="fn">fun <span class="fn">a</span> => <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">matchDeclName</span></span></span></span>
-        let cls : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> := <span class="fn">`Meta.Match.matchEqs</span>
-        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.isTracingEnabledFor">Lean.isTracingEnabledFor</a> <span class="fn">cls</span></span>
-        let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn">do
-          <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withDefault">Lean.Meta.withDefault</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.Match.proveCondEqThm.go">Lean.Meta.Match.proveCondEqThm.go</a> <span class="fn">mvarId</span> <span class="fn">0</span></span>)</span>
-          let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> <span class="fn">mvar0</span></span>
-          <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLambdaFVars">Lean.Meta.mkLambdaFVars</a> <span class="fn">ys</span> <span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span></span></span>
-        <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-            let y ←
-              <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.addTrace">Lean.addTrace</a> <span class="fn">cls</span>
-                  (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofGoal">Lean.MessageData.ofGoal</a> <span class="fn">mvarId</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                     <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-          else <span class="fn">do
-            let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span>)</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>Helper method for proving a conditional equational theorem associated with an alternative of
-the <code>match</code>-eliminator <code>matchDeclName</code>. <code>type</code> contains the type of the theorem.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Meta.Match.proveCondEqThm.go">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L275-L298">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L275-L298">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -610,7 +550,7 @@ the <code>match</code>-eliminator <code>matchDeclName</code>. <code>type</code> 
 <div class="decl" id="Lean.Meta.Match.InjectionAnyResult">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L312-L315">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L312-L315">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -632,7 +572,7 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <div class="decl" id="Lean.Meta.Match.getEquationsFor">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatchEqs.lean#L481-L484">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Match/MatchEqs.lean#L481-L484">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -646,12 +586,7 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.Match.getEquationsFor">Lean.Meta.Match.getEquationsFor</a> <span class="fn">matchDeclName</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let a ← <span class="fn">Lean.getEnv</span>
-  <span class="fn">match <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#Std.PersistentHashMap.find?">Std.PersistentHashMap.find?</a> <span class="fn">(<span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.EnvExtension.getState">Lean.EnvExtension.getState</a> <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html#Lean.Meta.Match.matchEqnsExt">Lean.Meta.Match.matchEqnsExt</a> <span class="fn">a</span></span>).map</span> <span class="fn">matchDeclName</span></span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">matchEqns</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">matchEqns</span></span>
-    | <span class="fn">none</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.none">Lean.Meta.Match.mkEquationsFor</a> <span class="fn">matchDeclName</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -665,10 +600,10 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <h3>Library</h3>
 <div class="module_list">
 <details class="nav_sect" data-path="/Unicode.lean/Init.html">
-<summary>Init</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
-<summary>Init.Control</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init.html">Init</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
+<summary><a href="/Unicode.lean/Init/Control.html">Init.Control</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Control/Basic.html">Init.Control.Basic</a>
 </div>
 <div class="nav_link">
@@ -703,10 +638,10 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data.html">
-<summary>Init.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
-<summary>Init.Data.Array</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
+<summary><a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/Basic.html">Init.Data.Array.Basic</a>
 </div>
 <div class="nav_link">
@@ -729,32 +664,32 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ByteArray.html">
-<summary>Init.Data.ByteArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ByteArray/Basic.html">Init.Data.ByteArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Char.html">
-<summary>Init.Data.Char</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Char/Basic.html">Init.Data.Char.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Fin.html">
-<summary>Init.Data.Fin</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Fin/Basic.html">Init.Data.Fin.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/FloatArray.html">
-<summary>Init.Data.FloatArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/FloatArray/Basic.html">Init.Data.FloatArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Format.html">
-<summary>Init.Data.Format</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Format/Basic.html">Init.Data.Format.Basic</a>
 </div>
 <div class="nav_link">
@@ -768,14 +703,14 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Int.html">
-<summary>Init.Data.Int</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Int/Basic.html">Init.Data.Int.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/List.html">
-<summary>Init.Data.List</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/List/Basic.html">Init.Data.List.Basic</a>
 </div>
 <div class="nav_link">
@@ -786,8 +721,8 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Nat.html">
-<summary>Init.Data.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Basic.html">Init.Data.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -810,8 +745,8 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Option.html">
-<summary>Init.Data.Option</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Option/Basic.html">Init.Data.Option.Basic</a>
 </div>
 <div class="nav_link">
@@ -822,8 +757,8 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/String.html">
-<summary>Init.Data.String</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/String/Basic.html">Init.Data.String.Basic</a>
 </div>
 <div class="nav_link">
@@ -831,8 +766,8 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ToString.html">
-<summary>Init.Data.ToString</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
 </div>
 <div class="nav_link">
@@ -840,46 +775,16 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Float.html">Init.Data.Float</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Hashable.html">Init.Data.Hashable</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/OfScientific.html">Init.Data.OfScientific</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
@@ -900,18 +805,12 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Init/Data/Stream.html">Init.Data.Stream</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/UInt.html">Init.Data.UInt</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/System.html">
-<summary>Init.System</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/System.html">Init.System</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/System/FilePath.html">Init.System.FilePath</a>
 </div>
 <div class="nav_link">
@@ -934,16 +833,10 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Init/Coe.html">Init.Coe</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Control.html">Init.Control</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Conv.html">Init.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Core.html">Init.Core</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Fix.html">Init.Fix</a>
@@ -973,9 +866,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/System.html">Init.System</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Util.html">Init.Util</a>
 </div>
 <div class="nav_link">
@@ -986,12 +876,12 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean.html" open="">
-<summary>Lean</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
-<summary>Lean.Compiler</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
-<summary>Lean.Compiler.IR</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean.html">Lean</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
+<summary><a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
+<summary><a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html">Lean.Compiler.IR.Basic</a>
 </div>
 <div class="nav_link">
@@ -1077,9 +967,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Compiler/FFI.html">Lean.Compiler.FFI</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/ImplementedByAttr.html">Lean.Compiler.ImplementedByAttr</a>
 </div>
 <div class="nav_link">
@@ -1105,10 +992,10 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data.html">
-<summary>Lean.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
-<summary>Lean.Data.Json</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
+<summary><a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json/Basic.html">Lean.Data.Json.Basic</a>
 </div>
 <div class="nav_link">
@@ -1125,8 +1012,8 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Lsp.html">
-<summary>Lean.Data.Lsp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html">Lean.Data.Lsp.Basic</a>
 </div>
 <div class="nav_link">
@@ -1167,8 +1054,8 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Xml.html">
-<summary>Lean.Data.Xml</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Xml/Basic.html">Lean.Data.Xml.Basic</a>
 </div>
 <div class="nav_link">
@@ -1182,9 +1069,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
 </div>
 <div class="nav_link">
@@ -1195,9 +1079,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/LOption.html">Lean.Data.LOption</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Name.html">Lean.Data.Name</a>
@@ -1235,15 +1116,12 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Trie.html">Lean.Data.Trie</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab.html">
-<summary>Lean.Elab</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
-<summary>Lean.Elab.Deriving</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Deriving/BEq.html">Lean.Elab.Deriving.BEq</a>
 </div>
 <div class="nav_link">
@@ -1275,10 +1153,10 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition.html">
-<summary>Lean.Elab.PreDefinition</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
-<summary>Lean.Elab.PreDefinition.Structural</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/BRecOn.html">Lean.Elab.PreDefinition.Structural.BRecOn</a>
 </div>
 <div class="nav_link">
@@ -1304,8 +1182,8 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">
-<summary>Lean.Elab.PreDefinition.WF</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html">Lean.Elab.PreDefinition.WF.Eqns</a>
 </div>
 <div class="nav_link">
@@ -1339,16 +1217,10 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/MkInhabitant.html">Lean.Elab.PreDefinition.MkInhabitant</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Quotation.html">
-<summary>Lean.Elab.Quotation</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html">Lean.Elab.Quotation.Precheck</a>
 </div>
 <div class="nav_link">
@@ -1356,10 +1228,10 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic.html">
-<summary>Lean.Elab.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
-<summary>Lean.Elab.Tactic.Conv</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
 </div>
 <div class="nav_link">
@@ -1392,9 +1264,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Delta.html">Lean.Elab.Tactic.Delta</a>
@@ -1485,9 +1354,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Elab/DefView.html">Lean.Elab.DefView</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
 </div>
 <div class="nav_link">
@@ -1554,13 +1420,7 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Print.html">Lean.Elab.Print</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/RecAppSyntax.html">Lean.Elab.RecAppSyntax</a>
@@ -1581,9 +1441,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html">Lean.Elab.SyntheticMVars</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Term.html">Lean.Elab.Term</a>
 </div>
 <div class="nav_link">
@@ -1591,10 +1448,10 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta.html" open="">
-<summary>Lean.Meta</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html" open="">
-<summary>Lean.Meta.Match</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html" open="">
+<summary><a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/Basic.html">Lean.Meta.Match.Basic</a>
 </div>
 <div class="nav_link">
@@ -1609,7 +1466,7 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/Match.html">Lean.Meta.Match.Match</a>
 </div>
-<div class="nav_link" visible="">
+<div class="nav_link visible">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
@@ -1623,12 +1480,12 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
-<summary>Lean.Meta.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
-<summary>Lean.Meta.Tactic.LinearArith</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
-<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -1645,9 +1502,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
 </div>
 <div class="nav_link">
@@ -1655,8 +1509,8 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
-<summary>Lean.Meta.Tactic.Simp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html">Lean.Meta.Tactic.Simp.Main</a>
 </div>
 <div class="nav_link">
@@ -1727,9 +1581,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rename.html">Lean.Meta.Tactic.Rename</a>
 </div>
 <div class="nav_link">
@@ -1740,9 +1591,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rewrite.html">Lean.Meta.Tactic.Rewrite</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Split.html">Lean.Meta.Tactic.Split</a>
@@ -1854,9 +1702,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/MatchUtil.html">Lean.Meta.MatchUtil</a>
 </div>
 <div class="nav_link">
@@ -1884,9 +1729,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Transform.html">Lean.Meta.Transform</a>
 </div>
 <div class="nav_link">
@@ -1900,8 +1742,8 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Parser.html">
-<summary>Lean.Parser</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Parser/Attr.html">Lean.Parser.Attr</a>
 </div>
 <div class="nav_link">
@@ -1939,16 +1781,16 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/ParserCompiler.html">
-<summary>Lean.ParserCompiler</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html">Lean.ParserCompiler.Attribute</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter.html">
-<summary>Lean.PrettyPrinter</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
-<summary>Lean.PrettyPrinter.Delaborator</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html">Lean.PrettyPrinter.Delaborator.Basic</a>
 </div>
 <div class="nav_link">
@@ -1968,9 +1810,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/PrettyPrinter/Basic.html">Lean.PrettyPrinter.Basic</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Formatter.html">Lean.PrettyPrinter.Formatter</a>
 </div>
 <div class="nav_link">
@@ -1978,10 +1817,10 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server.html">
-<summary>Lean.Server</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
-<summary>Lean.Server.FileWorker</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
+<summary><a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html">Lean.Server.FileWorker.RequestHandling</a>
 </div>
 <div class="nav_link">
@@ -1992,8 +1831,8 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server/Rpc.html">
-<summary>Lean.Server.Rpc</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Rpc/Basic.html">Lean.Server.Rpc.Basic</a>
 </div>
 <div class="nav_link">
@@ -2013,9 +1852,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Server/FileSource.html">Lean.Server.FileSource</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
 </div>
 <div class="nav_link">
@@ -2023,9 +1859,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Requests.html">Lean.Server.Requests</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Snapshots.html">Lean.Server.Snapshots</a>
@@ -2038,8 +1871,8 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Util.html">
-<summary>Lean.Util</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/CollectFVars.html">Lean.Util.CollectFVars</a>
 </div>
 <div class="nav_link">
@@ -2107,8 +1940,8 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Widget.html">
-<summary>Lean.Widget</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html">Lean.Widget.InteractiveCode</a>
 </div>
 <div class="nav_link">
@@ -2131,13 +1964,7 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Class.html">Lean.Class</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/CoreM.html">Lean.CoreM</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Declaration.html">Lean.Declaration</a>
@@ -2147,9 +1974,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/DocString.html">Lean.DocString</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
@@ -2194,9 +2018,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Message.html">Lean.Message</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/MetavarContext.html">Lean.MetavarContext</a>
 </div>
 <div class="nav_link">
@@ -2204,15 +2025,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/MonadEnv.html">Lean.MonadEnv</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ProjFns.html">Lean.ProjFns</a>
@@ -2230,9 +2042,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/ScopedEnvExtension.html">Lean.ScopedEnvExtension</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Structure.html">Lean.Structure</a>
 </div>
 <div class="nav_link">
@@ -2240,12 +2049,6 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ToExpr.html">Lean.ToExpr</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
@@ -2291,10 +2094,10 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Unicode.html">
-<summary>Unicode</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
-<summary>Unicode.General</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Unicode.html">Unicode</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
+<summary><a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
 </div>
 <div class="nav_link">
@@ -2302,26 +2105,10 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Unicode/Includes.html">Unicode.Includes</a>
 </div>
 </details>
 </div>
 </nav>
-<script>
-siteRoot = "/Unicode.lean/";
-      </script>
-<script src="/Unicode.lean/nav.js">
-</script>
-<script src="/Unicode.lean/search.js">
-</script>
-<script src="/Unicode.lean/mathjax-config.js">
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </body>
 </html>

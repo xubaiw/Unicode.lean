@@ -1,7 +1,19 @@
 <html lang="en">
 <head>
-<link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><title>Lean.Syntax</title>
-<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta></head>
+<title>Lean.Syntax</title>
+<meta charset="UTF-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><link rel="stylesheet" href="/Unicode.lean/style.css"></link><link rel="stylesheet" href="/Unicode.lean/pygments.css"></link><link rel="shortcut icon" href="/Unicode.lean/favicon.ico"></link><link rel="prefetch" href="/Unicode.lean/declaration-data.bmp"></link><script defer="true" src="/Unicode.lean/mathjax-config.js">
+</script>
+<script defer="true" src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script defer="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script type="module" src="/Unicode.lean/nav.js">
+</script>
+<script type="module" src="/Unicode.lean/search.js">
+</script>
+<script type="module" src="/Unicode.lean/how-about.js">
+</script>
+</head>
 <body>
 <input id="nav_toggle" type="checkbox"></input><header>
 <h1>
@@ -18,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Syntax</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -280,7 +292,7 @@ Documentation</h1>
 <div class="decl" id="Lean.SourceInfo.updateTrailing">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L11-L13">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L11-L13">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -296,8 +308,8 @@ Documentation</h1>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SourceInfo.updateTrailing">Lean.SourceInfo.updateTrailing</a> <span class="fn">trailing</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.original">Lean.SourceInfo.original</a> <span class="fn">leading</span> <span class="fn">pos</span> <span class="fn">x</span> <span class="fn">endPos</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.original">Lean.SourceInfo.original</a> <span class="fn">leading</span> <span class="fn">pos</span> <span class="fn">trailing</span> <span class="fn">endPos</span></span>
-  | <span class="fn">info</span> => <span class="fn">info</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.original">Lean.SourceInfo.original</a> <span class="fn">leading</span> <span class="fn">pos</span> <span class="fn">x</span> <span class="fn">endPos</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.original">Lean.SourceInfo.original</a> <span class="fn">leading</span> <span class="fn">pos</span> <span class="fn">trailing</span> <span class="fn">endPos</span></span>
+  | <span class="fn">info</span> =&gt <span class="fn">info</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -305,7 +317,7 @@ Documentation</h1>
 <div class="decl" id="Lean.IsNode">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L17-L18">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L17-L18">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -324,10 +336,10 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.SyntaxNode">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L20-L20">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L20-L20">source</a>
 </div>
 <div class="decl_header">
-<span class="decl_kind">noncomputable def</span>
+<span class="decl_kind">def</span>
 <span class="decl_name">
 <a class="break_within" href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode">Lean.SyntaxNode</a>
 </span>
@@ -345,7 +357,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.unreachIsNodeMissing">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L22-L22">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L22-L22">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -372,7 +384,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.unreachIsNodeAtom">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L23-L23">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L23-L23">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -407,7 +419,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.unreachIsNodeIdent">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L24-L24">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L24-L24">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -450,7 +462,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.isLitKind">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L26-L27">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L26-L27">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -473,7 +485,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.SyntaxNode.getKind">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L31-L36">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L31-L36">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -488,12 +500,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.getKind">Lean.SyntaxNode.getKind</a> <span class="fn">n</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">n</span> with
-  | <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">x</span> <span class="fn">k</span> <span class="fn">x_1</span></span>, property := <span class="fn">x_2</span> }</span> => <span class="fn">k</span>
-  | <span class="fn">{ val := <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.missing">Lean.Syntax.missing</a>, property := <span class="fn">h</span> }</span> => <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.unreachIsNodeMissing">Lean.unreachIsNodeMissing</a> <span class="fn">h</span></span>
-  | <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">x</span> <span class="fn">x_1</span></span>, property := <span class="fn">h</span> }</span> => <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.unreachIsNodeAtom">Lean.unreachIsNodeAtom</a> <span class="fn">h</span></span>
-  | <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.ident">Lean.Syntax.ident</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span></span>, property := <span class="fn">h</span> }</span> => <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.unreachIsNodeIdent">Lean.unreachIsNodeIdent</a> <span class="fn">h</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -501,7 +508,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.SyntaxNode.withArgs">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L38-L43">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L38-L43">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -522,12 +529,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.withArgs">Lean.SyntaxNode.withArgs</a> <span class="fn">n</span> <span class="fn">fn</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">n</span> with
-  | <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">args</span></span>, property := <span class="fn">x_2</span> }</span> => <span class="fn"><span class="fn">fn</span> <span class="fn">args</span></span>
-  | <span class="fn">{ val := <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.missing">Lean.Syntax.missing</a>, property := <span class="fn">h</span> }</span> => <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.unreachIsNodeMissing">Lean.unreachIsNodeMissing</a> <span class="fn">h</span></span>
-  | <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">x</span> <span class="fn">x_1</span></span>, property := <span class="fn">h</span> }</span> => <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.unreachIsNodeAtom">Lean.unreachIsNodeAtom</a> <span class="fn">h</span></span>
-  | <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.ident">Lean.Syntax.ident</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span></span>, property := <span class="fn">h</span> }</span> => <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.unreachIsNodeIdent">Lean.unreachIsNodeIdent</a> <span class="fn">h</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -535,7 +537,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.SyntaxNode.getNumArgs">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L45-L46">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L45-L46">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -551,7 +553,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.getNumArgs">Lean.SyntaxNode.getNumArgs</a> <span class="fn">n</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.withArgs">Lean.SyntaxNode.withArgs</a> <span class="fn">n</span> <span class="fn">fun <span class="fn">args</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">args</span></span></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.getNumArgs">Lean.SyntaxNode.getNumArgs</a> <span class="fn">n</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.withArgs">Lean.SyntaxNode.withArgs</a> <span class="fn">n</span> <span class="fn">fun <span class="fn">args</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">args</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -559,7 +561,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.SyntaxNode.getArg">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L48-L49">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L48-L49">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -577,7 +579,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.getArg">Lean.SyntaxNode.getArg</a> <span class="fn">n</span> <span class="fn">i</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.withArgs">Lean.SyntaxNode.withArgs</a> <span class="fn">n</span> <span class="fn">fun <span class="fn">args</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.get!">Array.get!</a> <span class="fn">args</span> <span class="fn">i</span></span></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.getArg">Lean.SyntaxNode.getArg</a> <span class="fn">n</span> <span class="fn">i</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.withArgs">Lean.SyntaxNode.withArgs</a> <span class="fn">n</span> <span class="fn">fun <span class="fn">args</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.get!">Array.get!</a> <span class="fn">args</span> <span class="fn">i</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -585,7 +587,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.SyntaxNode.getArgs">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L51-L52">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L51-L52">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -601,7 +603,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.getArgs">Lean.SyntaxNode.getArgs</a> <span class="fn">n</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.withArgs">Lean.SyntaxNode.withArgs</a> <span class="fn">n</span> <span class="fn">fun <span class="fn">args</span> => <span class="fn">args</span></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.getArgs">Lean.SyntaxNode.getArgs</a> <span class="fn">n</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.withArgs">Lean.SyntaxNode.withArgs</a> <span class="fn">n</span> <span class="fn">fun <span class="fn">args</span> =&gt <span class="fn">args</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -609,7 +611,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.SyntaxNode.modifyArgs">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L54-L59">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L54-L59">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -626,12 +628,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.SyntaxNode.modifyArgs">Lean.SyntaxNode.modifyArgs</a> <span class="fn">n</span> <span class="fn">fn</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">n</span> with
-  | <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">i</span> <span class="fn">k</span> <span class="fn">args</span></span>, property := <span class="fn">x</span> }</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">i</span> <span class="fn">k</span> (<span class="fn"><span class="fn">fn</span> <span class="fn">args</span></span>)</span>
-  | <span class="fn">{ val := <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.missing">Lean.Syntax.missing</a>, property := <span class="fn">h</span> }</span> => <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.unreachIsNodeMissing">Lean.unreachIsNodeMissing</a> <span class="fn">h</span></span>
-  | <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">x</span> <span class="fn">x_1</span></span>, property := <span class="fn">h</span> }</span> => <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.unreachIsNodeAtom">Lean.unreachIsNodeAtom</a> <span class="fn">h</span></span>
-  | <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.ident">Lean.Syntax.ident</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span></span>, property := <span class="fn">h</span> }</span> => <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.unreachIsNodeIdent">Lean.unreachIsNodeIdent</a> <span class="fn">h</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -639,7 +636,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.Syntax.getAtomVal!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L65-L67">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L65-L67">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -651,10 +648,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.getAtomVal!">Lean.Syntax.getAtomVal!</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">x</span> <span class="fn">val</span></span> => <span class="fn">val</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Syntax"</span> <span class="fn">"Lean.Syntax.getAtomVal!"</span> <span class="fn">67</span> <span class="fn">18</span> <span class="fn">"getAtomVal!: not an atom"</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -662,7 +656,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.Syntax.setAtomVal">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L69-L71">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L69-L71">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -676,8 +670,8 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.setAtomVal">Lean.Syntax.setAtomVal</a> <span class="fn">x</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span>, <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">x</span></span>, <span class="fn">v</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">v</span></span>
-  | <span class="fn">stx</span>, <span class="fn">x</span> => <span class="fn">stx</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">x</span></span>, <span class="fn">v</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">v</span></span>
+  | <span class="fn">stx</span>, <span class="fn">x</span> =&gt <span class="fn">stx</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -685,7 +679,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.Syntax.ifNode">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L73-L76">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L73-L76">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -708,11 +702,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.ifNode">Lean.Syntax.ifNode</a> <span class="fn">stx</span> <span class="fn">hyes</span> <span class="fn">hno</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">stx</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">i</span> <span class="fn">k</span> <span class="fn">args</span></span> =>
-    <span class="fn"><span class="fn">hyes</span> <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">i</span> <span class="fn">k</span> <span class="fn">args</span></span>, property := (_ : <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.IsNode">Lean.IsNode</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">i</span> <span class="fn">k</span> <span class="fn">args</span></span>)</span>) }</span></span>
-  | <span class="fn">x</span> => <span class="fn"><span class="fn">hno</span> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -720,7 +710,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.Syntax.ifNodeKind">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L78-L81">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L78-L81">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -745,13 +735,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.ifNodeKind">Lean.Syntax.ifNodeKind</a> <span class="fn">stx</span> <span class="fn">kind</span> <span class="fn">hyes</span> <span class="fn">hno</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">stx</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">i</span> <span class="fn">k</span> <span class="fn">args</span></span> =>
-    <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">k</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">kind</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-      <span class="fn"><span class="fn">hyes</span> <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">i</span> <span class="fn">k</span> <span class="fn">args</span></span>, property := (_ : <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.IsNode">Lean.IsNode</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">i</span> <span class="fn">k</span> <span class="fn">args</span></span>)</span>) }</span></span>
-    else <span class="fn"><span class="fn">hno</span> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span></span>
-  | <span class="fn">x</span> => <span class="fn"><span class="fn">hno</span> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -759,7 +743,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.Syntax.asNode">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L83-L85">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L83-L85">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -771,11 +755,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.asNode">Lean.Syntax.asNode</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">info</span> <span class="fn">kind</span> <span class="fn">args</span></span> =>
-    <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">info</span> <span class="fn">kind</span> <span class="fn">args</span></span>, property := (_ : <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.IsNode">Lean.IsNode</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">info</span> <span class="fn">kind</span> <span class="fn">args</span></span>)</span>) }</span>
-  | <span class="fn">x</span> => <span class="fn">{ val := <span class="fn">Lean.mkNullNode</span>, property := <a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.asNode.proof_1">Lean.Syntax.asNode.proof_1</a> }</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -783,7 +763,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.Syntax.getIdAt">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L87-L88">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L87-L88">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -808,7 +788,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.Syntax.modifyArgs">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L90-L93">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L90-L93">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -827,8 +807,8 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.modifyArgs">Lean.Syntax.modifyArgs</a> <span class="fn">stx</span> <span class="fn">fn</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">stx</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">i</span> <span class="fn">k</span> <span class="fn">args</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">i</span> <span class="fn">k</span> (<span class="fn"><span class="fn">fn</span> <span class="fn">args</span></span>)</span>
-  | <span class="fn">stx</span> => <span class="fn">stx</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">i</span> <span class="fn">k</span> <span class="fn">args</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">i</span> <span class="fn">k</span> (<span class="fn"><span class="fn">fn</span> <span class="fn">args</span></span>)</span>
+  | <span class="fn">stx</span> =&gt <span class="fn">stx</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -836,7 +816,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.Syntax.modifyArg">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L95-L98">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L95-L98">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -857,8 +837,8 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.modifyArg">Lean.Syntax.modifyArg</a> <span class="fn">stx</span> <span class="fn">i</span> <span class="fn">fn</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">stx</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">info</span> <span class="fn">k</span> <span class="fn">args</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">info</span> <span class="fn">k</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.modify">Array.modify</a> <span class="fn">args</span> <span class="fn">i</span> <span class="fn">fn</span></span>)</span>
-  | <span class="fn">stx</span> => <span class="fn">stx</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">info</span> <span class="fn">k</span> <span class="fn">args</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">info</span> <span class="fn">k</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.modify">Array.modify</a> <span class="fn">args</span> <span class="fn">i</span> <span class="fn">fn</span></span>)</span>
+  | <span class="fn">stx</span> =&gt <span class="fn">stx</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -866,7 +846,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.Syntax.replaceM">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L100-L107">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L100-L107">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -891,7 +871,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.Syntax.rewriteBottomUpM">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L109-L113">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L109-L113">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -916,7 +896,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.Syntax.rewriteBottomUp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L115-L116">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L115-L116">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -942,7 +922,7 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 <div class="decl" id="Lean.Syntax.updateLeading">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L157-L158">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L157-L158">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -951,13 +931,6 @@ mk: <span class="fn">∀ (info : <a href="/Unicode.lean/Init/Prelude.html#Lean.S
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a> → <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.updateLeading">Lean.Syntax.updateLeading</a> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT.run'">StateT.run'</a> (<span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.replaceM">Lean.Syntax.replaceM</a> <a href="/Unicode.lean/Lean/Syntax.html#_private.Lean.Syntax.0.Lean.Syntax.updateLeadingAux">Lean.Syntax.updateLeadingAux</a> <span class="fn">stx</span></span>) <span class="fn">0</span></span></span></li>
-</ul>
-</details>
 <p>Set <code>SourceInfo.leading</code> according to the trailing stop of the preceding token.
 The result is a round-tripping syntax tree IF, in the input syntax tree,
 * all leading stops, atom contents, and trailing starts are correct
@@ -965,18 +938,25 @@ The result is a round-tripping syntax tree IF, in the input syntax tree,
 The `Syntax` argument is the output produced by the parser for `source`.
 This function "fixes" the `source.leading` field.
 
-Additionally, we try to choose "nicer" splits between leading and trailing stops
+Additionally, we try to choose "nicer" splits between leading <a href="/Unicode.lean/Init/Prelude.html#and">and</a> trailing stops
 according to some heuristics so that e.g. comments are associated to the (intuitively)
 correct token.
 
 Note that the `SourceInfo.trailing` fields must be correct.
 The implementation of this Function relies on this property. 
-</code></pre></div>
+</code></pre><details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.updateLeading">Lean.Syntax.updateLeading</a> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT.run'">StateT.run'</a> (<span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.replaceM">Lean.Syntax.replaceM</a> <a href="/Unicode.lean/Lean/Syntax.html#_private.Lean.Syntax.0.Lean.Syntax.updateLeadingAux">Lean.Syntax.updateLeadingAux</a> <span class="fn">stx</span></span>) <span class="fn">0</span></span></span></li>
+</ul>
+</details>
+</div>
 </div>
 <div class="decl" id="Lean.Syntax.updateTrailing">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L160-L170">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L160-L170">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -992,7 +972,7 @@ The implementation of this Function relies on this property.
 <div class="decl" id="Lean.Syntax.getTailWithPos">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L172-L177">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L172-L177">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1006,7 +986,7 @@ The implementation of this Function relies on this property.
 <div class="decl" id="Lean.Syntax.identComponents">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L184-L221">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L184-L221">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1019,53 +999,21 @@ The implementation of this Function relies on this property.
 <span class="fn">(nFields? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></span>) <span class="fn">none</span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></span></div></div>
-<details>
+<p>Split an <code>ident</code> into its dot-separated components while preserving source info.
+Macro scopes are first erased.  For example, <code>`foo.bla.boo._@._hyg.4</code> ↦ <code>[`foo, `bla, `boo]</code>.
+If <code>nFields</code> is set, we take that many fields from the end and keep the remaining components
+as one name. For example, <code>`foo.bla.boo</code> with <code>(nFields := 1)</code> ↦ <code>[`foo.bla, `boo]</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.identComponents">Lean.Syntax.identComponents</a> <span class="fn">stx</span> <span class="fn">nFields?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">stx</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.ident">Lean.Syntax.ident</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.original">Lean.SourceInfo.original</a> <span class="fn">lead</span> <span class="fn">pos</span> <span class="fn">trail</span> <span class="fn">x</span></span>) <span class="fn">rawStr</span> <span class="fn">val</span> <span class="fn">x_1</span></span> =>
-    <span class="fn">let val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.eraseMacroScopes">Lean.Name.eraseMacroScopes</a> <span class="fn">val</span></span>;
-    <span class="fn">let nameComps := <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.identComponents.nameComps">Lean.Syntax.identComponents.nameComps</a> <span class="fn">val</span> <span class="fn">nFields?</span></span>;
-    <span class="fn">let rawComps := <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.splitNameLit">Lean.Syntax.splitNameLit</a> <span class="fn">rawStr</span></span>;
-    <span class="fn">let rawComps :=
-      <span class="fn">match <span class="fn">nFields?</span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">nFields</span></span> =>
-        <span class="fn">let nPrefix := <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List.length">List.length</a> <span class="fn">rawComps</span></span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">nFields</span></span>;
-        <span class="fn">let prefixSz := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List.foldl">List.foldl</a> (<span class="fn">fun <span class="fn">acc</span> <span class="fn">ss</span> => <span class="fn"><span class="fn"><span class="fn">acc</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Substring.bsize">Substring.bsize</a> <span class="fn">ss</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span></span>) <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/List/Basic.html#List.take">List.take</a> <span class="fn">nPrefix</span> <span class="fn">rawComps</span></span>)</span>;
-        <span class="fn">let prefixSz := <span class="fn"><span class="fn">prefixSz</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">1</span></span>;
-        <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#Substring.extract">Substring.extract</a> <span class="fn">rawStr</span> <span class="fn">0</span> <span class="fn">prefixSz</span></span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn"><a href="/Unicode.lean/Init/Data/List/Basic.html#List.drop">List.drop</a> <span class="fn">nPrefix</span> <span class="fn">rawComps</span></span></span></span></span></span>
-      | <span class="fn">x</span> => <span class="fn">rawComps</span></span>;
-    <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List.length">List.length</a> <span class="fn">nameComps</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List.length">List.length</a> <span class="fn">rawComps</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-      <span class="fn"><a href="/Unicode.lean/Init/Data/List/Basic.html#List.map">List.map</a>
-        (<span class="fn">fun <span class="fn">x</span> =>
-          <span class="fn">match <span class="fn">x</span> with
-          | <span class="fn">(<span class="fn">id</span>, <span class="fn">ss</span>)</span> =>
-            <span class="fn">let off := <span class="fn"><span class="fn"><span class="fn">ss</span>.startPos</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn"><span class="fn">rawStr</span>.startPos</span></span>;
-            <span class="fn">let lead := <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">off</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">0</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">lead</span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String.toSubstring">String.toSubstring</a> <span class="fn">""</span></span></span>;
-            <span class="fn">let trail := <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><span class="fn">ss</span>.stopPos</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn"><span class="fn">rawStr</span>.stopPos</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">trail</span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String.toSubstring">String.toSubstring</a> <span class="fn">""</span></span></span>;
-            <span class="fn">let info := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.original">Lean.SourceInfo.original</a> <span class="fn">lead</span> (<span class="fn"><span class="fn">pos</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">off</span></span>) <span class="fn">trail</span> (<span class="fn"><span class="fn"><span class="fn">pos</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">off</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Substring.bsize">Substring.bsize</a> <span class="fn">ss</span></span></span>)</span>;
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.ident">Lean.Syntax.ident</a> <span class="fn">info</span> <span class="fn">ss</span> <span class="fn">id</span> <span class="fn">[]</span></span></span></span></span></span></span></span>)
-        (<span class="fn"><a href="/Unicode.lean/Init/Data/List/Basic.html#List.zip">List.zip</a> <span class="fn">nameComps</span> <span class="fn">rawComps</span></span>)</span>
-    else
-      <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Syntax"</span> <span class="fn">"Lean.Syntax.identComponents"</span> <span class="fn">199</span> <span class="fn">4</span>
-        (<span class="fn"><span class="fn">"assertion violation: "</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">"nameComps.length == rawComps.length\n    "</span></span>)</span></span></span></span></span></span>
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.ident">Lean.Syntax.ident</a> <span class="fn">si</span> <span class="fn">x</span> <span class="fn">val</span> <span class="fn">x_1</span></span> =>
-    <span class="fn">let val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.eraseMacroScopes">Lean.Name.eraseMacroScopes</a> <span class="fn">val</span></span>;
-    <span class="fn"><a href="/Unicode.lean/Init/Data/List/Basic.html#List.map">List.map</a> (<span class="fn">fun <span class="fn">n</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.ident">Lean.Syntax.ident</a> <span class="fn">si</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String.toSubstring">String.toSubstring</a> (<span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Name.toString">Lean.Name.toString</a> <span class="fn">n</span></span>)</span>) <span class="fn">n</span> <span class="fn">[]</span></span></span>)
-      (<span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.identComponents.nameComps">Lean.Syntax.identComponents.nameComps</a> <span class="fn">val</span> <span class="fn">nFields?</span></span>)</span></span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Syntax"</span> <span class="fn">"Lean.Syntax.identComponents"</span> <span class="fn">212</span> <span class="fn">9</span> <span class="fn">"unreachable code has been reached"</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>Split an <code>ident</code> into its dot-separated components while preserving source info.
-Macro scopes are first erased.  For example, <code>`foo.bla.boo._@._hyg.4</code> ↦ <code>[`foo,`bla,`boo]</code>.
-If <code>nFields</code> is set, we take that many fields from the end and keep the remaining components
-as one name. For example, <code>`foo.bla.boo</code> with <code>(nFields:=1)</code> ↦ <code>[`foo.bla,`boo]</code>.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Syntax.identComponents.nameComps">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L214-L221">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L214-L221">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1081,14 +1029,7 @@ as one name. For example, <code>`foo.bla.boo</code> with <code>(nFields:=1)</cod
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.identComponents.nameComps">Lean.Syntax.identComponents.nameComps</a> <span class="fn">n</span> <span class="fn">nFields?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">nFields?</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">nFields</span></span> =>
-    <span class="fn">let nameComps := <span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.components">Lean.Name.components</a> <span class="fn">n</span></span>;
-    <span class="fn">let nPrefix := <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List.length">List.length</a> <span class="fn">nameComps</span></span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">nFields</span></span>;
-    <span class="fn">let namePrefix := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List.foldl">List.foldl</a> (<span class="fn">fun <span class="fn">acc</span> <span class="fn">n</span> => <span class="fn"><span class="fn">acc</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">n</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/List/Basic.html#List.take">List.take</a> <span class="fn">nPrefix</span> <span class="fn">nameComps</span></span>)</span>;
-    <span class="fn"><span class="fn">namePrefix</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn"><a href="/Unicode.lean/Init/Data/List/Basic.html#List.drop">List.drop</a> <span class="fn">nPrefix</span> <span class="fn">nameComps</span></span></span></span></span></span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.components">Lean.Name.components</a> <span class="fn">n</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1096,7 +1037,7 @@ as one name. For example, <code>`foo.bla.boo</code> with <code>(nFields:=1)</cod
 <div class="decl" id="Lean.Syntax.TopDown">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L223-L225">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L223-L225">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1116,7 +1057,7 @@ stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Syntax.topDown">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L231-L231">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L231-L231">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1129,20 +1070,20 @@ stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <span class="fn">(firstChoiceOnly : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.TopDown">Lean.Syntax.TopDown</a></div></div>
-<details>
+<p><code>for _ in stx.<a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.topDown">topDown</a></code> iterates through each node and leaf in <code>stx</code> top-down, left-to-right.
+If <code>firstChoiceOnly</code> is <code>true</code>, only visit the first argument of each choice node.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.topDown">Lean.Syntax.topDown</a> <span class="fn">stx</span> <span class="fn">firstChoiceOnly</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ firstChoiceOnly := <span class="fn">firstChoiceOnly</span>, stx := <span class="fn">stx</span> }</span></span></li>
 </ul>
 </details>
-<p><code>for_instx.topDown</code> iterates through each node and leaf in <code>stx</code> top-down, left-to-right.
-If <code>firstChoiceOnly</code> is <code>true</code>, only visit the first argument of each choice node.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Syntax.instForInTopDownSyntax">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L233-L251">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L233-L251">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1158,14 +1099,7 @@ If <code>firstChoiceOnly</code> is <code>true</code>, only visit the first argum
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn">Lean.Syntax.instForInTopDownSyntax</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ forIn := <span class="fn">fun {β} [<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Monad">Monad</a> <span class="fn">m</span></span>] <span class="fn">x</span> <span class="fn">init</span> <span class="fn">f</span> =>
-      <span class="fn">match <span class="fn">x</span> with
-      | <span class="fn">{ firstChoiceOnly := <span class="fn">firstChoiceOnly</span>, stx := <span class="fn">stx</span> }</span> => <span class="fn">do
-        let <span class="fn">a</span> ← <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.instForInTopDownSyntax.loop">Lean.Syntax.instForInTopDownSyntax.loop</a> <span class="fn">f</span> <span class="fn">firstChoiceOnly</span> <span class="fn">stx</span> <span class="fn">init</span></span>
-        <span class="fn">match <span class="fn">a</span> with
-          | <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.yield</a> <span class="fn">b</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">b</span></span>
-          | <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">b</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">b</span></span></span></span></span></span> }</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1173,7 +1107,7 @@ If <code>firstChoiceOnly</code> is <code>true</code>, only visit the first argum
 <div class="decl" id="Lean.Syntax.instForInTopDownSyntax.loop">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L235-L248">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L235-L248">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1194,7 +1128,7 @@ If <code>firstChoiceOnly</code> is <code>true</code>, only visit the first argum
 <div class="decl" id="Lean.Syntax.reprint">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L253-L278">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L253-L278">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1210,7 +1144,7 @@ If <code>firstChoiceOnly</code> is <code>true</code>, only visit the first argum
 <div class="decl" id="Lean.Syntax.reprint.reprintLeaf">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L271-L278">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L271-L278">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1226,11 +1160,7 @@ If <code>firstChoiceOnly</code> is <code>true</code>, only visit the first argum
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.reprint.reprintLeaf">Lean.Syntax.reprint.reprintLeaf</a> <span class="fn">info</span> <span class="fn">val</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">info</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.original">Lean.SourceInfo.original</a> <span class="fn">lead</span> <span class="fn">x</span> <span class="fn">trail</span> <span class="fn">x_1</span></span> =>
-    <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">""</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">lead</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">""</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">val</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">""</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">trail</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">""</span></span></span>
-  | <span class="fn">x</span> => <span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">" "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">val</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">" "</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1238,7 +1168,7 @@ If <code>firstChoiceOnly</code> is <code>true</code>, only visit the first argum
 <div class="decl" id="Lean.Syntax.hasMissing">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L280-L284">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L280-L284">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1252,23 +1182,7 @@ If <code>firstChoiceOnly</code> is <code>true</code>, only visit the first argum
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.hasMissing">Lean.Syntax.hasMissing</a> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Control/Id.html#Id.run">Id.run</a> <span class="fn">do
-    let r ←
-      <span class="fn">let col := <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.topDown">Lean.Syntax.topDown</a> <span class="fn">stx</span></span>;
-        <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">col</span> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span> <span class="fn">fun <span class="fn">stx</span> <span class="fn">r</span> =>
-          <span class="fn">let r := <span class="fn"><span class="fn">r</span>.snd</span>;
-          <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isMissing">Lean.Syntax.isMissing</a> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span>
-          else <span class="fn">do
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span></span></span></span></span></span>
-    let x : <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> := <span class="fn"><span class="fn">r</span>.snd</span>
-    let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Init/Control/Id.html#Id">Id</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span></span>
-    <span class="fn">match <span class="fn"><span class="fn">r</span>.fst</span> with
-      | <span class="fn">none</span> => <span class="fn">do
-        let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1276,7 +1190,7 @@ If <code>firstChoiceOnly</code> is <code>true</code>, only visit the first argum
 <div class="decl" id="Lean.Syntax.Traverser">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L291-L294">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L291-L294">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1295,12 +1209,12 @@ idxs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </ul>
 <p>Represents a cursor into a syntax tree that can be read, written, and advanced down/up/left/right.
 Indices are allowed to be out-of-bound, in which case <code>cur</code> is <code>Syntax.missing</code>.
-If the <code><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Traverser</a></code> is used linearly, updates are linear in the <code><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.instForInTopDownSyntax">Syntax</a></code> object as well.</p></div>
+If the <code><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Traverser</a></code> is used linearly, updates are linear in the <code>Syntax</code> object as well.</p></div>
 </div>
 <div class="decl" id="Lean.Syntax.Traverser.fromSyntax">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L298-L299">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L298-L299">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1323,7 +1237,7 @@ If the <code><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Trav
 <div class="decl" id="Lean.Syntax.Traverser.setCur">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L301-L302">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L301-L302">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1348,7 +1262,7 @@ If the <code><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Trav
 <div class="decl" id="Lean.Syntax.Traverser.down">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L305-L309">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L305-L309">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1361,22 +1275,18 @@ If the <code><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Trav
 <span class="fn">(idx : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Lean.Syntax.Traverser</a></div></div>
-<details>
+<p>Advance to the <code>idx</code>-th child of the current node.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.down">Lean.Syntax.Traverser.down</a> <span class="fn">t</span> <span class="fn">idx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn">idx</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getNumArgs">Lean.Syntax.getNumArgs</a> <span class="fn"><span class="fn">t</span>.cur</span></span></span> then
-    <span class="fn">{ cur := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn"><span class="fn">t</span>.cur</span> <span class="fn">idx</span></span>, parents := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn"><span class="fn">t</span>.parents</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.setArg">Lean.Syntax.setArg</a> <span class="fn"><span class="fn">t</span>.cur</span> <span class="fn">idx</span> <span class="fn">default</span></span>)</span>,
-      idxs := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn"><span class="fn">t</span>.idxs</span> <span class="fn">idx</span></span> }</span>
-  else <span class="fn">{ cur := <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.missing">Lean.Syntax.missing</a>, parents := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn"><span class="fn">t</span>.parents</span> <span class="fn"><span class="fn">t</span>.cur</span></span>, idxs := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn"><span class="fn">t</span>.idxs</span> <span class="fn">idx</span></span> }</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>Advance to the <code>idx</code>-th child of the current node.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Syntax.Traverser.up">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L312-L317">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L312-L317">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1387,25 +1297,18 @@ If the <code><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Trav
 <span class="fn">(t : <a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Lean.Syntax.Traverser</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Lean.Syntax.Traverser</a></div></div>
-<details>
+<p>Advance to the parent of the current node, if any.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.up">Lean.Syntax.Traverser.up</a> <span class="fn">t</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">t</span>.parents</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span> then
-    <span class="fn">let cur :=
-      <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.back">Array.back</a> <span class="fn"><span class="fn">t</span>.idxs</span></span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getNumArgs">Lean.Syntax.getNumArgs</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.back">Array.back</a> <span class="fn"><span class="fn">t</span>.parents</span></span>)</span></span> then
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.setArg">Lean.Syntax.setArg</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.back">Array.back</a> <span class="fn"><span class="fn">t</span>.parents</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.back">Array.back</a> <span class="fn"><span class="fn">t</span>.idxs</span></span>) <span class="fn"><span class="fn">t</span>.cur</span></span>
-      else <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.back">Array.back</a> <span class="fn"><span class="fn">t</span>.parents</span></span></span>;
-    <span class="fn">{ cur := <span class="fn">cur</span>, parents := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.pop">Array.pop</a> <span class="fn"><span class="fn">t</span>.parents</span></span>, idxs := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.pop">Array.pop</a> <span class="fn"><span class="fn">t</span>.idxs</span></span> }</span></span>
-  else <span class="fn">t</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
-<p>Advance to the parent of the current node, if any.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Syntax.Traverser.left">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L320-L324">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L320-L324">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1416,20 +1319,20 @@ If the <code><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Trav
 <span class="fn">(t : <a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Lean.Syntax.Traverser</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Lean.Syntax.Traverser</a></div></div>
-<details>
+<p>Advance to the left sibling of the current node, if any.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.left">Lean.Syntax.Traverser.left</a> <span class="fn">t</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">t</span>.parents</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span> then <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.down">Lean.Syntax.Traverser.down</a> (<span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.up">Lean.Syntax.Traverser.up</a> <span class="fn">t</span></span>) (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.back">Array.back</a> <span class="fn"><span class="fn">t</span>.idxs</span></span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">1</span></span>)</span>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.left">Lean.Syntax.Traverser.left</a> <span class="fn">t</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">t</span>.parents</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">&gt</a> <span class="fn">0</span></span> then <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.down">Lean.Syntax.Traverser.down</a> (<span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.up">Lean.Syntax.Traverser.up</a> <span class="fn">t</span></span>) (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.back">Array.back</a> <span class="fn"><span class="fn">t</span>.idxs</span></span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">1</span></span>)</span>
   else <span class="fn">t</span></span></span></li>
 </ul>
 </details>
-<p>Advance to the left sibling of the current node, if any.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Syntax.Traverser.right">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L327-L331">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L327-L331">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1440,20 +1343,20 @@ If the <code><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Trav
 <span class="fn">(t : <a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Lean.Syntax.Traverser</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser">Lean.Syntax.Traverser</a></div></div>
-<details>
+<p>Advance to the right sibling of the current node, if any.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.right">Lean.Syntax.Traverser.right</a> <span class="fn">t</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">t</span>.parents</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn">0</span></span> then <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.down">Lean.Syntax.Traverser.down</a> (<span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.up">Lean.Syntax.Traverser.up</a> <span class="fn">t</span></span>) (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.back">Array.back</a> <span class="fn"><span class="fn">t</span>.idxs</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>)</span>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.right">Lean.Syntax.Traverser.right</a> <span class="fn">t</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">t</span>.parents</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">&gt</a> <span class="fn">0</span></span> then <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.down">Lean.Syntax.Traverser.down</a> (<span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.up">Lean.Syntax.Traverser.up</a> <span class="fn">t</span></span>) (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.back">Array.back</a> <span class="fn"><span class="fn">t</span>.idxs</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>)</span>
   else <span class="fn">t</span></span></span></li>
 </ul>
 </details>
-<p>Advance to the right sibling of the current node, if any.</p></div>
+</div>
 </div>
 <div class="decl" id="Lean.Syntax.MonadTraverser">
 <div class="class">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L336-L337">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L336-L337">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">class</span>
@@ -1484,7 +1387,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.MonadTraverser.getCur">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L343-L343">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L343-L343">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1509,7 +1412,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn">Lean.Syntax.MonadTraverser.getCur</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.cur">Lean.Syntax.Traverser.cur</a> <a href="/Unicode.lean/Init/Prelude.html#Functor.map"><$></a> <span class="fn">get</span></span></span></li>
+<span class="fn"><span class="fn">Lean.Syntax.MonadTraverser.getCur</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.cur">Lean.Syntax.Traverser.cur</a> <a href="/Unicode.lean/Init/Prelude.html#Functor.map">&lt$&gt</a> <span class="fn">get</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1517,7 +1420,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.MonadTraverser.setCur">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L344-L344">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L344-L344">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1540,7 +1443,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.MonadTraverser.setCur">Lean.Syntax.MonadTraverser.setCur</a> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">t</span> => <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.setCur">Lean.Syntax.Traverser.setCur</a> <span class="fn">t</span> <span class="fn">stx</span></span></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.MonadTraverser.setCur">Lean.Syntax.MonadTraverser.setCur</a> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">t</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.setCur">Lean.Syntax.Traverser.setCur</a> <span class="fn">t</span> <span class="fn">stx</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1548,7 +1451,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.MonadTraverser.goDown">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L345-L345">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L345-L345">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1571,7 +1474,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.MonadTraverser.goDown">Lean.Syntax.MonadTraverser.goDown</a> <span class="fn">idx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">t</span> => <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.down">Lean.Syntax.Traverser.down</a> <span class="fn">t</span> <span class="fn">idx</span></span></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.MonadTraverser.goDown">Lean.Syntax.MonadTraverser.goDown</a> <span class="fn">idx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">t</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.down">Lean.Syntax.Traverser.down</a> <span class="fn">t</span> <span class="fn">idx</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1579,7 +1482,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.MonadTraverser.goUp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L346-L346">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L346-L346">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1600,7 +1503,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn">Lean.Syntax.MonadTraverser.goUp</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">t</span> => <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.up">Lean.Syntax.Traverser.up</a> <span class="fn">t</span></span></span></span></span></li>
+<span class="fn"><span class="fn">Lean.Syntax.MonadTraverser.goUp</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">t</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.up">Lean.Syntax.Traverser.up</a> <span class="fn">t</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1608,7 +1511,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.MonadTraverser.goLeft">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L347-L347">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L347-L347">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1629,7 +1532,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn">Lean.Syntax.MonadTraverser.goLeft</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">t</span> => <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.left">Lean.Syntax.Traverser.left</a> <span class="fn">t</span></span></span></span></span></li>
+<span class="fn"><span class="fn">Lean.Syntax.MonadTraverser.goLeft</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">t</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.left">Lean.Syntax.Traverser.left</a> <span class="fn">t</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1637,7 +1540,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.MonadTraverser.goRight">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L348-L348">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L348-L348">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1658,7 +1561,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn">Lean.Syntax.MonadTraverser.goRight</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">t</span> => <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.right">Lean.Syntax.Traverser.right</a> <span class="fn">t</span></span></span></span></span></li>
+<span class="fn"><span class="fn">Lean.Syntax.MonadTraverser.goRight</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">t</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.Traverser.right">Lean.Syntax.Traverser.right</a> <span class="fn">t</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1666,7 +1569,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.MonadTraverser.getIdx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L350-L352">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L350-L352">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1701,7 +1604,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.SyntaxNode.getIdAt">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L359-L360">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L359-L360">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1727,7 +1630,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.mkListNode">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L364-L365">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L364-L365">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1750,7 +1653,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.isQuot">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L370-L373">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L370-L373">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1762,17 +1665,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.isQuot">Lean.Syntax.isQuot</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">x</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">x_1</span> <span class="fn">"quot"</span> <span class="fn">x_2</span></span>) <span class="fn">x_3</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  |
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">x</span>
-      (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a>
-        (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a> <span class="fn">"Lean"</span> <span class="fn">x_1</span></span>) <span class="fn">"Parser"</span> <span class="fn">x_2</span></span>) <span class="fn">"Term"</span> <span class="fn">x_3</span></span>)
-        <span class="fn">"dynamicQuot"</span> <span class="fn">x_4</span></span>)
-      <span class="fn">x_5</span></span> =>
-    <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1780,7 +1673,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.getQuotContent">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L375-L379">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L375-L379">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1804,7 +1697,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.isAntiquot">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L382-L384">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L382-L384">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1818,8 +1711,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.isAntiquot">Lean.Syntax.isAntiquot</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">x</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">x_1</span> <span class="fn">"antiquot"</span> <span class="fn">x_2</span></span>) <span class="fn">x_3</span></span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">x</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">x_1</span> <span class="fn">&quotantiquot&quot</span> <span class="fn">x_2</span></span>) <span class="fn">x_3</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+  | <span class="fn">x</span> =&gt <span class="fn">false</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1827,7 +1720,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.mkAntiquotNode">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L386-L394">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L386-L394">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1847,17 +1740,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.mkAntiquotNode">Lean.Syntax.mkAntiquotNode</a> <span class="fn">term</span> <span class="fn">nesting</span> <span class="fn">name</span> <span class="fn">kind</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let nesting := <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.mkNullNode">Lean.mkNullNode</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mkArray">mkArray</a> <span class="fn">nesting</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.mkAtom">Lean.mkAtom</a> <span class="fn">"$"</span></span>)</span>)</span>;
-  <span class="fn">let term :=
-    <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isIdent">Lean.Syntax.isIdent</a> <span class="fn">term</span></span> with
-    | <a href="/Unicode.lean/Init/Prelude.html#Bool.false">true</a> => <span class="fn">term</span>
-    | <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> => <a href="/Unicode.lean/Init/Prelude.html#Bool.false"><a href="/Unicode.lean/Init/Meta.html#Lean.mkNode">Lean.mkNode</a> <span class="fn">`antiquotNestedExpr</span> <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.mkAtom">Lean.mkAtom</a> <span class="fn">"("</span></span>, <span class="fn">term</span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.mkAtom">Lean.mkAtom</a> <span class="fn">")"</span></span>]</span></a></span>;
-  <span class="fn">let name :=
-    <span class="fn">match <span class="fn">name</span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">name</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.mkNode">Lean.mkNode</a> <span class="fn">`antiquotName</span> <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.mkAtom">Lean.mkAtom</a> <span class="fn">":"</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.mkAtom">Lean.mkAtom</a> <span class="fn">name</span></span>]</span></span>
-    | <span class="fn">none</span> => <span class="fn">Lean.mkNullNode</span></span>;
-  <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.mkNode">Lean.mkNode</a> (<span class="fn"><span class="fn">kind</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">`antiquot</span></span>) <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.mkAtom">Lean.mkAtom</a> <span class="fn">"$"</span></span>, <span class="fn">nesting</span>, <span class="fn">term</span>, <span class="fn">name</span>]</span></span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1865,7 +1748,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.isEscapedAntiquot">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L397-L398">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L397-L398">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1888,7 +1771,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.unescapeAntiquot">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L401-L405">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L401-L405">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1913,7 +1796,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.getAntiquotTerm">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L408-L413">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L408-L413">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1927,9 +1810,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.getAntiquotTerm">Lean.Syntax.getAntiquotTerm</a> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let e := <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.isAntiquot">Lean.Syntax.isAntiquot</a> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">2</span></span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">3</span></span></span>;
-  <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isIdent">Lean.Syntax.isIdent</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">e</span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">e</span> <span class="fn">1</span></span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1937,7 +1818,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.antiquotKind?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L415-L421">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L415-L421">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1949,11 +1830,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.antiquotKind?">Lean.Syntax.antiquotKind?</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">x</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">k</span> <span class="fn">"antiquot"</span> <span class="fn">x_1</span></span>) <span class="fn">args</span></span> =>
-    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isOfKind">Lean.Syntax.isOfKind</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn">args</span> <span class="fn">3</span></span>) <span class="fn">`antiquotName</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">k</span></span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a></span></span>
-  | <span class="fn">x</span> => <span class="fn">none</span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1961,7 +1838,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.antiquotSpliceKind?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L424-L426">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L424-L426">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1975,8 +1852,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.antiquotSpliceKind?">Lean.Syntax.antiquotSpliceKind?</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">x</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">k</span> <span class="fn">"antiquot_scope"</span> <span class="fn">x_1</span></span>) <span class="fn">args</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">k</span></span>
-  | <span class="fn">x</span> => <span class="fn">none</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">x</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">k</span> <span class="fn">&quotantiquot_scope&quot</span> <span class="fn">x_1</span></span>) <span class="fn">args</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">k</span></span>
+  | <span class="fn">x</span> =&gt <span class="fn">none</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1984,7 +1861,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.isAntiquotSplice">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L428-L429">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L428-L429">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2007,7 +1884,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.getAntiquotSpliceContents">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L431-L432">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L431-L432">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2030,7 +1907,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.getAntiquotSpliceSuffix">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L435-L439">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L435-L439">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2053,7 +1930,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.mkAntiquotSpliceNode">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L441-L443">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L441-L443">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2073,10 +1950,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.mkAntiquotSpliceNode">Lean.Syntax.mkAntiquotSpliceNode</a> <span class="fn">kind</span> <span class="fn">contents</span> <span class="fn">suffix</span> <span class="fn">nesting</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let nesting := <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.mkNullNode">Lean.mkNullNode</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mkArray">mkArray</a> <span class="fn">nesting</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.mkAtom">Lean.mkAtom</a> <span class="fn">"$"</span></span>)</span>)</span>;
-  <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.mkNode">Lean.mkNode</a> (<span class="fn"><span class="fn">kind</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">`antiquot_splice</span></span>)
-    <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.mkAtom">Lean.mkAtom</a> <span class="fn">"$"</span></span>, <span class="fn">nesting</span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.mkAtom">Lean.mkAtom</a> <span class="fn">"["</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.mkNullNode">Lean.mkNullNode</a> <span class="fn">contents</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.mkAtom">Lean.mkAtom</a> <span class="fn">"]"</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.mkAtom">Lean.mkAtom</a> <span class="fn">suffix</span></span>]</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -2084,7 +1958,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.antiquotSuffixSplice?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L446-L448">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L446-L448">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2098,8 +1972,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Syntax.html#Lean.Syntax.antiquotSuffixSplice?">Lean.Syntax.antiquotSuffixSplice?</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">x</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">k</span> <span class="fn">"antiquot_suffix_splice"</span> <span class="fn">x_1</span></span>) <span class="fn">args</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">k</span></span>
-  | <span class="fn">x</span> => <span class="fn">none</span></span></span></li>
+  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <span class="fn">x</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">k</span> <span class="fn">&quotantiquot_suffix_splice&quot</span> <span class="fn">x_1</span></span>) <span class="fn">args</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">k</span></span>
+  | <span class="fn">x</span> =&gt <span class="fn">none</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -2107,7 +1981,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.isAntiquotSuffixSplice">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L450-L451">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L450-L451">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2130,7 +2004,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.getAntiquotSuffixSpliceInner">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L454-L455">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L454-L455">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2153,7 +2027,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.mkAntiquotSuffixSpliceNode">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L457-L458">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L457-L458">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2180,7 +2054,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.isTokenAntiquot">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L460-L461">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L460-L461">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2203,7 +2077,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="decl" id="Lean.Syntax.isAnyAntiquot">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Syntax.lean#L463-L464">source</a>
+<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Syntax.lean#L463-L464">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2232,10 +2106,10 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <h3>Library</h3>
 <div class="module_list">
 <details class="nav_sect" data-path="/Unicode.lean/Init.html">
-<summary>Init</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
-<summary>Init.Control</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init.html">Init</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Control.html">
+<summary><a href="/Unicode.lean/Init/Control.html">Init.Control</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Control/Basic.html">Init.Control.Basic</a>
 </div>
 <div class="nav_link">
@@ -2270,10 +2144,10 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data.html">
-<summary>Init.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
-<summary>Init.Data.Array</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data.html">Init.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Init/Data/Array.html">
+<summary><a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/Basic.html">Init.Data.Array.Basic</a>
 </div>
 <div class="nav_link">
@@ -2296,32 +2170,32 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ByteArray.html">
-<summary>Init.Data.ByteArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ByteArray/Basic.html">Init.Data.ByteArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Char.html">
-<summary>Init.Data.Char</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Char/Basic.html">Init.Data.Char.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Fin.html">
-<summary>Init.Data.Fin</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Fin/Basic.html">Init.Data.Fin.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/FloatArray.html">
-<summary>Init.Data.FloatArray</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/FloatArray/Basic.html">Init.Data.FloatArray.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Format.html">
-<summary>Init.Data.Format</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Format/Basic.html">Init.Data.Format.Basic</a>
 </div>
 <div class="nav_link">
@@ -2335,14 +2209,14 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Int.html">
-<summary>Init.Data.Int</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Int/Basic.html">Init.Data.Int.Basic</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/List.html">
-<summary>Init.Data.List</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/List/Basic.html">Init.Data.List.Basic</a>
 </div>
 <div class="nav_link">
@@ -2353,8 +2227,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Nat.html">
-<summary>Init.Data.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Basic.html">Init.Data.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -2377,8 +2251,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/Option.html">
-<summary>Init.Data.Option</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Option/Basic.html">Init.Data.Option.Basic</a>
 </div>
 <div class="nav_link">
@@ -2389,8 +2263,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/String.html">
-<summary>Init.Data.String</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/String/Basic.html">Init.Data.String.Basic</a>
 </div>
 <div class="nav_link">
@@ -2398,8 +2272,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/Data/ToString.html">
-<summary>Init.Data.ToString</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/Data/ToString/Basic.html">Init.Data.ToString.Basic</a>
 </div>
 <div class="nav_link">
@@ -2407,46 +2281,16 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Array.html">Init.Data.Array</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Char.html">Init.Data.Char</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Fin.html">Init.Data.Fin</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Float.html">Init.Data.Float</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/FloatArray.html">Init.Data.FloatArray</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Format.html">Init.Data.Format</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Hashable.html">Init.Data.Hashable</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Int.html">Init.Data.Int</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/List.html">Init.Data.List</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Nat.html">Init.Data.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/OfScientific.html">Init.Data.OfScientific</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/Option.html">Init.Data.Option</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
@@ -2467,18 +2311,12 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Init/Data/Stream.html">Init.Data.Stream</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Data/String.html">Init.Data.String</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data/ToString.html">Init.Data.ToString</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/UInt.html">Init.Data.UInt</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Init/System.html">
-<summary>Init.System</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Init/System.html">Init.System</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Init/System/FilePath.html">Init.System.FilePath</a>
 </div>
 <div class="nav_link">
@@ -2501,16 +2339,10 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Init/Coe.html">Init.Coe</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/Control.html">Init.Control</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Conv.html">Init.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Core.html">Init.Core</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Init/Data.html">Init.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Fix.html">Init.Fix</a>
@@ -2540,9 +2372,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Init/System.html">Init.System</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Init/Util.html">Init.Util</a>
 </div>
 <div class="nav_link">
@@ -2553,12 +2382,12 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean.html" open="">
-<summary>Lean</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
-<summary>Lean.Compiler</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
-<summary>Lean.Compiler.IR</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean.html">Lean</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler.html">
+<summary><a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Compiler/IR.html">
+<summary><a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html">Lean.Compiler.IR.Basic</a>
 </div>
 <div class="nav_link">
@@ -2644,9 +2473,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Lean/Compiler/FFI.html">Lean.Compiler.FFI</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler/IR.html">Lean.Compiler.IR</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Compiler/ImplementedByAttr.html">Lean.Compiler.ImplementedByAttr</a>
 </div>
 <div class="nav_link">
@@ -2672,10 +2498,10 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data.html">
-<summary>Lean.Data</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
-<summary>Lean.Data.Json</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Json.html">
+<summary><a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json/Basic.html">Lean.Data.Json.Basic</a>
 </div>
 <div class="nav_link">
@@ -2692,8 +2518,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Lsp.html">
-<summary>Lean.Data.Lsp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html">Lean.Data.Lsp.Basic</a>
 </div>
 <div class="nav_link">
@@ -2734,8 +2560,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Data/Xml.html">
-<summary>Lean.Data.Xml</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Xml/Basic.html">Lean.Data.Xml.Basic</a>
 </div>
 <div class="nav_link">
@@ -2749,9 +2575,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/JsonRpc.html">Lean.Data.JsonRpc</a>
 </div>
 <div class="nav_link">
@@ -2762,9 +2585,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/LOption.html">Lean.Data.LOption</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Lsp.html">Lean.Data.Lsp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Name.html">Lean.Data.Name</a>
@@ -2802,15 +2622,12 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Trie.html">Lean.Data.Trie</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data/Xml.html">Lean.Data.Xml</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab.html">
-<summary>Lean.Elab</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
-<summary>Lean.Elab.Deriving</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Deriving.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Deriving/BEq.html">Lean.Elab.Deriving.BEq</a>
 </div>
 <div class="nav_link">
@@ -2842,10 +2659,10 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition.html">
-<summary>Lean.Elab.PreDefinition</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
-<summary>Lean.Elab.PreDefinition.Structural</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/BRecOn.html">Lean.Elab.PreDefinition.Structural.BRecOn</a>
 </div>
 <div class="nav_link">
@@ -2871,8 +2688,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">
-<summary>Lean.Elab.PreDefinition.WF</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html">Lean.Elab.PreDefinition.WF.Eqns</a>
 </div>
 <div class="nav_link">
@@ -2906,16 +2723,10 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/MkInhabitant.html">Lean.Elab.PreDefinition.MkInhabitant</a>
 </div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural.html">Lean.Elab.PreDefinition.Structural</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF.html">Lean.Elab.PreDefinition.WF</a>
-</div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Quotation.html">
-<summary>Lean.Elab.Quotation</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html">Lean.Elab.Quotation.Precheck</a>
 </div>
 <div class="nav_link">
@@ -2923,10 +2734,10 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic.html">
-<summary>Lean.Elab.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
-<summary>Lean.Elab.Tactic.Conv</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Elab/Tactic/Conv.html">
+<summary><a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
 </div>
 <div class="nav_link">
@@ -2959,9 +2770,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic/Conv.html">Lean.Elab.Tactic.Conv</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Delta.html">Lean.Elab.Tactic.Delta</a>
@@ -3052,9 +2860,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Lean/Elab/DefView.html">Lean.Elab.DefView</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Deriving.html">Lean.Elab.Deriving</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
 </div>
 <div class="nav_link">
@@ -3121,13 +2926,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/PreDefinition.html">Lean.Elab.PreDefinition</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Print.html">Lean.Elab.Print</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Quotation.html">Lean.Elab.Quotation</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/RecAppSyntax.html">Lean.Elab.RecAppSyntax</a>
@@ -3148,9 +2947,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html">Lean.Elab.SyntheticMVars</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab/Tactic.html">Lean.Elab.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Term.html">Lean.Elab.Term</a>
 </div>
 <div class="nav_link">
@@ -3158,10 +2954,10 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta.html">
-<summary>Lean.Meta</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
-<summary>Lean.Meta.Match</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Match.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/Basic.html">Lean.Meta.Match.Basic</a>
 </div>
 <div class="nav_link">
@@ -3190,12 +2986,12 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
-<summary>Lean.Meta.Tactic</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
-<summary>Lean.Meta.Tactic.LinearArith</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
-<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
 </div>
 <div class="nav_link">
@@ -3212,9 +3008,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
 </div>
 <div class="nav_link">
@@ -3222,8 +3015,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
-<summary>Lean.Meta.Tactic.Simp</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html">Lean.Meta.Tactic.Simp.Main</a>
 </div>
 <div class="nav_link">
@@ -3294,9 +3087,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rename.html">Lean.Meta.Tactic.Rename</a>
 </div>
 <div class="nav_link">
@@ -3307,9 +3097,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Rewrite.html">Lean.Meta.Tactic.Rewrite</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Split.html">Lean.Meta.Tactic.Split</a>
@@ -3421,9 +3208,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Match.html">Lean.Meta.Match</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/MatchUtil.html">Lean.Meta.MatchUtil</a>
 </div>
 <div class="nav_link">
@@ -3451,9 +3235,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Transform.html">Lean.Meta.Transform</a>
 </div>
 <div class="nav_link">
@@ -3467,8 +3248,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Parser.html">
-<summary>Lean.Parser</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Parser/Attr.html">Lean.Parser.Attr</a>
 </div>
 <div class="nav_link">
@@ -3506,16 +3287,16 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/ParserCompiler.html">
-<summary>Lean.ParserCompiler</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html">Lean.ParserCompiler.Attribute</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter.html">
-<summary>Lean.PrettyPrinter</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
-<summary>Lean.PrettyPrinter.Delaborator</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">
+<summary><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html">Lean.PrettyPrinter.Delaborator.Basic</a>
 </div>
 <div class="nav_link">
@@ -3535,9 +3316,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Lean/PrettyPrinter/Basic.html">Lean.PrettyPrinter.Basic</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator.html">Lean.PrettyPrinter.Delaborator</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/PrettyPrinter/Formatter.html">Lean.PrettyPrinter.Formatter</a>
 </div>
 <div class="nav_link">
@@ -3545,10 +3323,10 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server.html">
-<summary>Lean.Server</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
-<summary>Lean.Server.FileWorker</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Server/FileWorker.html">
+<summary><a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html">Lean.Server.FileWorker.RequestHandling</a>
 </div>
 <div class="nav_link">
@@ -3559,8 +3337,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Server/Rpc.html">
-<summary>Lean.Server.Rpc</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Rpc/Basic.html">Lean.Server.Rpc.Basic</a>
 </div>
 <div class="nav_link">
@@ -3580,9 +3358,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Lean/Server/FileSource.html">Lean.Server.FileSource</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/FileWorker.html">Lean.Server.FileWorker</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
 </div>
 <div class="nav_link">
@@ -3590,9 +3365,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Requests.html">Lean.Server.Requests</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Server/Rpc.html">Lean.Server.Rpc</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Server/Snapshots.html">Lean.Server.Snapshots</a>
@@ -3605,8 +3377,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Util.html">
-<summary>Lean.Util</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/CollectFVars.html">Lean.Util.CollectFVars</a>
 </div>
 <div class="nav_link">
@@ -3674,8 +3446,8 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Widget.html">
-<summary>Lean.Widget</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html">Lean.Widget.InteractiveCode</a>
 </div>
 <div class="nav_link">
@@ -3698,13 +3470,7 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Lean/Class.html">Lean.Class</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Compiler.html">Lean.Compiler</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/CoreM.html">Lean.CoreM</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Data.html">Lean.Data</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Declaration.html">Lean.Declaration</a>
@@ -3714,9 +3480,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/DocString.html">Lean.DocString</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Elab.html">Lean.Elab</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
@@ -3761,9 +3524,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Lean/Message.html">Lean.Message</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta.html">Lean.Meta</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/MetavarContext.html">Lean.MetavarContext</a>
 </div>
 <div class="nav_link">
@@ -3771,15 +3531,6 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/MonadEnv.html">Lean.MonadEnv</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Parser.html">Lean.Parser</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/ParserCompiler.html">Lean.ParserCompiler</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/PrettyPrinter.html">Lean.PrettyPrinter</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ProjFns.html">Lean.ProjFns</a>
@@ -3797,22 +3548,13 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 <a href="/Unicode.lean/Lean/ScopedEnvExtension.html">Lean.ScopedEnvExtension</a>
 </div>
 <div class="nav_link">
-<a href="/Unicode.lean/Lean/Server.html">Lean.Server</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Lean/Structure.html">Lean.Structure</a>
 </div>
-<div class="nav_link" visible="">
+<div class="nav_link visible">
 <a href="/Unicode.lean/Lean/Syntax.html">Lean.Syntax</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/ToExpr.html">Lean.ToExpr</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Util.html">Lean.Util</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
@@ -3858,10 +3600,10 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Unicode.html">
-<summary>Unicode</summary>
-<details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
-<summary>Unicode.General</summary>
-<div class="nav_link">
+<summary><a href="/Unicode.lean/Unicode.html">Unicode</a>
+</summary><details class="nav_sect" data-path="/Unicode.lean/Unicode/General.html">
+<summary><a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
+</summary><div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
 </div>
 <div class="nav_link">
@@ -3869,26 +3611,10 @@ st : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadState">Monad
 </div>
 </details>
 <div class="nav_link">
-<a href="/Unicode.lean/Unicode/General.html">Unicode.General</a>
-</div>
-<div class="nav_link">
 <a href="/Unicode.lean/Unicode/Includes.html">Unicode.Includes</a>
 </div>
 </details>
 </div>
 </nav>
-<script>
-siteRoot = "/Unicode.lean/";
-      </script>
-<script src="/Unicode.lean/nav.js">
-</script>
-<script src="/Unicode.lean/search.js">
-</script>
-<script src="/Unicode.lean/mathjax-config.js">
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </body>
 </html>
