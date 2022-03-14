@@ -72,13 +72,13 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Widget.instInhabitedCodeToken">Lean.Widget.instInhabitedCodeToken</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Widget.Lean.Widget.CodeToken.instToJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.CodeToken.instToJsonRpcEncodingPacket</a>
-</div>
-<div class="nav_link">
 <a class="break_within" href="#Lean.Widget.Lean.Widget.CodeToken.instFromJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.CodeToken.instFromJsonRpcEncodingPacket</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Widget.Lean.Widget.CodeToken.instRpcEncodingCodeTokenRpcEncodingPacket">Lean.Widget.Lean.Widget.CodeToken.instRpcEncodingCodeTokenRpcEncodingPacket</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Widget.Lean.Widget.CodeToken.instToJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.CodeToken.instToJsonRpcEncodingPacket</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Widget.CodeWithInfos">Lean.Widget.CodeWithInfos</a>
@@ -219,27 +219,6 @@ info : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.S
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Widget.Lean.Widget.CodeToken.instToJsonRpcEncodingPacket">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Widget/InteractiveCode.lean#L28-L28">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Widget/InteractiveCode.html#Lean.Widget.Lean.Widget.CodeToken.instToJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.CodeToken.instToJsonRpcEncodingPacket</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html#Lean.Widget.Lean.Widget.CodeToken.RpcEncodingPacket._@.Lean.Widget.InteractiveCode._hyg.144">Lean.Widget.Lean.Widget.CodeToken.RpcEncodingPacket✝</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Widget/InteractiveCode.html#Lean.Widget.Lean.Widget.CodeToken.instToJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.CodeToken.instToJsonRpcEncodingPacket</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html#_private.Lean.Widget.InteractiveCode.0.Lean.Widget.Lean.Widget.CodeToken.toJsonRpcEncodingPacket._@.Lean.Widget.InteractiveCode._hyg.213">[anonymous]</a> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
 <div class="decl" id="Lean.Widget.Lean.Widget.CodeToken.instFromJsonRpcEncodingPacket">
 <div class="instance">
 <div class="gh_link">
@@ -283,6 +262,27 @@ info : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.S
     rpcDecode := <span class="fn">fun {m} [<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Monad">Monad</a> <span class="fn">m</span></span>] [<span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.Server.MonadRpcSession">Lean.Server.MonadRpcSession</a> <span class="fn">m</span></span>] <span class="fn">a</span> => <span class="fn">do
       let a ← <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.Server.RpcEncoding.rpcDecode">Lean.Server.rpcDecode</a> <span class="fn"><span class="fn">a</span>.info</span></span>
       <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">{ info := <span class="fn">a</span> }</span></span></span></span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Widget.Lean.Widget.CodeToken.instToJsonRpcEncodingPacket">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Widget/InteractiveCode.lean#L28-L28">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Widget/InteractiveCode.html#Lean.Widget.Lean.Widget.CodeToken.instToJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.CodeToken.instToJsonRpcEncodingPacket</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html#Lean.Widget.Lean.Widget.CodeToken.RpcEncodingPacket._@.Lean.Widget.InteractiveCode._hyg.144">Lean.Widget.Lean.Widget.CodeToken.RpcEncodingPacket✝</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Widget/InteractiveCode.html#Lean.Widget.Lean.Widget.CodeToken.instToJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.CodeToken.instToJsonRpcEncodingPacket</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Widget/InteractiveCode.html#_private.Lean.Widget.InteractiveCode.0.Lean.Widget.Lean.Widget.CodeToken.toJsonRpcEncodingPacket._@.Lean.Widget.InteractiveCode._hyg.213">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -630,6 +630,9 @@ info : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.S
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -711,6 +714,9 @@ info : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.S
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -788,6 +794,9 @@ info : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.S
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -870,6 +879,9 @@ info : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.S
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1076,6 +1088,9 @@ info : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.S
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1522,8 +1537,32 @@ info : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.S
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1547,6 +1586,9 @@ info : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.S
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1717,6 +1759,9 @@ info : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.S
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1742,9 +1787,6 @@ info : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.S
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2117,6 +2159,15 @@ info : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.S
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2156,6 +2207,9 @@ info : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.S
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

@@ -37,6 +37,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Data/Position.html">Lean.Data.Position</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Parser/Basic.html">Lean.Parser.Basic</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Server/InfoUtils.html">Lean.Server.InfoUtils</a>
 </li>
 </ul>
@@ -87,6 +90,9 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Server.instInhabitedDocumentMeta">Lean.Server.instInhabitedDocumentMeta</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.Server.DocumentMeta.mkInputContext">Lean.Server.DocumentMeta.mkInputContext</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Server.replaceLspRange">Lean.Server.replaceLspRange</a>
 </div>
 <div class="nav_link">
@@ -118,7 +124,7 @@ Documentation</h1>
 <div class="decl" id="IO.throwServerError">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L14-L15">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L15-L16">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -145,7 +151,7 @@ Documentation</h1>
 <div class="decl" id="IO.FS.Stream.chainRight">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L25-L37">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L26-L38">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -199,7 +205,7 @@ about the data that was actually read.</p></div>
 <div class="decl" id="IO.FS.Stream.chainLeft">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L40-L50">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L41-L51">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -245,7 +251,7 @@ about the data that was actually read.</p></div>
 <div class="decl" id="IO.FS.Stream.withPrefix">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L53-L59">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L54-L60">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -274,7 +280,7 @@ about the data that was actually read.</p></div>
 <div class="decl" id="Lean.Lsp.DocumentUri.ofPath">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L67-L75">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L68-L76">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -302,7 +308,7 @@ about the data that was actually read.</p></div>
 <div class="decl" id="Lean.Lsp.DocumentUri.toPath?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L78-L84">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L79-L85">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -340,7 +346,7 @@ about the data that was actually read.</p></div>
 <div class="decl" id="Lean.Server.DocumentMeta">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L90-L94">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L91-L95">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -362,7 +368,7 @@ text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap
 <div class="decl" id="Lean.Server.instInhabitedDocumentMeta">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L94-L94">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L95-L95">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -380,10 +386,35 @@ text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Server.DocumentMeta.mkInputContext">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L97-L100">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/Utils.html#Lean.Server.DocumentMeta.mkInputContext">Lean.Server.DocumentMeta.mkInputContext</a>
+</span>
+<span class="decl_args">
+<span class="fn">(doc : <a href="/Unicode.lean/Lean/Server/Utils.html#Lean.Server.DocumentMeta">Lean.Server.DocumentMeta</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.InputContext">Lean.Parser.InputContext</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Utils.html#Lean.Server.DocumentMeta.mkInputContext">Lean.Server.DocumentMeta.mkInputContext</a> <span class="fn">doc</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ input := <span class="fn"><span class="fn"><span class="fn">doc</span>.text</span>.source</span>,
+    fileName := <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.getD">Option.getD</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Utils.html#Lean.Lsp.DocumentUri.toPath?">Lean.Lsp.DocumentUri.toPath?</a> <span class="fn"><span class="fn">doc</span>.uri</span></span>) <span class="fn">{ toString := <span class="fn"><span class="fn">doc</span>.uri</span> }</span></span>).toString</span>,
+    fileMap := <span class="fn"><span class="fn">doc</span>.text</span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Server.replaceLspRange">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L96-L101">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L102-L107">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -414,7 +445,7 @@ text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap
 <div class="decl" id="Lean.Server.maybeTee">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L107-L117">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L113-L123">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -450,7 +481,7 @@ if that envvar is set.</p></div>
 <div class="decl" id="Lean.Server.applyDocumentChange">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L122-L126">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L128-L132">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -478,7 +509,7 @@ if that envvar is set.</p></div>
 <div class="decl" id="Lean.Server.foldDocumentChanges">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L129-L130">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L135-L136">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -503,7 +534,7 @@ if that envvar is set.</p></div>
 <div class="decl" id="Lean.Server.publishDiagnostics">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L132-L141">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L138-L147">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -532,7 +563,7 @@ if that envvar is set.</p></div>
 <div class="decl" id="Lean.Server.publishProgress">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L143-L151">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L149-L157">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -561,7 +592,7 @@ if that envvar is set.</p></div>
 <div class="decl" id="Lean.Server.publishProgressAtPos">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L153-L154">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L159-L160">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -595,7 +626,7 @@ if that envvar is set.</p></div>
 <div class="decl" id="Lean.Server.publishProgressDone">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L156-L157">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L162-L163">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -620,7 +651,7 @@ if that envvar is set.</p></div>
 <div class="decl" id="String.Range.toLspRange">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L161-L162">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Utils.lean#L167-L168">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -705,6 +736,9 @@ if that envvar is set.</p></div>
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -786,6 +820,9 @@ if that envvar is set.</p></div>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -863,6 +900,9 @@ if that envvar is set.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -945,6 +985,9 @@ if that envvar is set.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1151,6 +1194,9 @@ if that envvar is set.</p></div>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1597,8 +1643,32 @@ if that envvar is set.</p></div>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1622,6 +1692,9 @@ if that envvar is set.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1792,6 +1865,9 @@ if that envvar is set.</p></div>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1817,9 +1893,6 @@ if that envvar is set.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2192,6 +2265,15 @@ if that envvar is set.</p></div>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2231,6 +2313,9 @@ if that envvar is set.</p></div>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

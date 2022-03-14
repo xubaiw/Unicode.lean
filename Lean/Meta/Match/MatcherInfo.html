@@ -36,6 +36,9 @@ Documentation</h1>
 <summary>Imported by</summary>
 <ul>
 <li>
+<a href="/Unicode.lean/Lean/Meta/DiscrTree.html">Lean.Meta.DiscrTree</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Meta/WHNF.html">Lean.Meta.WHNF</a>
 </li>
 <li>
@@ -58,6 +61,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Meta.Match.MatcherInfo.getFirstDiscrPos">Lean.Meta.Match.MatcherInfo.getFirstDiscrPos</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Meta.Match.MatcherInfo.getFirstAltPos">Lean.Meta.Match.MatcherInfo.getFirstAltPos</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Meta.Match.MatcherInfo.getMotivePos">Lean.Meta.Match.MatcherInfo.getMotivePos</a>
@@ -222,10 +228,33 @@ It is <code>none</code> if the matcher only eliminates into <code>Prop</code>.</
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Meta.Match.MatcherInfo.getMotivePos">
+<div class="decl" id="Lean.Meta.Match.MatcherInfo.getFirstAltPos">
 <div class="def">
 <div class="gh_link">
 <a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L35-L36">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Match/MatcherInfo.html#Lean.Meta.Match.MatcherInfo.getFirstAltPos">Lean.Meta.Match.MatcherInfo.getFirstAltPos</a>
+</span>
+<span class="decl_args">
+<span class="fn">(info : <a href="/Unicode.lean/Lean/Meta/Match/MatcherInfo.html#Lean.Meta.Match.MatcherInfo">Lean.Meta.MatcherInfo</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Match/MatcherInfo.html#Lean.Meta.Match.MatcherInfo.getFirstAltPos">Lean.Meta.Match.MatcherInfo.getFirstAltPos</a> <span class="fn">info</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">info</span>.numParams</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn"><span class="fn">info</span>.numDiscrs</span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Meta.Match.MatcherInfo.getMotivePos">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L38-L39">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -248,7 +277,7 @@ It is <code>none</code> if the matcher only eliminates into <code>Prop</code>.</
 <div class="decl" id="Lean.Meta.Match.Extension.Entry">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L40-L42">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L43-L45">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -268,7 +297,7 @@ info : <a href="/Unicode.lean/Lean/Meta/Match/MatcherInfo.html#Lean.Meta.Match.M
 <div class="decl" id="Lean.Meta.Match.Extension.State">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L44-L45">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L47-L48">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -286,7 +315,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.Match.Extension.instInhabitedState">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L47-L47">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L50-L50">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -311,7 +340,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.Match.Extension.State.addEntry">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L49-L49">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L52-L52">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -336,7 +365,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.Match.Extension.State.switch">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L50-L50">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L53-L53">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -359,7 +388,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.Match.Extension.extension">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L52-L52">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L55-L55">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -373,7 +402,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.Match.Extension.addMatcherInfo">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L59-L60">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L62-L63">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -400,7 +429,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.Match.Extension.getMatcherInfo?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L62-L63">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L65-L66">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -425,7 +454,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.Match.addMatcherInfo">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L67-L68">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L70-L71">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -450,7 +479,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.getMatcherInfoCore?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L74-L75">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L77-L78">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -475,7 +504,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.getMatcherInfo?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L77-L78">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L80-L81">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -512,7 +541,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.isMatcherCore">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L81-L82">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L84-L85">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -537,7 +566,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.isMatcher">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L84-L85">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L87-L88">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -574,7 +603,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.isMatcherAppCore?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L87-L95">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L90-L98">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -605,7 +634,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.isMatcherAppCore">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L97-L98">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L100-L101">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -630,7 +659,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.isMatcherApp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L100-L101">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L103-L104">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -667,7 +696,7 @@ map : <span class="fn"><a href="/Unicode.lean/Lean/Data/SMap.html#Lean.SMap">Lea
 <div class="decl" id="Lean.Meta.MatcherApp">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L103-L112">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L106-L115">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -701,7 +730,7 @@ remaining : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 <div class="decl" id="Lean.Meta.matchMatcherApp?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L114-L135">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L117-L138">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -762,7 +791,7 @@ remaining : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 <div class="decl" id="Lean.Meta.MatcherApp.toExpr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L137-L142">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Match/MatcherInfo.lean#L140-L145">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -850,6 +879,9 @@ remaining : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -931,6 +963,9 @@ remaining : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -1008,6 +1043,9 @@ remaining : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -1090,6 +1128,9 @@ remaining : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1296,6 +1337,9 @@ remaining : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1742,8 +1786,32 @@ remaining : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1767,6 +1835,9 @@ remaining : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1937,6 +2008,9 @@ remaining : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1962,9 +2036,6 @@ remaining : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2337,6 +2408,15 @@ remaining : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2376,6 +2456,9 @@ remaining : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

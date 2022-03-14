@@ -96,7 +96,13 @@ Documentation</h1>
 <a class="break_within" href="#Lean.isAuxRecursor">Lean.isAuxRecursor</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.isAuxRecursorWithSuffix">Lean.isAuxRecursorWithSuffix</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.isCasesOnRecursor">Lean.isCasesOnRecursor</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.isBRecOnRecursor">Lean.isBRecOnRecursor</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.noConfusionExt">Lean.noConfusionExt</a>
@@ -393,10 +399,39 @@ Documentation</h1>
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.isCasesOnRecursor">
+<div class="decl" id="Lean.isAuxRecursorWithSuffix">
 <div class="def">
 <div class="gh_link">
 <a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/AuxRecursor.lean#L36-L39">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/AuxRecursor.html#Lean.isAuxRecursorWithSuffix">Lean.isAuxRecursorWithSuffix</a>
+</span>
+<span class="decl_args">
+<span class="fn">(env : <a href="/Unicode.lean/Lean/Environment.html#Lean.Environment">Lean.Environment</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(declName : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(suffix : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/AuxRecursor.html#Lean.isAuxRecursorWithSuffix">Lean.isAuxRecursorWithSuffix</a> <span class="fn">env</span> <span class="fn">declName</span> <span class="fn">suffix</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">declName</span> with
+  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">x</span> <span class="fn">s</span> <span class="fn">x_1</span></span> => <span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.mkSimple">Lean.Name.mkSimple</a> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">suffix</span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Lean/AuxRecursor.html#Lean.isAuxRecursor">Lean.isAuxRecursor</a> <span class="fn">env</span> <span class="fn">declName</span></span></span>
+  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.isCasesOnRecursor">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/AuxRecursor.lean#L41-L42">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -413,9 +448,32 @@ Documentation</h1>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/AuxRecursor.html#Lean.isCasesOnRecursor">Lean.isCasesOnRecursor</a> <span class="fn">env</span> <span class="fn">declName</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">declName</span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">x</span> <span class="fn">s</span> <span class="fn">x_1</span></span> => <span class="fn"><span class="fn"><span class="fn">s</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/AuxRecursor.html#Lean.casesOnSuffix">Lean.casesOnSuffix</a></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Lean/AuxRecursor.html#Lean.isAuxRecursor">Lean.isAuxRecursor</a> <span class="fn">env</span> <span class="fn">declName</span></span></span>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/AuxRecursor.html#Lean.isCasesOnRecursor">Lean.isCasesOnRecursor</a> <span class="fn">env</span> <span class="fn">declName</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/AuxRecursor.html#Lean.isAuxRecursorWithSuffix">Lean.isAuxRecursorWithSuffix</a> <span class="fn">env</span> <span class="fn">declName</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.mkSimple">Lean.Name.mkSimple</a> <a href="/Unicode.lean/Lean/AuxRecursor.html#Lean.casesOnSuffix">Lean.casesOnSuffix</a></span>)</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.isBRecOnRecursor">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/AuxRecursor.lean#L44-L45">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/AuxRecursor.html#Lean.isBRecOnRecursor">Lean.isBRecOnRecursor</a>
+</span>
+<span class="decl_args">
+<span class="fn">(env : <a href="/Unicode.lean/Lean/Environment.html#Lean.Environment">Lean.Environment</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(declName : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/AuxRecursor.html#Lean.isBRecOnRecursor">Lean.isBRecOnRecursor</a> <span class="fn">env</span> <span class="fn">declName</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/AuxRecursor.html#Lean.isAuxRecursorWithSuffix">Lean.isAuxRecursorWithSuffix</a> <span class="fn">env</span> <span class="fn">declName</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.mkSimple">Lean.Name.mkSimple</a> <a href="/Unicode.lean/Lean/AuxRecursor.html#Lean.brecOnSuffix">Lean.brecOnSuffix</a></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -423,7 +481,7 @@ Documentation</h1>
 <div class="decl" id="Lean.noConfusionExt">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/AuxRecursor.lean#L41-L41">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/AuxRecursor.lean#L47-L47">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -437,7 +495,7 @@ Documentation</h1>
 <div class="decl" id="Lean.markNoConfusion">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/AuxRecursor.lean#L44-L45">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/AuxRecursor.lean#L50-L51">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -462,7 +520,7 @@ Documentation</h1>
 <div class="decl" id="Lean.isNoConfusion">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/AuxRecursor.lean#L48-L49">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/AuxRecursor.lean#L54-L55">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -547,6 +605,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -628,6 +689,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -705,6 +769,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -787,6 +854,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -993,6 +1063,9 @@ Documentation</h1>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1439,8 +1512,32 @@ Documentation</h1>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1464,6 +1561,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1634,6 +1734,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1659,9 +1762,6 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2034,6 +2134,15 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2073,6 +2182,9 @@ Documentation</h1>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

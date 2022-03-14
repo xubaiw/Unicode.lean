@@ -82,7 +82,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.Contradiction.Config">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Contradiction.lean#L13-L22">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Contradiction.lean#L13-L24">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -94,6 +94,8 @@ Documentation</h1>
 <ul class="structure_fields" id="Lean.Meta.Contradiction.Config.mk">
 <li class="structure_field" id="Lean.Meta.Contradiction.Config.useDecide">
 useDecide : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
+<li class="structure_field" id="Lean.Meta.Contradiction.Config.emptyType">
+emptyType : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <li class="structure_field" id="Lean.Meta.Contradiction.Config.searchFuel">
 searchFuel : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <li class="structure_field" id="Lean.Meta.Contradiction.Config.genDiseq">
@@ -104,7 +106,7 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.Meta.ElimEmptyInductive.M">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Contradiction.lean#L46-L46">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Contradiction.lean#L48-L48">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -128,7 +130,7 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.Meta.ElimEmptyInductive.instMonadBacktrackSavedStateM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Contradiction.lean#L48-L50">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Contradiction.lean#L50-L52">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -149,7 +151,7 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.Meta.ElimEmptyInductive.elim">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Contradiction.lean#L52-L73">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Contradiction.lean#L54-L75">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -167,7 +169,7 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.Meta.contradictionCore">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Contradiction.lean#L119-L168">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Contradiction.lean#L121-L180">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -205,65 +207,102 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
                   <span class="fn">do
                   let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/MatchUtil.html#Lean.Meta.matchEq?">Lean.Meta.matchEq?</a> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">localDecl</span></span>)</span>
                   let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep">ForInStep</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MProd">MProd</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span>) <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a></span>)</span>)</span></span></span> := <span class="fn">fun <span class="fn">isEq</span> <span class="fn">y</span> =>
-                    <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> =>
+                    <span class="fn">let isHEq := <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a>;
+                    <span class="fn">do
+                    let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/MatchUtil.html#Lean.Meta.matchHEq?">Lean.Meta.matchHEq?</a> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">localDecl</span></span>)</span>
+                    let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep">ForInStep</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MProd">MProd</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span>) <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a></span>)</span>)</span></span></span> := <span class="fn">fun <span class="fn">isHEq</span> <span class="fn">y</span> =>
                       <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> =>
-                        <span class="fn">if <span class="fn"><span class="fn">isEq</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-                          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span>
-                        else <span class="fn">do
-                          let a ←
-                            <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Contradiction.html#_private.Lean.Meta.Tactic.Contradiction.0.Lean.Meta.elimEmptyInductive">Lean.Meta.elimEmptyInductive</a> <span class="fn">mvarId</span> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.fvarId">Lean.LocalDecl.fvarId</a> <span class="fn">localDecl</span></span>) <span class="fn"><span class="fn">config</span>.searchFuel</span></span>
+                        <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> =>
+                          <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><span class="fn"><span class="fn">config</span>.emptyType</span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn">isEq</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn">isHEq</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+                            let a ←
+                              <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Contradiction.html#_private.Lean.Meta.Tactic.Contradiction.0.Lean.Meta.elimEmptyInductive">Lean.Meta.elimEmptyInductive</a> <span class="fn">mvarId</span> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.fvarId">Lean.LocalDecl.fvarId</a> <span class="fn">localDecl</span></span>) <span class="fn"><span class="fn">config</span>.searchFuel</span></span>
+                            <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span>
+                              else <span class="fn">do
+                                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span></span></span>
+                          else <span class="fn">do
+                            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span></span></span>;
+                        <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><span class="fn">config</span>.genDiseq</span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Contradiction.html#_private.Lean.Meta.Tactic.Contradiction.0.Lean.Meta.isGenDiseq">Lean.Meta.isGenDiseq</a> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">localDecl</span></span>)</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+                          let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Contradiction.html#_private.Lean.Meta.Tactic.Contradiction.0.Lean.Meta.processGenDiseq">Lean.Meta.processGenDiseq</a> <span class="fn">mvarId</span> <span class="fn">localDecl</span></span>
                           <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span>
                             else <span class="fn">do
-                              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span></span></span></span></span>;
-                      <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><span class="fn">config</span>.genDiseq</span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Contradiction.html#_private.Lean.Meta.Tactic.Contradiction.0.Lean.Meta.isGenDiseq">Lean.Meta.isGenDiseq</a> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">localDecl</span></span>)</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-                        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Contradiction.html#_private.Lean.Meta.Tactic.Contradiction.0.Lean.Meta.processGenDiseq">Lean.Meta.processGenDiseq</a> <span class="fn">mvarId</span> <span class="fn">localDecl</span></span>
-                        <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span>
+                              let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
+                        else <span class="fn">do
+                          let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span>;
+                      <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><span class="fn">config</span>.useDecide</span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.hasFVar">Lean.Expr.hasFVar</a> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">localDecl</span></span>)</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+                        let type ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">localDecl</span></span>)</span>
+                        <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.hasMVar">Lean.Expr.hasMVar</a> <span class="fn">type</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.hasFVar">Lean.Expr.hasFVar</a> <span class="fn">type</span></span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+                            let r ←
+                              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.tryCatch">tryCatch</a>
+                                  (<span class="fn">do
+                                    let d ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkDecide">Lean.Meta.mkDecide</a> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">localDecl</span></span>)</span>
+                                    let r ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withDefault">Lean.Meta.withDefault</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.whnf">Lean.Meta.whnf</a> <span class="fn">d</span></span>)</span>
+                                    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf">Lean.Expr.isConstOf</a> <span class="fn">r</span> <span class="fn">`Bool.false</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+                                        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqRefl">Lean.Meta.mkEqRefl</a> <span class="fn">d</span></span>
+                                        let hn : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> :=
+                                          <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkAppN">Lean.mkAppN</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`of_decide_eq_false</span></span>)
+                                            (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.getAppArgs">Lean.Expr.getAppArgs</a> <span class="fn">d</span></span>) <span class="fn">a</span></span>)</span>
+                                        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.getMVarType">Lean.Meta.getMVarType</a> <span class="fn">mvarId</span></span>
+                                        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAbsurd">Lean.Meta.mkAbsurd</a> <span class="fn">a</span> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.toExpr">Lean.LocalDecl.toExpr</a> <span class="fn">localDecl</span></span>) <span class="fn">hn</span></span>
+                                        <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.assignExprMVar">Lean.Meta.assignExprMVar</a> <span class="fn">mvarId</span> <span class="fn">a</span></span>
+                                        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.return">DoResultPR.return</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span></span>
+                                      else <span class="fn">do
+                                        let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                                        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.pure">DoResultPR.pure</a> <span class="fn">y</span> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span></span></span></span>)
+                                  <span class="fn">fun <span class="fn">x</span> => <span class="fn">do
+                                  let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>
+                                  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.pure">DoResultPR.pure</a> <span class="fn">y</span> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span></span></span></span>
+                            <span class="fn">match <span class="fn">r</span> with
+                              | <span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.return">DoResultPR.pure</a> <span class="fn">a</span> <span class="fn">u</span></span> =>
+                                <span class="fn">let x := <span class="fn">u</span>;
+                                <span class="fn">do
+                                let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span>
+                                <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span>
+                              | <span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.return">DoResultPR.return</a> <span class="fn">b</span> <span class="fn">u</span></span> =>
+                                <span class="fn">let x := <span class="fn">u</span>;
+                                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">b</span></span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span></span></span>
                           else <span class="fn">do
                             let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
                             <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
                       else <span class="fn">do
                         let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span>;
-                    <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><span class="fn">config</span>.useDecide</span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.hasFVar">Lean.Expr.hasFVar</a> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">localDecl</span></span>)</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-                      let type ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">localDecl</span></span>)</span>
-                      <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.hasMVar">Lean.Expr.hasMVar</a> <span class="fn">type</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.hasFVar">Lean.Expr.hasFVar</a> <span class="fn">type</span></span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-                          let r ←
-                            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.tryCatch">tryCatch</a>
-                                (<span class="fn">do
-                                  let d ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkDecide">Lean.Meta.mkDecide</a> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">localDecl</span></span>)</span>
-                                  let r ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withDefault">Lean.Meta.withDefault</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.whnf">Lean.Meta.whnf</a> <span class="fn">d</span></span>)</span>
-                                  <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf">Lean.Expr.isConstOf</a> <span class="fn">r</span> <span class="fn">`Bool.false</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-                                      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqRefl">Lean.Meta.mkEqRefl</a> <span class="fn">d</span></span>
-                                      let hn : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> :=
-                                        <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkAppN">Lean.mkAppN</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`of_decide_eq_false</span></span>)
-                                          (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.getAppArgs">Lean.Expr.getAppArgs</a> <span class="fn">d</span></span>) <span class="fn">a</span></span>)</span>
+                        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span>
+                    <span class="fn">match <span class="fn">a</span> with
+                      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">α</span>, <span class="fn">lhs</span>, <span class="fn">β</span>, <span class="fn">rhs</span>)</span></span> =>
+                        <span class="fn">let isHEq := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>;
+                        <span class="fn">do
+                        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/MatchUtil.html#Lean.Meta.matchConstructorApp?">Lean.Meta.matchConstructorApp?</a> <span class="fn">lhs</span></span>
+                        <span class="fn">match <span class="fn">a</span> with
+                          | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">lhsCtor</span></span> => <span class="fn">do
+                            let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/MatchUtil.html#Lean.Meta.matchConstructorApp?">Lean.Meta.matchConstructorApp?</a> <span class="fn">rhs</span></span>
+                            <span class="fn">match <span class="fn">a</span> with
+                              | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">rhsCtor</span></span> =>
+                                <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><span class="fn"><span class="fn">lhsCtor</span>.toConstantVal</span>.name</span> <a href="/Unicode.lean/Init/Core.html#bne">!=</a> <span class="fn"><span class="fn"><span class="fn">rhsCtor</span>.toConstantVal</span>.name</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+                                  let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.isDefEq">Lean.Meta.isDefEq</a> <span class="fn">α</span> <span class="fn">β</span></span>
+                                  <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
                                       let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.getMVarType">Lean.Meta.getMVarType</a> <span class="fn">mvarId</span></span>
-                                      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkAbsurd">Lean.Meta.mkAbsurd</a> <span class="fn">a</span> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.toExpr">Lean.LocalDecl.toExpr</a> <span class="fn">localDecl</span></span>) <span class="fn">hn</span></span>
+                                      let a_1 ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkEqOfHEq">Lean.Meta.mkEqOfHEq</a> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.toExpr">Lean.LocalDecl.toExpr</a> <span class="fn">localDecl</span></span>)</span>
+                                      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/AppBuilder.html#Lean.Meta.mkNoConfusion">Lean.Meta.mkNoConfusion</a> <span class="fn">a</span> <span class="fn">a_1</span></span>
                                       <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.assignExprMVar">Lean.Meta.assignExprMVar</a> <span class="fn">mvarId</span> <span class="fn">a</span></span>
-                                      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.return">DoResultPR.return</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span></span>
+                                      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span>
                                     else <span class="fn">do
                                       let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                                      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.pure">DoResultPR.pure</a> <span class="fn">y</span> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span></span></span></span>)
-                                <span class="fn">fun <span class="fn">x</span> => <span class="fn">do
-                                let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>
-                                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.pure">DoResultPR.pure</a> <span class="fn">y</span> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span></span></span></span>
-                          <span class="fn">match <span class="fn">r</span> with
-                            | <span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.return">DoResultPR.pure</a> <span class="fn">a</span> <span class="fn">u</span></span> =>
-                              <span class="fn">let x := <span class="fn">u</span>;
-                              <span class="fn">do
-                              let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span>
-                              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span>
-                            | <span class="fn"><a href="/Unicode.lean/Init/Core.html#DoResultPR.return">DoResultPR.return</a> <span class="fn">b</span> <span class="fn">u</span></span> =>
-                              <span class="fn">let x := <span class="fn">u</span>;
-                              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">b</span></span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span></span></span>
-                        else <span class="fn">do
-                          let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
-                    else <span class="fn">do
-                      let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span>
+                                      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">isHEq</span> <span class="fn">y</span></span></span></span></span>
+                                else <span class="fn">do
+                                  let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                                  <span class="fn"><span class="fn">_do_jp</span> <span class="fn">isHEq</span> <span class="fn">y</span></span></span></span>
+                              | <span class="fn">x</span> => <span class="fn">do
+                                let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                                <span class="fn"><span class="fn">_do_jp</span> <span class="fn">isHEq</span> <span class="fn">y</span></span></span></span></span>
+                          | <span class="fn">x</span> => <span class="fn">do
+                            let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">isHEq</span> <span class="fn">y</span></span></span></span></span></span>
+                      | <span class="fn">x</span> => <span class="fn">do
+                        let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">isHEq</span> <span class="fn">y</span></span></span></span></span></span></span>
                   <span class="fn">match <span class="fn">a</span> with
                     | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">x</span>, <span class="fn">lhs</span>, <span class="fn">rhs</span>)</span></span> =>
                       <span class="fn">let isEq := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>;
@@ -339,7 +378,7 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.Meta.contradiction">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Contradiction.lean#L170-L172">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Contradiction.lean#L182-L184">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -349,7 +388,7 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <span class="decl_args">
 <span class="fn">(mvarId : <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a>)</span></span>
 <span class="decl_args">
-<span class="fn">(config : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Contradiction.html#Lean.Meta.Contradiction.Config">Lean.Meta.Contradiction.Config</a> <span class="fn">{ useDecide := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>, searchFuel := <span class="fn">16</span>, genDiseq := <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> }</span></span>)</span></span>
+<span class="fn">(config : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Contradiction.html#Lean.Meta.Contradiction.Config">Lean.Meta.Contradiction.Config</a> <span class="fn">{ useDecide := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>, emptyType := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>, searchFuel := <span class="fn">16</span>, genDiseq := <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> }</span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></div></div>
 <details>
@@ -427,6 +466,9 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -510,6 +552,9 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -587,6 +632,9 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -669,6 +717,9 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -875,6 +926,9 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1321,8 +1375,32 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1346,6 +1424,9 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1516,6 +1597,9 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1541,9 +1625,6 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -1916,6 +1997,15 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -1955,6 +2045,9 @@ genDiseq : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

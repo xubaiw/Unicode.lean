@@ -346,7 +346,7 @@ textDocument? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option
 <div class="decl" id="Lean.Lsp.ServerCapabilities">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Capabilities.lean#L37-L49">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Capabilities.lean#L37-L50">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -376,6 +376,8 @@ typeDefinitionProvider : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a>
 referencesProvider : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <li class="structure_field" id="Lean.Lsp.ServerCapabilities.workspaceSymbolProvider">
 workspaceSymbolProvider : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
+<li class="structure_field" id="Lean.Lsp.ServerCapabilities.foldingRangeProvider">
+foldingRangeProvider : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <li class="structure_field" id="Lean.Lsp.ServerCapabilities.semanticTokensProvider?">
 semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.SemanticTokensOptions">Lean.Lsp.SemanticTokensOptions</a></span></li>
 </ul>
@@ -384,7 +386,7 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 <div class="decl" id="Lean.Lsp.instToJsonServerCapabilities">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Capabilities.lean#L49-L49">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Capabilities.lean#L50-L50">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -397,7 +399,7 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Capabilities.html#Lean.Lsp.instToJsonServerCapabilities">Lean.Lsp.instToJsonServerCapabilities</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Capabilities.html#_private.Lean.Data.Lsp.Capabilities.0.Lean.Lsp.toJsonServerCapabilities._@.Lean.Data.Lsp.Capabilities._hyg.387">[anonymous]</a> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Capabilities.html#Lean.Lsp.instToJsonServerCapabilities">Lean.Lsp.instToJsonServerCapabilities</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/Capabilities.html#_private.Lean.Data.Lsp.Capabilities.0.Lean.Lsp.toJsonServerCapabilities._@.Lean.Data.Lsp.Capabilities._hyg.396">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -405,7 +407,7 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 <div class="decl" id="Lean.Lsp.instFromJsonServerCapabilities">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Capabilities.lean#L49-L49">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/Capabilities.lean#L50-L50">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -418,7 +420,7 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Capabilities.html#Lean.Lsp.instFromJsonServerCapabilities">Lean.Lsp.instFromJsonServerCapabilities</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Capabilities.html#_private.Lean.Data.Lsp.Capabilities.0.Lean.Lsp.fromJsonServerCapabilities._@.Lean.Data.Lsp.Capabilities._hyg.505">[anonymous]</a> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Capabilities.html#Lean.Lsp.instFromJsonServerCapabilities">Lean.Lsp.instFromJsonServerCapabilities</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/Capabilities.html#_private.Lean.Data.Lsp.Capabilities.0.Lean.Lsp.fromJsonServerCapabilities._@.Lean.Data.Lsp.Capabilities._hyg.525">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -484,6 +486,9 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -567,6 +572,9 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -644,6 +652,9 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -726,6 +737,9 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -932,6 +946,9 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1378,8 +1395,32 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1403,6 +1444,9 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1573,6 +1617,9 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1598,9 +1645,6 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -1973,6 +2017,15 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2012,6 +2065,9 @@ semanticTokensProvider? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.h
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

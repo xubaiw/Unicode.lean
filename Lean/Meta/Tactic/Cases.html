@@ -31,6 +31,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/AppBuilder.html">Lean.Meta.AppBuilder</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Assert.html">Lean.Meta.Tactic.Assert</a>
 </li>
 <li>
@@ -124,7 +127,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.getInductiveUniverseAndParams">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L17-L23">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L18-L24">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -153,7 +156,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.generalizeTargetsEq">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L44-L58">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L45-L59">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -179,8 +182,8 @@ Documentation</h1>
           <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> =>
             <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Cases.html#_private.Lean.Meta.Tactic.Cases.0.Lean.Meta.withNewEqs">Lean.Meta.withNewEqs</a> <span class="fn">targets</span> <span class="fn">targetsNew</span> <span class="fn">fun <span class="fn">eqs</span> <span class="fn">eqRefls</span> => <span class="fn">do
               let type ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.getMVarType">Lean.Meta.getMVarType</a> <span class="fn">mvarId</span></span>
-              let typeNew ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">eqs</span> <span class="fn">type</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
-              let typeNew ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">targetsNew</span> <span class="fn">typeNew</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+              let typeNew ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">eqs</span> <span class="fn">type</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
+              let typeNew ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">targetsNew</span> <span class="fn">typeNew</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
               <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">(<span class="fn">typeNew</span>, <span class="fn">eqRefls</span>)</span></span></span></span></span></span>;
           <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">targetsNew</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">targets</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
             let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
@@ -204,7 +207,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.GeneralizeIndicesSubgoal">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L60-L64">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L61-L65">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -228,7 +231,7 @@ numEqs : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Lean.Meta.generalizeIndices">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L84-L121">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L85-L122">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -277,9 +280,9 @@ numEqs : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
                             <span class="fn">do
                             let target ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.getMVarType">Lean.Meta.getMVarType</a> <span class="fn">mvarId</span></span>
                             let tag ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.getMVarTag">Lean.Meta.getMVarTag</a> <span class="fn">mvarId</span></span>
-                            let auxType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">newEqs</span> <span class="fn">target</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
-                            let auxType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">#[<span class="fn">h'</span>]</span> <span class="fn">auxType</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
-                            let auxType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">newIndices</span> <span class="fn">auxType</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+                            let auxType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">newEqs</span> <span class="fn">target</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
+                            let auxType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">#[<span class="fn">h'</span>]</span> <span class="fn">auxType</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
+                            let auxType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">newIndices</span> <span class="fn">auxType</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
                             let newMVar ←
                               <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkFreshExprMVarAt">Lean.Meta.mkFreshExprMVarAt</a> <span class="fn">lctx</span> <span class="fn">localInsts</span> <span class="fn">auxType</span> <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind.syntheticOpaque">Lean.MetavarKind.syntheticOpaque</a> <span class="fn">tag</span> <span class="fn">0</span></span>
                             <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.assignExprMVar">Lean.Meta.assignExprMVar</a> <span class="fn">mvarId</span>
@@ -332,7 +335,7 @@ The result contains the fields</p><ul>
 <div class="decl" id="Lean.Meta.CasesSubgoal">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L123-L124">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L124-L125">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -354,7 +357,7 @@ ctorName : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li
 <div class="decl" id="Lean.Meta.Cases.Context">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L128-L135">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L129-L136">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -384,7 +387,7 @@ majorTypeIndices : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arr
 <div class="decl" id="Lean.Meta.Cases.unifyEqs">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L211-L276">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L212-L278">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -406,7 +409,7 @@ majorTypeIndices : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arr
 <div class="decl" id="Lean.Meta.Cases.unifyEqs.substEq">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L230-L239">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L231-L241">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -438,7 +441,7 @@ majorTypeIndices : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arr
 <div class="decl" id="Lean.Meta.Cases.unifyEqs.injection">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L240-L260">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L242-L262">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -468,7 +471,7 @@ majorTypeIndices : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arr
 <div class="decl" id="Lean.Meta.Cases.cases">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L299-L320">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L301-L322">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -523,7 +526,7 @@ majorTypeIndices : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arr
 <div class="decl" id="Lean.Meta.cases">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L324-L325">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L326-L327">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -550,7 +553,7 @@ majorTypeIndices : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arr
 <div class="decl" id="Lean.Meta.casesRec">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L327-L337">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L329-L339">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -602,7 +605,7 @@ majorTypeIndices : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arr
 <div class="decl" id="Lean.Meta.casesAnd">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L339-L341">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L341-L343">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -630,7 +633,7 @@ majorTypeIndices : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arr
 <div class="decl" id="Lean.Meta.substEqs">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L343-L347">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L345-L349">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -640,7 +643,7 @@ majorTypeIndices : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arr
 <span class="decl_args">
 <span class="fn">(mvarId : <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a>)</span></span>
 <span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span></div></div>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span>)</span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
@@ -650,7 +653,7 @@ majorTypeIndices : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arr
     <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Cases.html#Lean.Meta.casesRec">Lean.Meta.casesRec</a> <span class="fn">mvarId</span> <span class="fn">fun <span class="fn">localDecl</span> => <span class="fn">do
         let type ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">localDecl</span></span>)</span>
         <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.isEq">Lean.Expr.isEq</a> <span class="fn">type</span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><a href="/Unicode.lean/Lean/Util/Recognizers.html#Lean.Expr.isHEq">Lean.Expr.isHEq</a> <span class="fn">type</span></span></span>)</span></span></span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.exactlyOne">Lean.Meta.exactlyOne</a> <span class="fn">mvarIds</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"unexpected number of goals"</span></span>)</span></span></span></li>
+  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.ensureAtMostOne">Lean.Meta.ensureAtMostOne</a> <span class="fn">mvarIds</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Function.comp">Function.comp</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageData.ofFormat">Lean.MessageData.ofFormat</a> <span class="fn">Lean.format</span> <span class="fn">"unexpected number of goals"</span></span>)</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -658,7 +661,7 @@ majorTypeIndices : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arr
 <div class="decl" id="Lean.Meta.ByCasesSubgoal">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L349-L351">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L351-L353">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -678,7 +681,7 @@ fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 <div class="decl" id="Lean.Meta.byCases">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L353-L362">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L355-L364">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -719,7 +722,7 @@ fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 <div class="decl" id="Lean.Meta.byCases.toByCasesSubgoal">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L360-L362">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Cases.lean#L362-L364">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -806,6 +809,9 @@ fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -887,6 +893,9 @@ fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -964,6 +973,9 @@ fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -1046,6 +1058,9 @@ fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1252,6 +1267,9 @@ fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1698,8 +1716,32 @@ fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1723,6 +1765,9 @@ fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1893,6 +1938,9 @@ fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1918,9 +1966,6 @@ fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2293,6 +2338,15 @@ fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2332,6 +2386,9 @@ fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

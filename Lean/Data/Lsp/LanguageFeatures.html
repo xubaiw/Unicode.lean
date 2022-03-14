@@ -314,6 +314,27 @@ Documentation</h1>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Lsp.instToJsonSemanticTokens">Lean.Lsp.instToJsonSemanticTokens</a>
 </div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.FoldingRangeParams">Lean.Lsp.FoldingRangeParams</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFromJsonFoldingRangeParams">Lean.Lsp.instFromJsonFoldingRangeParams</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonFoldingRangeParams">Lean.Lsp.instToJsonFoldingRangeParams</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.FoldingRangeKind">Lean.Lsp.FoldingRangeKind</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonFoldingRangeKind">Lean.Lsp.instToJsonFoldingRangeKind</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.FoldingRange">Lean.Lsp.FoldingRange</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instToJsonFoldingRange">Lean.Lsp.instToJsonFoldingRange</a>
+</div>
 </nav>
 <main>
 <div class="decl" id="Lean.Lsp.CompletionOptions">
@@ -2280,6 +2301,156 @@ data : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Lsp.FoldingRangeParams">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/LanguageFeatures.lean#L304-L306">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeParams">Lean.Lsp.FoldingRangeParams</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.FoldingRangeParams.mk">
+<li class="structure_field" id="Lean.Lsp.FoldingRangeParams.textDocument">
+textDocument : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentIdentifier">Lean.Lsp.TextDocumentIdentifier</a></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFromJsonFoldingRangeParams">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/LanguageFeatures.lean#L306-L306">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.instFromJsonFoldingRangeParams">Lean.Lsp.instFromJsonFoldingRangeParams</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeParams">Lean.Lsp.FoldingRangeParams</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.instFromJsonFoldingRangeParams">Lean.Lsp.instFromJsonFoldingRangeParams</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#_private.Lean.Data.Lsp.LanguageFeatures.0.Lean.Lsp.fromJsonFoldingRangeParams._@.Lean.Data.Lsp.LanguageFeatures._hyg.3754">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonFoldingRangeParams">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/LanguageFeatures.lean#L306-L306">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.instToJsonFoldingRangeParams">Lean.Lsp.instToJsonFoldingRangeParams</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeParams">Lean.Lsp.FoldingRangeParams</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.instToJsonFoldingRangeParams">Lean.Lsp.instToJsonFoldingRangeParams</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#_private.Lean.Data.Lsp.LanguageFeatures.0.Lean.Lsp.toJsonFoldingRangeParams._@.Lean.Data.Lsp.LanguageFeatures._hyg.3789">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.FoldingRangeKind">
+<div class="inductive">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/LanguageFeatures.lean#L308-L311">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">inductive</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind">Lean.Lsp.FoldingRangeKind</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="constructors">
+<li class="constructor" id="Lean.Lsp.FoldingRangeKind.comment">
+comment: <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind">Lean.Lsp.FoldingRangeKind</a></li>
+<li class="constructor" id="Lean.Lsp.FoldingRangeKind.imports">
+imports: <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind">Lean.Lsp.FoldingRangeKind</a></li>
+<li class="constructor" id="Lean.Lsp.FoldingRangeKind.region">
+region: <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind">Lean.Lsp.FoldingRangeKind</a></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonFoldingRangeKind">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/LanguageFeatures.lean#L313-L317">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.instToJsonFoldingRangeKind">Lean.Lsp.instToJsonFoldingRangeKind</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind">Lean.Lsp.FoldingRangeKind</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.instToJsonFoldingRangeKind">Lean.Lsp.instToJsonFoldingRangeKind</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ toJson := <span class="fn">fun <span class="fn">x</span> =>
+      <span class="fn">match <span class="fn">x</span> with
+      | <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.region">Lean.Lsp.FoldingRangeKind.comment</a> => <span class="fn"><a href="/Unicode.lean/Lean/Data/Json/Basic.html#Lean.Json.str">Lean.Json.str</a> <span class="fn">"comment"</span></span>
+      | <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.region">Lean.Lsp.FoldingRangeKind.imports</a> => <span class="fn"><a href="/Unicode.lean/Lean/Data/Json/Basic.html#Lean.Json.str">Lean.Json.str</a> <span class="fn">"imports"</span></span>
+      | <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.region">Lean.Lsp.FoldingRangeKind.region</a> => <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.region"><a href="/Unicode.lean/Lean/Data/Json/Basic.html#Lean.Json.str">Lean.Json.str</a> <span class="fn">"region"</span></a></span></span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.FoldingRange">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/LanguageFeatures.lean#L319-L323">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRange">Lean.Lsp.FoldingRange</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Lsp.FoldingRange.mk">
+<li class="structure_field" id="Lean.Lsp.FoldingRange.startLine">
+startLine : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
+<li class="structure_field" id="Lean.Lsp.FoldingRange.endLine">
+endLine : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
+<li class="structure_field" id="Lean.Lsp.FoldingRange.kind?">
+kind? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind">Lean.Lsp.FoldingRangeKind</a></span></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instToJsonFoldingRange">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Data/Lsp/LanguageFeatures.lean#L323-L323">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.instToJsonFoldingRange">Lean.Lsp.instToJsonFoldingRange</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRange">Lean.Lsp.FoldingRange</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.instToJsonFoldingRange">Lean.Lsp.instToJsonFoldingRange</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#_private.Lean.Data.Lsp.LanguageFeatures.0.Lean.Lsp.toJsonFoldingRange._@.Lean.Data.Lsp.LanguageFeatures._hyg.3871">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
 </main>
 <nav class="nav">
 <h3>General documentation</h3>
@@ -2341,6 +2512,9 @@ data : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -2424,6 +2598,9 @@ data : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -2501,6 +2678,9 @@ data : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -2583,6 +2763,9 @@ data : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -2789,6 +2972,9 @@ data : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -3235,8 +3421,32 @@ data : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -3260,6 +3470,9 @@ data : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -3430,6 +3643,9 @@ data : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -3455,9 +3671,6 @@ data : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -3830,6 +4043,15 @@ data : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -3869,6 +4091,9 @@ data : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

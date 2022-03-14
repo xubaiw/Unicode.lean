@@ -36,6 +36,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Init/Core.html">Init.Core</a>
 </li>
 <li>
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
+</li>
+<li>
 <a href="/Unicode.lean/Init/WF.html">Init.WF</a>
 </li>
 <li>
@@ -61,6 +64,18 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#sizeOf_nat">sizeOf_nat</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#instSizeOfForAllUnit">instSizeOfForAllUnit</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#sizeOf_thunk">sizeOf_thunk</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Unit.sizeOf">Unit.sizeOf</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Bool.sizeOf_eq_one">Bool.sizeOf_eq_one</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Name.sizeOf">Lean.Name.sizeOf</a>
@@ -149,6 +164,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.ParserContext._sizeOf_inst">Lean.Parser.ParserContext._sizeOf_inst</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html#Lean.Meta.Linear.Nat.Collect.State._sizeOf_inst">Lean.Meta.Linear.Nat.Collect.State._sizeOf_inst</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstructorVal._sizeOf_inst">Lean.ConstructorVal._sizeOf_inst</a>
 </li>
 <li>
@@ -188,6 +206,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/ParserCompiler/Attribute.html#Lean.ParserCompiler.CombinatorAttribute._sizeOf_inst">Lean.ParserCompiler.CombinatorAttribute._sizeOf_inst</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep._sizeOf_inst">Lean.Expr.FindStep._sizeOf_inst</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Meta/GeneralizeTelescope.html#Lean.Meta.GeneralizeTelescope.Entry._sizeOf_inst">Lean.Meta.GeneralizeTelescope.Entry._sizeOf_inst</a>
 </li>
 <li>
@@ -209,7 +230,7 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot._sizeOf_inst">Lean.Server.Snapshots.Snapshot._sizeOf_inst</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Justification._sizeOf_inst">Lean.Meta.Linear.Justification._sizeOf_inst</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.Justification._sizeOf_inst">Lean.Meta.Linear.Justification._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Cases.html#Lean.Meta.Cases.Context._sizeOf_inst">Lean.Meta.Cases.Context._sizeOf_inst</a>
@@ -314,6 +335,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Data/Lsp/InitShutdown.html#Lean.Lsp.InitializationOptions._sizeOf_inst">Lean.Lsp.InitializationOptions._sizeOf_inst</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html#Lean.Meta.Linear.Nat.Collect.Cnstr._sizeOf_inst">Lean.Meta.Linear.Nat.Collect.Cnstr._sizeOf_inst</a>
+</li>
+<li>
 <a href="/Unicode.lean/Init/System/IO.html#IO.FS.Stream._sizeOf_inst">IO.FS.Stream._sizeOf_inst</a>
 </li>
 <li>
@@ -347,7 +371,13 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr._sizeOf_inst">Lean.IR.Expr._sizeOf_inst</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html#Lean.Meta.KExprMap._sizeOf_inst">Lean.Meta.KExprMap._sizeOf_inst</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Data/Trie.html#Lean.Parser.Trie._sizeOf_inst">Lean.Parser.Trie._sizeOf_inst</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.EqnsExtState._sizeOf_inst">Lean.Meta.EqnsExtState._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Init/System/IO.html#IO.FS.FileType._sizeOf_inst">IO.FS.FileType._sizeOf_inst</a>
@@ -449,7 +479,7 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpCongrTheorems.html#Lean.Meta.SimpCongrTheorems._sizeOf_inst">Lean.Meta.SimpCongrTheorems._sizeOf_inst</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr._sizeOf_inst">Lean.Meta.Linear.Cnstr._sizeOf_inst</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.Cnstr._sizeOf_inst">Lean.Meta.Linear.Cnstr._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Data/Json/Basic.html#Lean.JsonNumber._sizeOf_inst">Lean.JsonNumber._sizeOf_inst</a>
@@ -629,7 +659,7 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Data/Lsp/TextSync.html#Lean.Lsp.DidCloseTextDocumentParams._sizeOf_inst">Lean.Lsp.DidCloseTextDocumentParams._sizeOf_inst</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly._sizeOf_inst">Lean.Meta.Linear.Poly._sizeOf_inst</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.Poly._sizeOf_inst">Lean.Meta.Linear.Poly._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.ParamInfo._sizeOf_inst">Lean.Meta.ParamInfo._sizeOf_inst</a>
@@ -689,13 +719,16 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Compiler/IR/EmitC.html#Lean.IR.EmitC.Context._sizeOf_inst">Lean.IR.EmitC.Context._sizeOf_inst</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeParams._sizeOf_inst">Lean.Lsp.FoldingRangeParams._sizeOf_inst</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.DocumentFilter._sizeOf_inst">Lean.Lsp.DocumentFilter._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Elab/Structure.html#Lean.Elab.Command.StructView._sizeOf_inst">Lean.Elab.Command.StructView._sizeOf_inst</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State._sizeOf_inst">Lean.Meta.Linear.State._sizeOf_inst</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.State._sizeOf_inst">Lean.Meta.Linear.State._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.Config._sizeOf_inst">Lean.Meta.Config._sizeOf_inst</a>
@@ -839,9 +872,6 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo._sizeOf_inst">Lean.BinderInfo._sizeOf_inst</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html#Lean.Meta.SortLocalDecls.State._sizeOf_inst">Lean.Meta.SortLocalDecls.State._sizeOf_inst</a>
-</li>
-<li>
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position._sizeOf_inst">Lean.Lsp.Position._sizeOf_inst</a>
 </li>
 <li>
@@ -878,7 +908,10 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Server/Watchdog.html#Lean.Server.Watchdog.FileWorker._sizeOf_inst">Lean.Server.Watchdog.FileWorker._sizeOf_inst</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind._sizeOf_inst">Lean.Meta.Linear.CnstrKind._sizeOf_inst</a>
+<a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.MkBindingM.Context._sizeOf_inst">Lean.MetavarContext.MkBindingM.Context._sizeOf_inst</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.CnstrKind._sizeOf_inst">Lean.Meta.Linear.CnstrKind._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Declaration.html#Lean.RecursorRule._sizeOf_inst">Lean.RecursorRule._sizeOf_inst</a>
@@ -932,6 +965,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.CompletionList._sizeOf_inst">Lean.Lsp.CompletionList._sizeOf_inst</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.Context._sizeOf_inst">Lean.Elab.Term.ToDepElimPattern.Context._sizeOf_inst</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Widget/InteractiveGoal.html#Lean.Widget.InteractiveTermGoal._sizeOf_inst">Lean.Widget.InteractiveTermGoal._sizeOf_inst</a>
 </li>
 <li>
@@ -945,6 +981,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.PrattParsingTables._sizeOf_inst">Lean.Parser.PrattParsingTables._sizeOf_inst</a>
+</li>
+<li>
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html#Nat.Linear.Expr._sizeOf_inst">Nat.Linear.Expr._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Elab/Syntax.html#Lean.Elab.Term.ToParserDescrContext._sizeOf_inst">Lean.Elab.Term.ToParserDescrContext._sizeOf_inst</a>
@@ -1031,6 +1070,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Elab/Structure.html#Lean.Elab.Command.StructFieldKind._sizeOf_inst">Lean.Elab.Command.StructFieldKind._sizeOf_inst</a>
 </li>
 <li>
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html#Nat.Linear.ExprCnstr._sizeOf_inst">Nat.Linear.ExprCnstr._sizeOf_inst</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Elab/Command.html#Lean.Elab.Command.Scope._sizeOf_inst">Lean.Elab.Command.Scope._sizeOf_inst</a>
 </li>
 <li>
@@ -1053,6 +1095,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.Info._sizeOf_inst">Lean.Elab.Info._sizeOf_inst</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.TopSort.State._sizeOf_inst">Lean.Elab.Term.ToDepElimPattern.TopSort.State._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Elab/Frontend.html#Lean.Elab.Frontend.Context._sizeOf_inst">Lean.Elab.Frontend.Context._sizeOf_inst</a>
@@ -1082,10 +1127,13 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Declaration.html#Lean.ReducibilityHints._sizeOf_inst">Lean.ReducibilityHints._sizeOf_inst</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.MkBinding.Context._sizeOf_inst">Lean.MetavarContext.MkBinding.Context._sizeOf_inst</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.ParserInfo._sizeOf_inst">Lean.Parser.ParserInfo._sizeOf_inst</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var._sizeOf_inst">Lean.Meta.Linear.Var._sizeOf_inst</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.Var._sizeOf_inst">Lean.Meta.Linear.Var._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Elab/Structure.html#Lean.Elab.Command.StructFieldView._sizeOf_inst">Lean.Elab.Command.StructFieldView._sizeOf_inst</a>
@@ -1133,6 +1181,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Elab/Do.html#Lean.Elab.Term.Do.Alt._sizeOf_inst">Lean.Elab.Term.Do.Alt._sizeOf_inst</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html#Lean.Meta.Linear.Nat.ToLinear.State._sizeOf_inst">Lean.Meta.Linear.Nat.ToLinear.State._sizeOf_inst</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/ScopedEnvExtension.html#Lean.SimpleScopedEnvExtension.Descr._sizeOf_inst">Lean.SimpleScopedEnvExtension.Descr._sizeOf_inst</a>
 </li>
 <li>
@@ -1155,6 +1206,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Elab/StructInst.html#Lean.Elab.Term.StructInst.ExplicitSourceInfo._sizeOf_inst">Lean.Elab.Term.StructInst.ExplicitSourceInfo._sizeOf_inst</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html#Lean.FuzzyMatching.CharType._sizeOf_inst">Lean.FuzzyMatching.CharType._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.StaticRegistrationOptions._sizeOf_inst">Lean.Lsp.StaticRegistrationOptions._sizeOf_inst</a>
@@ -1421,6 +1475,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html#Lean.PrettyPrinter.Delaborator.Context._sizeOf_inst">Lean.PrettyPrinter.Delaborator.Context._sizeOf_inst</a>
 </li>
 <li>
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html#Nat.Linear.PolyCnstr._sizeOf_inst">Nat.Linear.PolyCnstr._sizeOf_inst</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.CompletionOptions._sizeOf_inst">Lean.Lsp.CompletionOptions._sizeOf_inst</a>
 </li>
 <li>
@@ -1595,7 +1652,7 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Data/Lsp/Internal.html#Lean.Lsp.RefIdent._sizeOf_inst">Lean.Lsp.RefIdent._sizeOf_inst</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.AssumptionId._sizeOf_inst">Lean.Meta.Linear.AssumptionId._sizeOf_inst</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.AssumptionId._sizeOf_inst">Lean.Meta.Linear.AssumptionId._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Data/JsonRpc.html#Lean.JsonRpc.ErrorCode._sizeOf_inst">Lean.JsonRpc.ErrorCode._sizeOf_inst</a>
@@ -1706,7 +1763,7 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Meta/AbstractMVars.html#Lean.Meta.AbstractMVarsResult._sizeOf_inst">Lean.Meta.AbstractMVarsResult._sizeOf_inst</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Context._sizeOf_inst">Lean.Meta.Linear.Context._sizeOf_inst</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.Context._sizeOf_inst">Lean.Meta.Linear.Context._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/PrettyPrinter/Parenthesizer.html#Lean.PrettyPrinter.Parenthesizer.Context._sizeOf_inst">Lean.PrettyPrinter.Parenthesizer.Context._sizeOf_inst</a>
@@ -1718,6 +1775,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Init/SizeOf.html#Prod._sizeOf_inst">Prod._sizeOf_inst</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html#Lean.FuzzyMatching.CharRole._sizeOf_inst">Lean.FuzzyMatching.CharRole._sizeOf_inst</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/ReducibilityAttrs.html#Lean.ReducibilityStatus._sizeOf_inst">Lean.ReducibilityStatus._sizeOf_inst</a>
 </li>
 <li>
@@ -1727,19 +1787,19 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Data/Lsp/Extra.html#Lean.Lsp.WaitForDiagnosticsParams._sizeOf_inst">Lean.Lsp.WaitForDiagnosticsParams._sizeOf_inst</a>
 </li>
 <li>
+<a href="/Unicode.lean/Init/NotationExtra.html#Lean.Loop._sizeOf_inst">Lean.Loop._sizeOf_inst</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.TextDocumentRegistrationOptions._sizeOf_inst">Lean.Lsp.TextDocumentRegistrationOptions._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Environment.html#Lean.SimplePersistentEnvExtensionDescr._sizeOf_inst">Lean.SimplePersistentEnvExtensionDescr._sizeOf_inst</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.EqnsExtState._sizeOf_inst">Lean.Elab.Eqns.EqnsExtState._sizeOf_inst</a>
-</li>
-<li>
 <a href="/Unicode.lean/Init/System/FilePath.html#System.FilePath._sizeOf_inst">System.FilePath._sizeOf_inst</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Result._sizeOf_inst">Lean.Meta.Linear.Result._sizeOf_inst</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.Result._sizeOf_inst">Lean.Meta.Linear.Result._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Widget/InteractiveDiagnostic.html#Lean.Widget.MsgEmbed._sizeOf_inst">Lean.Widget.MsgEmbed._sizeOf_inst</a>
@@ -1817,7 +1877,7 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Compiler/IR/CtorLayout.html#Lean.IR.CtorFieldInfo._sizeOf_inst">Lean.IR.CtorFieldInfo._sizeOf_inst</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment._sizeOf_inst">Lean.Meta.Linear.Assignment._sizeOf_inst</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.Assignment._sizeOf_inst">Lean.Meta.Linear.Assignment._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Environment.html#Lean.Import._sizeOf_inst">Lean.Import._sizeOf_inst</a>
@@ -1997,6 +2057,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Environment.html#Lean.ImportM.Context._sizeOf_inst">Lean.ImportM.Context._sizeOf_inst</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRange._sizeOf_inst">Lean.Lsp.FoldingRange._sizeOf_inst</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Attributes.html#Lean.AttributeImplCore._sizeOf_inst">Lean.AttributeImplCore._sizeOf_inst</a>
 </li>
 <li>
@@ -2040,9 +2103,6 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html#Lean.Meta.SynthInstance.ConsumerNode._sizeOf_inst">Lean.Meta.SynthInstance.ConsumerNode._sizeOf_inst</a>
-</li>
-<li>
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html#Lean.Meta.SortLocalDecls.Context._sizeOf_inst">Lean.Meta.SortLocalDecls.Context._sizeOf_inst</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Elab/StructInst.html#Lean.Elab.Term.StructInst.DefaultFields.State._sizeOf_inst">Lean.Elab.Term.StructInst.DefaultFields.State._sizeOf_inst</a>
@@ -2162,6 +2222,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html#Lean.Meta.SynthInstance.State._sizeOf_inst">Lean.Meta.SynthInstance.State._sizeOf_inst</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind._sizeOf_inst">Lean.Lsp.FoldingRangeKind._sizeOf_inst</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.Context._sizeOf_inst">Lean.Meta.Context._sizeOf_inst</a>
 </li>
 <li>
@@ -2235,6 +2298,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Meta/Match/CaseValues.html#Lean.Meta.CaseValueSubgoal._sizeOf_inst">Lean.Meta.CaseValueSubgoal._sizeOf_inst</a>
+</li>
+<li>
+<a href="/Unicode.lean/Init/SizeOf.html#instSizeOfForAllUnit">instSizeOfForAllUnit</a>
 </li>
 </ul>
 </details>
@@ -2346,10 +2412,98 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <div class="decl_type"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf.sizeOf">sizeOf</a> <span class="fn">n</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">n</span></span></div></div>
 </div>
 </div>
+<div class="decl" id="instSizeOfForAllUnit">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/SizeOf.lean#L35-L36">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/SizeOf.html#instSizeOfForAllUnit">instSizeOfForAllUnit</a>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{α : <span class="fn">Sort u_1</span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf">SizeOf</a> <span class="fn">α</span></span>]</span></span>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf">SizeOf</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn">α</span></span>)</span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn">instSizeOfForAllUnit</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ sizeOf := <span class="fn">fun <span class="fn">f</span> => <span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf.sizeOf">sizeOf</a> (<span class="fn"><span class="fn">f</span> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>)</span></span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="sizeOf_thunk">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/SizeOf.lean#L38-L39">source</a>
+</div>
+<div class="attributes">@[simp]</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/SizeOf.html#sizeOf_thunk">sizeOf_thunk</a>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{α : <span class="fn">Sort u_1</span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf">SizeOf</a> <span class="fn">α</span></span>]</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(f : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn">α</span></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf.sizeOf">sizeOf</a> <span class="fn">f</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf.sizeOf">sizeOf</a> (<span class="fn"><span class="fn">f</span> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>)</span></span></div></div>
+</div>
+</div>
+<div class="decl" id="Unit.sizeOf">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/SizeOf.lean#L60-L60">source</a>
+</div>
+<div class="attributes">@[simp]</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/SizeOf.html#Unit.sizeOf">Unit.sizeOf</a>
+</span>
+<span class="decl_args">
+<span class="fn">(u : <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf.sizeOf">sizeOf</a> <span class="fn">u</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">1</span></span></div></div>
+</div>
+</div>
+<div class="decl" id="Bool.sizeOf_eq_one">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/SizeOf.lean#L61-L61">source</a>
+</div>
+<div class="attributes">@[simp]</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/SizeOf.html#Bool.sizeOf_eq_one">Bool.sizeOf_eq_one</a>
+</span>
+<span class="decl_args">
+<span class="fn">(b : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf.sizeOf">sizeOf</a> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">1</span></span></div></div>
+</div>
+</div>
 <div class="decl" id="Lean.Name.sizeOf">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/SizeOf.lean#L56-L59">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/SizeOf.lean#L65-L68">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -2374,7 +2528,7 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <div class="decl" id="instSizeOfName">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/SizeOf.lean#L61-L62">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/SizeOf.lean#L70-L71">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable instance</span>
@@ -2453,6 +2607,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -2536,6 +2693,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -2613,6 +2773,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -2695,6 +2858,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 </div>
 <div class="nav_link" visible="">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -2901,6 +3067,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -3347,8 +3516,32 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -3372,6 +3565,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -3542,6 +3738,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -3567,9 +3766,6 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -3942,6 +4138,15 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -3981,6 +4186,9 @@ sizeOf : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lean/
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

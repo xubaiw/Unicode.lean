@@ -120,19 +120,10 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Elab.Tactic.elabTermForApply">Lean.Elab.Tactic.elabTermForApply</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Tactic.evalApplyLikeTactic">Lean.Elab.Tactic.evalApplyLikeTactic</a>
-</div>
-<div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Tactic.evalApply">Lean.Elab.Tactic.evalApply</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Tactic.getFVarId">Lean.Elab.Tactic.getFVarId</a>
-</div>
-<div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Tactic.evalConstructor">Lean.Elab.Tactic.evalConstructor</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Tactic.getFVarIds">Lean.Elab.Tactic.getFVarIds</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Tactic.evalExistsIntro">Lean.Elab.Tactic.evalExistsIntro</a>
@@ -144,10 +135,19 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Elab.Tactic.evalWithReducibleAndInstances">Lean.Elab.Tactic.evalWithReducibleAndInstances</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Tactic.elabAsFVar">Lean.Elab.Tactic.elabAsFVar</a>
+<a class="break_within" href="#Lean.Elab.Tactic.evalApplyLikeTactic">Lean.Elab.Tactic.evalApplyLikeTactic</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Tactic.getFVarId">Lean.Elab.Tactic.getFVarId</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Tactic.getFVarIds">Lean.Elab.Tactic.getFVarIds</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Tactic.evalRename">Lean.Elab.Tactic.evalRename</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Tactic.elabAsFVar">Lean.Elab.Tactic.elabAsFVar</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Tactic.evalDecide">Lean.Elab.Tactic.evalDecide</a>
@@ -174,14 +174,14 @@ Documentation</h1>
 <span class="decl_args">
 <span class="fn">(mayPostpone : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span></span>
 <span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.TacticM">Lean.Elab.Tactic.TacticM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTerm">Lean.Elab.Tactic.elabTerm</a> <span class="fn">stx</span> <span class="fn">expectedType?</span> <span class="fn">mayPostpone</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.withRef">Lean.withRef</a> <span class="fn">stx</span> <span class="fn">do
-    let e ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> <span class="fn">stx</span> <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html#Lean.Elab.Term.synthesizeSyntheticMVars">Lean.Elab.Term.synthesizeSyntheticMVars</a> <span class="fn">mayPostpone</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span>
+    let e ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> <span class="fn">stx</span> <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+    <span class="fn"><a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html#Lean.Elab.Term.synthesizeSyntheticMVars">Lean.Elab.Term.synthesizeSyntheticMVars</a> <span class="fn">mayPostpone</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>
     <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> <span class="fn">e</span></span>)</span></span></span></span></li>
 </ul>
 </details>
@@ -210,7 +210,7 @@ Documentation</h1>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTermEnsuringType">Lean.Elab.Tactic.elabTermEnsuringType</a> <span class="fn">stx</span> <span class="fn">expectedType?</span> <span class="fn">mayPostpone</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let e ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTerm">Lean.Elab.Tactic.elabTerm</a> <span class="fn">stx</span> <span class="fn">expectedType?</span> <span class="fn">mayPostpone</span></span>
+  let e ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTerm">Lean.Elab.Tactic.elabTerm</a> <span class="fn">stx</span> <span class="fn">expectedType?</span> <span class="fn">mayPostpone</span></span>)</span>
   <span class="fn">match <span class="fn">expectedType?</span> with
     | <span class="fn">none</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">e</span></span>
     | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">expectedType</span></span> => <span class="fn">do
@@ -556,7 +556,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Tactic.elabTermForApply">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Tactic/ElabTerm.lean#L135-L140">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Tactic/ElabTerm.lean#L135-L173">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -573,7 +573,7 @@ Documentation</h1>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTermForApply">Lean.Elab.Tactic.elabTermForApply</a> <span class="fn">stx</span> <span class="fn">mayPostpone</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTerm">Lean.Elab.Tactic.elabTerm</a> <span class="fn">stx</span> <span class="fn">none</span> <span class="fn">mayPostpone</span></span></span>;
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTermForApply">Lean.Elab.Tactic.elabTermForApply</a> <span class="fn">stx</span> <span class="fn">mayPostpone</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.withoutErrToSorry">Lean.Elab.Term.withoutErrToSorry</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTerm">Lean.Elab.Tactic.elabTerm</a> <span class="fn">stx</span> <span class="fn">none</span> <span class="fn">mayPostpone</span></span>)</span>)</span></span>;
   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isIdent">Lean.Syntax.isIdent</a> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
     let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.resolveId?">Lean.Elab.Term.resolveId?</a> <span class="fn">stx</span> <span class="fn">"term"</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span>
     <span class="fn">match <span class="fn">a</span> with
@@ -594,36 +594,6 @@ A similar method is also used in Lean 3.
 This method is useful when applying lemmas such as:</p><pre><code>theorem infLeRight {s t : Set α} : s ⊓ t ≤ t
 </code></pre><p>where <code><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.filterOldMVars">s</a>≤<a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.logUnassignedAndAbort">t</a></code> here is defined as</p><pre><code>∀ {x : α}, x ∈ s → x ∈ t
 </code></pre></div>
-</div>
-<div class="decl" id="Lean.Elab.Tactic.evalApplyLikeTactic">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Tactic/ElabTerm.lean#L142-L147">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.evalApplyLikeTactic">Lean.Elab.Tactic.evalApplyLikeTactic</a>
-</span>
-<span class="decl_args">
-<span class="fn">(tac : <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> → <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span>)</span></span></span>)</span></span>
-<span class="decl_args">
-<span class="fn">(e : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.TacticM">Lean.Elab.Tactic.TacticM</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.evalApplyLikeTactic">Lean.Elab.Tactic.evalApplyLikeTactic</a> <span class="fn">tac</span> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.withMainContext">Lean.Elab.Tactic.withMainContext</a> <span class="fn">do
-    let val ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTermForApply">Lean.Elab.Tactic.elabTermForApply</a> <span class="fn">e</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
-    let a ← <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.getMainGoal">Lean.Elab.Tactic.getMainGoal</a>
-    let mvarIds' ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><span class="fn">tac</span> <span class="fn">a</span> <span class="fn">val</span></span>)</span>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html#Lean.Elab.Term.synthesizeSyntheticMVarsNoPostponing">Lean.Elab.Term.synthesizeSyntheticMVarsNoPostponing</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span>
-    <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.replaceMainGoal">Lean.Elab.Tactic.replaceMainGoal</a> <span class="fn">mvarIds'</span></span></span></span></span></li>
-</ul>
-</details>
-</div>
 </div>
 <div class="decl" id="Lean.Elab.Tactic.evalApply">
 <div class="def">
@@ -654,35 +624,6 @@ This method is useful when applying lemmas such as:</p><pre><code>theorem infLeR
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Elab.Tactic.getFVarId">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Tactic/ElabTerm.lean#L149-L155">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.getFVarId">Lean.Elab.Tactic.getFVarId</a>
-</span>
-<span class="decl_args">
-<span class="fn">(id : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.TacticM">Lean.Elab.Tactic.TacticM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.getFVarId">Lean.Elab.Tactic.getFVarId</a> <span class="fn">id</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.withRef">Lean.withRef</a> <span class="fn">id</span> <span class="fn">do
-    let e ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.withMainContext">Lean.Elab.Tactic.withMainContext</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTermForApply">Lean.Elab.Tactic.elabTermForApply</a> <span class="fn">id</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span>
-    <span class="fn">match <span class="fn">e</span> with
-      | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.fvar">Lean.Expr.fvar</a> <span class="fn">fvarId</span> <span class="fn">x</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">fvarId</span></span>
-      | <span class="fn">x</span> =>
-        <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a>
-          (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"unexpected term '"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">e</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>             <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"'; expected single reference to variable"</span></span></span>)</span></span></span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
 <div class="decl" id="Lean.Elab.Tactic.evalConstructor">
 <div class="def">
 <div class="gh_link">
@@ -704,29 +645,6 @@ This method is useful when applying lemmas such as:</p><pre><code>theorem infLeR
     let mvarIds' ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Constructor.html#Lean.Meta.constructor">Lean.Meta.constructor</a> <span class="fn">a</span></span>)</span>
     <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html#Lean.Elab.Term.synthesizeSyntheticMVarsNoPostponing">Lean.Elab.Term.synthesizeSyntheticMVarsNoPostponing</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span>
     <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.replaceMainGoal">Lean.Elab.Tactic.replaceMainGoal</a> <span class="fn">mvarIds'</span></span></span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Elab.Tactic.getFVarIds">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Tactic/ElabTerm.lean#L157-L158">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.getFVarIds">Lean.Elab.Tactic.getFVarIds</a>
-</span>
-<span class="decl_args">
-<span class="fn">(ids : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></span>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.TacticM">Lean.Elab.Tactic.TacticM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></span>)</span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.getFVarIds">Lean.Elab.Tactic.getFVarIds</a> <span class="fn">ids</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.withMainContext">Lean.Elab.Tactic.withMainContext</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mapM">Array.mapM</a> <a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.getFVarId">Lean.Elab.Tactic.getFVarId</a> <span class="fn">ids</span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -806,50 +724,87 @@ This method is useful when applying lemmas such as:</p><pre><code>theorem infLeR
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Elab.Tactic.elabAsFVar">
+<div class="decl" id="Lean.Elab.Tactic.evalApplyLikeTactic">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Tactic/ElabTerm.lean#L185-L201">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Tactic/ElabTerm.lean#L175-L180">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
 <span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabAsFVar">Lean.Elab.Tactic.elabAsFVar</a>
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.evalApplyLikeTactic">Lean.Elab.Tactic.evalApplyLikeTactic</a>
 </span>
 <span class="decl_args">
-<span class="fn">(stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
+<span class="fn">(tac : <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> → <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span>)</span></span></span>)</span></span>
 <span class="decl_args">
-<span class="fn">(userName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></span>) <span class="fn">none</span></span>)</span></span>
+<span class="fn">(e : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.TacticM">Lean.Elab.Tactic.TacticM</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.evalApplyLikeTactic">Lean.Elab.Tactic.evalApplyLikeTactic</a> <span class="fn">tac</span> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.withMainContext">Lean.Elab.Tactic.withMainContext</a> <span class="fn">do
+    let val ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTermForApply">Lean.Elab.Tactic.elabTermForApply</a> <span class="fn">e</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+    let a ← <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.getMainGoal">Lean.Elab.Tactic.getMainGoal</a>
+    let mvarIds' ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><span class="fn">tac</span> <span class="fn">a</span> <span class="fn">val</span></span>)</span>
+    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html#Lean.Elab.Term.synthesizeSyntheticMVarsNoPostponing">Lean.Elab.Term.synthesizeSyntheticMVarsNoPostponing</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span>
+    <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.replaceMainGoal">Lean.Elab.Tactic.replaceMainGoal</a> <span class="fn">mvarIds'</span></span></span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.Tactic.getFVarId">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Tactic/ElabTerm.lean#L182-L188">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.getFVarId">Lean.Elab.Tactic.getFVarId</a>
+</span>
+<span class="decl_args">
+<span class="fn">(id : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.TacticM">Lean.Elab.Tactic.TacticM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabAsFVar">Lean.Elab.Tactic.elabAsFVar</a> <span class="fn">stx</span> <span class="fn">userName?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.withMainContext">Lean.Elab.Tactic.withMainContext</a> <span class="fn">do
-    let e ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTerm">Lean.Elab.Tactic.elabTerm</a> <span class="fn">stx</span> <span class="fn">none</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.getFVarId">Lean.Elab.Tactic.getFVarId</a> <span class="fn">id</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.withRef">Lean.withRef</a> <span class="fn">id</span> <span class="fn">do
+    let e ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.withMainContext">Lean.Elab.Tactic.withMainContext</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTermForApply">Lean.Elab.Tactic.elabTermForApply</a> <span class="fn">id</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span>
     <span class="fn">match <span class="fn">e</span> with
       | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.fvar">Lean.Expr.fvar</a> <span class="fn">fvarId</span> <span class="fn">x</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">fvarId</span></span>
-      | <span class="fn">x</span> => <span class="fn">do
-        let <span class="fn">type</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">e</span></span>)</span>
-        let intro : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.TacticM">Lean.Elab.Tactic.TacticM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></span></span></span> := <span class="fn">fun <span class="fn">userName</span> <span class="fn">preserveBinderNames</span> => <span class="fn">do
-          let mvarId ← <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.getMainGoal">Lean.Elab.Tactic.getMainGoal</a>
-          let discr ←
-            <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.liftMetaM">Lean.Meta.liftMetaM</a> <span class="fn">do
-                let mvarId ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Assert.html#Lean.Meta.assert">Lean.Meta.assert</a> <span class="fn">mvarId</span> <span class="fn">userName</span> <span class="fn">type</span> <span class="fn">e</span></span>
-                <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html#Lean.Meta.intro1Core">Lean.Meta.intro1Core</a> <span class="fn">mvarId</span> <span class="fn">preserveBinderNames</span></span></span></span>
-          let x : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span> := <span class="fn">discr</span>
-          <span class="fn">match <span class="fn">x</span> with
-            | <span class="fn">(<span class="fn">fvarId</span>, <span class="fn">mvarId</span>)</span> => <span class="fn">do
-              <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.replaceMainGoal">Lean.Elab.Tactic.replaceMainGoal</a> <span class="fn">[<span class="fn">mvarId</span>]</span></span>
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">fvarId</span></span></span></span></span></span>
-        <span class="fn">match <span class="fn">userName?</span> with
-          | <span class="fn">none</span> => <span class="fn"><span class="fn">intro</span> <span class="fn">`h</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>
-          | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">userName</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">intro</a> <span class="fn">userName</span> <span class="fn">true</span></span></span></span></span></span></span></span></li>
+      | <span class="fn">x</span> =>
+        <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a>
+          (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"unexpected term '"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">e</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>             <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"'; expected single reference to variable"</span></span></span>)</span></span></span></span></span></li>
 </ul>
 </details>
-<p>Elaborate <code>stx</code>. If it a free variable, return it. Otherwise, assert it, and return the free variable.
-Note that, the main goal is updated when <code>Meta.assert</code> is used in the second case.</p></div>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.Tactic.getFVarIds">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Tactic/ElabTerm.lean#L190-L191">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.getFVarIds">Lean.Elab.Tactic.getFVarIds</a>
+</span>
+<span class="decl_args">
+<span class="fn">(ids : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.TacticM">Lean.Elab.Tactic.TacticM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></span>)</span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.getFVarIds">Lean.Elab.Tactic.getFVarIds</a> <span class="fn">ids</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.withMainContext">Lean.Elab.Tactic.withMainContext</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mapM">Array.mapM</a> <a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.getFVarId">Lean.Elab.Tactic.getFVarId</a> <span class="fn">ids</span></span>)</span></span></li>
+</ul>
+</details>
+</div>
 </div>
 <div class="decl" id="Lean.Elab.Tactic.evalRename">
 <div class="def">
@@ -880,7 +835,7 @@ Note that, the main goal is updated when <code>Meta.assert</code> is used in the
         let fvarId ←
           <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.withoutModifyingStateWithInfoAndMessages">Lean.Elab.withoutModifyingStateWithInfoAndMessages</a>
               (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withNewMCtxDepth">Lean.Meta.withNewMCtxDepth</a> <span class="fn">do
-                let type ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTerm">Lean.Elab.Tactic.elabTerm</a> <span class="fn">typeStx</span> <span class="fn">none</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+                let type ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTerm">Lean.Elab.Tactic.elabTerm</a> <span class="fn">typeStx</span> <span class="fn">none</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span>
                 let a ← <span class="fn">Lean.getLCtx</span>
                 let fvarId? ←
                   <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext.findDeclRevM?">Lean.LocalContext.findDeclRevM?</a> <span class="fn">a</span> <span class="fn">fun <span class="fn">localDecl</span> => <span class="fn">do
@@ -902,6 +857,51 @@ Note that, the main goal is updated when <code>Meta.assert</code> is used in the
 </ul>
 </details>
 </div>
+</div>
+<div class="decl" id="Lean.Elab.Tactic.elabAsFVar">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Tactic/ElabTerm.lean#L218-L234">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabAsFVar">Lean.Elab.Tactic.elabAsFVar</a>
+</span>
+<span class="decl_args">
+<span class="fn">(stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(userName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></span>) <span class="fn">none</span></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.TacticM">Lean.Elab.Tactic.TacticM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabAsFVar">Lean.Elab.Tactic.elabAsFVar</a> <span class="fn">stx</span> <span class="fn">userName?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.withMainContext">Lean.Elab.Tactic.withMainContext</a> <span class="fn">do
+    let e ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/ElabTerm.html#Lean.Elab.Tactic.elabTerm">Lean.Elab.Tactic.elabTerm</a> <span class="fn">stx</span> <span class="fn">none</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span>
+    <span class="fn">match <span class="fn">e</span> with
+      | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.fvar">Lean.Expr.fvar</a> <span class="fn">fvarId</span> <span class="fn">x</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">fvarId</span></span>
+      | <span class="fn">x</span> => <span class="fn">do
+        let <span class="fn">type</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">e</span></span>)</span>
+        let intro : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.TacticM">Lean.Elab.Tactic.TacticM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></span></span></span> := <span class="fn">fun <span class="fn">userName</span> <span class="fn">preserveBinderNames</span> => <span class="fn">do
+          let mvarId ← <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.getMainGoal">Lean.Elab.Tactic.getMainGoal</a>
+          let discr ←
+            <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.liftMetaM">Lean.Meta.liftMetaM</a> <span class="fn">do
+                let mvarId ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Assert.html#Lean.Meta.assert">Lean.Meta.assert</a> <span class="fn">mvarId</span> <span class="fn">userName</span> <span class="fn">type</span> <span class="fn">e</span></span>
+                <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html#Lean.Meta.intro1Core">Lean.Meta.intro1Core</a> <span class="fn">mvarId</span> <span class="fn">preserveBinderNames</span></span></span></span>
+          let x : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span> := <span class="fn">discr</span>
+          <span class="fn">match <span class="fn">x</span> with
+            | <span class="fn">(<span class="fn">fvarId</span>, <span class="fn">mvarId</span>)</span> => <span class="fn">do
+              <span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.replaceMainGoal">Lean.Elab.Tactic.replaceMainGoal</a> <span class="fn">[<span class="fn">mvarId</span>]</span></span>
+              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">fvarId</span></span></span></span></span></span>
+        <span class="fn">match <span class="fn">userName?</span> with
+          | <span class="fn">none</span> => <span class="fn"><span class="fn">intro</span> <span class="fn">`h</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>
+          | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">userName</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">intro</a> <span class="fn">userName</span> <span class="fn">true</span></span></span></span></span></span></span></span></li>
+</ul>
+</details>
+<p>Elaborate <code>stx</code>. If it a free variable, return it. Otherwise, assert it, and return the free variable.
+Note that, the main goal is updated when <code>Meta.assert</code> is used in the second case.</p></div>
 </div>
 <div class="decl" id="Lean.Elab.Tactic.evalDecide">
 <div class="def">
@@ -1037,6 +1037,9 @@ Note that, the main goal is updated when <code>Meta.assert</code> is used in the
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -1118,6 +1121,9 @@ Note that, the main goal is updated when <code>Meta.assert</code> is used in the
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -1195,6 +1201,9 @@ Note that, the main goal is updated when <code>Meta.assert</code> is used in the
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -1277,6 +1286,9 @@ Note that, the main goal is updated when <code>Meta.assert</code> is used in the
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1483,6 +1495,9 @@ Note that, the main goal is updated when <code>Meta.assert</code> is used in the
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1929,8 +1944,32 @@ Note that, the main goal is updated when <code>Meta.assert</code> is used in the
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1954,6 +1993,9 @@ Note that, the main goal is updated when <code>Meta.assert</code> is used in the
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -2124,6 +2166,9 @@ Note that, the main goal is updated when <code>Meta.assert</code> is used in the
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -2149,9 +2194,6 @@ Note that, the main goal is updated when <code>Meta.assert</code> is used in the
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2524,6 +2566,15 @@ Note that, the main goal is updated when <code>Meta.assert</code> is used in the
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2563,6 +2614,9 @@ Note that, the main goal is updated when <code>Meta.assert</code> is used in the
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

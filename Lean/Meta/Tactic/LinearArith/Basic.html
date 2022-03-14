@@ -28,7 +28,7 @@ Documentation</h1>
 <a href="/Unicode.lean/Init.html">Init</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Data/Rat.html">Lean.Data.Rat</a>
+<a href="/Unicode.lean/Lean/Expr.html">Lean.Expr</a>
 </li>
 </ul>
 </details>
@@ -36,1767 +36,61 @@ Documentation</h1>
 <summary>Imported by</summary>
 <ul>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
 </li>
 </ul>
 </details>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a>
+<a class="break_within" href="#Lean.Meta.Linear.isLinearTerm">Lean.Meta.Linear.isLinearTerm</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instInhabitedVar">Lean.Meta.Linear.instInhabitedVar</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instOrdVar">Lean.Meta.Linear.instOrdVar</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instDecidableEqVar">Lean.Meta.Linear.instDecidableEqVar</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instReprVar">Lean.Meta.Linear.instReprVar</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instLTVar">Lean.Meta.Linear.instLTVar</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instDecidableLtVarInstLTVar">Lean.Meta.Linear.instDecidableLtVarInstLTVar</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instInhabitedAssignment">Lean.Meta.Linear.instInhabitedAssignment</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Assignment.size">Lean.Meta.Linear.Assignment.size</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Assignment.get?">Lean.Meta.Linear.Assignment.get?</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Assignment.push">Lean.Meta.Linear.Assignment.push</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Assignment.shrink">Lean.Meta.Linear.Assignment.shrink</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instInhabitedPoly">Lean.Meta.Linear.instInhabitedPoly</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instReprPoly">Lean.Meta.Linear.instReprPoly</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instDecidableEqPoly">Lean.Meta.Linear.instDecidableEqPoly</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Poly.size">Lean.Meta.Linear.Poly.size</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Poly.getMaxVarCoeff">Lean.Meta.Linear.Poly.getMaxVarCoeff</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Poly.getMaxVar">Lean.Meta.Linear.Poly.getMaxVar</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Poly.get">Lean.Meta.Linear.Poly.get</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Poly.scale">Lean.Meta.Linear.Poly.scale</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Poly.add">Lean.Meta.Linear.Poly.add</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Poly.add.go">Lean.Meta.Linear.Poly.add.go</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Poly.combine">Lean.Meta.Linear.Poly.combine</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Poly.combine.go">Lean.Meta.Linear.Poly.combine.go</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Poly.eval?">Lean.Meta.Linear.Poly.eval?</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.AssumptionId">Lean.Meta.Linear.AssumptionId</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instInhabitedAssumptionId">Lean.Meta.Linear.instInhabitedAssumptionId</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instDecidableEqAssumptionId">Lean.Meta.Linear.instDecidableEqAssumptionId</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instReprAssumptionId">Lean.Meta.Linear.instReprAssumptionId</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Justification">Lean.Meta.Linear.Justification</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instInhabitedJustification">Lean.Meta.Linear.instInhabitedJustification</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instDecidableEqJustification">Lean.Meta.Linear.instDecidableEqJustification</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instBEqJustification">Lean.Meta.Linear.instBEqJustification</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instReprJustification">Lean.Meta.Linear.instReprJustification</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.CnstrKind">Lean.Meta.Linear.CnstrKind</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instInhabitedCnstrKind">Lean.Meta.Linear.instInhabitedCnstrKind</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instDecidableEqCnstrKind">Lean.Meta.Linear.instDecidableEqCnstrKind</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instBEqCnstrKind">Lean.Meta.Linear.instBEqCnstrKind</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instReprCnstrKind">Lean.Meta.Linear.instReprCnstrKind</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instInhabitedCnstr">Lean.Meta.Linear.instInhabitedCnstr</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instDecidableEqCnstr">Lean.Meta.Linear.instDecidableEqCnstr</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instBEqCnstr">Lean.Meta.Linear.instBEqCnstr</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instReprCnstr">Lean.Meta.Linear.instReprCnstr</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Cnstr.isStrict">Lean.Meta.Linear.Cnstr.isStrict</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Cnstr.getBound">Lean.Meta.Linear.Cnstr.getBound</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Cnstr.isUnsat">Lean.Meta.Linear.Cnstr.isUnsat</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.getBestBound?">Lean.Meta.Linear.getBestBound?</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Result">Lean.Meta.Linear.Result</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.Context">Lean.Meta.Linear.Context</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.State">Lean.Meta.Linear.State</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.instInhabitedState">Lean.Meta.Linear.instInhabitedState</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.State.getNumVars">Lean.Meta.Linear.State.getNumVars</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.State.currVar">Lean.Meta.Linear.State.currVar</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.State.getBestLowerBound?">Lean.Meta.Linear.State.getBestLowerBound?</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.State.getBestUpperBound?">Lean.Meta.Linear.State.getBestUpperBound?</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.State.assignCurr">Lean.Meta.Linear.State.assignCurr</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.pickAssignment?">Lean.Meta.Linear.pickAssignment?</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.resolve">Lean.Meta.Linear.resolve</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Meta.Linear.solve">Lean.Meta.Linear.solve</a>
+<a class="break_within" href="#Lean.Meta.Linear.isLinearCnstr">Lean.Meta.Linear.isLinearCnstr</a>
 </div>
 </nav>
 <main>
-<div class="decl" id="Lean.Meta.Linear.Var">
-<div class="structure">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L5-L7">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">structure</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type</span></div></div>
-<ul class="structure_fields" id="Lean.Meta.Linear.Var.mk">
-<li class="structure_field" id="Lean.Meta.Linear.Var.id">
-id : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
-</ul>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instInhabitedVar">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L7-L7">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedVar">Lean.Meta.Linear.instInhabitedVar</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedVar">Lean.Meta.Linear.instInhabitedVar</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn">{ id := <span class="fn">default</span> }</span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instOrdVar">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L7-L7">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instOrdVar">Lean.Meta.Linear.instOrdVar</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Data/Ord.html#Ord">Ord</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instOrdVar">Lean.Meta.Linear.instOrdVar</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ compare := <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.ordVar._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.23">[anonymous]</a> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instDecidableEqVar">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L7-L7">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instDecidableEqVar">Lean.Meta.Linear.instDecidableEqVar</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#DecidableEq">DecidableEq</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instDecidableEqVar">Lean.Meta.Linear.instDecidableEqVar</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.decEqVar._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.72">[anonymous]</a></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instReprVar">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L7-L7">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprVar">Lean.Meta.Linear.instReprVar</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Data/Repr.html#Repr">Repr</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprVar">Lean.Meta.Linear.instReprVar</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.reprVar._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.148">[anonymous]</a> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instLTVar">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L9-L10">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instLTVar">Lean.Meta.Linear.instLTVar</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#LT">LT</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instLTVar">Lean.Meta.Linear.instLTVar</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ lt := <span class="fn">fun <span class="fn">a</span> <span class="fn">b</span> => <span class="fn"><span class="fn"><span class="fn">a</span>.id</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><span class="fn">b</span>.id</span></span></span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instDecidableLtVarInstLTVar">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L12-L13">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instDecidableLtVarInstLTVar">Lean.Meta.Linear.instDecidableLtVarInstLTVar</a>
-</span>
-<span class="decl_args">
-<span class="fn">(a : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(b : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> (<span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn">b</span></span>)</span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instDecidableLtVarInstLTVar">Lean.Meta.Linear.instDecidableLtVarInstLTVar</a> <span class="fn">a</span> <span class="fn">b</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#inferInstanceAs">inferInstanceAs</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> (<span class="fn"><span class="fn"><span class="fn">a</span>.id</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><span class="fn">b</span>.id</span></span>)</span>)</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Assignment">
-<div class="structure">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L15-L17">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">structure</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type</span></div></div>
-<ul class="structure_fields" id="Lean.Meta.Linear.Assignment.mk">
-<li class="structure_field" id="Lean.Meta.Linear.Assignment.val">
-val : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a></span></li>
-</ul>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instInhabitedAssignment">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L17-L17">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedAssignment">Lean.Meta.Linear.instInhabitedAssignment</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedAssignment">Lean.Meta.Linear.instInhabitedAssignment</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn">{ val := <span class="fn">default</span> }</span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Assignment.size">
+<div class="decl" id="Lean.Meta.Linear.isLinearTerm">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L19-L20">source</a>
-</div>
-<div class="attributes">@[inline]</div>
-<div class="decl_header">
-<span class="decl_kind">abbrev</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment.size">Lean.Meta.Linear.Assignment.size</a>
-</span>
-<span class="decl_args">
-<span class="fn">(a : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment.size">Lean.Meta.Linear.Assignment.size</a> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">a</span>.val</span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Assignment.get?">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L22-L26">source</a>
-</div>
-<div class="attributes">@[inline]</div>
-<div class="decl_header">
-<span class="decl_kind">abbrev</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment.get?">Lean.Meta.Linear.Assignment.get?</a>
-</span>
-<span class="decl_args">
-<span class="fn">(a : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(x : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment.get?">Lean.Meta.Linear.Assignment.get?</a> <span class="fn">a</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if h : <span class="fn"><span class="fn"><span class="fn">x</span>.id</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment.size">Lean.Meta.Linear.Assignment.size</a> <span class="fn">a</span></span></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.get">Array.get</a> <span class="fn"><span class="fn">a</span>.val</span> <span class="fn">{ val := <span class="fn"><span class="fn">x</span>.id</span>, isLt := <span class="fn">h</span> }</span></span>)</span> else <span class="fn">none</span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Assignment.push">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L28-L29">source</a>
-</div>
-<div class="attributes">@[inline]</div>
-<div class="decl_header">
-<span class="decl_kind">abbrev</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment.push">Lean.Meta.Linear.Assignment.push</a>
-</span>
-<span class="decl_args">
-<span class="fn">(a : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(v : <a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment.push">Lean.Meta.Linear.Assignment.push</a> <span class="fn">a</span> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn"><span class="fn">a</span>.val</span> <span class="fn">v</span></span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Assignment.shrink">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L31-L32">source</a>
-</div>
-<div class="attributes">@[inline]</div>
-<div class="decl_header">
-<span class="decl_kind">abbrev</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment.shrink">Lean.Meta.Linear.Assignment.shrink</a>
-</span>
-<span class="decl_args">
-<span class="fn">(a : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(newSize : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment.shrink">Lean.Meta.Linear.Assignment.shrink</a> <span class="fn">a</span> <span class="fn">newSize</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ val := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.shrink">Array.shrink</a> <span class="fn"><span class="fn">a</span>.val</span> <span class="fn">newSize</span></span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Poly">
-<div class="structure">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L34-L36">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">structure</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type</span></div></div>
-<ul class="structure_fields" id="Lean.Meta.Linear.Poly.mk">
-<li class="structure_field" id="Lean.Meta.Linear.Poly.val">
-val : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Int/Basic.html#Int">Int</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a></span>)</span></li>
-</ul>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instInhabitedPoly">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L36-L36">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedPoly">Lean.Meta.Linear.instInhabitedPoly</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedPoly">Lean.Meta.Linear.instInhabitedPoly</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn">{ val := <span class="fn">default</span> }</span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instReprPoly">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L36-L36">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprPoly">Lean.Meta.Linear.instReprPoly</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Data/Repr.html#Repr">Repr</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprPoly">Lean.Meta.Linear.instReprPoly</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.reprPoly._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.341">[anonymous]</a> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instDecidableEqPoly">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L36-L36">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instDecidableEqPoly">Lean.Meta.Linear.instDecidableEqPoly</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#DecidableEq">DecidableEq</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instDecidableEqPoly">Lean.Meta.Linear.instDecidableEqPoly</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.decEqPoly._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.370">[anonymous]</a></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Poly.size">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L38-L39">source</a>
-</div>
-<div class="attributes">@[inline]</div>
-<div class="decl_header">
-<span class="decl_kind">abbrev</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.size">Lean.Meta.Linear.Poly.size</a>
-</span>
-<span class="decl_args">
-<span class="fn">(e : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.size">Lean.Meta.Linear.Poly.size</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">e</span>.val</span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Poly.getMaxVarCoeff">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L41-L42">source</a>
-</div>
-<div class="attributes">@[inline]</div>
-<div class="decl_header">
-<span class="decl_kind">abbrev</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.getMaxVarCoeff">Lean.Meta.Linear.Poly.getMaxVarCoeff</a>
-</span>
-<span class="decl_args">
-<span class="fn">(e : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Init/Data/Int/Basic.html#Int">Int</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.getMaxVarCoeff">Lean.Meta.Linear.Poly.getMaxVarCoeff</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.back">Array.back</a> <span class="fn"><span class="fn">e</span>.val</span></span>).fst</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Poly.getMaxVar">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L44-L45">source</a>
-</div>
-<div class="attributes">@[inline]</div>
-<div class="decl_header">
-<span class="decl_kind">abbrev</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.getMaxVar">Lean.Meta.Linear.Poly.getMaxVar</a>
-</span>
-<span class="decl_args">
-<span class="fn">(e : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.getMaxVar">Lean.Meta.Linear.Poly.getMaxVar</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.back">Array.back</a> <span class="fn"><span class="fn">e</span>.val</span></span>).snd</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Poly.get">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L47-L48">source</a>
-</div>
-<div class="attributes">@[inline]</div>
-<div class="decl_header">
-<span class="decl_kind">abbrev</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.get">Lean.Meta.Linear.Poly.get</a>
-</span>
-<span class="decl_args">
-<span class="fn">(e : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(i : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Fin">Fin</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.size">Lean.Meta.Linear.Poly.size</a> <span class="fn">e</span></span>)</span>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Data/Int/Basic.html#Int">Int</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.get">Lean.Meta.Linear.Poly.get</a> <span class="fn">e</span> <span class="fn">i</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.get">Array.get</a> <span class="fn"><span class="fn">e</span>.val</span> <span class="fn">i</span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Poly.scale">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L50-L51">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L11-L17">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
 <span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.scale">Lean.Meta.Linear.Poly.scale</a>
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.isLinearTerm">Lean.Meta.Linear.isLinearTerm</a>
 </span>
 <span class="decl_args">
-<span class="fn">(d : <a href="/Unicode.lean/Init/Data/Int/Basic.html#Int">Int</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(e : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.scale">Lean.Meta.Linear.Poly.scale</a> <span class="fn">d</span> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ val :=
-      <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a>
-        (<span class="fn">fun <span class="fn">x</span> =>
-          <span class="fn">match <span class="fn">x</span> with
-          | <span class="fn">(<span class="fn">c</span>, <span class="fn">x</span>)</span> => <span class="fn">(<span class="fn"><span class="fn">c</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn">d</span></span>, <span class="fn">x</span>)</span></span></span>)
-        <span class="fn"><span class="fn">e</span>.val</span></span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Poly.add">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L53-L76">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.add">Lean.Meta.Linear.Poly.add</a>
-</span>
-<span class="decl_args">
-<span class="fn">(e₁ : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(e₂ : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.add">Lean.Meta.Linear.Poly.add</a> <span class="fn">e₁</span> <span class="fn">e₂</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.add.go">Lean.Meta.Linear.Poly.add.go</a> <span class="fn">e₁</span> <span class="fn">e₂</span> <span class="fn">0</span> <span class="fn">0</span> <span class="fn">#[]</span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Poly.add.go">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L54-L74">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.add.go">Lean.Meta.Linear.Poly.add.go</a>
-</span>
-<span class="decl_args">
-<span class="fn">(e₁ : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(e₂ : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(i₁ : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(i₂ : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(r : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Int/Basic.html#Int">Int</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a></span>)</span>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.add.go">Lean.Meta.Linear.Poly.add.go</a> <span class="fn">e₁</span> <span class="fn">e₂</span> <span class="fn">i₁</span> <span class="fn">i₂</span> <span class="fn">r</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if h₁ : <span class="fn"><span class="fn">i₁</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.size">Lean.Meta.Linear.Poly.size</a> <span class="fn">e₁</span></span></span> then
-    <span class="fn">if h₂ : <span class="fn"><span class="fn">i₂</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.size">Lean.Meta.Linear.Poly.size</a> <span class="fn">e₂</span></span></span> then
-      <span class="fn">let x := <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.get">Lean.Meta.Linear.Poly.get</a> <span class="fn">e₁</span> <span class="fn">{ val := <span class="fn">i₁</span>, isLt := <span class="fn">h₁</span> }</span></span>;
-      <span class="fn">let x_1 := <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.get">Lean.Meta.Linear.Poly.get</a> <span class="fn">e₂</span> <span class="fn">{ val := <span class="fn">i₂</span>, isLt := <span class="fn">h₂</span> }</span></span>;
-      <span class="fn">if <span class="fn"><span class="fn"><span class="fn">x</span>.2</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><span class="fn">x_1</span>.2</span></span> then
-        <span class="fn">if <span class="fn"><span class="fn"><span class="fn"><span class="fn">x</span>.1</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn"><span class="fn">x_1</span>.1</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">0</span></span> then <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.add.go">Lean.Meta.Linear.Poly.add.go</a> <span class="fn">e₁</span> <span class="fn">e₂</span> (<span class="fn"><span class="fn">i₁</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) (<span class="fn"><span class="fn">i₂</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) <span class="fn">r</span></span>
-        else <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.add.go">Lean.Meta.Linear.Poly.add.go</a> <span class="fn">e₁</span> <span class="fn">e₂</span> (<span class="fn"><span class="fn">i₁</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) (<span class="fn"><span class="fn">i₂</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">r</span> <span class="fn">(<span class="fn"><span class="fn"><span class="fn">x</span>.1</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn"><span class="fn">x_1</span>.1</span></span>, <span class="fn"><span class="fn">x</span>.2</span>)</span></span>)</span></span>
-      else
-        <span class="fn">if <span class="fn"><span class="fn"><span class="fn">x</span>.2</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><span class="fn">x_1</span>.2</span></span> then <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.add.go">Lean.Meta.Linear.Poly.add.go</a> <span class="fn">e₁</span> <span class="fn">e₂</span> (<span class="fn"><span class="fn">i₁</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) <span class="fn">i₂</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">r</span> <span class="fn">(<span class="fn"><span class="fn">x</span>.1</span>, <span class="fn"><span class="fn">x</span>.2</span>)</span></span>)</span>
-        else <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.add.go">Lean.Meta.Linear.Poly.add.go</a> <span class="fn">e₁</span> <span class="fn">e₂</span> <span class="fn">i₁</span> (<span class="fn"><span class="fn">i₂</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">r</span> <span class="fn">(<span class="fn"><span class="fn">x_1</span>.1</span>, <span class="fn"><span class="fn">x_1</span>.2</span>)</span></span>)</span></span></span></span></span>
-    else
-      <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.add.go">Lean.Meta.Linear.Poly.add.go</a> <span class="fn">e₁</span> <span class="fn">e₂</span> (<span class="fn"><span class="fn">i₁</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) <span class="fn">i₂</span>
-        (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">r</span> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.get">Lean.Meta.Linear.Poly.get</a> <span class="fn">e₁</span> <span class="fn">{ val := <span class="fn">i₁</span>, isLt := <span class="fn">h₁</span> }</span></span>)</span>)</span></span>
-  else
-    <span class="fn">if h₂ : <span class="fn"><span class="fn">i₂</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.size">Lean.Meta.Linear.Poly.size</a> <span class="fn">e₂</span></span></span> then
-      <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.add.go">Lean.Meta.Linear.Poly.add.go</a> <span class="fn">e₁</span> <span class="fn">e₂</span> <span class="fn">i₁</span> (<span class="fn"><span class="fn">i₂</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>)
-        (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">r</span> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.get">Lean.Meta.Linear.Poly.get</a> <span class="fn">e₂</span> <span class="fn">{ val := <span class="fn">i₂</span>, isLt := <span class="fn">h₂</span> }</span></span>)</span>)</span>
-    else <span class="fn">{ val := <span class="fn">r</span> }</span></span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Poly.combine">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L78-L103">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.combine">Lean.Meta.Linear.Poly.combine</a>
-</span>
-<span class="decl_args">
-<span class="fn">(d₁ : <a href="/Unicode.lean/Init/Data/Int/Basic.html#Int">Int</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(e₁ : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(d₂ : <a href="/Unicode.lean/Init/Data/Int/Basic.html#Int">Int</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(e₂ : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.combine">Lean.Meta.Linear.Poly.combine</a> <span class="fn">d₁</span> <span class="fn">e₁</span> <span class="fn">d₂</span> <span class="fn">e₂</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.combine.go">Lean.Meta.Linear.Poly.combine.go</a> <span class="fn">d₁</span> <span class="fn">e₁</span> <span class="fn">d₂</span> <span class="fn">e₂</span> <span class="fn">0</span> <span class="fn">0</span> <span class="fn">#[]</span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Poly.combine.go">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L79-L101">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.combine.go">Lean.Meta.Linear.Poly.combine.go</a>
-</span>
-<span class="decl_args">
-<span class="fn">(d₁ : <a href="/Unicode.lean/Init/Data/Int/Basic.html#Int">Int</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(e₁ : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(d₂ : <a href="/Unicode.lean/Init/Data/Int/Basic.html#Int">Int</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(e₂ : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(i₁ : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(i₂ : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(r : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Int/Basic.html#Int">Int</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Var">Lean.Meta.Linear.Var</a></span>)</span>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.combine.go">Lean.Meta.Linear.Poly.combine.go</a> <span class="fn">d₁</span> <span class="fn">e₁</span> <span class="fn">d₂</span> <span class="fn">e₂</span> <span class="fn">i₁</span> <span class="fn">i₂</span> <span class="fn">r</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if h₁ : <span class="fn"><span class="fn">i₁</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.size">Lean.Meta.Linear.Poly.size</a> <span class="fn">e₁</span></span></span> then
-    <span class="fn">let x := <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.get">Lean.Meta.Linear.Poly.get</a> <span class="fn">e₁</span> <span class="fn">{ val := <span class="fn">i₁</span>, isLt := <span class="fn">h₁</span> }</span></span>;
-    <span class="fn">if h₂ : <span class="fn"><span class="fn">i₂</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.size">Lean.Meta.Linear.Poly.size</a> <span class="fn">e₂</span></span></span> then
-      <span class="fn">let x_1 := <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.get">Lean.Meta.Linear.Poly.get</a> <span class="fn">e₂</span> <span class="fn">{ val := <span class="fn">i₂</span>, isLt := <span class="fn">h₂</span> }</span></span>;
-      <span class="fn">if <span class="fn"><span class="fn"><span class="fn">x</span>.2</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><span class="fn">x_1</span>.2</span></span> then
-        <span class="fn">let c := <span class="fn"><span class="fn"><span class="fn"><span class="fn">x</span>.1</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn">d₁</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn"><span class="fn"><span class="fn">x_1</span>.1</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn">d₂</span></span></span>;
-        <span class="fn">if <span class="fn"><span class="fn">c</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">0</span></span> then <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.combine.go">Lean.Meta.Linear.Poly.combine.go</a> <span class="fn">d₁</span> <span class="fn">e₁</span> <span class="fn">d₂</span> <span class="fn">e₂</span> (<span class="fn"><span class="fn">i₁</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) (<span class="fn"><span class="fn">i₂</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) <span class="fn">r</span></span>
-        else <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.combine.go">Lean.Meta.Linear.Poly.combine.go</a> <span class="fn">d₁</span> <span class="fn">e₁</span> <span class="fn">d₂</span> <span class="fn">e₂</span> (<span class="fn"><span class="fn">i₁</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) (<span class="fn"><span class="fn">i₂</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">r</span> <span class="fn">(<span class="fn">c</span>, <span class="fn"><span class="fn">x</span>.2</span>)</span></span>)</span></span></span>
-      else
-        <span class="fn">if <span class="fn"><span class="fn"><span class="fn">x</span>.2</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><span class="fn">x_1</span>.2</span></span> then <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.combine.go">Lean.Meta.Linear.Poly.combine.go</a> <span class="fn">d₁</span> <span class="fn">e₁</span> <span class="fn">d₂</span> <span class="fn">e₂</span> (<span class="fn"><span class="fn">i₁</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) <span class="fn">i₂</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">r</span> <span class="fn">(<span class="fn"><span class="fn">d₁</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn"><span class="fn">x</span>.1</span></span>, <span class="fn"><span class="fn">x</span>.2</span>)</span></span>)</span>
-        else <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.combine.go">Lean.Meta.Linear.Poly.combine.go</a> <span class="fn">d₁</span> <span class="fn">e₁</span> <span class="fn">d₂</span> <span class="fn">e₂</span> <span class="fn">i₁</span> (<span class="fn"><span class="fn">i₂</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">r</span> <span class="fn">(<span class="fn"><span class="fn">d₂</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn"><span class="fn">x_1</span>.1</span></span>, <span class="fn"><span class="fn">x_1</span>.2</span>)</span></span>)</span></span></span></span>
-    else <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.combine.go">Lean.Meta.Linear.Poly.combine.go</a> <span class="fn">d₁</span> <span class="fn">e₁</span> <span class="fn">d₂</span> <span class="fn">e₂</span> (<span class="fn"><span class="fn">i₁</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) <span class="fn">i₂</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">r</span> <span class="fn">(<span class="fn"><span class="fn">d₁</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn"><span class="fn">x</span>.1</span></span>, <span class="fn"><span class="fn">x</span>.2</span>)</span></span>)</span></span></span>
-  else
-    <span class="fn">if h₂ : <span class="fn"><span class="fn">i₂</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.size">Lean.Meta.Linear.Poly.size</a> <span class="fn">e₂</span></span></span> then
-      <span class="fn">let x := <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.get">Lean.Meta.Linear.Poly.get</a> <span class="fn">e₂</span> <span class="fn">{ val := <span class="fn">i₂</span>, isLt := <span class="fn">h₂</span> }</span></span>;
-      <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.combine.go">Lean.Meta.Linear.Poly.combine.go</a> <span class="fn">d₁</span> <span class="fn">e₁</span> <span class="fn">d₂</span> <span class="fn">e₂</span> <span class="fn">i₁</span> (<span class="fn"><span class="fn">i₂</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">r</span> <span class="fn">(<span class="fn"><span class="fn">d₂</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn"><span class="fn">x</span>.1</span></span>, <span class="fn"><span class="fn">x</span>.2</span>)</span></span>)</span></span>
-    else <span class="fn">{ val := <span class="fn">r</span> }</span></span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Poly.eval?">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L105-L112">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.eval?">Lean.Meta.Linear.Poly.eval?</a>
-</span>
-<span class="decl_args">
-<span class="fn">(e : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(a : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.eval?">Lean.Meta.Linear.Poly.eval?</a> <span class="fn">e</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Control/Id.html#Id.run">Id.run</a>
-    (<span class="fn">let r := <span class="fn">0</span>;
-    <span class="fn">do
-    let r ←
-      <span class="fn">let col := <span class="fn"><span class="fn">e</span>.val</span>;
-        <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">col</span> <span class="fn">{ fst := <span class="fn">none</span>, snd := <span class="fn">r</span> }</span> <span class="fn">fun <span class="fn">x</span> <span class="fn">r</span> =>
-          <span class="fn">match <span class="fn">x</span> with
-          | <span class="fn">(<span class="fn">c</span>, <span class="fn">x</span>)</span> =>
-            <span class="fn">let r := <span class="fn"><span class="fn">r</span>.snd</span>;
-            <span class="fn">let r := <span class="fn">r</span>;
-            <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment.get?">Lean.Meta.Linear.Assignment.get?</a> <span class="fn">a</span> <span class="fn">x</span></span> with
-            | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">v</span></span> =>
-              <span class="fn">let r := <span class="fn"><span class="fn">r</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn"><span class="fn">{ num := <span class="fn">c</span>, den := <span class="fn">1</span> }</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn">v</span></span></span>;
-              <span class="fn">do
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <span class="fn">r</span> }</span></span>)</span></span></span>
-            | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">none</span></span>, snd := <span class="fn">r</span> }</span></span>)</span></span></span></span></span></span></span></span>
-    let x : <a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a> := <span class="fn"><span class="fn">r</span>.snd</span>
-    let r_1 : <a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a> := <span class="fn">x</span>
-    let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Init/Control/Id.html#Id">Id</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a></span>)</span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r_1</span></span>)</span></span>
-    <span class="fn">match <span class="fn"><span class="fn">r</span>.fst</span> with
-      | <span class="fn">none</span> => <span class="fn">do
-        let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span></span></span>)</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.AssumptionId">
-<div class="structure">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L114-L116">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">structure</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.AssumptionId">Lean.Meta.Linear.AssumptionId</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type</span></div></div>
-<ul class="structure_fields" id="Lean.Meta.Linear.AssumptionId.mk">
-<li class="structure_field" id="Lean.Meta.Linear.AssumptionId.id">
-id : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
-</ul>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instInhabitedAssumptionId">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L116-L116">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedAssumptionId">Lean.Meta.Linear.instInhabitedAssumptionId</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.AssumptionId">Lean.Meta.Linear.AssumptionId</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedAssumptionId">Lean.Meta.Linear.instInhabitedAssumptionId</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn">{ id := <span class="fn">default</span> }</span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instDecidableEqAssumptionId">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L116-L116">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instDecidableEqAssumptionId">Lean.Meta.Linear.instDecidableEqAssumptionId</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#DecidableEq">DecidableEq</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.AssumptionId">Lean.Meta.Linear.AssumptionId</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instDecidableEqAssumptionId">Lean.Meta.Linear.instDecidableEqAssumptionId</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.decEqAssumptionId._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.2388">[anonymous]</a></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instReprAssumptionId">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L116-L116">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprAssumptionId">Lean.Meta.Linear.instReprAssumptionId</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Data/Repr.html#Repr">Repr</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.AssumptionId">Lean.Meta.Linear.AssumptionId</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprAssumptionId">Lean.Meta.Linear.instReprAssumptionId</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.reprAssumptionId._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.2464">[anonymous]</a> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Justification">
-<div class="inductive">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L118-L121">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">inductive</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Justification">Lean.Meta.Linear.Justification</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type</span></div></div>
-<ul class="constructors">
-<li class="constructor" id="Lean.Meta.Linear.Justification.combine">
-combine: <span class="fn"><a href="/Unicode.lean/Init/Data/Int/Basic.html#Int">Int</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Justification">Lean.Meta.Linear.Justification</a> → <span class="fn"><a href="/Unicode.lean/Init/Data/Int/Basic.html#Int">Int</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Justification">Lean.Meta.Linear.Justification</a> → <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Justification">Lean.Meta.Linear.Justification</a></span></span></span></span></li>
-<li class="constructor" id="Lean.Meta.Linear.Justification.assumption">
-assumption: <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.AssumptionId">Lean.Meta.Linear.AssumptionId</a> → <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Justification">Lean.Meta.Linear.Justification</a></span></li>
-</ul>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instInhabitedJustification">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L121-L121">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedJustification">Lean.Meta.Linear.instInhabitedJustification</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Justification">Lean.Meta.Linear.Justification</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedJustification">Lean.Meta.Linear.instInhabitedJustification</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Justification.assumption">Lean.Meta.Linear.Justification.assumption</a> <span class="fn">default</span></span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instDecidableEqJustification">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L121-L121">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instDecidableEqJustification">Lean.Meta.Linear.instDecidableEqJustification</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#DecidableEq">DecidableEq</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Justification">Lean.Meta.Linear.Justification</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instDecidableEqJustification">Lean.Meta.Linear.instDecidableEqJustification</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.decEqJustification._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.2545">[anonymous]</a></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instBEqJustification">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L121-L121">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instBEqJustification">Lean.Meta.Linear.instBEqJustification</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#BEq">BEq</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Justification">Lean.Meta.Linear.Justification</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instBEqJustification">Lean.Meta.Linear.instBEqJustification</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.beqJustification._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.2913">[anonymous]</a> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instReprJustification">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L121-L121">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprJustification">Lean.Meta.Linear.instReprJustification</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Data/Repr.html#Repr">Repr</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Justification">Lean.Meta.Linear.Justification</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprJustification">Lean.Meta.Linear.instReprJustification</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.reprJustification._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.3039">[anonymous]</a> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.CnstrKind">
-<div class="inductive">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L123-L125">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">inductive</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind">Lean.Meta.Linear.CnstrKind</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type</span></div></div>
-<ul class="constructors">
-<li class="constructor" id="Lean.Meta.Linear.CnstrKind.eq">
-eq: <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind">Lean.Meta.Linear.CnstrKind</a></li>
-<li class="constructor" id="Lean.Meta.Linear.CnstrKind.div">
-div: <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind">Lean.Meta.Linear.CnstrKind</a></li>
-<li class="constructor" id="Lean.Meta.Linear.CnstrKind.lt">
-lt: <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind">Lean.Meta.Linear.CnstrKind</a></li>
-<li class="constructor" id="Lean.Meta.Linear.CnstrKind.le">
-le: <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind">Lean.Meta.Linear.CnstrKind</a></li>
-</ul>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instInhabitedCnstrKind">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L125-L125">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedCnstrKind">Lean.Meta.Linear.instInhabitedCnstrKind</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind">Lean.Meta.Linear.CnstrKind</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedCnstrKind">Lean.Meta.Linear.instInhabitedCnstrKind</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind.eq">Lean.Meta.Linear.CnstrKind.eq</a> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instDecidableEqCnstrKind">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L125-L125">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instDecidableEqCnstrKind">Lean.Meta.Linear.instDecidableEqCnstrKind</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#DecidableEq">DecidableEq</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind">Lean.Meta.Linear.CnstrKind</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instDecidableEqCnstrKind">Lean.Meta.Linear.instDecidableEqCnstrKind</a> <span class="fn">x</span> <span class="fn">y</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if h : <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind.toCtorIdx">Lean.Meta.Linear.CnstrKind.toCtorIdx</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind.toCtorIdx">Lean.Meta.Linear.CnstrKind.toCtorIdx</a> <span class="fn">y</span></span></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.isTrue">isTrue</a> (_ : <span class="fn"><span class="fn">x</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">y</span></span>)</span>
-  else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.isFalse">isFalse</a> (_ : <span class="fn"><span class="fn"><span class="fn">x</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">y</span></span> → <a href="/Unicode.lean/Init/Prelude.html#False">False</a></span>)</span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instBEqCnstrKind">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L125-L125">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instBEqCnstrKind">Lean.Meta.Linear.instBEqCnstrKind</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#BEq">BEq</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind">Lean.Meta.Linear.CnstrKind</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instBEqCnstrKind">Lean.Meta.Linear.instBEqCnstrKind</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.beqCnstrKind._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.3279">[anonymous]</a> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instReprCnstrKind">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L125-L125">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprCnstrKind">Lean.Meta.Linear.instReprCnstrKind</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Data/Repr.html#Repr">Repr</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind">Lean.Meta.Linear.CnstrKind</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprCnstrKind">Lean.Meta.Linear.instReprCnstrKind</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.reprCnstrKind._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.3295">[anonymous]</a> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Cnstr">
-<div class="structure">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L127-L132">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">structure</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type</span></div></div>
-<ul class="structure_fields" id="Lean.Meta.Linear.Cnstr.mk">
-<li class="structure_field" id="Lean.Meta.Linear.Cnstr.kind">
-kind : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind">Lean.Meta.Linear.CnstrKind</a></li>
-<li class="structure_field" id="Lean.Meta.Linear.Cnstr.lhs">
-lhs : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly">Lean.Meta.Linear.Poly</a></li>
-<li class="structure_field" id="Lean.Meta.Linear.Cnstr.rhs">
-rhs : <a href="/Unicode.lean/Init/Data/Int/Basic.html#Int">Int</a></li>
-<li class="structure_field" id="Lean.Meta.Linear.Cnstr.jst">
-jst : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Justification">Lean.Meta.Linear.Justification</a></li>
-</ul>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instInhabitedCnstr">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L132-L132">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedCnstr">Lean.Meta.Linear.instInhabitedCnstr</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedCnstr">Lean.Meta.Linear.instInhabitedCnstr</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn">{ kind := <span class="fn">default</span>, lhs := <span class="fn">default</span>, rhs := <span class="fn">default</span>, jst := <span class="fn">default</span> }</span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instDecidableEqCnstr">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L132-L132">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instDecidableEqCnstr">Lean.Meta.Linear.instDecidableEqCnstr</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#DecidableEq">DecidableEq</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instDecidableEqCnstr">Lean.Meta.Linear.instDecidableEqCnstr</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.decEqCnstr._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.3483">[anonymous]</a></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instBEqCnstr">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L132-L132">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instBEqCnstr">Lean.Meta.Linear.instBEqCnstr</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#BEq">BEq</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instBEqCnstr">Lean.Meta.Linear.instBEqCnstr</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.beqCnstr._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.3718">[anonymous]</a> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instReprCnstr">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L132-L132">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprCnstr">Lean.Meta.Linear.instReprCnstr</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Data/Repr.html#Repr">Repr</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprCnstr">Lean.Meta.Linear.instReprCnstr</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#_private.Lean.Meta.Tactic.LinearArith.Basic.0.Lean.Meta.Linear.reprCnstr._@.Lean.Meta.Tactic.LinearArith.Basic._hyg.3819">[anonymous]</a> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Cnstr.isStrict">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L134-L135">source</a>
-</div>
-<div class="attributes">@[inline]</div>
-<div class="decl_header">
-<span class="decl_kind">abbrev</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr.isStrict">Lean.Meta.Linear.Cnstr.isStrict</a>
-</span>
-<span class="decl_args">
-<span class="fn">(c : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a>)</span></span>
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr.isStrict">Lean.Meta.Linear.Cnstr.isStrict</a> <span class="fn">c</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><span class="fn">c</span>.kind</span> with
-  | <span class="fn">Lean.Meta.Linear.CnstrKind.lt</span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.isLinearTerm">Lean.Meta.Linear.isLinearTerm</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let f := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.getAppFn">Lean.Expr.getAppFn</a> <span class="fn">e</span></span>;
+  <span class="fn">if <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConst">Lean.Expr.isConst</a> <span class="fn">f</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a>
+  else
+    <span class="fn">let n := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.constName!">Lean.Expr.constName!</a> <span class="fn">f</span></span>;
+    <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn">n</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">`HAdd.hAdd</span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><span class="fn">n</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">`HMul.hMul</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><span class="fn">n</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">`HSub.hSub</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><span class="fn">n</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">`Nat.succ</span></span></span></span></span></span></span></li>
 </ul>
 </details>
+<p>Quick filter for linear terms.</p></div>
 </div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Cnstr.getBound">
-<div class="def">
+<div class="decl" id="Lean.Meta.Linear.isLinearCnstr">
+<div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L137-L146">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L20-L31">source</a>
 </div>
 <div class="decl_header">
-<span class="decl_kind">def</span>
+<span class="decl_kind">partial def</span>
 <span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr.getBound">Lean.Meta.Linear.Cnstr.getBound</a>
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.isLinearCnstr">Lean.Meta.Linear.isLinearCnstr</a>
 </span>
 <span class="decl_args">
-<span class="fn">(c : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(a : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr.getBound">Lean.Meta.Linear.Cnstr.getBound</a> <span class="fn">c</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Control/Id.html#Id.run">Id.run</a>
-    (<span class="fn">let r := <span class="fn">{ num := <span class="fn"><span class="fn">c</span>.rhs</span>, den := <span class="fn">1</span> }</span>;
-    <span class="fn">do
-    let r ←
-      <span class="fn">let col := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.toSubarray">Array.toSubarray</a> <span class="fn"><span class="fn"><span class="fn">c</span>.lhs</span>.val</span> <span class="fn">0</span> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn"><span class="fn">c</span>.lhs</span>.val</span></span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">1</span></span>)</span>;
-        <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">col</span> <span class="fn">r</span> <span class="fn">fun <span class="fn">x</span> <span class="fn">r</span> =>
-          <span class="fn">match <span class="fn">x</span> with
-          | <span class="fn">(<span class="fn">c</span>, <span class="fn">x</span>)</span> =>
-            <span class="fn">let r := <span class="fn">r</span>;
-            <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment.get?">Lean.Meta.Linear.Assignment.get?</a> <span class="fn">a</span> <span class="fn">x</span></span> with
-            | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">v</span></span> =>
-              <span class="fn">let r := <span class="fn"><span class="fn">r</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn"><span class="fn">{ num := <span class="fn">c</span>, den := <span class="fn">1</span> }</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn">v</span></span></span>;
-              <span class="fn">do
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">r</span></span>)</span></span></span>
-            | <span class="fn">x</span> => <span class="fn">do
-              <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Meta.Tactic.LinearArith.Basic"</span> <span class="fn">"Lean.Meta.Linear.Cnstr.getBound"</span> <span class="fn">144</span> <span class="fn">6</span>
-                  <span class="fn">"unreachable code has been reached"</span></span>
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">r</span></span>)</span></span></span></span></span></span></span></span>
-    let x : <a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a> := <span class="fn">r</span>
-    let r : <a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a> := <span class="fn">x</span>
-    let k : <a href="/Unicode.lean/Init/Data/Int/Basic.html#Int">Int</a> := <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.back">Array.back</a> <span class="fn"><span class="fn"><span class="fn">c</span>.lhs</span>.val</span></span>).fst</span>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><span class="fn">r</span> <a href="/Unicode.lean/Init/Prelude.html#HDiv.hDiv">/</a> <span class="fn">{ num := <span class="fn">k</span>, den := <span class="fn">1</span> }</span></span>)</span></span></span>)</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Cnstr.isUnsat">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L148-L156">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr.isUnsat">Lean.Meta.Linear.Cnstr.isUnsat</a>
-</span>
-<span class="decl_args">
-<span class="fn">(c : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(a : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a>)</span></span>
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr.isUnsat">Lean.Meta.Linear.Cnstr.isUnsat</a> <span class="fn">c</span> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.eval?">Lean.Meta.Linear.Poly.eval?</a> <span class="fn"><span class="fn">c</span>.lhs</span> <span class="fn">a</span></span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">v</span></span> =>
-    <span class="fn">match <span class="fn"><span class="fn">c</span>.kind</span> with
-    | <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind.div">Lean.Meta.Linear.CnstrKind.eq</a> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><span class="fn">v</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">{ num := <span class="fn"><span class="fn">c</span>.rhs</span>, den := <span class="fn">1</span> }</span></span></span>
-    | <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind.div">Lean.Meta.Linear.CnstrKind.lt</a> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn">v</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn">{ num := <span class="fn"><span class="fn">c</span>.rhs</span>, den := <span class="fn">1</span> }</span></span>)</span></span>
-    | <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind.div">Lean.Meta.Linear.CnstrKind.le</a> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn">v</span> <a href="/Unicode.lean/Init/Prelude.html#LE.le">≤</a> <span class="fn">{ num := <span class="fn"><span class="fn">c</span>.rhs</span>, den := <span class="fn">1</span> }</span></span>)</span></span>
-    | <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind.div">Lean.Meta.Linear.CnstrKind.div</a> =>
-      <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind.div"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Meta.Tactic.LinearArith.Basic"</span> <span class="fn">"Lean.Meta.Linear.Cnstr.isUnsat"</span> <span class="fn">154</span> <span class="fn">23</span>
-        <span class="fn">"unreachable code has been reached"</span></a></span>
-  | <span class="fn">x</span> => <span class="fn">false</span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.getBestBound?">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L158-L171">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.getBestBound?">Lean.Meta.Linear.getBestBound?</a>
-</span>
-<span class="decl_args">
-<span class="fn">(cs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a></span>)</span></span>
-<span class="decl_args">
-<span class="fn">(a : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(isLower : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(isInt : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a></span>)</span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.getBestBound?">Lean.Meta.Linear.getBestBound?</a> <span class="fn">cs</span> <span class="fn">a</span> <span class="fn">isLower</span> <span class="fn">isInt</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let adjust := <span class="fn">fun <span class="fn">v</span> =>
-    <span class="fn">if <span class="fn"><span class="fn">isInt</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-      <span class="fn">if <span class="fn"><span class="fn">isLower</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">{ num := <span class="fn"><a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat.ceil">Lean.Rat.ceil</a> <span class="fn">v</span></span>, den := <span class="fn">1</span> }</span> else <span class="fn">{ num := <span class="fn"><a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat.floor">Lean.Rat.floor</a> <span class="fn">v</span></span>, den := <span class="fn">1</span> }</span></span>
-    else <span class="fn">v</span></span></span>;
-  <span class="fn">if h : <span class="fn"><span class="fn">0</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">cs</span></span></span> then
-    <span class="fn">let c0 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.get">Array.get</a> <span class="fn">cs</span> <span class="fn">{ val := <span class="fn">0</span>, isLt := <span class="fn">h</span> }</span></span>;
-    <span class="fn">let b := <span class="fn"><span class="fn">adjust</span> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr.getBound">Lean.Meta.Linear.Cnstr.getBound</a> <span class="fn">c0</span> <span class="fn">a</span></span>)</span>;
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a>
-      (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Subarray.foldl">Subarray.foldl</a>
-        (<span class="fn">fun <span class="fn">r</span> <span class="fn">c</span> =>
-          <span class="fn">let b' := <span class="fn"><span class="fn">adjust</span> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr.getBound">Lean.Meta.Linear.Cnstr.getBound</a> <span class="fn">c</span> <span class="fn">a</span></span>)</span>;
-          <span class="fn">if <span class="fn"><span class="fn">isLower</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">if <span class="fn"><span class="fn">b'</span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn"><span class="fn">r</span>.fst</span></span> then <span class="fn">(<span class="fn">b'</span>, <span class="fn">c</span>)</span> else <span class="fn">r</span></span> else <span class="fn">if <span class="fn"><span class="fn">b'</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn"><span class="fn">r</span>.fst</span></span> then <span class="fn">(<span class="fn">b'</span>, <span class="fn">c</span>)</span> else <span class="fn">r</span></span></span></span></span>)
-        <span class="fn">(<span class="fn">b</span>, <span class="fn">c0</span>)</span>
-        (<span class="fn">let a := <span class="fn">cs</span>;
-        <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.toSubarray">Array.toSubarray</a> <span class="fn">a</span> <span class="fn">1</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">a</span></span>)</span></span>)</span>)</span></span></span>
-  else <span class="fn">none</span></span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Result">
-<div class="inductive">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L173-L177">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">inductive</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Result">Lean.Meta.Linear.Result</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type</span></div></div>
-<ul class="constructors">
-<li class="constructor" id="Lean.Meta.Linear.Result.unsat">
-unsat: <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Justification">Lean.Meta.Linear.Justification</a> → <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Result">Lean.Meta.Linear.Result</a></span></li>
-<li class="constructor" id="Lean.Meta.Linear.Result.unsupported">
-unsupported: <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Result">Lean.Meta.Linear.Result</a></li>
-<li class="constructor" id="Lean.Meta.Linear.Result.timeout">
-timeout: <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Result">Lean.Meta.Linear.Result</a></li>
-<li class="constructor" id="Lean.Meta.Linear.Result.sat">
-sat: <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a> → <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Result">Lean.Meta.Linear.Result</a></span></li>
-</ul>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.Context">
-<div class="structure">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L179-L180">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">structure</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Context">Lean.Meta.Linear.Context</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type</span></div></div>
-<ul class="structure_fields" id="Lean.Meta.Linear.Context.mk">
-<li class="structure_field" id="Lean.Meta.Linear.Context.int">
-int : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></li>
-</ul>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.State">
-<div class="structure">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L182-L187">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">structure</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State">Lean.Meta.Linear.State</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type</span></div></div>
-<ul class="structure_fields" id="Lean.Meta.Linear.State.mk">
-<li class="structure_field" id="Lean.Meta.Linear.State.lowers">
-lowers : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a></span>)</span></li>
-<li class="structure_field" id="Lean.Meta.Linear.State.uppers">
-uppers : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a></span>)</span></li>
-<li class="structure_field" id="Lean.Meta.Linear.State.int">
-int : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></li>
-<li class="structure_field" id="Lean.Meta.Linear.State.assignment">
-assignment : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment">Lean.Meta.Linear.Assignment</a></li>
-</ul>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.instInhabitedState">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L187-L187">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedState">Lean.Meta.Linear.instInhabitedState</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State">Lean.Meta.Linear.State</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instInhabitedState">Lean.Meta.Linear.instInhabitedState</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ default := <span class="fn">{ lowers := <span class="fn">default</span>, uppers := <span class="fn">default</span>, int := <span class="fn">default</span>, assignment := <span class="fn">default</span> }</span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.State.getNumVars">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L189-L189">source</a>
-</div>
-<div class="attributes">@[inline]</div>
-<div class="decl_header">
-<span class="decl_kind">abbrev</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State.getNumVars">Lean.Meta.Linear.State.getNumVars</a>
-</span>
-<span class="decl_args">
-<span class="fn">(s : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State">Lean.Meta.Linear.State</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State.getNumVars">Lean.Meta.Linear.State.getNumVars</a> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">s</span>.lowers</span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.State.currVar">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L191-L191">source</a>
-</div>
-<div class="attributes">@[inline]</div>
-<div class="decl_header">
-<span class="decl_kind">abbrev</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State.currVar">Lean.Meta.Linear.State.currVar</a>
-</span>
-<span class="decl_args">
-<span class="fn">(s : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State">Lean.Meta.Linear.State</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State.currVar">Lean.Meta.Linear.State.currVar</a> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment.size">Lean.Meta.Linear.Assignment.size</a> <span class="fn"><span class="fn">s</span>.assignment</span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.State.getBestLowerBound?">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L193-L194">source</a>
-</div>
-<div class="attributes">@[inline]</div>
-<div class="decl_header">
-<span class="decl_kind">abbrev</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State.getBestLowerBound?">Lean.Meta.Linear.State.getBestLowerBound?</a>
-</span>
-<span class="decl_args">
-<span class="fn">(s : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State">Lean.Meta.Linear.State</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a></span>)</span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State.getBestLowerBound?">Lean.Meta.Linear.State.getBestLowerBound?</a> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.getBestBound?">Lean.Meta.Linear.getBestBound?</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn"><span class="fn">s</span>.lowers</span> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State.currVar">Lean.Meta.Linear.State.currVar</a> <span class="fn">s</span></span>)</span>) <span class="fn"><span class="fn">s</span>.assignment</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
-    (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn"><span class="fn">s</span>.int</span> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State.currVar">Lean.Meta.Linear.State.currVar</a> <span class="fn">s</span></span>)</span>)</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.State.getBestUpperBound?">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L196-L197">source</a>
-</div>
-<div class="attributes">@[inline]</div>
-<div class="decl_header">
-<span class="decl_kind">abbrev</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State.getBestUpperBound?">Lean.Meta.Linear.State.getBestUpperBound?</a>
-</span>
-<span class="decl_args">
-<span class="fn">(s : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State">Lean.Meta.Linear.State</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a></span>)</span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State.getBestUpperBound?">Lean.Meta.Linear.State.getBestUpperBound?</a> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.getBestBound?">Lean.Meta.Linear.getBestBound?</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn"><span class="fn">s</span>.uppers</span> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State.currVar">Lean.Meta.Linear.State.currVar</a> <span class="fn">s</span></span>)</span>) <span class="fn"><span class="fn">s</span>.assignment</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a>
-    (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn"><span class="fn">s</span>.int</span> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State.currVar">Lean.Meta.Linear.State.currVar</a> <span class="fn">s</span></span>)</span>)</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.State.assignCurr">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L199-L200">source</a>
-</div>
-<div class="attributes">@[inline]</div>
-<div class="decl_header">
-<span class="decl_kind">abbrev</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State.assignCurr">Lean.Meta.Linear.State.assignCurr</a>
-</span>
-<span class="decl_args">
-<span class="fn">(s : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State">Lean.Meta.Linear.State</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(v : <a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State">Lean.Meta.Linear.State</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State.assignCurr">Lean.Meta.Linear.State.assignCurr</a> <span class="fn">s</span> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ lowers := <span class="fn"><span class="fn">s</span>.lowers</span>, uppers := <span class="fn"><span class="fn">s</span>.uppers</span>, int := <span class="fn"><span class="fn">s</span>.int</span>,
-    assignment := <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment.push">Lean.Meta.Linear.Assignment.push</a> <span class="fn"><span class="fn">s</span>.assignment</span> <span class="fn">v</span></span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.pickAssignment?">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L202-L212">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.pickAssignment?">Lean.Meta.Linear.pickAssignment?</a>
-</span>
-<span class="decl_args">
-<span class="fn">(lower : <a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(lowerIsStrict : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(upper : <a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(upperIsStrict : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat">Lean.Rat</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.pickAssignment?">Lean.Meta.Linear.pickAssignment?</a> <span class="fn">lower</span> <span class="fn">lowerIsStrict</span> <span class="fn">upper</span> <span class="fn">upperIsStrict</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">lower</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">upper</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">lowerIsStrict</span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn">upperIsStrict</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">none</span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">lower</span></span></span>
-  else
-    <span class="fn">if <span class="fn"><span class="fn">lower</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn">upper</span></span> then
-      <span class="fn">if <span class="fn"><span class="fn">lowerIsStrict</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-        <span class="fn">let c := <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat.isInt">Lean.Rat.isInt</a> <span class="fn">lower</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><span class="fn">lower</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span> else <span class="fn">{ num := <span class="fn"><a href="/Unicode.lean/Lean/Data/Rat.html#Lean.Rat.ceil">Lean.Rat.ceil</a> <span class="fn">lower</span></span>, den := <span class="fn">1</span> }</span></span>;
-        <span class="fn">if <span class="fn"><span class="fn">c</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn">upper</span></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">c</span></span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn">(<span class="fn"><span class="fn">lower</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">upper</span></span>) <a href="/Unicode.lean/Init/Prelude.html#HDiv.hDiv">/</a> <span class="fn">2</span></span>)</span></span></span>
-      else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">lower</span></span></span>
-    else <span class="fn">none</span></span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.resolve">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L214-L241">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.resolve">Lean.Meta.Linear.resolve</a>
-</span>
-<span class="decl_args">
-<span class="fn">(s : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State">Lean.Meta.Linear.State</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(cl : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(cu : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr">Lean.Meta.Linear.Cnstr</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Result">Lean.Meta.Linear.Result</a> <a href="/Unicode.lean/Init/Core.html#Sum">⊕</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State">Lean.Meta.Linear.State</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.resolve">Lean.Meta.Linear.resolve</a> <span class="fn">s</span> <span class="fn">cl</span> <span class="fn">cu</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let kl := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Neg.neg">-</a><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.getMaxVarCoeff">Lean.Meta.Linear.Poly.getMaxVarCoeff</a> <span class="fn"><span class="fn">cl</span>.lhs</span></span></span>;
-  <span class="fn">let ku := <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.getMaxVarCoeff">Lean.Meta.Linear.Poly.getMaxVarCoeff</a> <span class="fn"><span class="fn">cu</span>.lhs</span></span>;
-  <span class="fn">let lhs := <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.combine">Lean.Meta.Linear.Poly.combine</a> <span class="fn">ku</span> <span class="fn"><span class="fn">cl</span>.lhs</span> <span class="fn">kl</span> <span class="fn"><span class="fn">cu</span>.lhs</span></span>;
-  <span class="fn">let rhs := <span class="fn"><span class="fn"><span class="fn">ku</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn"><span class="fn">cl</span>.rhs</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn"><span class="fn">kl</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn"><span class="fn">cu</span>.rhs</span></span></span>;
-  <span class="fn">let c :=
-    <span class="fn">{ kind :=
-        <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr.isStrict">Lean.Meta.Linear.Cnstr.isStrict</a> <span class="fn">cl</span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr.isStrict">Lean.Meta.Linear.Cnstr.isStrict</a> <span class="fn">cu</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-          <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind.lt">Lean.Meta.Linear.CnstrKind.lt</a>
-        else <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.CnstrKind.le">Lean.Meta.Linear.CnstrKind.le</a></span>,
-      lhs := <span class="fn">lhs</span>, rhs := <span class="fn">rhs</span>, jst := <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Justification.combine">Lean.Meta.Linear.Justification.combine</a> <span class="fn">kl</span> <span class="fn"><span class="fn">cl</span>.jst</span> <span class="fn">ku</span> <span class="fn"><span class="fn">cu</span>.jst</span></span> }</span>;
-  <span class="fn">if <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Cnstr.isUnsat">Lean.Meta.Linear.Cnstr.isUnsat</a> <span class="fn">c</span> <span class="fn"><span class="fn">s</span>.assignment</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Core.html#Sum.inl">Sum.inl</a> <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Result.unsupported">Lean.Meta.Linear.Result.unsupported</a></span>
-  else
-    <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.size">Lean.Meta.Linear.Poly.size</a> <span class="fn">lhs</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">0</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Core.html#Sum.inl">Sum.inl</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Result.unsat">Lean.Meta.Linear.Result.unsat</a> <span class="fn"><span class="fn">c</span>.jst</span></span>)</span>
-    else
-      <span class="fn">let maxVarIdx := <span class="fn">(<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.getMaxVar">Lean.Meta.Linear.Poly.getMaxVar</a> <span class="fn"><span class="fn">c</span>.lhs</span></span>).id</span>;
-      <span class="fn">match <span class="fn">s</span> with
-      | <span class="fn">{ lowers := <span class="fn">lowers</span>, uppers := <span class="fn">uppers</span>, int := <span class="fn">int</span>, assignment := <span class="fn">assignment</span> }</span> =>
-        <span class="fn">let assignment := <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Assignment.shrink">Lean.Meta.Linear.Assignment.shrink</a> <span class="fn">assignment</span> <span class="fn">maxVarIdx</span></span>;
-        <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Poly.getMaxVarCoeff">Lean.Meta.Linear.Poly.getMaxVarCoeff</a> <span class="fn"><span class="fn">c</span>.lhs</span></span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt"><</a> <span class="fn">0</span></span> then
-          <span class="fn">let lowers := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.modify">Array.modify</a> <span class="fn">lowers</span> <span class="fn">maxVarIdx</span> <span class="fn">fun <span class="fn">a</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">a</span> <span class="fn">c</span></span></span></span>;
-          <span class="fn"><a href="/Unicode.lean/Init/Core.html#Sum.inr">Sum.inr</a> <span class="fn">{ lowers := <span class="fn">lowers</span>, uppers := <span class="fn">uppers</span>, int := <span class="fn">int</span>, assignment := <span class="fn">assignment</span> }</span></span></span>
-        else
-          <span class="fn">let uppers := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.modify">Array.modify</a> <span class="fn">uppers</span> <span class="fn">maxVarIdx</span> <span class="fn">fun <span class="fn">a</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">a</span> <span class="fn">c</span></span></span></span>;
-          <span class="fn"><a href="/Unicode.lean/Init/Core.html#Sum.inr">Sum.inr</a> <span class="fn">{ lowers := <span class="fn">lowers</span>, uppers := <span class="fn">uppers</span>, int := <span class="fn">int</span>, assignment := <span class="fn">assignment</span> }</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Meta.Linear.solve">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/LinearArith/Basic.lean#L243-L260">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.solve">Lean.Meta.Linear.solve</a>
-</span>
-<span class="decl_args">
-<span class="fn">(n : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(s : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.State">Lean.Meta.Linear.State</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.Result">Lean.Meta.Linear.Result</a></div></div>
-</div>
+<p>Quick filter for linear constraints.</p></div>
 </div>
 </main>
 <nav class="nav">
@@ -1859,6 +153,9 @@ assignment : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -1942,6 +239,9 @@ assignment : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -2019,6 +319,9 @@ assignment : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -2101,6 +404,9 @@ assignment : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -2307,6 +613,9 @@ assignment : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -2753,8 +1062,32 @@ assignment : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html" open="">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link" visible="">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -2778,6 +1111,9 @@ assignment : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -2948,6 +1284,9 @@ assignment : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -2973,9 +1312,6 @@ assignment : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -3348,6 +1684,15 @@ assignment : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -3387,6 +1732,9 @@ assignment : <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

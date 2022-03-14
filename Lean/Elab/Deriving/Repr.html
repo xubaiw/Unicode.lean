@@ -270,7 +270,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Deriving.Repr.mkBodyForInduct">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Deriving/Repr.lean#L47-L78">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Deriving/Repr.lean#L47-L80">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -313,7 +313,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Deriving.Repr.mkBodyForInduct.mkAlts">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Deriving/Repr.lean#L52-L78">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Deriving/Repr.lean#L52-L80">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -397,47 +397,54 @@ Documentation</h1>
                     let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/CoreM.html#Lean.Core.mkFreshUserName">Lean.mkFreshUserName</a> <span class="fn">`a</span></span>)</span>
                     let a : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a> := <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.mkIdent">Lean.mkIdent</a> <span class="fn">a</span></span>
                     let ctorArgs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></span> := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">ctorArgs</span> <span class="fn">a</span></span>
-                    let a_1 ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">x</span></span>)</span>
-                    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">a_1</span> <span class="fn"><span class="fn"><span class="fn">indVal</span>.toConstantVal</span>.name</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-                        let r ←
-                          <span class="fn">do
-                            let info ← <span class="fn">Lean.MonadRef.mkInfoFromRefPos</span>
-                            let scp ← <span class="fn">Lean.getCurrMacroScope</span>
-                            let mainModule ← <span class="fn">Lean.getMainModule</span>
-                            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a>
-                                (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`«term_++_»</span>
-                                  <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`«term_++_»</span>
-                                      <span class="fn">#[<span class="fn">rhs</span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">"++"</span></span>,
-                                        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.ident">Lean.Syntax.ident</a> <span class="fn">info</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String.toSubstring">String.toSubstring</a> <span class="fn">"Format.line"</span></span>)
-                                          (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.addMacroScope">Lean.addMacroScope</a> <span class="fn">mainModule</span> <span class="fn">`Format.line</span> <span class="fn">scp</span></span>) <span class="fn">[<span class="fn">(<span class="fn">`Std.Format.line</span>, <span class="fn">[]</span>)</span>]</span></span>]</span></span>,
-                                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">"++"</span></span>,
-                                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`Lean.Parser.Term.app</span>
-                                      <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.mkIdent">Lean.mkIdent</a> <span class="fn">auxFunName</span></span>,
-                                        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`null</span>
-                                          <span class="fn">#[<span class="fn">a</span>,
-                                            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`termMax_prec</span>
-                                              <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">"max_prec"</span></span>]</span></span>]</span></span>]</span></span>]</span></span>)</span></span>
-                        let rhs : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a> := <span class="fn">r</span>
-                        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">ctorArgs</span>, snd := <span class="fn">rhs</span> }</span></span>)</span></span>
+                    let localDecl ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.getLocalDecl">Lean.Meta.getLocalDecl</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.fvarId!">Lean.Expr.fvarId!</a> <span class="fn">x</span></span>)</span>)</span>
+                    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.isExplicit">Lean.BinderInfo.isExplicit</a> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.binderInfo">Lean.LocalDecl.binderInfo</a> <span class="fn">localDecl</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+                        let a_1 ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">x</span></span>)</span>
+                        <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">a_1</span> <span class="fn"><span class="fn"><span class="fn">indVal</span>.toConstantVal</span>.name</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+                            let r ←
+                              <span class="fn">do
+                                let info ← <span class="fn">Lean.MonadRef.mkInfoFromRefPos</span>
+                                let scp ← <span class="fn">Lean.getCurrMacroScope</span>
+                                let mainModule ← <span class="fn">Lean.getMainModule</span>
+                                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a>
+                                    (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`«term_++_»</span>
+                                      <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`«term_++_»</span>
+                                          <span class="fn">#[<span class="fn">rhs</span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">"++"</span></span>,
+                                            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.ident">Lean.Syntax.ident</a> <span class="fn">info</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String.toSubstring">String.toSubstring</a> <span class="fn">"Format.line"</span></span>)
+                                              (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.addMacroScope">Lean.addMacroScope</a> <span class="fn">mainModule</span> <span class="fn">`Format.line</span> <span class="fn">scp</span></span>)
+                                              <span class="fn">[<span class="fn">(<span class="fn">`Std.Format.line</span>, <span class="fn">[]</span>)</span>]</span></span>]</span></span>,
+                                        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">"++"</span></span>,
+                                        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`Lean.Parser.Term.app</span>
+                                          <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.mkIdent">Lean.mkIdent</a> <span class="fn">auxFunName</span></span>,
+                                            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`null</span>
+                                              <span class="fn">#[<span class="fn">a</span>,
+                                                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`termMax_prec</span>
+                                                  <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">"max_prec"</span></span>]</span></span>]</span></span>]</span></span>]</span></span>)</span></span>
+                            let rhs : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a> := <span class="fn">r</span>
+                            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">ctorArgs</span>, snd := <span class="fn">rhs</span> }</span></span>)</span></span>
+                          else <span class="fn">do
+                            let r ←
+                              <span class="fn">do
+                                let info ← <span class="fn">Lean.MonadRef.mkInfoFromRefPos</span>
+                                let scp ← <span class="fn">Lean.getCurrMacroScope</span>
+                                let mainModule ← <span class="fn">Lean.getMainModule</span>
+                                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a>
+                                    (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`«term_++_»</span>
+                                      <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`«term_++_»</span>
+                                          <span class="fn">#[<span class="fn">rhs</span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">"++"</span></span>,
+                                            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.ident">Lean.Syntax.ident</a> <span class="fn">info</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String.toSubstring">String.toSubstring</a> <span class="fn">"Format.line"</span></span>)
+                                              (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.addMacroScope">Lean.addMacroScope</a> <span class="fn">mainModule</span> <span class="fn">`Format.line</span> <span class="fn">scp</span></span>)
+                                              <span class="fn">[<span class="fn">(<span class="fn">`Std.Format.line</span>, <span class="fn">[]</span>)</span>]</span></span>]</span></span>,
+                                        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">"++"</span></span>,
+                                        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`Lean.Parser.Term.app</span>
+                                          <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.ident">Lean.Syntax.ident</a> <span class="fn">info</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String.toSubstring">String.toSubstring</a> <span class="fn">"reprArg"</span></span>)
+                                              (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.addMacroScope">Lean.addMacroScope</a> <span class="fn">mainModule</span> <span class="fn">`reprArg</span> <span class="fn">scp</span></span>) <span class="fn">[<span class="fn">(<span class="fn">`reprArg</span>, <span class="fn">[]</span>)</span>]</span></span>,
+                                            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`null</span> <span class="fn">#[<span class="fn">a</span>]</span></span>]</span></span>]</span></span>)</span></span>
+                            let rhs : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a> := <span class="fn">r</span>
+                            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">ctorArgs</span>, snd := <span class="fn">rhs</span> }</span></span>)</span></span></span></span>
                       else <span class="fn">do
-                        let r ←
-                          <span class="fn">do
-                            let info ← <span class="fn">Lean.MonadRef.mkInfoFromRefPos</span>
-                            let scp ← <span class="fn">Lean.getCurrMacroScope</span>
-                            let mainModule ← <span class="fn">Lean.getMainModule</span>
-                            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a>
-                                (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`«term_++_»</span>
-                                  <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`«term_++_»</span>
-                                      <span class="fn">#[<span class="fn">rhs</span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">"++"</span></span>,
-                                        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.ident">Lean.Syntax.ident</a> <span class="fn">info</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String.toSubstring">String.toSubstring</a> <span class="fn">"Format.line"</span></span>)
-                                          (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.addMacroScope">Lean.addMacroScope</a> <span class="fn">mainModule</span> <span class="fn">`Format.line</span> <span class="fn">scp</span></span>) <span class="fn">[<span class="fn">(<span class="fn">`Std.Format.line</span>, <span class="fn">[]</span>)</span>]</span></span>]</span></span>,
-                                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">"++"</span></span>,
-                                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`Lean.Parser.Term.app</span>
-                                      <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.ident">Lean.Syntax.ident</a> <span class="fn">info</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String.toSubstring">String.toSubstring</a> <span class="fn">"reprArg"</span></span>)
-                                          (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.addMacroScope">Lean.addMacroScope</a> <span class="fn">mainModule</span> <span class="fn">`reprArg</span> <span class="fn">scp</span></span>) <span class="fn">[<span class="fn">(<span class="fn">`reprArg</span>, <span class="fn">[]</span>)</span>]</span></span>,
-                                        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`null</span> <span class="fn">#[<span class="fn">a</span>]</span></span>]</span></span>]</span></span>)</span></span>
-                        let rhs : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a> := <span class="fn">r</span>
                         <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
                         <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">ctorArgs</span>, snd := <span class="fn">rhs</span> }</span></span>)</span></span></span></span></span></span></span></span></span></span>
               let x : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MProd">MProd</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></span>) <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></span> := <span class="fn">r</span>
@@ -539,7 +546,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Deriving.Repr.mkBody">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Deriving/Repr.lean#L80-L84">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Deriving/Repr.lean#L82-L86">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -571,7 +578,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Deriving.Repr.mkAuxFunction">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Deriving/Repr.lean#L86-L98">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Deriving/Repr.lean#L88-L100">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -669,7 +676,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Deriving.Repr.mkMutualBlock">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Deriving/Repr.lean#L100-L106">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Deriving/Repr.lean#L102-L108">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -712,7 +719,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Deriving.Repr.mkReprInstanceHandler">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Deriving/Repr.lean#L116-L122">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Deriving/Repr.lean#L118-L124">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -801,6 +808,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -882,6 +892,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -959,6 +972,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -1041,6 +1057,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1247,6 +1266,9 @@ Documentation</h1>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1693,8 +1715,32 @@ Documentation</h1>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1718,6 +1764,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1888,6 +1937,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1913,9 +1965,6 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2288,6 +2337,15 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2327,6 +2385,9 @@ Documentation</h1>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

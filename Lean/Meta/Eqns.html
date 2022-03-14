@@ -28,6 +28,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Init.html">Init</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Meta/AppBuilder.html">Lean.Meta.AppBuilder</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Meta/Basic.html">Lean.Meta.Basic</a>
 </li>
 </ul>
@@ -60,6 +63,15 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Meta.registerGetEqnsFn">Lean.Meta.registerGetEqnsFn</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.Meta.EqnsExtState">Lean.Meta.EqnsExtState</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Meta.instInhabitedEqnsExtState">Lean.Meta.instInhabitedEqnsExtState</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Meta.eqnsExt">Lean.Meta.eqnsExt</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Meta.getEqnsFor?">Lean.Meta.getEqnsFor?</a>
 </div>
 <div class="nav_link">
@@ -76,7 +88,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.GetEqnsFn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L10-L10">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L11-L11">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -97,7 +109,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.registerGetEqnsFn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L39-L42">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L40-L43">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -139,10 +151,63 @@ an alternative. Example: the definition</p><pre><code>def f (xs : List Nat) : Li
 </code></pre><p>and</p><pre><code>(x : Nat) → (xs : List Nat) → f (x :: xs) = (x+1) :: f xs
 </code></pre></div>
 </div>
+<div class="decl" id="Lean.Meta.EqnsExtState">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L52-L54">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.EqnsExtState">Lean.Meta.EqnsExtState</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Meta.EqnsExtState.mk">
+<li class="structure_field" id="Lean.Meta.EqnsExtState.map">
+map : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#Std.PHashMap">Std.PHashMap</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></span>)</span></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Meta.instInhabitedEqnsExtState">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L54-L54">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.instInhabitedEqnsExtState">Lean.Meta.instInhabitedEqnsExtState</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.EqnsExtState">Lean.Meta.EqnsExtState</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.instInhabitedEqnsExtState">Lean.Meta.instInhabitedEqnsExtState</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn">{ map := <span class="fn">default</span> }</span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Meta.eqnsExt">
+<div class="constant">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L57-L57">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">constant</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.eqnsExt">Lean.Meta.eqnsExt</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.EnvExtension">Lean.EnvExtension</a> <a href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.EqnsExtState">Lean.Meta.EqnsExtState</a></span></div></div>
+</div>
+</div>
 <div class="decl" id="Lean.Meta.getEqnsFor?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L44-L48">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L83-L96">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -151,40 +216,72 @@ an alternative. Example: the definition</p><pre><code>def f (xs : List Nat) : Li
 </span>
 <span class="decl_args">
 <span class="fn">(declName : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(nonRec : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></span>)</span>)</span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.getEqnsFor?">Lean.Meta.getEqnsFor?</a> <span class="fn">declName</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let a ← <span class="fn"><a href="/Unicode.lean/Init/System/ST.html#ST.Ref.get">ST.Ref.get</a> <a href="/Unicode.lean/Lean/Meta/Eqns.html#_private.Lean.Meta.Eqns.0.Lean.Meta.getEqnsFnsRef">Lean.Meta.getEqnsFnsRef</a></span>
-  let r ←
-    <span class="fn">let col := <span class="fn">a</span>;
-      <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">col</span> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span> <span class="fn">fun <span class="fn">f</span> <span class="fn">r</span> =>
-        <span class="fn">let r := <span class="fn"><span class="fn">r</span>.snd</span>;
-        <span class="fn">do
-        let a ← <span class="fn"><span class="fn">f</span> <span class="fn">declName</span></span>
-        <span class="fn">match <span class="fn">a</span> with
-          | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span>)</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span>
-          | <span class="fn">x</span> => <span class="fn">do
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span></span></span></span></span></span></span>
-  let x : <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> := <span class="fn"><span class="fn">r</span>.snd</span>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.getEqnsFor?">Lean.Meta.getEqnsFor?</a> <span class="fn">declName</span> <span class="fn">nonRec</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let a ← <span class="fn">Lean.getEnv</span>
   let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></span>)</span>)</span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span>
-  <span class="fn">match <span class="fn"><span class="fn">r</span>.fst</span> with
-    | <span class="fn">none</span> => <span class="fn">do
-      let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span></span></span></li>
+  <span class="fn">match <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#Std.PersistentHashMap.find?">Std.PersistentHashMap.find?</a> <span class="fn">(<span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.EnvExtension.getState">Lean.EnvExtension.getState</a> <a href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.eqnsExt">Lean.Meta.eqnsExt</a> <span class="fn">a</span></span>).map</span> <span class="fn">declName</span></span> with
+    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">eqs</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">eqs</span></span>)</span>
+    | <span class="fn">x</span> => <span class="fn">do
+      let <span class="fn">a</span> ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Eqns.html#_private.Lean.Meta.Eqns.0.Lean.Meta.shouldGenerateEqnThms">Lean.Meta.shouldGenerateEqnThms</a> <span class="fn">declName</span></span>
+      <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+          let a ← <span class="fn"><a href="/Unicode.lean/Init/System/ST.html#ST.Ref.get">ST.Ref.get</a> <a href="/Unicode.lean/Lean/Meta/Eqns.html#_private.Lean.Meta.Eqns.0.Lean.Meta.getEqnsFnsRef">Lean.Meta.getEqnsFnsRef</a></span>
+          let r ←
+            <span class="fn">let col := <span class="fn">a</span>;
+              <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">col</span> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span> <span class="fn">fun <span class="fn">f</span> <span class="fn">r</span> =>
+                <span class="fn">let r := <span class="fn"><span class="fn">r</span>.snd</span>;
+                <span class="fn">do
+                let a ← <span class="fn"><span class="fn">f</span> <span class="fn">declName</span></span>
+                <span class="fn">match <span class="fn">a</span> with
+                  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span> => <span class="fn">do
+                    <span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.MonadEnv.modifyEnv">Lean.modifyEnv</a> <span class="fn">fun <span class="fn">env</span> =>
+                        <span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.EnvExtension.modifyState">Lean.EnvExtension.modifyState</a> <a href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.eqnsExt">Lean.Meta.eqnsExt</a> <span class="fn">env</span> <span class="fn">fun <span class="fn">s</span> =>
+                          <span class="fn">{ map := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#Std.PersistentHashMap.insert">Std.PersistentHashMap.insert</a> <span class="fn"><span class="fn">s</span>.map</span> <span class="fn">declName</span> <span class="fn">r</span></span> }</span></span></span></span></span>
+                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span>)</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span>
+                  | <span class="fn">x</span> => <span class="fn">do
+                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span></span></span></span></span></span></span>
+          let x : <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> := <span class="fn"><span class="fn">r</span>.snd</span>
+          let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></span>)</span>)</span></span> := <span class="fn">fun <span class="fn">y</span> =>
+            <span class="fn">if <span class="fn"><span class="fn">nonRec</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+              let discr ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Eqns.html#_private.Lean.Meta.Eqns.0.Lean.Meta.mkSimpleEqThm">Lean.Meta.mkSimpleEqThm</a> <span class="fn">declName</span></span>
+              <span class="fn">match <span class="fn">discr</span> with
+                | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">eqThm</span></span> =>
+                  <span class="fn">let r := <span class="fn">#[<span class="fn">eqThm</span>]</span>;
+                  <span class="fn">do
+                  <span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.MonadEnv.modifyEnv">Lean.modifyEnv</a> <span class="fn">fun <span class="fn">env</span> =>
+                      <span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.EnvExtension.modifyState">Lean.EnvExtension.modifyState</a> <a href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.eqnsExt">Lean.Meta.eqnsExt</a> <span class="fn">env</span> <span class="fn">fun <span class="fn">s</span> =>
+                        <span class="fn">{ map := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#Std.PersistentHashMap.insert">Std.PersistentHashMap.insert</a> <span class="fn"><span class="fn">s</span>.map</span> <span class="fn">declName</span> <span class="fn">r</span></span> }</span></span></span></span></span>
+                  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span>)</span></span></span>
+                | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span></span>
+            else <span class="fn">do
+              let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
+          <span class="fn">match <span class="fn"><span class="fn">r</span>.fst</span> with
+            | <span class="fn">none</span> => <span class="fn">do
+              let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
+            | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span></span>
+        else <span class="fn">do
+          let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span></li>
 </ul>
 </details>
-</div>
+<p>Return equation theorems for the given declaration.
+By default, we not create equation theorems for nonrecursive definitions.
+You can use <code>nonRec:=true</code> to override this behavior, a dummy <code><a href="/Unicode.lean/Init/Prelude.html#rfl">rfl</a></code> proof is created on the fly.</p></div>
 </div>
 <div class="decl" id="Lean.Meta.GetUnfoldEqnFn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L50-L50">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L98-L98">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -205,7 +302,7 @@ an alternative. Example: the definition</p><pre><code>def f (xs : List Nat) : Li
 <div class="decl" id="Lean.Meta.registerGetUnfoldEqnFn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L79-L82">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L127-L130">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -251,7 +348,7 @@ Otherwise, it is a theorem name. Example: the definition</p><pre><code>def f (xs
 <div class="decl" id="Lean.Meta.getUnfoldEqnFor?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L84-L88">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Eqns.lean#L137-L145">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -260,35 +357,53 @@ Otherwise, it is a theorem name. Example: the definition</p><pre><code>def f (xs
 </span>
 <span class="decl_args">
 <span class="fn">(declName : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(nonRec : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></span>)</span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.getUnfoldEqnFor?">Lean.Meta.getUnfoldEqnFor?</a> <span class="fn">declName</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let a ← <span class="fn"><a href="/Unicode.lean/Init/System/ST.html#ST.Ref.get">ST.Ref.get</a> <a href="/Unicode.lean/Lean/Meta/Eqns.html#_private.Lean.Meta.Eqns.0.Lean.Meta.getUnfoldEqnFnsRef">Lean.Meta.getUnfoldEqnFnsRef</a></span>
-  let r ←
-    <span class="fn">let col := <span class="fn">a</span>;
-      <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">col</span> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span> <span class="fn">fun <span class="fn">f</span> <span class="fn">r</span> =>
-        <span class="fn">let r := <span class="fn"><span class="fn">r</span>.snd</span>;
-        <span class="fn">do
-        let a ← <span class="fn"><span class="fn">f</span> <span class="fn">declName</span></span>
-        <span class="fn">match <span class="fn">a</span> with
-          | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span>)</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span>
-          | <span class="fn">x</span> => <span class="fn">do
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span></span></span></span></span></span></span>
-  let x : <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> := <span class="fn"><span class="fn">r</span>.snd</span>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.getUnfoldEqnFor?">Lean.Meta.getUnfoldEqnFor?</a> <span class="fn">declName</span> <span class="fn">nonRec</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Eqns.html#_private.Lean.Meta.Eqns.0.Lean.Meta.shouldGenerateEqnThms">Lean.Meta.shouldGenerateEqnThms</a> <span class="fn">declName</span></span>
   let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></span>)</span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span>
-  <span class="fn">match <span class="fn"><span class="fn">r</span>.fst</span> with
-    | <span class="fn">none</span> => <span class="fn">do
+  <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+      let a ← <span class="fn"><a href="/Unicode.lean/Init/System/ST.html#ST.Ref.get">ST.Ref.get</a> <a href="/Unicode.lean/Lean/Meta/Eqns.html#_private.Lean.Meta.Eqns.0.Lean.Meta.getUnfoldEqnFnsRef">Lean.Meta.getUnfoldEqnFnsRef</a></span>
+      let r ←
+        <span class="fn">let col := <span class="fn">a</span>;
+          <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">col</span> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span> <span class="fn">fun <span class="fn">f</span> <span class="fn">r</span> =>
+            <span class="fn">let r := <span class="fn"><span class="fn">r</span>.snd</span>;
+            <span class="fn">do
+            let a ← <span class="fn"><span class="fn">f</span> <span class="fn">declName</span></span>
+            <span class="fn">match <span class="fn">a</span> with
+              | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">r</span></span>)</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span>
+              | <span class="fn">x</span> => <span class="fn">do
+                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span></span></span></span></span></span></span>
+      let x : <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> := <span class="fn"><span class="fn">r</span>.snd</span>
+      let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></span>)</span></span> := <span class="fn">fun <span class="fn">y</span> =>
+        <span class="fn">if <span class="fn"><span class="fn">nonRec</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+          let discr ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Eqns.html#Lean.Meta.getEqnsFor?">Lean.Meta.getEqnsFor?</a> <span class="fn">declName</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+          <span class="fn">match <span class="fn">discr</span> with
+            | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">#[<span class="fn">eqThm</span>]</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">eqThm</span></span>)</span>
+            | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span></span>
+        else <span class="fn">do
+          let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
+      <span class="fn">match <span class="fn"><span class="fn">r</span>.fst</span> with
+        | <span class="fn">none</span> => <span class="fn">do
+          let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
+        | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span></span>
+    else <span class="fn">do
       let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span></span></span></li>
+      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></li>
 </ul>
 </details>
-</div>
+<p>Return a "unfold" theorem for the given declaration.
+By default, we not create unfold theorems for nonrecursive definitions.
+You can use <code>nonRec:=true</code> to override this behavior.</p></div>
 </div>
 </main>
 <nav class="nav">
@@ -351,6 +466,9 @@ Otherwise, it is a theorem name. Example: the definition</p><pre><code>def f (xs
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -434,6 +552,9 @@ Otherwise, it is a theorem name. Example: the definition</p><pre><code>def f (xs
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -511,6 +632,9 @@ Otherwise, it is a theorem name. Example: the definition</p><pre><code>def f (xs
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -593,6 +717,9 @@ Otherwise, it is a theorem name. Example: the definition</p><pre><code>def f (xs
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -799,6 +926,9 @@ Otherwise, it is a theorem name. Example: the definition</p><pre><code>def f (xs
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1245,8 +1375,32 @@ Otherwise, it is a theorem name. Example: the definition</p><pre><code>def f (xs
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1270,6 +1424,9 @@ Otherwise, it is a theorem name. Example: the definition</p><pre><code>def f (xs
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1440,6 +1597,9 @@ Otherwise, it is a theorem name. Example: the definition</p><pre><code>def f (xs
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1465,9 +1625,6 @@ Otherwise, it is a theorem name. Example: the definition</p><pre><code>def f (xs
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -1840,6 +1997,15 @@ Otherwise, it is a theorem name. Example: the definition</p><pre><code>def f (xs
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -1879,6 +2045,9 @@ Otherwise, it is a theorem name. Example: the definition</p><pre><code>def f (xs
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

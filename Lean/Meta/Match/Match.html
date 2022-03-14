@@ -667,7 +667,7 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
       <span class="fn"><a href="/Unicode.lean/Lean/Meta/Match/Match.html#_private.Lean.Meta.Match.Match.0.Lean.Meta.Match.checkNumPatterns">Lean.Meta.Match.checkNumPatterns</a> <span class="fn">majors</span> <span class="fn">lhss</span></span>
       let uElim ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/InferType.html#Lean.Meta.getLevel">Lean.Meta.getLevel</a> <span class="fn">matchTypeBody</span></span>
       let _do_jp : <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.Level">Lean.Level</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Meta/Match/Basic.html#Lean.Meta.Match.MatcherResult">Lean.Meta.Match.MatcherResult</a></span></span> := <span class="fn">fun <span class="fn">uElimGen</span> => <span class="fn">do
-        let motiveType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">majors</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkSort">Lean.mkSort</a> <span class="fn">uElimGen</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+        let motiveType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">majors</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkSort">Lean.mkSort</a> <span class="fn">uElimGen</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
         <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLocalDeclD">Lean.Meta.withLocalDeclD</a> <span class="fn">`motive</span> <span class="fn">motiveType</span> <span class="fn">fun <span class="fn">motive</span> =>
             <span class="fn">let cls := <span class="fn">`Meta.Match.debug</span>;
             <span class="fn">do
@@ -693,8 +693,8 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
                     | <span class="fn">(<span class="fn">x</span>, <span class="fn">s</span>)</span> =>
                       <span class="fn">let args := <span class="fn"><span class="fn"><span class="fn">#[<span class="fn">motive</span>]</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">majors</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a> <span class="fn">Prod.fst</span> <span class="fn">minors</span></span></span>;
                       <span class="fn">do
-                      let type ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">args</span> <span class="fn">mvarType</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
-                      let val ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLambdaFVars">Lean.Meta.mkLambdaFVars</a> <span class="fn">args</span> <span class="fn">mvar</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+                      let type ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">args</span> <span class="fn">mvarType</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
+                      let val ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLambdaFVars">Lean.Meta.mkLambdaFVars</a> <span class="fn">args</span> <span class="fn">mvar</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
                       let cls : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> := <span class="fn">`Meta.Match.debug</span>
                       let a ← <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.isTracingEnabledFor">Lean.isTracingEnabledFor</a> <span class="fn">cls</span></span>
                       let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Meta/Match/Basic.html#Lean.Meta.Match.MatcherResult">Lean.Meta.Match.MatcherResult</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn">do
@@ -831,7 +831,7 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
         | <span class="fn">x</span> => <span class="fn">Lean.levelZero</span></span>
       let y ←
         <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallBoundedTelescope">Lean.Meta.forallBoundedTelescope</a> <span class="fn">matcherType</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn"><span class="fn">matcherInfo</span>.numDiscrs</span></span>) <span class="fn">fun <span class="fn">discrs</span> <span class="fn">t</span> =>
-            <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">discrs</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`PUnit</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></span>
+            <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">discrs</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn">`PUnit</span> <span class="fn">[<span class="fn">u</span>]</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span></span></span>
       <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
     | <span class="fn">x</span> =>
       <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a> (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"not a matcher: "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">matcherName</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span></span></span></span></span></li>
@@ -920,7 +920,7 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
             <span class="fn">eType</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">matcherApp</span>.discrs</span></span>)</span>
       let motiveBody ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkArrow">Lean.Meta.mkArrow</a> <span class="fn">eTypeAbst</span> <span class="fn">motiveBody</span></span>
       let _do_jp : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Level.html#Lean.Level">Lean.Level</a></span> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Meta/Match/MatcherInfo.html#Lean.Meta.MatcherApp">Lean.Meta.MatcherApp</a></span></span> := <span class="fn">fun <span class="fn">matcherLevels</span> => <span class="fn">do
-        let motive ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLambdaFVars">Lean.Meta.mkLambdaFVars</a> <span class="fn">motiveArgs</span> <span class="fn">motiveBody</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+        let motive ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLambdaFVars">Lean.Meta.mkLambdaFVars</a> <span class="fn">motiveArgs</span> <span class="fn">motiveBody</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
         let aux : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> :=
           <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkAppN">Lean.mkAppN</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> <span class="fn"><span class="fn">matcherApp</span>.matcherName</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.toList">Array.toList</a> <span class="fn">matcherLevels</span></span>)</span>) <span class="fn"><span class="fn">matcherApp</span>.params</span></span>
         let aux : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkApp">Lean.mkApp</a> <span class="fn">aux</span> <span class="fn">motive</span></span>
@@ -1030,6 +1030,9 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -1111,6 +1114,9 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -1188,6 +1194,9 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -1270,6 +1279,9 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1476,6 +1488,9 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1922,8 +1937,32 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1947,6 +1986,9 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -2117,6 +2159,9 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -2142,9 +2187,6 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2517,6 +2559,15 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2556,6 +2607,9 @@ lhss : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> 
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

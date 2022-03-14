@@ -83,6 +83,24 @@ Documentation</h1>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Expr.occurs">Lean.Expr.occurs</a>
 </div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Expr.FindStep">Lean.Expr.FindStep</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Expr.FindExtImpl.findM?">Lean.Expr.FindExtImpl.findM?</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Expr.FindExtImpl.findM?.visitApp">Lean.Expr.FindExtImpl.findM?.visitApp</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Expr.FindExtImpl.findUnsafe?">Lean.Expr.FindExtImpl.findUnsafe?</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Expr.findExt?">Lean.Expr.findExt?</a>
+</div>
 </nav>
 <main>
 <div class="decl" id="Lean.Expr.FindImpl.cacheSize">
@@ -301,13 +319,13 @@ keys : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </div>
 </div>
 <div class="decl" id="Lean.Expr.find?">
-<div class="constant">
+<div class="def">
 <div class="gh_link">
 <a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Util/FindExpr.lean#L57-L68">source</a>
 </div>
 <div class="attributes">@[implementedBy Lean.Expr.FindImpl.findUnsafe?]</div>
 <div class="decl_header">
-<span class="decl_kind">partial def</span>
+<span class="decl_kind">noncomputable def</span>
 <span class="decl_name">
 <a class="break_within" href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.find?">Lean.Expr.find?</a>
 </span>
@@ -343,6 +361,180 @@ keys : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </ul>
 </details>
 <p>Return true if <code><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindImpl.cacheSize">e</a></code> occurs in <code><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindImpl.findM?.visit">t</a></code></p></div>
+</div>
+<div class="decl" id="Lean.Expr.FindStep">
+<div class="inductive">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Util/FindExpr.lean#L77-L80">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">inductive</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep">Lean.Expr.FindStep</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="constructors">
+<li class="constructor" id="Lean.Expr.FindStep.found">
+found: <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep">Lean.Expr.FindStep</a></li>
+<li class="constructor" id="Lean.Expr.FindStep.visit">
+visit: <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep">Lean.Expr.FindStep</a></li>
+<li class="constructor" id="Lean.Expr.FindStep.done">
+done: <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep">Lean.Expr.FindStep</a></li>
+</ul>
+<p>Return type for <code><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.findExt?">findExt?</a></code> function argument.</p></div>
+</div>
+<div class="decl" id="Lean.Expr.FindExtImpl.findM?">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Util/FindExpr.lean#L84-L106">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">unsafe def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?">Lean.Expr.FindExtImpl.findM?</a>
+</span>
+<span class="decl_args">
+<span class="fn">(p : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep">Lean.Expr.FindStep</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(size : <a href="/Unicode.lean/Init/Prelude.html#USize">USize</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Control/Option.html#OptionT">OptionT</a> <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindImpl.FindM">Lean.Expr.FindImpl.FindM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?">Lean.Expr.FindExtImpl.findM?</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">e</span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Expr.FindExtImpl.findM?.visitApp">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Util/FindExpr.lean#L87-L90">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">unsafe def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visitApp">Lean.Expr.FindExtImpl.findM?.visitApp</a>
+</span>
+<span class="decl_args">
+<span class="fn">(p : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep">Lean.Expr.FindStep</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(size : <a href="/Unicode.lean/Init/Prelude.html#USize">USize</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Control/Option.html#OptionT">OptionT</a> <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindImpl.FindM">Lean.Expr.FindImpl.FindM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visitApp">Lean.Expr.FindExtImpl.findM?.visitApp</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">e</span> with
+  | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.app">Lean.Expr.app</a> <span class="fn">f</span> <span class="fn">a</span> <span class="fn">x</span></span> =>
+    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> (<span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visitApp">Lean.Expr.FindExtImpl.findM?.visitApp</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">f</span></span>) <span class="fn">fun <span class="fn">x</span> =>
+      <span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">a</span></span></span></span>
+  | <span class="fn">e</span> => <span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">e</span></span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Expr.FindExtImpl.findM?.visit">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Util/FindExpr.lean#L92-L106">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">unsafe def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a>
+</span>
+<span class="decl_args">
+<span class="fn">(p : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep">Lean.Expr.FindStep</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(size : <a href="/Unicode.lean/Init/Prelude.html#USize">USize</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Control/Option.html#OptionT">OptionT</a> <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindImpl.FindM">Lean.Expr.FindImpl.FindM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindImpl.visited">Lean.Expr.FindImpl.visited</a> <span class="fn">e</span> <span class="fn">size</span></span>)</span>
+  <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">failure</span>
+    else
+      <span class="fn">match <span class="fn"><span class="fn">p</span> <span class="fn">e</span></span> with
+      | <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep.visit">Lean.Expr.FindStep.done</a> => <span class="fn">failure</span>
+      | <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep.visit">Lean.Expr.FindStep.found</a> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">e</span></span>
+      | <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep.visit">Lean.Expr.FindStep.visit</a> =>
+        <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep.visit">match <span class="fn">e</span> with
+        | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.proj">Lean.Expr.forallE</a> <span class="fn">x</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">x_1</span></span> =>
+          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> (<span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">d</span></span>) <span class="fn">fun <span class="fn">x</span> =>
+            <span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">b</span></span></span></span>
+        | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.proj">Lean.Expr.lam</a> <span class="fn">x</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">x_1</span></span> =>
+          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> (<span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">d</span></span>) <span class="fn">fun <span class="fn">x</span> =>
+            <span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">b</span></span></span></span>
+        | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.app">Lean.Expr.mdata</a> <span class="fn">x</span> <span class="fn">b</span> <span class="fn">x_1</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">b</span></span>
+        | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.letE">Lean.Expr.letE</a> <span class="fn">x</span> <span class="fn">t</span> <span class="fn">v</span> <span class="fn">b</span> <span class="fn">x_1</span></span> =>
+          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> (<span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">t</span></span>) <span class="fn">fun <span class="fn">x</span> =>
+            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> (<span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">v</span></span>) <span class="fn">fun <span class="fn">x</span> =>
+              <span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">b</span></span></span></span></span></span>
+        | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.app">Lean.Expr.app</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visitApp">Lean.Expr.FindExtImpl.findM?.visitApp</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">e</span></span>
+        | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.proj">Lean.Expr.proj</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">b</span> <span class="fn">x_2</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?.visit">Lean.Expr.FindExtImpl.findM?.visit</a> <span class="fn">p</span> <span class="fn">size</span> <span class="fn">b</span></span>
+        | <span class="fn">e</span> => <span class="fn">failure</span></a></span></span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Expr.FindExtImpl.findUnsafe?">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Util/FindExpr.lean#L108-L109">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">unsafe def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findUnsafe?">Lean.Expr.FindExtImpl.findUnsafe?</a>
+</span>
+<span class="decl_args">
+<span class="fn">(p : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep">Lean.Expr.FindStep</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findUnsafe?">Lean.Expr.FindExtImpl.findUnsafe?</a> <span class="fn">p</span> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Control/Id.html#Id.run">Id.run</a> (<span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT.run'">StateT.run'</a> (<span class="fn"><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindExtImpl.findM?">Lean.Expr.FindExtImpl.findM?</a> <span class="fn">p</span> <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindImpl.cacheSize">Lean.Expr.FindImpl.cacheSize</a> <span class="fn">e</span></span>) <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindImpl.initCache">Lean.Expr.FindImpl.initCache</a></span>)</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Expr.findExt?">
+<div class="constant">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Util/FindExpr.lean#L117-L117">source</a>
+</div>
+<div class="attributes">@[implementedBy Lean.Expr.FindExtImpl.findUnsafe?]</div>
+<div class="decl_header">
+<span class="decl_kind">constant</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.findExt?">Lean.Expr.findExt?</a>
+</span>
+<span class="decl_args">
+<span class="fn">(p : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep">Lean.Expr.FindStep</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
+<p>Similar to <code><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.find?">find?</a></code>, but <code><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep">p</a></code> can return <code>FindStep.done</code> to interrupt the search on subterms.
+Remark: Differently from <code><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.find?">find?</a></code>, we do not invoke <code><a href="/Unicode.lean/Lean/Util/FindExpr.html#Lean.Expr.FindStep">p</a></code> for partial applications of an application.</p></div>
 </div>
 </main>
 <nav class="nav">
@@ -405,6 +597,9 @@ keys : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -488,6 +683,9 @@ keys : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -565,6 +763,9 @@ keys : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -647,6 +848,9 @@ keys : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -853,6 +1057,9 @@ keys : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1299,8 +1506,32 @@ keys : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1324,6 +1555,9 @@ keys : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1494,6 +1728,9 @@ keys : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1519,9 +1756,6 @@ keys : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -1894,6 +2128,15 @@ keys : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -1933,6 +2176,9 @@ keys : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

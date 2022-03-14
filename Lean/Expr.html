@@ -110,6 +110,9 @@ Documentation</h1>
 <li>
 <a href="/Unicode.lean/Lean/Meta/Tactic/FVarSubst.html">Lean.Meta.Tactic.FVarSubst</a>
 </li>
+<li>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</li>
 </ul>
 </details>
 </div>
@@ -795,13 +798,16 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Expr.getAutoParamTactic?">Lean.Expr.getAutoParamTactic?</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.Expr.isOutParam">Lean.Expr.isOutParam</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Expr.isOptParam">Lean.Expr.isOptParam</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Expr.isAutoParam">Lean.Expr.isAutoParam</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Expr.consumeAutoOptParam">Lean.Expr.consumeAutoOptParam</a>
+<a class="break_within" href="#Lean.Expr.consumeTypeAnnotations">Lean.Expr.consumeTypeAnnotations</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Expr.hasAnyFVar">Lean.Expr.hasAnyFVar</a>
@@ -1024,7 +1030,7 @@ strVal: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String">String
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.instReprLiteral">Lean.instReprLiteral</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <a href="/Unicode.lean/Lean/Expr.html#_private.Lean.Expr.0.Lean.reprLiteral._@.Lean.Expr._hyg.107">[anonymous]</a> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.instReprLiteral">Lean.instReprLiteral</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <a href="/Unicode.lean/Lean/Expr.html#_private.Lean.Expr.0.Lean.reprLiteral._@.Lean.Expr._hyg.109">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -1207,7 +1213,7 @@ auxDecl: <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo<
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.instBEqBinderInfo">Lean.instBEqBinderInfo</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <a href="/Unicode.lean/Lean/Expr.html#_private.Lean.Expr.0.Lean.beqBinderInfo._@.Lean.Expr._hyg.356">[anonymous]</a> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.instBEqBinderInfo">Lean.instBEqBinderInfo</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <a href="/Unicode.lean/Lean/Expr.html#_private.Lean.Expr.0.Lean.beqBinderInfo._@.Lean.Expr._hyg.362">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -1228,7 +1234,7 @@ auxDecl: <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo<
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.instReprBinderInfo">Lean.instReprBinderInfo</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <a href="/Unicode.lean/Lean/Expr.html#_private.Lean.Expr.0.Lean.reprBinderInfo._@.Lean.Expr._hyg.372">[anonymous]</a> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.instReprBinderInfo">Lean.instReprBinderInfo</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <a href="/Unicode.lean/Lean/Expr.html#_private.Lean.Expr.0.Lean.reprBinderInfo._@.Lean.Expr._hyg.378">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -2017,7 +2023,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.instBEqFVarId">Lean.instBEqFVarId</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <a href="/Unicode.lean/Lean/Expr.html#_private.Lean.Expr.0.Lean.beqFVarId._@.Lean.Expr._hyg.1666">[anonymous]</a> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.instBEqFVarId">Lean.instBEqFVarId</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <a href="/Unicode.lean/Lean/Expr.html#_private.Lean.Expr.0.Lean.beqFVarId._@.Lean.Expr._hyg.1677">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -2038,7 +2044,7 @@ name : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.instHashableFVarId">Lean.instHashableFVarId</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ hash := <a href="/Unicode.lean/Lean/Expr.html#_private.Lean.Expr.0.Lean.hashFVarId._@.Lean.Expr._hyg.1719">[anonymous]</a> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.instHashableFVarId">Lean.instHashableFVarId</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ hash := <a href="/Unicode.lean/Lean/Expr.html#_private.Lean.Expr.0.Lean.hashFVarId._@.Lean.Expr._hyg.1732">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -2281,7 +2287,7 @@ proj: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.instReprExpr">Lean.instReprExpr</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <a href="/Unicode.lean/Lean/Expr.html#_private.Lean.Expr.0.Lean.reprExpr._@.Lean.Expr._hyg.2210">[anonymous]</a> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.instReprExpr">Lean.instReprExpr</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <a href="/Unicode.lean/Lean/Expr.html#_private.Lean.Expr.0.Lean.reprExpr._@.Lean.Expr._hyg.2223">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -5665,7 +5671,7 @@ Function panics if <code>beginIdx<=endIdx<=xs.size</code> does not hold.</p></di
 <span class="fn">(xs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></div></div>
-<p>Replace free variables <code>xs</code> with loose bound variables.</p></div>
+<p>Replace free (or meta) variables <code>xs</code> with loose bound variables.</p></div>
 </div>
 <div class="decl" id="Lean.Expr.abstractRange">
 <div class="constant">
@@ -6467,10 +6473,33 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Expr.isOutParam">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L935-L936">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isOutParam">Lean.Expr.isOutParam</a>
+</span>
+<span class="decl_args">
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isOutParam">Lean.Expr.isOutParam</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOfArity">Lean.Expr.isAppOfArity</a> <span class="fn">e</span> <span class="fn">`outParam</span> <span class="fn">1</span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Expr.isOptParam">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L934-L935">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L938-L939">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -6493,7 +6522,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.isAutoParam">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L937-L938">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L941-L942">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -6513,15 +6542,15 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Expr.consumeAutoOptParam">
+<div class="decl" id="Lean.Expr.consumeTypeAnnotations">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L940-L944">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L945-L951">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
 <span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Expr.html#Lean.Expr.consumeAutoOptParam">Lean.Expr.consumeAutoOptParam</a>
+<a class="break_within" href="/Unicode.lean/Lean/Expr.html#Lean.Expr.consumeTypeAnnotations">Lean.Expr.consumeTypeAnnotations</a>
 </span>
 <span class="decl_args">
 <span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
@@ -6532,7 +6561,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.hasAnyFVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L947-L958">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L954-L965">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6558,7 +6587,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.hasAnyFVar.visit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L948-L957">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L955-L964">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -6577,7 +6606,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.containsFVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L960-L961">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L967-L968">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -6602,7 +6631,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateApp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L973-L974">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L980-L981">source</a>
 </div>
 <div class="attributes">@[extern  lean_expr_update_app]</div>
 <div class="decl_header">
@@ -6632,7 +6661,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateApp!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L976-L979">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L983-L986">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6656,7 +6685,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
   | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.app">Lean.Expr.app</a> <span class="fn">fn</span> <span class="fn">arg</span> <span class="fn">c</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.updateApp">Lean.Expr.updateApp</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.app">Lean.Expr.app</a> <span class="fn">fn</span> <span class="fn">arg</span> <span class="fn">c</span></span>) <span class="fn">newFn</span> <span class="fn">newArg</span>
       (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isApp">Lean.Expr.isApp</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.app">Lean.Expr.app</a> <span class="fn">fn</span> <span class="fn">arg</span> <span class="fn">c</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isApp">Lean.Expr.isApp</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.app">Lean.Expr.app</a> <span class="fn">fn</span> <span class="fn">arg</span> <span class="fn">c</span></span>)</span></span>)</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateApp!"</span> <span class="fn">979</span> <span class="fn">20</span> <span class="fn">"application expected"</span></span></span></span></li>
+  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateApp!"</span> <span class="fn">986</span> <span class="fn">20</span> <span class="fn">"application expected"</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -6664,7 +6693,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateConst">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L982-L983">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L989-L990">source</a>
 </div>
 <div class="attributes">@[extern  lean_expr_update_const]</div>
 <div class="decl_header">
@@ -6692,7 +6721,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateConst!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L985-L988">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L992-L995">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6714,7 +6743,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
   | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.const">Lean.Expr.const</a> <span class="fn">n</span> <span class="fn">ls</span> <span class="fn">c</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.updateConst">Lean.Expr.updateConst</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.const">Lean.Expr.const</a> <span class="fn">n</span> <span class="fn">ls</span> <span class="fn">c</span></span>) <span class="fn">newLevels</span>
       (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConst">Lean.Expr.isConst</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.const">Lean.Expr.const</a> <span class="fn">n</span> <span class="fn">ls</span> <span class="fn">c</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConst">Lean.Expr.isConst</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.const">Lean.Expr.const</a> <span class="fn">n</span> <span class="fn">ls</span> <span class="fn">c</span></span>)</span></span>)</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateConst!"</span> <span class="fn">988</span> <span class="fn">20</span> <span class="fn">"constant expected"</span></span></span></span></li>
+  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateConst!"</span> <span class="fn">995</span> <span class="fn">20</span> <span class="fn">"constant expected"</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -6722,7 +6751,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateSort">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L991-L992">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L998-L999">source</a>
 </div>
 <div class="attributes">@[extern  lean_expr_update_sort]</div>
 <div class="decl_header">
@@ -6750,7 +6779,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateSort!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L994-L997">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1001-L1004">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6772,7 +6801,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
   | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.sort">Lean.Expr.sort</a> <span class="fn">l</span> <span class="fn">c</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.updateSort">Lean.Expr.updateSort</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.sort">Lean.Expr.sort</a> <span class="fn">l</span> <span class="fn">c</span></span>) <span class="fn">newLevel</span>
       (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isSort">Lean.Expr.isSort</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.sort">Lean.Expr.sort</a> <span class="fn">l</span> <span class="fn">c</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isSort">Lean.Expr.isSort</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.sort">Lean.Expr.sort</a> <span class="fn">l</span> <span class="fn">c</span></span>)</span></span>)</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateSort!"</span> <span class="fn">997</span> <span class="fn">16</span> <span class="fn">"level expected"</span></span></span></span></li>
+  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateSort!"</span> <span class="fn">1004</span> <span class="fn">16</span> <span class="fn">"level expected"</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -6780,7 +6809,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateProj">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1000-L1003">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1007-L1010">source</a>
 </div>
 <div class="attributes">@[extern  lean_expr_update_proj]</div>
 <div class="decl_header">
@@ -6810,7 +6839,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateMData">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1006-L1009">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1013-L1016">source</a>
 </div>
 <div class="attributes">@[extern  lean_expr_update_mdata]</div>
 <div class="decl_header">
@@ -6840,7 +6869,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateMData!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1011-L1014">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1018-L1021">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6862,7 +6891,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
   | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mdata">Lean.Expr.mdata</a> <span class="fn">d</span> <span class="fn">e</span> <span class="fn">c</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.updateMData">Lean.Expr.updateMData</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mdata">Lean.Expr.mdata</a> <span class="fn">d</span> <span class="fn">e</span> <span class="fn">c</span></span>) <span class="fn">newExpr</span>
       (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isMData">Lean.Expr.isMData</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mdata">Lean.Expr.mdata</a> <span class="fn">d</span> <span class="fn">e</span> <span class="fn">c</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isMData">Lean.Expr.isMData</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mdata">Lean.Expr.mdata</a> <span class="fn">d</span> <span class="fn">e</span> <span class="fn">c</span></span>)</span></span>)</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateMData!"</span> <span class="fn">1014</span> <span class="fn">19</span> <span class="fn">"mdata expected"</span></span></span></span></li>
+  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateMData!"</span> <span class="fn">1021</span> <span class="fn">19</span> <span class="fn">"mdata expected"</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -6870,7 +6899,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateProj!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1016-L1019">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1023-L1026">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6892,7 +6921,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
   | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.proj">Lean.Expr.proj</a> <span class="fn">s</span> <span class="fn">i</span> <span class="fn">e</span> <span class="fn">c</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.updateProj">Lean.Expr.updateProj</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.proj">Lean.Expr.proj</a> <span class="fn">s</span> <span class="fn">i</span> <span class="fn">e</span> <span class="fn">c</span></span>) <span class="fn">newExpr</span>
       (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isProj">Lean.Expr.isProj</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.proj">Lean.Expr.proj</a> <span class="fn">s</span> <span class="fn">i</span> <span class="fn">e</span> <span class="fn">c</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isProj">Lean.Expr.isProj</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.proj">Lean.Expr.proj</a> <span class="fn">s</span> <span class="fn">i</span> <span class="fn">e</span> <span class="fn">c</span></span>)</span></span>)</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateProj!"</span> <span class="fn">1019</span> <span class="fn">20</span> <span class="fn">"proj expected"</span></span></span></span></li>
+  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateProj!"</span> <span class="fn">1026</span> <span class="fn">20</span> <span class="fn">"proj expected"</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -6900,7 +6929,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateForall">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1022-L1023">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1029-L1030">source</a>
 </div>
 <div class="attributes">@[extern  lean_expr_update_forall]</div>
 <div class="decl_header">
@@ -6932,7 +6961,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateForall!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1025-L1028">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1032-L1035">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6958,7 +6987,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
   | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.forallE">Lean.Expr.forallE</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.updateForall">Lean.Expr.updateForall</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.forallE">Lean.Expr.forallE</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span>) <span class="fn">newBinfo</span> <span class="fn">newDomain</span> <span class="fn">newBody</span>
       (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isForall">Lean.Expr.isForall</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.forallE">Lean.Expr.forallE</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isForall">Lean.Expr.isForall</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.forallE">Lean.Expr.forallE</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span>)</span></span>)</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateForall!"</span> <span class="fn">1028</span> <span class="fn">23</span> <span class="fn">"forall expected"</span></span></span></span></li>
+  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateForall!"</span> <span class="fn">1035</span> <span class="fn">23</span> <span class="fn">"forall expected"</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -6966,7 +6995,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateForallE!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1030-L1033">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1037-L1040">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6990,7 +7019,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
   | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.forallE">Lean.Expr.forallE</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.updateForall">Lean.Expr.updateForall</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.forallE">Lean.Expr.forallE</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.Data.binderInfo">Lean.Expr.Data.binderInfo</a> <span class="fn">c</span></span>) <span class="fn">newDomain</span> <span class="fn">newBody</span>
       (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isForall">Lean.Expr.isForall</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.forallE">Lean.Expr.forallE</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isForall">Lean.Expr.isForall</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.forallE">Lean.Expr.forallE</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span>)</span></span>)</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateForallE!"</span> <span class="fn">1033</span> <span class="fn">23</span> <span class="fn">"forall expected"</span></span></span></span></li>
+  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateForallE!"</span> <span class="fn">1040</span> <span class="fn">23</span> <span class="fn">"forall expected"</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -6998,7 +7027,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateLambda">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1036-L1037">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1043-L1044">source</a>
 </div>
 <div class="attributes">@[extern  lean_expr_update_lambda]</div>
 <div class="decl_header">
@@ -7030,7 +7059,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateLambda!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1039-L1042">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1046-L1049">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -7056,7 +7085,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
   | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.lam">Lean.Expr.lam</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.updateLambda">Lean.Expr.updateLambda</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.lam">Lean.Expr.lam</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span>) <span class="fn">newBinfo</span> <span class="fn">newDomain</span> <span class="fn">newBody</span>
       (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isLambda">Lean.Expr.isLambda</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.lam">Lean.Expr.lam</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isLambda">Lean.Expr.isLambda</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.lam">Lean.Expr.lam</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span>)</span></span>)</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateLambda!"</span> <span class="fn">1042</span> <span class="fn">19</span> <span class="fn">"lambda expected"</span></span></span></span></li>
+  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateLambda!"</span> <span class="fn">1049</span> <span class="fn">19</span> <span class="fn">"lambda expected"</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -7064,7 +7093,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateLambdaE!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1044-L1047">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1051-L1054">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -7088,7 +7117,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
   | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.lam">Lean.Expr.lam</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.updateLambda">Lean.Expr.updateLambda</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.lam">Lean.Expr.lam</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.Data.binderInfo">Lean.Expr.Data.binderInfo</a> <span class="fn">c</span></span>) <span class="fn">newDomain</span> <span class="fn">newBody</span>
       (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isLambda">Lean.Expr.isLambda</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.lam">Lean.Expr.lam</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isLambda">Lean.Expr.isLambda</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.lam">Lean.Expr.lam</a> <span class="fn">n</span> <span class="fn">d</span> <span class="fn">b</span> <span class="fn">c</span></span>)</span></span>)</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateLambdaE!"</span> <span class="fn">1047</span> <span class="fn">19</span> <span class="fn">"lambda expected"</span></span></span></span></li>
+  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateLambdaE!"</span> <span class="fn">1054</span> <span class="fn">19</span> <span class="fn">"lambda expected"</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -7096,7 +7125,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateLet">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1050-L1051">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1057-L1058">source</a>
 </div>
 <div class="attributes">@[extern  lean_expr_update_let]</div>
 <div class="decl_header">
@@ -7128,7 +7157,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateLet!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1053-L1056">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1060-L1063">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -7154,7 +7183,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
   | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.letE">Lean.Expr.letE</a> <span class="fn">n</span> <span class="fn">t</span> <span class="fn">v</span> <span class="fn">b</span> <span class="fn">c</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.updateLet">Lean.Expr.updateLet</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.letE">Lean.Expr.letE</a> <span class="fn">n</span> <span class="fn">t</span> <span class="fn">v</span> <span class="fn">b</span> <span class="fn">c</span></span>) <span class="fn">newType</span> <span class="fn">newVal</span> <span class="fn">newBody</span>
       (_ : <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isLet">Lean.Expr.isLet</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.letE">Lean.Expr.letE</a> <span class="fn">n</span> <span class="fn">t</span> <span class="fn">v</span> <span class="fn">b</span> <span class="fn">c</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isLet">Lean.Expr.isLet</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.letE">Lean.Expr.letE</a> <span class="fn">n</span> <span class="fn">t</span> <span class="fn">v</span> <span class="fn">b</span> <span class="fn">c</span></span>)</span></span>)</span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateLet!"</span> <span class="fn">1056</span> <span class="fn">22</span> <span class="fn">"let expression expected"</span></span></span></span></li>
+  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Expr"</span> <span class="fn">"Lean.Expr.updateLet!"</span> <span class="fn">1063</span> <span class="fn">22</span> <span class="fn">"let expression expected"</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -7162,7 +7191,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.updateFn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1058-L1060">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1065-L1067">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7185,7 +7214,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.eta">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1062-L1073">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1069-L1080">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -7201,7 +7230,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.instantiateLevelParamsCore">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1077-L1090">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1084-L1097">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -7227,7 +7256,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.instantiateLevelParamsCore.visit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1078-L1089">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1085-L1096">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -7246,7 +7275,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.instantiateLevelParams">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1096-L1097">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1103-L1104">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7273,7 +7302,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.instantiateLevelParamsArray">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1108-L1109">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1115-L1116">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7300,7 +7329,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.setOption">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1112-L1113">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1119-L1120">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7335,7 +7364,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.setPPExplicit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1117-L1118">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1124-L1125">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7360,7 +7389,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.setPPUniverses">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1120-L1121">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1127-L1128">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7385,7 +7414,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.setAppPPExplicit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1125-L1131">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1132-L1138">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7413,7 +7442,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.Expr.setAppPPExplicitForExposingMVars">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1135-L1141">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1142-L1148">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7443,7 +7472,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.mkAnnotation">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1145-L1146">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1152-L1153">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7468,7 +7497,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.annotation?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1148-L1151">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1155-L1158">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7495,7 +7524,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.mkLetFunAnnotation">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1153-L1154">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1160-L1161">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7518,7 +7547,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.letFunAnnotation?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1156-L1157">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1163-L1164">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7541,7 +7570,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.isLetFun">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1159-L1162">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1166-L1169">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7566,7 +7595,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.mkInaccessible">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1167-L1168">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1174-L1175">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7590,7 +7619,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.inaccessible?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1170-L1171">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1177-L1178">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7613,7 +7642,7 @@ then return <code>some<a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf"
 <div class="decl" id="Lean.mkLHSGoal">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1177-L1178">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1184-L1185">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7637,7 +7666,7 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 <div class="decl" id="Lean.isLHSGoal?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1180-L1187">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1187-L1194">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7662,7 +7691,7 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 <div class="decl" id="Lean.mkFreshFVarId">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1189-L1190">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1196-L1197">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7697,7 +7726,7 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 <div class="decl" id="Lean.mkFreshMVarId">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1192-L1193">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1199-L1200">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7732,7 +7761,7 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 <div class="decl" id="Lean.mkNot">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1195-L1195">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1202-L1202">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7755,7 +7784,7 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 <div class="decl" id="Lean.mkOr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1196-L1196">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1203-L1203">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7780,7 +7809,7 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 <div class="decl" id="Lean.mkAnd">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1197-L1197">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1204-L1204">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7805,7 +7834,7 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 <div class="decl" id="Lean.mkEM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1198-L1198">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Expr.lean#L1205-L1205">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -7886,6 +7915,9 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -7969,6 +8001,9 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -8046,6 +8081,9 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -8128,6 +8166,9 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -8334,6 +8375,9 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -8780,8 +8824,32 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -8805,6 +8873,9 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -8975,6 +9046,9 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -9000,9 +9074,6 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -9375,6 +9446,15 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -9414,6 +9494,9 @@ expressions of the form <code>lhs=rhs</code> as <code>lhs</code> when they have 
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

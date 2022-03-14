@@ -406,7 +406,7 @@ indHyps : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array
     <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallTelescopeReducing">Lean.Meta.forallTelescopeReducing</a> <span class="fn"><span class="fn"><span class="fn">indVal</span>.toConstantVal</span>.type</span> <span class="fn">fun <span class="fn">xs</span> <span class="fn">t</span> => <span class="fn">do
         let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkArrow">Lean.Meta.mkArrow</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkAppN">Lean.mkAppN</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/IndPredBelow.html#Lean.Meta.IndPredBelow.mkContext.mkIndValConst">Lean.Meta.IndPredBelow.mkContext.mkIndValConst</a> <span class="fn">indVal</span></span>) <span class="fn">xs</span></span>) <span class="fn">t</span></span>
         <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withNewBinderInfos">Lean.Meta.withNewBinderInfos</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a> (<span class="fn">fun <span class="fn">x</span> => <span class="fn">(<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.fvarId!">Lean.Expr.fvarId!</a> <span class="fn">x</span></span>, <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a>)</span></span>) <span class="fn">xs</span></span>)
-            (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">xs</span> <span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span></span></span>
+            (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">xs</span> <span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>)</span></span></span></span>
   <span class="fn"><a href="/Unicode.lean/Lean/Meta/IndPredBelow.html#Lean.Meta.IndPredBelow.mkContext.addMotives">Lean.Meta.IndPredBelow.mkContext.addMotives</a> <span class="fn">motives</span> <span class="fn">numParams</span> <span class="fn">header</span></span></span></span></li>
 </ul>
 </details>
@@ -441,7 +441,7 @@ indHyps : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array
         <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallTelescopeReducing">Lean.Meta.forallTelescopeReducing</a> <span class="fn">t</span> <span class="fn">fun <span class="fn">xs</span> <span class="fn">s</span> => <span class="fn">do
           let motiveType ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateForall">Lean.Meta.instantiateForall</a> <span class="fn">motive</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.ofSubarray">Array.ofSubarray</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.toSubarray">Array.toSubarray</a> <span class="fn">xs</span> <span class="fn">0</span> <span class="fn">numParams</span></span>)</span>)</span>
           <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLocalDecl">Lean.Meta.withLocalDecl</a> <span class="fn">motiveName</span> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a> <span class="fn">motiveType</span> <span class="fn">fun <span class="fn">motive</span> =>
-              <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.insertAt">Array.insertAt</a> <span class="fn">xs</span> <span class="fn">numParams</span> <span class="fn">motive</span></span>) <span class="fn">s</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></span></span></span></span></span></span>)
+              <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.insertAt">Array.insertAt</a> <span class="fn">xs</span> <span class="fn">numParams</span> <span class="fn">motive</span></span>) <span class="fn">s</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span></span></span></span></span></span></span></span>)
     <span class="fn">init</span> <span class="fn">motives</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">motives</span></span>)</span></span></li>
 </ul>
 </details>
@@ -469,7 +469,7 @@ indHyps : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array
     let a ←
       <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkArrow">Lean.Meta.mkArrow</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkAppN">Lean.mkAppN</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/IndPredBelow.html#Lean.Meta.IndPredBelow.mkContext.mkIndValConst">Lean.Meta.IndPredBelow.mkContext.mkIndValConst</a> <span class="fn">indVal</span></span>) <span class="fn">xs</span></span>)
           (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkSort">Lean.mkSort</a> <a href="/Unicode.lean/Lean/Level.html#Lean.levelZero">Lean.levelZero</a></span>)</span>
-    <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">xs</span> <span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></span></span></span></li>
+    <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">xs</span> <span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -667,7 +667,7 @@ indHyps : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array
               (<span class="fn">let a := <span class="fn">args</span>;
               <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.toSubarray">Array.toSubarray</a> <span class="fn">a</span> <span class="fn"><span class="fn">ctx</span>.numParams</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">a</span></span>)</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>           <span class="fn">#[<span class="fn">hApp</span>]</span></span>)</span>;
     <span class="fn">do
-    let x ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn"><span class="fn">vars</span>.target</span> <span class="fn">innerType</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+    let x ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn"><span class="fn">vars</span>.target</span> <span class="fn">innerType</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
     <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/IndPredBelow.html#Lean.Meta.IndPredBelow.mkCtorType.replaceTempVars">Lean.Meta.IndPredBelow.mkCtorType.replaceTempVars</a> <span class="fn">ctx</span> <span class="fn">vars</span> <span class="fn">x</span></span>)</span></span></span></span></span></span></span></li>
 </ul>
 </details>
@@ -804,7 +804,7 @@ indHyps : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array
                     (<span class="fn">let a := <span class="fn">args</span>;
                     <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.toSubarray">Array.toSubarray</a> <span class="fn">a</span> <span class="fn"><span class="fn">ctx</span>.numParams</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">a</span></span>)</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                 <span class="fn">#[<span class="fn">hApp</span>]</span></span>)</span>;
           <span class="fn">do
-          let newDomain ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">xs</span> <span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+          let newDomain ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">xs</span> <span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
           let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/IndPredBelow.html#Lean.Meta.IndPredBelow.mkCtorType.copyVarName">Lean.Meta.IndPredBelow.mkCtorType.copyVarName</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.fvarId!">Lean.Expr.fvarId!</a> <span class="fn">binder</span></span>)</span>
           <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLocalDecl">Lean.Meta.withLocalDecl</a> <span class="fn">a</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.binderInfo">Lean.Expr.binderInfo</a> <span class="fn">binder</span></span>) <span class="fn">newDomain</span> (<span class="fn"><span class="fn">k</span> <span class="fn">idx</span></span>)</span></span></span></span></span>
         | <span class="fn">x</span> => <span class="fn"><span class="fn">fail</span> <span class="fn">()</span></span></span>
@@ -854,7 +854,7 @@ indHyps : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array
               (<span class="fn">let a := <span class="fn">args</span>;
               <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.toSubarray">Array.toSubarray</a> <span class="fn">a</span> <span class="fn"><span class="fn">ctx</span>.numParams</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">a</span></span>)</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>             <span class="fn">#[<span class="fn">hApp</span>]</span></span>)</span>;
       <span class="fn">do
-      let newDomain ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">xs</span> <span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+      let newDomain ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">xs</span> <span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
       let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/IndPredBelow.html#Lean.Meta.IndPredBelow.mkCtorType.copyVarName">Lean.Meta.IndPredBelow.mkCtorType.copyVarName</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.fvarId!">Lean.Expr.fvarId!</a> <span class="fn">binder</span></span>)</span>
       <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLocalDecl">Lean.Meta.withLocalDecl</a> <span class="fn">a</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.binderInfo">Lean.Expr.binderInfo</a> <span class="fn">binder</span></span>) <span class="fn">newDomain</span> <span class="fn">k</span></span></span></span></span></span></span></span></span></span></li>
 </ul>
@@ -1158,7 +1158,7 @@ indHyps : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array
           <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallTelescopeReducing">Lean.Meta.forallTelescopeReducing</a> <span class="fn">motive</span> <span class="fn">fun <span class="fn">xs</span> <span class="fn">x</span> =>
               <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLambdaFVars">Lean.Meta.mkLambdaFVars</a> <span class="fn">xs</span>
                 (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkAppN">Lean.mkAppN</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkConst">Lean.mkConst</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn"><span class="fn">ctx</span>.belowNames</span> <span class="fn"><span class="fn">idx</span>.val</span></span>) <span class="fn">levelParams</span></span>) (<span class="fn"><span class="fn"><span class="fn">params</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">motives</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">xs</span></span>)</span>)
-                <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></span></span></span></span></span>
+                <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span></span></span></span></span></span></span>
   let recursorInfo ← <span class="fn"><a href="/Unicode.lean/Lean/MonadEnv.html#Lean.getConstInfo">Lean.getConstInfo</a> (<span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.mkRecName">Lean.mkRecName</a> <span class="fn"><span class="fn"><span class="fn">indVal</span>.toConstantVal</span>.name</span></span>)</span>
   let recLevels : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <a href="/Unicode.lean/Lean/Level.html#Lean.Level">Lean.Level</a></span> :=
     <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.ConstantInfo.numLevelParams">Lean.ConstantInfo.numLevelParams</a> <span class="fn">recursorInfo</span></span> <a href="/Unicode.lean/Init/Prelude.html#GT.gt">></a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List.length">List.length</a> <span class="fn">levelParams</span></span></span> then <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.levelZero">Lean.levelZero</a> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">levelParams</span></span>
@@ -1327,7 +1327,8 @@ indHyps : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array
     let motiveBinders ←
       <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mapIdxM">Array.mapIdxM</a> <span class="fn"><span class="fn">ctx</span>.motives</span> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/IndPredBelow.html#Lean.Meta.IndPredBelow.mkBrecOnDecl.mkIH">Lean.Meta.IndPredBelow.mkBrecOnDecl.mkIH</a> <span class="fn">ctx</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.ofSubarray">Array.ofSubarray</a> <span class="fn">params</span></span>) <span class="fn">motives</span></span>)</span>
     <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLocalDeclsD">Lean.Meta.withLocalDeclsD</a> <span class="fn">motiveBinders</span> <span class="fn">fun <span class="fn">ys</span> =>
-        <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> (<span class="fn"><span class="fn">xs</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">ys</span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkAppN">Lean.mkAppN</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn">motives</span> <span class="fn">idx</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.ofSubarray">Array.ofSubarray</a> <span class="fn">indices</span></span>)</span>) <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></span></span></span></span></span></span></span></span></li>
+        <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> (<span class="fn"><span class="fn">xs</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">ys</span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkAppN">Lean.mkAppN</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn">motives</span> <span class="fn">idx</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.ofSubarray">Array.ofSubarray</a> <span class="fn">indices</span></span>)</span>) <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>
+          <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span></span></span></span></span></span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1372,7 +1373,7 @@ indHyps : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array
       <span class="fn">let conclusion := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkAppN">Lean.mkAppN</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn">motives</span> <span class="fn"><span class="fn">idx</span>.val</span></span>) <span class="fn">ys</span></span>;
       <span class="fn">do
       let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkArrow">Lean.Meta.mkArrow</a> <span class="fn">premise</span> <span class="fn">conclusion</span></span>
-      <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">ys</span> <span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></span></span></span></span></span></span></span>
+      <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">ys</span> <span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span></span></span></span></span></span></span></span></span>
   let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> <span class="fn">name</span></span>
   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">(<span class="fn">a</span>, <span class="fn">mkDomain</span>)</span></span></span></span></span></li>
 </ul>
@@ -1466,7 +1467,7 @@ indHyps : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array
             let <span class="fn">a</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/CoreM.html#Lean.Core.mkFreshUserName">Lean.mkFreshUserName</a> <span class="fn">`h_below</span></span>)</span>
             let matchType ←
               <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLocalDeclD">Lean.Meta.withLocalDeclD</a> <span class="fn">a</span> <span class="fn">belowType</span> <span class="fn">fun <span class="fn">h_below</span> =>
-                  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">xs</span> <span class="fn">h_below</span></span>) <span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></span>
+                  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">xs</span> <span class="fn">h_below</span></span>) <span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span></span></span>
             let motive ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/IndPredBelow.html#Lean.Meta.IndPredBelow.mkBelowMatcher.newMotive">Lean.Meta.IndPredBelow.mkBelowMatcher.newMotive</a> <span class="fn">matcherApp</span> <span class="fn">belowType</span> <span class="fn">xs</span></span>
             <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">(<span class="fn">indName</span>, <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.replaceFVars">Lean.Expr.replaceFVars</a> <span class="fn">belowType</span> <span class="fn">xs</span> <span class="fn"><span class="fn">matcherApp</span>.discrs</span></span>, <span class="fn">motive</span>, <span class="fn">matchType</span>)</span></span></span></span></span></span></span>
   let x : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span></span> := <span class="fn">discr</span>
@@ -1503,7 +1504,7 @@ indHyps : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array
                                 <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.toSubarray">Array.toSubarray</a> <span class="fn">a</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">oldFVars</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">a</span></span>)</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                             <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.ofSubarray">Array.ofSubarray</a>
                               (<span class="fn">let a := <span class="fn">fvars</span>;
                               <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.toSubarray">Array.toSubarray</a> <span class="fn">a</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">oldFVars</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">a</span></span>)</span></span>)</span></span>)
-                          <span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+                          <span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
                     let cls : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> := <span class="fn">`Meta.IndPredBelow.match</span>
                     let a ← <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.isTracingEnabledFor">Lean.isTracingEnabledFor</a> <span class="fn">cls</span></span>
                     let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">newAlt</span></span></span>
@@ -1748,7 +1749,7 @@ As such there are only a few cases:
               (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.ofSubarray">Array.ofSubarray</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.toSubarray">Array.toSubarray</a> <span class="fn">xs</span> <span class="fn">0</span> <span class="fn">numDiscrs</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">#[<span class="fn">h_below</span>]</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                 <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.ofSubarray">Array.ofSubarray</a>
                   (<span class="fn">let a := <span class="fn">xs</span>;
                   <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Array.toSubarray">Array.toSubarray</a> <span class="fn">a</span> <span class="fn">numDiscrs</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">a</span></span>)</span></span>)</span></span>)
-              <span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+              <span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>
         let cls : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> := <span class="fn">`Meta.IndPredBelow.match</span>
         let a ← <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.isTracingEnabledFor">Lean.isTracingEnabledFor</a> <span class="fn">cls</span></span>
         let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">motive</span></span></span>
@@ -1978,6 +1979,9 @@ As such there are only a few cases:
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -2059,6 +2063,9 @@ As such there are only a few cases:
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -2136,6 +2143,9 @@ As such there are only a few cases:
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -2218,6 +2228,9 @@ As such there are only a few cases:
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -2424,6 +2437,9 @@ As such there are only a few cases:
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -2870,8 +2886,32 @@ As such there are only a few cases:
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -2895,6 +2935,9 @@ As such there are only a few cases:
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -3065,6 +3108,9 @@ As such there are only a few cases:
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -3090,9 +3136,6 @@ As such there are only a few cases:
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -3465,6 +3508,15 @@ As such there are only a few cases:
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -3504,6 +3556,9 @@ As such there are only a few cases:
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

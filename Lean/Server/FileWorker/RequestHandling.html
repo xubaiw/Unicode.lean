@@ -138,6 +138,24 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Server.FileWorker.handleSemanticTokensRange">Lean.Server.FileWorker.handleSemanticTokensRange</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.Server.FileWorker.handleFoldingRange">Lean.Server.FileWorker.handleFoldingRange</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Server.FileWorker.handleFoldingRange.isImport">Lean.Server.FileWorker.handleFoldingRange.isImport</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Server.FileWorker.handleFoldingRange.addRanges">Lean.Server.FileWorker.handleFoldingRange.addRanges</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Server.FileWorker.handleFoldingRange.addCommandRange">Lean.Server.FileWorker.handleFoldingRange.addCommandRange</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Server.FileWorker.handleFoldingRange.addRange">Lean.Server.FileWorker.handleFoldingRange.addRange</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Server.FileWorker.handleWaitForDiagnostics">Lean.Server.FileWorker.handleWaitForDiagnostics</a>
 </div>
 <div class="nav_link">
@@ -268,7 +286,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.instBEqGoToKind">Lean.Server.FileWorker.instBEqGoToKind</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#_private.Lean.Server.FileWorker.RequestHandling.0.Lean.Server.FileWorker.beqGoToKind._@.Lean.Server.FileWorker.RequestHandling._hyg.365">[anonymous]</a> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.instBEqGoToKind">Lean.Server.FileWorker.instBEqGoToKind</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ beq := <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#_private.Lean.Server.FileWorker.RequestHandling.0.Lean.Server.FileWorker.beqGoToKind._@.Lean.Server.FileWorker.RequestHandling._hyg.368">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -339,8 +357,8 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
           <span class="fn">match <span class="fn">x</span> with
           |
           <span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.Info.ofTermInfo">Lean.Elab.Info.ofTermInfo</a>
-              <span class="fn">{ toElabInfo := <span class="fn">{ elaborator := <span class="fn">x_1</span>, stx := <span class="fn">x_2</span> }</span>, lctx := <span class="fn">x_3</span>, expectedType? := <span class="fn">x_4</span>,
-                expr := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.fvar">Lean.Expr.fvar</a> <span class="fn">id'</span> <span class="fn">x</span></span>, isBinder := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> }</span></span> =>
+              <span class="fn">{ toElabInfo := <span class="fn">{ elaborator := <span class="fn">x</span>, stx := <span class="fn">x_1</span> }</span>, lctx := <span class="fn">x_2</span>, expectedType? := <span class="fn">x_3</span>,
+                expr := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.fvar">Lean.Expr.fvar</a> <span class="fn">id'</span> <span class="fn">x_4</span></span>, isBinder := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> }</span></span> =>
             <span class="fn"><span class="fn">id'</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">id</span></span>
           | <span class="fn">x</span> => <span class="fn">false</span></span></span>)
         <span class="fn">t</span></span> with
@@ -411,7 +429,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
             <span class="fn">match <span class="fn">i</span> with
             |
             <span class="fn"><a href="/Unicode.lean/Lean/Elab/InfoTree.html#Lean.Elab.Info.ofCommandInfo">Lean.Elab.Info.ofCommandInfo</a>
-                <span class="fn">{ toElabInfo := <span class="fn">{ elaborator := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a> <span class="fn">"import"</span> <span class="fn">x_1</span></span>, stx := <span class="fn">x</span> }</span> }</span></span> =>
+                <span class="fn">{ toElabInfo := <span class="fn">{ elaborator := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a> <span class="fn">"import"</span> <span class="fn">x</span></span>, stx := <span class="fn">x_1</span> }</span> }</span></span> =>
               <span class="fn">if
                   <span class="fn">(<span class="fn"><span class="fn"><span class="fn">kind</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.GoToKind.definition">Lean.Server.FileWorker.GoToKind.definition</a></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a>                       <span class="fn"><span class="fn">kind</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.GoToKind.declaration">Lean.Server.FileWorker.GoToKind.declaration</a></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>                     <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
                 <span class="fn">do
@@ -802,7 +820,7 @@ type: <a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Se
           <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">stxs</span> <span class="fn">y</span> =>
             <span class="fn">let lastSnap := <span class="fn"><a href="/Unicode.lean/Init/Data/List/BasicAux.html#List.getLastD">List.getLastD</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/AsyncList.html#IO.AsyncList.finishedPrefix">IO.AsyncList.finishedPrefix</a> <span class="fn">cmdSnaps</span></span>) <span class="fn"><span class="fn">doc</span>.headerSnap</span></span>;
             <span class="fn">do
-            let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.parseAhead">Lean.Server.Snapshots.parseAhead</a> <span class="fn"><span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span>.source</span> <span class="fn">lastSnap</span></span>)</span>
+            let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.parseAhead">Lean.Server.Snapshots.parseAhead</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Utils.html#Lean.Server.DocumentMeta.mkInputContext">Lean.Server.DocumentMeta.mkInputContext</a> <span class="fn"><span class="fn">doc</span>.meta</span></span>) <span class="fn">lastSnap</span></span>)</span>
             let stxs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></span> := <span class="fn"><span class="fn">stxs</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.toList">Array.toList</a> <span class="fn">a</span></span></span>
             let x : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.DocumentSymbol">Lean.Lsp.DocumentSymbol</a></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></span></span> :=
               <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleDocumentSymbol.toDocumentSymbols">Lean.Server.FileWorker.handleDocumentSymbol.toDocumentSymbols</a> <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span> <span class="fn">stxs</span></span>
@@ -1186,10 +1204,204 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Server.FileWorker.handleFoldingRange">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L415-L479">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange">Lean.Server.FileWorker.handleFoldingRange</a>
+</span>
+<span class="decl_args">
+<span class="fn">(p : <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeParams">Lean.Lsp.FoldingRangeParams</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestTask">Lean.Server.RequestTask</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRange">Lean.Lsp.FoldingRange</a></span>)</span>)</span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange">Lean.Server.FileWorker.handleFoldingRange</a> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let doc ← <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.readDoc">Lean.Server.RequestM.readDoc</a>
+  let t ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/AsyncList.html#IO.AsyncList.waitAll">IO.AsyncList.waitAll</a> (<span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>) (<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/Utils.html#Lean.Server.FileWorker.EditableDocument.allSnaps">Lean.Server.FileWorker.EditableDocument.allSnaps</a> <span class="fn">doc</span></span>)</span>)</span>
+  <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.mapTask">Lean.Server.RequestM.mapTask</a> <span class="fn">t</span> <span class="fn">fun <span class="fn">x</span> =>
+      <span class="fn">match <span class="fn">x</span> with
+      | <span class="fn">(<span class="fn">snaps</span>, <span class="fn">x</span>)</span> =>
+        <span class="fn">let stxs := <span class="fn"><a href="/Unicode.lean/Init/Data/List/Basic.html#List.map">List.map</a> (<span class="fn">fun <span class="fn">a</span> => <span class="fn"><span class="fn">a</span>.stx</span></span>) <span class="fn">snaps</span></span>;
+        <span class="fn">do
+        let discr ← <span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT.run">StateT.run</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRanges">Lean.Server.FileWorker.handleFoldingRange.addRanges</a> <span class="fn"><span class="fn"><span class="fn">doc</span>.meta</span>.text</span> <span class="fn">[]</span> <span class="fn">stxs</span></span>) <span class="fn">#[]</span></span>
+        let x : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRange">Lean.Lsp.FoldingRange</a></span></span> := <span class="fn">discr</span>
+        <span class="fn">match <span class="fn">x</span> with
+          | <span class="fn">(<span class="fn">x</span>, <span class="fn">ranges</span>)</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Prod.mk">pure</a> <span class="fn">ranges</span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Server.FileWorker.handleFoldingRange.isImport">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L424-L424">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.isImport">Lean.Server.FileWorker.handleFoldingRange.isImport</a>
+</span>
+<span class="decl_args">
+<span class="fn">(stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.isImport">Lean.Server.FileWorker.handleFoldingRange.isImport</a> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isOfKind">Lean.Syntax.isOfKind</a> <span class="fn">stx</span> <span class="fn">`Lean.Parser.Module.header</span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isOfKind">Lean.Syntax.isOfKind</a> <span class="fn">stx</span> <span class="fn">`Lean.Parser.Command.open</span></span></span>)</span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Server.FileWorker.handleFoldingRange.addRanges">
+<div class="constant">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L426-L449">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">partial def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRanges">Lean.Server.FileWorker.handleFoldingRange.addRanges</a>
+</span>
+<span class="decl_args">
+<span class="fn">(text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(sections : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a></span>)</span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></span> → <span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT">StateT</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRange">Lean.Lsp.FoldingRange</a></span>) <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a></span></span></div></div>
+</div>
+</div>
+<div class="decl" id="Lean.Server.FileWorker.handleFoldingRange.addCommandRange">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L451-L467">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addCommandRange">Lean.Server.FileWorker.handleFoldingRange.addCommandRange</a>
+</span>
+<span class="decl_args">
+<span class="fn">(text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT">StateT</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRange">Lean.Lsp.FoldingRange</a></span>) <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addCommandRange">Lean.Server.FileWorker.handleFoldingRange.addCommandRange</a> <span class="fn">text</span> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getKind">Lean.Syntax.getKind</a> <span class="fn">stx</span></span> with
+  |
+  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a> <span class="fn">"Lean"</span> <span class="fn">x</span></span>) <span class="fn">"Parser"</span> <span class="fn">x_1</span></span>) <span class="fn">"Command"</span> <span class="fn">x_2</span></span>)
+      <span class="fn">"moduleDoc"</span> <span class="fn">x_3</span></span> =>
+    <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a> <span class="fn">text</span> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.comment">Lean.Lsp.FoldingRangeKind.comment</a> <span class="fn">stx</span></span>
+  |
+  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a> <span class="fn">"Lean"</span> <span class="fn">x</span></span>) <span class="fn">"Parser"</span> <span class="fn">x_1</span></span>) <span class="fn">"Command"</span> <span class="fn">x_2</span></span>)
+      <span class="fn">"declaration"</span> <span class="fn">x_3</span></span> =>
+    <span class="fn">let discr := <span class="fn">stx</span>;
+    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isOfKind">Lean.Syntax.isOfKind</a> <span class="fn">discr</span> <span class="fn">`Lean.Parser.Command.declaration</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
+      <span class="fn">let discr_1 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">0</span></span>;
+      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#cond">cond</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isOfKind">Lean.Syntax.isOfKind</a> <span class="fn">discr_1</span> <span class="fn">`Lean.Parser.Command.declModifiers</span></span>)
+        (<span class="fn">let discr := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">1</span></span>;
+        <span class="fn">let decl := <span class="fn">discr</span>;
+        <span class="fn">let dm := <span class="fn">discr_1</span>;
+        <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> =>
+          <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a> <span class="fn">text</span> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.region">Lean.Lsp.FoldingRangeKind.region</a> <span class="fn">decl</span></span></span>;
+        <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.getOptional?">Lean.Syntax.getOptional?</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">dm</span> <span class="fn">0</span></span>)</span> with
+        | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">comment</span></span> => <span class="fn">do
+          let y ←
+            <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a> <span class="fn">text</span> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.comment">Lean.Lsp.FoldingRangeKind.comment</a> <span class="fn">comment</span></span>
+          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
+        | <span class="fn">x</span> => <span class="fn">do
+          let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span>)
+        (<span class="fn">let discr_2 := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">0</span></span>;
+        <span class="fn">let discr := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getArg">Lean.Syntax.getArg</a> <span class="fn">discr</span> <span class="fn">1</span></span>;
+        <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a> <span class="fn">text</span> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.region">Lean.Lsp.FoldingRangeKind.region</a> <span class="fn">stx</span></span></span></span>)</span></span>
+    else
+      <span class="fn">let discr := <span class="fn">stx</span>;
+      <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a> <span class="fn">text</span> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.region">Lean.Lsp.FoldingRangeKind.region</a> <span class="fn">stx</span></span></span></span></span>
+  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a> <span class="fn">text</span> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind.region">Lean.Lsp.FoldingRangeKind.region</a> <span class="fn">stx</span></span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L469-L469">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a>
+</span>
+<span class="decl_args">
+<span class="fn">(text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(kind : <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind">Lean.Lsp.FoldingRangeKind</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT">StateT</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRange">Lean.Lsp.FoldingRange</a></span>) <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax">Lean.Server.FileWorker.handleFoldingRange.addRangeFromSyntax</a> <span class="fn">text</span> <span class="fn">kind</span> <span class="fn">stx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRange">Lean.Server.FileWorker.handleFoldingRange.addRange</a> <span class="fn">text</span> <span class="fn">kind</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getPos?">Lean.Syntax.getPos?</a> <span class="fn">stx</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getTailPos?">Lean.Syntax.getTailPos?</a> <span class="fn">stx</span></span>)</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Server.FileWorker.handleFoldingRange.addRange">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L471-L479">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRange">Lean.Server.FileWorker.handleFoldingRange.addRange</a>
+</span>
+<span class="decl_args">
+<span class="fn">(text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(kind : <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeKind">Lean.Lsp.FoldingRangeKind</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(start? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(stop? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT">StateT</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRange">Lean.Lsp.FoldingRange</a></span>) <a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/RequestHandling.html#Lean.Server.FileWorker.handleFoldingRange.addRange">Lean.Server.FileWorker.handleFoldingRange.addRange</a> <span class="fn">text</span> <span class="fn">kind</span> <span class="fn">start?</span> <span class="fn">stop?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">(<span class="fn">start?</span>, <span class="fn">stop?</span>)</span> with
+  | <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">startP</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">endP</span></span>)</span> =>
+    <span class="fn">let startP := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.utf8PosToLspPos">Lean.FileMap.utf8PosToLspPos</a> <span class="fn">text</span> <span class="fn">startP</span></span>;
+    <span class="fn">let endP := <span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/Utf16.html#Lean.FileMap.utf8PosToLspPos">Lean.FileMap.utf8PosToLspPos</a> <span class="fn">text</span> <span class="fn">endP</span></span>;
+    <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><span class="fn">startP</span>.line</span> <a href="/Unicode.lean/Init/Core.html#bne">!=</a> <span class="fn"><span class="fn">endP</span>.line</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
+      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">st</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">st</span> <span class="fn">{ startLine := <span class="fn"><span class="fn">startP</span>.line</span>, endLine := <span class="fn"><span class="fn">endP</span>.line</span>, kind? := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">kind</span></span> }</span></span></span></span>
+    else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span></span></span></span>
+  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">PUnit.unit</span></span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Server.FileWorker.handleWaitForDiagnostics">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L415-L428">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L481-L494">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1217,7 +1429,7 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <div class="decl" id="Lean.Server.FileWorker.handleWaitForDiagnostics.waitLoop">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L417-L423">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/RequestHandling.lean#L483-L489">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1291,6 +1503,9 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -1374,6 +1589,9 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -1451,6 +1669,9 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -1533,6 +1754,9 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1739,6 +1963,9 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -2185,8 +2412,32 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -2210,6 +2461,9 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -2380,6 +2634,9 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -2405,9 +2662,6 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2780,6 +3034,15 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2819,6 +3082,9 @@ lastLspPos : <a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.Position">
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

@@ -144,6 +144,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </li>
 <li>
@@ -154,9 +157,6 @@ Documentation</h1>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Meta/Reduce.html">Lean.Meta.Reduce</a>
-</li>
-<li>
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Meta/SynthInstance.html">Lean.Meta.SynthInstance</a>
@@ -3425,16 +3425,22 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.liftMkBindingM">Lean.Meta.liftMkBindingM</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let a ← <span class="fn">Lean.getLCtx</span>
-  let a_1 ← <span class="fn">Lean.getMCtx</span>
-  let a_2 ← <span class="fn">Lean.getNGen</span>
-  <span class="fn">match <span class="fn"><span class="fn">x</span> <span class="fn">a</span> <span class="fn">{ mctx := <span class="fn">a_1</span>, ngen := <span class="fn">a_2</span>, cache := <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span> }</span></span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#EStateM.Result.ok">EStateM.Result.ok</a> <span class="fn">e</span> <span class="fn">newS</span></span> => <span class="fn">do
-      <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.MonadNameGenerator.setNGen">Lean.setNGen</a> <span class="fn"><span class="fn">newS</span>.ngen</span></span>
-      <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.setMCtx">Lean.Meta.setMCtx</a> <span class="fn"><span class="fn">newS</span>.mctx</span></span>
+  let a_1 ← <span class="fn">Lean.getEnv</span>
+  let a_2 ← <span class="fn">Lean.getMCtx</span>
+  let a_3 ← <span class="fn">Lean.getNGen</span>
+  let a_4 ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#getThe">getThe</a> <a href="/Unicode.lean/Lean/CoreM.html#Lean.Core.State">Lean.Core.State</a></span>
+  <span class="fn">match
+      <span class="fn"><span class="fn">x</span> <span class="fn">{ mainModule := <span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.Environment.mainModule">Lean.Environment.mainModule</a> <span class="fn">a_1</span></span>, lctx := <span class="fn">a</span> }</span>
+        <span class="fn">{ mctx := <span class="fn">a_2</span>, nextMacroScope := <span class="fn"><span class="fn">a_4</span>.nextMacroScope</span>, ngen := <span class="fn">a_3</span>, cache := <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span> }</span></span> with
+    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#EStateM.Result.ok">EStateM.Result.ok</a> <span class="fn">e</span> <span class="fn">sNew</span></span> => <span class="fn">do
+      <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.setMCtx">Lean.Meta.setMCtx</a> <span class="fn"><span class="fn">sNew</span>.mctx</span></span>
+      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modifyThe">modifyThe</a> <a href="/Unicode.lean/Lean/CoreM.html#Lean.Core.State">Lean.Core.State</a> <span class="fn">fun <span class="fn">s</span> =>
+          <span class="fn">{ env := <span class="fn"><span class="fn">s</span>.env</span>, nextMacroScope := <span class="fn"><span class="fn">sNew</span>.nextMacroScope</span>, ngen := <span class="fn"><span class="fn">sNew</span>.ngen</span>, traceState := <span class="fn"><span class="fn">s</span>.traceState</span> }</span></span></span>
       <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">e</span></span></span>
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#EStateM.Result.error">EStateM.Result.error</a> (<span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.MkBinding.Exception.revertFailure">Lean.MetavarContext.MkBinding.Exception.revertFailure</a> <span class="fn">mctx</span> <span class="fn">lctx</span> <span class="fn">toRevert</span> <span class="fn">decl</span></span>) <span class="fn">newS</span></span> => <span class="fn">do
-      <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.setMCtx">Lean.Meta.setMCtx</a> <span class="fn"><span class="fn">newS</span>.mctx</span></span>
-      <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.MonadNameGenerator.setNGen">Lean.setNGen</a> <span class="fn"><span class="fn">newS</span>.ngen</span></span>
+    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#EStateM.Result.error">EStateM.Result.error</a> (<span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.MkBinding.Exception.revertFailure">Lean.MetavarContext.MkBinding.Exception.revertFailure</a> <span class="fn">mctx</span> <span class="fn">lctx</span> <span class="fn">toRevert</span> <span class="fn">decl</span></span>) <span class="fn">sNew</span></span> => <span class="fn">do
+      <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.setMCtx">Lean.Meta.setMCtx</a> <span class="fn"><span class="fn">sNew</span>.mctx</span></span>
+      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modifyThe">modifyThe</a> <a href="/Unicode.lean/Lean/CoreM.html#Lean.Core.State">Lean.Core.State</a> <span class="fn">fun <span class="fn">s</span> =>
+          <span class="fn">{ env := <span class="fn"><span class="fn">s</span>.env</span>, nextMacroScope := <span class="fn"><span class="fn">sNew</span>.nextMacroScope</span>, ngen := <span class="fn"><span class="fn">sNew</span>.ngen</span>, traceState := <span class="fn"><span class="fn">s</span>.traceState</span> }</span></span></span>
       <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a> (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"failed to create binder due to failure when reverting variable dependencies"</span></span>)</span></span></span></span></span></li>
 </ul>
 </details>
@@ -3510,14 +3516,16 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <span class="fn">(usedOnly : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span></span>
 <span class="decl_args">
 <span class="fn">(usedLetOnly : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(binderInfoForMVars : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">xs</span> <span class="fn">e</span> <span class="fn">usedOnly</span> <span class="fn">usedLetOnly</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.isEmpty">Array.isEmpty</a> <span class="fn">xs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">e</span></span>
-  else <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.liftMkBindingM">Lean.Meta.liftMkBindingM</a> (<span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.mkForall">Lean.MetavarContext.mkForall</a> <span class="fn">xs</span> <span class="fn">e</span> <span class="fn">usedOnly</span> <span class="fn">usedLetOnly</span></span>)</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">xs</span> <span class="fn">e</span> <span class="fn">usedOnly</span> <span class="fn">usedLetOnly</span> <span class="fn">binderInfoForMVars</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.isEmpty">Array.isEmpty</a> <span class="fn">xs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">e</span></span>
+  else <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.liftMkBindingM">Lean.Meta.liftMkBindingM</a> (<span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.mkForall">Lean.MetavarContext.mkForall</a> <span class="fn">xs</span> <span class="fn">e</span> <span class="fn">usedOnly</span> <span class="fn">usedLetOnly</span> <span class="fn">binderInfoForMVars</span></span>)</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -3540,14 +3548,16 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <span class="fn">(usedOnly : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span></span>
 <span class="decl_args">
 <span class="fn">(usedLetOnly : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(binderInfoForMVars : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLambdaFVars">Lean.Meta.mkLambdaFVars</a> <span class="fn">xs</span> <span class="fn">e</span> <span class="fn">usedOnly</span> <span class="fn">usedLetOnly</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.isEmpty">Array.isEmpty</a> <span class="fn">xs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">e</span></span>
-  else <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.liftMkBindingM">Lean.Meta.liftMkBindingM</a> (<span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.mkLambda">Lean.MetavarContext.mkLambda</a> <span class="fn">xs</span> <span class="fn">e</span> <span class="fn">usedOnly</span> <span class="fn">usedLetOnly</span></span>)</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLambdaFVars">Lean.Meta.mkLambdaFVars</a> <span class="fn">xs</span> <span class="fn">e</span> <span class="fn">usedOnly</span> <span class="fn">usedLetOnly</span> <span class="fn">binderInfoForMVars</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.isEmpty">Array.isEmpty</a> <span class="fn">xs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">e</span></span>
+  else <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.liftMkBindingM">Lean.Meta.liftMkBindingM</a> (<span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.mkLambda">Lean.MetavarContext.mkLambda</a> <span class="fn">xs</span> <span class="fn">e</span> <span class="fn">usedOnly</span> <span class="fn">usedLetOnly</span> <span class="fn">binderInfoForMVars</span></span>)</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -3568,13 +3578,15 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(usedLetOnly : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(binderInfoForMVars : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLetFVars">Lean.Meta.mkLetFVars</a> <span class="fn">xs</span> <span class="fn">e</span> <span class="fn">usedLetOnly</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLambdaFVars">Lean.Meta.mkLambdaFVars</a> <span class="fn">xs</span> <span class="fn">e</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <span class="fn">usedLetOnly</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLetFVars">Lean.Meta.mkLetFVars</a> <span class="fn">xs</span> <span class="fn">e</span> <span class="fn">usedLetOnly</span> <span class="fn">binderInfoForMVars</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLambdaFVars">Lean.Meta.mkLambdaFVars</a> <span class="fn">xs</span> <span class="fn">e</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <span class="fn">usedLetOnly</span> <span class="fn">binderInfoForMVars</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -5653,19 +5665,21 @@ solve <code>[Pure(fun_=><a href="/Unicode.lean/Init/System/IO.html#IO">IO</a>Boo
 <span class="decl_args">
 <span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">
-<span class="fn">(p : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a> → <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span>)</span></span>
+<span class="fn">(pf : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a> → <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span>) <span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(pm : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> → <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span>) <span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.dependsOnPred">Lean.Meta.dependsOnPred</a> <span class="fn">e</span> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.dependsOnPred">Lean.Meta.dependsOnPred</a> <span class="fn">e</span> <span class="fn">pf</span> <span class="fn">pm</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let a ← <span class="fn">Lean.getMCtx</span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.findExprDependsOn">Lean.MetavarContext.findExprDependsOn</a> <span class="fn">a</span> <span class="fn">e</span> <span class="fn">p</span></span>)</span></span></span></li>
+  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.findExprDependsOn">Lean.MetavarContext.findExprDependsOn</a> <span class="fn">a</span> <span class="fn">e</span> <span class="fn">pf</span> <span class="fn">pm</span></span>)</span></span></span></li>
 </ul>
 </details>
-<p>Return true iff <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.SynthInstanceCache">e</a></code> depends on a free variable <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.setMCtx">x</a></code> s.t. <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLocalDecls.loop">p</a><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.setMCtx">x</a></code></p></div>
+<p>Return true iff <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.SynthInstanceCache">e</a></code> depends on a free variable <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.setMCtx">x</a></code> s.t. <code>pf<a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.setMCtx">x</a></code>, or an unassigned metavariable <code>?m</code> s.t. <code>pm?m</code> is true.</p></div>
 </div>
 <div class="decl" id="Lean.Meta.localDeclDependsOnPred">
 <div class="def">
@@ -5680,19 +5694,21 @@ solve <code>[Pure(fun_=><a href="/Unicode.lean/Init/System/IO.html#IO">IO</a>Boo
 <span class="decl_args">
 <span class="fn">(localDecl : <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a>)</span></span>
 <span class="decl_args">
-<span class="fn">(p : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a> → <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span>)</span></span>
+<span class="fn">(pf : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a> → <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span>) <span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(pm : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> → <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span>) <span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.localDeclDependsOnPred">Lean.Meta.localDeclDependsOnPred</a> <span class="fn">localDecl</span> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.localDeclDependsOnPred">Lean.Meta.localDeclDependsOnPred</a> <span class="fn">localDecl</span> <span class="fn">pf</span> <span class="fn">pm</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let a ← <span class="fn">Lean.getMCtx</span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.findLocalDeclDependsOn">Lean.MetavarContext.findLocalDeclDependsOn</a> <span class="fn">a</span> <span class="fn">localDecl</span> <span class="fn">p</span></span>)</span></span></span></li>
+  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.findLocalDeclDependsOn">Lean.MetavarContext.findLocalDeclDependsOn</a> <span class="fn">a</span> <span class="fn">localDecl</span> <span class="fn">pf</span> <span class="fn">pm</span></span>)</span></span></span></li>
 </ul>
 </details>
-<p>Return true iff the local declaration <code>localDecl</code> depends on a free variable <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.setMCtx">x</a></code> s.t. <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLocalDecls.loop">p</a><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.setMCtx">x</a></code></p></div>
+<p>Return true iff the local declaration <code>localDecl</code> depends on a free variable <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.setMCtx">x</a></code> s.t. <code>pf<a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.setMCtx">x</a></code>, an unassigned metavariable <code>?m</code> s.t. <code>pm?m</code> is true.</p></div>
 </div>
 <div class="decl" id="Lean.Meta.ppExpr">
 <div class="def">
@@ -6418,7 +6434,8 @@ are not sure whether <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.etaExpand">Lean.Meta.etaExpand</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withDefault">Lean.Meta.withDefault</a> <span class="fn">do
     let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.inferType">Lean.Meta.inferType</a> <span class="fn">e</span></span>
-    <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallTelescopeReducing">Lean.Meta.forallTelescopeReducing</a> <span class="fn">a</span> <span class="fn">fun <span class="fn">xs</span> <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLambdaFVars">Lean.Meta.mkLambdaFVars</a> <span class="fn">xs</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkAppN">Lean.mkAppN</a> <span class="fn">e</span> <span class="fn">xs</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></span></span></span></span></li>
+    <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallTelescopeReducing">Lean.Meta.forallTelescopeReducing</a> <span class="fn">a</span> <span class="fn">fun <span class="fn">xs</span> <span class="fn">x</span> =>
+        <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLambdaFVars">Lean.Meta.mkLambdaFVars</a> <span class="fn">xs</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkAppN">Lean.mkAppN</a> <span class="fn">e</span> <span class="fn">xs</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span></span></span></span></span></span></li>
 </ul>
 </details>
 <p>Eta expand the given expression.
@@ -6486,6 +6503,9 @@ Example:</p><pre><code>etaExpand (mkConst `Nat.add)
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -6569,6 +6589,9 @@ Example:</p><pre><code>etaExpand (mkConst `Nat.add)
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -6646,6 +6669,9 @@ Example:</p><pre><code>etaExpand (mkConst `Nat.add)
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -6728,6 +6754,9 @@ Example:</p><pre><code>etaExpand (mkConst `Nat.add)
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -6934,6 +6963,9 @@ Example:</p><pre><code>etaExpand (mkConst `Nat.add)
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -7380,8 +7412,32 @@ Example:</p><pre><code>etaExpand (mkConst `Nat.add)
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -7405,6 +7461,9 @@ Example:</p><pre><code>etaExpand (mkConst `Nat.add)
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -7575,6 +7634,9 @@ Example:</p><pre><code>etaExpand (mkConst `Nat.add)
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -7600,9 +7662,6 @@ Example:</p><pre><code>etaExpand (mkConst `Nat.add)
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -7975,6 +8034,15 @@ Example:</p><pre><code>etaExpand (mkConst `Nat.add)
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -8014,6 +8082,9 @@ Example:</p><pre><code>etaExpand (mkConst `Nat.add)
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

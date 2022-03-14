@@ -175,7 +175,7 @@ Documentation</h1>
       <span class="fn">{ options := <span class="fn"><a href="/Unicode.lean/Lean/Data/Options.html#Lean.Option.setIfNotSet">Lean.Option.setIfNotSet</a> <span class="fn"><span class="fn">ctx</span>.options</span> <a href="/Unicode.lean/Lean/Meta/PPGoal.html#Lean.Meta.pp.inaccessibleNames">Lean.Meta.pp.inaccessibleNames</a> <span class="fn">flag</span></span>,
         currRecDepth := <span class="fn"><span class="fn">ctx</span>.currRecDepth</span>, maxRecDepth := <span class="fn"><span class="fn">ctx</span>.maxRecDepth</span>, ref := <span class="fn"><span class="fn">ctx</span>.ref</span>,
         currNamespace := <span class="fn"><span class="fn">ctx</span>.currNamespace</span>, openDecls := <span class="fn"><span class="fn">ctx</span>.openDecls</span>, initHeartbeats := <span class="fn"><span class="fn">ctx</span>.initHeartbeats</span>,
-        maxHeartbeats := <span class="fn"><span class="fn">ctx</span>.maxHeartbeats</span> }</span></span>)
+        maxHeartbeats := <span class="fn"><span class="fn">ctx</span>.maxHeartbeats</span>, currMacroScope := <span class="fn"><span class="fn">ctx</span>.currMacroScope</span> }</span></span>)
     <span class="fn">x</span></span></span></li>
 </ul>
 </details>
@@ -364,7 +364,7 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Meta.ToHide.hasVisibleDep">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L65-L68">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L65-L67">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -382,9 +382,7 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/PPGoal.html#Lean.Meta.ToHide.hasVisibleDep">Lean.Meta.ToHide.hasVisibleDep</a> <span class="fn">localDecl</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let s ← <span class="fn">get</span>
   let a ← <span class="fn">Lean.getMCtx</span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a>
-      (<span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.findLocalDeclDependsOn">Lean.MetavarContext.findLocalDeclDependsOn</a> <span class="fn">a</span> <span class="fn">localDecl</span> <span class="fn">fun <span class="fn">fvarId</span> =>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Std/Data/RBTree.html#Std.RBTree.contains">Std.RBTree.contains</a> <span class="fn"><span class="fn">s</span>.hiddenInaccessible</span> <span class="fn">fvarId</span></span></span></span></span>)</span></span></span></li>
+  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.findLocalDeclDependsOn">Lean.MetavarContext.findLocalDeclDependsOn</a> <span class="fn">a</span> <span class="fn">localDecl</span> <span class="fn">fun <span class="fn">a</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Std/Data/RBTree.html#Std.RBTree.contains">Std.RBTree.contains</a> <span class="fn"><span class="fn">s</span>.hiddenInaccessible</span> <span class="fn">a</span></span></span></span></span>)</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -392,7 +390,7 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Meta.ToHide.hasInaccessibleNameDep">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L72-L75">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L71-L74">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -420,7 +418,7 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Meta.ToHide.visitVisibleExpr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L78-L92">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L77-L91">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -445,7 +443,7 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Meta.ToHide.visitVisibleExpr.visit">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L81-L92">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L80-L91">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -461,7 +459,7 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Meta.ToHide.fixpointStep">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L94-L109">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L93-L108">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -508,7 +506,7 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Meta.ToHide.fixpoint">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L111-L115">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L110-L114">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -522,7 +520,7 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Meta.ToHide.collect">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L128-L140">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L127-L139">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -563,7 +561,7 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Meta.ppGoal">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L147-L208">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L146-L207">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -628,7 +626,7 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Meta.ppGoal.pushPending">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L159-L168">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L158-L167">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -666,7 +664,7 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Meta.ppGoal.ppVars">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L169-L196">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/PPGoal.lean#L168-L195">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -788,6 +786,9 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -869,6 +870,9 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -946,6 +950,9 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -1028,6 +1035,9 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1234,6 +1244,9 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1680,8 +1693,32 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1705,6 +1742,9 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1875,6 +1915,9 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1900,9 +1943,6 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2275,6 +2315,15 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2314,6 +2363,9 @@ goalTarget : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

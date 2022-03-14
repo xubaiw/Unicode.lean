@@ -296,7 +296,7 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <div class="decl" id="Lean.Server.Snapshots.reparseHeader">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Snapshots.lean#L64-L67">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Snapshots.lean#L64-L66">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -304,7 +304,7 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <a class="break_within" href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.reparseHeader">Lean.Server.Snapshots.reparseHeader</a>
 </span>
 <span class="decl_args">
-<span class="fn">(contents : <a href="/Unicode.lean/Init/Prelude.html#String">String</a>)</span></span>
+<span class="fn">(inputCtx : <a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.InputContext">Lean.Parser.InputContext</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(header : <a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a>)</span></span>
 <span class="decl_args">
@@ -315,15 +315,14 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.reparseHeader">Lean.Server.Snapshots.reparseHeader</a> <span class="fn">contents</span> <span class="fn">header</span> <span class="fn">opts</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let inputCtx := <span class="fn"><a href="/Unicode.lean/Lean/Parser/Extension.html#Lean.Parser.mkInputContext">Lean.Parser.mkInputContext</a> <span class="fn">contents</span> <span class="fn">"<input>"</span></span>;
-  <span class="fn">do
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.reparseHeader">Lean.Server.Snapshots.reparseHeader</a> <span class="fn">inputCtx</span> <span class="fn">header</span> <span class="fn">opts</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let discr ← <span class="fn"><a href="/Unicode.lean/Lean/Parser/Module.html#Lean.Parser.parseHeader">Lean.Parser.parseHeader</a> <span class="fn">inputCtx</span></span>
   let x : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><a href="/Unicode.lean/Lean/Parser/Module.html#Lean.Parser.ModuleParserState">Lean.Parser.ModuleParserState</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Message.html#Lean.MessageLog">Lean.MessageLog</a></span></span> := <span class="fn">discr</span>
   <span class="fn">match <span class="fn">x</span> with
     | <span class="fn">(<span class="fn">newStx</span>, <span class="fn">newMpState</span>, <span class="fn">x</span>)</span> =>
       <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Prod.mk">pure</a>
         <span class="fn">{ beginPos := <span class="fn"><span class="fn">header</span>.beginPos</span>, stx := <span class="fn">newStx</span>, mpState := <span class="fn">newMpState</span>, cmdState := <span class="fn"><span class="fn">header</span>.cmdState</span>,
-          interactiveDiags := <span class="fn"><span class="fn">header</span>.interactiveDiags</span> }</span></span></span></span></span></span></li>
+          interactiveDiags := <span class="fn"><span class="fn">header</span>.interactiveDiags</span> }</span></span></span></span></span></li>
 </ul>
 </details>
 <p>Reparses the header syntax but does not re-elaborate it. Used to ignore whitespace-only changes.</p></div>
@@ -331,7 +330,7 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <div class="decl" id="Lean.Server.Snapshots.parseNextCmd">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Snapshots.lean#L71-L78">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Snapshots.lean#L70-L76">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -339,7 +338,7 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <a class="break_within" href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.parseNextCmd">Lean.Server.Snapshots.parseNextCmd</a>
 </span>
 <span class="decl_args">
-<span class="fn">(contents : <a href="/Unicode.lean/Init/Prelude.html#String">String</a>)</span></span>
+<span class="fn">(inputCtx : <a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.InputContext">Lean.Parser.InputContext</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(snap : <a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a>)</span></span>
 <span class="decl_args">:</span>
@@ -348,14 +347,13 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.parseNextCmd">Lean.Server.Snapshots.parseNextCmd</a> <span class="fn">contents</span> <span class="fn">snap</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let inputCtx := <span class="fn"><a href="/Unicode.lean/Lean/Parser/Extension.html#Lean.Parser.mkInputContext">Lean.Parser.mkInputContext</a> <span class="fn">contents</span> <span class="fn">"<input>"</span></span>;
-  <span class="fn">let cmdState := <span class="fn"><span class="fn">snap</span>.cmdState</span>;
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.parseNextCmd">Lean.Server.Snapshots.parseNextCmd</a> <span class="fn">inputCtx</span> <span class="fn">snap</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let cmdState := <span class="fn"><span class="fn">snap</span>.cmdState</span>;
   <span class="fn">let scope := <span class="fn"><a href="/Unicode.lean/Init/Data/List/BasicAux.html#List.head!">List.head!</a> <span class="fn"><span class="fn">cmdState</span>.scopes</span></span>;
   <span class="fn">let pmctx :=
     <span class="fn">{ env := <span class="fn"><span class="fn">cmdState</span>.env</span>, options := <span class="fn"><span class="fn">scope</span>.opts</span>, currNamespace := <span class="fn"><span class="fn">scope</span>.currNamespace</span>, openDecls := <span class="fn"><span class="fn">scope</span>.openDecls</span> }</span>;
   <span class="fn">let x := <span class="fn"><a href="/Unicode.lean/Lean/Parser/Module.html#Lean.Parser.parseCommand">Lean.Parser.parseCommand</a> <span class="fn">inputCtx</span> <span class="fn">pmctx</span> <span class="fn"><span class="fn">snap</span>.mpState</span> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.msgLog">Lean.Server.Snapshots.Snapshot.msgLog</a> <span class="fn">snap</span></span>)</span>;
   <span class="fn">match <span class="fn">x</span> with
-  | <span class="fn">(<span class="fn">cmdStx</span>, <span class="fn">x</span>, <span class="fn">x_1</span>)</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Prod.mk">pure</a> <span class="fn">cmdStx</span></span></span></span></span></span></span></span></span></li>
+  | <span class="fn">(<span class="fn">cmdStx</span>, <span class="fn">x</span>, <span class="fn">x_1</span>)</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Prod.mk">pure</a> <span class="fn">cmdStx</span></span></span></span></span></span></span></span></li>
 </ul>
 </details>
 <p>Parses the next command occurring after the given snapshot
@@ -364,7 +362,7 @@ without elaborating it.</p></div>
 <div class="decl" id="Lean.Server.Snapshots.parseAhead">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Snapshots.lean#L83-L95">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Snapshots.lean#L81-L92">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -372,7 +370,7 @@ without elaborating it.</p></div>
 <a class="break_within" href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.parseAhead">Lean.Server.Snapshots.parseAhead</a>
 </span>
 <span class="decl_args">
-<span class="fn">(contents : <a href="/Unicode.lean/Init/Prelude.html#String">String</a>)</span></span>
+<span class="fn">(inputCtx : <a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.InputContext">Lean.Parser.InputContext</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(snap : <a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a>)</span></span>
 <span class="decl_args">:</span>
@@ -381,12 +379,11 @@ without elaborating it.</p></div>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.parseAhead">Lean.Server.Snapshots.parseAhead</a> <span class="fn">contents</span> <span class="fn">snap</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let inputCtx := <span class="fn"><a href="/Unicode.lean/Lean/Parser/Extension.html#Lean.Parser.mkInputContext">Lean.Parser.mkInputContext</a> <span class="fn">contents</span> <span class="fn">"<input>"</span></span>;
-  <span class="fn">let cmdState := <span class="fn"><span class="fn">snap</span>.cmdState</span>;
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.parseAhead">Lean.Server.Snapshots.parseAhead</a> <span class="fn">inputCtx</span> <span class="fn">snap</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let cmdState := <span class="fn"><span class="fn">snap</span>.cmdState</span>;
   <span class="fn">let scope := <span class="fn"><a href="/Unicode.lean/Init/Data/List/BasicAux.html#List.head!">List.head!</a> <span class="fn"><span class="fn">cmdState</span>.scopes</span></span>;
   <span class="fn">let pmctx :=
     <span class="fn">{ env := <span class="fn"><span class="fn">cmdState</span>.env</span>, options := <span class="fn"><span class="fn">scope</span>.opts</span>, currNamespace := <span class="fn"><span class="fn">scope</span>.currNamespace</span>, openDecls := <span class="fn"><span class="fn">scope</span>.openDecls</span> }</span>;
-  <span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.parseAhead.go">Lean.Server.Snapshots.parseAhead.go</a> <span class="fn">snap</span> <span class="fn">inputCtx</span> <span class="fn">pmctx</span> <span class="fn"><span class="fn">snap</span>.mpState</span> <span class="fn">#[]</span></span></span></span></span></span></span></li>
+  <span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.parseAhead.go">Lean.Server.Snapshots.parseAhead.go</a> <span class="fn">snap</span> <span class="fn">inputCtx</span> <span class="fn">pmctx</span> <span class="fn"><span class="fn">snap</span>.mpState</span> <span class="fn">#[]</span></span></span></span></span></span></li>
 </ul>
 </details>
 <p>Parse remaining file without elaboration. NOTE that doing so can lead to parse errors or even wrong syntax objects,
@@ -395,7 +392,7 @@ so it should only be done for reporting preliminary results!</p></div>
 <div class="decl" id="Lean.Server.Snapshots.parseAhead.go">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Snapshots.lean#L90-L95">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Snapshots.lean#L87-L92">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -419,7 +416,7 @@ so it should only be done for reporting preliminary results!</p></div>
 <div class="decl" id="Lean.Server.Snapshots.compileNextCmd">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Snapshots.lean#L102-L160">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Snapshots.lean#L99-L156">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -427,7 +424,7 @@ so it should only be done for reporting preliminary results!</p></div>
 <a class="break_within" href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.compileNextCmd">Lean.Server.Snapshots.compileNextCmd</a>
 </span>
 <span class="decl_args">
-<span class="fn">(text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap</a>)</span></span>
+<span class="fn">(inputCtx : <a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.InputContext">Lean.Parser.InputContext</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(snap : <a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a>)</span></span>
 <span class="decl_args">
@@ -438,8 +435,7 @@ so it should only be done for reporting preliminary results!</p></div>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.compileNextCmd">Lean.Server.Snapshots.compileNextCmd</a> <span class="fn">text</span> <span class="fn">snap</span> <span class="fn">hasWidgets</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let inputCtx := <span class="fn"><a href="/Unicode.lean/Lean/Parser/Extension.html#Lean.Parser.mkInputContext">Lean.Parser.mkInputContext</a> <span class="fn"><span class="fn">text</span>.source</span> <span class="fn">"<input>"</span></span>;
-  <span class="fn">let cmdState := <span class="fn"><span class="fn">snap</span>.cmdState</span>;
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.compileNextCmd">Lean.Server.Snapshots.compileNextCmd</a> <span class="fn">inputCtx</span> <span class="fn">snap</span> <span class="fn">hasWidgets</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let cmdState := <span class="fn"><span class="fn">snap</span>.cmdState</span>;
   <span class="fn">let scope := <span class="fn"><a href="/Unicode.lean/Init/Data/List/BasicAux.html#List.head!">List.head!</a> <span class="fn"><span class="fn">cmdState</span>.scopes</span></span>;
   <span class="fn">let pmctx :=
     <span class="fn">{ env := <span class="fn"><span class="fn">cmdState</span>.env</span>, options := <span class="fn"><span class="fn">scope</span>.opts</span>, currNamespace := <span class="fn"><span class="fn">scope</span>.currNamespace</span>, openDecls := <span class="fn"><span class="fn">scope</span>.openDecls</span> }</span>;
@@ -448,7 +444,7 @@ so it should only be done for reporting preliminary results!</p></div>
   | <span class="fn">(<span class="fn">cmdStx</span>, <span class="fn">cmdParserState</span>, <span class="fn">msgLog</span>)</span> =>
     <span class="fn">let cmdPos := <span class="fn"><a href="/Unicode.lean/Init/Data/Option/BasicAux.html#Option.get!">Option.get!</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getPos?">Lean.Syntax.getPos?</a> <span class="fn">cmdStx</span></span>)</span>;
     <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Parser/Module.html#Lean.Parser.isEOI">Lean.Parser.isEOI</a> <span class="fn">cmdStx</span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><a href="/Unicode.lean/Lean/Parser/Module.html#Lean.Parser.isExitCommand">Lean.Parser.isExitCommand</a> <span class="fn">cmdStx</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags">Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags</a> <span class="fn">text</span> <span class="fn">snap</span> <span class="fn">hasWidgets</span> <span class="fn">msgLog</span></span>
+      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags">Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags</a> <span class="fn">inputCtx</span> <span class="fn">snap</span> <span class="fn">hasWidgets</span> <span class="fn">msgLog</span></span>
       let endSnap : <a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a> :=
         <span class="fn">{ beginPos := <span class="fn">cmdPos</span>, stx := <span class="fn">cmdStx</span>, mpState := <span class="fn">cmdParserState</span>, cmdState := <span class="fn"><span class="fn">snap</span>.cmdState</span>,
           interactiveDiags := <span class="fn">a</span> }</span>
@@ -477,7 +473,8 @@ so it should only be done for reporting preliminary results!</p></div>
           let <span class="fn">postCmdState</span> ← <span class="fn"><a href="/Unicode.lean/Init/System/ST.html#ST.Ref.get">ST.Ref.get</a> <span class="fn">cmdStateRef</span></span>
           let _do_jp : <span class="fn"><a href="/Unicode.lean/Lean/Elab/Command.html#Lean.Elab.Command.State">Lean.Elab.Command.State</a> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO">IO</a> <a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a></span></span></span> := <span class="fn">fun <span class="fn">postCmdState</span> <span class="fn">y</span> => <span class="fn">do
             let a ←
-              <span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags">Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags</a> <span class="fn">text</span> <span class="fn">snap</span> <span class="fn">hasWidgets</span> <span class="fn"><span class="fn">postCmdState</span>.messages</span></span>
+              <span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags">Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags</a> <span class="fn">inputCtx</span> <span class="fn">snap</span> <span class="fn">hasWidgets</span>
+                  <span class="fn"><span class="fn">postCmdState</span>.messages</span></span>
             let postCmdSnap : <a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a> :=
               <span class="fn">{ beginPos := <span class="fn">cmdPos</span>, stx := <span class="fn">cmdStx</span>, mpState := <span class="fn">cmdParserState</span>, cmdState := <span class="fn">postCmdState</span>,
                 interactiveDiags := <span class="fn">a</span> }</span>
@@ -501,7 +498,7 @@ so it should only be done for reporting preliminary results!</p></div>
               <span class="fn"><span class="fn">_do_jp</span> <span class="fn">postCmdState</span> <span class="fn">y</span></span></span></span>
             else <span class="fn">do
               let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">postCmdState</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">postCmdState</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
 </ul>
 </details>
 <p>Compiles the next command occurring after the given snapshot. If there is no next command
@@ -510,7 +507,7 @@ so it should only be done for reporting preliminary results!</p></div>
 <div class="decl" id="Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Snapshots.lean#L154-L160">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Snapshots.lean#L150-L156">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -518,7 +515,7 @@ so it should only be done for reporting preliminary results!</p></div>
 <a class="break_within" href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags">Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags</a>
 </span>
 <span class="decl_args">
-<span class="fn">(text : <a href="/Unicode.lean/Lean/Data/Position.html#Lean.FileMap">Lean.FileMap</a>)</span></span>
+<span class="fn">(inputCtx : <a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.InputContext">Lean.Parser.InputContext</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(snap : <a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a>)</span></span>
 <span class="decl_args">
@@ -531,7 +528,7 @@ so it should only be done for reporting preliminary results!</p></div>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags">Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags</a> <span class="fn">text</span> <span class="fn">snap</span> <span class="fn">hasWidgets</span> <span class="fn">msgLog</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let newMsgCount := <span class="fn"><span class="fn"><span class="fn"><span class="fn">msgLog</span>.msgs</span>.size</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn"><span class="fn">(<span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.msgLog">Lean.Server.Snapshots.Snapshot.msgLog</a> <span class="fn">snap</span></span>).msgs</span>.size</span></span>;
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags">Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags</a> <span class="fn">inputCtx</span> <span class="fn">snap</span> <span class="fn">hasWidgets</span> <span class="fn">msgLog</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let newMsgCount := <span class="fn"><span class="fn"><span class="fn"><span class="fn">msgLog</span>.msgs</span>.size</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn"><span class="fn">(<span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot.msgLog">Lean.Server.Snapshots.Snapshot.msgLog</a> <span class="fn">snap</span></span>).msgs</span>.size</span></span>;
   <span class="fn">let ret := <span class="fn"><span class="fn">snap</span>.interactiveDiags</span>;
   <span class="fn">do
   let r ←
@@ -540,7 +537,7 @@ so it should only be done for reporting preliminary results!</p></div>
         <span class="fn">let ret := <span class="fn">r</span>;
         <span class="fn">let newMsg := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.get!">Std.PersistentArray.get!</a> <span class="fn"><span class="fn">msgLog</span>.msgs</span> (<span class="fn"><span class="fn"><span class="fn"><span class="fn">msgLog</span>.msgs</span>.size</span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">i</span></span>)</span>;
         <span class="fn">do
-        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Widget/InteractiveDiagnostic.html#Lean.Widget.msgToInteractiveDiagnostic">Lean.Widget.msgToInteractiveDiagnostic</a> <span class="fn">text</span> <span class="fn">newMsg</span> <span class="fn">hasWidgets</span></span>
+        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Widget/InteractiveDiagnostic.html#Lean.Widget.msgToInteractiveDiagnostic">Lean.Widget.msgToInteractiveDiagnostic</a> <span class="fn"><span class="fn">inputCtx</span>.fileMap</span> <span class="fn">newMsg</span> <span class="fn">hasWidgets</span></span>
         let ret : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray">Std.PersistentArray</a> <a href="/Unicode.lean/Lean/Widget/InteractiveDiagnostic.html#Lean.Widget.InteractiveDiagnostic">Lean.Widget.InteractiveDiagnostic</a></span> := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray.push">Std.PersistentArray.push</a> <span class="fn">ret</span> <span class="fn">a</span></span>
         <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
         <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">ret</span></span>)</span></span></span></span></span></span></span>
@@ -614,6 +611,9 @@ part of the command state.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -697,6 +697,9 @@ part of the command state.</p></div>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -774,6 +777,9 @@ part of the command state.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -856,6 +862,9 @@ part of the command state.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1062,6 +1071,9 @@ part of the command state.</p></div>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1508,8 +1520,32 @@ part of the command state.</p></div>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1533,6 +1569,9 @@ part of the command state.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1703,6 +1742,9 @@ part of the command state.</p></div>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1728,9 +1770,6 @@ part of the command state.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2103,6 +2142,15 @@ part of the command state.</p></div>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2142,6 +2190,9 @@ part of the command state.</p></div>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

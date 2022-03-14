@@ -31,6 +31,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Environment.html">Lean.Environment</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Parser/Extension.html">Lean.Parser.Extension</a>
 </li>
 <li>
@@ -100,7 +103,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Server.Completion.completionBlackListExt">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L21-L21">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L23-L23">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -114,7 +117,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Server.Completion.addToBlackList">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L24-L25">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L26-L27">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -139,7 +142,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Server.Completion.State">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L72-L74">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L74-L76">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -150,16 +153,16 @@ Documentation</h1>
 <div class="decl_type"><span class="fn">Type</span></div></div>
 <ul class="structure_fields" id="Lean.Server.Completion.State.mk">
 <li class="structure_field" id="Lean.Server.Completion.State.itemsMain">
-itemsMain : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.CompletionItem">Lean.Lsp.CompletionItem</a></span></li>
+itemsMain : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> (<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.CompletionItem">Lean.Lsp.CompletionItem</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">√ó</a> <a href="/Unicode.lean/Init/Data/Float.html#Float">Float</a></span>)</span></li>
 <li class="structure_field" id="Lean.Server.Completion.State.itemsOther">
-itemsOther : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.CompletionItem">Lean.Lsp.CompletionItem</a></span></li>
+itemsOther : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> (<span class="fn"><a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.CompletionItem">Lean.Lsp.CompletionItem</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">√ó</a> <a href="/Unicode.lean/Init/Data/Float.html#Float">Float</a></span>)</span></li>
 </ul>
 </div>
 </div>
 <div class="decl" id="Lean.Server.Completion.M">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L76-L76">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L78-L78">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -183,7 +186,7 @@ itemsOther : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Ar
 <div class="decl" id="Lean.Server.Completion.HoverInfo">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L189-L191">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L191-L193">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -203,7 +206,7 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 <div class="decl" id="Lean.Server.Completion.matchNamespace">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L193-L199">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L195-L205">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -217,16 +220,17 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 <span class="decl_args">
 <span class="fn">(danglingDot : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a>)</span></span>
 <span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Data/Float.html#Float">Float</a></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.matchNamespace">Lean.Server.Completion.matchNamespace</a> <span class="fn">ns</span> <span class="fn">nsFragment</span> <span class="fn">danglingDot</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn">danglingDot</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><span class="fn"><span class="fn">nsFragment</span> <a href="/Unicode.lean/Init/Core.html#bne">!=</a> <span class="fn">ns</span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.isPrefixOf">Lean.Name.isPrefixOf</a> <span class="fn">nsFragment</span> <span class="fn">ns</span></span></span>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.matchNamespace">Lean.Server.Completion.matchNamespace</a> <span class="fn">ns</span> <span class="fn">nsFragment</span> <span class="fn">danglingDot</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn">danglingDot</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><span class="fn">nsFragment</span> <a href="/Unicode.lean/Init/Core.html#bne">!=</a> <span class="fn">ns</span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.isPrefixOf">Lean.Name.isPrefixOf</a> <span class="fn">nsFragment</span> <span class="fn">ns</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">1</span></span> else <span class="fn">none</span></span>
   else
     <span class="fn">match <span class="fn">ns</span>, <span class="fn">nsFragment</span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">p‚ÇÅ</span> <span class="fn">s‚ÇÅ</span> <span class="fn">x</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">p‚ÇÇ</span> <span class="fn">s‚ÇÇ</span> <span class="fn">x_1</span></span> => <span class="fn"><span class="fn"><span class="fn">p‚ÇÅ</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">p‚ÇÇ</span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.isPrefixOf">String.isPrefixOf</a> <span class="fn">s‚ÇÇ</span> <span class="fn">s‚ÇÅ</span></span></span>
-    | <span class="fn">x</span>, <span class="fn">x_1</span> => <span class="fn">false</span></span></span></span></li>
+    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">p‚ÇÅ</span> <span class="fn">s‚ÇÅ</span> <span class="fn">x</span></span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">p‚ÇÇ</span> <span class="fn">s‚ÇÇ</span> <span class="fn">x_1</span></span> =>
+      <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">p‚ÇÅ</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">p‚ÇÇ</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Lean/Data/FuzzyMatching.html#Lean.FuzzyMatching.fuzzyMatchScoreWithThreshold?">Lean.FuzzyMatching.fuzzyMatchScoreWithThreshold?</a> <span class="fn">s‚ÇÇ</span> <span class="fn">s‚ÇÅ</span></span> else <span class="fn">none</span></span>
+    | <span class="fn">x</span>, <span class="fn">x_1</span> => <span class="fn">none</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -234,7 +238,7 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 <div class="decl" id="Lean.Server.Completion.completeNamespaces">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L201-L225">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L207-L231">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -255,10 +259,11 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.completeNamespaces">Lean.Server.Completion.completeNamespaces</a> <span class="fn">ctx</span> <span class="fn">id</span> <span class="fn">danglingDot</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let env ‚Üê <span class="fn">Lean.getEnv</span>
-  let add : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> ‚Üí <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> ‚Üí <span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.M">Lean.Server.Completion.M</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></span> := <span class="fn">fun <span class="fn">ns</span> <span class="fn">ns'</span> =>
+  let add : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> ‚Üí <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> ‚Üí <span class="fn"><a href="/Unicode.lean/Init/Data/Float.html#Float">Float</a> ‚Üí <span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.M">Lean.Server.Completion.M</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></span></span> := <span class="fn">fun <span class="fn">ns</span> <span class="fn">ns'</span> <span class="fn">score</span> =>
     <span class="fn">if <span class="fn"><span class="fn">danglingDot</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-      <span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#_private.Lean.Server.Completion.0.Lean.Server.Completion.addNamespaceCompletionItem">Lean.Server.Completion.addNamespaceCompletionItem</a> (<span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Name.replacePrefix">Lean.Name.replacePrefix</a> <span class="fn">ns</span> (<span class="fn"><span class="fn">ns'</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">id</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a></span>)</span>
-    else <span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#_private.Lean.Server.Completion.0.Lean.Server.Completion.addNamespaceCompletionItem">Lean.Server.Completion.addNamespaceCompletionItem</a> (<span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Name.replacePrefix">Lean.Name.replacePrefix</a> <span class="fn">ns</span> <span class="fn">ns'</span> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a></span>)</span></span></span>
+      <span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#_private.Lean.Server.Completion.0.Lean.Server.Completion.addNamespaceCompletionItem">Lean.Server.Completion.addNamespaceCompletionItem</a> (<span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Name.replacePrefix">Lean.Name.replacePrefix</a> <span class="fn">ns</span> (<span class="fn"><span class="fn">ns'</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">id</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a></span>)
+        <span class="fn">score</span></span>
+    else <span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#_private.Lean.Server.Completion.0.Lean.Server.Completion.addNamespaceCompletionItem">Lean.Server.Completion.addNamespaceCompletionItem</a> (<span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Name.replacePrefix">Lean.Name.replacePrefix</a> <span class="fn">ns</span> <span class="fn">ns'</span> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a></span>) <span class="fn">score</span></span></span></span>
   <span class="fn"><a href="/Unicode.lean/Lean/Data/SSet.html#Lean.SSet.forM">Lean.SSet.forM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.Environment.getNamespaceSet">Lean.Environment.getNamespaceSet</a> <span class="fn">env</span></span>) <span class="fn">fun <span class="fn">ns</span> =>
       <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.isInternal">Lean.Name.isInternal</a> <span class="fn">ns</span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.Environment.contains">Lean.Environment.contains</a> <span class="fn">env</span> <span class="fn">ns</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
       else <span class="fn">do
@@ -268,10 +273,11 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
               <span class="fn">let r := <span class="fn"><span class="fn">r</span>.snd</span>;
               <span class="fn">match <span class="fn">openDecl</span> with
               | <span class="fn"><a href="/Unicode.lean/Lean/Data/OpenDecl.html#Lean.OpenDecl.simple">Lean.OpenDecl.simple</a> <span class="fn">ns'</span> <span class="fn">except</span></span> =>
-                <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.matchNamespace">Lean.Server.Completion.matchNamespace</a> <span class="fn">ns</span> (<span class="fn"><span class="fn">ns'</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">id</span></span>) <span class="fn">danglingDot</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-                  <span class="fn"><span class="fn">add</span> <span class="fn">ns</span> <span class="fn">ns'</span></span>
+                <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.matchNamespace">Lean.Server.Completion.matchNamespace</a> <span class="fn">ns</span> (<span class="fn"><span class="fn">ns'</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">id</span></span>) <span class="fn">danglingDot</span></span> with
+                | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">score</span></span> => <span class="fn">do
+                  <span class="fn"><span class="fn">add</span> <span class="fn">ns</span> <span class="fn">ns'</span> <span class="fn">score</span></span>
                   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span>
-                else <span class="fn">do
+                | <span class="fn">x</span> => <span class="fn">do
                   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
                   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span></span>
               | <span class="fn">x</span> => <span class="fn">do
@@ -292,7 +298,7 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 <div class="decl" id="Lean.Server.Completion.completeNamespaces.visitNamespaces">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L218-L224">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L224-L230">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -304,30 +310,19 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 <span class="decl_args">
 <span class="fn">(danglingDot : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a>)</span></span>
 <span class="decl_args">
-<span class="fn">(add : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> ‚Üí <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> ‚Üí <span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.M">Lean.Server.Completion.M</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></span>)</span></span>
+<span class="fn">(add : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> ‚Üí <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> ‚Üí <span class="fn"><a href="/Unicode.lean/Init/Data/Float.html#Float">Float</a> ‚Üí <span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.M">Lean.Server.Completion.M</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></span></span>)</span></span>
 <span class="decl_args">
 <span class="fn">(ns : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(ns' : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.M">Lean.Server.Completion.M</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.completeNamespaces.visitNamespaces">Lean.Server.Completion.completeNamespaces.visitNamespaces</a> <span class="fn">id</span> <span class="fn">danglingDot</span> <span class="fn">add</span> <span class="fn">ns</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">p</span> <span class="fn">x</span> <span class="fn">x_1</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.matchNamespace">Lean.Server.Completion.matchNamespace</a> <span class="fn">ns</span> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">p</span> <span class="fn">x</span> <span class="fn">x_1</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">id</span></span>) <span class="fn">danglingDot</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-    <span class="fn"><span class="fn">add</span> <span class="fn">ns</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <span class="fn">p</span> <span class="fn">x</span> <span class="fn">x_1</span></span>)</span>
-  else <span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.completeNamespaces.visitNamespaces">Lean.Server.Completion.completeNamespaces.visitNamespaces</a> <span class="fn">id</span> <span class="fn">danglingDot</span> <span class="fn">add</span> <span class="fn">ns</span> <span class="fn">p</span></span></span></span></li>
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.completeNamespaces.visitNamespaces">Lean.Server.Completion.completeNamespaces.visitNamespaces</a> <span class="fn">id</span> <span class="fn">danglingDot</span> <span class="fn">add</span> <span class="fn">ns</span> <span class="fn">ns'</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Completion.html#Lean.Server.Completion.matchNamespace">Lean.Server.Completion.matchNamespace</a> <span class="fn">ns</span> (<span class="fn"><span class="fn">ns'</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">id</span></span>) <span class="fn">danglingDot</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><span class="fn">add</span> <span class="fn">ns</span> <span class="fn">ns'</span></span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span></span></span></li>
-</ul>
-</details>
 </div>
 </div>
 <div class="decl" id="Lean.Server.Completion.find?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L405-L451">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L414-L460">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -370,7 +365,7 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 <div class="decl" id="Lean.Server.Completion.find?.choose">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L419-L451">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Completion.lean#L428-L460">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -502,6 +497,9 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -583,6 +581,9 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -660,6 +661,9 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -742,6 +746,9 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -948,6 +955,9 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1394,8 +1404,32 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1419,6 +1453,9 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1589,6 +1626,9 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1614,9 +1654,6 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -1989,6 +2026,15 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2028,6 +2074,9 @@ inside: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

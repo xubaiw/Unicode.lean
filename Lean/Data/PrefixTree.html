@@ -484,19 +484,19 @@ Node: <span class="fn">{α : <span class="fn">Type u</span>} → <span class="fn
 <span class="decl_args">
 <span class="fn">{α : <span class="fn">Type u_1</span>}</span></span>
 </span>
+<span class="decl_args">
+<span class="fn">(cmp : <span class="fn"><span class="fn">α</span> → <span class="fn">α</span> → <a href="/Unicode.lean/Init/Data/Ord.html#Ordering">Ordering</a></span>)</span></span>
 <span class="impl_arg">
 <span class="decl_args">
 <span class="fn">{β : <span class="fn">Type u_2</span>}</span></span>
 </span>
-<span class="decl_args">
-<span class="fn">(cmp : <span class="fn"><span class="fn">α</span> → <span class="fn">α</span> → <a href="/Unicode.lean/Init/Data/Ord.html#Ordering">Ordering</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Data/PrefixTree.html#Lean.PrefixTreeNode">Lean.PrefixTreeNode</a> <span class="fn">α</span> <span class="fn">β</span></span> → <span class="fn">Prop</span></span></div></div>
 <ul class="constructors">
 <li class="constructor" id="Lean.PrefixTreeNode.WellFormed.emptyWff">
-emptyWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {β : <span class="fn">Type u_2</span>} {cmp : <span class="fn"><span class="fn">α</span> → <span class="fn">α</span> → <a href="/Unicode.lean/Init/Data/Ord.html#Ordering">Ordering</a></span>}, <span class="fn"><a href="/Unicode.lean/Lean/Data/PrefixTree.html#Lean.PrefixTreeNode.WellFormed">Lean.PrefixTreeNode.WellFormed</a> <span class="fn">cmp</span> <span class="fn">Lean.PrefixTreeNode.empty</span></span></span></li>
+emptyWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {cmp : <span class="fn"><span class="fn">α</span> → <span class="fn">α</span> → <a href="/Unicode.lean/Init/Data/Ord.html#Ordering">Ordering</a></span>} {a : <span class="fn">Type u_2</span>}, <span class="fn"><a href="/Unicode.lean/Lean/Data/PrefixTree.html#Lean.PrefixTreeNode.WellFormed">Lean.PrefixTreeNode.WellFormed</a> <span class="fn">cmp</span> <span class="fn">Lean.PrefixTreeNode.empty</span></span></span></li>
 <li class="constructor" id="Lean.PrefixTreeNode.WellFormed.insertWff">
-insertWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {β : <span class="fn">Type u_2</span>} {cmp : <span class="fn"><span class="fn">α</span> → <span class="fn">α</span> → <a href="/Unicode.lean/Init/Data/Ord.html#Ordering">Ordering</a></span>} {t : <span class="fn"><a href="/Unicode.lean/Lean/Data/PrefixTree.html#Lean.PrefixTreeNode">Lean.PrefixTreeNode</a> <span class="fn">α</span> <span class="fn">β</span></span>} {k : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <span class="fn">α</span></span>} {val : <span class="fn">β</span>},
+insertWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {cmp : <span class="fn"><span class="fn">α</span> → <span class="fn">α</span> → <a href="/Unicode.lean/Init/Data/Ord.html#Ordering">Ordering</a></span>} {a : <span class="fn">Type u_2</span>} {t : <span class="fn"><a href="/Unicode.lean/Lean/Data/PrefixTree.html#Lean.PrefixTreeNode">Lean.PrefixTreeNode</a> <span class="fn">α</span> <span class="fn">a</span></span>} {k : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <span class="fn">α</span></span>} {val : <span class="fn">a</span>},
   <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Data/PrefixTree.html#Lean.PrefixTreeNode.WellFormed">Lean.PrefixTreeNode.WellFormed</a> <span class="fn">cmp</span> <span class="fn">t</span></span> → <span class="fn"><a href="/Unicode.lean/Lean/Data/PrefixTree.html#Lean.PrefixTreeNode.WellFormed">Lean.PrefixTreeNode.WellFormed</a> <span class="fn">cmp</span> (<span class="fn"><a href="/Unicode.lean/Lean/Data/PrefixTree.html#Lean.PrefixTreeNode.insert">Lean.PrefixTreeNode.insert</a> <span class="fn">t</span> <span class="fn">cmp</span> <span class="fn">k</span> <span class="fn">val</span></span>)</span></span></span></li>
 </ul>
 </div>
@@ -969,6 +969,9 @@ insertWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {β : <s
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -1050,6 +1053,9 @@ insertWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {β : <s
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -1127,6 +1133,9 @@ insertWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {β : <s
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -1209,6 +1218,9 @@ insertWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {β : <s
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1415,6 +1427,9 @@ insertWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {β : <s
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1861,8 +1876,32 @@ insertWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {β : <s
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1886,6 +1925,9 @@ insertWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {β : <s
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -2056,6 +2098,9 @@ insertWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {β : <s
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -2081,9 +2126,6 @@ insertWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {β : <s
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2456,6 +2498,15 @@ insertWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {β : <s
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2495,6 +2546,9 @@ insertWff: <span class="fn">∀ {α : <span class="fn">Type u_1</span>} {β : <s
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

@@ -105,6 +105,9 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Lsp.instFileSourceSemanticTokensRangeParams">Lean.Lsp.instFileSourceSemanticTokensRangeParams</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.Lsp.instFileSourceFoldingRangeParams">Lean.Lsp.instFileSourceFoldingRangeParams</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Lsp.instFileSourcePlainGoalParams">Lean.Lsp.instFileSourcePlainGoalParams</a>
 </div>
 <div class="nav_link">
@@ -162,6 +165,9 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Server/FileSource.html#Lean.Lsp.instFileSourceHoverParams">Lean.Lsp.instFileSourceHoverParams</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Server/FileSource.html#Lean.Lsp.instFileSourceFoldingRangeParams">Lean.Lsp.instFileSourceFoldingRangeParams</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Server/FileSource.html#Lean.Lsp.instFileSourceTextDocumentEdit">Lean.Lsp.instFileSourceTextDocumentEdit</a>
@@ -647,10 +653,31 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Lsp.instFileSourcePlainGoalParams">
+<div class="decl" id="Lean.Lsp.instFileSourceFoldingRangeParams">
 <div class="instance">
 <div class="gh_link">
 <a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileSource.lean#L75-L76">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/FileSource.html#Lean.Lsp.instFileSourceFoldingRangeParams">Lean.Lsp.instFileSourceFoldingRangeParams</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Server/FileSource.html#Lean.Lsp.FileSource">Lean.Lsp.FileSource</a> <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.FoldingRangeParams">Lean.Lsp.FoldingRangeParams</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Server/FileSource.html#Lean.Lsp.instFileSourceFoldingRangeParams">Lean.Lsp.instFileSourceFoldingRangeParams</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fileSource := <span class="fn">fun <span class="fn">p</span> => <span class="fn"><a href="/Unicode.lean/Lean/Server/FileSource.html#Lean.Lsp.FileSource.fileSource">Lean.Lsp.fileSource</a> <span class="fn"><span class="fn">p</span>.textDocument</span></span></span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Lsp.instFileSourcePlainGoalParams">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileSource.lean#L78-L79">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -671,7 +698,7 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 <div class="decl" id="Lean.Lsp.instFileSourcePlainTermGoalParams">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileSource.lean#L78-L79">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileSource.lean#L81-L82">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -692,7 +719,7 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 <div class="decl" id="Lean.Lsp.instFileSourceRpcConnectParams">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileSource.lean#L81-L82">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileSource.lean#L84-L85">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -713,7 +740,7 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 <div class="decl" id="Lean.Lsp.instFileSourceRpcCallParams">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileSource.lean#L84-L85">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileSource.lean#L87-L88">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -734,7 +761,7 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 <div class="decl" id="Lean.Lsp.instFileSourceRpcReleaseParams">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileSource.lean#L87-L88">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileSource.lean#L90-L91">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -755,7 +782,7 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 <div class="decl" id="Lean.Lsp.instFileSourceRpcKeepAliveParams">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileSource.lean#L90-L91">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileSource.lean#L93-L94">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -834,6 +861,9 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -917,6 +947,9 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -994,6 +1027,9 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -1076,6 +1112,9 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1282,6 +1321,9 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1728,8 +1770,32 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1753,6 +1819,9 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1923,6 +1992,9 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1948,9 +2020,6 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2323,6 +2392,15 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2362,6 +2440,9 @@ fileSource : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.l
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

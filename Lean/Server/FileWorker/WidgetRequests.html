@@ -60,13 +60,13 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Widget.instInhabitedMsgToInteractive">Lean.Widget.instInhabitedMsgToInteractive</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Widget.Lean.Widget.MsgToInteractive.instFromJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.MsgToInteractive.instFromJsonRpcEncodingPacket</a>
-</div>
-<div class="nav_link">
 <a class="break_within" href="#Lean.Widget.Lean.Widget.MsgToInteractive.instToJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.MsgToInteractive.instToJsonRpcEncodingPacket</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Widget.Lean.Widget.MsgToInteractive.instRpcEncodingMsgToInteractiveRpcEncodingPacket">Lean.Widget.Lean.Widget.MsgToInteractive.instRpcEncodingMsgToInteractiveRpcEncodingPacket</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Widget.Lean.Widget.MsgToInteractive.instFromJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.MsgToInteractive.instFromJsonRpcEncodingPacket</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Widget.InfoPopup">Lean.Widget.InfoPopup</a>
@@ -75,13 +75,13 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Widget.instInhabitedInfoPopup">Lean.Widget.instInhabitedInfoPopup</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Widget.Lean.Widget.InfoPopup.instFromJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.InfoPopup.instFromJsonRpcEncodingPacket</a>
+<a class="break_within" href="#Lean.Widget.Lean.Widget.InfoPopup.instToJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.InfoPopup.instToJsonRpcEncodingPacket</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Widget.Lean.Widget.InfoPopup.instRpcEncodingInfoPopupRpcEncodingPacket">Lean.Widget.Lean.Widget.InfoPopup.instRpcEncodingInfoPopupRpcEncodingPacket</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Widget.Lean.Widget.InfoPopup.instToJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.InfoPopup.instToJsonRpcEncodingPacket</a>
+<a class="break_within" href="#Lean.Widget.Lean.Widget.InfoPopup.instFromJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.InfoPopup.instFromJsonRpcEncodingPacket</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Widget.GetInteractiveDiagnosticsParams">Lean.Widget.GetInteractiveDiagnosticsParams</a>
@@ -142,27 +142,6 @@ indent : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Widget.Lean.Widget.MsgToInteractive.instFromJsonRpcEncodingPacket">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/WidgetRequests.lean#L22-L22">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.MsgToInteractive.instFromJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.MsgToInteractive.instFromJsonRpcEncodingPacket</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.MsgToInteractive.RpcEncodingPacket._@.Lean.Server.FileWorker.WidgetRequests._hyg.5">Lean.Widget.Lean.Widget.MsgToInteractive.RpcEncodingPacket✝</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.MsgToInteractive.instFromJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.MsgToInteractive.instFromJsonRpcEncodingPacket</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#_private.Lean.Server.FileWorker.WidgetRequests.0.Lean.Widget.Lean.Widget.MsgToInteractive.fromJsonRpcEncodingPacket._@.Lean.Server.FileWorker.WidgetRequests._hyg.56">[anonymous]</a> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
 <div class="decl" id="Lean.Widget.Lean.Widget.MsgToInteractive.instToJsonRpcEncodingPacket">
 <div class="instance">
 <div class="gh_link">
@@ -212,6 +191,27 @@ indent : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Widget.Lean.Widget.MsgToInteractive.instFromJsonRpcEncodingPacket">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/WidgetRequests.lean#L22-L22">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.MsgToInteractive.instFromJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.MsgToInteractive.instFromJsonRpcEncodingPacket</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.MsgToInteractive.RpcEncodingPacket._@.Lean.Server.FileWorker.WidgetRequests._hyg.5">Lean.Widget.Lean.Widget.MsgToInteractive.RpcEncodingPacket✝</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.MsgToInteractive.instFromJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.MsgToInteractive.instFromJsonRpcEncodingPacket</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#_private.Lean.Server.FileWorker.WidgetRequests.0.Lean.Widget.Lean.Widget.MsgToInteractive.fromJsonRpcEncodingPacket._@.Lean.Server.FileWorker.WidgetRequests._hyg.56">[anonymous]</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Widget.InfoPopup">
 <div class="structure">
 <div class="gh_link">
@@ -255,7 +255,7 @@ doc : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Widget.Lean.Widget.InfoPopup.instFromJsonRpcEncodingPacket">
+<div class="decl" id="Lean.Widget.Lean.Widget.InfoPopup.instToJsonRpcEncodingPacket">
 <div class="instance">
 <div class="gh_link">
 <a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/WidgetRequests.lean#L35-L35">source</a>
@@ -263,15 +263,15 @@ doc : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</
 <div class="decl_header">
 <span class="decl_kind">instance</span>
 <span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.InfoPopup.instFromJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.InfoPopup.instFromJsonRpcEncodingPacket</a>
+<a class="break_within" href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.InfoPopup.instToJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.InfoPopup.instToJsonRpcEncodingPacket</a>
 </span>
 <span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.InfoPopup.RpcEncodingPacket._@.Lean.Server.FileWorker.WidgetRequests._hyg.288">Lean.Widget.Lean.Widget.InfoPopup.RpcEncodingPacket✝</a></span></div></div>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.InfoPopup.RpcEncodingPacket._@.Lean.Server.FileWorker.WidgetRequests._hyg.288">Lean.Widget.Lean.Widget.InfoPopup.RpcEncodingPacket✝</a></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.InfoPopup.instFromJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.InfoPopup.instFromJsonRpcEncodingPacket</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#_private.Lean.Server.FileWorker.WidgetRequests.0.Lean.Widget.Lean.Widget.InfoPopup.fromJsonRpcEncodingPacket._@.Lean.Server.FileWorker.WidgetRequests._hyg.363">[anonymous]</a> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.InfoPopup.instToJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.InfoPopup.instToJsonRpcEncodingPacket</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#_private.Lean.Server.FileWorker.WidgetRequests.0.Lean.Widget.Lean.Widget.InfoPopup.toJsonRpcEncodingPacket._@.Lean.Server.FileWorker.WidgetRequests._hyg.432">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -306,7 +306,7 @@ doc : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Widget.Lean.Widget.InfoPopup.instToJsonRpcEncodingPacket">
+<div class="decl" id="Lean.Widget.Lean.Widget.InfoPopup.instFromJsonRpcEncodingPacket">
 <div class="instance">
 <div class="gh_link">
 <a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/FileWorker/WidgetRequests.lean#L35-L35">source</a>
@@ -314,15 +314,15 @@ doc : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</
 <div class="decl_header">
 <span class="decl_kind">instance</span>
 <span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.InfoPopup.instToJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.InfoPopup.instToJsonRpcEncodingPacket</a>
+<a class="break_within" href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.InfoPopup.instFromJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.InfoPopup.instFromJsonRpcEncodingPacket</a>
 </span>
 <span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.InfoPopup.RpcEncodingPacket._@.Lean.Server.FileWorker.WidgetRequests._hyg.288">Lean.Widget.Lean.Widget.InfoPopup.RpcEncodingPacket✝</a></span></div></div>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.InfoPopup.RpcEncodingPacket._@.Lean.Server.FileWorker.WidgetRequests._hyg.288">Lean.Widget.Lean.Widget.InfoPopup.RpcEncodingPacket✝</a></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.InfoPopup.instToJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.InfoPopup.instToJsonRpcEncodingPacket</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#_private.Lean.Server.FileWorker.WidgetRequests.0.Lean.Widget.Lean.Widget.InfoPopup.toJsonRpcEncodingPacket._@.Lean.Server.FileWorker.WidgetRequests._hyg.432">[anonymous]</a> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.Lean.Widget.InfoPopup.instFromJsonRpcEncodingPacket">Lean.Widget.Lean.Widget.InfoPopup.instFromJsonRpcEncodingPacket</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#_private.Lean.Server.FileWorker.WidgetRequests.0.Lean.Widget.Lean.Widget.InfoPopup.fromJsonRpcEncodingPacket._@.Lean.Server.FileWorker.WidgetRequests._hyg.363">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -382,7 +382,7 @@ lineRange? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.instFromJsonGetInteractiveDiagnosticsParams">Lean.Widget.instFromJsonGetInteractiveDiagnosticsParams</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#_private.Lean.Server.FileWorker.WidgetRequests.0.Lean.Widget.fromJsonGetInteractiveDiagnosticsParams._@.Lean.Server.FileWorker.WidgetRequests._hyg.916">[anonymous]</a> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.instFromJsonGetInteractiveDiagnosticsParams">Lean.Widget.instFromJsonGetInteractiveDiagnosticsParams</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ fromJson? := <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#_private.Lean.Server.FileWorker.WidgetRequests.0.Lean.Widget.fromJsonGetInteractiveDiagnosticsParams._@.Lean.Server.FileWorker.WidgetRequests._hyg.917">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -403,7 +403,7 @@ lineRange? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.instToJsonGetInteractiveDiagnosticsParams">Lean.Widget.instToJsonGetInteractiveDiagnosticsParams</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#_private.Lean.Server.FileWorker.WidgetRequests.0.Lean.Widget.toJsonGetInteractiveDiagnosticsParams._@.Lean.Server.FileWorker.WidgetRequests._hyg.951">[anonymous]</a> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#Lean.Widget.instToJsonGetInteractiveDiagnosticsParams">Lean.Widget.instToJsonGetInteractiveDiagnosticsParams</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toJson := <a href="/Unicode.lean/Lean/Server/FileWorker/WidgetRequests.html#_private.Lean.Server.FileWorker.WidgetRequests.0.Lean.Widget.toJsonGetInteractiveDiagnosticsParams._@.Lean.Server.FileWorker.WidgetRequests._hyg.952">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -522,6 +522,9 @@ lineRange? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -603,6 +606,9 @@ lineRange? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -680,6 +686,9 @@ lineRange? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -762,6 +771,9 @@ lineRange? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -968,6 +980,9 @@ lineRange? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1414,8 +1429,32 @@ lineRange? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1439,6 +1478,9 @@ lineRange? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1609,6 +1651,9 @@ lineRange? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1634,9 +1679,6 @@ lineRange? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2009,6 +2051,15 @@ lineRange? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2048,6 +2099,9 @@ lineRange? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

@@ -363,10 +363,10 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Parser.Term.letEqnsDecl">Lean.Parser.Term.letEqnsDecl</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Parser.Term.letDecl">Lean.Parser.Term.letDecl</a>
+<a class="break_within" href="#Lean.Parser.Term.letrec">Lean.Parser.Term.letrec</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Parser.Term.letrec">Lean.Parser.Term.letrec</a>
+<a class="break_within" href="#Lean.Parser.Term.letDecl">Lean.Parser.Term.letDecl</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Parser.Term.noindex">Lean.Parser.Term.noindex</a>
@@ -459,6 +459,9 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Parser.Term.completion">Lean.Parser.Term.completion</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.Parser.Term.forInMacro'">Lean.Parser.Term.forInMacro'</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Parser.Term.arrayRef">Lean.Parser.Term.arrayRef</a>
 </div>
 <div class="nav_link">
@@ -483,10 +486,10 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Parser.Term.namedArgument">Lean.Parser.Term.namedArgument</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Parser.Term.ellipsis">Lean.Parser.Term.ellipsis</a>
+<a class="break_within" href="#Lean.Parser.Term.subst">Lean.Parser.Term.subst</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Parser.Term.subst">Lean.Parser.Term.subst</a>
+<a class="break_within" href="#Lean.Parser.Term.ellipsis">Lean.Parser.Term.ellipsis</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Parser.Term.argument">Lean.Parser.Term.argument</a>
@@ -531,10 +534,10 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Parser.Tactic.quotSeq">Lean.Parser.Tactic.quotSeq</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Parser.Term.bracketedBinderF">Lean.Parser.Term.bracketedBinderF</a>
+<a class="break_within" href="#Lean.Parser.Level.quot">Lean.Parser.Level.quot</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Parser.Level.quot">Lean.Parser.Level.quot</a>
+<a class="break_within" href="#Lean.Parser.Term.bracketedBinderF">Lean.Parser.Term.bracketedBinderF</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Parser.Term.macroArg">Lean.Parser.Term.macroArg</a>
@@ -544,6 +547,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Parser.Term.macroLastArg">Lean.Parser.Term.macroLastArg</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Parser.Term.dotIdent">Lean.Parser.Term.dotIdent</a>
 </div>
 </nav>
 <main>
@@ -2848,30 +2854,6 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Parser.Term.letDecl">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L197-L197">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letDecl">Lean.Parser.Term.letDecl</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.Parser">Lean.Parser.Parser</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letDecl">Lean.Parser.Term.letDecl</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.nodeWithAntiquot">Lean.Parser.nodeWithAntiquot</a> <span class="fn">"letDecl"</span> <span class="fn">`Lean.Parser.Term.letDecl</span>
-    (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HAndThen.hAndThen">HAndThen.hAndThen</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.notFollowedBy">Lean.Parser.notFollowedBy</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.nonReservedSymbol">Lean.Parser.nonReservedSymbol</a> <span class="fn">"rec"</span></span>) <span class="fn">"rec"</span></span>) <span class="fn">fun <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letIdDecl">Lean.Parser.Term.letIdDecl</a> <span class="fn">fun <span class="fn">x</span> =>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letPatDecl">Lean.Parser.Term.letPatDecl</a> <span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letEqnsDecl">Lean.Parser.Term.letEqnsDecl</a></span></span></span></span></span></span>)</span></span></li>
-</ul>
-</details>
-</div>
-</div>
 <div class="decl" id="Lean.Parser.Term.letrec">
 <div class="def">
 <div class="gh_link">
@@ -2897,6 +2879,30 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
               (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HAndThen.hAndThen">HAndThen.hAndThen</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.symbol">Lean.Parser.symbol</a> <span class="fn">"let "</span></span>) <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.nonReservedSymbol">Lean.Parser.nonReservedSymbol</a> <span class="fn">"rec "</span></span></span></span>)</span>)
             <span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letRecDecls">Lean.Parser.Term.letRecDecls</a></span></span>)</span>)
         <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.optSemicolon">Lean.Parser.Term.optSemicolon</a> <span class="fn">Lean.Parser.termParser</span></span></span></span>)</span>)</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Parser.Term.letDecl">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L197-L197">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letDecl">Lean.Parser.Term.letDecl</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.Parser">Lean.Parser.Parser</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letDecl">Lean.Parser.Term.letDecl</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.nodeWithAntiquot">Lean.Parser.nodeWithAntiquot</a> <span class="fn">"letDecl"</span> <span class="fn">`Lean.Parser.Term.letDecl</span>
+    (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HAndThen.hAndThen">HAndThen.hAndThen</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.notFollowedBy">Lean.Parser.notFollowedBy</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.nonReservedSymbol">Lean.Parser.nonReservedSymbol</a> <span class="fn">"rec"</span></span>) <span class="fn">"rec"</span></span>) <span class="fn">fun <span class="fn">x</span> =>
+      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letIdDecl">Lean.Parser.Term.letIdDecl</a> <span class="fn">fun <span class="fn">x</span> =>
+        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letPatDecl">Lean.Parser.Term.letPatDecl</a> <span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.letEqnsDecl">Lean.Parser.Term.letEqnsDecl</a></span></span></span></span></span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -3641,6 +3647,32 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Parser.Term.forInMacro'">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L236-L236">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.forInMacro'">Lean.Parser.Term.forInMacro'</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.Parser">Lean.Parser.Parser</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.forInMacro'">Lean.Parser.Term.forInMacro'</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.withAntiquot">Lean.Parser.withAntiquot</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.mkAntiquot">Lean.Parser.mkAntiquot</a> <span class="fn">"forInMacro'"</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">`Lean.Parser.Term.forInMacro'</span></span>)</span>)
+    (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.leadingNode">Lean.Parser.leadingNode</a> <span class="fn">`Lean.Parser.Term.forInMacro'</span> <span class="fn">1024</span>
+      (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HAndThen.hAndThen">HAndThen.hAndThen</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.symbol">Lean.Parser.symbol</a> <span class="fn">"for_in'% "</span></span>) <span class="fn">fun <span class="fn">x</span> =>
+        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HAndThen.hAndThen">HAndThen.hAndThen</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.termParser">Lean.Parser.termParser</a> <a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.maxPrec">Lean.Parser.maxPrec</a></span>) <span class="fn">fun <span class="fn">x</span> =>
+          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HAndThen.hAndThen">HAndThen.hAndThen</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.termParser">Lean.Parser.termParser</a> <a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.maxPrec">Lean.Parser.maxPrec</a></span>) <span class="fn">fun <span class="fn">x</span> =>
+            <span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.termParser">Lean.Parser.termParser</a> <a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.maxPrec">Lean.Parser.maxPrec</a></span></span></span></span></span></span></span>)</span>)</span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Parser.Term.arrayRef">
 <div class="def">
 <div class="gh_link">
@@ -3813,7 +3845,7 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 <div class="decl" id="Lean.Parser.Term.namedArgument">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L249-L249">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L250-L250">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3833,28 +3865,6 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
           (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HAndThen.hAndThen">HAndThen.hAndThen</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.symbol">Lean.Parser.symbol</a> <span class="fn">"("</span></span>) <span class="fn">fun <span class="fn">x</span> =>
             <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HAndThen.hAndThen">HAndThen.hAndThen</a> <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.ident">Lean.Parser.Term.ident</a> <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.symbol">Lean.Parser.symbol</a> <span class="fn">" := "</span></span></span></span></span></span>)</span>)
         <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HAndThen.hAndThen">HAndThen.hAndThen</a> <span class="fn">Lean.Parser.termParser</span> <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.symbol">Lean.Parser.symbol</a> <span class="fn">")"</span></span></span></span></span></span>)</span>)</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Parser.Term.ellipsis">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L250-L250">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.ellipsis">Lean.Parser.Term.ellipsis</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.Parser">Lean.Parser.Parser</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.ellipsis">Lean.Parser.Term.ellipsis</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.withAntiquot">Lean.Parser.withAntiquot</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.mkAntiquot">Lean.Parser.mkAntiquot</a> <span class="fn">"ellipsis"</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">`Lean.Parser.Term.ellipsis</span></span>)</span>)
-    (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.leadingNode">Lean.Parser.leadingNode</a> <span class="fn">`Lean.Parser.Term.ellipsis</span> <span class="fn">1024</span> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.symbol">Lean.Parser.symbol</a> <span class="fn">".."</span></span>)</span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -3882,10 +3892,32 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Parser.Term.ellipsis">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L251-L251">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.ellipsis">Lean.Parser.Term.ellipsis</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.Parser">Lean.Parser.Parser</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.ellipsis">Lean.Parser.Term.ellipsis</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.withAntiquot">Lean.Parser.withAntiquot</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.mkAntiquot">Lean.Parser.mkAntiquot</a> <span class="fn">"ellipsis"</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">`Lean.Parser.Term.ellipsis</span></span>)</span>)
+    (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.leadingNode">Lean.Parser.leadingNode</a> <span class="fn">`Lean.Parser.Term.ellipsis</span> <span class="fn">1024</span> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.symbol">Lean.Parser.symbol</a> <span class="fn">".."</span></span>)</span>)</span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Parser.Term.argument">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L251-L254">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L252-L255">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4110,7 +4142,7 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 <div class="decl" id="Lean.Parser.Term.isIdent">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L265-L267">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L266-L268">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4228,27 +4260,6 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Parser.Term.bracketedBinderF">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L279-L279">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.bracketedBinderF">Lean.Parser.Term.bracketedBinderF</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.Parser">Lean.Parser.Parser</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.bracketedBinderF">Lean.Parser.Term.bracketedBinderF</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">Lean.Parser.Term.bracketedBinder</span></span></li>
-</ul>
-</details>
-</div>
-</div>
 <div class="decl" id="Lean.Parser.Level.quot">
 <div class="def">
 <div class="gh_link">
@@ -4273,10 +4284,31 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Parser.Term.bracketedBinderF">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L280-L280">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.bracketedBinderF">Lean.Parser.Term.bracketedBinderF</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.Parser">Lean.Parser.Parser</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.bracketedBinderF">Lean.Parser.Term.bracketedBinderF</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">Lean.Parser.Term.bracketedBinder</span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Parser.Term.macroArg">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L290-L290">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L291-L291">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4297,7 +4329,7 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 <div class="decl" id="Lean.Parser.Term.macroDollarArg">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L291-L291">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L292-L292">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4320,7 +4352,7 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 <div class="decl" id="Lean.Parser.Term.macroLastArg">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L292-L292">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L293-L293">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4334,6 +4366,30 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.macroLastArg">Lean.Parser.Term.macroLastArg</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HOrElse.hOrElse">HOrElse.hOrElse</a> <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.macroDollarArg">Lean.Parser.Term.macroDollarArg</a> <span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.macroArg">Lean.Parser.Term.macroArg</a></span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Parser.Term.dotIdent">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Parser/Term.lean#L300-L300">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.dotIdent">Lean.Parser.Term.dotIdent</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.Parser">Lean.Parser.Parser</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.dotIdent">Lean.Parser.Term.dotIdent</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.withAntiquot">Lean.Parser.withAntiquot</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.mkAntiquot">Lean.Parser.mkAntiquot</a> <span class="fn">"dotIdent"</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">`Lean.Parser.Term.dotIdent</span></span>)</span>)
+    (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.leadingNode">Lean.Parser.leadingNode</a> <span class="fn">`Lean.Parser.Term.dotIdent</span> <span class="fn">1024</span>
+      (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HAndThen.hAndThen">HAndThen.hAndThen</a> (<span class="fn"><a href="/Unicode.lean/Lean/Parser/Basic.html#Lean.Parser.symbol">Lean.Parser.symbol</a> <span class="fn">"."</span></span>) <span class="fn">fun <span class="fn">x</span> =>
+        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#HAndThen.hAndThen">HAndThen.hAndThen</a> <span class="fn">Lean.Parser.checkNoWsBefore</span> <span class="fn">fun <span class="fn">x</span> => <a href="/Unicode.lean/Lean/Parser/Term.html#Lean.Parser.Term.ident">Lean.Parser.Term.ident</a></span></span></span></span>)</span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -4399,6 +4455,9 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -4482,6 +4541,9 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -4559,6 +4621,9 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -4641,6 +4706,9 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -4847,6 +4915,9 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -5293,8 +5364,32 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -5318,6 +5413,9 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -5488,6 +5586,9 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -5513,9 +5614,6 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -5888,6 +5986,15 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -5927,6 +6034,9 @@ work with other <code>rhsParser</code>s (of arity 1).</p></div>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

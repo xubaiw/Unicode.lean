@@ -165,6 +165,9 @@ Documentation</h1>
 <a class="break_within" href="#Lean.PrettyPrinter.Delaborator.delabDIte.delabBranch">Lean.PrettyPrinter.Delaborator.delabDIte.delabBranch</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.PrettyPrinter.Delaborator.delabCond">Lean.PrettyPrinter.Delaborator.delabCond</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.PrettyPrinter.Delaborator.delabNamedPattern">Lean.PrettyPrinter.Delaborator.delabNamedPattern</a>
 </div>
 <div class="nav_link">
@@ -1438,7 +1441,8 @@ moreArgs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arra
               <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Option/Basic.html#Option.isNone">Option.isNone</a> <span class="fn"><span class="fn">st</span>.motive</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
                 let lamMotive ← <span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.getExpr</span>
                 let piMotive ←
-                  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.lambdaTelescope">Lean.Meta.lambdaTelescope</a> <span class="fn">lamMotive</span> <span class="fn">fun <span class="fn">xs</span> <span class="fn">body</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">xs</span> <span class="fn">body</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span></span>
+                  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.lambdaTelescope">Lean.Meta.lambdaTelescope</a> <span class="fn">lamMotive</span> <span class="fn">fun <span class="fn">xs</span> <span class="fn">body</span> =>
+                      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkForallFVars">Lean.Meta.mkForallFVars</a> <span class="fn">xs</span> <span class="fn">body</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>)</span></span></span>
                 let piStx ←
                   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#withTheReader">withTheReader</a> <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr">Lean.PrettyPrinter.Delaborator.SubExpr</a> (<span class="fn">fun <span class="fn">cfg</span> => <span class="fn">{ expr := <span class="fn">piMotive</span>, pos := <span class="fn"><span class="fn">cfg</span>.pos</span> }</span></span>)
                       <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html#Lean.PrettyPrinter.Delaborator.delab">Lean.PrettyPrinter.Delaborator.delab</a></span>
@@ -2203,10 +2207,10 @@ but in the delaborator we assume that bindings are never shadowed.</p></div>
                   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.mkScientificLit">Lean.Syntax.mkScientificLit</a> (<span class="fn"><span class="fn"><span class="fn">mStr</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">"."</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">eStr</span></span>)</span>)</span></span></span>
                 else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.mkScientificLit">Lean.Syntax.mkScientificLit</a> (<span class="fn">(<span class="fn"><span class="fn"><span class="fn">str</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">"e"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">if <span class="fn"><span class="fn">s</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">"-"</span> else <span class="fn">""</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">e</span></span></span>)</span>)</span></span></span></span></span>;
             <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.getArg!">Lean.Expr.getArg!</a> <span class="fn">expr</span> <span class="fn">3</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.getAppNumArgs">Lean.Expr.getAppNumArgs</a> <span class="fn">expr</span></span>)</span> with
-            | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.const">Lean.Expr.const</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a> <span class="fn">"Bool"</span> <span class="fn">x_2</span></span>) <span class="fn">"true"</span> <span class="fn">x_3</span></span>) <span class="fn">x</span> <span class="fn">x_1</span></span> => <span class="fn">do
+            | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.const">Lean.Expr.const</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a> <span class="fn">"Bool"</span> <span class="fn">x</span></span>) <span class="fn">"true"</span> <span class="fn">x_1</span></span>) <span class="fn">x_2</span> <span class="fn">x_3</span></span> => <span class="fn">do
               let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
               <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-            | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.const">Lean.Expr.const</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a> <span class="fn">"Bool"</span> <span class="fn">x_2</span></span>) <span class="fn">"false"</span> <span class="fn">x_3</span></span>) <span class="fn">x</span> <span class="fn">x_1</span></span> => <span class="fn">do
+            | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.const">Lean.Expr.const</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.str">Lean.Name.str</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a> <span class="fn">"Bool"</span> <span class="fn">x</span></span>) <span class="fn">"false"</span> <span class="fn">x_1</span></span>) <span class="fn">x_2</span> <span class="fn">x_3</span></span> => <span class="fn">do
               let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>
               <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
             | <span class="fn">x</span> => <span class="fn">do
@@ -2379,10 +2383,47 @@ function.</p></div>
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.PrettyPrinter.Delaborator.delabCond">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L690-L695">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Builtins.html#Lean.PrettyPrinter.Delaborator.delabCond">Lean.PrettyPrinter.Delaborator.delabCond</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html#Lean.PrettyPrinter.Delaborator.Delab">Lean.PrettyPrinter.Delaborator.Delab</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Builtins.html#Lean.PrettyPrinter.Delaborator.delabCond">Lean.PrettyPrinter.Delaborator.delabCond</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html#Lean.PrettyPrinter.Delaborator.whenPPOption">Lean.PrettyPrinter.Delaborator.whenPPOption</a> <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Options.html#Lean.getPPNotation">Lean.getPPNotation</a> <span class="fn">do
+    let a ← <span class="fn">Lean.PrettyPrinter.Delaborator.SubExpr.getExpr</span>
+    <span class="fn"><a href="/Unicode.lean/Init/Control/Basic.html#guard">guard</a> (<span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.getAppNumArgs">Lean.Expr.getAppNumArgs</a> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">4</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span>
+    let c ←
+      <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withAppFn">Lean.PrettyPrinter.Delaborator.SubExpr.withAppFn</a>
+          (<span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withAppFn">Lean.PrettyPrinter.Delaborator.SubExpr.withAppFn</a>
+            (<span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withAppArg">Lean.PrettyPrinter.Delaborator.SubExpr.withAppArg</a> <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html#Lean.PrettyPrinter.Delaborator.delab">Lean.PrettyPrinter.Delaborator.delab</a></span>)</span>)</span>
+    let t ←
+      <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withAppFn">Lean.PrettyPrinter.Delaborator.SubExpr.withAppFn</a>
+          (<span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withAppArg">Lean.PrettyPrinter.Delaborator.SubExpr.withAppArg</a> <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html#Lean.PrettyPrinter.Delaborator.delab">Lean.PrettyPrinter.Delaborator.delab</a></span>)</span>
+    let e ← <span class="fn"><a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/SubExpr.html#Lean.PrettyPrinter.Delaborator.SubExpr.withAppArg">Lean.PrettyPrinter.Delaborator.SubExpr.withAppArg</a> <a href="/Unicode.lean/Lean/PrettyPrinter/Delaborator/Basic.html#Lean.PrettyPrinter.Delaborator.delab">Lean.PrettyPrinter.Delaborator.delab</a></span>
+    let info ← <span class="fn">Lean.MonadRef.mkInfoFromRefPos</span>
+    let _ ← <span class="fn">Lean.getCurrMacroScope</span>
+    let _ ← <span class="fn">Lean.getMainModule</span>
+    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a>
+        (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.node">Lean.Syntax.node</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.SourceInfo.none">Lean.SourceInfo.none</a> <span class="fn">`boolIfThenElse</span>
+          <span class="fn">#[<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">"bif"</span></span>, <span class="fn">c</span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">"then"</span></span>, <span class="fn">t</span>, <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.atom">Lean.Syntax.atom</a> <span class="fn">info</span> <span class="fn">"else"</span></span>, <span class="fn">e</span>]</span></span>)</span></span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.delabNamedPattern">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L690-L699">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L698-L707">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2422,7 +2463,7 @@ function.</p></div>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.delabSigmaCore">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L702-L713">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L710-L721">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2505,7 +2546,7 @@ function.</p></div>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.delabSigma">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L716-L716">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L724-L724">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2526,7 +2567,7 @@ function.</p></div>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.delabPSigma">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L719-L719">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L727-L727">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2547,7 +2588,7 @@ function.</p></div>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.delabDoElems">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L721-L751">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L729-L759">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -2561,7 +2602,7 @@ function.</p></div>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.delabDoElems.prependAndRec">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L751-L751">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L759-L759">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -2577,7 +2618,7 @@ function.</p></div>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.delabDo">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L754-L758">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L762-L766">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2619,7 +2660,7 @@ function.</p></div>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.reifyName">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L760-L764">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L768-L772">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2633,7 +2674,7 @@ function.</p></div>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.delabNameMkStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L767-L770">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L775-L778">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2657,7 +2698,7 @@ function.</p></div>
 <div class="decl" id="Lean.PrettyPrinter.Delaborator.delabNameMkNum">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L773-L773">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/PrettyPrinter/Delaborator/Builtins.lean#L781-L781">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2736,6 +2777,9 @@ function.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -2819,6 +2863,9 @@ function.</p></div>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -2896,6 +2943,9 @@ function.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -2978,6 +3028,9 @@ function.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -3184,6 +3237,9 @@ function.</p></div>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -3630,8 +3686,32 @@ function.</p></div>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -3655,6 +3735,9 @@ function.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -3825,6 +3908,9 @@ function.</p></div>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -3850,9 +3936,6 @@ function.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -4225,6 +4308,15 @@ function.</p></div>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -4264,6 +4356,9 @@ function.</p></div>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

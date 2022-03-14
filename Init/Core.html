@@ -93,6 +93,9 @@ Documentation</h1>
 <a class="break_within" href="#Thunk.bind">Thunk.bind</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Thunk.sizeOf_eq">Thunk.sizeOf_eq</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Iff">Iff</a>
 </div>
 <div class="nav_link">
@@ -127,6 +130,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#ForIn">ForIn</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#ForIn'">ForIn'</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#DoResultPRBC">DoResultPRBC</a>
@@ -207,6 +213,21 @@ Documentation</h1>
 <a class="break_within" href="#«term_!=_»">«term_!=_»</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#LawfulBEq">LawfulBEq</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#eq_of_beq">eq_of_beq</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#instLawfulBEqBoolInstBEqInstDecidableEqBool">instLawfulBEqBoolInstBEqInstDecidableEqBool</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#instLawfulBEqCharInstBEqInstDecidableEqChar">instLawfulBEqCharInstBEqInstDecidableEqChar</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#instLawfulBEqStringInstBEqInstDecidableEqString">instLawfulBEqStringInstBEqInstDecidableEqString</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#implies">implies</a>
 </div>
 <div class="nav_link">
@@ -271,6 +292,18 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#true_ne_false">true_ne_false</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Bool.of_not_eq_true">Bool.of_not_eq_true</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Bool.of_not_eq_false">Bool.of_not_eq_false</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#ne_of_beq_false">ne_of_beq_false</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#beq_false_of_ne">beq_false_of_ne</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#HEq.ndrec">HEq.ndrec</a>
@@ -372,10 +405,10 @@ Documentation</h1>
 <a class="break_within" href="#Decidable.not_and_iff_or_not">Decidable.not_and_iff_or_not</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#decidableOfDecidableOfIff">decidableOfDecidableOfIff</a>
+<a class="break_within" href="#decidable_of_decidable_of_iff">decidable_of_decidable_of_iff</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#decidableOfDecidableOfEq">decidableOfDecidableOfEq</a>
+<a class="break_within" href="#decidable_of_decidable_of_eq">decidable_of_decidable_of_eq</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#instDecidableForAll">instDecidableForAll</a>
@@ -414,16 +447,16 @@ Documentation</h1>
 <a class="break_within" href="#instInhabitedProp">instInhabitedProp</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#instInhabitedForInStep">instInhabitedForInStep</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#instInhabitedPNonScalar">instInhabitedPNonScalar</a>
+<a class="break_within" href="#instInhabitedNonScalar">instInhabitedNonScalar</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#instInhabitedTrue">instInhabitedTrue</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#instInhabitedNonScalar">instInhabitedNonScalar</a>
+<a class="break_within" href="#instInhabitedForInStep">instInhabitedForInStep</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#instInhabitedPNonScalar">instInhabitedPNonScalar</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#nonempty_of_exists">nonempty_of_exists</a>
@@ -987,10 +1020,35 @@ The value is then stored and not recomputed for all further accesses.</p></div>
 </details>
 </div>
 </div>
+<div class="decl" id="Thunk.sizeOf_eq">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L45-L46">source</a>
+</div>
+<div class="attributes">@[simp]</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Core.html#Thunk.sizeOf_eq">Thunk.sizeOf_eq</a>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{α : <span class="fn">Type u_1</span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf">SizeOf</a> <span class="fn">α</span></span>]</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(a : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Thunk">Thunk</a> <span class="fn">α</span></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf.sizeOf">sizeOf</a> <span class="fn">a</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><span class="fn">1</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf.sizeOf">sizeOf</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#Thunk.get">Thunk.get</a> <span class="fn">a</span></span>)</span></span></span></div></div>
+</div>
+</div>
 <div class="decl" id="Iff">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L48-L49">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L51-L52">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1019,7 +1077,7 @@ mpr : <span class="fn">(a : <span class="fn">b</span>) → <span class="fn">a</s
 <div class="decl" id="«term_<->_»">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L51-L51">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L54-L54">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1041,7 +1099,7 @@ mpr : <span class="fn">(a : <span class="fn">b</span>) → <span class="fn">a</s
 <div class="decl" id="«term_↔_»">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L52-L52">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L55-L55">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1063,7 +1121,7 @@ mpr : <span class="fn">(a : <span class="fn">b</span>) → <span class="fn">a</s
 <div class="decl" id="Sum">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L54-L56">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L57-L59">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -1087,7 +1145,7 @@ inr: <span class="fn">{α : <span class="fn">Type u</span>} → <span class="fn"
 <div class="decl" id="«term_⊕_»">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L58-L58">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L61-L61">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1109,7 +1167,7 @@ inr: <span class="fn">{α : <span class="fn">Type u</span>} → <span class="fn"
 <div class="decl" id="PSum">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L60-L62">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L63-L65">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -1133,7 +1191,7 @@ inr: <span class="fn">{α : <span class="fn">Sort u</span>} → <span class="fn"
 <div class="decl" id="«term_⊕'_»">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L64-L64">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L67-L67">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1155,7 +1213,7 @@ inr: <span class="fn">{α : <span class="fn">Sort u</span>} → <span class="fn"
 <div class="decl" id="Sigma">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L66-L68">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L69-L71">source</a>
 </div>
 <div class="attributes">@[unbox]</div>
 <div class="decl_header">
@@ -1182,7 +1240,7 @@ snd : <span class="fn"><span class="fn">β</span> <span class="fn">fst</span></s
 <div class="decl" id="PSigma">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L72-L74">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L75-L77">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1208,7 +1266,7 @@ snd : <span class="fn"><span class="fn">β</span> <span class="fn">fst</span></s
 <div class="decl" id="Exists">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L76-L77">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L79-L80">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -1232,7 +1290,7 @@ intro: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {p : <span cla
 <div class="decl" id="ForInStep">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L80-L82">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L83-L85">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -1254,7 +1312,7 @@ yield: <span class="fn">{α : <span class="fn">Type u</span>} → <span class="f
 <div class="decl" id="ForIn">
 <div class="class">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L84-L85">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L87-L88">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">class</span>
@@ -1319,6 +1377,9 @@ forIn : <span class="fn">{β : <span class="fn">Type u₁</span>} → <span clas
 <a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.instForInArray">Array.instForInArray</a>
 </li>
 <li>
+<a href="/Unicode.lean/Init/NotationExtra.html#Lean.instForInLoopUnit">Lean.instForInLoopUnit</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Level.html#Lean.instForInMVarIdMapProdMVarId">Lean.instForInMVarIdMapProdMVarId</a>
 </li>
 <li>
@@ -1337,10 +1398,44 @@ forIn : <span class="fn">{β : <span class="fn">Type u₁</span>} → <span clas
 </details>
 </div>
 </div>
+<div class="decl" id="ForIn'">
+<div class="class">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L92-L93">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">class</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Core.html#ForIn'">ForIn'</a>
+</span>
+<span class="decl_args">
+<span class="fn">(m : <span class="fn"><span class="fn">Type u₁</span> → <span class="fn">Type u₂</span></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(ρ : <span class="fn">Type u</span>)</span></span>
+<span class="decl_args">
+<span class="fn">(α : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#outParam">outParam</a> (<span class="fn">Type v</span>)</span>)</span></span>
+<span class="decl_args">
+<span class="fn">(d : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#outParam">outParam</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Membership">Membership</a> <span class="fn">α</span> <span class="fn">ρ</span></span>)</span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type (max (max (max u (u₁ + 1)) u₂) v)</span></div></div>
+<ul class="structure_fields" id="ForIn'.mk">
+<li class="structure_field" id="ForIn'.forIn'">
+forIn' : <span class="fn">{β : <span class="fn">Type u₁</span>} → <span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Monad">Monad</a> <span class="fn">m</span></span>] → <span class="fn">(x : <span class="fn">ρ</span>) → <span class="fn"><span class="fn">β</span> → <span class="fn">(<span class="fn">(a : <span class="fn">α</span>) → <span class="fn"><span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Membership.mem">∈</a> <span class="fn">x</span></span> → <span class="fn"><span class="fn">β</span> → <span class="fn"><span class="fn">m</span> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep">ForInStep</a> <span class="fn">β</span></span>)</span></span></span></span>) → <span class="fn"><span class="fn">m</span> <span class="fn">β</span></span></span></span></span></span></span></li>
+</ul>
+<details class="instances">
+<summary>Instances</summary>
+<ul>
+<li>
+<a href="/Unicode.lean/Init/Data/List/Control.html#List.instForIn'ListInferInstanceMembershipInstMembershipList">List.instForIn'ListInferInstanceMembershipInstMembershipList</a>
+</li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="DoResultPRBC">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L90-L94">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L99-L103">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -1370,7 +1465,7 @@ continue: <span class="fn">{α β σ : <span class="fn">Type u</span>} → <span
 <div class="decl" id="DoResultPR">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L97-L99">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L106-L108">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -1396,7 +1491,7 @@ return: <span class="fn">{α β σ : <span class="fn">Type u</span>} → <span c
 <div class="decl" id="DoResultBC">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L102-L104">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L111-L113">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -1418,7 +1513,7 @@ continue: <span class="fn">{σ : <span class="fn">Type u</span>} → <span class
 <div class="decl" id="DoResultSBC">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L107-L110">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L116-L119">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -1444,7 +1539,7 @@ continue: <span class="fn">{α σ : <span class="fn">Type u</span>} → <span cl
 <div class="decl" id="HasEquiv">
 <div class="class">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L112-L113">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L121-L122">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">class</span>
@@ -1472,7 +1567,7 @@ Equiv : <span class="fn"><span class="fn">α</span> → <span class="fn">α</spa
 <div class="decl" id="«term_≈_»">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L115-L115">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L124-L124">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1494,7 +1589,7 @@ Equiv : <span class="fn"><span class="fn">α</span> → <span class="fn">α</spa
 <div class="decl" id="EmptyCollection">
 <div class="class">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L117-L118">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L126-L127">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">class</span>
@@ -1588,7 +1683,7 @@ emptyCollection : <span class="fn">α</span></li>
 <div class="decl" id="«term{}»">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L120-L120">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L129-L129">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1610,7 +1705,7 @@ emptyCollection : <span class="fn">α</span></li>
 <div class="decl" id="«term∅»">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L121-L121">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L130-L130">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1631,7 +1726,7 @@ emptyCollection : <span class="fn">α</span></li>
 <div class="decl" id="Task">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L124-L126">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L133-L135">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1656,7 +1751,7 @@ get : <span class="fn">α</span></li>
 <div class="decl" id="instInhabitedTask">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L126-L126">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L135-L135">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1677,7 +1772,7 @@ get : <span class="fn">α</span></li>
 <div class="decl" id="Task.Priority">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L133-L133">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L142-L142">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1699,7 +1794,7 @@ get : <span class="fn">α</span></li>
 <div class="decl" id="Task.Priority.default">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L134-L134">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L143-L143">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1720,7 +1815,7 @@ get : <span class="fn">α</span></li>
 <div class="decl" id="Task.Priority.max">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L136-L136">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L145-L145">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1741,7 +1836,7 @@ get : <span class="fn">α</span></li>
 <div class="decl" id="Task.Priority.dedicated">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L141-L141">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L150-L150">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1764,7 +1859,7 @@ non-dedicated workers than the number of cores to reduce context switches.</p></
 <div class="decl" id="Task.spawn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L144-L145">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L153-L154">source</a>
 </div>
 <div class="attributes">@[noinline, extern  lean_task_spawn]</div>
 <div class="decl_header">
@@ -1794,7 +1889,7 @@ non-dedicated workers than the number of cores to reduce context switches.</p></
 <div class="decl" id="Task.map">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L148-L149">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L157-L158">source</a>
 </div>
 <div class="attributes">@[noinline, extern  lean_task_map]</div>
 <div class="decl_header">
@@ -1830,7 +1925,7 @@ non-dedicated workers than the number of cores to reduce context switches.</p></
 <div class="decl" id="Task.bind">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L152-L153">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L161-L162">source</a>
 </div>
 <div class="attributes">@[noinline, extern  lean_task_bind]</div>
 <div class="decl_header">
@@ -1866,7 +1961,7 @@ non-dedicated workers than the number of cores to reduce context switches.</p></
 <div class="decl" id="NonScalar">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L158-L159">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L167-L168">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1884,7 +1979,7 @@ val : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="PNonScalar">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L162-L163">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L171-L172">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -1902,7 +1997,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Nat.add_zero">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L165-L165">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L174-L174">source</a>
 </div>
 <div class="attributes">@[simp]</div>
 <div class="decl_header">
@@ -1919,7 +2014,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="optParam_eq">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L167-L167">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L176-L176">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -1937,7 +2032,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="strictOr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L171-L171">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L180-L180">source</a>
 </div>
 <div class="attributes">@[extern  c inline "#1 || #2"]</div>
 <div class="decl_header">
@@ -1963,7 +2058,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="strictAnd">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L172-L172">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L181-L181">source</a>
 </div>
 <div class="attributes">@[extern  c inline "#1 && #2"]</div>
 <div class="decl_header">
@@ -1989,7 +2084,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="bne">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L174-L175">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L183-L184">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2023,7 +2118,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="«term_!=_»">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L177-L177">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L186-L186">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2042,10 +2137,161 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 </details>
 </div>
 </div>
+<div class="decl" id="LawfulBEq">
+<div class="class">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L188-L190">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">class</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Core.html#LawfulBEq">LawfulBEq</a>
+</span>
+<span class="decl_args">
+<span class="fn">(α : <span class="fn">Type u</span>)</span></span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#BEq">BEq</a> <span class="fn">α</span></span>]</span></span>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Prop</span></div></div>
+<ul class="structure_fields" id="LawfulBEq.mk">
+<li class="structure_field" id="LawfulBEq.eq_of_beq">
+eq_of_beq : <span class="fn">∀ (a b : <span class="fn">α</span>), <span class="fn"><span class="fn">(<span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">b</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> → <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">b</span></span></span></span></li>
+<li class="structure_field" id="LawfulBEq.rfl">
+rfl : <span class="fn">∀ (a : <span class="fn">α</span>), <span class="fn">(<span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">a</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></li>
+</ul>
+<details class="instances">
+<summary>Instances</summary>
+<ul>
+<li>
+<a href="/Unicode.lean/Init/Data/List/Basic.html#List.instLawfulBEqListInstBEqList">List.instLawfulBEqListInstBEqList</a>
+</li>
+<li>
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html#Nat.Linear.instLawfulBEqPolyCnstrInstBEqPolyCnstr">Nat.Linear.instLawfulBEqPolyCnstrInstBEqPolyCnstr</a>
+</li>
+<li>
+<a href="/Unicode.lean/Init/Data/Nat/Basic.html#Nat.instLawfulBEqNatInstBEqNat">Nat.instLawfulBEqNatInstBEqNat</a>
+</li>
+<li>
+<a href="/Unicode.lean/Init/Data/Prod.html#instLawfulBEqProdInstBEqProd">instLawfulBEqProdInstBEqProd</a>
+</li>
+<li>
+<a href="/Unicode.lean/Init/Core.html#instLawfulBEqBoolInstBEqInstDecidableEqBool">instLawfulBEqBoolInstBEqInstDecidableEqBool</a>
+</li>
+<li>
+<a href="/Unicode.lean/Init/Core.html#instLawfulBEqStringInstBEqInstDecidableEqString">instLawfulBEqStringInstBEqInstDecidableEqString</a>
+</li>
+<li>
+<a href="/Unicode.lean/Init/Core.html#instLawfulBEqCharInstBEqInstDecidableEqChar">instLawfulBEqCharInstBEqInstDecidableEqChar</a>
+</li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="eq_of_beq">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L192-L193">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Core.html#eq_of_beq">eq_of_beq</a>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{α : <span class="fn">Type u_1</span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#BEq">BEq</a> <span class="fn">α</span></span>]</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Init/Core.html#LawfulBEq">LawfulBEq</a> <span class="fn">α</span></span>]</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{a : <span class="fn">α</span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{b : <span class="fn">α</span>}</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(h : <span class="fn">(<span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">b</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">b</span></span></div></div>
+</div>
+</div>
+<div class="decl" id="instLawfulBEqBoolInstBEqInstDecidableEqBool">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L195-L197">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">noncomputable instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Core.html#instLawfulBEqBoolInstBEqInstDecidableEqBool">instLawfulBEqBoolInstBEqInstDecidableEqBool</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Core.html#LawfulBEq">LawfulBEq</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Init/Core.html#instLawfulBEqBoolInstBEqInstDecidableEqBool">instLawfulBEqBoolInstBEqInstDecidableEqBool</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Core.html#instLawfulBEqBoolInstBEqInstDecidableEqBool.proof_1">instLawfulBEqBoolInstBEqInstDecidableEqBool.proof_1</a></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="instLawfulBEqCharInstBEqInstDecidableEqChar">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L199-L201">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">noncomputable instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Core.html#instLawfulBEqCharInstBEqInstDecidableEqChar">instLawfulBEqCharInstBEqInstDecidableEqChar</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Core.html#LawfulBEq">LawfulBEq</a> <a href="/Unicode.lean/Init/Prelude.html#Char">Char</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Init/Core.html#instLawfulBEqCharInstBEqInstDecidableEqChar">instLawfulBEqCharInstBEqInstDecidableEqChar</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Core.html#instLawfulBEqCharInstBEqInstDecidableEqChar.proof_1">instLawfulBEqCharInstBEqInstDecidableEqChar.proof_1</a></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="instLawfulBEqStringInstBEqInstDecidableEqString">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L203-L205">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">noncomputable instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Core.html#instLawfulBEqStringInstBEqInstDecidableEqString">instLawfulBEqStringInstBEqInstDecidableEqString</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Core.html#LawfulBEq">LawfulBEq</a> <a href="/Unicode.lean/Init/Prelude.html#String">String</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Init/Core.html#instLawfulBEqStringInstBEqInstDecidableEqString">instLawfulBEqStringInstBEqInstDecidableEqString</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Core.html#instLawfulBEqStringInstBEqInstDecidableEqString.proof_1">instLawfulBEqStringInstBEqInstDecidableEqString.proof_1</a></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="implies">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L181-L181">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L209-L209">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -2070,7 +2316,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="implies.trans">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L183-L184">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L211-L212">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2100,7 +2346,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="trivial">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L186-L186">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L214-L214">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -2121,7 +2367,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="mt">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L188-L189">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L216-L217">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2147,7 +2393,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="not_false">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L191-L191">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L219-L219">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2161,7 +2407,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="not_not_intro">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L193-L194">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L221-L222">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2181,7 +2427,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="proofIrrel">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L197-L197">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L225-L225">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2203,7 +2449,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="id.def">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L199-L199">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L227-L227">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2223,7 +2469,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Eq.mp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L201-L202">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L229-L230">source</a>
 </div>
 <div class="attributes">@[macroInline]</div>
 <div class="decl_header">
@@ -2257,7 +2503,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Eq.mpr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L204-L205">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L232-L233">source</a>
 </div>
 <div class="attributes">@[macroInline]</div>
 <div class="decl_header">
@@ -2291,7 +2537,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Eq.substr">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L207-L208">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L235-L236">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2325,7 +2571,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="cast_eq">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L210-L211">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L238-L239">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2347,7 +2593,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Ne">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L213-L214">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L241-L242">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -2376,7 +2622,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="«term_≠_»">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L216-L216">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L244-L244">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2398,7 +2644,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Ne.intro">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L222-L222">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L250-L250">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2426,7 +2672,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Ne.elim">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L224-L224">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L252-L252">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2454,7 +2700,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Ne.irrefl">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L226-L226">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L254-L254">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2478,7 +2724,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Ne.symm">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L228-L229">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L256-L257">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2506,7 +2752,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="false_of_ne">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L231-L231">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L259-L259">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2528,7 +2774,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="ne_false_of_self">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L233-L234">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L261-L262">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2546,7 +2792,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="ne_true_of_not">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L236-L239">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L264-L267">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2564,7 +2810,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="true_ne_false">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L241-L242">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L269-L270">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2575,10 +2821,118 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Not">¬</a><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#True">True</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#False">False</a></span></span></div></div>
 </div>
 </div>
+<div class="decl" id="Bool.of_not_eq_true">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L274-L276">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Core.html#Bool.of_not_eq_true">Bool.of_not_eq_true</a>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{b : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a>}</span></span>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Not">¬</a><span class="fn"><span class="fn">b</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span> → <span class="fn"><span class="fn">b</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span></span></div></div>
+</div>
+</div>
+<div class="decl" id="Bool.of_not_eq_false">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L278-L280">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Core.html#Bool.of_not_eq_false">Bool.of_not_eq_false</a>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{b : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a>}</span></span>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Not">¬</a><span class="fn"><span class="fn">b</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span></span> → <span class="fn"><span class="fn">b</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></div></div>
+</div>
+</div>
+<div class="decl" id="ne_of_beq_false">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L282-L283">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Core.html#ne_of_beq_false">ne_of_beq_false</a>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{α : <span class="fn">Type u_1</span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#BEq">BEq</a> <span class="fn">α</span></span>]</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Init/Core.html#LawfulBEq">LawfulBEq</a> <span class="fn">α</span></span>]</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{a : <span class="fn">α</span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{b : <span class="fn">α</span>}</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(h : <span class="fn">(<span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">b</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Core.html#Ne">≠</a> <span class="fn">b</span></span></div></div>
+</div>
+</div>
+<div class="decl" id="beq_false_of_ne">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L285-L288">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Core.html#beq_false_of_ne">beq_false_of_ne</a>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{α : <span class="fn">Type u_1</span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#BEq">BEq</a> <span class="fn">α</span></span>]</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Init/Core.html#LawfulBEq">LawfulBEq</a> <span class="fn">α</span></span>]</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{a : <span class="fn">α</span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{b : <span class="fn">α</span>}</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(h : <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Core.html#Ne">≠</a> <span class="fn">b</span></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">(<span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">b</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span></div></div>
+</div>
+</div>
 <div class="decl" id="HEq.ndrec">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L249-L250">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L293-L294">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2616,7 +2970,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="HEq.ndrecOn">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L252-L253">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L296-L297">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2654,7 +3008,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="HEq.elim">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L255-L256">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L299-L300">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2688,7 +3042,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="HEq.subst">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L258-L259">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L302-L303">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2726,7 +3080,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="HEq.symm">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L261-L262">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L305-L306">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2758,7 +3112,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="heq_of_eq">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L264-L265">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L308-L309">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2786,7 +3140,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="HEq.trans">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L267-L268">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L311-L312">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2828,7 +3182,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="heq_of_heq_of_eq">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L270-L271">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L314-L315">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2866,7 +3220,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="heq_of_eq_of_heq">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L273-L274">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L317-L318">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2904,7 +3258,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="type_eq_of_heq">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L276-L277">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L320-L321">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -2943,7 +3297,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="eqRec_heq">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L281-L282">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L325-L326">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -2977,7 +3331,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="heq_of_eqRec_eq">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L284-L287">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L328-L331">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3011,7 +3365,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="cast_heq">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L289-L290">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L333-L334">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3037,7 +3391,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="iff_iff_implies_and_implies">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L294-L295">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L338-L339">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3055,7 +3409,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Iff.refl">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L297-L298">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L341-L342">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3071,7 +3425,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Iff.rfl">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L300-L301">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L344-L345">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3089,7 +3443,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Iff.trans">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L303-L306">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L347-L350">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3119,7 +3473,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Iff.symm">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L308-L309">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L352-L353">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3143,7 +3497,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Iff.comm">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L311-L312">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L355-L356">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3165,7 +3519,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Exists.elim">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L316-L318">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L360-L363">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3195,7 +3549,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="decide_true_eq_true">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L322-L325">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L367-L370">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3211,7 +3565,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="decide_false_eq_false">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L327-L330">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L372-L375">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3227,7 +3581,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="toBoolUsing">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L333-L334">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L378-L379">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -3255,7 +3609,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="toBoolUsing_eq_true">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L336-L337">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L381-L382">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3277,7 +3631,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="ofBoolUsing_eq_true">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L339-L340">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L384-L385">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3301,7 +3655,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="ofBoolUsing_eq_false">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L342-L343">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L387-L388">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3325,7 +3679,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="instDecidableTrue">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L345-L346">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L390-L391">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -3346,7 +3700,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="instDecidableFalse">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L348-L349">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L393-L394">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -3367,7 +3721,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Decidable.byCases">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L354-L357">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L399-L402">source</a>
 </div>
 <div class="attributes">@[macroInline]</div>
 <div class="decl_header">
@@ -3407,7 +3761,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Decidable.em">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L359-L360">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L404-L405">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3427,7 +3781,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Decidable.byContradiction">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L362-L363">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L407-L408">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3451,7 +3805,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Decidable.of_not_not">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L365-L366">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L410-L411">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3473,7 +3827,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Decidable.not_and_iff_or_not">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L368-L376">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L413-L421">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3496,16 +3850,16 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl_type"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Not">¬</a>(<span class="fn"><span class="fn">p</span> <a href="/Unicode.lean/Init/Prelude.html#And">∧</a> <span class="fn">q</span></span>)</span> <a href="/Unicode.lean/Init/Core.html#Iff">↔</a> <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Not">¬</a><span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Or">∨</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Not">¬</a><span class="fn">q</span></span></span></span></div></div>
 </div>
 </div>
-<div class="decl" id="decidableOfDecidableOfIff">
+<div class="decl" id="decidable_of_decidable_of_iff">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L382-L386">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L427-L431">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
 <span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Init/Core.html#decidableOfDecidableOfIff">decidableOfDecidableOfIff</a>
+<a class="break_within" href="/Unicode.lean/Init/Core.html#decidable_of_decidable_of_iff">decidable_of_decidable_of_iff</a>
 </span>
 <span class="impl_arg">
 <span class="decl_args">
@@ -3515,8 +3869,10 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <span class="decl_args">
 <span class="fn">{q : <span class="fn">Prop</span>}</span></span>
 </span>
+<span class="impl_arg">
 <span class="decl_args">
-<span class="fn">(hp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> <span class="fn">p</span></span>)</span></span>
+<span class="fn">[hp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> <span class="fn">p</span></span>]</span></span>
+</span>
 <span class="decl_args">
 <span class="fn">(h : <span class="fn"><span class="fn">p</span> <a href="/Unicode.lean/Init/Core.html#Iff">↔</a> <span class="fn">q</span></span>)</span></span>
 <span class="decl_args">:</span>
@@ -3525,21 +3881,21 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Core.html#decidableOfDecidableOfIff">decidableOfDecidableOfIff</a> <span class="fn">hp</span> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">if hp : <span class="fn">p</span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.isTrue">isTrue</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#Iff.mp">Iff.mp</a> <span class="fn">h</span> <span class="fn">hp</span></span>)</span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.isFalse">isFalse</a> (_ : <span class="fn"><span class="fn">q</span> → <a href="/Unicode.lean/Init/Prelude.html#False">False</a></span>)</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Core.html#decidable_of_decidable_of_iff">decidable_of_decidable_of_iff</a> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">if hp : <span class="fn">p</span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.isTrue">isTrue</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#Iff.mp">Iff.mp</a> <span class="fn">h</span> <span class="fn">hp</span></span>)</span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.isFalse">isFalse</a> (_ : <span class="fn"><span class="fn">q</span> → <a href="/Unicode.lean/Init/Prelude.html#False">False</a></span>)</span></span></span></li>
 </ul>
 </details>
 </div>
 </div>
-<div class="decl" id="decidableOfDecidableOfEq">
+<div class="decl" id="decidable_of_decidable_of_eq">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L388-L389">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L433-L434">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
 <span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Init/Core.html#decidableOfDecidableOfEq">decidableOfDecidableOfEq</a>
+<a class="break_within" href="/Unicode.lean/Init/Core.html#decidable_of_decidable_of_eq">decidable_of_decidable_of_eq</a>
 </span>
 <span class="impl_arg">
 <span class="decl_args">
@@ -3549,8 +3905,10 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <span class="decl_args">
 <span class="fn">{q : <span class="fn">Prop</span>}</span></span>
 </span>
+<span class="impl_arg">
 <span class="decl_args">
-<span class="fn">(hp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> <span class="fn">p</span></span>)</span></span>
+<span class="fn">[hp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> <span class="fn">p</span></span>]</span></span>
+</span>
 <span class="decl_args">
 <span class="fn">(h : <span class="fn"><span class="fn">p</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">q</span></span>)</span></span>
 <span class="decl_args">:</span>
@@ -3559,7 +3917,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Core.html#decidableOfDecidableOfEq">decidableOfDecidableOfEq</a> <span class="fn">hp</span> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><span class="fn">h</span> ▸ <span class="fn">hp</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Core.html#decidable_of_decidable_of_eq">decidable_of_decidable_of_eq</a> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><span class="fn">h</span> ▸ <span class="fn">hp</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -3567,7 +3925,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="instDecidableForAll">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L392-L396">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L437-L441">source</a>
 </div>
 <div class="attributes">@[macroInline]</div>
 <div class="decl_header">
@@ -3606,7 +3964,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="instDecidableIff">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L398-L408">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L443-L453">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -3644,7 +4002,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="if_pos">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L412-L415">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L457-L460">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3657,7 +4015,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 </span>
 <span class="impl_arg">
 <span class="decl_args">
-<span class="fn">[h : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> <span class="fn">c</span></span>]</span></span>
+<span class="fn">{h : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> <span class="fn">c</span></span>}</span></span>
 </span>
 <span class="decl_args">
 <span class="fn">(hc : <span class="fn">c</span>)</span></span>
@@ -3680,7 +4038,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="if_neg">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L417-L420">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L462-L465">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3693,7 +4051,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 </span>
 <span class="impl_arg">
 <span class="decl_args">
-<span class="fn">[h : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> <span class="fn">c</span></span>]</span></span>
+<span class="fn">{h : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> <span class="fn">c</span></span>}</span></span>
 </span>
 <span class="decl_args">
 <span class="fn">(hnc : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Not">¬</a><span class="fn">c</span></span>)</span></span>
@@ -3716,7 +4074,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="dif_pos">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L422-L425">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L467-L470">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3729,7 +4087,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 </span>
 <span class="impl_arg">
 <span class="decl_args">
-<span class="fn">[h : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> <span class="fn">c</span></span>]</span></span>
+<span class="fn">{h : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> <span class="fn">c</span></span>}</span></span>
 </span>
 <span class="decl_args">
 <span class="fn">(hc : <span class="fn">c</span>)</span></span>
@@ -3752,7 +4110,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="dif_neg">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L427-L430">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L472-L475">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3765,7 +4123,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 </span>
 <span class="impl_arg">
 <span class="decl_args">
-<span class="fn">[h : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> <span class="fn">c</span></span>]</span></span>
+<span class="fn">{h : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> <span class="fn">c</span></span>}</span></span>
 </span>
 <span class="decl_args">
 <span class="fn">(hnc : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Not">¬</a><span class="fn">c</span></span>)</span></span>
@@ -3788,7 +4146,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="dif_eq_if">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L433-L436">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L478-L481">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -3799,7 +4157,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <span class="fn">(c : <span class="fn">Prop</span>)</span></span>
 <span class="impl_arg">
 <span class="decl_args">
-<span class="fn">[h : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> <span class="fn">c</span></span>]</span></span>
+<span class="fn">{h : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable">Decidable</a> <span class="fn">c</span></span>}</span></span>
 </span>
 <span class="impl_arg">
 <span class="decl_args">
@@ -3816,7 +4174,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="instDecidableIteProp">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L438-L441">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L483-L486">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -3863,7 +4221,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="instDecidableDitePropNot">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L443-L446">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L488-L491">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -3910,7 +4268,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="noConfusionTypeEnum">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L449-L452">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L494-L497">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -3952,7 +4310,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="noConfusionEnum">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L454-L459">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L499-L504">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -4002,7 +4360,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="instInhabitedProp">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L463-L464">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L508-L509">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -4020,10 +4378,52 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 </details>
 </div>
 </div>
+<div class="decl" id="instInhabitedNonScalar">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L511-L511">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Core.html#instInhabitedNonScalar">instInhabitedNonScalar</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Init/Core.html#NonScalar">NonScalar</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Init/Core.html#instInhabitedNonScalar">instInhabitedNonScalar</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn">{ val := <span class="fn">default</span> }</span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="instInhabitedTrue">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L511-L511">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Core.html#instInhabitedTrue">instInhabitedTrue</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Init/Prelude.html#True">True</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Init/Core.html#instInhabitedTrue">instInhabitedTrue</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <a href="/Unicode.lean/Init/Prelude.html#True.intro">True.intro</a> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="instInhabitedForInStep">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L466-L466">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L511-L511">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -4044,7 +4444,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="instInhabitedPNonScalar">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L466-L466">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L511-L511">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -4062,52 +4462,10 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 </details>
 </div>
 </div>
-<div class="decl" id="instInhabitedTrue">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L466-L466">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Init/Core.html#instInhabitedTrue">instInhabitedTrue</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Init/Prelude.html#True">True</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Init/Core.html#instInhabitedTrue">instInhabitedTrue</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <a href="/Unicode.lean/Init/Prelude.html#True.intro">True.intro</a> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="instInhabitedNonScalar">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L466-L466">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Init/Core.html#instInhabitedNonScalar">instInhabitedNonScalar</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Init/Core.html#NonScalar">NonScalar</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Init/Core.html#instInhabitedNonScalar">instInhabitedNonScalar</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn">{ val := <span class="fn">default</span> }</span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
 <div class="decl" id="nonempty_of_exists">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L468-L469">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L513-L514">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -4129,7 +4487,7 @@ mk: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> → <
 <div class="decl" id="Subsingleton">
 <div class="class">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L473-L474">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L518-L519">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">class</span>
@@ -4177,7 +4535,7 @@ allEq : <span class="fn">∀ (a b : <span class="fn">α</span>), <span class="fn
 <div class="decl" id="Subsingleton.elim">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L476-L477">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L521-L522">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -4210,7 +4568,7 @@ allEq : <span class="fn">∀ (a b : <span class="fn">α</span>), <span class="fn
 <div class="decl" id="Subsingleton.helim">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L479-L482">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L524-L527">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -4249,7 +4607,7 @@ allEq : <span class="fn">∀ (a b : <span class="fn">α</span>), <span class="fn
 <div class="decl" id="instSubsingleton">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L484-L485">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L529-L530">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable instance</span>
@@ -4272,7 +4630,7 @@ allEq : <span class="fn">∀ (a b : <span class="fn">α</span>), <span class="fn
 <div class="decl" id="instSubsingletonDecidable">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L487-L494">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L532-L539">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable instance</span>
@@ -4295,7 +4653,7 @@ allEq : <span class="fn">∀ (a b : <span class="fn">α</span>), <span class="fn
 <div class="decl" id="recSubsingleton">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L496-L505">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L541-L550">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -4333,7 +4691,7 @@ allEq : <span class="fn">∀ (a b : <span class="fn">α</span>), <span class="fn
 <div class="decl" id="Equivalence">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L507-L510">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L552-L555">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -4361,7 +4719,7 @@ trans : <span class="fn">{x y z : <span class="fn">α</span>} → <span class="f
 <div class="decl" id="emptyRelation">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L512-L513">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L557-L558">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -4390,7 +4748,7 @@ trans : <span class="fn">{x y z : <span class="fn">α</span>} → <span class="f
 <div class="decl" id="Subrelation">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L515-L516">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L560-L561">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -4419,7 +4777,7 @@ trans : <span class="fn">{x y z : <span class="fn">α</span>} → <span class="f
 <div class="decl" id="InvImage">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L518-L519">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L563-L564">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -4452,7 +4810,7 @@ trans : <span class="fn">{x y z : <span class="fn">α</span>} → <span class="f
 <div class="decl" id="TC">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L521-L523">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L566-L568">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -4478,7 +4836,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="Subtype.existsOfSubtype">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L528-L529">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L573-L574">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -4507,7 +4865,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="Subtype.eq">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L533-L534">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L578-L579">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -4537,7 +4895,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="Subtype.eta">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L536-L538">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L581-L583">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -4563,7 +4921,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="Subtype.instInhabitedSubtype">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L540-L541">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L585-L586">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -4598,7 +4956,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="Subtype.instDecidableEqSubtype">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L543-L546">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L588-L591">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -4636,7 +4994,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="Sum.inhabitedLeft">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L555-L556">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L600-L601">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -4669,7 +5027,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="Sum.inhabitedRight">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L558-L559">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L603-L604">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -4702,7 +5060,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="instDecidableEqSum">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L561-L570">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L606-L615">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -4745,7 +5103,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="instInhabitedProd">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L576-L577">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L621-L622">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -4782,7 +5140,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="instDecidableEqProd">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L579-L586">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L624-L631">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -4828,7 +5186,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="instBEqProd">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L588-L589">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L633-L634">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -4869,7 +5227,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="instLTProd">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L591-L592">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L636-L637">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -4906,7 +5264,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="prodHasDecidableLt">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L594-L598">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L639-L643">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -4963,7 +5321,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="Prod.lt_def">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L600-L601">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L645-L646">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -4997,7 +5355,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="Prod.ext">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L603-L604">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L648-L649">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5021,7 +5379,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="Prod.map">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L606-L608">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L651-L653">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5063,7 +5421,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="ex_of_PSigma">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L612-L613">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L657-L658">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5085,7 +5443,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="PSigma.eta">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L615-L619">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L660-L664">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5127,7 +5485,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="PUnit.subsingleton">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L623-L624">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L668-L669">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5145,7 +5503,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="PUnit.eq_punit">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L626-L627">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L671-L672">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5161,7 +5519,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="instSubsingletonPUnit">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L629-L630">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L674-L675">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable instance</span>
@@ -5182,7 +5540,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="instInhabitedPUnit">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L632-L633">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L677-L678">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -5203,7 +5561,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="instDecidableEqPUnit">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L635-L636">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L680-L681">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -5224,7 +5582,7 @@ trans: <span class="fn">∀ {α : <span class="fn">Sort u</span>} {r : <span cla
 <div class="decl" id="Setoid">
 <div class="class">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L640-L642">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L685-L687">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">class</span>
@@ -5254,7 +5612,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="instHasEquiv">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L644-L645">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L689-L690">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -5283,7 +5641,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Setoid.refl">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L651-L652">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L696-L697">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5307,7 +5665,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Setoid.symm">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L654-L655">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L699-L700">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5339,7 +5697,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Setoid.trans">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L657-L658">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L702-L703">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5377,7 +5735,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="propext">
 <div class="axiom">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L665-L665">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L710-L710">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">axiom</span>
@@ -5399,7 +5757,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Eq.propIntro">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L667-L668">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L712-L713">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5425,7 +5783,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="instDecidableEqProp">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L671-L674">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L716-L719">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -5460,7 +5818,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Iff.subst">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L695-L696">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L740-L741">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5490,7 +5848,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quot.sound">
 <div class="axiom">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L699-L699">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L744-L744">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">axiom</span>
@@ -5520,7 +5878,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quot.liftBeta">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L701-L706">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L746-L751">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5552,7 +5910,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quot.indBeta">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L708-L712">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L753-L757">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5582,7 +5940,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quot.liftOn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L714-L715">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L759-L760">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -5622,7 +5980,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quot.inductionOn">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L717-L721">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L762-L766">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5652,7 +6010,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quot.exists_rep">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L723-L724">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L768-L769">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5676,7 +6034,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quot.indep">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L732-L733">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L777-L778">source</a>
 </div>
 <div class="attributes">@[macroInline]</div>
 <div class="decl_header">
@@ -5714,7 +6072,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quot.indepCoherent">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L735-L739">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L780-L784">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5748,7 +6106,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quot.liftIndepPr1">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L741-L747">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L786-L792">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -5780,7 +6138,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quot.rec">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L749-L753">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L794-L798">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -5821,7 +6179,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quot.recOn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L755-L760">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L800-L805">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -5861,7 +6219,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quot.recOnSubsingleton">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L762-L769">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L807-L814">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -5903,7 +6261,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quot.hrecOn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L771-L778">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L816-L823">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -5943,7 +6301,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L783-L784">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L828-L829">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -5970,7 +6328,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.mk">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L789-L790">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L834-L835">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6000,7 +6358,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.mk'">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L792-L793">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L837-L838">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -6031,7 +6389,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.sound">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L795-L796">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L840-L841">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -6068,7 +6426,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.lift">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L798-L799">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L843-L844">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6104,7 +6462,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.ind">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L801-L802">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L846-L847">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -6130,7 +6488,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.liftOn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L804-L805">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L849-L850">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6170,7 +6528,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.inductionOn">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L807-L811">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L852-L856">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -6200,7 +6558,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.exists_rep">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L813-L814">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L858-L859">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -6224,7 +6582,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.rec">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L822-L827">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L867-L872">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6264,7 +6622,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.recOn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L829-L834">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L874-L879">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6304,7 +6662,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.recOnSubsingleton">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L836-L841">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L881-L886">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6346,7 +6704,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.hrecOn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L843-L848">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L888-L893">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6386,7 +6744,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.lift₂">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L856-L864">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L901-L909">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6441,7 +6799,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.liftOn₂">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L866-L872">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L911-L917">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6491,7 +6849,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.ind₂">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L874-L882">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L919-L927">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -6531,7 +6889,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.inductionOn₂">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L884-L892">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L929-L937">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -6571,7 +6929,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.inductionOn₃">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L894-L905">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L939-L950">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -6621,7 +6979,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.exact">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L927-L928">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L972-L973">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -6651,7 +7009,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Quotient.recOnSubsingleton₂">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L937-L950">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L982-L995">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6703,7 +7061,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="instDecidableEqQuotient">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L959-L965">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1004-L1010">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -6739,7 +7097,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Function.Equiv">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L972-L972">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1017-L1017">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -6772,7 +7130,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Function.Equiv.refl">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L974-L975">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1019-L1020">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -6796,7 +7154,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Function.Equiv.symm">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L977-L978">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1022-L1023">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -6826,7 +7184,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Function.Equiv.trans">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L980-L981">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1025-L1026">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -6860,7 +7218,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Function.Equiv.isEquivalence">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L983-L987">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1028-L1032">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -6878,7 +7236,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="funext">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1004-L1008">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1049-L1053">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -6910,7 +7268,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="instSubsingletonForAll">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1012-L1014">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1057-L1059">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable instance</span>
@@ -6943,7 +7301,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Squash">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1018-L1018">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1063-L1063">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable def</span>
@@ -6966,7 +7324,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Squash.mk">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1020-L1020">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1065-L1065">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -6993,7 +7351,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Squash.ind">
 <div class="theorem">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1022-L1023">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1067-L1068">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">theorem</span>
@@ -7019,7 +7377,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Squash.lift">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1025-L1026">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1070-L1071">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -7057,7 +7415,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="instSubsingletonSquash">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1028-L1033">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1073-L1078">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">noncomputable instance</span>
@@ -7082,7 +7440,7 @@ iseqv : <span class="fn"><a href="/Unicode.lean/Init/Core.html#Equivalence">Equi
 <div class="decl" id="Lean.reduceBool">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1057-L1057">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1102-L1102">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -7108,7 +7466,7 @@ foreign function.</p></div>
 <div class="decl" id="Lean.reduceNat">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1065-L1065">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1110-L1110">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -7126,7 +7484,7 @@ We believe <code><a href="/Unicode.lean/Init/Core.html#Lean.reduceBool">Lean.red
 <div class="decl" id="Lean.ofReduceBool">
 <div class="axiom">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1067-L1067">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1112-L1112">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">axiom</span>
@@ -7146,7 +7504,7 @@ We believe <code><a href="/Unicode.lean/Init/Core.html#Lean.reduceBool">Lean.red
 <div class="decl" id="Lean.ofReduceNat">
 <div class="axiom">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1068-L1068">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Init/Core.lean#L1113-L1113">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">axiom</span>
@@ -7224,6 +7582,9 @@ We believe <code><a href="/Unicode.lean/Init/Core.html#Lean.reduceBool">Lean.red
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -7307,6 +7668,9 @@ We believe <code><a href="/Unicode.lean/Init/Core.html#Lean.reduceBool">Lean.red
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -7384,6 +7748,9 @@ We believe <code><a href="/Unicode.lean/Init/Core.html#Lean.reduceBool">Lean.red
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -7466,6 +7833,9 @@ We believe <code><a href="/Unicode.lean/Init/Core.html#Lean.reduceBool">Lean.red
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -7672,6 +8042,9 @@ We believe <code><a href="/Unicode.lean/Init/Core.html#Lean.reduceBool">Lean.red
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -8118,8 +8491,32 @@ We believe <code><a href="/Unicode.lean/Init/Core.html#Lean.reduceBool">Lean.red
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -8143,6 +8540,9 @@ We believe <code><a href="/Unicode.lean/Init/Core.html#Lean.reduceBool">Lean.red
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -8313,6 +8713,9 @@ We believe <code><a href="/Unicode.lean/Init/Core.html#Lean.reduceBool">Lean.red
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -8338,9 +8741,6 @@ We believe <code><a href="/Unicode.lean/Init/Core.html#Lean.reduceBool">Lean.red
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -8713,6 +9113,15 @@ We believe <code><a href="/Unicode.lean/Init/Core.html#Lean.reduceBool">Lean.red
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -8752,6 +9161,9 @@ We believe <code><a href="/Unicode.lean/Init/Core.html#Lean.reduceBool">Lean.red
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

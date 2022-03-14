@@ -54,6 +54,9 @@ Documentation</h1>
 <summary>Imported by</summary>
 <ul>
 <li>
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp.html">Lean.Meta.Tactic.Simp</a>
 </li>
 <li>
@@ -82,6 +85,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Meta.Simp.throwCongrHypothesisFailed">Lean.Meta.Simp.throwCongrHypothesisFailed</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Meta.Simp.Config.updateArith">Lean.Meta.Simp.Config.updateArith</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Meta.Simp.Result.getProof">Lean.Meta.Simp.Result.getProof</a>
@@ -280,10 +286,41 @@ Documentation</h1>
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Meta.Simp.Config.updateArith">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L26-L33">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Config.updateArith">Lean.Meta.Simp.Config.updateArith</a>
+</span>
+<span class="decl_args">
+<span class="fn">(c : <a href="/Unicode.lean/Init/Meta.html#Lean.Meta.Simp.Config">Lean.Meta.Simp.Config</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/CoreM.html#Lean.Core.CoreM">Lean.CoreM</a> <a href="/Unicode.lean/Init/Meta.html#Lean.Meta.Simp.Config">Lean.Meta.Simp.Config</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Config.updateArith">Lean.Meta.Simp.Config.updateArith</a> <span class="fn">c</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><span class="fn">c</span>.arith</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+    let a ← <span class="fn">Lean.getEnv</span>
+    <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.Environment.contains">Lean.Environment.contains</a> <span class="fn">a</span> <span class="fn">`Nat.Linear.ExprCnstr.eq_of_toNormPoly_eq</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">c</span></span>
+      else
+        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a>
+          <span class="fn">{ maxSteps := <span class="fn"><span class="fn">c</span>.maxSteps</span>, maxDischargeDepth := <span class="fn"><span class="fn">c</span>.maxDischargeDepth</span>, contextual := <span class="fn"><span class="fn">c</span>.contextual</span>,
+            memoize := <span class="fn"><span class="fn">c</span>.memoize</span>, singlePass := <span class="fn"><span class="fn">c</span>.singlePass</span>, zeta := <span class="fn"><span class="fn">c</span>.zeta</span>, beta := <span class="fn"><span class="fn">c</span>.beta</span>, eta := <span class="fn"><span class="fn">c</span>.eta</span>,
+            etaStruct := <span class="fn"><span class="fn">c</span>.etaStruct</span>, iota := <span class="fn"><span class="fn">c</span>.iota</span>, proj := <span class="fn"><span class="fn">c</span>.proj</span>, decide := <span class="fn"><span class="fn">c</span>.decide</span>, arith := <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> }</span></span></span></span>
+  else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">c</span></span></span></span></li>
+</ul>
+</details>
+<p>Helper method for bootstrapping purposes. It disables <code>arith</code> if support theorems have not been defined yet.</p></div>
+</div>
 <div class="decl" id="Lean.Meta.Simp.Result.getProof">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L23-L26">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L35-L38">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -308,7 +345,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.Simp.mkCongrFun">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L35-L38">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L40-L43">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -337,7 +374,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.Simp.mkCongr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L40-L46">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L45-L51">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -374,7 +411,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.Simp.isOfNatNatLit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L55-L56">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L60-L61">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -397,7 +434,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.Simp.SimpLetCase">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L126-L129">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L131-L134">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -419,7 +456,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.getSimpLetCase">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L131-L143">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L136-L148">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -457,7 +494,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.removeUnnecessaryCasts">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L146-L166">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L151-L171">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -501,7 +538,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.removeUnnecessaryCasts.isDummyEqRec">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L159-L160">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L164-L165">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -524,7 +561,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.removeUnnecessaryCasts.elimDummyEqRec">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L162-L166">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L167-L171">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -540,7 +577,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L168-L550">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L173-L558">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -556,7 +593,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.simpLoop">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L179-L198">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L184-L203">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -574,7 +611,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.simpStep">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L200-L213">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L205-L218">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -590,7 +627,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.simpLit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L215-L224">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L220-L229">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -620,7 +657,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.simpProj">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L226-L250">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L231-L255">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -636,7 +673,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.congrArgs">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L252-L268">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L257-L273">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -654,7 +691,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.visitFn">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L270-L282">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L275-L287">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -670,7 +707,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.mkCongrSimp?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L284-L299">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L289-L304">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -725,7 +762,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.tryAutoCongrTheorem?">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L302-L362">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L307-L367">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -741,7 +778,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.congrDefault">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L364-L369">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L369-L374">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -757,7 +794,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.processCongrHypothesis">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L372-L383">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L377-L388">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -773,7 +810,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.trySimpCongrTheorem?">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L386-L425">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L391-L430">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -791,7 +828,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.congr">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L427-L438">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L432-L443">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -807,7 +844,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.simpApp">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L440-L448">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L445-L453">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -823,7 +860,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.simpConst">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L450-L451">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L455-L456">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -848,7 +885,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.withNewLemmas">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L453-L466">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L458-L471">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -900,7 +937,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.simpLambda">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L468-L477">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L473-L482">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -916,7 +953,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.simpArrow">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L479-L498">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L484-L506">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -932,7 +969,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.simpForall">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L500-L513">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L508-L521">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -948,7 +985,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.simpLet">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L515-L545">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L523-L553">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -964,7 +1001,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.simp.cacheResult">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L547-L550">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L555-L558">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -998,7 +1035,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.main">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L552-L557">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L560-L566">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1019,17 +1056,23 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.main">Lean.Meta.Simp.main</a> <span class="fn">e</span> <span class="fn">ctx</span> <span class="fn">methods</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withConfig">Lean.Meta.withConfig</a>
-    (<span class="fn">fun <span class="fn">c</span> =>
-      <span class="fn">{ foApprox := <span class="fn"><span class="fn">c</span>.foApprox</span>, ctxApprox := <span class="fn"><span class="fn">c</span>.ctxApprox</span>, quasiPatternApprox := <span class="fn"><span class="fn">c</span>.quasiPatternApprox</span>,
-        constApprox := <span class="fn"><span class="fn">c</span>.constApprox</span>, isDefEqStuckEx := <span class="fn"><span class="fn">c</span>.isDefEqStuckEx</span>, transparency := <span class="fn"><span class="fn">c</span>.transparency</span>,
-        zetaNonDep := <span class="fn"><span class="fn">c</span>.zetaNonDep</span>, trackZeta := <span class="fn"><span class="fn">c</span>.trackZeta</span>, unificationHints := <span class="fn"><span class="fn">c</span>.unificationHints</span>,
-        proofIrrelevance := <span class="fn"><span class="fn">c</span>.proofIrrelevance</span>, assignSyntheticOpaque := <span class="fn"><span class="fn">c</span>.assignSyntheticOpaque</span>,
-        ignoreLevelMVarDepth := <span class="fn"><span class="fn">c</span>.ignoreLevelMVarDepth</span>, offsetCnstrs := <span class="fn"><span class="fn">c</span>.offsetCnstrs</span>,
-        etaStruct := <span class="fn"><span class="fn"><span class="fn">ctx</span>.config</span>.etaStruct</span> }</span></span>)
-    (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withReducible">Lean.Meta.withReducible</a>
-      (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.tryCatch">tryCatch</a> (<span class="fn"><a href="/Unicode.lean/Init/Control/StateRef.html#StateRefT'.run'">StateRefT'.run'</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.simp">Lean.Meta.Simp.simp</a> <span class="fn">e</span> <span class="fn">methods</span> <span class="fn">ctx</span></span>) <span class="fn">{ cache := <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span>, congrCache := <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span>, numSteps := <span class="fn">0</span> }</span></span>)
-        <span class="fn">fun <span class="fn">ex</span> => <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/CoreM.html#Lean.Exception.isMaxHeartbeat">Lean.Exception.isMaxHeartbeat</a> <span class="fn">ex</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.throwNestedTacticEx">Lean.Meta.throwNestedTacticEx</a> <span class="fn">`simp</span> <span class="fn">ex</span></span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.throw">throw</a> <span class="fn">ex</span></span></span></span></span>)</span>)</span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.main">Lean.Meta.Simp.main</a> <span class="fn">e</span> <span class="fn">ctx</span> <span class="fn">methods</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Config.updateArith">Lean.Meta.Simp.Config.updateArith</a> <span class="fn"><span class="fn">ctx</span>.config</span></span>)</span>
+  let ctx : <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html#Lean.Meta.Simp.Context">Lean.Meta.Simp.Context</a> :=
+    <span class="fn">{ config := <span class="fn">a</span>, simpTheorems := <span class="fn"><span class="fn">ctx</span>.simpTheorems</span>, congrTheorems := <span class="fn"><span class="fn">ctx</span>.congrTheorems</span>, parent? := <span class="fn"><span class="fn">ctx</span>.parent?</span>,
+      dischargeDepth := <span class="fn"><span class="fn">ctx</span>.dischargeDepth</span> }</span>
+  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withConfig">Lean.Meta.withConfig</a>
+      (<span class="fn">fun <span class="fn">c</span> =>
+        <span class="fn">{ foApprox := <span class="fn"><span class="fn">c</span>.foApprox</span>, ctxApprox := <span class="fn"><span class="fn">c</span>.ctxApprox</span>, quasiPatternApprox := <span class="fn"><span class="fn">c</span>.quasiPatternApprox</span>,
+          constApprox := <span class="fn"><span class="fn">c</span>.constApprox</span>, isDefEqStuckEx := <span class="fn"><span class="fn">c</span>.isDefEqStuckEx</span>, transparency := <span class="fn"><span class="fn">c</span>.transparency</span>,
+          zetaNonDep := <span class="fn"><span class="fn">c</span>.zetaNonDep</span>, trackZeta := <span class="fn"><span class="fn">c</span>.trackZeta</span>, unificationHints := <span class="fn"><span class="fn">c</span>.unificationHints</span>,
+          proofIrrelevance := <span class="fn"><span class="fn">c</span>.proofIrrelevance</span>, assignSyntheticOpaque := <span class="fn"><span class="fn">c</span>.assignSyntheticOpaque</span>,
+          ignoreLevelMVarDepth := <span class="fn"><span class="fn">c</span>.ignoreLevelMVarDepth</span>, offsetCnstrs := <span class="fn"><span class="fn">c</span>.offsetCnstrs</span>,
+          etaStruct := <span class="fn"><span class="fn"><span class="fn">ctx</span>.config</span>.etaStruct</span> }</span></span>)
+      (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withReducible">Lean.Meta.withReducible</a>
+        (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.tryCatch">tryCatch</a> (<span class="fn"><a href="/Unicode.lean/Init/Control/StateRef.html#StateRefT'.run'">StateRefT'.run'</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.simp">Lean.Meta.Simp.simp</a> <span class="fn">e</span> <span class="fn">methods</span> <span class="fn">ctx</span></span>) <span class="fn">{ cache := <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span>, congrCache := <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span>, numSteps := <span class="fn">0</span> }</span></span>)
+          <span class="fn">fun <span class="fn">ex</span> =>
+          <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/CoreM.html#Lean.Exception.isMaxHeartbeat">Lean.Exception.isMaxHeartbeat</a> <span class="fn">ex</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.throwNestedTacticEx">Lean.Meta.throwNestedTacticEx</a> <span class="fn">`simp</span> <span class="fn">ex</span></span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.throw">throw</a> <span class="fn">ex</span></span></span></span></span>)</span>)</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1037,7 +1080,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.isEqnThmHypothesis">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L559-L566">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L568-L575">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1060,7 +1103,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.isEqnThmHypothesis.go">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L562-L566">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L571-L575">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1076,7 +1119,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.Discharge">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L568-L568">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L577-L577">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1098,7 +1141,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.dischargeUsingAssumption">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L570-L577">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L579-L586">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1127,7 +1170,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.DefaultMethods.discharge?">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L581-L600">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L590-L609">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1143,7 +1186,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.DefaultMethods.pre">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L602-L603">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L611-L612">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1159,7 +1202,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.DefaultMethods.post">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L605-L606">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L614-L615">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1175,7 +1218,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.Simp.DefaultMethods.methods">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L609-L610">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L618-L619">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1197,7 +1240,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.simp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L616-L619">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L625-L628">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1232,7 +1275,7 @@ nondep: <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Si
 <div class="decl" id="Lean.Meta.applySimpResultToTarget">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L625-L632">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L634-L641">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1262,7 +1305,7 @@ Given the current <code>target</code> of <code>mvarId</code>, apply <code><a hre
 <div class="decl" id="Lean.Meta.simpTargetCore">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L635-L644">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L644-L653">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1275,17 +1318,19 @@ Given the current <code>target</code> of <code>mvarId</code>, apply <code><a hre
 <span class="fn">(ctx : <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html#Lean.Meta.Simp.Context">Lean.Meta.Simp.Context</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(discharge? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Discharge">Lean.Meta.Simp.Discharge</a></span>) <span class="fn">none</span></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(mayCloseGoal : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span>)</span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpTargetCore">Lean.Meta.simpTargetCore</a> <span class="fn">mvarId</span> <span class="fn">ctx</span> <span class="fn">discharge?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpTargetCore">Lean.Meta.simpTargetCore</a> <span class="fn">mvarId</span> <span class="fn">ctx</span> <span class="fn">discharge?</span> <span class="fn">mayCloseGoal</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.getMVarType">Lean.Meta.getMVarType</a> <span class="fn">mvarId</span></span>
   let target ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> <span class="fn">a</span></span>
   let r ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simp">Lean.Meta.simp</a> <span class="fn">target</span> <span class="fn">ctx</span> <span class="fn">discharge?</span></span>
-  <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf">Lean.Expr.isConstOf</a> <span class="fn"><span class="fn">r</span>.expr</span> <span class="fn">`True</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
+  <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">mayCloseGoal</span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf">Lean.Expr.isConstOf</a> <span class="fn"><span class="fn">r</span>.expr</span> <span class="fn">`True</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
       <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span>;
       <span class="fn">match <span class="fn"><span class="fn">r</span>.proof?</span> with
       | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">proof</span></span> => <span class="fn">do
@@ -1303,7 +1348,7 @@ Given the current <code>target</code> of <code>mvarId</code>, apply <code><a hre
 <div class="decl" id="Lean.Meta.simpTarget">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L649-L652">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L658-L661">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1316,15 +1361,17 @@ Given the current <code>target</code> of <code>mvarId</code>, apply <code><a hre
 <span class="fn">(ctx : <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html#Lean.Meta.Simp.Context">Lean.Meta.Simp.Context</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(discharge? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Discharge">Lean.Meta.Simp.Discharge</a></span>) <span class="fn">none</span></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(mayCloseGoal : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span>)</span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpTarget">Lean.Meta.simpTarget</a> <span class="fn">mvarId</span> <span class="fn">ctx</span> <span class="fn">discharge?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withMVarContext">Lean.Meta.withMVarContext</a> <span class="fn">mvarId</span> <span class="fn">do
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpTarget">Lean.Meta.simpTarget</a> <span class="fn">mvarId</span> <span class="fn">ctx</span> <span class="fn">discharge?</span> <span class="fn">mayCloseGoal</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withMVarContext">Lean.Meta.withMVarContext</a> <span class="fn">mvarId</span> <span class="fn">do
     <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.checkNotAssigned">Lean.Meta.checkNotAssigned</a> <span class="fn">mvarId</span> <span class="fn">`simp</span></span>
-    <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpTargetCore">Lean.Meta.simpTargetCore</a> <span class="fn">mvarId</span> <span class="fn">ctx</span> <span class="fn">discharge?</span></span></span></span></span></li>
+    <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpTargetCore">Lean.Meta.simpTargetCore</a> <span class="fn">mvarId</span> <span class="fn">ctx</span> <span class="fn">discharge?</span> <span class="fn">mayCloseGoal</span></span></span></span></span></li>
 </ul>
 </details>
 <p>Simplify the given goal target (aka type). Return <code>none</code> if the goal was closed. Return <code>somemvarId'</code> otherwise,
@@ -1333,7 +1380,7 @@ where <code>mvarId'</code> is the simplified new goal.</p></div>
 <div class="decl" id="Lean.Meta.applySimpResultToProp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L659-L672">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L668-L681">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1348,13 +1395,15 @@ where <code>mvarId'</code> is the simplified new goal.</p></div>
 <span class="fn">(prop : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(r : <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html#Lean.Meta.Simp.Result">Lean.Meta.Simp.Result</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(mayCloseGoal : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span>)</span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.applySimpResultToProp">Lean.Meta.applySimpResultToProp</a> <span class="fn">mvarId</span> <span class="fn">proof</span> <span class="fn">prop</span> <span class="fn">r</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf">Lean.Expr.isConstOf</a> <span class="fn"><span class="fn">r</span>.expr</span> <span class="fn">`False</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.applySimpResultToProp">Lean.Meta.applySimpResultToProp</a> <span class="fn">mvarId</span> <span class="fn">proof</span> <span class="fn">prop</span> <span class="fn">r</span> <span class="fn">mayCloseGoal</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">mayCloseGoal</span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isConstOf">Lean.Expr.isConstOf</a> <span class="fn"><span class="fn">r</span>.expr</span> <span class="fn">`False</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
     <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span>;
     <span class="fn">match <span class="fn"><span class="fn">r</span>.proof?</span> with
     | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">eqProof</span></span> => <span class="fn">do
@@ -1386,7 +1435,7 @@ otherwise, where <code>proof':prop'</code> and <code>prop'</code> is the simplif
 <div class="decl" id="Lean.Meta.applySimpResultToFVarId">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L674-L676">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L683-L685">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1407,7 +1456,7 @@ otherwise, where <code>proof':prop'</code> and <code>prop'</code> is the simplif
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.applySimpResultToFVarId">Lean.Meta.applySimpResultToFVarId</a> <span class="fn">mvarId</span> <span class="fn">fvarId</span> <span class="fn">r</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let localDecl ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.getLocalDecl">Lean.Meta.getLocalDecl</a> <span class="fn">fvarId</span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.applySimpResultToProp">Lean.Meta.applySimpResultToProp</a> <span class="fn">mvarId</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkFVar">Lean.mkFVar</a> <span class="fn">fvarId</span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">localDecl</span></span>) <span class="fn">r</span></span></span></span></li>
+  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.applySimpResultToProp">Lean.Meta.applySimpResultToProp</a> <span class="fn">mvarId</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkFVar">Lean.mkFVar</a> <span class="fn">fvarId</span></span>) (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">localDecl</span></span>) <span class="fn">r</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1415,7 +1464,7 @@ otherwise, where <code>proof':prop'</code> and <code>prop'</code> is the simplif
 <div class="decl" id="Lean.Meta.simpStep">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L683-L685">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L692-L694">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1432,15 +1481,17 @@ otherwise, where <code>proof':prop'</code> and <code>prop'</code> is the simplif
 <span class="fn">(ctx : <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html#Lean.Meta.Simp.Context">Lean.Meta.Simp.Context</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(discharge? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Discharge">Lean.Meta.Simp.Discharge</a></span>) <span class="fn">none</span></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(mayCloseGoal : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span>)</span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpStep">Lean.Meta.simpStep</a> <span class="fn">mvarId</span> <span class="fn">proof</span> <span class="fn">prop</span> <span class="fn">ctx</span> <span class="fn">discharge?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpStep">Lean.Meta.simpStep</a> <span class="fn">mvarId</span> <span class="fn">proof</span> <span class="fn">prop</span> <span class="fn">ctx</span> <span class="fn">discharge?</span> <span class="fn">mayCloseGoal</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let r ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simp">Lean.Meta.simp</a> <span class="fn">prop</span> <span class="fn">ctx</span> <span class="fn">discharge?</span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.applySimpResultToProp">Lean.Meta.applySimpResultToProp</a> <span class="fn">mvarId</span> <span class="fn">proof</span> <span class="fn">prop</span> <span class="fn">r</span></span></span></span></li>
+  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.applySimpResultToProp">Lean.Meta.applySimpResultToProp</a> <span class="fn">mvarId</span> <span class="fn">proof</span> <span class="fn">prop</span> <span class="fn">r</span> <span class="fn">mayCloseGoal</span></span></span></span></li>
 </ul>
 </details>
 <p>Simplify <code>prop</code> (which is inhabited by <code>proof</code>). Return <code>none</code> if the goal was closed. Return <code>some(proof',prop')</code>
@@ -1449,7 +1500,7 @@ otherwise, where <code>proof':prop'</code> and <code>prop'</code> is the simplif
 <div class="decl" id="Lean.Meta.applySimpResultToLocalDeclCore">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L687-L698">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L696-L707">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1487,7 +1538,7 @@ otherwise, where <code>proof':prop'</code> and <code>prop'</code> is the simplif
 <div class="decl" id="Lean.Meta.applySimpResultToLocalDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L703-L704">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L712-L713">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1517,7 +1568,7 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 <div class="decl" id="Lean.Meta.simpLocalDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L706-L711">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L715-L720">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1532,17 +1583,19 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 <span class="fn">(ctx : <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html#Lean.Meta.Simp.Context">Lean.Meta.Simp.Context</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(discharge? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.Simp.Discharge">Lean.Meta.Simp.Discharge</a></span>) <span class="fn">none</span></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(mayCloseGoal : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span>)</span>)</span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpLocalDecl">Lean.Meta.simpLocalDecl</a> <span class="fn">mvarId</span> <span class="fn">fvarId</span> <span class="fn">ctx</span> <span class="fn">discharge?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withMVarContext">Lean.Meta.withMVarContext</a> <span class="fn">mvarId</span> <span class="fn">do
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpLocalDecl">Lean.Meta.simpLocalDecl</a> <span class="fn">mvarId</span> <span class="fn">fvarId</span> <span class="fn">ctx</span> <span class="fn">discharge?</span> <span class="fn">mayCloseGoal</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withMVarContext">Lean.Meta.withMVarContext</a> <span class="fn">mvarId</span> <span class="fn">do
     <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.checkNotAssigned">Lean.Meta.checkNotAssigned</a> <span class="fn">mvarId</span> <span class="fn">`simp</span></span>
     let localDecl ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.getLocalDecl">Lean.Meta.getLocalDecl</a> <span class="fn">fvarId</span></span>
     let type ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> (<span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">localDecl</span></span>)</span>
-    let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpStep">Lean.Meta.simpStep</a> <span class="fn">mvarId</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkFVar">Lean.mkFVar</a> <span class="fn">fvarId</span></span>) <span class="fn">type</span> <span class="fn">ctx</span> <span class="fn">discharge?</span></span>
+    let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpStep">Lean.Meta.simpStep</a> <span class="fn">mvarId</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkFVar">Lean.mkFVar</a> <span class="fn">fvarId</span></span>) <span class="fn">type</span> <span class="fn">ctx</span> <span class="fn">discharge?</span> <span class="fn">mayCloseGoal</span></span>
     <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.applySimpResultToLocalDeclCore">Lean.Meta.applySimpResultToLocalDeclCore</a> <span class="fn">mvarId</span> <span class="fn">fvarId</span> <span class="fn">a</span></span></span></span></span></li>
 </ul>
 </details>
@@ -1551,7 +1604,7 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 <div class="decl" id="Lean.Meta.FVarIdToLemmaId">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L713-L713">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L722-L722">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1573,7 +1626,7 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 <div class="decl" id="Lean.Meta.simpGoal">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L715-L735">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L724-L744">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1616,7 +1669,7 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
                   (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep">ForInStep</a>
                     (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MProd">MProd</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span>)</span>)</span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Assert.html#Lean.Meta.Hypothesis">Lean.Meta.Hypothesis</a></span>)</span>)</span>)</span></span></span> :=
             <span class="fn">fun <span class="fn">toAssert</span> <span class="fn">ctx</span> => <span class="fn">do
-            let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpStep">Lean.Meta.simpStep</a> <span class="fn">mvarId</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkFVar">Lean.mkFVar</a> <span class="fn">fvarId</span></span>) <span class="fn">type</span> <span class="fn">ctx</span> <span class="fn">discharge?</span></span>
+            let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpStep">Lean.Meta.simpStep</a> <span class="fn">mvarId</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkFVar">Lean.mkFVar</a> <span class="fn">fvarId</span></span>) <span class="fn">type</span> <span class="fn">ctx</span> <span class="fn">discharge?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
             <span class="fn">match <span class="fn">a</span> with
               | <span class="fn">none</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">none</span></span>, snd := <span class="fn">toAssert</span> }</span></span>)</span>
               | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">value</span>, <span class="fn">type</span>)</span></span> =>
@@ -1646,7 +1699,7 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
             let <span class="fn">mvarIdNew</span> ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Clear.html#Lean.Meta.tryClearMany">Lean.Meta.tryClearMany</a> <span class="fn">mvarIdNew</span> <span class="fn">fvarIdsToSimp</span></span>
             <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">fvarIdsNew</span>, <span class="fn">mvarIdNew</span>)</span></span>)</span></span></span></span></span>;
       <span class="fn">if <span class="fn"><span class="fn">simplifyTarget</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpTarget">Lean.Meta.simpTarget</a> <span class="fn">mvarId</span> <span class="fn">ctx</span> <span class="fn">discharge?</span></span>
+        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpTarget">Lean.Meta.simpTarget</a> <span class="fn">mvarId</span> <span class="fn">ctx</span> <span class="fn">discharge?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
         <span class="fn">match <span class="fn">a</span> with
           | <span class="fn">none</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span>
           | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">mvarIdNew</span></span> =>
@@ -1669,7 +1722,7 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 <div class="decl" id="Lean.Meta.simpTargetStar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L737-L753">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/Simp/Main.lean#L746-L762">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1723,7 +1776,7 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
                 <span class="fn"><span class="fn">_do_jp</span> <span class="fn">ctx</span> <span class="fn">y</span></span></span></span></span></span></span></span></span>
       let x : <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html#Lean.Meta.Simp.Context">Lean.Meta.Simp.Context</a> := <span class="fn">r</span>
       let ctx : <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html#Lean.Meta.Simp.Context">Lean.Meta.Simp.Context</a> := <span class="fn">x</span>
-      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpTarget">Lean.Meta.simpTarget</a> <span class="fn">mvarId</span> <span class="fn">ctx</span> <span class="fn">discharge?</span></span>
+      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpTarget">Lean.Meta.simpTarget</a> <span class="fn">mvarId</span> <span class="fn">ctx</span> <span class="fn">discharge?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
       <span class="fn">match <span class="fn">a</span> with
         | <span class="fn">none</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.TacticResultCNM.closed">Lean.Meta.TacticResultCNM.closed</a></span>
         | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">mvarId'</span></span> =>
@@ -1818,6 +1871,9 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -1899,6 +1955,9 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -1976,6 +2035,9 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -2058,6 +2120,9 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -2264,6 +2329,9 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -2710,8 +2778,32 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html" open="">
@@ -2735,6 +2827,9 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -2905,6 +3000,9 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -2930,9 +3028,6 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -3305,6 +3400,15 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -3344,6 +3448,9 @@ This method assumes <code>mvarId</code> is not assigned, and we are already usin
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

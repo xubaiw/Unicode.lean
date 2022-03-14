@@ -544,7 +544,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkEqTypes">Lean.IR.Checker.checkEqTypes</a> <span class="fn">ty₁</span> <span class="fn">ty₂</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">ty₁</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">ty₂</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.throw">throw</a> <span class="fn">"unexpected type"</span></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkEqTypes">Lean.IR.Checker.checkEqTypes</a> <span class="fn">ty₁</span> <span class="fn">ty₂</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">ty₁</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">ty₂</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.throw">throw</a> <span class="fn">"unexpected type '{ty₁}' != '{ty₂}'"</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -552,7 +552,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.Checker.checkType">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L73-L75">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L73-L78">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -564,13 +564,27 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <span class="fn">(ty : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType">Lean.IR.IRType</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(p : <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType">Lean.IR.IRType</a> → <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(suffix? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#String">String</a></span>) <span class="fn">none</span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.M">Lean.IR.Checker.M</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkType">Lean.IR.Checker.checkType</a> <span class="fn">ty</span> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><span class="fn">p</span> <span class="fn">ty</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.throw">throw</a> (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">"unexpected type '"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">ty</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">"'"</span></span></span>)</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkType">Lean.IR.Checker.checkType</a> <span class="fn">ty</span> <span class="fn">p</span> <span class="fn">suffix?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><span class="fn">p</span> <span class="fn">ty</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+  else
+    <span class="fn">let msg := <span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">"unexpected type '"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">ty</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">"'"</span></span></span>;
+    <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">msg</span> <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.throw">throw</a> <span class="fn">msg</span></span></span>;
+    <span class="fn">match <span class="fn">suffix?</span> with
+    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">suffix</span></span> =>
+      <span class="fn">let msg := <span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">""</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">msg</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">", "</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">suffix</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">""</span></span></span>;
+      <span class="fn">do
+      let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">msg</span> <span class="fn">y</span></span></span></span>
+    | <span class="fn">x</span> => <span class="fn">do
+      let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">msg</span> <span class="fn">y</span></span></span></span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -578,7 +592,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.Checker.checkObjType">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L77-L77">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L80-L80">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -593,7 +607,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkObjType">Lean.IR.Checker.checkObjType</a> <span class="fn">ty</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkType">Lean.IR.Checker.checkType</a> <span class="fn">ty</span> <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.isObj">Lean.IR.IRType.isObj</a></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkObjType">Lean.IR.Checker.checkObjType</a> <span class="fn">ty</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkType">Lean.IR.Checker.checkType</a> <span class="fn">ty</span> <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.isObj">Lean.IR.IRType.isObj</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">"object expected"</span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -601,7 +615,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.Checker.checkScalarType">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L79-L79">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L82-L82">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -616,7 +630,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkScalarType">Lean.IR.Checker.checkScalarType</a> <span class="fn">ty</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkType">Lean.IR.Checker.checkType</a> <span class="fn">ty</span> <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.isScalar">Lean.IR.IRType.isScalar</a></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkScalarType">Lean.IR.Checker.checkScalarType</a> <span class="fn">ty</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkType">Lean.IR.Checker.checkType</a> <span class="fn">ty</span> <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.isScalar">Lean.IR.IRType.isScalar</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">"scalar expected"</span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -624,7 +638,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.Checker.getType">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L81-L85">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L84-L88">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -651,7 +665,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.Checker.checkVarType">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L87-L88">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L90-L91">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -663,15 +677,17 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <span class="fn">(x : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.VarId">Lean.IR.VarId</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(p : <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType">Lean.IR.IRType</a> → <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(suffix? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#String">String</a></span>) <span class="fn">none</span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.M">Lean.IR.Checker.M</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkVarType">Lean.IR.Checker.checkVarType</a> <span class="fn">x</span> <span class="fn">p</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkVarType">Lean.IR.Checker.checkVarType</a> <span class="fn">x</span> <span class="fn">p</span> <span class="fn">suffix?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let ty ← <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.getType">Lean.IR.Checker.getType</a> <span class="fn">x</span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkType">Lean.IR.Checker.checkType</a> <span class="fn">ty</span> <span class="fn">p</span></span></span></span></li>
+  <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkType">Lean.IR.Checker.checkType</a> <span class="fn">ty</span> <span class="fn">p</span> <span class="fn">suffix?</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -679,7 +695,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.Checker.checkObjVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L90-L91">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L93-L94">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -694,7 +710,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkObjVar">Lean.IR.Checker.checkObjVar</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkVarType">Lean.IR.Checker.checkVarType</a> <span class="fn">x</span> <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.isObj">Lean.IR.IRType.isObj</a></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkObjVar">Lean.IR.Checker.checkObjVar</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkVarType">Lean.IR.Checker.checkVarType</a> <span class="fn">x</span> <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.isObj">Lean.IR.IRType.isObj</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">"object expected"</span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -702,7 +718,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.Checker.checkScalarVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L93-L94">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L96-L97">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -717,7 +733,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkScalarVar">Lean.IR.Checker.checkScalarVar</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkVarType">Lean.IR.Checker.checkVarType</a> <span class="fn">x</span> <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.isScalar">Lean.IR.IRType.isScalar</a></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkScalarVar">Lean.IR.Checker.checkScalarVar</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkVarType">Lean.IR.Checker.checkVarType</a> <span class="fn">x</span> <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.isScalar">Lean.IR.IRType.isScalar</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">"scalar expected"</span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -725,7 +741,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.Checker.checkFullApp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L96-L100">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L99-L103">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -760,7 +776,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.Checker.checkPartialApp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L102-L106">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L105-L109">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -795,7 +811,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.Checker.checkExpr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L108-L136">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L111-L139">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -840,7 +856,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
       <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkObjType">Lean.IR.Checker.checkObjType</a> <span class="fn">ty</span></span></span></span>
   | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.uproj">Lean.IR.Expr.box</a> <span class="fn">xty</span> <span class="fn">x</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkObjType">Lean.IR.Checker.checkObjType</a> <span class="fn">ty</span></span>) <span class="fn">fun <span class="fn">x_1</span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkScalarVar">Lean.IR.Checker.checkScalarVar</a> <span class="fn">x</span></span></span></span>)
-      <span class="fn">fun <span class="fn">x_1</span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkVarType">Lean.IR.Checker.checkVarType</a> <span class="fn">x</span> <span class="fn">fun <span class="fn">t</span> => <span class="fn"><span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">xty</span></span></span></span></span></span>
+      <span class="fn">fun <span class="fn">x_1</span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkVarType">Lean.IR.Checker.checkVarType</a> <span class="fn">x</span> (<span class="fn">fun <span class="fn">t</span> => <span class="fn"><span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">xty</span></span></span>) <span class="fn">none</span></span></span></span>
   | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.lit">Lean.IR.Expr.unbox</a> <span class="fn">x</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkScalarType">Lean.IR.Checker.checkScalarType</a> <span class="fn">ty</span></span>) <span class="fn">fun <span class="fn">x_1</span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkObjVar">Lean.IR.Checker.checkObjVar</a> <span class="fn">x</span></span></span></span>
   | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.uproj">Lean.IR.Expr.proj</a> <span class="fn">i</span> <span class="fn">x</span></span> => <span class="fn">do
@@ -857,15 +873,15 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
       | <span class="fn">other</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadExcept.throw">throw</a> (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">"unexpected IR type '"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">xType</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">"'"</span></span></span>)</span></span></span>
   | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.uproj">Lean.IR.Expr.uproj</a> <span class="fn">x</span> <span class="fn">x_1</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkObjVar">Lean.IR.Checker.checkObjVar</a> <span class="fn">x_1</span></span>) <span class="fn">fun <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkType">Lean.IR.Checker.checkType</a> <span class="fn">ty</span> <span class="fn">fun <span class="fn">t</span> => <span class="fn"><span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.usize">Lean.IR.IRType.usize</a></span></span></span></span></span>
+      <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkType">Lean.IR.Checker.checkType</a> <span class="fn">ty</span> (<span class="fn">fun <span class="fn">t</span> => <span class="fn"><span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.usize">Lean.IR.IRType.usize</a></span></span>) <span class="fn">none</span></span></span></span>
   | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.sproj">Lean.IR.Expr.sproj</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkObjVar">Lean.IR.Checker.checkObjVar</a> <span class="fn">x_2</span></span>) <span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkScalarType">Lean.IR.Checker.checkScalarType</a> <span class="fn">ty</span></span></span></span>
   | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.lit">Lean.IR.Expr.isShared</a> <span class="fn">x</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkObjVar">Lean.IR.Checker.checkObjVar</a> <span class="fn">x</span></span>) <span class="fn">fun <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkType">Lean.IR.Checker.checkType</a> <span class="fn">ty</span> <span class="fn">fun <span class="fn">t</span> => <span class="fn"><span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.uint8">Lean.IR.IRType.uint8</a></span></span></span></span></span>
+      <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkType">Lean.IR.Checker.checkType</a> <span class="fn">ty</span> (<span class="fn">fun <span class="fn">t</span> => <span class="fn"><span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.uint8">Lean.IR.IRType.uint8</a></span></span>) <span class="fn">none</span></span></span></span>
   | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.lit">Lean.IR.Expr.isTaggedPtr</a> <span class="fn">x</span></span> =>
     <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#SeqRight.seqRight">SeqRight.seqRight</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkObjVar">Lean.IR.Checker.checkObjVar</a> <span class="fn">x</span></span>) <span class="fn">fun <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkType">Lean.IR.Checker.checkType</a> <span class="fn">ty</span> <span class="fn">fun <span class="fn">t</span> => <span class="fn"><span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.uint8">Lean.IR.IRType.uint8</a></span></span></span></span></span>
+      <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkType">Lean.IR.Checker.checkType</a> <span class="fn">ty</span> (<span class="fn">fun <span class="fn">t</span> => <span class="fn"><span class="fn">t</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IRType.uint8">Lean.IR.IRType.uint8</a></span></span>) <span class="fn">none</span></span></span></span>
   | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.lit">Lean.IR.Expr.lit</a> (<span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.LitVal.str">Lean.IR.LitVal.str</a> <span class="fn">x</span></span>)</span> => <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Checker.html#Lean.IR.Checker.checkObjType">Lean.IR.Checker.checkObjType</a> <span class="fn">ty</span></span>
   | <span class="fn"><a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.Expr.lit">Lean.IR.Expr.lit</a> <span class="fn">x</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">()</span></span></span></span></li>
 </ul>
@@ -875,7 +891,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.Checker.withParams">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L138-L143">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L141-L146">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -909,7 +925,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.Checker.checkFnBody">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L145-L167">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L148-L170">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -923,7 +939,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.Checker.checkDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L169-L171">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L172-L174">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -946,7 +962,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.checkDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L175-L179">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L178-L182">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -978,7 +994,7 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <div class="decl" id="Lean.IR.checkDecls">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L181-L182">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Compiler/IR/Checker.lean#L184-L185">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1059,6 +1075,9 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -1142,6 +1161,9 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -1219,6 +1241,9 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -1301,6 +1326,9 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1507,6 +1535,9 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1953,8 +1984,32 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1978,6 +2033,9 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -2148,6 +2206,9 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -2173,9 +2234,6 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2548,6 +2606,15 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2587,6 +2654,9 @@ foundVars : <a href="/Unicode.lean/Lean/Compiler/IR/Basic.html#Lean.IR.IndexSet"
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

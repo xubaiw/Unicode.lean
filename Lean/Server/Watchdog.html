@@ -34,6 +34,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Init/System/IO.html">Init.System.IO</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
 </li>
 <li>
@@ -159,12 +162,6 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Server.Watchdog.handleWorkspaceSymbol">Lean.Server.Watchdog.handleWorkspaceSymbol</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Server.Watchdog.handleWorkspaceSymbol.containsCaseInsensitive">Lean.Server.Watchdog.handleWorkspaceSymbol.containsCaseInsensitive</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Server.Watchdog.handleWorkspaceSymbol.containsInOrder">Lean.Server.Watchdog.handleWorkspaceSymbol.containsInOrder</a>
-</div>
-<div class="nav_link">
 <a class="break_within" href="#Lean.Server.Watchdog.handleDidOpen">Lean.Server.Watchdog.handleDidOpen</a>
 </div>
 <div class="nav_link">
@@ -255,7 +252,7 @@ non-standard extensions in case they're needed, for example to communicate tacti
 <div class="decl" id="Lean.Server.Watchdog.OpenDocument">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L72-L74">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L73-L75">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -275,7 +272,7 @@ headerAst : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a
 <div class="decl" id="Lean.Server.Watchdog.workerCfg">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L76-L81">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L77-L82">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -296,7 +293,7 @@ headerAst : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a
 <div class="decl" id="Lean.Server.Watchdog.WorkerEvent">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L84-L89">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L85-L90">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -320,7 +317,7 @@ ioError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO.Err
 <div class="decl" id="Lean.Server.Watchdog.WorkerState">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L91-L100">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L92-L101">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -340,7 +337,7 @@ running: <a href="/Unicode.lean/Lean/Server/Watchdog.html#Lean.Server.Watchdog.W
 <div class="decl" id="Lean.Server.Watchdog.PendingRequestMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L102-L102">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L103-L103">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -362,7 +359,7 @@ running: <a href="/Unicode.lean/Lean/Server/Watchdog.html#Lean.Server.Watchdog.W
 <div class="decl" id="Lean.Server.Watchdog.GroupedEdits">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L112-L119">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L113-L120">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -386,7 +383,7 @@ queuedMsgs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Ar
 <div class="decl" id="Lean.Server.Watchdog.FileWorker">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L121-L131">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L122-L132">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -414,7 +411,7 @@ groupedEditsRef : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO
 <div class="decl" id="Lean.Server.Watchdog.FileWorker.stdin">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L135-L136">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L136-L137">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -437,7 +434,7 @@ groupedEditsRef : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO
 <div class="decl" id="Lean.Server.Watchdog.FileWorker.stdout">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L138-L139">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L139-L140">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -460,7 +457,7 @@ groupedEditsRef : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO
 <div class="decl" id="Lean.Server.Watchdog.FileWorker.erasePendingRequest">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L141-L142">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L142-L143">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -485,7 +482,7 @@ groupedEditsRef : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO
 <div class="decl" id="Lean.Server.Watchdog.FileWorker.errorPendingRequests">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L144-L147">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L145-L148">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -523,7 +520,7 @@ groupedEditsRef : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO
 <div class="decl" id="Lean.Server.Watchdog.FileWorker.runEditsSignalTask">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L149-L164">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L150-L165">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -554,7 +551,7 @@ groupedEditsRef : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO
 <div class="decl" id="Lean.Server.Watchdog.FileWorker.runEditsSignalTask.loopAction">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L151-L159">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L152-L160">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -570,7 +567,7 @@ groupedEditsRef : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO
 <div class="decl" id="Lean.Server.Watchdog.FileWorkerMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L170-L170">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L171-L171">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -592,7 +589,7 @@ groupedEditsRef : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO
 <div class="decl" id="Lean.Server.Watchdog.ServerContext">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L172-L184">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L173-L185">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -628,7 +625,7 @@ references : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref"
 <div class="decl" id="Lean.Server.Watchdog.ServerM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L186-L186">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L187-L187">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -652,7 +649,7 @@ references : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref"
 <div class="decl" id="Lean.Server.Watchdog.updateFileWorkers">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L188-L189">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L189-L190">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -677,7 +674,7 @@ references : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref"
 <div class="decl" id="Lean.Server.Watchdog.findFileWorker?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L191-L192">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L192-L193">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -703,7 +700,7 @@ references : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref"
 <div class="decl" id="Lean.Server.Watchdog.findFileWorker!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L194-L197">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L195-L198">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -730,7 +727,7 @@ references : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref"
 <div class="decl" id="Lean.Server.Watchdog.eraseFileWorker">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L199-L204">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L200-L205">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -762,7 +759,7 @@ references : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref"
 <div class="decl" id="Lean.Server.Watchdog.log">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L206-L209">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L207-L210">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -788,7 +785,7 @@ references : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref"
 <div class="decl" id="Lean.Server.Watchdog.handleIleanInfoUpdate">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L211-L215">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L212-L216">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -823,7 +820,7 @@ references : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref"
 <div class="decl" id="Lean.Server.Watchdog.handleIleanInfoFinal">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L217-L221">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L218-L222">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -858,7 +855,7 @@ references : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref"
 <div class="decl" id="Lean.Server.Watchdog.startFileWorker">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L269-L302">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L270-L303">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -910,7 +907,7 @@ references : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref"
 <div class="decl" id="Lean.Server.Watchdog.terminateFileWorker">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L304-L316">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L305-L317">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -953,7 +950,7 @@ references : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref"
 <div class="decl" id="Lean.Server.Watchdog.handleCrash">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L318-L319">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L319-L320">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -983,7 +980,7 @@ references : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref"
 <div class="decl" id="Lean.Server.Watchdog.tryWriteMessage">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L326-L366">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L327-L367">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1087,7 +1084,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.findDefinitions">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L371-L380">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L374-L383">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1145,7 +1142,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.handleReference">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L382-L391">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L385-L394">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1198,7 +1195,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.handleWorkspaceSymbol">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L394-L427">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L396-L409">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1223,109 +1220,24 @@ will be discharged after the FileWorker is restarted.</p></div>
         (<span class="fn"><a href="/Unicode.lean/Lean/Server/References.html#Lean.Server.References.definitionsMatching">Lean.Server.References.definitionsMatching</a> <span class="fn">references</span> <span class="fn">srcSearchPath</span>
           (<span class="fn">fun <span class="fn">name</span> =>
             <span class="fn">let name := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.getD">Option.getD</a> (<span class="fn"><a href="/Unicode.lean/Lean/Modifiers.html#Lean.privateToUserName?">Lean.privateToUserName?</a> <span class="fn">name</span></span>) <span class="fn">name</span></span>;
-            <span class="fn">if
-                <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Watchdog.html#Lean.Server.Watchdog.handleWorkspaceSymbol.containsCaseInsensitive">Lean.Server.Watchdog.handleWorkspaceSymbol.containsCaseInsensitive</a> <span class="fn"><span class="fn">p</span>.query</span> (<span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Name.toString">Lean.Name.toString</a> <span class="fn">name</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>                   <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Name.toString">Lean.Name.toString</a> <span class="fn">name</span></span>)</span>
-            else <span class="fn">none</span></span></span></span>)
+            <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Data/FuzzyMatching.html#Lean.FuzzyMatching.fuzzyMatchScoreWithThreshold?">Lean.FuzzyMatching.fuzzyMatchScoreWithThreshold?</a> <span class="fn"><span class="fn">p</span>.query</span> (<span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Name.toString">Lean.Name.toString</a> <span class="fn">name</span></span>)</span> with
+            | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">score</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Name.toString">Lean.Name.toString</a> <span class="fn">name</span></span>, <span class="fn">score</span>)</span></span>
+            | <span class="fn">x</span> => <span class="fn">none</span></span></span></span>)
           (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">100</span></span>)</span>)</span>
   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a>
       (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a>
         (<span class="fn">fun <span class="fn">x</span> =>
           <span class="fn">match <span class="fn">x</span> with
-          | <span class="fn">(<span class="fn">name</span>, <span class="fn">location</span>)</span> =>
+          | <span class="fn">(<span class="fn">(<span class="fn">name</span>, <span class="fn">score</span>)</span>, <span class="fn">location</span>)</span> =>
             <span class="fn">{ name := <span class="fn">name</span>, kind := <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.SymbolKind.constant">Lean.Lsp.SymbolKind.constant</a>, tags := <span class="fn">#[]</span>, location := <span class="fn">location</span>,
               containerName? := <span class="fn">none</span> }</span></span></span>)
-        <span class="fn">symbols</span></span>)</span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Server.Watchdog.handleWorkspaceSymbol.containsCaseInsensitive">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L408-L414">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Server/Watchdog.html#Lean.Server.Watchdog.handleWorkspaceSymbol.containsCaseInsensitive">Lean.Server.Watchdog.handleWorkspaceSymbol.containsCaseInsensitive</a>
-</span>
-<span class="decl_args">
-<span class="fn">(value : <a href="/Unicode.lean/Init/Prelude.html#String">String</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String">String</a> → <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Watchdog.html#Lean.Server.Watchdog.handleWorkspaceSymbol.containsCaseInsensitive">Lean.Server.Watchdog.handleWorkspaceSymbol.containsCaseInsensitive</a> <span class="fn">value</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.any">String.any</a> <span class="fn">value</span> <span class="fn">fun <span class="fn">a</span> => <span class="fn"><a href="/Unicode.lean/Init/Data/Char/Basic.html#Char.isUpper">Char.isUpper</a> <span class="fn">a</span></span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-    <span class="fn"><a href="/Unicode.lean/Lean/Server/Watchdog.html#Lean.Server.Watchdog.handleWorkspaceSymbol.containsInOrder">Lean.Server.Watchdog.handleWorkspaceSymbol.containsInOrder</a> <span class="fn">value</span></span>
-  else
-    <span class="fn">let value := <span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.toLower">String.toLower</a> <span class="fn">value</span></span>;
-    <span class="fn">fun <span class="fn">target</span> => <span class="fn"><a href="/Unicode.lean/Lean/Server/Watchdog.html#Lean.Server.Watchdog.handleWorkspaceSymbol.containsInOrder">Lean.Server.Watchdog.handleWorkspaceSymbol.containsInOrder</a> <span class="fn">value</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.toLower">String.toLower</a> <span class="fn">target</span></span>)</span></span></span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
-<div class="decl" id="Lean.Server.Watchdog.handleWorkspaceSymbol.containsInOrder">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L416-L427">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Server/Watchdog.html#Lean.Server.Watchdog.handleWorkspaceSymbol.containsInOrder">Lean.Server.Watchdog.handleWorkspaceSymbol.containsInOrder</a>
-</span>
-<span class="decl_args">
-<span class="fn">(value : <a href="/Unicode.lean/Init/Prelude.html#String">String</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(target : <a href="/Unicode.lean/Init/Prelude.html#String">String</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Server/Watchdog.html#Lean.Server.Watchdog.handleWorkspaceSymbol.containsInOrder">Lean.Server.Watchdog.handleWorkspaceSymbol.containsInOrder</a> <span class="fn">value</span> <span class="fn">target</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Control/Id.html#Id.run">Id.run</a>
-    (<span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> =>
-      <span class="fn">let valueIt := <span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.mkIterator">String.mkIterator</a> <span class="fn">value</span></span>;
-      <span class="fn">let targetIt := <span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.mkIterator">String.mkIterator</a> <span class="fn">target</span></span>;
-      <span class="fn">do
-      let r ←
-        <span class="fn">let col := <span class="fn">{ start := <span class="fn">0</span>, stop := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String.bsize">String.bsize</a> <span class="fn">target</span></span>, step := <span class="fn">1</span> }</span>;
-          <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">col</span> <span class="fn">{ fst := <span class="fn">none</span>, snd := <span class="fn">{ fst := <span class="fn">targetIt</span>, snd := <span class="fn">valueIt</span> }</span> }</span> <span class="fn">fun <span class="fn">x</span> <span class="fn">r</span> =>
-            <span class="fn">let r := <span class="fn"><span class="fn">r</span>.snd</span>;
-            <span class="fn">let targetIt := <span class="fn"><span class="fn">r</span>.fst</span>;
-            <span class="fn">let valueIt := <span class="fn"><span class="fn">r</span>.snd</span>;
-            <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">targetIt</span> <span class="fn">valueIt</span> <span class="fn">y</span> =>
-              <span class="fn">let targetIt := <span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.Iterator.next">String.Iterator.next</a> <span class="fn">targetIt</span></span>;
-              <span class="fn">do
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <span class="fn">{ fst := <span class="fn">targetIt</span>, snd := <span class="fn">valueIt</span> }</span> }</span></span>)</span></span></span></span>;
-            <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.Iterator.curr">String.Iterator.curr</a> <span class="fn">valueIt</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.Iterator.curr">String.Iterator.curr</a> <span class="fn">targetIt</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-              <span class="fn">let valueIt := <span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.Iterator.next">String.Iterator.next</a> <span class="fn">valueIt</span></span>;
-              <span class="fn">if <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.Iterator.hasNext">String.Iterator.hasNext</a> <span class="fn">valueIt</span></span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>, snd := <span class="fn">{ fst := <span class="fn">targetIt</span>, snd := <span class="fn">valueIt</span> }</span> }</span></span>)</span>
-              else <span class="fn">do
-                let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                <span class="fn"><span class="fn">_do_jp</span> <span class="fn">targetIt</span> <span class="fn">valueIt</span> <span class="fn">y</span></span></span></span></span>
-            else <span class="fn">do
-              let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">targetIt</span> <span class="fn">valueIt</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></span></span>
-      let x : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MProd">MProd</a> <a href="/Unicode.lean/Init/Data/String/Basic.html#String.Iterator">String.Iterator</a> <a href="/Unicode.lean/Init/Data/String/Basic.html#String.Iterator">String.Iterator</a></span> := <span class="fn"><span class="fn">r</span>.snd</span>
-      <span class="fn">match <span class="fn">x</span> with
-        | <span class="fn">{ fst := <span class="fn">targetIt</span>, snd := <span class="fn">valueIt</span> }</span> =>
-          <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span></span>;
-          <span class="fn">match <span class="fn"><span class="fn">r</span>.fst</span> with
-          | <span class="fn">none</span> => <span class="fn">do
-            let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-          | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span></span></span></span></span></span></span>;
-    <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.length">String.length</a> <span class="fn">value</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">0</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
-    else <span class="fn">do
-      let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>)</span></span></li>
+        (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/QSort.html#Array.qsort">Array.qsort</a> <span class="fn">symbols</span>
+          (<span class="fn">fun <span class="fn">x</span> <span class="fn">x_1</span> =>
+            <span class="fn">match <span class="fn">x</span> with
+            | <span class="fn">(<span class="fn">(<span class="fn">x</span>, <span class="fn">s1</span>)</span>, <span class="fn">x_2</span>)</span> =>
+              <span class="fn">match <span class="fn">x_1</span> with
+              | <span class="fn">(<span class="fn">(<span class="fn">x</span>, <span class="fn">s2</span>)</span>, <span class="fn">x_3</span>)</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Decidable.decide">decide</a> (<span class="fn"><span class="fn">s1</span> <a href="/Unicode.lean/Init/Prelude.html#Prod.mk">></a> <span class="fn">s2</span></span>)</span></span></span></span>)
+          <span class="fn">0</span> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">symbols</span></span> <a href="/Unicode.lean/Init/Prelude.html#HSub.hSub">-</a> <span class="fn">1</span></span>)</span>)</span>)</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1333,7 +1245,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.handleDidOpen">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L432-L439">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L414-L421">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1357,7 +1269,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.handleEdits">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L441-L464">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L423-L446">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1430,7 +1342,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.handleDidClose">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L466-L467">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L448-L449">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1453,7 +1365,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.handleDidChangeWatchedFiles">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L469-L482">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L451-L464">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1508,7 +1420,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.handleCancelRequest">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L484-L490">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L466-L472">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1549,7 +1461,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.forwardNotification">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L492-L493">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L474-L475">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1589,7 +1501,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.parseParams">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L497-L500">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L479-L482">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1623,7 +1535,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.forwardRequestToWorker">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L502-L527">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L484-L509">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1682,7 +1594,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.handleRequest">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L529-L557">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L511-L539">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1745,7 +1657,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.handleNotification">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L559-L572">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L541-L554">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1784,7 +1696,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.shutdown">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L576-L581">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L558-L563">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1822,7 +1734,7 @@ will be discharged after the FileWorker is restarted.</p></div>
 <div class="decl" id="Lean.Server.Watchdog.ServerEvent">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L583-L586">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L565-L568">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -1844,7 +1756,7 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <div class="decl" id="Lean.Server.Watchdog.runClientTask">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L588-L597">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L570-L579">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1878,7 +1790,7 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <div class="decl" id="Lean.Server.Watchdog.mainLoop">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L599-L672">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L581-L654">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1894,7 +1806,7 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <div class="decl" id="Lean.Server.Watchdog.mkLeanServerCapabilities">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L675-L703">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L657-L686">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1915,7 +1827,7 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
       <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">{ triggerCharacters? := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">#[<span class="fn">"."</span>]</span></span>, allCommitCharacters? := <span class="fn">none</span>, resolveProvider := <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> }</span></span>,
     hoverProvider := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>, documentHighlightProvider := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>, documentSymbolProvider := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>,
     definitionProvider := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>, declarationProvider := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>, typeDefinitionProvider := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>, referencesProvider := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>,
-    workspaceSymbolProvider := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>,
+    workspaceSymbolProvider := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>, foldingRangeProvider := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>,
     semanticTokensProvider? :=
       <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a>
         <span class="fn">{ legend := <span class="fn">{ tokenTypes := <a href="/Unicode.lean/Lean/Data/Lsp/LanguageFeatures.html#Lean.Lsp.SemanticTokenType.names">Lean.Lsp.SemanticTokenType.names</a>, tokenModifiers := <span class="fn">#[]</span> }</span>, range := <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a>,
@@ -1927,7 +1839,7 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <div class="decl" id="Lean.Server.Watchdog.initAndRunWatchdogAux">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L705-L719">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L688-L702">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1964,7 +1876,7 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <div class="decl" id="Lean.Server.Watchdog.findWorkerPath">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L721-L727">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L704-L710">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2010,7 +1922,7 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <div class="decl" id="Lean.Server.Watchdog.loadReferences">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L729-L740">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L712-L723">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2055,7 +1967,7 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <div class="decl" id="Lean.Server.Watchdog.initAndRunWatchdog">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L742-L787">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L725-L770">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2113,7 +2025,7 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <div class="decl" id="Lean.Server.Watchdog.watchdogMain">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L790-L799">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Server/Watchdog.lean#L773-L782">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2208,6 +2120,9 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -2289,6 +2204,9 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -2366,6 +2284,9 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -2448,6 +2369,9 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -2654,6 +2578,9 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -3100,8 +3027,32 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -3125,6 +3076,9 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -3295,6 +3249,9 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -3320,9 +3277,6 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -3695,6 +3649,15 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -3734,6 +3697,9 @@ clientError: <span class="fn"><a href="/Unicode.lean/Init/System/IOError.html#IO
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

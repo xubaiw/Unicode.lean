@@ -203,7 +203,7 @@ after a case-split.</p></div>
 <div class="decl" id="Lean.Meta.SplitIf.splitIfAt?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/SplitIf.lean#L68-L76">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/SplitIf.lean#L68-L77">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -222,30 +222,32 @@ after a case-split.</p></div>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/SplitIf.html#Lean.Meta.SplitIf.splitIfAt?">Lean.Meta.SplitIf.splitIfAt?</a> <span class="fn">mvarId</span> <span class="fn">e</span> <span class="fn">hName?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/SplitIf.html#Lean.Meta.SplitIf.findIfToSplit?">Lean.Meta.SplitIf.findIfToSplit?</a> <span class="fn">e</span></span> with
-  | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">cond</span></span> =>
-    <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">hName</span> =>
-      <span class="fn">let cls := <span class="fn">`Meta.Tactic.splitIf</span>;
-      <span class="fn">do
-      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.isTracingEnabledFor">Lean.isTracingEnabledFor</a> <span class="fn">cls</span></span>
-      let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Cases.html#Lean.Meta.ByCasesSubgoal">Lean.Meta.ByCasesSubgoal</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Cases.html#Lean.Meta.ByCasesSubgoal">Lean.Meta.ByCasesSubgoal</a></span>)</span>)</span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn">do
-        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Cases.html#Lean.Meta.byCases">Lean.Meta.byCases</a> <span class="fn">mvarId</span> <span class="fn">cond</span> <span class="fn">hName</span></span>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span>)</span></span></span>
-      <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-          let y ←
-            <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.addTrace">Lean.addTrace</a> <span class="fn">cls</span> (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"splitting on "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">cond</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-        else <span class="fn">do
-          let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span>;
-    <span class="fn">match <span class="fn">hName?</span> with
-    | <span class="fn">none</span> => <span class="fn">do
-      let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/CoreM.html#Lean.Core.mkFreshUserName">Lean.mkFreshUserName</a> <span class="fn">`h</span></span>)</span>
-      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">hName</span></span> => <span class="fn">do
-      let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">hName</span></span>
-      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
-  | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/SplitIf.html#Lean.Meta.SplitIf.splitIfAt?">Lean.Meta.SplitIf.splitIfAt?</a> <span class="fn">mvarId</span> <span class="fn">e</span> <span class="fn">hName?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let e ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> <span class="fn">e</span></span>
+  <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/SplitIf.html#Lean.Meta.SplitIf.findIfToSplit?">Lean.Meta.SplitIf.findIfToSplit?</a> <span class="fn">e</span></span> with
+    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">cond</span></span> =>
+      <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">hName</span> =>
+        <span class="fn">let cls := <span class="fn">`Meta.Tactic.splitIf</span>;
+        <span class="fn">do
+        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.isTracingEnabledFor">Lean.isTracingEnabledFor</a> <span class="fn">cls</span></span>
+        let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Cases.html#Lean.Meta.ByCasesSubgoal">Lean.Meta.ByCasesSubgoal</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Cases.html#Lean.Meta.ByCasesSubgoal">Lean.Meta.ByCasesSubgoal</a></span>)</span>)</span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn">do
+          let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Cases.html#Lean.Meta.byCases">Lean.Meta.byCases</a> <span class="fn">mvarId</span> <span class="fn">cond</span> <span class="fn">hName</span></span>
+          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span>)</span></span></span>
+        <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+            let y ←
+              <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.addTrace">Lean.addTrace</a> <span class="fn">cls</span> (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"splitting on "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">cond</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>
+            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
+          else <span class="fn">do
+            let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span>;
+      <span class="fn">match <span class="fn">hName?</span> with
+      | <span class="fn">none</span> => <span class="fn">do
+        let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/CoreM.html#Lean.Core.mkFreshUserName">Lean.mkFreshUserName</a> <span class="fn">`h</span></span>)</span>
+        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
+      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">hName</span></span> => <span class="fn">do
+        let <span class="fn">y</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">hName</span></span>
+        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span>
+    | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -253,7 +255,7 @@ after a case-split.</p></div>
 <div class="decl" id="Lean.Meta.simpIfTarget">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/SplitIf.lean#L82-L87">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/SplitIf.lean#L83-L88">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -272,11 +274,11 @@ after a case-split.</p></div>
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/SplitIf.html#Lean.Meta.simpIfTarget">Lean.Meta.simpIfTarget</a> <span class="fn">mvarId</span> <span class="fn">useDecide</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let ctx ← <a href="/Unicode.lean/Lean/Meta/Tactic/SplitIf.html#Lean.Meta.SplitIf.getSimpContext">Lean.Meta.SplitIf.getSimpContext</a>
-  let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpTarget">Lean.Meta.simpTarget</a> <span class="fn">mvarId</span> <span class="fn">ctx</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/SplitIf.html#Lean.Meta.SplitIf.discharge?">Lean.Meta.SplitIf.discharge?</a> <span class="fn">useDecide</span></span>)</span>)</span>
+  let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpTarget">Lean.Meta.simpTarget</a> <span class="fn">mvarId</span> <span class="fn">ctx</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/SplitIf.html#Lean.Meta.SplitIf.discharge?">Lean.Meta.SplitIf.discharge?</a> <span class="fn">useDecide</span></span>)</span>) <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>
   <span class="fn">match <span class="fn">a</span> with
     | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">mvarId'</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">mvarId'</span></span>
     | <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Meta.Tactic.SplitIf"</span> <span class="fn">"Lean.Meta.simpIfTarget"</span> <span class="fn">87</span> <span class="fn">4</span> <span class="fn">"unreachable code has been reached"</span></span></span></span></span></li>
+      <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Meta.Tactic.SplitIf"</span> <span class="fn">"Lean.Meta.simpIfTarget"</span> <span class="fn">88</span> <span class="fn">4</span> <span class="fn">"unreachable code has been reached"</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -284,7 +286,7 @@ after a case-split.</p></div>
 <div class="decl" id="Lean.Meta.simpIfLocalDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/SplitIf.lean#L89-L94">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/SplitIf.lean#L90-L95">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -303,11 +305,11 @@ after a case-split.</p></div>
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/SplitIf.html#Lean.Meta.simpIfLocalDecl">Lean.Meta.simpIfLocalDecl</a> <span class="fn">mvarId</span> <span class="fn">fvarId</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let ctx ← <a href="/Unicode.lean/Lean/Meta/Tactic/SplitIf.html#Lean.Meta.SplitIf.getSimpContext">Lean.Meta.SplitIf.getSimpContext</a>
-  let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpLocalDecl">Lean.Meta.simpLocalDecl</a> <span class="fn">mvarId</span> <span class="fn">fvarId</span> <span class="fn">ctx</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/SplitIf.html#Lean.Meta.SplitIf.discharge?">Lean.Meta.SplitIf.discharge?</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span>)</span>
+  let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Main.html#Lean.Meta.simpLocalDecl">Lean.Meta.simpLocalDecl</a> <span class="fn">mvarId</span> <span class="fn">fvarId</span> <span class="fn">ctx</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/SplitIf.html#Lean.Meta.SplitIf.discharge?">Lean.Meta.SplitIf.discharge?</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span>) <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>
   <span class="fn">match <span class="fn">a</span> with
     | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">x</span>, <span class="fn">mvarId'</span>)</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">mvarId'</span></span>
     | <span class="fn">x</span> =>
-      <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Meta.Tactic.SplitIf"</span> <span class="fn">"Lean.Meta.simpIfLocalDecl"</span> <span class="fn">94</span> <span class="fn">4</span>
+      <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Meta.Tactic.SplitIf"</span> <span class="fn">"Lean.Meta.simpIfLocalDecl"</span> <span class="fn">95</span> <span class="fn">4</span>
         <span class="fn">"unreachable code has been reached"</span></span></span></span></span></li>
 </ul>
 </details>
@@ -316,7 +318,7 @@ after a case-split.</p></div>
 <div class="decl" id="Lean.Meta.splitIfTarget?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/SplitIf.lean#L96-L105">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/SplitIf.lean#L97-L106">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -350,7 +352,7 @@ after a case-split.</p></div>
 <div class="decl" id="Lean.Meta.splitIfLocalDecl?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/SplitIf.lean#L107-L117">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Meta/Tactic/SplitIf.lean#L108-L118">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -446,6 +448,9 @@ after a case-split.</p></div>
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -527,6 +532,9 @@ after a case-split.</p></div>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -604,6 +612,9 @@ after a case-split.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -686,6 +697,9 @@ after a case-split.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -892,6 +906,9 @@ after a case-split.</p></div>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1338,8 +1355,32 @@ after a case-split.</p></div>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1363,6 +1404,9 @@ after a case-split.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1533,6 +1577,9 @@ after a case-split.</p></div>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1558,9 +1605,6 @@ after a case-split.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -1933,6 +1977,15 @@ after a case-split.</p></div>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -1972,6 +2025,9 @@ after a case-split.</p></div>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

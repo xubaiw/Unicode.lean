@@ -831,7 +831,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.mkMessageAux">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L111-L112">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L111-L114">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -852,7 +852,9 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Command.html#Lean.Elab.Command.mkMessageAux">Lean.Elab.Command.mkMessageAux</a> <span class="fn">ctx</span> <span class="fn">ref</span> <span class="fn">msgData</span> <span class="fn">severity</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Elab/Exception.html#Lean.Elab.mkMessageCore">Lean.Elab.mkMessageCore</a> <span class="fn"><span class="fn">ctx</span>.fileName</span> <span class="fn"><span class="fn">ctx</span>.fileMap</span> <span class="fn">msgData</span> <span class="fn">severity</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.getD">Option.getD</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getPos?">Lean.Syntax.getPos?</a> <span class="fn">ref</span></span>) <span class="fn"><span class="fn">ctx</span>.cmdPos</span></span>)</span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Command.html#Lean.Elab.Command.mkMessageAux">Lean.Elab.Command.mkMessageAux</a> <span class="fn">ctx</span> <span class="fn">ref</span> <span class="fn">msgData</span> <span class="fn">severity</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let pos := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.getD">Option.getD</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getPos?">Lean.Syntax.getPos?</a> <span class="fn">ref</span></span>) <span class="fn"><span class="fn">ctx</span>.cmdPos</span></span>;
+  <span class="fn">let endPos := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.getD">Option.getD</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getTailPos?">Lean.Syntax.getTailPos?</a> <span class="fn">ref</span></span>) <span class="fn">pos</span></span>;
+  <span class="fn"><a href="/Unicode.lean/Lean/Elab/Exception.html#Lean.Elab.mkMessageCore">Lean.Elab.mkMessageCore</a> <span class="fn"><span class="fn">ctx</span>.fileName</span> <span class="fn"><span class="fn">ctx</span>.fileMap</span> <span class="fn">msgData</span> <span class="fn">severity</span> <span class="fn">pos</span> <span class="fn">endPos</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -860,7 +862,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.liftCoreM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L124-L135">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L127-L138">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -911,7 +913,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.liftEIO">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L141-L141">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L144-L144">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -939,7 +941,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.liftIO">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L143-L145">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L146-L148">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -973,7 +975,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.instMonadLiftTIOCommandElabM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L147-L148">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L150-L151">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -994,7 +996,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.getScope">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L150-L150">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L153-L153">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1017,7 +1019,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.instMonadResolveNameCommandElabM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L152-L154">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L155-L157">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1043,7 +1045,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.instMonadLogCommandElabM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L156-L164">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L159-L167">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1078,7 +1080,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.runLinters">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L166-L176">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L169-L179">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1116,7 +1118,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.getCurrMacroScope">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L178-L178">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L181-L181">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1139,7 +1141,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.getMainModule">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L179-L179">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L182-L182">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1162,7 +1164,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.withFreshMacroScope">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L181-L183">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L184-L186">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1200,7 +1202,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.instMonadQuotationCommandElabM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L185-L188">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L188-L191">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1222,7 +1224,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.mkCommandElabAttributeUnsafe">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L190-L191">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L193-L194">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">unsafe def</span>
@@ -1244,7 +1246,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.mkCommandElabAttribute">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L194-L194">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L197-L197">source</a>
 </div>
 <div class="attributes">@[implementedBy Lean.Elab.Command.mkCommandElabAttributeUnsafe]</div>
 <div class="decl_header">
@@ -1259,7 +1261,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.commandElabAttribute">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L196-L196">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L199-L199">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -1273,7 +1275,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.withMacroExpansion">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L228-L229">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L232-L233">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1309,7 +1311,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.instMonadMacroAdapterCommandElabM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L231-L234">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L235-L238">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1338,7 +1340,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.instMonadRecDepthCommandElabM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L236-L239">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L240-L243">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1370,7 +1372,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.showPartialSyntaxErrors">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L241-L241">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L245-L245">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -1384,7 +1386,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.withLogging">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L246-L256">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L250-L260">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1415,7 +1417,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.elabCommand">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L260-L283">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L264-L287">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1431,7 +1433,7 @@ ref : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></li>
 <div class="decl" id="Lean.Elab.Command.elabCommandTopLevel">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L289-L313">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L293-L317">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1511,7 +1513,7 @@ macro expansion etc.</p></div>
 <div class="decl" id="Lean.Elab.Command.adaptExpander">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L316-L318">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L320-L322">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1536,7 +1538,7 @@ macro expansion etc.</p></div>
 <div class="decl" id="Lean.Elab.Command.instInhabitedCommandElabM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L323-L324">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L327-L328">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1561,7 +1563,7 @@ macro expansion etc.</p></div>
 <div class="decl" id="Lean.Elab.Command.getBracketedBinderIds">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L330-L335">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L334-L339">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1657,7 +1659,7 @@ macro expansion etc.</p></div>
 <div class="decl" id="Lean.Elab.Command.liftTermElabM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L356-L378">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L359-L381">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1756,7 +1758,7 @@ macro expansion etc.</p></div>
 <div class="decl" id="Lean.Elab.Command.runTermElabM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L380-L396">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L383-L399">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1805,14 +1807,14 @@ macro expansion etc.</p></div>
               <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MonadWithReader.withReader">withReader</a>
                 (<span class="fn">fun <span class="fn">a</span> =>
                   <span class="fn">{ fileName := <span class="fn"><span class="fn">a</span>.fileName</span>, fileMap := <span class="fn"><span class="fn">a</span>.fileMap</span>, declName? := <span class="fn"><span class="fn">a</span>.declName?</span>, macroStack := <span class="fn"><span class="fn">a</span>.macroStack</span>,
-                    currMacroScope := <span class="fn"><span class="fn">a</span>.currMacroScope</span>, mayPostpone := <span class="fn"><span class="fn">a</span>.mayPostpone</span>, errToSorry := <span class="fn"><span class="fn">a</span>.errToSorry</span>,
-                    autoBoundImplicit := <span class="fn"><span class="fn">a</span>.autoBoundImplicit</span>, autoBoundImplicits := <span class="fn"><span class="fn">a</span>.autoBoundImplicits</span>,
-                    sectionVars := <span class="fn"><span class="fn">a</span>.sectionVars</span>, sectionFVars := <span class="fn">sectionFVars</span>, implicitLambda := <span class="fn"><span class="fn">a</span>.implicitLambda</span>,
-                    isNoncomputableSection := <span class="fn"><span class="fn">a</span>.isNoncomputableSection</span>, ignoreTCFailures := <span class="fn"><span class="fn">a</span>.ignoreTCFailures</span> }</span></span>)
+                    mayPostpone := <span class="fn"><span class="fn">a</span>.mayPostpone</span>, errToSorry := <span class="fn"><span class="fn">a</span>.errToSorry</span>, autoBoundImplicit := <span class="fn"><span class="fn">a</span>.autoBoundImplicit</span>,
+                    autoBoundImplicits := <span class="fn"><span class="fn">a</span>.autoBoundImplicits</span>, sectionVars := <span class="fn"><span class="fn">a</span>.sectionVars</span>,
+                    sectionFVars := <span class="fn">sectionFVars</span>, implicitLambda := <span class="fn"><span class="fn">a</span>.implicitLambda</span>,
+                    isNoncomputableSection := <span class="fn"><span class="fn">a</span>.isNoncomputableSection</span>, ignoreTCFailures := <span class="fn"><span class="fn">a</span>.ignoreTCFailures</span>,
+                    inPattern := <span class="fn"><span class="fn">a</span>.inPattern</span> }</span></span>)
                 <span class="fn">do
                 <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.resetMessageLog">Lean.Elab.Term.resetMessageLog</a>
-                let xs ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.addAutoBoundImplicits">Lean.Elab.Term.addAutoBoundImplicits</a> <span class="fn">xs</span></span>
-                <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.withoutAutoBoundImplicit">Lean.Elab.Term.withoutAutoBoundImplicit</a> (<span class="fn"><span class="fn">elabFn</span> <span class="fn">xs</span></span>)</span></span></span></span></span></span></span>)</span>)</span></span></span></li>
+                <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.addAutoBoundImplicits">Lean.Elab.Term.addAutoBoundImplicits</a> <span class="fn">xs</span> <span class="fn">fun <span class="fn">xs</span> => <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.withoutAutoBoundImplicit">Lean.Elab.Term.withoutAutoBoundImplicit</a> (<span class="fn"><span class="fn">elabFn</span> <span class="fn">xs</span></span>)</span></span></span></span></span></span></span></span></span>)</span>)</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1820,7 +1822,7 @@ macro expansion etc.</p></div>
 <div class="decl" id="Lean.Elab.Command.catchExceptions">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L398-L399">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L401-L402">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1844,7 +1846,7 @@ macro expansion etc.</p></div>
 <div class="decl" id="Lean.Elab.Command.getScopes">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L404-L405">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L407-L408">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1867,7 +1869,7 @@ macro expansion etc.</p></div>
 <div class="decl" id="Lean.Elab.Command.modifyScope">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L407-L412">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L410-L415">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1888,7 +1890,7 @@ macro expansion etc.</p></div>
         <span class="fn">match <span class="fn"><span class="fn">s</span>.scopes</span> with
         | <span class="fn"><span class="fn">h</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">t</span></span> => <span class="fn"><span class="fn"><span class="fn">f</span> <span class="fn">h</span></span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">t</span></span>
         | <span class="fn">[]</span> =>
-          <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Elab.Command"</span> <span class="fn">"Lean.Elab.Command.modifyScope"</span> <span class="fn">411</span> <span class="fn">16</span>
+          <span class="fn"><a href="/Unicode.lean/Init/Util.html#panicWithPosWithDecl">panicWithPosWithDecl</a> <span class="fn">"Lean.Elab.Command"</span> <span class="fn">"Lean.Elab.Command.modifyScope"</span> <span class="fn">414</span> <span class="fn">16</span>
             <span class="fn">"unreachable code has been reached"</span></span></span>,
       nextMacroScope := <span class="fn"><span class="fn">s</span>.nextMacroScope</span>, maxRecDepth := <span class="fn"><span class="fn">s</span>.maxRecDepth</span>, nextInstIdx := <span class="fn"><span class="fn">s</span>.nextInstIdx</span>, ngen := <span class="fn"><span class="fn">s</span>.ngen</span>,
       infoState := <span class="fn"><span class="fn">s</span>.infoState</span>, traceState := <span class="fn"><span class="fn">s</span>.traceState</span> }</span></span></span></span></li>
@@ -1899,7 +1901,7 @@ macro expansion etc.</p></div>
 <div class="decl" id="Lean.Elab.Command.withScope">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L414-L422">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L417-L425">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1943,7 +1945,7 @@ macro expansion etc.</p></div>
 <div class="decl" id="Lean.Elab.Command.getLevelNames">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L424-L425">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L427-L428">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1966,7 +1968,7 @@ macro expansion etc.</p></div>
 <div class="decl" id="Lean.Elab.Command.addUnivLevel">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L427-L433">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L430-L436">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1998,7 +2000,7 @@ macro expansion etc.</p></div>
 <div class="decl" id="Lean.Elab.Command.expandDeclId">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L435-L442">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Command.lean#L438-L445">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2099,6 +2101,9 @@ macro expansion etc.</p></div>
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -2180,6 +2185,9 @@ macro expansion etc.</p></div>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -2257,6 +2265,9 @@ macro expansion etc.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -2339,6 +2350,9 @@ macro expansion etc.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -2545,6 +2559,9 @@ macro expansion etc.</p></div>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -2991,8 +3008,32 @@ macro expansion etc.</p></div>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -3016,6 +3057,9 @@ macro expansion etc.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -3186,6 +3230,9 @@ macro expansion etc.</p></div>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -3211,9 +3258,6 @@ macro expansion etc.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -3586,6 +3630,15 @@ macro expansion etc.</p></div>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -3625,6 +3678,9 @@ macro expansion etc.</p></div>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

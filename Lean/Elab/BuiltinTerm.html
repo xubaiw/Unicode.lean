@@ -296,43 +296,48 @@ Documentation</h1>
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BuiltinTerm.html#Lean.Elab.Term.elabSyntheticHole">Lean.Elab.Term.elabSyntheticHole</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let arg := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">1</span></span>;
   <span class="fn">let userName := <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.isIdent">Lean.Syntax.isIdent</a> <span class="fn">arg</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getId">Lean.Syntax.getId</a> <span class="fn">arg</span></span> else <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a></span>;
   <span class="fn">let mkNewHole := <span class="fn">fun <span class="fn">x</span> => <span class="fn">do
-    let mvar ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkFreshExprMVar">Lean.Meta.mkFreshExprMVar</a> <span class="fn">expectedType?</span> <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind.syntheticOpaque">Lean.MetavarKind.syntheticOpaque</a> <span class="fn">userName</span></span>)</span>
+    let a ← <span class="fn">read</span>
+    let kind : <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind">Lean.MetavarKind</a> :=
+      <span class="fn">if <span class="fn"><span class="fn"><span class="fn">a</span>.inPattern</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind.natural">Lean.MetavarKind.natural</a> else <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind.syntheticOpaque">Lean.MetavarKind.syntheticOpaque</a></span>
+    let mvar ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkFreshExprMVar">Lean.Meta.mkFreshExprMVar</a> <span class="fn">expectedType?</span> <span class="fn">kind</span> <span class="fn">userName</span></span>)</span>
     <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.registerMVarErrorHoleInfo">Lean.Elab.Term.registerMVarErrorHoleInfo</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mvarId!">Lean.Expr.mvarId!</a> <span class="fn">mvar</span></span>) <span class="fn">stx</span></span>
     <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">mvar</span></span></span></span>;
-  <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.isAnonymous">Lean.Name.isAnonymous</a> <span class="fn">userName</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><span class="fn">mkNewHole</span> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>
-  else <span class="fn">do
-    let mctx ← <span class="fn">Lean.getMCtx</span>
-    <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.findUserName?">Lean.MetavarContext.findUserName?</a> <span class="fn">mctx</span> <span class="fn">userName</span></span> with
-      | <span class="fn">none</span> => <span class="fn"><span class="fn">mkNewHole</span> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">mvarId</span></span> =>
-        <span class="fn">let mvar := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkMVar">Lean.mkMVar</a> <span class="fn">mvarId</span></span>;
-        <span class="fn">do
-        let mvarDecl ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.getMVarDecl">Lean.Elab.Term.getMVarDecl</a> <span class="fn">mvarId</span></span>
-        let lctx ← <span class="fn">Lean.getLCtx</span>
-        <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext.isSubPrefixOf">Lean.LocalContext.isSubPrefixOf</a> <span class="fn"><span class="fn">mvarDecl</span>.lctx</span> <span class="fn">lctx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">mvar</span></span>
-          else
-            <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.getExprAssignment?">Lean.MetavarContext.getExprAssignment?</a> <span class="fn">mctx</span> <span class="fn">mvarId</span></span> with
-            | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">val</span></span> => <span class="fn">do
-              let val ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> <span class="fn">val</span></span>)</span>
-              <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.isWellFormed">Lean.MetavarContext.isWellFormed</a> <span class="fn">mctx</span> <span class="fn">lctx</span> <span class="fn">val</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">val</span></span>
-                else
-                  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLCtx">Lean.Meta.withLCtx</a> <span class="fn"><span class="fn">mvarDecl</span>.lctx</span> <span class="fn"><span class="fn">mvarDecl</span>.localInstances</span>
-                    (<span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a>
-                      (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a>
-                            <span class="fn">"synthetic hole has already been defined and assigned to value incompatible with the current context"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                           <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.indentExpr">Lean.indentExpr</a> <span class="fn">val</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                         <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>)</span></span></span>
-            | <span class="fn">none</span> =>
-              <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.isDelayedAssigned">Lean.MetavarContext.isDelayedAssigned</a> <span class="fn">mctx</span> <span class="fn">mvarId</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-                <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a>
-                  (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a>
-                    <span class="fn">"synthetic hole has already beend defined and delayed assigned with an incompatible local context"</span></span>)</span>
-              else
-                <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext.isSubPrefixOf">Lean.LocalContext.isSubPrefixOf</a> <span class="fn">lctx</span> <span class="fn"><span class="fn">mvarDecl</span>.lctx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-                  let mvarNew ← <span class="fn"><span class="fn">mkNewHole</span> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>
-                  <span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MonadMCtx.modifyMCtx">Lean.modifyMCtx</a> <span class="fn">fun <span class="fn">mctx</span> => <span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.assignExpr">Lean.MetavarContext.assignExpr</a> <span class="fn">mctx</span> <span class="fn">mvarId</span> <span class="fn">mvarNew</span></span></span></span>
-                  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">mvarNew</span></span></span>
-                else
+  <span class="fn">do
+  let a ← <span class="fn">read</span>
+  <span class="fn">if <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Data/Name.html#Lean.Name.isAnonymous">Lean.Name.isAnonymous</a> <span class="fn">userName</span></span> <a href="/Unicode.lean/Init/Prelude.html#or">||</a> <span class="fn"><span class="fn">a</span>.inPattern</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><span class="fn">mkNewHole</span> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>
+    else <span class="fn">do
+      let mctx ← <span class="fn">Lean.getMCtx</span>
+      <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.findUserName?">Lean.MetavarContext.findUserName?</a> <span class="fn">mctx</span> <span class="fn">userName</span></span> with
+        | <span class="fn">none</span> => <span class="fn"><span class="fn">mkNewHole</span> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>
+        | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">mvarId</span></span> =>
+          <span class="fn">let mvar := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkMVar">Lean.mkMVar</a> <span class="fn">mvarId</span></span>;
+          <span class="fn">do
+          let mvarDecl ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.getMVarDecl">Lean.Elab.Term.getMVarDecl</a> <span class="fn">mvarId</span></span>
+          let lctx ← <span class="fn">Lean.getLCtx</span>
+          <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext.isSubPrefixOf">Lean.LocalContext.isSubPrefixOf</a> <span class="fn"><span class="fn">mvarDecl</span>.lctx</span> <span class="fn">lctx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">mvar</span></span>
+            else
+              <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.getExprAssignment?">Lean.MetavarContext.getExprAssignment?</a> <span class="fn">mctx</span> <span class="fn">mvarId</span></span> with
+              | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">val</span></span> => <span class="fn">do
+                let val ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> <span class="fn">val</span></span>)</span>
+                <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.isWellFormed">Lean.MetavarContext.isWellFormed</a> <span class="fn">mctx</span> <span class="fn">lctx</span> <span class="fn">val</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">val</span></span>
+                  else
+                    <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withLCtx">Lean.Meta.withLCtx</a> <span class="fn"><span class="fn">mvarDecl</span>.lctx</span> <span class="fn"><span class="fn">mvarDecl</span>.localInstances</span>
+                      (<span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a>
+                        (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a>
+                              <span class="fn">"synthetic hole has already been defined and assigned to value incompatible with the current context"</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                             <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.indentExpr">Lean.indentExpr</a> <span class="fn">val</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                           <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>)</span></span></span>
+              | <span class="fn">none</span> =>
+                <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.isDelayedAssigned">Lean.MetavarContext.isDelayedAssigned</a> <span class="fn">mctx</span> <span class="fn">mvarId</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
                   <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a>
-                    (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"synthetic hole has already been defined with an incompatible local context"</span></span>)</span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+                    (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a>
+                      <span class="fn">"synthetic hole has already beend defined and delayed assigned with an incompatible local context"</span></span>)</span>
+                else
+                  <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext.isSubPrefixOf">Lean.LocalContext.isSubPrefixOf</a> <span class="fn">lctx</span> <span class="fn"><span class="fn">mvarDecl</span>.lctx</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+                    let mvarNew ← <span class="fn"><span class="fn">mkNewHole</span> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>
+                    <span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MonadMCtx.modifyMCtx">Lean.modifyMCtx</a> <span class="fn">fun <span class="fn">mctx</span> => <span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.assignExpr">Lean.MetavarContext.assignExpr</a> <span class="fn">mctx</span> <span class="fn">mvarId</span> <span class="fn">mvarNew</span></span></span></span>
+                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">mvarNew</span></span></span>
+                  else
+                    <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwError">Lean.throwError</a>
+                      (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"synthetic hole has already been defined with an incompatible local context"</span></span>)</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -852,7 +857,7 @@ existent in the current context, or else fails.</p></div>
           (<span class="fn">fun <span class="fn">ctx</span> =>
             <span class="fn">{ options := <span class="fn"><span class="fn">ctx</span>.options</span>, currRecDepth := <span class="fn"><span class="fn">ctx</span>.currRecDepth</span>, maxRecDepth := <span class="fn"><span class="fn">ctx</span>.maxRecDepth</span>, ref := <span class="fn"><span class="fn">ctx</span>.ref</span>,
               currNamespace := <span class="fn"><span class="fn">ctx</span>.currNamespace</span>, openDecls := <span class="fn">openDecls</span>, initHeartbeats := <span class="fn"><span class="fn">ctx</span>.initHeartbeats</span>,
-              maxHeartbeats := <span class="fn"><span class="fn">ctx</span>.maxHeartbeats</span> }</span></span>)
+              maxHeartbeats := <span class="fn"><span class="fn">ctx</span>.maxHeartbeats</span>, currMacroScope := <span class="fn"><span class="fn">ctx</span>.currMacroScope</span> }</span></span>)
           (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">3</span></span>) <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span>)
     <span class="fn">Lean.popScope</span></span></span></li>
 </ul>
@@ -881,7 +886,8 @@ existent in the current context, or else fails.</p></div>
       (<span class="fn">fun <span class="fn">ctx</span> =>
         <span class="fn">{ options := <span class="fn">options</span>, currRecDepth := <span class="fn"><span class="fn">ctx</span>.currRecDepth</span>, maxRecDepth := <span class="fn"><a href="/Unicode.lean/Lean/Data/Options.html#Lean.Option.get">Lean.Option.get</a> <span class="fn">options</span> <a href="/Unicode.lean/Lean/Util/RecDepth.html#Lean.maxRecDepth">Lean.maxRecDepth</a></span>,
           ref := <span class="fn"><span class="fn">ctx</span>.ref</span>, currNamespace := <span class="fn"><span class="fn">ctx</span>.currNamespace</span>, openDecls := <span class="fn"><span class="fn">ctx</span>.openDecls</span>,
-          initHeartbeats := <span class="fn"><span class="fn">ctx</span>.initHeartbeats</span>, maxHeartbeats := <span class="fn"><span class="fn">ctx</span>.maxHeartbeats</span> }</span></span>)
+          initHeartbeats := <span class="fn"><span class="fn">ctx</span>.initHeartbeats</span>, maxHeartbeats := <span class="fn"><span class="fn">ctx</span>.maxHeartbeats</span>,
+          currMacroScope := <span class="fn"><span class="fn">ctx</span>.currMacroScope</span> }</span></span>)
       (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">4</span></span>) <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span></span></li>
 </ul>
 </details>
@@ -948,6 +954,9 @@ existent in the current context, or else fails.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -1031,6 +1040,9 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -1108,6 +1120,9 @@ existent in the current context, or else fails.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -1190,6 +1205,9 @@ existent in the current context, or else fails.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1396,6 +1414,9 @@ existent in the current context, or else fails.</p></div>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1842,8 +1863,32 @@ existent in the current context, or else fails.</p></div>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1867,6 +1912,9 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -2037,6 +2085,9 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -2062,9 +2113,6 @@ existent in the current context, or else fails.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2437,6 +2485,15 @@ existent in the current context, or else fails.</p></div>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2476,6 +2533,9 @@ existent in the current context, or else fails.</p></div>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

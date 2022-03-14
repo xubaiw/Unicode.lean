@@ -60,14 +60,150 @@ Documentation</h1>
 </details>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.Elab.withCommonTelescope">Lean.Elab.withCommonTelescope</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.withCommonTelescope.go">Lean.Elab.withCommonTelescope.go</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.getFixedPrefix">Lean.Elab.getFixedPrefix</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Elab.wfRecursion">Lean.Elab.wfRecursion</a>
 </div>
 </nav>
 <main>
+<div class="decl" id="Lean.Elab.withCommonTelescope">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/WF/Main.lean#L51-L61">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html#Lean.Elab.withCommonTelescope">Lean.Elab.withCommonTelescope</a>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{α : <span class="fn">Type</span>}</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(preDefs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.PreDefinition">Lean.Elab.PreDefinition</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(k : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <span class="fn">α</span></span></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <span class="fn">α</span></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html#Lean.Elab.withCommonTelescope">Lean.Elab.withCommonTelescope</a> <span class="fn">preDefs</span> <span class="fn">k</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html#Lean.Elab.withCommonTelescope.go">Lean.Elab.withCommonTelescope.go</a> <span class="fn">k</span> <span class="fn">#[]</span> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a> (<span class="fn">fun <span class="fn">a</span> => <span class="fn"><span class="fn">a</span>.value</span></span>) <span class="fn">preDefs</span></span>)</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.withCommonTelescope.go">
+<div class="constant">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/WF/Main.lean#L54-L61">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">partial def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html#Lean.Elab.withCommonTelescope.go">Lean.Elab.withCommonTelescope.go</a>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{α : <span class="fn">Type</span>}</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(k : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <span class="fn">α</span></span></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(fvars : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(vals : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <span class="fn">α</span></span></div></div>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.getFixedPrefix">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/WF/Main.lean#L63-L79">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html#Lean.Elab.getFixedPrefix">Lean.Elab.getFixedPrefix</a>
+</span>
+<span class="decl_args">
+<span class="fn">(preDefs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.PreDefinition">Lean.Elab.PreDefinition</a></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html#Lean.Elab.getFixedPrefix">Lean.Elab.getFixedPrefix</a> <span class="fn">preDefs</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html#Lean.Elab.withCommonTelescope">Lean.Elab.withCommonTelescope</a> <span class="fn">preDefs</span> <span class="fn">fun <span class="fn">xs</span> <span class="fn">vals</span> => <span class="fn">do
+    let resultRef ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.mkRef">IO.mkRef</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">xs</span></span>)</span>)</span>
+    let r ←
+      <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">vals</span> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span> <span class="fn">fun <span class="fn">val</span> <span class="fn">r</span> =>
+          <span class="fn">let r := <span class="fn"><span class="fn">r</span>.snd</span>;
+          <span class="fn">do
+          let a ← <span class="fn"><a href="/Unicode.lean/Init/System/ST.html#ST.Ref.get">ST.Ref.get</a> <span class="fn">resultRef</span></span>
+          let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep">ForInStep</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#MProd">MProd</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></span>) <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a></span>)</span>)</span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn">do
+            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a>
+                (<span class="fn"><a href="/Unicode.lean/Lean/Meta/ForEachExpr.html#Lean.Meta.forEachExpr'">Lean.Meta.forEachExpr'</a> <span class="fn">val</span> <span class="fn">fun <span class="fn">e</span> =>
+                  <span class="fn">if
+                      <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.any">Array.any</a> <span class="fn">preDefs</span> (<span class="fn">fun <span class="fn">preDef</span> => <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isAppOf">Lean.Expr.isAppOf</a> <span class="fn">e</span> <span class="fn"><span class="fn">preDef</span>.declName</span></span></span>) <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">preDefs</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>                         <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
+                    <span class="fn">let args := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.getAppArgs">Lean.Expr.getAppArgs</a> <span class="fn">e</span></span>;
+                    <span class="fn">do
+                    <span class="fn"><a href="/Unicode.lean/Init/System/ST.html#ST.Ref.modify">ST.Ref.modify</a> <span class="fn">resultRef</span> <span class="fn">fun <span class="fn">a</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#min">min</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">args</span></span>) <span class="fn">a</span></span></span></span>
+                    let s : <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Subarray">Subarray</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> := <span class="fn"><a href="/Unicode.lean/Init/Data/Stream.html#ToStream.toStream">toStream</a> <span class="fn">xs</span></span>
+                    let r ←
+                      <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">args</span> <span class="fn">{ fst := <span class="fn">none</span>, snd := <span class="fn">s</span> }</span> <span class="fn">fun <span class="fn">arg</span> <span class="fn">r</span> =>
+                          <span class="fn">let r := <span class="fn"><span class="fn">r</span>.snd</span>;
+                          <span class="fn">let s := <span class="fn">r</span>;
+                          <span class="fn">match <span class="fn"><a href="/Unicode.lean/Init/Data/Stream.html#Stream.next?">Stream.next?</a> <span class="fn">s</span></span> with
+                          | <span class="fn">none</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <span class="fn">s</span> }</span></span>)</span>
+                          | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">(<span class="fn">x</span>, <span class="fn">s'</span>)</span></span> =>
+                            <span class="fn">let s := <span class="fn">s'</span>;
+                            <span class="fn">do
+                            let a ←
+                              <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withoutProofIrrelevance">Lean.Meta.withoutProofIrrelevance</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.withReducible">Lean.Meta.withReducible</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.isDefEq">Lean.Meta.isDefEq</a> <span class="fn">arg</span> <span class="fn">x</span></span>)</span>)</span>
+                            <span class="fn">if <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn">a</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>, snd := <span class="fn">s</span> }</span></span>)</span>
+                              else <span class="fn">do
+                                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <span class="fn">s</span> }</span></span>)</span></span></span></span></span></span></span></span></span></span>
+                    let x : <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Subarray">Subarray</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> := <span class="fn"><span class="fn">r</span>.snd</span>
+                    let s : <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Subarray">Subarray</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> := <span class="fn">x</span>
+                    let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span></span>
+                    <span class="fn">match <span class="fn"><span class="fn">r</span>.fst</span> with
+                      | <span class="fn">none</span> => <span class="fn">do
+                        let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
+                      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span></span></span>
+                  else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></span></span>)</span>
+            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">{ fst := <span class="fn">none</span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span></span></span>
+          <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">0</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">{ fst := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">0</span></span>, snd := <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> }</span></span>)</span>
+            else <span class="fn">do
+              let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span>
+    let x : <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> := <span class="fn"><span class="fn">r</span>.snd</span>
+    let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/System/ST.html#ST.Ref.get">ST.Ref.get</a> <span class="fn">resultRef</span></span></span>
+    <span class="fn">match <span class="fn"><span class="fn">r</span>.fst</span> with
+      | <span class="fn">none</span> => <span class="fn">do
+        let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
+      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">a</span></span></span></span></span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Elab.wfRecursion">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/WF/Main.lean#L50-L68">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/WF/Main.lean#L81-L107">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -87,42 +223,81 @@ Documentation</h1>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html#Lean.Elab.wfRecursion">Lean.Elab.wfRecursion</a> <span class="fn">preDefs</span> <span class="fn">wf?</span> <span class="fn">decrTactic?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let unaryPreDef ←
+  let discr ←
     <span class="fn"><a href="/Unicode.lean/Lean/MonadEnv.html#Lean.withoutModifyingEnv">Lean.withoutModifyingEnv</a> <span class="fn">do
         let r ←
           <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">preDefs</span> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> <span class="fn">fun <span class="fn">preDef</span> <span class="fn">r</span> => <span class="fn">do
               <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.addAsAxiom">Lean.Elab.addAsAxiom</a> <span class="fn">preDef</span></span>)</span>
               <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span></span></span></span>
         let x : <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> := <span class="fn">r</span>
-        let unaryPreDefs ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/PackDomain.html#Lean.Elab.WF.packDomain">Lean.Elab.WF.packDomain</a> <span class="fn">preDefs</span></span>)</span>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/PackMutual.html#Lean.Elab.WF.packMutual">Lean.Elab.WF.packMutual</a> <span class="fn">unaryPreDefs</span></span>)</span></span></span>
-  let wfRel ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Rel.html#Lean.Elab.WF.elabWFRel">Lean.Elab.WF.elabWFRel</a> <span class="fn">preDefs</span> <span class="fn">unaryPreDef</span> <span class="fn">wf?</span></span>
-  let preDefNonRec ←
-    <span class="fn"><a href="/Unicode.lean/Lean/MonadEnv.html#Lean.withoutModifyingEnv">Lean.withoutModifyingEnv</a> <span class="fn">do
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.addAsAxiom">Lean.Elab.addAsAxiom</a> <span class="fn">unaryPreDef</span></span>)</span>
-        <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html#Lean.Elab.WF.mkFix">Lean.Elab.WF.mkFix</a> <span class="fn">unaryPreDef</span> <span class="fn">wfRel</span> <span class="fn">decrTactic?</span></span></span></span>
-  let preDefNonRec ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.eraseRecAppSyntax">Lean.Elab.eraseRecAppSyntax</a> <span class="fn">preDefNonRec</span></span>)</span>
-  let cls : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> := <span class="fn">`Elab.definition.wf</span>
-  let a ← <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.isTracingEnabledFor">Lean.isTracingEnabledFor</a> <span class="fn">cls</span></span>
-  let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn">do
-    let preDefs ← <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mapM">Array.mapM</a> (<span class="fn">fun <span class="fn">d</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.eraseRecAppSyntax">Lean.Elab.eraseRecAppSyntax</a> <span class="fn">d</span></span>)</span></span>) <span class="fn">preDefs</span></span>
-    <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.addNonRec">Lean.Elab.addNonRec</a> <span class="fn">preDefNonRec</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
-    <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html#_private.Lean.Elab.PreDefinition.WF.Main.0.Lean.Elab.addNonRecPreDefs">Lean.Elab.addNonRecPreDefs</a> <span class="fn">preDefs</span> <span class="fn">preDefNonRec</span></span>
-    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html#Lean.Elab.WF.registerEqnsInfo">Lean.Elab.WF.registerEqnsInfo</a> <span class="fn">preDefs</span> <span class="fn"><span class="fn">preDefNonRec</span>.declName</span></span>)</span>
-    let r ←
-      <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">preDefs</span> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> <span class="fn">fun <span class="fn">preDef</span> <span class="fn">r</span> => <span class="fn">do
-          <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.applyAttributesOf">Lean.Elab.applyAttributesOf</a> <span class="fn">#[<span class="fn">preDef</span>]</span> <a href="/Unicode.lean/Lean/Attributes.html#Lean.AttributeApplicationTime.afterCompilation">Lean.AttributeApplicationTime.afterCompilation</a></span>
-          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span></span></span></span>
-    let x : <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> := <span class="fn">r</span>
-    <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.addAndCompilePartialRec">Lean.Elab.addAndCompilePartialRec</a> <span class="fn">preDefs</span></span></span></span>
-  <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-      let y ←
-        <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.addTrace">Lean.addTrace</a> <span class="fn">cls</span>
-            (<span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">">> "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn"><span class="fn">preDefNonRec</span>.declName</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">" :=\n"</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                 <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn"><span class="fn">preDefNonRec</span>.value</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>               <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>
-      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-    else <span class="fn">do
-      let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-      <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></li>
+        let fixedPrefixSize ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html#Lean.Elab.getFixedPrefix">Lean.Elab.getFixedPrefix</a> <span class="fn">preDefs</span></span>
+        let cls : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> := <span class="fn">`Elab.definition.wf</span>
+        let a ← <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.isTracingEnabledFor">Lean.isTracingEnabledFor</a> <span class="fn">cls</span></span>
+        let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.PreDefinition">Lean.Elab.PreDefinition</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></span>)</span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn">do
+          let unaryPreDefs ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/PackDomain.html#Lean.Elab.WF.packDomain">Lean.Elab.WF.packDomain</a> <span class="fn">fixedPrefixSize</span> <span class="fn">preDefs</span></span>)</span>
+          let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/PackMutual.html#Lean.Elab.WF.packMutual">Lean.Elab.WF.packMutual</a> <span class="fn">fixedPrefixSize</span> <span class="fn">unaryPreDefs</span></span>)</span>
+          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">(<span class="fn">a</span>, <span class="fn">fixedPrefixSize</span>)</span></span></span></span>
+        <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+            let y ←
+              <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.addTrace">Lean.addTrace</a> <span class="fn">cls</span>
+                  (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"fixed prefix: "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">fixedPrefixSize</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>
+            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
+          else <span class="fn">do
+            let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+            <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span>
+  let x : <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.PreDefinition">Lean.Elab.PreDefinition</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></span> := <span class="fn">discr</span>
+  <span class="fn">match <span class="fn">x</span> with
+    | <span class="fn">(<span class="fn">unaryPreDef</span>, <span class="fn">fixedPrefixSize</span>)</span> => <span class="fn">do
+      let <span class="fn">preDefNonRec</span> ←
+        <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallBoundedTelescope">Lean.Meta.forallBoundedTelescope</a> <span class="fn"><span class="fn">unaryPreDef</span>.type</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">fixedPrefixSize</span></span>) <span class="fn">fun <span class="fn">prefixArgs</span> <span class="fn">type</span> =>
+            <span class="fn">let packedArgType := <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.bindingDomain!">Lean.Expr.bindingDomain!</a> <span class="fn">type</span></span>;
+            <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Rel.html#Lean.Elab.WF.elabWFRel">Lean.Elab.WF.elabWFRel</a> <span class="fn">preDefs</span> <span class="fn"><span class="fn">unaryPreDef</span>.declName</span> <span class="fn">fixedPrefixSize</span> <span class="fn">packedArgType</span> <span class="fn">wf?</span> <span class="fn">fun <span class="fn">wfRel</span> =>
+              <span class="fn">let cls := <span class="fn">`Elab.definition.wf</span>;
+              <span class="fn">do
+              let a ← <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.isTracingEnabledFor">Lean.isTracingEnabledFor</a> <span class="fn">cls</span></span>
+              let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.PreDefinition">Lean.Elab.PreDefinition</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn">do
+                let discr ←
+                  <span class="fn"><a href="/Unicode.lean/Lean/MonadEnv.html#Lean.withoutModifyingEnv'">Lean.withoutModifyingEnv'</a> <span class="fn">do
+                      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.addAsAxiom">Lean.Elab.addAsAxiom</a> <span class="fn">unaryPreDef</span></span>)</span>
+                      let value ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html#Lean.Elab.WF.mkFix">Lean.Elab.WF.mkFix</a> <span class="fn">unaryPreDef</span> <span class="fn">prefixArgs</span> <span class="fn">wfRel</span> <span class="fn">decrTactic?</span></span>
+                      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.eraseRecAppSyntaxExpr">Lean.Elab.eraseRecAppSyntaxExpr</a> <span class="fn">value</span></span>)</span></span></span>
+                let x : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Environment.html#Lean.Environment">Lean.Environment</a></span> := <span class="fn">discr</span>
+                <span class="fn">match <span class="fn">x</span> with
+                  | <span class="fn">(<span class="fn">value</span>, <span class="fn">envNew</span>)</span> => <span class="fn">do
+                    let <span class="fn">value</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Transform.html#Lean.Meta.unfoldDeclsFrom">Lean.Meta.unfoldDeclsFrom</a> <span class="fn">envNew</span> <span class="fn">value</span></span>)</span>
+                    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a>
+                        <span class="fn">{ ref := <span class="fn"><span class="fn">unaryPreDef</span>.ref</span>, kind := <span class="fn"><span class="fn">unaryPreDef</span>.kind</span>, levelParams := <span class="fn"><span class="fn">unaryPreDef</span>.levelParams</span>,
+                          modifiers := <span class="fn"><span class="fn">unaryPreDef</span>.modifiers</span>, declName := <span class="fn"><span class="fn">unaryPreDef</span>.declName</span>,
+                          type := <span class="fn"><span class="fn">unaryPreDef</span>.type</span>, value := <span class="fn">value</span> }</span></span></span></span></span></span>
+              <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+                  let y ←
+                    <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.addTrace">Lean.addTrace</a> <span class="fn">cls</span>
+                        (<span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"wfRel: "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">wfRel</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>
+                  <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
+                else <span class="fn">do
+                  let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                  <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></span></span>
+      let cls : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> := <span class="fn">`Elab.definition.wf</span>
+      let a ← <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.isTracingEnabledFor">Lean.isTracingEnabledFor</a> <span class="fn">cls</span></span>
+      let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn">do
+        let preDefs ← <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mapM">Array.mapM</a> (<span class="fn">fun <span class="fn">d</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.eraseRecAppSyntax">Lean.Elab.eraseRecAppSyntax</a> <span class="fn">d</span></span>)</span></span>) <span class="fn">preDefs</span></span>
+        <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.addNonRec">Lean.Elab.addNonRec</a> <span class="fn">preDefNonRec</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>
+        <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html#_private.Lean.Elab.PreDefinition.WF.Main.0.Lean.Elab.addNonRecPreDefs">Lean.Elab.addNonRecPreDefs</a> <span class="fn">preDefs</span> <span class="fn">preDefNonRec</span> <span class="fn">fixedPrefixSize</span></span>
+        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Eqns.html#Lean.Elab.WF.registerEqnsInfo">Lean.Elab.WF.registerEqnsInfo</a> <span class="fn">preDefs</span> <span class="fn"><span class="fn">preDefNonRec</span>.declName</span></span>)</span>
+        let r ←
+          <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">preDefs</span> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a> <span class="fn">fun <span class="fn">preDef</span> <span class="fn">r</span> => <span class="fn">do
+              <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.applyAttributesOf">Lean.Elab.applyAttributesOf</a> <span class="fn">#[<span class="fn">preDef</span>]</span> <a href="/Unicode.lean/Lean/Attributes.html#Lean.AttributeApplicationTime.afterCompilation">Lean.AttributeApplicationTime.afterCompilation</a></span>
+              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>)</span></span></span></span>
+        let x : <a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> := <span class="fn">r</span>
+        <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Basic.html#Lean.Elab.addAndCompilePartialRec">Lean.Elab.addAndCompilePartialRec</a> <span class="fn">preDefs</span></span></span></span>
+      <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+          let y ←
+            <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.addTrace">Lean.addTrace</a> <span class="fn">cls</span>
+                (<span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">">> "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn"><span class="fn">preDefNonRec</span>.declName</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">" :=\n"</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                     <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn"><span class="fn">preDefNonRec</span>.value</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                   <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>
+          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
+        else <span class="fn">do
+          let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+          <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -188,6 +363,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -271,6 +449,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -348,6 +529,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -430,6 +614,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -636,6 +823,9 @@ Documentation</h1>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1082,8 +1272,32 @@ Documentation</h1>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1107,6 +1321,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1277,6 +1494,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1302,9 +1522,6 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -1677,6 +1894,15 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -1716,6 +1942,9 @@ Documentation</h1>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

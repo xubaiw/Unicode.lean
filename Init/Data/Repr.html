@@ -281,7 +281,7 @@ reprPrec : <span class="fn"><span class="fn">α</span> → <span class="fn"><a h
 <a href="/Unicode.lean/Init/System/IO.html#IO.FS.instReprMetadata">IO.FS.instReprMetadata</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprJustification">Lean.Meta.Linear.instReprJustification</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.instReprJustification">Lean.Meta.Linear.instReprJustification</a>
 </li>
 <li>
 <a href="/Unicode.lean/Init/Data/Repr.html#instReprUInt32">instReprUInt32</a>
@@ -323,7 +323,7 @@ reprPrec : <span class="fn"><span class="fn">α</span> → <span class="fn"><a h
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpCongrTheorems.html#Lean.Meta.instReprSimpCongrTheorems">Lean.Meta.instReprSimpCongrTheorems</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprCnstr">Lean.Meta.Linear.instReprCnstr</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.instReprCnstr">Lean.Meta.Linear.instReprCnstr</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Data/Json/Basic.html#Lean.JsonNumber.instReprJsonNumber">Lean.JsonNumber.instReprJsonNumber</a>
@@ -347,7 +347,7 @@ reprPrec : <span class="fn"><span class="fn">α</span> → <span class="fn"><a h
 <a href="/Unicode.lean/Lean/Compiler/IR/ElimDeadBranches.html#Lean.IR.UnreachableBranches.instReprValue">Lean.IR.UnreachableBranches.instReprValue</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprPoly">Lean.Meta.Linear.instReprPoly</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.instReprPoly">Lean.Meta.Linear.instReprPoly</a>
 </li>
 <li>
 <a href="/Unicode.lean/Init/Data/Repr.html#instReprId">instReprId</a>
@@ -389,7 +389,7 @@ reprPrec : <span class="fn"><span class="fn">α</span> → <span class="fn"><a h
 <a href="/Unicode.lean/Init/Meta.html#Lean.Name.instReprSyntax">Lean.Name.instReprSyntax</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprCnstrKind">Lean.Meta.Linear.instReprCnstrKind</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.instReprCnstrKind">Lean.Meta.Linear.instReprCnstrKind</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Meta/Tactic/ElimInfo.html#Lean.Meta.instReprElimInfo">Lean.Meta.instReprElimInfo</a>
@@ -404,6 +404,9 @@ reprPrec : <span class="fn"><span class="fn">α</span> → <span class="fn"><a h
 <a href="/Unicode.lean/Lean/Expr.html#Lean.instReprData_1">Lean.instReprData_1</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html#Lean.Meta.Linear.Nat.instReprExpr">Lean.Meta.Linear.Nat.instReprExpr</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Expr.html#Lean.instReprExpr">Lean.instReprExpr</a>
 </li>
 <li>
@@ -413,7 +416,7 @@ reprPrec : <span class="fn"><span class="fn">α</span> → <span class="fn"><a h
 <a href="/Unicode.lean/Lean/Elab/Structure.html#Lean.Elab.Command.instReprStructFieldKind">Lean.Elab.Command.instReprStructFieldKind</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprVar">Lean.Meta.Linear.instReprVar</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.instReprVar">Lean.Meta.Linear.instReprVar</a>
 </li>
 <li>
 <a href="/Unicode.lean/Std/Data/RBTree.html#Std.RBTree.instReprRBTree">Std.RBTree.instReprRBTree</a>
@@ -461,7 +464,7 @@ reprPrec : <span class="fn"><span class="fn">α</span> → <span class="fn"><a h
 <a href="/Unicode.lean/Lean/Elab/Structure.html#Lean.Elab.Command.instReprStructFieldInfo">Lean.Elab.Command.instReprStructFieldInfo</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html#Lean.Meta.Linear.instReprAssumptionId">Lean.Meta.Linear.instReprAssumptionId</a>
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html#Lean.Meta.Linear.instReprAssumptionId">Lean.Meta.Linear.instReprAssumptionId</a>
 </li>
 <li>
 <a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.instReprArray">Array.instReprArray</a>
@@ -2129,7 +2132,7 @@ reprTuple : <span class="fn"><span class="fn">α</span> → <span class="fn"><sp
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Init/Data/Repr.html#instReprSourceInfo">instReprSourceInfo</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <a href="/Unicode.lean/Init/Data/Repr.html#_private.Init.Data.Repr.0.reprSourceInfo._@.Init.Data.Repr._hyg.1750">[anonymous]</a> }</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Init/Data/Repr.html#instReprSourceInfo">instReprSourceInfo</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ reprPrec := <a href="/Unicode.lean/Init/Data/Repr.html#_private.Init.Data.Repr.0.reprSourceInfo._@.Init.Data.Repr._hyg.1763">[anonymous]</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -2195,6 +2198,9 @@ reprTuple : <span class="fn"><span class="fn">α</span> → <span class="fn"><sp
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -2278,6 +2284,9 @@ reprTuple : <span class="fn"><span class="fn">α</span> → <span class="fn"><sp
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -2355,6 +2364,9 @@ reprTuple : <span class="fn"><span class="fn">α</span> → <span class="fn"><sp
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -2437,6 +2449,9 @@ reprTuple : <span class="fn"><span class="fn">α</span> → <span class="fn"><sp
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -2643,6 +2658,9 @@ reprTuple : <span class="fn"><span class="fn">α</span> → <span class="fn"><sp
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -3089,8 +3107,32 @@ reprTuple : <span class="fn"><span class="fn">α</span> → <span class="fn"><sp
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -3114,6 +3156,9 @@ reprTuple : <span class="fn"><span class="fn">α</span> → <span class="fn"><sp
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -3284,6 +3329,9 @@ reprTuple : <span class="fn"><span class="fn">α</span> → <span class="fn"><sp
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -3309,9 +3357,6 @@ reprTuple : <span class="fn"><span class="fn">α</span> → <span class="fn"><sp
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -3684,6 +3729,15 @@ reprTuple : <span class="fn"><span class="fn">α</span> → <span class="fn"><sp
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -3723,6 +3777,9 @@ reprTuple : <span class="fn"><span class="fn">α</span> → <span class="fn"><sp
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

@@ -631,21 +631,21 @@ defaultAuxDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arra
                       (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.withAutoBoundImplicit">Lean.Elab.Term.withAutoBoundImplicit</a>
                         (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.elabBinders">Lean.Elab.Term.elabBinders</a> <span class="fn">params</span> <span class="fn">fun <span class="fn">params</span> => <span class="fn">do
                           <span class="fn"><a href="/Unicode.lean/Lean/Elab/SyntheticMVars.html#Lean.Elab.Term.synthesizeSyntheticMVarsNoPostponing">Lean.Elab.Term.synthesizeSyntheticMVarsNoPostponing</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>
-                          let params ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.addAutoBoundImplicits">Lean.Elab.Term.addAutoBoundImplicits</a> <span class="fn">params</span></span>
-                          let allUserLevelNames ← <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.getLevelNames">Lean.Elab.Term.getLevelNames</a>
-                          <span class="fn"><a href="/Unicode.lean/Lean/Elab/Structure.html#_private.Lean.Elab.Structure.0.Lean.Elab.Command.elabStructureView">Lean.Elab.Command.elabStructureView</a>
-                              <span class="fn">{ ref := <span class="fn">stx</span>, modifiers := <span class="fn">modifiers</span>, scopeLevelNames := <span class="fn">scopeLevelNames</span>,
-                                allUserLevelNames := <span class="fn">allUserLevelNames</span>, isClass := <span class="fn">isClass</span>, declName := <span class="fn">declName</span>,
-                                scopeVars := <span class="fn">scopeVars</span>, params := <span class="fn">params</span>, parents := <span class="fn">parents</span>, type := <span class="fn">type</span>,
-                                ctor := <span class="fn">ctor</span>, fields := <span class="fn">fields</span> }</span></span>
-                          let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">declName</span></span></span>
-                          <span class="fn">if <span class="fn"><span class="fn">isClass</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-                              let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-                            else <span class="fn">do
-                              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/SizeOf.html#Lean.Meta.mkSizeOfInstances">Lean.Meta.mkSizeOfInstances</a> <span class="fn">declName</span></span>)</span>
-                              let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Injective.html#Lean.Meta.mkInjectiveTheorems">Lean.Meta.mkInjectiveTheorems</a> <span class="fn">declName</span></span>)</span>
-                              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span>)</span>)</span></span></span></span></span></span></span></span>
+                          <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.addAutoBoundImplicits">Lean.Elab.Term.addAutoBoundImplicits</a> <span class="fn">params</span> <span class="fn">fun <span class="fn">params</span> => <span class="fn">do
+                              let allUserLevelNames ← <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.getLevelNames">Lean.Elab.Term.getLevelNames</a>
+                              <span class="fn"><a href="/Unicode.lean/Lean/Elab/Structure.html#_private.Lean.Elab.Structure.0.Lean.Elab.Command.elabStructureView">Lean.Elab.Command.elabStructureView</a>
+                                  <span class="fn">{ ref := <span class="fn">stx</span>, modifiers := <span class="fn">modifiers</span>, scopeLevelNames := <span class="fn">scopeLevelNames</span>,
+                                    allUserLevelNames := <span class="fn">allUserLevelNames</span>, isClass := <span class="fn">isClass</span>, declName := <span class="fn">declName</span>,
+                                    scopeVars := <span class="fn">scopeVars</span>, params := <span class="fn">params</span>, parents := <span class="fn">parents</span>, type := <span class="fn">type</span>,
+                                    ctor := <span class="fn">ctor</span>, fields := <span class="fn">fields</span> }</span></span>
+                              let _do_jp : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#PUnit">PUnit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></span></span> := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">declName</span></span></span>
+                              <span class="fn">if <span class="fn"><span class="fn">isClass</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+                                  let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+                                  <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
+                                else <span class="fn">do
+                                  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/SizeOf.html#Lean.Meta.mkSizeOfInstances">Lean.Meta.mkSizeOfInstances</a> <span class="fn">declName</span></span>)</span>
+                                  let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Injective.html#Lean.Meta.mkInjectiveTheorems">Lean.Meta.mkInjectiveTheorems</a> <span class="fn">declName</span></span>)</span>
+                                  <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></span>)</span>)</span></span></span></span></span></span></span></span>
     <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.forM">Array.forM</a> (<span class="fn">fun <span class="fn">view</span> => <span class="fn"><a href="/Unicode.lean/Lean/Elab/Deriving/Basic.html#Lean.Elab.DerivingClassView.applyHandlers">Lean.Elab.DerivingClassView.applyHandlers</a> <span class="fn">view</span> <span class="fn">#[<span class="fn">declName</span>]</span></span></span>) <span class="fn">derivingClassViews</span> <span class="fn">0</span>
         (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">derivingClassViews</span></span>)</span></span></span>
   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.isNone">Lean.Syntax.isNone</a> <span class="fn">optType</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
@@ -730,6 +730,9 @@ defaultAuxDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arra
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -811,6 +814,9 @@ defaultAuxDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arra
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -888,6 +894,9 @@ defaultAuxDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arra
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -970,6 +979,9 @@ defaultAuxDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arra
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1176,6 +1188,9 @@ defaultAuxDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arra
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1622,8 +1637,32 @@ defaultAuxDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arra
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1647,6 +1686,9 @@ defaultAuxDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arra
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1817,6 +1859,9 @@ defaultAuxDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arra
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1842,9 +1887,6 @@ defaultAuxDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arra
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2217,6 +2259,15 @@ defaultAuxDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arra
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2256,6 +2307,9 @@ defaultAuxDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Arra
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

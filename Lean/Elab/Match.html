@@ -40,9 +40,6 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/GeneralizeVars.html">Lean.Meta.GeneralizeVars</a>
 </li>
 <li>
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
-</li>
-<li>
 <a href="/Unicode.lean/Lean/Parser/Term.html">Lean.Parser.Term</a>
 </li>
 <li>
@@ -84,13 +81,10 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Elab.Term.expandMacrosInPatterns">Lean.Elab.Term.expandMacrosInPatterns</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Term.elabMVarWithIdKind">Lean.Elab.Term.elabMVarWithIdKind</a>
+<a class="break_within" href="#Lean.Elab.Term.precheckMatch">Lean.Elab.Term.precheckMatch</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Term.elabInaccessible">Lean.Elab.Term.elabInaccessible</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Term.precheckMatch">Lean.Elab.Term.precheckMatch</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Term.PatternVarDecl">Lean.Elab.Term.PatternVarDecl</a>
@@ -99,13 +93,34 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Elab.Term.PatternElabException">Lean.Elab.Term.PatternElabException</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Term.finalizePatternDecls">Lean.Elab.Term.finalizePatternDecls</a>
-</div>
-<div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Term.ToDepElimPattern.State">Lean.Elab.Term.ToDepElimPattern.State</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.ToDepElimPattern.Context">Lean.Elab.Term.ToDepElimPattern.Context</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Term.ToDepElimPattern.M">Lean.Elab.Term.ToDepElimPattern.M</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.ToDepElimPattern.isExplicitPatternVar">Lean.Elab.Term.ToDepElimPattern.isExplicitPatternVar</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.ToDepElimPattern.normalize">Lean.Elab.Term.ToDepElimPattern.normalize</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.ToDepElimPattern.normalize.addVar">Lean.Elab.Term.ToDepElimPattern.normalize.addVar</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.ToDepElimPattern.normalize.processVar">Lean.Elab.Term.ToDepElimPattern.normalize.processVar</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.ToDepElimPattern.normalize.processInaccessible">Lean.Elab.Term.ToDepElimPattern.normalize.processInaccessible</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.ToDepElimPattern.TopSort.State">Lean.Elab.Term.ToDepElimPattern.TopSort.State</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.ToDepElimPattern.TopSortM">Lean.Elab.Term.ToDepElimPattern.TopSortM</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Term.ToDepElimPattern.main">Lean.Elab.Term.ToDepElimPattern.main</a>
@@ -126,17 +141,17 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Elab.Term.elabMatch">Lean.Elab.Term.elabMatch</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Term.elabMatch.elabMatchDefault">Lean.Elab.Term.elabMatch.elabMatchDefault</a>
+<a class="break_within" href="#Lean.Elab.Term.elabNoMatch">Lean.Elab.Term.elabNoMatch</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Term.elabNoMatch">Lean.Elab.Term.elabNoMatch</a>
+<a class="break_within" href="#Lean.Elab.Term.elabMatch.elabMatchDefault">Lean.Elab.Term.elabMatch.elabMatchDefault</a>
 </div>
 </nav>
 <main>
 <div class="decl" id="Lean.Elab.Term.isAuxDiscrName">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L31-L32">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L30-L31">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -159,7 +174,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.isAtomicDiscr?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L53-L57">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L52-L56">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -203,7 +218,7 @@ This can happen due to error recovery. Example</p><pre><code>example : (p ∨ p)
 <div class="decl" id="Lean.Elab.Term.ElabMatchTypeAndDiscrsResult">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L72-L78">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L71-L77">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -227,7 +242,7 @@ alts : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <div class="decl" id="Lean.Elab.Term.expandMacrosInPatterns">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L155-L158">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L154-L157">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -251,55 +266,10 @@ alts : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Elab.Term.elabMVarWithIdKind">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L180-L181">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.elabMVarWithIdKind">Lean.Elab.Term.elabMVarWithIdKind</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElab">Lean.Elab.Term.TermElab</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.elabMVarWithIdKind">Lean.Elab.Term.elabMVarWithIdKind</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkInaccessible">Lean.mkInaccessible</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkMVar">Lean.mkMVar</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PatternVar.html#Lean.Elab.Term.getMVarSyntaxMVarId">Lean.Elab.Term.getMVarSyntaxMVarId</a> <span class="fn">stx</span></span>)</span>)</span>)</span></span></li>
-</ul>
-</details>
-<p>The elaboration function for <code>Syntax</code> created using <code>mkMVarSyntax</code>.
-It just converts the metavariable id wrapped by the Syntax into an <code>Expr</code>.</p></div>
-</div>
-<div class="decl" id="Lean.Elab.Term.elabInaccessible">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L183-L185">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.elabInaccessible">Lean.Elab.Term.elabInaccessible</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElab">Lean.Elab.Term.TermElab</a></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.elabInaccessible">Lean.Elab.Term.elabInaccessible</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let e ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">1</span></span>) <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkInaccessible">Lean.mkInaccessible</a> <span class="fn">e</span></span>)</span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
 <div class="decl" id="Lean.Elab.Term.precheckMatch">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L190-L200">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L181-L191">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -446,30 +416,51 @@ It just converts the metavariable id wrapped by the Syntax into an <code>Expr</c
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Elab.Term.PatternVarDecl">
-<div class="inductive">
+<div class="decl" id="Lean.Elab.Term.elabInaccessible">
+<div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L203-L207">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L183-L185">source</a>
 </div>
 <div class="decl_header">
-<span class="decl_kind">inductive</span>
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.elabInaccessible">Lean.Elab.Term.elabInaccessible</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElab">Lean.Elab.Term.TermElab</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.elabInaccessible">Lean.Elab.Term.elabInaccessible</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let e ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">stx</span> <span class="fn">1</span></span>) <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>
+  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkInaccessible">Lean.mkInaccessible</a> <span class="fn">e</span></span>)</span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.Term.PatternVarDecl">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L194-L195">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
 <span class="decl_name">
 <a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.PatternVarDecl">Lean.Elab.Term.PatternVarDecl</a>
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn">Type</span></div></div>
-<ul class="constructors">
-<li class="constructor" id="Lean.Elab.Term.PatternVarDecl.anonymousVar">
-anonymousVar: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a> → <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a> → <a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.PatternVarDecl">Lean.Elab.Term.PatternVarDecl</a></span></span></li>
-<li class="constructor" id="Lean.Elab.Term.PatternVarDecl.localVar">
-localVar: <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a> → <a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.PatternVarDecl">Lean.Elab.Term.PatternVarDecl</a></span></li>
+<ul class="structure_fields" id="Lean.Elab.Term.PatternVarDecl.mk">
+<li class="structure_field" id="Lean.Elab.Term.PatternVarDecl.fvarId">
+fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 </ul>
 </div>
 </div>
 <div class="decl" id="Lean.Elab.Term.PatternElabException">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L258-L261">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L233-L236">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -488,84 +479,10 @@ pathToIndex : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">Li
 </ul>
 </div>
 </div>
-<div class="decl" id="Lean.Elab.Term.finalizePatternDecls">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L405-L427">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.finalizePatternDecls">Lean.Elab.Term.finalizePatternDecls</a>
-</span>
-<span class="decl_args">
-<span class="fn">(patternVarDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.PatternVarDecl">Lean.Elab.Term.PatternVarDecl</a></span>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span>)</span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.finalizePatternDecls">Lean.Elab.Term.finalizePatternDecls</a> <span class="fn">patternVarDecls</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let decls := <span class="fn">#[]</span>;
-  <span class="fn">do
-  let r ←
-    <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForIn.forIn">forIn</a> <span class="fn">patternVarDecls</span> <span class="fn">decls</span> <span class="fn">fun <span class="fn">pdecl</span> <span class="fn">r</span> =>
-        <span class="fn">let decls := <span class="fn">r</span>;
-        <span class="fn">match <span class="fn">pdecl</span> with
-        | <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.PatternVarDecl.localVar">Lean.Elab.Term.PatternVarDecl.localVar</a> <span class="fn">fvarId</span></span> => <span class="fn">do
-          let decl ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.getLocalDecl">Lean.Meta.getLocalDecl</a> <span class="fn">fvarId</span></span>)</span>
-          let decl ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateLocalDeclMVars">Lean.Meta.instantiateLocalDeclMVars</a> <span class="fn">decl</span></span>)</span>
-          let decls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span> := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">decls</span> <span class="fn">decl</span></span>
-          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">decls</span></span>)</span></span>
-        | <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.PatternVarDecl.anonymousVar">Lean.Elab.Term.PatternVarDecl.anonymousVar</a> <span class="fn">mvarId</span> <span class="fn">fvarId</span></span> => <span class="fn">do
-          let <span class="fn">e</span> ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateMVars">Lean.Meta.instantiateMVars</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkMVar">Lean.mkMVar</a> <span class="fn">mvarId</span></span>)</span>)</span>
-          let cls : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> := <span class="fn">`Elab.match</span>
-          let a ← <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.isTracingEnabledFor">Lean.isTracingEnabledFor</a> <span class="fn">cls</span></span>
-          let _do_jp : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep">ForInStep</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span>)</span>)</span></span></span> :=
-            <span class="fn">fun <span class="fn">decls</span> <span class="fn">y</span> =>
-            <span class="fn">match <span class="fn">e</span> with
-            | <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mvar">Lean.Expr.mvar</a> <span class="fn">newMVarId</span> <span class="fn">x</span></span> => <span class="fn">do
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.assignExprMVar">Lean.Meta.assignExprMVar</a> <span class="fn">newMVarId</span> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkFVar">Lean.mkFVar</a> <span class="fn">fvarId</span></span>)</span>)</span>
-              let cls : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> := <span class="fn">`Elab.match</span>
-              let a ← <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.isTracingEnabledFor">Lean.isTracingEnabledFor</a> <span class="fn">cls</span></span>
-              let _do_jp : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span> → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep">ForInStep</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span>)</span>)</span></span></span> :=
-                <span class="fn">fun <span class="fn">decls</span> <span class="fn">y</span> => <span class="fn">do
-                let decl ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.getLocalDecl">Lean.Meta.getLocalDecl</a> <span class="fn">fvarId</span></span>)</span>
-                let decl ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateLocalDeclMVars">Lean.Meta.instantiateLocalDeclMVars</a> <span class="fn">decl</span></span>)</span>
-                let decls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span> := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">decls</span> <span class="fn">decl</span></span>
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">decls</span></span>)</span></span></span>
-              <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-                  let y ←
-                    <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.addTrace">Lean.addTrace</a> <span class="fn">cls</span>
-                        (<span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"finalizePatternDecls: "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkMVar">Lean.mkMVar</a> <span class="fn">newMVarId</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                               <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">" := "</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                             <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkFVar">Lean.mkFVar</a> <span class="fn">fvarId</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                           <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>
-                  <span class="fn"><span class="fn">_do_jp</span> <span class="fn">decls</span> <span class="fn">y</span></span></span>
-                else <span class="fn">do
-                  let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-                  <span class="fn"><span class="fn">_do_jp</span> <span class="fn">decls</span> <span class="fn">y</span></span></span></span></span>
-            | <span class="fn">x</span> => <span class="fn">do
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Unit.unit">()</a></span>
-              <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">decls</span></span>)</span></span></span></span>
-          <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
-              let y ←
-                <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.addTrace">Lean.addTrace</a> <span class="fn">cls</span>
-                    (<span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">"finalizePatternDecls: mvarId: "</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn"><span class="fn">mvarId</span>.name</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                               <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">" := "</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                             <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">e</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                           <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">", fvar: "</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                         <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkFVar">Lean.mkFVar</a> <span class="fn">fvarId</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a>                       <span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a> <span class="fn">""</span></span></span>)</span>
-              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">decls</span> <span class="fn">y</span></span></span>
-            else <span class="fn">do
-              let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-              <span class="fn"><span class="fn">_do_jp</span> <span class="fn">decls</span> <span class="fn">y</span></span></span></span></span></span></span></span></span>
-  let x : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span> := <span class="fn">r</span>
-  let decls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span> := <span class="fn">x</span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html#Lean.Meta.sortLocalDecls">Lean.Meta.sortLocalDecls</a> <span class="fn">decls</span></span>)</span></span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
 <div class="decl" id="Lean.Elab.Term.ToDepElimPattern.State">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L433-L436">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L397-L398">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -575,19 +492,35 @@ pathToIndex : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">Li
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn">Type</span></div></div>
 <ul class="structure_fields" id="Lean.Elab.Term.ToDepElimPattern.State.mk">
-<li class="structure_field" id="Lean.Elab.Term.ToDepElimPattern.State.found">
-found : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarIdSet">Lean.FVarIdSet</a></li>
-<li class="structure_field" id="Lean.Elab.Term.ToDepElimPattern.State.localDecls">
-localDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span></li>
-<li class="structure_field" id="Lean.Elab.Term.ToDepElimPattern.State.newLocals">
-newLocals : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarIdSet">Lean.FVarIdSet</a></li>
+<li class="structure_field" id="Lean.Elab.Term.ToDepElimPattern.State.patternVars">
+patternVars : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.Term.ToDepElimPattern.Context">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L400-L410">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.Context">Lean.Elab.Term.ToDepElimPattern.Context</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Elab.Term.ToDepElimPattern.Context.mk">
+<li class="structure_field" id="Lean.Elab.Term.ToDepElimPattern.Context.userName">
+userName : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></li>
+<li class="structure_field" id="Lean.Elab.Term.ToDepElimPattern.Context.explicitPatternVars">
+explicitPatternVars : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></span></li>
 </ul>
 </div>
 </div>
 <div class="decl" id="Lean.Elab.Term.ToDepElimPattern.M">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L438-L438">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L412-L412">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -603,31 +536,254 @@ newLocals : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarIdSet">Lean.FVarIdSet
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.M">Lean.Elab.Term.ToDepElimPattern.M</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Control/StateRef.html#StateRefT'">StateRefT'</a> <a href="/Unicode.lean/Init/System/IO.html#IO.RealWorld">IO.RealWorld</a> <a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.State">Lean.Elab.Term.ToDepElimPattern.State</a> <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a></span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.M">Lean.Elab.Term.ToDepElimPattern.M</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#ReaderT">ReaderT</a> <a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.Context">Lean.Elab.Term.ToDepElimPattern.Context</a>
+    (<span class="fn"><a href="/Unicode.lean/Init/Control/StateRef.html#StateRefT'">StateRefT'</a> <a href="/Unicode.lean/Init/System/IO.html#IO.RealWorld">IO.RealWorld</a> <a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.State">Lean.Elab.Term.ToDepElimPattern.State</a> <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a></span>)</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.Term.ToDepElimPattern.isExplicitPatternVar">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L415-L419">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.isExplicitPatternVar">Lean.Elab.Term.ToDepElimPattern.isExplicitPatternVar</a>
+</span>
+<span class="decl_args">
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.M">Lean.Elab.Term.ToDepElimPattern.M</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.isExplicitPatternVar">Lean.Elab.Term.ToDepElimPattern.isExplicitPatternVar</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isFVar">Lean.Expr.isFVar</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+    let a ← <span class="fn">read</span>
+    <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.any">Array.any</a> <span class="fn"><span class="fn">a</span>.explicitPatternVars</span> (<span class="fn">fun <span class="fn">a</span> => <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.fvarId!">Lean.Expr.fvarId!</a> <span class="fn">e</span></span></span></span>) <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn"><span class="fn">a</span>.explicitPatternVars</span></span>)</span>)</span></span>
+  else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span></span></span></li>
+</ul>
+</details>
+<p>Return true iff <code><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.isAuxDiscrName">e</a></code> is an explicit pattern variable provided by the user.</p></div>
+</div>
+<div class="decl" id="Lean.Elab.Term.ToDepElimPattern.normalize">
+<div class="constant">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L442-L521">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">partial def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.normalize">Lean.Elab.Term.ToDepElimPattern.normalize</a>
+</span>
+<span class="decl_args">
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.M">Lean.Elab.Term.ToDepElimPattern.M</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
+<p>Normalize the pattern and collect all patterns variables (explicit and implicit).
+This method is the one that decides where the inaccessible annotations must be inserted.
+The pattern variables are both free variables (for explicit pattern variables) and metavariables (for implicit ones).
+Recall that <code>mkLambdaFVars</code> now allows us to abstract both free variables and metavariables.</p></div>
+</div>
+<div class="decl" id="Lean.Elab.Term.ToDepElimPattern.normalize.addVar">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L491-L493">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.normalize.addVar">Lean.Elab.Term.ToDepElimPattern.normalize.addVar</a>
+</span>
+<span class="decl_args">
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.M">Lean.Elab.Term.ToDepElimPattern.M</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.normalize.addVar">Lean.Elab.Term.ToDepElimPattern.normalize.addVar</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let a ← <span class="fn">get</span>
+  <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.contains">Array.contains</a> <span class="fn"><span class="fn">a</span>.patternVars</span> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+    else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">s</span> => <span class="fn">{ patternVars := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn"><span class="fn">s</span>.patternVars</span> <span class="fn">e</span></span> }</span></span></span></span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.Term.ToDepElimPattern.normalize.processVar">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L495-L502">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.normalize.processVar">Lean.Elab.Term.ToDepElimPattern.normalize.processVar</a>
+</span>
+<span class="decl_args">
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.M">Lean.Elab.Term.ToDepElimPattern.M</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.normalize.processVar">Lean.Elab.Term.ToDepElimPattern.normalize.processVar</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let a ← <span class="fn">get</span>
+  <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.contains">Array.contains</a> <span class="fn"><span class="fn">a</span>.patternVars</span> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.mkInaccessible">Lean.mkInaccessible</a> <span class="fn">e</span></span>)</span>
+    else
+      <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn">do
+        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#modify">modify</a> <span class="fn">fun <span class="fn">s</span> => <span class="fn">{ patternVars := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn"><span class="fn">s</span>.patternVars</span> <span class="fn">e</span></span> }</span></span></span>
+        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">e</span></span></span></span>;
+      <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.isMVar">Lean.Expr.isMVar</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
+        let a ← <span class="fn">read</span>
+        let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Util.html#Lean.Meta.setMVarTag">Lean.Meta.setMVarTag</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.mvarId!">Lean.Expr.mvarId!</a> <span class="fn">e</span></span>) <span class="fn"><span class="fn">a</span>.userName</span></span>)</span>
+        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
+      else <span class="fn">do
+        let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.Term.ToDepElimPattern.normalize.processInaccessible">
+<div class="constant">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L504-L521">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">partial def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.normalize.processInaccessible">Lean.Elab.Term.ToDepElimPattern.normalize.processInaccessible</a>
+</span>
+<span class="decl_args">
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.M">Lean.Elab.Term.ToDepElimPattern.M</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.Term.ToDepElimPattern.TopSort.State">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L567-L570">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.TopSort.State">Lean.Elab.Term.ToDepElimPattern.TopSort.State</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Elab.Term.ToDepElimPattern.TopSort.State.mk">
+<li class="structure_field" id="Lean.Elab.Term.ToDepElimPattern.TopSort.State.visitedFVars">
+visitedFVars : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarIdSet">Lean.FVarIdSet</a></li>
+<li class="structure_field" id="Lean.Elab.Term.ToDepElimPattern.TopSort.State.visitedMVars">
+visitedMVars : <a href="/Unicode.lean/Lean/Level.html#Lean.MVarIdSet">Lean.MVarIdSet</a></li>
+<li class="structure_field" id="Lean.Elab.Term.ToDepElimPattern.TopSort.State.result">
+result : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></li>
+</ul>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.Term.ToDepElimPattern.TopSortM">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L572-L572">source</a>
+</div>
+<div class="attributes">@[inline]</div>
+<div class="decl_header">
+<span class="decl_kind">abbrev</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.TopSortM">Lean.Elab.Term.ToDepElimPattern.TopSortM</a>
+</span>
+<span class="decl_args">
+<span class="fn">(α : <span class="fn">Type</span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.TopSortM">Lean.Elab.Term.ToDepElimPattern.TopSortM</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Control/StateRef.html#StateRefT'">StateRefT'</a> <a href="/Unicode.lean/Init/System/IO.html#IO.RealWorld">IO.RealWorld</a> <a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.TopSort.State">Lean.Elab.Term.ToDepElimPattern.TopSort.State</a> <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a></span></span></li>
 </ul>
 </details>
 </div>
 </div>
 <div class="decl" id="Lean.Elab.Term.ToDepElimPattern.main">
-<div class="constant">
+<div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L474-L539">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L619-L630">source</a>
 </div>
 <div class="decl_header">
-<span class="decl_kind">partial def</span>
+<span class="decl_kind">def</span>
 <span class="decl_name">
 <a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.main">Lean.Elab.Term.ToDepElimPattern.main</a>
 </span>
+<span class="impl_arg">
 <span class="decl_args">
-<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="fn">{α : <span class="fn">Type</span>}</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(patternVarDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.PatternVarDecl">Lean.Elab.Term.PatternVarDecl</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(ps : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(matchType : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(k : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span> → <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/Match/Basic.html#Lean.Meta.Match.Pattern">Lean.Meta.Match.Pattern</a></span> → <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <span class="fn">α</span></span></span></span></span>)</span></span>
 <span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.M">Lean.Elab.Term.ToDepElimPattern.M</a> <a href="/Unicode.lean/Lean/Meta/Match/Basic.html#Lean.Meta.Match.Pattern">Lean.Meta.Match.Pattern</a></span></div></div>
-</div>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <span class="fn">α</span></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.main">Lean.Elab.Term.ToDepElimPattern.main</a> <span class="fn">patternVarDecls</span> <span class="fn">ps</span> <span class="fn">matchType</span> <span class="fn">k</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">let explicitPatternVars := <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a> (<span class="fn">fun <span class="fn">decl</span> => <span class="fn"><span class="fn">decl</span>.fvarId</span></span>) <span class="fn">patternVarDecls</span></span>;
+  <span class="fn">do
+  let discr ←
+    <span class="fn"><a href="/Unicode.lean/Init/Control/StateRef.html#StateRefT'.run">StateRefT'.run</a>
+        (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#ReaderT.run">ReaderT.run</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mapM">Array.mapM</a> <a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.normalize">Lean.Elab.Term.ToDepElimPattern.normalize</a> <span class="fn">ps</span></span>)
+          <span class="fn">{ userName := <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a>, explicitPatternVars := <span class="fn">explicitPatternVars</span> }</span></span>)
+        <span class="fn">{ patternVars := <span class="fn">#[]</span> }</span></span>
+  let x : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.State">Lean.Elab.Term.ToDepElimPattern.State</a></span> := <span class="fn">discr</span>
+  <span class="fn">match <span class="fn">x</span> with
+    | <span class="fn">(<span class="fn">ps</span>, <span class="fn">s</span>)</span> => <span class="fn">do
+      let <span class="fn">patternVars</span> ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#_private.Lean.Elab.Match.0.Lean.Elab.Term.ToDepElimPattern.topSort">Lean.Elab.Term.ToDepElimPattern.topSort</a> <span class="fn"><span class="fn">s</span>.patternVars</span></span>
+      let a ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#_private.Lean.Elab.Match.0.Lean.Elab.Term.ToDepElimPattern.packMatchTypePatterns">Lean.Elab.Term.ToDepElimPattern.packMatchTypePatterns</a> <span class="fn">matchType</span> <span class="fn">ps</span></span>)</span>
+      let packed ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.mkLambdaFVars">Lean.Meta.mkLambdaFVars</a> <span class="fn">patternVars</span> <span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.default">Lean.BinderInfo.default</a></span>)</span>
+      let a ← <span class="fn">Lean.getLCtx</span>
+      let lctx : <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext">Lean.LocalContext</a> :=
+        <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.foldl">Array.foldl</a> (<span class="fn">fun <span class="fn">lctx</span> <span class="fn">d</span> => <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext.erase">Lean.LocalContext.erase</a> <span class="fn">lctx</span> <span class="fn">d</span></span></span>) <span class="fn">a</span> <span class="fn">explicitPatternVars</span> <span class="fn">0</span>
+          (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">explicitPatternVars</span></span>)</span>
+      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#withTheReader">withTheReader</a> <a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.Context">Lean.Meta.Context</a>
+          (<span class="fn">fun <span class="fn">ctx</span> =>
+            <span class="fn">{ config := <span class="fn"><span class="fn">ctx</span>.config</span>, lctx := <span class="fn">lctx</span>, localInstances := <span class="fn"><span class="fn">ctx</span>.localInstances</span>, defEqCtx? := <span class="fn"><span class="fn">ctx</span>.defEqCtx?</span>,
+              synthPendingDepth := <span class="fn"><span class="fn">ctx</span>.synthPendingDepth</span>, canUnfold? := <span class="fn"><span class="fn">ctx</span>.canUnfold?</span> }</span></span>)
+          <span class="fn">do
+          <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Check.html#Lean.Meta.check">Lean.Meta.check</a> <span class="fn">packed</span></span>)</span>
+          <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.lambdaTelescope">Lean.Meta.lambdaTelescope</a> <span class="fn">packed</span> <span class="fn">fun <span class="fn">patternVars</span> <span class="fn">packed</span> => <span class="fn">do
+              let localDecls ← <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mapM">Array.mapM</a> (<span class="fn">fun <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.getLocalDecl">Lean.Meta.getLocalDecl</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr.fvarId!">Lean.Expr.fvarId!</a> <span class="fn">x</span></span>)</span>)</span></span>) <span class="fn">patternVars</span></span>
+              let x : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span> := <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#_private.Lean.Elab.Match.0.Lean.Elab.Term.ToDepElimPattern.unpackMatchTypePatterns">Lean.Elab.Term.ToDepElimPattern.unpackMatchTypePatterns</a> <span class="fn">packed</span></span>
+              <span class="fn">match <span class="fn">x</span> with
+                | <span class="fn">(<span class="fn">matchType</span>, <span class="fn">patterns</span>)</span> => <span class="fn">do
+                  let <span class="fn">a</span> ← <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mapM">Array.mapM</a> (<span class="fn">fun <span class="fn">p</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#_private.Lean.Elab.Match.0.Lean.Elab.Term.ToDepElimPattern.toPattern">Lean.Elab.Term.ToDepElimPattern.toPattern</a> <span class="fn">p</span></span>)</span></span>) <span class="fn">patterns</span></span>
+                  <span class="fn"><span class="fn">k</span> <span class="fn">localDecls</span> <span class="fn">a</span> <span class="fn">matchType</span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</details>
+<p>Main method for <code><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.withDepElimPatterns">withDepElimPatterns</a></code>.</p><ul>
+<li><code>PatternVarDecls</code>: are the explicit pattern variables provided by the user.</li>
+<li><code>ps</code>: are the patterns provided by the user.</li>
+<li><code>matchType</code>: the expected typ for this branch. It depends on the explicit pattern variables and the implicit ones that are still represented as metavariables,
+and are found by this function.</li>
+<li><code>k</code> is the continuation that is executed in an updated local context with the all pattern variables (explicit and implicit). Note that, <code>patternVarDecls</code> are all
+replaced since they may depend on implicit pattern variables (i.e., metavariables) that are converted into new free variables by this method.</li>
+</ul></div>
 </div>
 <div class="decl" id="Lean.Elab.Term.withDepElimPatterns">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L543-L554">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L634-L635">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -641,40 +797,18 @@ newLocals : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarIdSet">Lean.FVarIdSet
 <span class="decl_args">
 <span class="fn">(patternVarDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.PatternVarDecl">Lean.Elab.Term.PatternVarDecl</a></span>)</span></span>
 <span class="decl_args">
-<span class="fn">(localDecls : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span>)</span></span>
-<span class="decl_args">
 <span class="fn">(ps : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></span>
 <span class="decl_args">
-<span class="fn">(k : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span> → <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/Match/Basic.html#Lean.Meta.Match.Pattern">Lean.Meta.Match.Pattern</a></span> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <span class="fn">α</span></span></span></span>)</span></span>
+<span class="fn">(matchType : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(k : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span> → <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/Match/Basic.html#Lean.Meta.Match.Pattern">Lean.Meta.Match.Pattern</a></span> → <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <span class="fn">α</span></span></span></span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <span class="fn">α</span></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.withDepElimPatterns">Lean.Elab.Term.withDepElimPatterns</a> <span class="fn">patternVarDecls</span> <span class="fn">localDecls</span> <span class="fn">ps</span> <span class="fn">k</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let discr ←
-    <span class="fn"><a href="/Unicode.lean/Init/Control/StateRef.html#StateRefT'.run">StateRefT'.run</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mapM">Array.mapM</a> <a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.main">Lean.Elab.Term.ToDepElimPattern.main</a> <span class="fn">ps</span></span>)
-        <span class="fn">{ found := <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span>, localDecls := <span class="fn">localDecls</span>, newLocals := <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span> }</span></span>
-  let x : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/Match/Basic.html#Lean.Meta.Match.Pattern">Lean.Meta.Match.Pattern</a></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.State">Lean.Elab.Term.ToDepElimPattern.State</a></span> := <span class="fn">discr</span>
-  <span class="fn">match <span class="fn">x</span> with
-    | <span class="fn">(<span class="fn">patterns</span>, <span class="fn">s</span>)</span> => <span class="fn">do
-      let <span class="fn">localDecls</span> ← <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.mapM">Array.mapM</a> (<span class="fn">fun <span class="fn">d</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#liftM">liftM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instantiateLocalDeclMVars">Lean.Meta.instantiateLocalDeclMVars</a> <span class="fn">d</span></span>)</span></span>) <span class="fn"><span class="fn">s</span>.localDecls</span></span>
-      let lctx ← <span class="fn">Lean.getLCtx</span>
-      let lctx : <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext">Lean.LocalContext</a> :=
-        <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.foldl">Array.foldl</a>
-          (<span class="fn">fun <span class="fn">lctx</span> <span class="fn">d</span> =>
-            <span class="fn">match <span class="fn">d</span> with
-            | <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.PatternVarDecl.anonymousVar">Lean.Elab.Term.PatternVarDecl.anonymousVar</a> <span class="fn">x</span> <span class="fn">fvarId</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext.erase">Lean.LocalContext.erase</a> <span class="fn">lctx</span> <span class="fn">fvarId</span></span>
-            | <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.PatternVarDecl.localVar">Lean.Elab.Term.PatternVarDecl.localVar</a> <span class="fn">fvarId</span></span> => <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext.erase">Lean.LocalContext.erase</a> <span class="fn">lctx</span> <span class="fn">fvarId</span></span></span></span>)
-          <span class="fn">lctx</span> <span class="fn">patternVarDecls</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">patternVarDecls</span></span>)</span>
-      let lctx : <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext">Lean.LocalContext</a> :=
-        <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.foldl">Array.foldl</a> (<span class="fn">fun <span class="fn">lctx</span> <span class="fn">d</span> => <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext.addDecl">Lean.LocalContext.addDecl</a> <span class="fn">lctx</span> <span class="fn">d</span></span></span>) <span class="fn">lctx</span> <span class="fn">localDecls</span> <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">localDecls</span></span>)</span>
-      <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#withTheReader">withTheReader</a> <a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.Context">Lean.Meta.Context</a>
-          (<span class="fn">fun <span class="fn">ctx</span> =>
-            <span class="fn">{ config := <span class="fn"><span class="fn">ctx</span>.config</span>, lctx := <span class="fn">lctx</span>, localInstances := <span class="fn"><span class="fn">ctx</span>.localInstances</span>, defEqCtx? := <span class="fn"><span class="fn">ctx</span>.defEqCtx?</span>,
-              synthPendingDepth := <span class="fn"><span class="fn">ctx</span>.synthPendingDepth</span>, canUnfold? := <span class="fn"><span class="fn">ctx</span>.canUnfold?</span> }</span></span>)
-          (<span class="fn"><span class="fn">k</span> <span class="fn">localDecls</span> <span class="fn">patterns</span></span>)</span></span></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.withDepElimPatterns">Lean.Elab.Term.withDepElimPatterns</a> <span class="fn">patternVarDecls</span> <span class="fn">ps</span> <span class="fn">matchType</span> <span class="fn">k</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.ToDepElimPattern.main">Lean.Elab.Term.ToDepElimPattern.main</a> <span class="fn">patternVarDecls</span> <span class="fn">ps</span> <span class="fn">matchType</span> <span class="fn">k</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -682,7 +816,7 @@ newLocals : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarIdSet">Lean.FVarIdSet
 <div class="decl" id="Lean.Elab.Term.mkMatcher">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L741-L742">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L829-L830">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -705,7 +839,7 @@ newLocals : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarIdSet">Lean.FVarIdSet
 <div class="decl" id="Lean.Elab.Term.match.ignoreUnusedAlts">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L744-L744">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L832-L832">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -719,7 +853,7 @@ newLocals : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarIdSet">Lean.FVarIdSet
 <div class="decl" id="Lean.Elab.Term.reportMatcherResultErrors">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L749-L758">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L837-L846">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -884,50 +1018,6 @@ of an alternative match, the <code>match</code> term evaluates to the value of t
 corresponding right-hand side <code>f</code> with the pattern variables bound to the
 respective matched values.</p></div>
 </div>
-<div class="decl" id="Lean.Elab.Term.elabMatch.elabMatchDefault">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L997-L1005">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.elabMatch.elabMatchDefault">Lean.Elab.Term.elabMatch.elabMatchDefault</a>
-</span>
-<span class="decl_args">
-<span class="fn">(stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(expectedType? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.elabMatch.elabMatchDefault">Lean.Elab.Term.elabMatch.elabMatchDefault</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let a ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#_private.Lean.Elab.Match.0.Lean.Elab.Term.expandNonAtomicDiscrs?">Lean.Elab.Term.expandNonAtomicDiscrs?</a> <span class="fn">stx</span></span>
-  <span class="fn">match <span class="fn">a</span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">stxNew</span></span> =>
-      <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.withMacroExpansion">Lean.Elab.Term.withMacroExpansion</a> <span class="fn">stx</span> <span class="fn">stxNew</span> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> <span class="fn">stxNew</span> <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span>
-    | <span class="fn">none</span> =>
-      <span class="fn">let discrs := <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#_private.Lean.Elab.Match.0.Lean.Elab.Term.getDiscrs">Lean.Elab.Term.getDiscrs</a> <span class="fn">stx</span></span>;
-      <span class="fn">let matchOptMotive := <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#_private.Lean.Elab.Match.0.Lean.Elab.Term.getMatchOptMotive">Lean.Elab.Term.getMatchOptMotive</a> <span class="fn">stx</span></span>;
-      <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#_private.Lean.Elab.Match.0.Lean.Elab.Term.elabMatchCore">Lean.Elab.Term.elabMatchCore</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span></span>;
-      <span class="fn">if
-          <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.isNone">Lean.Syntax.isNone</a> <span class="fn">matchOptMotive</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a>               <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.any">Array.any</a> <span class="fn">discrs</span> (<span class="fn">fun <span class="fn">d</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.isNone">Lean.Syntax.isNone</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">d</span> <span class="fn">0</span></span>)</span></span></span>) <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">discrs</span></span>)</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>             <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
-        <span class="fn">do
-        let y ←
-          <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwErrorAt">Lean.throwErrorAt</a> <span class="fn">matchOptMotive</span>
-              (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a>
-                <span class="fn">"match motive should not be provided when discriminants with equality proofs are used"</span></span>)</span>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
-      else <span class="fn">do
-        let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
-        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
 <div class="decl" id="Lean.Elab.Term.elabNoMatch">
 <div class="def">
 <div class="gh_link">
@@ -985,6 +1075,50 @@ respective matched values.</p></div>
 <p>Empty match/ex falso. <code>nomatch<a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.isAuxDiscrName">e</a></code> is of arbitrary type <code>α:Sortu</code> if
 Lean can show that an empty set of patterns is exhaustive given <code><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.isAuxDiscrName">e</a></code>'s type,
 e.g. because it has no constructors.</p></div>
+</div>
+<div class="decl" id="Lean.Elab.Term.elabMatch.elabMatchDefault">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/Match.lean#L1085-L1093">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.elabMatch.elabMatchDefault">Lean.Elab.Term.elabMatch.elabMatchDefault</a>
+</span>
+<span class="decl_args">
+<span class="fn">(stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(expectedType? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.elabMatch.elabMatchDefault">Lean.Elab.Term.elabMatch.elabMatchDefault</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let a ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#_private.Lean.Elab.Match.0.Lean.Elab.Term.expandNonAtomicDiscrs?">Lean.Elab.Term.expandNonAtomicDiscrs?</a> <span class="fn">stx</span></span>
+  <span class="fn">match <span class="fn">a</span> with
+    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">stxNew</span></span> =>
+      <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.withMacroExpansion">Lean.Elab.Term.withMacroExpansion</a> <span class="fn">stx</span> <span class="fn">stxNew</span> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.elabTerm">Lean.Elab.Term.elabTerm</a> <span class="fn">stxNew</span> <span class="fn">expectedType?</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span>
+    | <span class="fn">none</span> =>
+      <span class="fn">let discrs := <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#_private.Lean.Elab.Match.0.Lean.Elab.Term.getDiscrs">Lean.Elab.Term.getDiscrs</a> <span class="fn">stx</span></span>;
+      <span class="fn">let matchOptMotive := <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#_private.Lean.Elab.Match.0.Lean.Elab.Term.getMatchOptMotive">Lean.Elab.Term.getMatchOptMotive</a> <span class="fn">stx</span></span>;
+      <span class="fn">let _do_jp := <span class="fn">fun <span class="fn">y</span> => <span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#_private.Lean.Elab.Match.0.Lean.Elab.Term.elabMatchCore">Lean.Elab.Term.elabMatchCore</a> <span class="fn">stx</span> <span class="fn">expectedType?</span></span></span>;
+      <span class="fn">if
+          <span class="fn">(<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.isNone">Lean.Syntax.isNone</a> <span class="fn">matchOptMotive</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&&</a>               <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.any">Array.any</a> <span class="fn">discrs</span> (<span class="fn">fun <span class="fn">d</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#not">!</a><span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.isNone">Lean.Syntax.isNone</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">d</span> <span class="fn">0</span></span>)</span></span></span>) <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">discrs</span></span>)</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>             <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then
+        <span class="fn">do
+        let y ←
+          <span class="fn"><a href="/Unicode.lean/Lean/Exception.html#Lean.throwErrorAt">Lean.throwErrorAt</a> <span class="fn">matchOptMotive</span>
+              (<span class="fn"><a href="/Unicode.lean/Lean/Message.html#Lean.ToMessageData.toMessageData">Lean.toMessageData</a>
+                <span class="fn">"match motive should not be provided when discriminants with equality proofs are used"</span></span>)</span>
+        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span>
+      else <span class="fn">do
+        let y ← <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#PUnit.unit">PUnit.unit</a></span>
+        <span class="fn"><span class="fn">_do_jp</span> <span class="fn">y</span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</details>
+</div>
 </div>
 </main>
 <nav class="nav">
@@ -1047,6 +1181,9 @@ e.g. because it has no constructors.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
@@ -1130,6 +1267,9 @@ e.g. because it has no constructors.</p></div>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -1207,6 +1347,9 @@ e.g. because it has no constructors.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -1289,6 +1432,9 @@ e.g. because it has no constructors.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -1495,6 +1641,9 @@ e.g. because it has no constructors.</p></div>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1941,8 +2090,32 @@ e.g. because it has no constructors.</p></div>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1966,6 +2139,9 @@ e.g. because it has no constructors.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -2136,6 +2312,9 @@ e.g. because it has no constructors.</p></div>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -2161,9 +2340,6 @@ e.g. because it has no constructors.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -2536,6 +2712,15 @@ e.g. because it has no constructors.</p></div>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -2575,6 +2760,9 @@ e.g. because it has no constructors.</p></div>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">

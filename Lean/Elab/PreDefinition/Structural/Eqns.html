@@ -128,7 +128,7 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Lean.Elab.Structural.mkEqns">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/Structural/Eqns.lean#L58-L77">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/Structural/Eqns.lean#L58-L78">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -168,11 +168,15 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
             <span class="fn">let thmNames := <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.push">Array.push</a> <span class="fn">thmNames</span> <span class="fn">name</span></span>;
             <span class="fn">do
             let value ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/Eqns.html#_private.Lean.Elab.PreDefinition.Structural.Eqns.0.Lean.Elab.Structural.mkProof">Lean.Elab.Structural.mkProof</a> <span class="fn"><span class="fn"><span class="fn">info</span>.toEqnInfoCore</span>.declName</span> <span class="fn">type</span></span>
-            <span class="fn"><a href="/Unicode.lean/Lean/MonadEnv.html#Lean.addDecl">Lean.addDecl</a>
-                (<span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.thmDecl">Lean.Declaration.thmDecl</a>
-                  <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">name</span>, levelParams := <span class="fn"><span class="fn"><span class="fn">info</span>.toEqnInfoCore</span>.levelParams</span>, type := <span class="fn">type</span> }</span>,
-                    value := <span class="fn">value</span> }</span></span>)</span>
-            <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">thmNames</span></span>)</span></span></span></span></span>
+            let discr ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.removeUnusedEqnHypotheses">Lean.Elab.Eqns.removeUnusedEqnHypotheses</a> <span class="fn">type</span> <span class="fn">value</span></span>
+            let x : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> := <span class="fn">discr</span>
+            <span class="fn">match <span class="fn">x</span> with
+              | <span class="fn">(<span class="fn">type</span>, <span class="fn">value</span>)</span> => <span class="fn">do
+                <span class="fn"><a href="/Unicode.lean/Lean/MonadEnv.html#Lean.addDecl">Lean.addDecl</a>
+                    (<span class="fn"><a href="/Unicode.lean/Lean/Declaration.html#Lean.Declaration.thmDecl">Lean.Declaration.thmDecl</a>
+                      <span class="fn">{ toConstantVal := <span class="fn">{ name := <span class="fn">name</span>, levelParams := <span class="fn"><span class="fn"><span class="fn">info</span>.toEqnInfoCore</span>.levelParams</span>, type := <span class="fn">type</span> }</span>,
+                        value := <span class="fn">value</span> }</span></span>)</span>
+                <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.yield">ForInStep.yield</a> <span class="fn">thmNames</span></span>)</span></span></span></span></span></span></span>
           <span class="fn">if <span class="fn"><span class="fn">a</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">do
               let y ←
                 <span class="fn"><a href="/Unicode.lean/Lean/Util/Trace.html#Lean.addTrace">Lean.addTrace</a> <span class="fn">cls</span>
@@ -191,7 +195,7 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Lean.Elab.Structural.eqnInfoExt">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/Structural/Eqns.lean#L79-L79">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/Structural/Eqns.lean#L80-L80">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -205,7 +209,7 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Lean.Elab.Structural.registerEqnsInfo">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/Structural/Eqns.lean#L81-L82">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/Structural/Eqns.lean#L82-L83">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -235,7 +239,7 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Lean.Elab.Structural.getEqnsFor?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/Structural/Eqns.lean#L84-L93">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/Structural/Eqns.lean#L85-L89">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -251,18 +255,10 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/Eqns.html#Lean.Elab.Structural.getEqnsFor?">Lean.Elab.Structural.getEqnsFor?</a> <span class="fn">declName</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let env ← <span class="fn">Lean.getEnv</span>
-  <span class="fn">match <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#Std.PersistentHashMap.find?">Std.PersistentHashMap.find?</a> <span class="fn">(<span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.EnvExtension.getState">Lean.EnvExtension.getState</a> <a href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.eqnsExt">Lean.Elab.Eqns.eqnsExt</a> <span class="fn">env</span></span>).map</span> <span class="fn">declName</span></span> with
-    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">eqs</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">eqs</span></span>)</span>
-    | <span class="fn">x</span> =>
-      <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.MapDeclarationExtension.find?">Lean.MapDeclarationExtension.find?</a> <a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/Eqns.html#Lean.Elab.Structural.eqnInfoExt">Lean.Elab.Structural.eqnInfoExt</a> <span class="fn">env</span> <span class="fn">declName</span></span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">info</span></span> => <span class="fn">do
-        let eqs ← <span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/Eqns.html#Lean.Elab.Structural.mkEqns">Lean.Elab.Structural.mkEqns</a> <span class="fn">info</span></span>
-        <span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.MonadEnv.modifyEnv">Lean.modifyEnv</a> <span class="fn">fun <span class="fn">env</span> =>
-            <span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.EnvExtension.modifyState">Lean.EnvExtension.modifyState</a> <a href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.eqnsExt">Lean.Elab.Eqns.eqnsExt</a> <span class="fn">env</span> <span class="fn">fun <span class="fn">s</span> =>
-              <span class="fn">{ map := <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#Std.PersistentHashMap.insert">Std.PersistentHashMap.insert</a> <span class="fn"><span class="fn">s</span>.map</span> <span class="fn">declName</span> <span class="fn">eqs</span></span> }</span></span></span></span></span>
-        <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">eqs</span></span>)</span></span>
-      | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span></span></span></span></li>
+  let a ← <span class="fn">Lean.getEnv</span>
+  <span class="fn">match <span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.MapDeclarationExtension.find?">Lean.MapDeclarationExtension.find?</a> <a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/Eqns.html#Lean.Elab.Structural.eqnInfoExt">Lean.Elab.Structural.eqnInfoExt</a> <span class="fn">a</span> <span class="fn">declName</span></span> with
+    | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">info</span></span> => <span class="fn"><a href="/Unicode.lean/Init/Coe.html#Lean.Internal.coeM">Lean.Internal.coeM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/PreDefinition/Structural/Eqns.html#Lean.Elab.Structural.mkEqns">Lean.Elab.Structural.mkEqns</a> <span class="fn">info</span></span>)</span>
+    | <span class="fn">x</span> => <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">none</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -270,7 +266,7 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <div class="decl" id="Lean.Elab.Structural.getUnfoldFor?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/Structural/Eqns.lean#L95-L97">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6b1297fe85575c91cf613640bdd96cd1241d1a9e/src/Lean/Elab/PreDefinition/Structural/Eqns.lean#L91-L93">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -357,6 +353,9 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Init/Data/Array/InsertionSort.html">Init.Data.Array.InsertionSort</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Array/Mem.html">Init.Data.Array.Mem</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Array/QSort.html">Init.Data.Array.QSort</a>
 </div>
 <div class="nav_link">
@@ -438,6 +437,9 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Init/Data/Nat/Gcd.html">Init.Data.Nat.Gcd</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Nat/Log2.html">Init.Data.Nat.Log2</a>
 </div>
 </details>
@@ -515,6 +517,9 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Ord.html">Init.Data.Ord</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/Prod.html">Init.Data.Prod</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Random.html">Init.Data.Random</a>
@@ -597,6 +602,9 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/SizeOf.html">Init.SizeOf</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/SizeOfLemmas.html">Init.SizeOfLemmas</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/System.html">Init.System</a>
@@ -803,6 +811,9 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Format.html">Lean.Data.Format</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Data/FuzzyMatching.html">Lean.Data.FuzzyMatching</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Data/Json.html">Lean.Data.Json</a>
@@ -1249,8 +1260,32 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <summary>Lean.Meta.Tactic</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary>Lean.Meta.Tactic.LinearArith</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
+<summary>Lean.Meta.Tactic.LinearArith.Nat</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Basic.html">Lean.Meta.Tactic.LinearArith.Nat.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Simp.html">Lean.Meta.Tactic.LinearArith.Nat.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat/Solver.html">Lean.Meta.Tactic.LinearArith.Nat.Solver</a>
+</div>
+</details>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Basic.html">Lean.Meta.Tactic.LinearArith.Basic</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Main.html">Lean.Meta.Tactic.LinearArith.Main</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Simp.html">Lean.Meta.Tactic.LinearArith.Simp</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Solver.html">Lean.Meta.Tactic.LinearArith.Solver</a>
 </div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/Simp.html">
@@ -1274,6 +1309,9 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/Types.html">Lean.Meta.Tactic.Simp.Types</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/Acyclic.html">Lean.Meta.Tactic.Acyclic</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Tactic/Apply.html">Lean.Meta.Tactic.Apply</a>
 </div>
@@ -1444,6 +1482,9 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Meta/KAbstract.html">Lean.Meta.KAbstract</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/KExprMap.html">Lean.Meta.KExprMap</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/LevelDefEq.html">Lean.Meta.LevelDefEq</a>
 </div>
 <div class="nav_link">
@@ -1469,9 +1510,6 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/SizeOf.html">Lean.Meta.SizeOf</a>
-</div>
-<div class="nav_link">
-<a href="/Unicode.lean/Lean/Meta/SortLocalDecls.html">Lean.Meta.SortLocalDecls</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Structure.html">Lean.Meta.Structure</a>
@@ -1844,6 +1882,15 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <a href="/Unicode.lean/Lean/Widget.html">Lean.Widget</a>
 </div>
 </details>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib.html">
+<summary>Mathlib</summary>
+<details class="nav_sect" data-path="/Unicode.lean/Mathlib/Util.html">
+<summary>Mathlib.Util</summary>
+<div class="nav_link">
+<a href="/Unicode.lean/Mathlib/Util/IncludeStr.html">Mathlib.Util.IncludeStr</a>
+</div>
+</details>
+</details>
 <details class="nav_sect" data-path="/Unicode.lean/Std.html">
 <summary>Std</summary>
 <details class="nav_sect" data-path="/Unicode.lean/Std/Data.html">
@@ -1883,6 +1930,9 @@ recArgPos : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></li>
 <summary>Unicode.General</summary>
 <div class="nav_link">
 <a href="/Unicode.lean/Unicode/General/GeneralCategory.html">Unicode.General.GeneralCategory</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Unicode/General/Name.html">Unicode.General.Name</a>
 </div>
 </details>
 <div class="nav_link">
