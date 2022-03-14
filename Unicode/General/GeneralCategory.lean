@@ -143,8 +143,8 @@ end GeneralCategory
 -/
 def getGeneralCategory (c : Char) : GeneralCategory :=
   let map := unicodeDataMap.get
-  match map.find? c with
-  | some list => GeneralCategory.fromString $ list.get! 1
+  match map.find? c |>.bind (·.get? 1) with
+  | some s => GeneralCategory.fromString s
   | none => GeneralCategory.unassigned
 
 open GeneralCategory in
