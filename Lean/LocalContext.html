@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.LocalContext</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -292,7 +292,7 @@ Documentation</h1>
 <div class="decl" id="Lean.LocalDecl">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L12-L15">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L20-L23">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -307,12 +307,19 @@ cdecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <li class="constructor" id="Lean.LocalDecl.ldecl">
 ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Üí <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a> ‚Üí <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> ‚Üí <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> ‚Üí <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> ‚Üí <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> ‚Üí <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span></span></span></span></span></li>
 </ul>
-</div>
+<p>A declaration for a LocalContext. This is used to register which free variables are in scope.
+Each declaration comes with</p><ul>
+<li><code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">index</a></code> the position of the decl in the local context</li>
+<li><code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.fvarId">fvarId</a></code> the unique id of the free variables</li>
+<li><code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.userName">userName</a></code> the pretty-printable name of the variable</li>
+<li><code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">type</a></code> the type.
+A <code>cdecl</code> is a local variable, a <code>ldecl</code> is a let-bound free variable with a <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.value">value</a> : Expr</code>.</li>
+</ul></div>
 </div>
 <div class="decl" id="Lean.instInhabitedLocalDecl">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L15-L15">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L23-L23">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -333,7 +340,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.mkLocalDeclEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L18-L19">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L26-L27">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -364,7 +371,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.mkLetDeclEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L21-L22">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L29-L30">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -395,7 +402,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.binderInfoEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L24-L26">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L32-L34">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -408,7 +415,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.binderInfoEx">Lean.LocalDecl.binderInfoEx</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.binderInfoEx">Lean.LocalDecl.binderInfoEx</a> <span class="fn">_fun_discr</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">_fun_discr</span> with
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.cdecl">Lean.LocalDecl.cdecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span> <span class="fn">bi</span></span> =&gt <span class="fn">bi</span>
   | <span class="fn">x</span> =&gt <span class="fn">Lean.BinderInfo.default</span></span></span></li>
 </ul>
@@ -418,7 +425,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.isLet">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L29-L31">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L37-L39">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -431,7 +438,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.isLet">Lean.LocalDecl.isLet</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.isLet">Lean.LocalDecl.isLet</a> <span class="fn">_fun_discr</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">_fun_discr</span> with
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.cdecl">Lean.LocalDecl.cdecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span> <span class="fn">x_4</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a>
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.ldecl">Lean.LocalDecl.ldecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span> <span class="fn">x_4</span> <span class="fn">x_5</span></span> =&gt <span class="fn">true</span></span></span></li>
 </ul>
@@ -441,7 +448,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.index">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L33-L35">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L41-L43">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -454,7 +461,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">Lean.LocalDecl.index</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">Lean.LocalDecl.index</a> <span class="fn">_fun_discr</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">_fun_discr</span> with
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.cdecl">Lean.LocalDecl.cdecl</a> <span class="fn">i</span> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span></span> =&gt <span class="fn">i</span>
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.ldecl">Lean.LocalDecl.ldecl</a> <span class="fn">i</span> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span> <span class="fn">x_4</span></span> =&gt <span class="fn">i</span></span></span></li>
 </ul>
@@ -464,7 +471,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.setIndex">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L37-L39">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L45-L47">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -484,7 +491,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.fvarId">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L41-L43">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L49-L51">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -497,7 +504,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.fvarId">Lean.LocalDecl.fvarId</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.fvarId">Lean.LocalDecl.fvarId</a> <span class="fn">_fun_discr</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">_fun_discr</span> with
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.cdecl">Lean.LocalDecl.cdecl</a> <span class="fn">x</span> <span class="fn">id</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span></span> =&gt <span class="fn">id</span>
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.ldecl">Lean.LocalDecl.ldecl</a> <span class="fn">x</span> <span class="fn">id</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span> <span class="fn">x_4</span></span> =&gt <span class="fn">id</span></span></span></li>
 </ul>
@@ -507,7 +514,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.userName">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L45-L47">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L53-L55">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -520,7 +527,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.userName">Lean.LocalDecl.userName</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.userName">Lean.LocalDecl.userName</a> <span class="fn">_fun_discr</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">_fun_discr</span> with
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.cdecl">Lean.LocalDecl.cdecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">n</span> <span class="fn">x_2</span> <span class="fn">x_3</span></span> =&gt <span class="fn">n</span>
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.ldecl">Lean.LocalDecl.ldecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">n</span> <span class="fn">x_2</span> <span class="fn">x_3</span> <span class="fn">x_4</span></span> =&gt <span class="fn">n</span></span></span></li>
 </ul>
@@ -530,7 +537,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.type">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L49-L51">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L57-L59">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -543,7 +550,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.type">Lean.LocalDecl.type</a> <span class="fn">_fun_discr</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">_fun_discr</span> with
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.cdecl">Lean.LocalDecl.cdecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">t</span> <span class="fn">x_3</span></span> =&gt <span class="fn">t</span>
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.ldecl">Lean.LocalDecl.ldecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">t</span> <span class="fn">x_3</span> <span class="fn">x_4</span></span> =&gt <span class="fn">t</span></span></span></li>
 </ul>
@@ -553,7 +560,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.setType">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L53-L55">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L61-L63">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -573,7 +580,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.binderInfo">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L57-L59">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L65-L67">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -586,7 +593,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.binderInfo">Lean.LocalDecl.binderInfo</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.binderInfo">Lean.LocalDecl.binderInfo</a> <span class="fn">_fun_discr</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">_fun_discr</span> with
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.cdecl">Lean.LocalDecl.cdecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span> <span class="fn">bi</span></span> =&gt <span class="fn">bi</span>
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.ldecl">Lean.LocalDecl.ldecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span> <span class="fn">x_4</span> <span class="fn">x_5</span></span> =&gt <span class="fn">Lean.BinderInfo.default</span></span></span></li>
 </ul>
@@ -596,7 +603,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.isAuxDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L61-L62">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L69-L70">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -619,7 +626,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.value?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L64-L66">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L72-L74">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -632,7 +639,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.value?">Lean.LocalDecl.value?</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.value?">Lean.LocalDecl.value?</a> <span class="fn">_fun_discr</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">_fun_discr</span> with
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.cdecl">Lean.LocalDecl.cdecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span> <span class="fn">x_4</span></span> =&gt <span class="fn">none</span>
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.ldecl">Lean.LocalDecl.ldecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span> <span class="fn">v</span> <span class="fn">x_4</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">v</span></span></span></span></li>
 </ul>
@@ -642,7 +649,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.value">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L68-L70">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L76-L78">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -662,7 +669,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.hasValue">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L72-L74">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L80-L82">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -675,7 +682,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.hasValue">Lean.LocalDecl.hasValue</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.hasValue">Lean.LocalDecl.hasValue</a> <span class="fn">_fun_discr</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">_fun_discr</span> with
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.cdecl">Lean.LocalDecl.cdecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span> <span class="fn">x_4</span></span> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a>
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.ldecl">Lean.LocalDecl.ldecl</a> <span class="fn">x</span> <span class="fn">x_1</span> <span class="fn">x_2</span> <span class="fn">x_3</span> <span class="fn">x_4</span> <span class="fn">x_5</span></span> =&gt <span class="fn">true</span></span></span></li>
 </ul>
@@ -685,7 +692,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.setValue">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L76-L78">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L84-L86">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -698,7 +705,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.setValue">Lean.LocalDecl.setValue</a> <span class="fn">x</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span>, <span class="fn">x</span> with
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.setValue">Lean.LocalDecl.setValue</a> <span class="fn">_fun_discr</span> <span class="fn">_fun_discr</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">_fun_discr</span>, <span class="fn">_fun_discr</span> with
   | <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.ldecl">Lean.LocalDecl.ldecl</a> <span class="fn">idx</span> <span class="fn">id</span> <span class="fn">n</span> <span class="fn">t</span> <span class="fn">x</span> <span class="fn">nd</span></span>, <span class="fn">v</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.ldecl">Lean.LocalDecl.ldecl</a> <span class="fn">idx</span> <span class="fn">id</span> <span class="fn">n</span> <span class="fn">t</span> <span class="fn">v</span> <span class="fn">nd</span></span>
   | <span class="fn">d</span>, <span class="fn">x</span> =&gt <span class="fn">d</span></span></span></li>
 </ul>
@@ -708,7 +715,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.setUserName">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L80-L82">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L88-L90">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -728,7 +735,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.setBinderInfo">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L84-L86">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L92-L94">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -748,7 +755,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.toExpr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L88-L89">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L96-L97">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -771,7 +778,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalDecl.hasExprMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L91-L93">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L99-L101">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -791,7 +798,7 @@ ldecl: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a> ‚Ü
 <div class="decl" id="Lean.LocalContext">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L99-L102">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L114-L117">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -806,12 +813,15 @@ fvarIdToDecl : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMa
 <li class="structure_field" id="Lean.LocalContext.decls">
 decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray">Std.PersistentArray</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></span>)</span></li>
 </ul>
-</div>
+<p>A LocalContext is an ordered set of local variable declarations.
+It is used to store the free variables (also known as local constants) that
+are in scope.</p><p>When inspecting a goal or expected type in the infoview, the local
+context is all of the variables above the <code>‚ä¢</code> symbol.</p></div>
 </div>
 <div class="decl" id="Lean.instInhabitedLocalContext">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L102-L102">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L117-L117">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -832,7 +842,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.mkEmpty">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L107-L107">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L122-L122">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -852,7 +862,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.empty">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L109-L109">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L124-L124">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -872,7 +882,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.isEmpty">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L112-L113">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L127-L128">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -895,7 +905,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.mkLocalDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L117-L122">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L135-L140">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -914,7 +924,10 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <span class="fn">(bi : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.default">Lean.BinderInfo.default</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext">Lean.LocalContext</a></div></div>
-<details>
+<p>Low level API for creating local declarations.
+It is used to implement actions in the monads <code>Elab</code> and <code>Tactic</code>.
+It should not be used directly since the argument <code>(fvarId : FVarId)</code> is
+assumed to be unique. You can create a unique fvarId with <code>mkFreshFVarId</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">One or more equations did not get rendered due to their size.</li>
@@ -925,7 +938,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.mkLetDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L125-L130">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L144-L149">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -946,7 +959,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <span class="fn">(nonDep : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext">Lean.LocalContext</a></div></div>
-<details>
+<p>Low level API for let declarations. Do not use directly.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">One or more equations did not get rendered due to their size.</li>
@@ -957,7 +970,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.addDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L133-L138">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L153-L158">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -970,7 +983,8 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <span class="fn">(newDecl : <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext">Lean.LocalContext</a></div></div>
-<details>
+<p>Low level API for adding a local declaration.
+Do not use directly.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">One or more equations did not get rendered due to their size.</li>
@@ -981,7 +995,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.find?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L141-L142">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L161-L162">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1006,7 +1020,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.findFVar?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L144-L145">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L164-L165">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1031,7 +1045,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.get!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L147-L150">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L167-L170">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1055,7 +1069,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.getFVar!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L152-L153">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L174-L175">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1068,7 +1082,8 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a></div></div>
-<details>
+<p>Gets the declaration for expression <code>e</code> in the local context.
+If <code>e</code> is not a free variable or not present then panics.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -1080,7 +1095,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.contains">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L155-L156">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L177-L178">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1105,7 +1120,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.containsFVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L158-L159">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L182-L183">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1118,7 +1133,8 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
-<details>
+<p>Returns true when the lctx contains the free variable <code>e</code>.
+Panics if <code>e</code> is not an fvar.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -1130,7 +1146,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.getFVarIds">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L161-L164">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L185-L188">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1152,7 +1168,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.getFVars">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L166-L167">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L191-L192">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1163,7 +1179,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <span class="fn">(lctx : <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext">Lean.LocalContext</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Return all of the free variables in the given context.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -1175,7 +1191,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.erase">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L176-L181">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L201-L206">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1199,7 +1215,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.pop">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L184-L190">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L209-L215">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1221,7 +1237,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.findFromUserName?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L193-L197">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L218-L222">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1245,7 +1261,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.usesUserName">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L200-L201">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L225-L226">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1270,7 +1286,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.getUnusedName">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L209-L212">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L234-L237">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1294,7 +1310,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.lastDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L215-L216">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L240-L241">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1317,7 +1333,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.setUserName">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L218-L222">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L243-L247">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1343,7 +1359,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.renameUserName">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L225-L233">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L250-L258">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1369,7 +1385,7 @@ decls : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#St
 <div class="decl" id="Lean.LocalContext.modifyLocalDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L239-L247">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L264-L272">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1398,7 +1414,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.setBinderInfo">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L249-L250">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L274-L275">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1425,7 +1441,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.numIndices">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L253-L254">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L278-L279">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1448,7 +1464,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.getAt?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L257-L258">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L282-L283">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1473,7 +1489,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.foldlM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L260-L263">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L285-L288">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1514,7 +1530,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.foldrM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L265-L268">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L290-L293">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1559,7 +1575,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.forM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L270-L273">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L295-L298">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1596,7 +1612,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.findDeclM?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L275-L278">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L300-L303">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1637,7 +1653,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.findDeclRevM?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L280-L283">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L305-L308">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -1678,7 +1694,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.instForInLocalContextLocalDecl">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L285-L288">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L310-L313">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1702,7 +1718,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.foldl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L290-L291">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L315-L316">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1736,7 +1752,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.foldr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L293-L294">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L318-L319">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1768,7 +1784,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.findDecl?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L296-L297">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L321-L322">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1798,7 +1814,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.findDeclRev?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L299-L300">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L324-L325">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1828,7 +1844,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.isSubPrefixOfAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L302-L314">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L327-L339">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -1852,7 +1868,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.isSubPrefixOf">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L319-L320">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L344-L345">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1879,7 +1895,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.mkBinding">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L322-L340">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L347-L365">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1908,7 +1924,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.mkLambda">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L342-L343">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L369-L370">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1923,7 +1939,8 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <span class="fn">(b : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></div></div>
-<details>
+<p>Creates the expression <code>fun x‚ÇÅ .. x‚Çô => b</code> for free variables <code>xs = #[x‚ÇÅ, .., x‚Çô]</code>,
+suitably abstracting <code>b</code> and the types for each of the <code>x·µ¢</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -1935,7 +1952,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.mkForall">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L345-L346">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L374-L375">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1950,7 +1967,8 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <span class="fn">(b : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></div></div>
-<details>
+<p>Creates the expression <code>(x‚ÇÅ:Œ±‚ÇÅ) ‚Üí .. ‚Üí (x‚Çô:Œ±‚Çô) ‚Üí b</code> for free variables <code>xs = #[x‚ÇÅ, .., x‚Çô]</code>,
+suitably abstracting <code>b</code> and the types for each of the <code>x·µ¢</code>, <code>Œ±·µ¢</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -1962,7 +1980,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.anyM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L348-L351">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L377-L380">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1999,7 +2017,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.allM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L353-L356">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L382-L385">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2036,7 +2054,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.any">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L358-L359">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L387-L388">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2062,7 +2080,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.all">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L361-L362">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L390-L391">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2088,7 +2106,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.LocalContext.sanitizeNames">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L364-L378">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L393-L407">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2110,7 +2128,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <div class="decl" id="Lean.MonadLCtx">
 <div class="class">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L382-L383">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L412-L413">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">class</span>
@@ -2125,7 +2143,7 @@ the <code><a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl.index">in
 <li class="structure_field" id="Lean.MonadLCtx.getLCtx">
 getLCtx : <span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext">Lean.LocalContext</a></span></li>
 </ul>
-<details class="instances">
+<p>Class used to denote that <code>m</code> has a local context.</p><details class="instances">
 <summary>Instances</summary>
 <ul>
 <li>
@@ -2141,7 +2159,7 @@ getLCtx : <span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/Lean
 <div class="decl" id="Lean.instMonadLCtx">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L387-L388">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L417-L418">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -2178,7 +2196,7 @@ getLCtx : <span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/Lean
 <div class="decl" id="Lean.replaceFVarIdAtLocalDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/LocalContext.lean#L390-L394">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/LocalContext.lean#L420-L424">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2384,6 +2402,9 @@ getLCtx : <span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/Lean
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -2800,6 +2821,9 @@ getLCtx : <span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/Lean
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -2873,6 +2897,9 @@ getLCtx : <span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/Lean
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -2926,6 +2953,9 @@ getLCtx : <span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/Lean
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -3080,6 +3110,9 @@ getLCtx : <span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/Lean
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -3091,7 +3124,13 @@ getLCtx : <span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/Lean
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -3505,6 +3544,9 @@ getLCtx : <span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/Lean
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

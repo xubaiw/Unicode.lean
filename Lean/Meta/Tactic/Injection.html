@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Meta.Tactic.Injection</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Injection.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Injection.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -53,6 +53,9 @@ Documentation</h1>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html">Lean.Meta.Tactic.Intro</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Meta/Tactic/Subst.html">Lean.Meta.Tactic.Subst</a>
 </li>
 </ul>
 </details>
@@ -87,9 +90,6 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Meta.InjectionResult">Lean.Meta.InjectionResult</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Meta.heqToEq">Lean.Meta.heqToEq</a>
-</div>
-<div class="nav_link">
 <a class="break_within" href="#Lean.Meta.injectionIntro">Lean.Meta.injectionIntro</a>
 </div>
 <div class="nav_link">
@@ -109,7 +109,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.getCtorNumPropFields">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Injection.lean#L14-L20">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Injection.lean#L15-L21">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -131,7 +131,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.InjectionResultCore">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Injection.lean#L22-L24">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Injection.lean#L23-L25">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -151,7 +151,7 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <div class="decl" id="Lean.Meta.injectionCore">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Injection.lean#L26-L68">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Injection.lean#L27-L69">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -175,7 +175,7 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <div class="decl" id="Lean.Meta.InjectionResult">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Injection.lean#L70-L72">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Injection.lean#L71-L73">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -192,36 +192,10 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </ul>
 </div>
 </div>
-<div class="decl" id="Lean.Meta.heqToEq">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Injection.lean#L74-L90">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/Injection.html#Lean.Meta.heqToEq">Lean.Meta.heqToEq</a>
-</span>
-<span class="decl_args">
-<span class="fn">(mvarId : <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(tryToClear : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span>)</span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">One or more equations did not get rendered due to their size.</li>
-</ul>
-</details>
-</div>
-</div>
 <div class="decl" id="Lean.Meta.injectionIntro">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Injection.lean#L92-L104">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Injection.lean#L76-L88">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -250,7 +224,7 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <div class="decl" id="Lean.Meta.injectionIntro.go">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Injection.lean#L93-L103">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Injection.lean#L77-L87">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -266,7 +240,7 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <ul class="equations">
 <li class="equation">One or more equations did not get rendered due to their size.</li>
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Injection.html#Lean.Meta.injectionIntro.go">Lean.Meta.injectionIntro.go</a> <span class="fn">tryToClear</span> <span class="fn">0</span> <span class="fn">x</span> <span class="fn">x</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Injection.html#Lean.Meta.InjectionResult.subgoal">Lean.Meta.InjectionResult.subgoal</a> <span class="fn">x</span> <span class="fn">x</span> <span class="fn">x</span></span>)</span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Injection.html#Lean.Meta.injectionIntro.go">Lean.Meta.injectionIntro.go</a> <span class="fn">tryToClear</span> <span class="fn">0</span> <span class="fn">_fun_discr</span> <span class="fn">_fun_discr</span> <span class="fn">_fun_discr</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Injection.html#Lean.Meta.InjectionResult.subgoal">Lean.Meta.InjectionResult.subgoal</a> <span class="fn">_fun_discr</span> <span class="fn">_fun_discr</span> <span class="fn">_fun_discr</span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -274,7 +248,7 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <div class="decl" id="Lean.Meta.injection">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Injection.lean#L106-L109">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Injection.lean#L90-L93">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -300,7 +274,7 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <div class="decl" id="Lean.Meta.injections">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Injection.lean#L111-L133">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Injection.lean#L95-L117">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -324,7 +298,7 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <div class="decl" id="Lean.Meta.injections.go">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Injection.lean#L116-L133">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Injection.lean#L100-L117">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -520,6 +494,9 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -936,6 +913,9 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -1009,6 +989,9 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -1062,6 +1045,9 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1216,6 +1202,9 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1227,7 +1216,13 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html" open="">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -1641,6 +1636,9 @@ subgoal: <span class="fn"><a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Le
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

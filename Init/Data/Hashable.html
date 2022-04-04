@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Init.Data.Hashable</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/Hashable.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -55,6 +55,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#instHashableNat">instHashableNat</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#instHashablePos">instHashablePos</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#instHashableProd">instHashableProd</a>
@@ -97,7 +100,7 @@ Documentation</h1>
 <div class="decl" id="instHashableNat">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/Hashable.lean#L11-L12">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean#L11-L12">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -115,10 +118,31 @@ Documentation</h1>
 </details>
 </div>
 </div>
+<div class="decl" id="instHashablePos">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean#L14-L15">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Data/Hashable.html#instHashablePos">instHashablePos</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable">Hashable</a> <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Init/Data/Hashable.html#instHashablePos">instHashablePos</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ hash := <span class="fn">fun <span class="fn">p</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#UInt64.ofNat">UInt64.ofNat</a> <span class="fn"><span class="fn">p</span>.byteIdx</span></span></span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="instHashableProd">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/Hashable.lean#L14-L15">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean#L17-L18">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -147,8 +171,8 @@ Documentation</h1>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn">instHashableProd</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ hash := <span class="fn">fun <span class="fn">x</span> =&gt
-      <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><span class="fn">instHashableProd</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ hash := <span class="fn">fun <span class="fn">_fun_discr</span> =&gt
+      <span class="fn">match <span class="fn">_fun_discr</span> with
       | <span class="fn">(<span class="fn">a</span>, <span class="fn">b</span>)</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#mixHash">mixHash</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">a</span></span>) (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">b</span></span>)</span></span></span> }</span></span></li>
 </ul>
 </details>
@@ -157,7 +181,7 @@ Documentation</h1>
 <div class="decl" id="instHashableBool">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/Hashable.lean#L17-L20">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean#L20-L23">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -170,8 +194,8 @@ Documentation</h1>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Init/Data/Hashable.html#instHashableBool">instHashableBool</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ hash := <span class="fn">fun <span class="fn">x</span> =&gt
-      <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><a href="/Unicode.lean/Init/Data/Hashable.html#instHashableBool">instHashableBool</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ hash := <span class="fn">fun <span class="fn">_fun_discr</span> =&gt
+      <span class="fn">match <span class="fn">_fun_discr</span> with
       | <a href="/Unicode.lean/Init/Prelude.html#Bool.false">true</a> =&gt <span class="fn">11</span>
       | <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> =&gt <a href="/Unicode.lean/Init/Prelude.html#Bool.false">13</a></span></span> }</span></span></li>
 </ul>
@@ -181,7 +205,7 @@ Documentation</h1>
 <div class="decl" id="instHashableOption">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/Hashable.lean#L22-L25">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean#L25-L28">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -202,8 +226,8 @@ Documentation</h1>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn">instHashableOption</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ hash := <span class="fn">fun <span class="fn">x</span> =&gt
-      <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><span class="fn">instHashableOption</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ hash := <span class="fn">fun <span class="fn">_fun_discr</span> =&gt
+      <span class="fn">match <span class="fn">_fun_discr</span> with
       | <span class="fn">none</span> =&gt <span class="fn">11</span>
       | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">mixHash</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Hashable.hash">hash</a> <span class="fn">a</span></span>) <span class="fn">13</span></span></span></span> }</span></span></li>
 </ul>
@@ -213,7 +237,7 @@ Documentation</h1>
 <div class="decl" id="instHashableList">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/Hashable.lean#L27-L28">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean#L30-L31">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -242,7 +266,7 @@ Documentation</h1>
 <div class="decl" id="instHashableUInt8">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/Hashable.lean#L30-L31">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean#L33-L34">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -263,7 +287,7 @@ Documentation</h1>
 <div class="decl" id="instHashableUInt16">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/Hashable.lean#L33-L34">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean#L36-L37">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -284,7 +308,7 @@ Documentation</h1>
 <div class="decl" id="instHashableUInt32">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/Hashable.lean#L36-L37">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean#L39-L40">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -305,7 +329,7 @@ Documentation</h1>
 <div class="decl" id="instHashableUInt64">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/Hashable.lean#L39-L40">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean#L42-L43">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -326,7 +350,7 @@ Documentation</h1>
 <div class="decl" id="instHashableUSize">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/Hashable.lean#L42-L43">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean#L45-L46">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -347,7 +371,7 @@ Documentation</h1>
 <div class="decl" id="instHashableFin">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/Hashable.lean#L45-L46">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean#L48-L49">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -372,7 +396,7 @@ Documentation</h1>
 <div class="decl" id="instHashableInt">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/Hashable.lean#L48-L51">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean#L51-L54">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -385,8 +409,8 @@ Documentation</h1>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Init/Data/Hashable.html#instHashableInt">instHashableInt</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ hash := <span class="fn">fun <span class="fn">x</span> =&gt
-      <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><a href="/Unicode.lean/Init/Data/Hashable.html#instHashableInt">instHashableInt</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ hash := <span class="fn">fun <span class="fn">_fun_discr</span> =&gt
+      <span class="fn">match <span class="fn">_fun_discr</span> with
       | <span class="fn"><a href="/Unicode.lean/Init/Data/Int/Basic.html#Int.negSucc">Int.ofNat</a> <span class="fn">n</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Data/UInt.html#UInt64.ofNat">UInt64.ofNat</a> (<span class="fn"><span class="fn">2</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn">n</span></span>)</span>
       | <span class="fn"><a href="/Unicode.lean/Init/Data/Int/Basic.html#Int.negSucc">Int.negSucc</a> <span class="fn">n</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Data/Int/Basic.html#Int.negSucc">UInt64.ofNat</a> (<span class="fn"><span class="fn"><span class="fn">2</span> <a href="/Unicode.lean/Init/Prelude.html#HMul.hMul">*</a> <span class="fn">n</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">1</span></span>)</span></span></span> }</span></span></li>
 </ul>
@@ -396,7 +420,7 @@ Documentation</h1>
 <div class="decl" id="instHashable">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/Hashable.lean#L53-L54">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/Hashable.lean#L56-L57">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -599,6 +623,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -1015,6 +1042,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -1088,6 +1118,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -1141,6 +1174,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1295,6 +1331,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1306,7 +1345,13 @@ Documentation</h1>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -1720,6 +1765,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

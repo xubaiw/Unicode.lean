@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Data.Options</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -144,6 +144,12 @@ Documentation</h1>
 <a class="break_within" href="#Lean.instMonadWithOptions">Lean.instMonadWithOptions</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.withInPattern">Lean.withInPattern</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Options.getInPattern">Lean.Options.getInPattern</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Option">Lean.Option</a>
 </div>
 <div class="nav_link">
@@ -178,7 +184,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Options">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L11-L11">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L11-L11">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -199,7 +205,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Options.empty">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L13-L13">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L13-L13">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -220,7 +226,7 @@ Documentation</h1>
 <div class="decl" id="Lean.instInhabitedOptions">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L14-L15">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L14-L15">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -241,7 +247,7 @@ Documentation</h1>
 <div class="decl" id="Lean.instToStringOptions">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L16-L16">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L16-L16">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -262,7 +268,7 @@ Documentation</h1>
 <div class="decl" id="Lean.instForInOptionsProdNameDataValue">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L17-L17">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L17-L17">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -287,7 +293,7 @@ Documentation</h1>
 <div class="decl" id="Lean.OptionDecl">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L19-L23">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L19-L23">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -309,7 +315,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.instInhabitedOptionDecl">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L23-L23">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L23-L23">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -330,7 +336,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.OptionDecls">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L25-L25">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L25-L25">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -351,7 +357,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.instInhabitedOptionDecls">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L27-L27">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L27-L27">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -372,7 +378,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.registerOption">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L32-L38">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L32-L38">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -396,7 +402,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.getOptionDecls">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L40-L40">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L40-L40">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -417,7 +423,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.getOptionDeclsArray">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L43-L47">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L43-L47">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -440,7 +446,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.getOptionDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L49-L52">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L49-L52">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -462,7 +468,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.getOptionDefaulValue">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L54-L56">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L54-L56">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -487,7 +493,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.getOptionDescr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L58-L60">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L58-L60">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -512,7 +518,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.setOptionFromString">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L62-L82">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L62-L82">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -536,7 +542,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.MonadOptions">
 <div class="class">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L84-L85">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L84-L85">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">class</span>
@@ -573,7 +579,7 @@ getOptions : <span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/L
 <div class="decl" id="Lean.instMonadOptions">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L89-L90">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L89-L90">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -610,7 +616,7 @@ getOptions : <span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/L
 <div class="decl" id="Lean.getBoolOption">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L94-L96">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L94-L96">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -649,7 +655,7 @@ getOptions : <span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/L
 <div class="decl" id="Lean.getNatOption">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L98-L100">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L98-L100">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -688,7 +694,7 @@ getOptions : <span class="fn"><span class="fn">m</span> <a href="/Unicode.lean/L
 <div class="decl" id="Lean.MonadWithOptions">
 <div class="class">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L102-L103">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L102-L103">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">class</span>
@@ -719,7 +725,7 @@ withOptions : <span class="fn">{α : <span class="fn">Type</span>} → <span cla
 <div class="decl" id="Lean.instMonadWithOptions">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L107-L108">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L107-L108">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -753,10 +759,68 @@ withOptions : <span class="fn">{α : <span class="fn">Type</span>} → <span cla
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.withInPattern">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L113-L114">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Options.html#Lean.withInPattern">Lean.withInPattern</a>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{m : <span class="fn"><span class="fn">Type</span> → <span class="fn">Type</span></span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{α : <span class="fn">Type</span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Lean/Data/Options.html#Lean.MonadWithOptions">Lean.MonadWithOptions</a> <span class="fn">m</span></span>]</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(x : <span class="fn"><span class="fn">m</span> <span class="fn">α</span></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">m</span> <span class="fn">α</span></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Data/Options.html#Lean.withInPattern">Lean.withInPattern</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Data/Options.html#Lean.MonadWithOptions.withOptions">Lean.withOptions</a> (<span class="fn">fun <span class="fn">o</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Data/KVMap.html#Lean.KVMap.setBool">Lean.KVMap.setBool</a> <span class="fn">o</span> <span class="fn">`_inPattern</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span>) <span class="fn">x</span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Options.getInPattern">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L116-L117">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Data/Options.html#Lean.Options.getInPattern">Lean.Options.getInPattern</a>
+</span>
+<span class="decl_args">
+<span class="fn">(o : <a href="/Unicode.lean/Lean/Data/Options.html#Lean.Options">Lean.Options</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Data/Options.html#Lean.Options.getInPattern">Lean.Options.getInPattern</a> <span class="fn">o</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Data/KVMap.html#Lean.KVMap.getBool">Lean.KVMap.getBool</a> <span class="fn">o</span> <span class="fn">`_inPattern</span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Option">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L111-L114">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L120-L123">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -778,7 +842,7 @@ defValue : <span class="fn">α</span></li>
 <div class="decl" id="Lean.instInhabitedOption">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L114-L114">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L123-L123">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -799,7 +863,7 @@ defValue : <span class="fn">α</span></li>
 <div class="decl" id="Lean.Option.Decl">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L118-L121">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L127-L130">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -823,7 +887,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.Option.get?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L123-L124">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L132-L133">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -856,7 +920,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.Option.get">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L126-L127">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L135-L136">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -889,7 +953,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.Option.set">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L129-L130">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L138-L139">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -924,7 +988,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.Option.setIfNotSet">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L133-L134">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L142-L143">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -959,7 +1023,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.Option.register">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L136-L138">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L145-L147">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -991,7 +1055,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.Option.«commandRegister_builtin_option__:_:=_»">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L140-L140">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L149-L149">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1011,7 +1075,7 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.Option.«commandRegister_option__:_:=_»">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Data/Options.lean#L143-L143">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Data/Options.lean#L152-L152">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1211,6 +1275,9 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -1627,6 +1694,9 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -1700,6 +1770,9 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -1753,6 +1826,9 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1907,6 +1983,9 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1918,7 +1997,13 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -2332,6 +2417,9 @@ descr : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

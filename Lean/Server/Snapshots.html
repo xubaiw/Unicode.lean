@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Server.Snapshots</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -67,6 +67,9 @@ Documentation</h1>
 </li>
 </ul>
 </details>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Server.Snapshots.dummyTacticCache">Lean.Server.Snapshots.dummyTacticCache</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a>
@@ -116,10 +119,24 @@ Documentation</h1>
 of Lean.Elab.Frontend which also stores a snapshot of the world after
 each command. Importantly, we allow (re)starting compilation from any
 snapshot/position in the file for interactive editing purposes.</p></div>
+<div class="decl" id="Lean.Server.Snapshots.dummyTacticCache">
+<div class="constant">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L24-L24">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">constant</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.dummyTacticCache">Lean.Server.Snapshots.dummyTacticCache</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref">IO.Ref</a> <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Tactic.Cache">Lean.Elab.Tactic.Cache</a></span></div></div>
+</div>
+</div>
 <div class="decl" id="Lean.Server.Snapshots.Snapshot">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean#L24-L37">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L27-L40">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -139,13 +156,15 @@ mpState : <a href="/Unicode.lean/Lean/Parser/Module.html#Lean.Parser.ModuleParse
 cmdState : <a href="/Unicode.lean/Lean/Elab/Command.html#Lean.Elab.Command.State">Lean.Elab.Command.State</a></li>
 <li class="structure_field" id="Lean.Server.Snapshots.Snapshot.interactiveDiags">
 interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.html#Std.PersistentArray">Std.PersistentArray</a> <a href="/Unicode.lean/Lean/Widget/InteractiveDiagnostic.html#Lean.Widget.InteractiveDiagnostic">Lean.Widget.InteractiveDiagnostic</a></span></li>
+<li class="structure_field" id="Lean.Server.Snapshots.Snapshot.tacticCache">
+tacticCache : <span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref">IO.Ref</a> <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Tactic.Cache">Lean.Elab.Tactic.Cache</a></span></li>
 </ul>
 <p>What Lean knows about the world after the header and each command.</p></div>
 </div>
 <div class="decl" id="Lean.Server.Snapshots.instInhabitedSnapshot">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean#L37-L37">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L42-L50">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -157,9 +176,7 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.instInhabitedSnapshot">Lean.Server.Snapshots.instInhabitedSnapshot</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ default :=
-      <span class="fn">{ beginPos := <span class="fn">default</span>, stx := <span class="fn">default</span>, mpState := <span class="fn">default</span>, cmdState := <span class="fn">default</span>, interactiveDiags := <span class="fn">default</span> }</span> }</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -167,7 +184,7 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <div class="decl" id="Lean.Server.Snapshots.Snapshot.endPos">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean#L41-L42">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L54-L55">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -190,7 +207,7 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <div class="decl" id="Lean.Server.Snapshots.Snapshot.env">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean#L44-L45">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L57-L58">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -213,7 +230,7 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <div class="decl" id="Lean.Server.Snapshots.Snapshot.msgLog">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean#L47-L48">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L60-L61">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -236,7 +253,7 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <div class="decl" id="Lean.Server.Snapshots.Snapshot.diagnostics">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean#L50-L51">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L63-L64">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -259,7 +276,7 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <div class="decl" id="Lean.Server.Snapshots.Snapshot.infoTree">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean#L53-L56">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L66-L69">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -281,7 +298,7 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <div class="decl" id="Lean.Server.Snapshots.Snapshot.isAtEnd">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean#L58-L59">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L71-L72">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -304,7 +321,7 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <div class="decl" id="Lean.Server.Snapshots.reparseHeader">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean#L64-L66">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L77-L79">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -330,7 +347,7 @@ interactiveDiags : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentAr
 <div class="decl" id="Lean.Server.Snapshots.parseNextCmd">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean#L70-L76">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L83-L89">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -355,7 +372,7 @@ without elaborating it.</p><details>
 <div class="decl" id="Lean.Server.Snapshots.parseAhead">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean#L81-L92">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L94-L105">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -380,7 +397,7 @@ so it should only be done for reporting preliminary results!</p><details>
 <div class="decl" id="Lean.Server.Snapshots.parseAhead.go">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean#L87-L92">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L100-L105">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -404,7 +421,7 @@ so it should only be done for reporting preliminary results!</p><details>
 <div class="decl" id="Lean.Server.Snapshots.compileNextCmd">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean#L99-L156">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L112-L173">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -431,7 +448,7 @@ so it should only be done for reporting preliminary results!</p><details>
 <div class="decl" id="Lean.Server.Snapshots.compileNextCmd.withNewInteractiveDiags">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Snapshots.lean#L150-L156">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Snapshots.lean#L167-L173">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -641,6 +658,9 @@ part of the command state.</p><details>
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -1057,6 +1077,9 @@ part of the command state.</p><details>
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -1130,6 +1153,9 @@ part of the command state.</p><details>
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -1183,6 +1209,9 @@ part of the command state.</p><details>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1337,6 +1366,9 @@ part of the command state.</p><details>
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1348,7 +1380,13 @@ part of the command state.</p><details>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -1762,6 +1800,9 @@ part of the command state.</p><details>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

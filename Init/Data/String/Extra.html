@@ -30,20 +30,29 @@ Documentation</h1>
 <a class="break_within" href="#top">Init.Data.String.Extra</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/String/Extra.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/String/Extra.lean">source</a>
 </p>
 <div class="imports">
 <details>
 <summary>Imports</summary>
 <ul>
 <li>
+<a href="/Unicode.lean/Init/SimpLemmas.html">Init.SimpLemmas</a>
+</li>
+<li>
 <a href="/Unicode.lean/Init/Util.html">Init.Util</a>
+</li>
+<li>
+<a href="/Unicode.lean/Init/WFTactics.html">Init.WFTactics</a>
 </li>
 <li>
 <a href="/Unicode.lean/Init/Control/Except.html">Init.Control.Except</a>
 </li>
 <li>
 <a href="/Unicode.lean/Init/Data/ByteArray.html">Init.Data.ByteArray</a>
+</li>
+<li>
+<a href="/Unicode.lean/Init/Data/Nat/Linear.html">Init.Data.Nat.Linear</a>
 </li>
 </ul>
 </details>
@@ -68,12 +77,33 @@ Documentation</h1>
 <div class="nav_link">
 <a class="break_within" href="#String.toUTF8">String.toUTF8</a>
 </div>
+<div class="nav_link">
+<a class="break_within" href="#String.one_le_csize">String.one_le_csize</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#String.pos_lt_eq">String.pos_lt_eq</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#String.pos_add_char">String.pos_add_char</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#String.eq_empty_of_bsize_eq_zero">String.eq_empty_of_bsize_eq_zero</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#String.lt_next">String.lt_next</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#String.Iterator.sizeOf_next_lt_of_hasNext">String.Iterator.sizeOf_next_lt_of_hasNext</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#String.Iterator.sizeOf_next_lt_of_atEnd">String.Iterator.sizeOf_next_lt_of_atEnd</a>
+</div>
 </nav>
 <main>
 <div class="decl" id="String.toNat!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/String/Extra.lean#L13-L17">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/String/Extra.lean#L16-L20">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -95,7 +125,7 @@ Documentation</h1>
 <div class="decl" id="String.fromUTF8Unchecked">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/String/Extra.lean#L23-L23">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/String/Extra.lean#L26-L26">source</a>
 </div>
 <div class="attributes">@[extern  lean_string_from_utf8_unchecked]</div>
 <div class="decl_header">
@@ -113,7 +143,7 @@ The result is unspecified if <code>a</code> is not properly UTF-8 encoded.</p></
 <div class="decl" id="String.toUTF8">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/String/Extra.lean#L26-L26">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/String/Extra.lean#L29-L29">source</a>
 </div>
 <div class="attributes">@[extern  lean_string_to_utf8]</div>
 <div class="decl_header">
@@ -125,6 +155,134 @@ The result is unspecified if <code>a</code> is not properly UTF-8 encoded.</p></
 <span class="fn">(a : <a href="/Unicode.lean/Init/Prelude.html#String">String</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><a href="/Unicode.lean/Init/Data/ByteArray/Basic.html#ByteArray">ByteArray</a></div></div>
+</div>
+</div>
+<div class="decl" id="String.one_le_csize">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/String/Extra.lean#L31-L33">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Data/String/Extra.html#String.one_le_csize">String.one_le_csize</a>
+</span>
+<span class="decl_args">
+<span class="fn">(c : <a href="/Unicode.lean/Init/Prelude.html#Char">Char</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">1</span> <a href="/Unicode.lean/Init/Prelude.html#LE.le">≤</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String.csize">String.csize</a> <span class="fn">c</span></span></span></div></div>
+</div>
+</div>
+<div class="decl" id="String.pos_lt_eq">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/String/Extra.lean#L35-L35">source</a>
+</div>
+<div class="attributes">@[simp]</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Data/String/Extra.html#String.pos_lt_eq">String.pos_lt_eq</a>
+</span>
+<span class="decl_args">
+<span class="fn">(p₁ : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(p₂ : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">(<span class="fn"><span class="fn">p₁</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt">&lt</a> <span class="fn">p₂</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> (<span class="fn"><span class="fn"><span class="fn">p₁</span>.byteIdx</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt">&lt</a> <span class="fn"><span class="fn">p₂</span>.byteIdx</span></span>)</span></div></div>
+</div>
+</div>
+<div class="decl" id="String.pos_add_char">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/String/Extra.lean#L37-L37">source</a>
+</div>
+<div class="attributes">@[simp]</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Data/String/Extra.html#String.pos_add_char">String.pos_add_char</a>
+</span>
+<span class="decl_args">
+<span class="fn">(p : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(c : <a href="/Unicode.lean/Init/Prelude.html#Char">Char</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">(<span class="fn"><span class="fn">p</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn">c</span></span>).byteIdx</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><span class="fn"><span class="fn">p</span>.byteIdx</span> <a href="/Unicode.lean/Init/Prelude.html#HAdd.hAdd">+</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String.csize">String.csize</a> <span class="fn">c</span></span></span></span></div></div>
+</div>
+</div>
+<div class="decl" id="String.eq_empty_of_bsize_eq_zero">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/String/Extra.lean#L39-L46">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Data/String/Extra.html#String.eq_empty_of_bsize_eq_zero">String.eq_empty_of_bsize_eq_zero</a>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{s : <a href="/Unicode.lean/Init/Prelude.html#String">String</a>}</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(h : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#String.endPos">String.endPos</a> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ byteIdx := <span class="fn">0</span> }</span></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn">s</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">&quot&quot</span></span></div></div>
+</div>
+</div>
+<div class="decl" id="String.lt_next">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/String/Extra.lean#L48-L49">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Data/String/Extra.html#String.lt_next">String.lt_next</a>
+</span>
+<span class="decl_args">
+<span class="fn">(s : <a href="/Unicode.lean/Init/Prelude.html#String">String</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(i : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><span class="fn">i</span>.byteIdx</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt">&lt</a> <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.next">String.next</a> <span class="fn">s</span> <span class="fn">i</span></span>).byteIdx</span></span></div></div>
+</div>
+</div>
+<div class="decl" id="String.Iterator.sizeOf_next_lt_of_hasNext">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/String/Extra.lean#L51-L59">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Data/String/Extra.html#String.Iterator.sizeOf_next_lt_of_hasNext">String.Iterator.sizeOf_next_lt_of_hasNext</a>
+</span>
+<span class="decl_args">
+<span class="fn">(i : <a href="/Unicode.lean/Init/Data/String/Basic.html#String.Iterator">String.Iterator</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(h : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.Iterator.hasNext">String.Iterator.hasNext</a> <span class="fn">i</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf.sizeOf">sizeOf</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.Iterator.next">String.Iterator.next</a> <span class="fn">i</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt">&lt</a> <span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf.sizeOf">sizeOf</a> <span class="fn">i</span></span></span></div></div>
+</div>
+</div>
+<div class="decl" id="String.Iterator.sizeOf_next_lt_of_atEnd">
+<div class="theorem">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/String/Extra.lean#L63-L65">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">theorem</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Data/String/Extra.html#String.Iterator.sizeOf_next_lt_of_atEnd">String.Iterator.sizeOf_next_lt_of_atEnd</a>
+</span>
+<span class="decl_args">
+<span class="fn">(i : <a href="/Unicode.lean/Init/Data/String/Basic.html#String.Iterator">String.Iterator</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(h : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Not">¬</a><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.Iterator.atEnd">String.Iterator.atEnd</a> <span class="fn">i</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf.sizeOf">sizeOf</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/String/Basic.html#String.Iterator.next">String.Iterator.next</a> <span class="fn">i</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#LT.lt">&lt</a> <span class="fn"><a href="/Unicode.lean/Init/SizeOf.html#SizeOf.sizeOf">sizeOf</a> <span class="fn">i</span></span></span></div></div>
 </div>
 </div>
 </main>
@@ -310,6 +468,9 @@ The result is unspecified if <code>a</code> is not properly UTF-8 encoded.</p></
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -726,6 +887,9 @@ The result is unspecified if <code>a</code> is not properly UTF-8 encoded.</p></
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -799,6 +963,9 @@ The result is unspecified if <code>a</code> is not properly UTF-8 encoded.</p></
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -852,6 +1019,9 @@ The result is unspecified if <code>a</code> is not properly UTF-8 encoded.</p></
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1006,6 +1176,9 @@ The result is unspecified if <code>a</code> is not properly UTF-8 encoded.</p></
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1017,7 +1190,13 @@ The result is unspecified if <code>a</code> is not properly UTF-8 encoded.</p></
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -1431,6 +1610,9 @@ The result is unspecified if <code>a</code> is not properly UTF-8 encoded.</p></
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Server.Requests</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -120,7 +120,13 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Server.RequestM.bindTask">Lean.Server.RequestM.bindTask</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.Server.RequestM.waitFindSnapAux">Lean.Server.RequestM.waitFindSnapAux</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Server.RequestM.withWaitFindSnap">Lean.Server.RequestM.withWaitFindSnap</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Server.RequestM.bindWaitFindSnap">Lean.Server.RequestM.bindWaitFindSnap</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Server.RequestHandler">Lean.Server.RequestHandler</a>
@@ -152,7 +158,7 @@ visualization.</p><p>For details of how to register one, see <code><a href="/Uni
 <div class="decl" id="Lean.Server.RequestError">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L25-L27">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L25-L27">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -172,7 +178,7 @@ message : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.Server.RequestError.fileChanged">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L32-L34">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L32-L34">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -193,7 +199,7 @@ message : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.Server.RequestError.methodNotFound">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L36-L38">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L36-L38">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -215,7 +221,7 @@ message : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.Server.RequestError.instCoeErrorRequestError">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L40-L42">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L40-L42">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -236,7 +242,7 @@ message : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.Server.RequestError.toLspResponseError">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L44-L47">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L44-L47">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -261,7 +267,7 @@ message : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.Server.parseRequestParams">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L51-L55">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L51-L55">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -289,7 +295,7 @@ message : <a href="/Unicode.lean/Init/Prelude.html#String">String</a></li>
 <div class="decl" id="Lean.Server.RequestContext">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L57-L62">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L57-L62">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -315,7 +321,7 @@ initParams : <a href="/Unicode.lean/Lean/Data/Lsp/InitShutdown.html#Lean.Lsp.Ini
 <div class="decl" id="Lean.Server.RequestTask">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L64-L64">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L64-L64">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -339,7 +345,7 @@ initParams : <a href="/Unicode.lean/Lean/Data/Lsp/InitShutdown.html#Lean.Lsp.Ini
 <div class="decl" id="Lean.Server.RequestM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L66-L66">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L66-L66">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -363,7 +369,7 @@ initParams : <a href="/Unicode.lean/Lean/Data/Lsp/InitShutdown.html#Lean.Lsp.Ini
 <div class="decl" id="Lean.Server.instInhabitedRequestM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L68-L69">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L68-L69">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -387,7 +393,7 @@ initParams : <a href="/Unicode.lean/Lean/Data/Lsp/InitShutdown.html#Lean.Lsp.Ini
 <div class="decl" id="Lean.Server.instMonadLiftIORequestM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L71-L72">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L71-L72">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -409,7 +415,7 @@ initParams : <a href="/Unicode.lean/Lean/Data/Lsp/InitShutdown.html#Lean.Lsp.Ini
 <div class="decl" id="Lean.Server.RequestM.readDoc">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L78-L79">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L78-L79">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -430,7 +436,7 @@ initParams : <a href="/Unicode.lean/Lean/Data/Lsp/InitShutdown.html#Lean.Lsp.Ini
 <div class="decl" id="Lean.Server.RequestM.asTask">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L81-L83">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L81-L83">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -459,7 +465,7 @@ initParams : <a href="/Unicode.lean/Lean/Data/Lsp/InitShutdown.html#Lean.Lsp.Ini
 <div class="decl" id="Lean.Server.RequestM.mapTask">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L85-L87">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L85-L87">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -494,7 +500,7 @@ initParams : <a href="/Unicode.lean/Lean/Data/Lsp/InitShutdown.html#Lean.Lsp.Ini
 <div class="decl" id="Lean.Server.RequestM.bindTask">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L89-L90">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L89-L90">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -524,10 +530,38 @@ initParams : <a href="/Unicode.lean/Lean/Data/Lsp/InitShutdown.html#Lean.Lsp.Ini
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Server.RequestM.waitFindSnapAux">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L92-L102">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.waitFindSnapAux">Lean.Server.RequestM.waitFindSnapAux</a>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{α : <span class="fn">Type</span>}</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(notFoundX : <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> <span class="fn">α</span></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(x : <span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a> → <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> <span class="fn">α</span></span></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Except">Except</a> <a href="/Unicode.lean/Lean/Server/FileWorker/Utils.html#Lean.Server.FileWorker.ElabTaskError">Lean.Server.FileWorker.ElabTaskError</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a></span>)</span> → <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> <span class="fn">α</span></span></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Server.RequestM.withWaitFindSnap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L95-L109">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L107-L112">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -558,10 +592,42 @@ and if a matching snapshot was found executes <code>x</code> with it. If not fou
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Server.RequestM.bindWaitFindSnap">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L115-L120">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.bindWaitFindSnap">Lean.Server.RequestM.bindWaitFindSnap</a>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{β : <span class="fn">Type</span>}</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(doc : <a href="/Unicode.lean/Lean/Server/FileWorker/Utils.html#Lean.Server.FileWorker.EditableDocument">Lean.Server.FileWorker.EditableDocument</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(p : <span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a> → <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(notFoundX : <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestTask">Lean.Server.RequestTask</a> <span class="fn">β</span></span>)</span>)</span></span>
+<span class="decl_args">
+<span class="fn">(x : <span class="fn"><a href="/Unicode.lean/Lean/Server/Snapshots.html#Lean.Server.Snapshots.Snapshot">Lean.Server.Snapshots.Snapshot</a> → <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestTask">Lean.Server.RequestTask</a> <span class="fn">β</span></span>)</span></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestTask">Lean.Server.RequestTask</a> <span class="fn">β</span></span>)</span></div></div>
+<p>See <code><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM.withWaitFindSnap">withWaitFindSnap</a></code>.</p><details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Server.RequestHandler">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L117-L119">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L128-L130">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -581,7 +647,7 @@ handle : <span class="fn"><a href="/Unicode.lean/Lean/Data/Json/Basic.html#Lean.
 <div class="decl" id="Lean.Server.requestHandlers">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L121-L121">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L132-L132">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -595,7 +661,7 @@ handle : <span class="fn"><a href="/Unicode.lean/Lean/Data/Json/Basic.html#Lean.
 <div class="decl" id="Lean.Server.registerLspRequestHandler">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L136-L151">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L147-L162">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -643,7 +709,7 @@ as LSP error responses.</p><details>
 <div class="decl" id="Lean.Server.lookupLspRequestHandler">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L153-L154">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L164-L165">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -668,7 +734,7 @@ as LSP error responses.</p><details>
 <div class="decl" id="Lean.Server.chainLspRequestHandler">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L163-L180">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L174-L191">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -710,7 +776,7 @@ chaining.</p><p>For more details on the registration of a handler, see <code><a 
 <div class="decl" id="Lean.Server.routeLspRequest">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L182-L185">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L193-L196">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -734,7 +800,7 @@ chaining.</p><p>For more details on the registration of a handler, see <code><a 
 <div class="decl" id="Lean.Server.handleLspRequest">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Requests.lean#L187-L190">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Requests.lean#L198-L201">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -938,6 +1004,9 @@ chaining.</p><p>For more details on the registration of a handler, see <code><a 
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -1354,6 +1423,9 @@ chaining.</p><p>For more details on the registration of a handler, see <code><a 
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -1427,6 +1499,9 @@ chaining.</p><p>For more details on the registration of a handler, see <code><a 
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -1480,6 +1555,9 @@ chaining.</p><p>For more details on the registration of a handler, see <code><a 
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1634,6 +1712,9 @@ chaining.</p><p>For more details on the registration of a handler, see <code><a 
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1645,7 +1726,13 @@ chaining.</p><p>For more details on the registration of a handler, see <code><a 
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -2059,6 +2146,9 @@ chaining.</p><p>For more details on the registration of a handler, see <code><a 
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Elab.Binders</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -38,6 +38,9 @@ Documentation</h1>
 <ul>
 <li>
 <a href="/Unicode.lean/Init.html">Init</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Elab/BindersUtil.html">Lean.Elab.BindersUtil</a>
@@ -93,6 +96,9 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Elab.Term.declareTacticSyntax">Lean.Elab.Term.declareTacticSyntax</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.addLocalVarInfo">Lean.Elab.Term.addLocalVarInfo</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Term.checkBinderAnnotations">Lean.Elab.Term.checkBinderAnnotations</a>
 </div>
 <div class="nav_link">
@@ -105,16 +111,16 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Elab.Term.elabBinders">Lean.Elab.Term.elabBinders</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Term.elabBinder">Lean.Elab.Term.elabBinder</a>
-</div>
-<div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Term.elabArrow">Lean.Elab.Term.elabArrow</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Term.precheckArrow">Lean.Elab.Term.precheckArrow</a>
+<a class="break_within" href="#Lean.Elab.Term.elabBinder">Lean.Elab.Term.elabBinder</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Term.elabDepArrow">Lean.Elab.Term.elabDepArrow</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.precheckArrow">Lean.Elab.Term.precheckArrow</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Term.expandFunBinders">Lean.Elab.Term.expandFunBinders</a>
@@ -190,7 +196,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.BinderView">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L40-L43">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L41-L44">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -212,7 +218,7 @@ bi : <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo</a><
 <div class="decl" id="Lean.Elab.Term.quoteAutoTactic">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L45-L60">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L46-L61">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -226,7 +232,7 @@ bi : <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo</a><
 <div class="decl" id="Lean.Elab.Term.declareTacticSyntax">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L62-L74">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L63-L75">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -245,10 +251,35 @@ bi : <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo</a><
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Elab.Term.addLocalVarInfo">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L140-L141">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.addLocalVarInfo">Lean.Elab.Term.addLocalVarInfo</a>
+</span>
+<span class="decl_args">
+<span class="fn">(stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(fvar : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.addLocalVarInfo">Lean.Elab.Term.addLocalVarInfo</a> <span class="fn">stx</span> <span class="fn">fvar</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.addTermInfo">Lean.Elab.Term.addTermInfo</a> <span class="fn">stx</span> <span class="fn">fvar</span> <span class="fn">none</span> <span class="fn">none</span> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name.anonymous">Lean.Name.anonymous</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Elab.Term.checkBinderAnnotations">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L147-L147">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L148-L148">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -262,7 +293,7 @@ bi : <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo</a><
 <div class="decl" id="Lean.Elab.Term.elabBindersEx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L184-L189">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L185-L190">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -286,7 +317,7 @@ manually be added for the new fvars; see <code>MutualDef</code> for an example.<
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.elabBindersEx">Lean.Elab.Term.elabBindersEx</a> <span class="fn">binders</span> <span class="fn">k</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.withoutPostponingUniverseConstraints">Lean.Elab.Term.withoutPostponingUniverseConstraints</a>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.elabBindersEx">Lean.Elab.Term.elabBindersEx</a> <span class="fn">binders</span> <span class="fn">k</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.universeConstraintsCheckpoint">Lean.Elab.Term.universeConstraintsCheckpoint</a>
     (<span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.isEmpty">Array.isEmpty</a> <span class="fn">binders</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><span class="fn">k</span> <span class="fn">#[]</span></span> else <span class="fn"><a href="/Unicode.lean/Lean/Elab/Binders.html#_private.Lean.Elab.Binders.0.Lean.Elab.Term.elabBindersAux">Lean.Elab.Term.elabBindersAux</a> <span class="fn">binders</span> <span class="fn">k</span></span></span>)</span></span></li>
 </ul>
 </details>
@@ -295,7 +326,7 @@ manually be added for the new fvars; see <code>MutualDef</code> for an example.<
 <div class="decl" id="Lean.Elab.Term.elabForall">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L193-L199">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L193-L199">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -315,7 +346,7 @@ manually be added for the new fvars; see <code>MutualDef</code> for an example.<
 <div class="decl" id="Lean.Elab.Term.elabBinders">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L195-L196">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L201-L202">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -334,7 +365,9 @@ manually be added for the new fvars; see <code>MutualDef</code> for an example.<
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <span class="fn">α</span></span></div></div>
 <p>Elaborate the given binders (i.e., <code>Syntax</code> objects for <code>simpleBinder <|> bracketedBinder</code>),
 update the local context, set of local instances, reset instance chache (if needed), and then
-execute <code>x</code> with the updated context.</p><details>
+execute <code>k</code> with the updated context.
+The local context will only be included inside <code>k</code>.</p><p>For example, suppose you have binders <code>[(a : α), (b : β a)]</code>, then the elaborator will
+create two new free variables <code>a</code> and <code>b</code>, push these to the context and pass to <code>k #[a,b]</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -343,39 +376,10 @@ execute <code>x</code> with the updated context.</p><details>
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Elab.Term.elabBinder">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L198-L199">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.elabBinder">Lean.Elab.Term.elabBinder</a>
-</span>
-<span class="impl_arg">
-<span class="decl_args">
-<span class="fn">{α : <span class="fn">Type</span>}</span></span>
-</span>
-<span class="decl_args">
-<span class="fn">(binder : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(x : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <span class="fn">α</span></span></span>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <span class="fn">α</span></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.elabBinder">Lean.Elab.Term.elabBinder</a> <span class="fn">binder</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.elabBinders">Lean.Elab.Term.elabBinders</a> <span class="fn">#[<span class="fn">binder</span>]</span> <span class="fn">fun <span class="fn">fvars</span> =&gt <span class="fn"><span class="fn">x</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn">fvars</span> <span class="fn">0</span></span>)</span></span></span></span></li>
-</ul>
-</details>
-</div>
-</div>
 <div class="decl" id="Lean.Elab.Term.elabArrow">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L201-L208">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L201-L208">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -392,22 +396,31 @@ execute <code>x</code> with the updated context.</p><details>
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Elab.Term.precheckArrow">
+<div class="decl" id="Lean.Elab.Term.elabBinder">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L210-L214">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L205-L206">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
 <span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.precheckArrow">Lean.Elab.Term.precheckArrow</a>
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.elabBinder">Lean.Elab.Term.elabBinder</a>
 </span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{α : <span class="fn">Type</span>}</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(binder : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(x : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <span class="fn">α</span></span></span>)</span></span>
 <span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html#Lean.Elab.Term.Quotation.Precheck">Lean.Elab.Term.Quotation.Precheck</a></div></div>
-<details>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a> <span class="fn">α</span></span></div></div>
+<p>Same as <code><a href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.elabBinder">elabBinder</a></code> with a single binder.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">One or more equations did not get rendered due to their size.</li>
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.elabBinder">Lean.Elab.Term.elabBinder</a> <span class="fn">binder</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.elabBinders">Lean.Elab.Term.elabBinders</a> <span class="fn">#[<span class="fn">binder</span>]</span> <span class="fn">fun <span class="fn">fvars</span> =&gt <span class="fn"><span class="fn">x</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.getOp">Array.getOp</a> <span class="fn">fvars</span> <span class="fn">0</span></span>)</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -415,7 +428,7 @@ execute <code>x</code> with the updated context.</p><details>
 <div class="decl" id="Lean.Elab.Term.elabDepArrow">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L214-L219">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L214-L219">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -434,10 +447,30 @@ in the literature.</p><details>
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Elab.Term.precheckArrow">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L217-L221">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.precheckArrow">Lean.Elab.Term.precheckArrow</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Lean/Elab/Quotation/Precheck.html#Lean.Elab.Term.Quotation.Precheck">Lean.Elab.Term.Quotation.Precheck</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Elab.Term.expandFunBinders">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L271-L316">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L278-L323">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -469,7 +502,7 @@ See local function <code>processAsPattern</code> at <code>expandFunBindersAux</c
 <div class="decl" id="Lean.Elab.Term.expandFunBinders.loop">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L272-L315">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L279-L322">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -491,7 +524,7 @@ See local function <code>processAsPattern</code> at <code>expandFunBindersAux</c
 <div class="decl" id="Lean.Elab.Term.FunBinders.State">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L320-L324">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L327-L331">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -515,7 +548,7 @@ expectedType? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option
 <div class="decl" id="Lean.Elab.Term.FunBinders.elabFunBindersAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L368-L374">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L375-L381">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -535,7 +568,7 @@ expectedType? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option
 <div class="decl" id="Lean.Elab.Term.elabFunBinders">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L378-L386">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L385-L393">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -565,7 +598,7 @@ expectedType? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option
 <div class="decl" id="Lean.Elab.Term.expandWhereDecls">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L394-L397">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L395-L398">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -589,7 +622,7 @@ expectedType? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option
 <div class="decl" id="Lean.Elab.Term.expandWhereDeclsOpt">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L399-L403">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L400-L404">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -615,7 +648,7 @@ expectedType? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option
 <div class="decl" id="Lean.Elab.Term.expandMatchAltsIntoMatch">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L457-L458">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L458-L459">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -656,7 +689,7 @@ def makeT' : (forall {a : Type}, a -> a) -> T
 <div class="decl" id="Lean.Elab.Term.expandMatchAltsIntoMatchTactic">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L460-L461">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L461-L462">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -674,7 +707,7 @@ def makeT' : (forall {a : Type}, a -> a) -> T
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Binders.html#Lean.Elab.Term.expandMatchAltsIntoMatchTactic">Lean.Elab.Term.expandMatchAltsIntoMatchTactic</a> <span class="fn">ref</span> <span class="fn">matchAlts</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.withRef">Lean.withRef</a> <span class="fn">ref</span>
-    (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Binders.html#_private.Lean.Elab.Binders.0.Lean.Elab.Term.expandMatchAltsIntoMatchAux">Lean.Elab.Term.expandMatchAltsIntoMatchAux</a> <span class="fn">matchAlts</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Binders.html#_private.Lean.Elab.Binders.0.Lean.Elab.Term.getMatchAltsNumPatterns">Lean.Elab.Term.getMatchAltsNumPatterns</a> <span class="fn">matchAlts</span></span>) <span class="fn">#[]</span></span>)</span></span></li>
+    (<span class="fn"><a href="/Unicode.lean/Lean/Elab/Binders.html#_private.Lean.Elab.Binders.0.Lean.Elab.Term.expandMatchAltsIntoMatchAux">Lean.Elab.Term.expandMatchAltsIntoMatchAux</a> <span class="fn">matchAlts</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> (<span class="fn"><a href="/Unicode.lean/Lean/Elab/BindersUtil.html#Lean.Elab.Term.getMatchAltsNumPatterns">Lean.Elab.Term.getMatchAltsNumPatterns</a> <span class="fn">matchAlts</span></span>) <span class="fn">#[]</span></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -682,7 +715,7 @@ def makeT' : (forall {a : Type}, a -> a) -> T
 <div class="decl" id="Lean.Elab.Term.expandMatchAltsWhereDecls">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L491-L506">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L492-L508">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -726,7 +759,7 @@ fux x_1 x_2 =>
 <div class="decl" id="Lean.Elab.Term.expandFun">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L493-L501">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L493-L501">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -746,7 +779,7 @@ fux x_1 x_2 =>
 <div class="decl" id="Lean.Elab.Term.expandMatchAltsWhereDecls.loop">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L494-L505">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L495-L507">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -774,7 +807,7 @@ fux x_1 x_2 =>
 <div class="decl" id="Lean.Elab.Term.elabFun">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L515-L528">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L515-L528">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -794,7 +827,7 @@ fux x_1 x_2 =>
 <div class="decl" id="Lean.Elab.Term.precheckFun">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L519-L528">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L521-L530">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -814,7 +847,7 @@ fux x_1 x_2 =>
 <div class="decl" id="Lean.Elab.Term.elabLetDeclAux">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L550-L594">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L552-L596">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -852,7 +885,7 @@ fux x_1 x_2 =>
 <div class="decl" id="Lean.Elab.Term.LetIdDeclView">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L596-L600">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L598-L602">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -876,7 +909,7 @@ value : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></l
 <div class="decl" id="Lean.Elab.Term.mkLetIdDeclView">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L602-L609">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L604-L611">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -898,7 +931,7 @@ value : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></l
 <div class="decl" id="Lean.Elab.Term.expandLetEqnsDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L611-L615">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L613-L617">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -920,7 +953,7 @@ value : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></l
 <div class="decl" id="Lean.Elab.Term.elabLetDeclCore">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L617-L643">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L619-L647">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -950,7 +983,7 @@ value : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></l
 <div class="decl" id="Lean.Elab.Term.elabLetDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L630-L631">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L630-L631">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -971,7 +1004,7 @@ value : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></l
 <div class="decl" id="Lean.Elab.Term.elabLetFunDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L633-L634">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L633-L634">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -992,7 +1025,7 @@ value : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></l
 <div class="decl" id="Lean.Elab.Term.elabLetDelayedDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L636-L637">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L636-L637">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1013,7 +1046,7 @@ value : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></l
 <div class="decl" id="Lean.Elab.Term.elabLetTmpDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Binders.lean#L639-L640">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Binders.lean#L639-L640">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1214,6 +1247,9 @@ value : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></l
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -1630,6 +1666,9 @@ value : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></l
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -1703,6 +1742,9 @@ value : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></l
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -1756,6 +1798,9 @@ value : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></l
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link visible">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1910,6 +1955,9 @@ value : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></l
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1921,7 +1969,13 @@ value : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></l
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -2335,6 +2389,9 @@ value : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></l
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

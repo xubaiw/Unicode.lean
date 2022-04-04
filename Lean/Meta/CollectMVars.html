@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Meta.CollectMVars</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CollectMVars.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/CollectMVars.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -85,7 +85,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.collectMVars">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CollectMVars.lean#L20-L29">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/CollectMVars.lean#L20-L29">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -104,7 +104,7 @@ We collect <code>?m</code> because it has not been assigned yet.</p></div>
 <div class="decl" id="Lean.Meta.getMVars">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CollectMVars.lean#L32-L34">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/CollectMVars.lean#L32-L34">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -118,7 +118,11 @@ We collect <code>?m</code> because it has not been assigned yet.</p></div>
 <p>Return metavariables in occuring the given expression. See <code><a href="/Unicode.lean/Lean/Meta/CollectMVars.html#Lean.Meta.collectMVars">collectMVars</a></code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">One or more equations did not get rendered due to their size.</li>
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/CollectMVars.html#Lean.Meta.getMVars">Lean.Meta.getMVars</a> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let discr ← <span class="fn"><a href="/Unicode.lean/Init/Control/StateRef.html#StateRefT'.run">StateRefT'.run</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/CollectMVars.html#Lean.Meta.collectMVars">Lean.Meta.collectMVars</a> <span class="fn">e</span></span>) <span class="fn">{ visitedExpr := <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span>, result := <span class="fn">#[]</span> }</span></span>
+  <span class="fn">match <span class="fn">discr</span> with
+    | <span class="fn">(<span class="fn">x</span>, <span class="fn">s</span>)</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Prod.mk">pure</a> <span class="fn"><span class="fn">s</span>.result</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -126,7 +130,7 @@ We collect <code>?m</code> because it has not been assigned yet.</p></div>
 <div class="decl" id="Lean.Meta.getMVarsNoDelayed">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CollectMVars.lean#L37-L39">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/CollectMVars.lean#L37-L39">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -151,7 +155,7 @@ We collect <code>?m</code> because it has not been assigned yet.</p></div>
 <div class="decl" id="Lean.Meta.collectMVarsAtDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CollectMVars.lean#L41-L42">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/CollectMVars.lean#L41-L42">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -174,7 +178,7 @@ We collect <code>?m</code> because it has not been assigned yet.</p></div>
 <div class="decl" id="Lean.Meta.getMVarsAtDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/CollectMVars.lean#L44-L46">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/CollectMVars.lean#L44-L46">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -188,7 +192,11 @@ We collect <code>?m</code> because it has not been assigned yet.</p></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">One or more equations did not get rendered due to their size.</li>
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/CollectMVars.html#Lean.Meta.getMVarsAtDecl">Lean.Meta.getMVarsAtDecl</a> <span class="fn">d</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let discr ← <span class="fn"><a href="/Unicode.lean/Init/Control/StateRef.html#StateRefT'.run">StateRefT'.run</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/CollectMVars.html#Lean.Meta.collectMVarsAtDecl">Lean.Meta.collectMVarsAtDecl</a> <span class="fn">d</span></span>) <span class="fn">{ visitedExpr := <span class="fn"><a href="/Unicode.lean/Init/Core.html#EmptyCollection.emptyCollection">∅</a></span>, result := <span class="fn">#[]</span> }</span></span>
+  <span class="fn">match <span class="fn">discr</span> with
+    | <span class="fn">(<span class="fn">x</span>, <span class="fn">s</span>)</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Prod.mk">pure</a> <span class="fn"><span class="fn">s</span>.result</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -376,6 +384,9 @@ We collect <code>?m</code> because it has not been assigned yet.</p></div>
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -792,6 +803,9 @@ We collect <code>?m</code> because it has not been assigned yet.</p></div>
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -865,6 +879,9 @@ We collect <code>?m</code> because it has not been assigned yet.</p></div>
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -918,6 +935,9 @@ We collect <code>?m</code> because it has not been assigned yet.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1072,6 +1092,9 @@ We collect <code>?m</code> because it has not been assigned yet.</p></div>
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1083,7 +1106,13 @@ We collect <code>?m</code> because it has not been assigned yet.</p></div>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -1497,6 +1526,9 @@ We collect <code>?m</code> because it has not been assigned yet.</p></div>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

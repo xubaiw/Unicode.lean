@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Server.Rpc.RequestHandling</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Rpc/RequestHandling.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Rpc/RequestHandling.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -63,36 +63,111 @@ Documentation</h1>
 </details>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Server.rpcProcedures">Lean.Server.rpcProcedures</a>
+<a class="break_within" href="#Lean.Server.builtinRpcProcedures">Lean.Server.builtinRpcProcedures</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Server.registerRpcCallHandler">Lean.Server.registerRpcCallHandler</a>
+<a class="break_within" href="#Lean.Server.userRpcProcedures">Lean.Server.userRpcProcedures</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Server.wrapRpcProcedure">Lean.Server.wrapRpcProcedure</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Server.registerBuiltinRpcProcedure">Lean.Server.registerBuiltinRpcProcedure</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Server.registerRpcProcedure">Lean.Server.registerRpcProcedure</a>
 </div>
 </nav>
 <main>
-<div class="decl" id="Lean.Server.rpcProcedures">
+<div class="decl" id="Lean.Server.builtinRpcProcedures">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Rpc/RequestHandling.lean#L17-L17">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Rpc/RequestHandling.lean#L20-L20">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
 <span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Server/Rpc/RequestHandling.html#Lean.Server.rpcProcedures">Lean.Server.rpcProcedures</a>
+<a class="break_within" href="/Unicode.lean/Lean/Server/Rpc/RequestHandling.html#Lean.Server.builtinRpcProcedures">Lean.Server.builtinRpcProcedures</a>
 </span>
 <span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref">IO.Ref</a> (<span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#Std.PersistentHashMap">Std.PersistentHashMap</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> <a href="/Unicode.lean/Lean/Server/Rpc/RequestHandling.html#_private.Lean.Server.Rpc.RequestHandling.0.Lean.Server.RpcProcedure">Lean.Server.RpcProcedure</a></span>)</span></div></div>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref">IO.Ref</a> (<span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#Std.PHashMap">Std.PHashMap</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> <a href="/Unicode.lean/Lean/Server/Rpc/RequestHandling.html#_private.Lean.Server.Rpc.RequestHandling.0.Lean.Server.RpcProcedure">Lean.Server.RpcProcedure</a></span>)</span></div></div>
 </div>
 </div>
-<div class="decl" id="Lean.Server.registerRpcCallHandler">
+<div class="decl" id="Lean.Server.userRpcProcedures">
+<div class="constant">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Rpc/RequestHandling.lean#L23-L23">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">constant</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/Rpc/RequestHandling.html#Lean.Server.userRpcProcedures">Lean.Server.userRpcProcedures</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.EnvExtension">Lean.EnvExtension</a> (<span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#Std.PHashMap">Std.PHashMap</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> <a href="/Unicode.lean/Lean/Server/Rpc/RequestHandling.html#_private.Lean.Server.Rpc.RequestHandling.0.Lean.Server.RpcProcedure">Lean.Server.RpcProcedure</a></span>)</span></div></div>
+</div>
+</div>
+<div class="decl" id="Lean.Server.wrapRpcProcedure">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Server/Rpc/RequestHandling.lean#L30-L67">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Rpc/RequestHandling.lean#L47-L75">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
 <span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Server/Rpc/RequestHandling.html#Lean.Server.registerRpcCallHandler">Lean.Server.registerRpcCallHandler</a>
+<a class="break_within" href="/Unicode.lean/Lean/Server/Rpc/RequestHandling.html#Lean.Server.wrapRpcProcedure">Lean.Server.wrapRpcProcedure</a>
+</span>
+<span class="decl_args">
+<span class="fn">(method : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(paramType : <span class="fn">Type</span>)</span></span>
+<span class="decl_args">
+<span class="fn">(respType : <span class="fn">Type</span>)</span></span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{paramLspType : <span class="fn">Type</span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.Server.RpcEncoding">Lean.Server.RpcEncoding</a> <span class="fn">paramType</span> <span class="fn">paramLspType</span></span>]</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <span class="fn">paramLspType</span></span>]</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{respLspType : <span class="fn">Type</span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.Server.RpcEncoding">Lean.Server.RpcEncoding</a> <span class="fn">respType</span> <span class="fn">respLspType</span></span>]</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <span class="fn">respLspType</span></span>]</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(handler : <span class="fn"><span class="fn">paramType</span> → <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestTask">Lean.Server.RequestTask</a> <span class="fn">respType</span></span>)</span></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Lean/Server/Rpc/RequestHandling.html#_private.Lean.Server.Rpc.RequestHandling.0.Lean.Server.RpcProcedure">Lean.Server.RpcProcedure</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Server.registerBuiltinRpcProcedure">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Rpc/RequestHandling.lean#L77-L88">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/Rpc/RequestHandling.html#Lean.Server.registerBuiltinRpcProcedure">Lean.Server.registerBuiltinRpcProcedure</a>
 </span>
 <span class="decl_args">
 <span class="fn">(method : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
@@ -128,6 +203,58 @@ Documentation</h1>
 <span class="fn">(handler : <span class="fn"><span class="fn">paramType</span> → <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestTask">Lean.Server.RequestTask</a> <span class="fn">respType</span></span>)</span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO">IO</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Server.registerRpcProcedure">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Server/Rpc/RequestHandling.lean#L90-L105">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Server/Rpc/RequestHandling.html#Lean.Server.registerRpcProcedure">Lean.Server.registerRpcProcedure</a>
+</span>
+<span class="decl_args">
+<span class="fn">(method : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(paramType : <span class="fn">Type</span>)</span></span>
+<span class="decl_args">
+<span class="fn">(respType : <span class="fn">Type</span>)</span></span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{paramLspType : <span class="fn">Type</span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.Server.RpcEncoding">Lean.Server.RpcEncoding</a> <span class="fn">paramType</span> <span class="fn">paramLspType</span></span>]</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.FromJson">Lean.FromJson</a> <span class="fn">paramLspType</span></span>]</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">{respLspType : <span class="fn">Type</span>}</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Lean/Server/Rpc/Basic.html#Lean.Server.RpcEncoding">Lean.Server.RpcEncoding</a> <span class="fn">respType</span> <span class="fn">respLspType</span></span>]</span></span>
+</span>
+<span class="impl_arg">
+<span class="decl_args">
+<span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Lean/Data/Json/FromToJson.html#Lean.ToJson">Lean.ToJson</a> <span class="fn">respLspType</span></span>]</span></span>
+</span>
+<span class="decl_args">
+<span class="fn">(handler : <span class="fn"><span class="fn">paramType</span> → <span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestM">Lean.Server.RequestM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Server/Requests.html#Lean.Server.RequestTask">Lean.Server.RequestTask</a> <span class="fn">respType</span></span>)</span></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/CoreM.html#Lean.Core.CoreM">Lean.CoreM</a> <a href="/Unicode.lean/Init/Prelude.html#Unit">Unit</a></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
@@ -319,6 +446,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -735,6 +865,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -808,6 +941,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -861,6 +997,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1015,6 +1154,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1026,7 +1168,13 @@ Documentation</h1>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -1440,6 +1588,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

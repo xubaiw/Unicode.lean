@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Meta.DiscrTree</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -144,7 +144,10 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Meta.DiscrTree.getMatchWithExtra">Lean.Meta.DiscrTree.getMatchWithExtra</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Meta.DiscrTree.getMatchWithExtra.process">Lean.Meta.DiscrTree.getMatchWithExtra.process</a>
+<a class="break_within" href="#Lean.Meta.DiscrTree.getMatchWithExtra.mayMatchPrefix">Lean.Meta.DiscrTree.getMatchWithExtra.mayMatchPrefix</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Meta.DiscrTree.getMatchWithExtra.go">Lean.Meta.DiscrTree.getMatchWithExtra.go</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Meta.DiscrTree.getUnify">Lean.Meta.DiscrTree.getUnify</a>
@@ -157,7 +160,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.Key.ctorIdx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L53-L60">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L53-L60">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -177,7 +180,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.Key.lt">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L62-L67">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L62-L67">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -197,7 +200,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.instLTKey">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L69-L69">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L69-L69">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -218,7 +221,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.instDecidableLtKeyInstLTKey">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L70-L70">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L70-L70">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -243,7 +246,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.Key.format">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L72-L80">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L72-L80">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -263,7 +266,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.instToFormatKey">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L82-L82">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L82-L82">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -284,7 +287,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.Key.arity">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L84-L89">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L84-L89">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -304,7 +307,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.instInhabitedTrie">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L91-L91">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L91-L91">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -329,7 +332,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.empty">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L93-L93">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L93-L93">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -354,7 +357,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.Trie.format">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L95-L98">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L95-L98">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -376,7 +379,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.instToFormatTrie">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L100-L100">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L100-L100">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -405,7 +408,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.format">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L102-L107">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L102-L107">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -435,7 +438,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.instToFormatDiscrTree">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L109-L109">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L109-L109">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -464,7 +467,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.instInhabitedDiscrTree">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L116-L117">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L116-L117">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -490,7 +493,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.mkNoindexAnnotation">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L223-L224">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L223-L224">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -513,7 +516,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.hasNoindexAnnotation">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L226-L227">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L226-L227">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -536,7 +539,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.whnfDT">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L267-L268">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L267-L268">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -561,7 +564,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.mkPathAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L311-L318">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L311-L318">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -581,7 +584,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.mkPath">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L322-L326">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L322-L326">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -603,7 +606,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.insertCore">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L352-L362">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L352-L362">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -637,7 +640,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.insert">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L364-L366">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L364-L366">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -674,7 +677,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.getMatch">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L498-L504">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L506-L507">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -694,7 +697,10 @@ Documentation</h1>
 <p>Find values that match <code>e</code> in <code>d</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">One or more equations did not get rendered due to their size.</li>
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/DiscrTree.html#Lean.Meta.DiscrTree.getMatch">Lean.Meta.DiscrTree.getMatch</a> <span class="fn">d</span> <span class="fn">e</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let a ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/DiscrTree.html#_private.Lean.Meta.DiscrTree.0.Lean.Meta.DiscrTree.getMatchCore">Lean.Meta.DiscrTree.getMatchCore</a> <span class="fn">d</span> <span class="fn">e</span></span>
+  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn"><span class="fn">a</span>.snd</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -702,7 +708,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.DiscrTree.getMatchWithExtra">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L509-L529">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L512-L538">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -728,15 +734,15 @@ We store the number of ignored arguments in the result.</p><details>
 </details>
 </div>
 </div>
-<div class="decl" id="Lean.Meta.DiscrTree.getMatchWithExtra.process">
+<div class="decl" id="Lean.Meta.DiscrTree.getMatchWithExtra.mayMatchPrefix">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L517-L529">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L522-L531">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
 <span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Meta/DiscrTree.html#Lean.Meta.DiscrTree.getMatchWithExtra.process">Lean.Meta.DiscrTree.getMatchWithExtra.process</a>
+<a class="break_within" href="/Unicode.lean/Lean/Meta/DiscrTree.html#Lean.Meta.DiscrTree.getMatchWithExtra.mayMatchPrefix">Lean.Meta.DiscrTree.getMatchWithExtra.mayMatchPrefix</a>
 </span>
 <span class="impl_arg">
 <span class="decl_args">
@@ -746,10 +752,30 @@ We store the number of ignored arguments in the result.</p><details>
 <span class="fn">(d : <span class="fn"><a href="/Unicode.lean/Lean/Meta/DiscrTreeTypes.html#Lean.Meta.DiscrTree">Lean.Meta.DiscrTree</a> <span class="fn">α</span></span>)</span></span>
 <span class="decl_args">
 <span class="fn">(k : <a href="/Unicode.lean/Lean/Meta/DiscrTreeTypes.html#Lean.Meta.DiscrTree.Key">Lean.Meta.DiscrTree.Key</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></div></div>
+</div>
+</div>
+<div class="decl" id="Lean.Meta.DiscrTree.getMatchWithExtra.go">
+<div class="constant">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L533-L538">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">partial def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/DiscrTree.html#Lean.Meta.DiscrTree.getMatchWithExtra.go">Lean.Meta.DiscrTree.getMatchWithExtra.go</a>
+</span>
+<span class="impl_arg">
 <span class="decl_args">
-<span class="fn">(args : <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Subarray.html#Subarray">Subarray</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></span>
+<span class="fn">{α : <span class="fn">Type</span>}</span></span>
+</span>
 <span class="decl_args">
-<span class="fn">(numExtraArgs : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a>)</span></span>
+<span class="fn">(d : <span class="fn"><a href="/Unicode.lean/Lean/Meta/DiscrTreeTypes.html#Lean.Meta.DiscrTree">Lean.Meta.DiscrTree</a> <span class="fn">α</span></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(numExtra : <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(result : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> (<span class="fn"><span class="fn">α</span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></span>)</span>)</span></span>
 <span class="decl_args">:</span>
@@ -759,7 +785,7 @@ We store the number of ignored arguments in the result.</p><details>
 <div class="decl" id="Lean.Meta.DiscrTree.getUnify">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L531-L572">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L540-L581">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -787,7 +813,7 @@ We store the number of ignored arguments in the result.</p><details>
 <div class="decl" id="Lean.Meta.DiscrTree.getUnify.process">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/DiscrTree.lean#L542-L572">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/DiscrTree.lean#L551-L581">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -993,6 +1019,9 @@ We store the number of ignored arguments in the result.</p><details>
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -1409,6 +1438,9 @@ We store the number of ignored arguments in the result.</p><details>
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -1482,6 +1514,9 @@ We store the number of ignored arguments in the result.</p><details>
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -1535,6 +1570,9 @@ We store the number of ignored arguments in the result.</p><details>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1689,6 +1727,9 @@ We store the number of ignored arguments in the result.</p><details>
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1700,7 +1741,13 @@ We store the number of ignored arguments in the result.</p><details>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -2114,6 +2161,9 @@ We store the number of ignored arguments in the result.</p><details>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

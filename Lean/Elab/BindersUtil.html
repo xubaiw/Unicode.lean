@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Elab.BindersUtil</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BindersUtil.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/BindersUtil.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -38,6 +38,9 @@ Documentation</h1>
 <ul>
 <li>
 <a href="/Unicode.lean/Init.html">Init</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Parser/Term.html">Lean.Parser.Term</a>
 </li>
 </ul>
 </details>
@@ -50,18 +53,33 @@ Documentation</h1>
 <li>
 <a href="/Unicode.lean/Lean/Elab/Do.html">Lean.Elab.Do</a>
 </li>
+<li>
+<a href="/Unicode.lean/Lean/Elab/Match.html">Lean.Elab.Match</a>
+</li>
 </ul>
 </details>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Term.expandOptType">Lean.Elab.Term.expandOptType</a>
 </div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.getMatchAltsNumPatterns">Lean.Elab.Term.getMatchAltsNumPatterns</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.expandMatchAlt">Lean.Elab.Term.expandMatchAlt</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.shouldExpandMatchAlt">Lean.Elab.Term.shouldExpandMatchAlt</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.expandMatchAlts?">Lean.Elab.Term.expandMatchAlts?</a>
+</div>
 </nav>
 <main>
 <div class="decl" id="Lean.Elab.Term.expandOptType">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/BindersUtil.lean#L14-L18">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/BindersUtil.lean#L16-L20">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -79,6 +97,94 @@ Documentation</h1>
 <ul class="equations">
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/BindersUtil.html#Lean.Elab.Term.expandOptType">Lean.Elab.Term.expandOptType</a> <span class="fn">ref</span> <span class="fn">optType</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">if <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.Syntax.isNone">Lean.Syntax.isNone</a> <span class="fn">optType</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn"><a href="/Unicode.lean/Init/Meta.html#Lean.mkHole">Lean.mkHole</a> <span class="fn">ref</span></span> else <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax.getOp">Lean.Syntax.getOp</a> <span class="fn">optType</span> <span class="fn">0</span></span>) <span class="fn">1</span></span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.Term.getMatchAltsNumPatterns">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/BindersUtil.lean#L25-L28">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/BindersUtil.html#Lean.Elab.Term.getMatchAltsNumPatterns">Lean.Elab.Term.getMatchAltsNumPatterns</a>
+</span>
+<span class="decl_args">
+<span class="fn">(matchAlts : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Nat">Nat</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.Term.expandMatchAlt">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/BindersUtil.lean#L33-L40">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/BindersUtil.html#Lean.Elab.Term.expandMatchAlt">Lean.Elab.Term.expandMatchAlt</a>
+</span>
+<span class="decl_args">
+<span class="fn">(stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.MacroM">Lean.MacroM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></span>)</span></div></div>
+<p>Expand a match alternative such as <code>| 0 | 1 => rhs</code> to an array containing <code>| 0 => rhs</code> and <code>| 1 => rhs</code>.</p><details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.Term.shouldExpandMatchAlt">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/BindersUtil.lean#L42-L45">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/BindersUtil.html#Lean.Elab.Term.shouldExpandMatchAlt">Lean.Elab.Term.shouldExpandMatchAlt</a>
+</span>
+<span class="decl_args">
+<span class="fn">(matchAlt : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Elab.Term.expandMatchAlts?">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/BindersUtil.lean#L47-L55">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/BindersUtil.html#Lean.Elab.Term.expandMatchAlts?">Lean.Elab.Term.expandMatchAlts?</a>
+</span>
+<span class="decl_args">
+<span class="fn">(stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.MacroM">Lean.MacroM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a></span>)</span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -266,6 +372,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -682,6 +791,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -755,6 +867,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -808,6 +923,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -962,6 +1080,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -973,7 +1094,13 @@ Documentation</h1>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -1387,6 +1514,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

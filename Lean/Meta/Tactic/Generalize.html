@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Meta.Tactic.Generalize</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Generalize.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Generalize.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -85,7 +85,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.GeneralizeArg">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Generalize.lean#L13-L17">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Generalize.lean#L13-L17">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -107,7 +107,7 @@ hName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <div class="decl" id="Lean.Meta.instInhabitedGeneralizeArg">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Generalize.lean#L17-L17">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Generalize.lean#L17-L17">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -128,7 +128,7 @@ hName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <div class="decl" id="Lean.Meta.generalize">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Generalize.lean#L19-L66">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Generalize.lean#L19-L69">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -139,6 +139,8 @@ hName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <span class="fn">(mvarId : <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(args : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Generalize.html#Lean.Meta.GeneralizeArg">Lean.Meta.GeneralizeArg</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(pred : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> → <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></span></span>) <span class="fn">fun <span class="fn">x</span> <span class="fn">x</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span>)</span></div></div>
 <details>
@@ -152,7 +154,7 @@ hName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <div class="decl" id="Lean.Meta.generalize.go">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Generalize.lean#L24-L33">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Generalize.lean#L27-L36">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -161,6 +163,8 @@ hName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 </span>
 <span class="decl_args">
 <span class="fn">(args : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Generalize.html#Lean.Meta.GeneralizeArg">Lean.Meta.GeneralizeArg</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(pred : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> → <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></span></span>) <span class="fn">fun <span class="fn">x</span> <span class="fn">x</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span></span></span>)</span></span>
 <span class="decl_args">
 <span class="fn">(target : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">
@@ -172,7 +176,7 @@ hName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <div class="decl" id="Lean.Meta.generalize.go'">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Generalize.lean#L44-L61">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Generalize.lean#L47-L64">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -374,6 +378,9 @@ hName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -790,6 +797,9 @@ hName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -863,6 +873,9 @@ hName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -916,6 +929,9 @@ hName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1070,6 +1086,9 @@ hName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1081,7 +1100,13 @@ hName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html" open="">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -1495,6 +1520,9 @@ hName? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

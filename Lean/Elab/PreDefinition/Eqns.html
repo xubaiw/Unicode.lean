@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Elab.PreDefinition.Eqns</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -99,6 +99,9 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Elab.Eqns.Context">Lean.Elab.Eqns.Context</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Eqns.tryURefl">Lean.Elab.Eqns.tryURefl</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Eqns.simpEqnType">Lean.Elab.Eqns.simpEqnType</a>
 </div>
 <div class="nav_link">
@@ -114,7 +117,7 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Elab.Eqns.removeUnusedEqnHypotheses">Lean.Elab.Eqns.removeUnusedEqnHypotheses</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Eqns.tryURefl">Lean.Elab.Eqns.tryURefl</a>
+<a class="break_within" href="#Lean.Elab.Eqns.removeUnusedEqnHypotheses.go">Lean.Elab.Eqns.removeUnusedEqnHypotheses.go</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Eqns.deltaLHS">Lean.Elab.Eqns.deltaLHS</a>
@@ -154,7 +157,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Eqns.EqnInfoCore">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L14-L19">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L14-L19">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -178,7 +181,7 @@ value : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Elab.Eqns.instInhabitedEqnInfoCore">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L19-L19">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L19-L19">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -199,7 +202,7 @@ value : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Elab.Eqns.expand">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L21-L24">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L21-L24">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -213,7 +216,7 @@ value : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Elab.Eqns.expandRHS?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L26-L30">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L26-L30">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -235,7 +238,7 @@ value : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Elab.Eqns.funext?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L32-L39">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L32-L39">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -257,7 +260,7 @@ value : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Elab.Eqns.simpMatch?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L41-L43">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L41-L43">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -282,7 +285,7 @@ value : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Elab.Eqns.simpIf?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L45-L47">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L45-L47">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -307,7 +310,7 @@ value : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Elab.Eqns.splitMatch?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L69-L80">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L69-L80">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -334,7 +337,7 @@ value : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Elab.Eqns.splitMatch?.go">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L71-L79">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L71-L79">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -356,7 +359,7 @@ value : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
 <div class="decl" id="Lean.Elab.Eqns.Context">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L82-L83">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L82-L83">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -371,10 +374,32 @@ declNames : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 </ul>
 </div>
 </div>
+<div class="decl" id="Lean.Elab.Eqns.tryURefl">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L93-L95">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.tryURefl">Lean.Elab.Eqns.tryURefl</a>
+</span>
+<span class="decl_args">
+<span class="fn">(mvarId : <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></div></div>
+<p>Try to close goal using <code><a href="/Unicode.lean/Init/Prelude.html#rfl">rfl</a></code> with smart unfolding turned off.</p><details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Elab.Eqns.simpEqnType">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L95-L130">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L100-L135">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -396,7 +421,7 @@ declNames : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 <div class="decl" id="Lean.Elab.Eqns.simpEqnType.collect">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L123-L130">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L128-L135">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -418,7 +443,7 @@ declNames : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 <div class="decl" id="Lean.Elab.Eqns.mkEqnTypes">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L186-L201">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L205-L228">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -442,7 +467,7 @@ declNames : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 <div class="decl" id="Lean.Elab.Eqns.mkEqnTypes.go">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L190-L201">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L209-L228">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -458,40 +483,24 @@ declNames : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Arr
 </div>
 </div>
 <div class="decl" id="Lean.Elab.Eqns.removeUnusedEqnHypotheses">
-<div class="constant">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L210-L219">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">partial def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.removeUnusedEqnHypotheses">Lean.Elab.Eqns.removeUnusedEqnHypotheses</a>
-</span>
-<span class="decl_args">
-<span class="fn">(type : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
-<span class="decl_args">
-<span class="fn">(value : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></div></div>
-<p>Some of the hypotheses added by <code><a href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.mkEqnTypes">mkEqnTypes</a></code> may not be used by the actual proof (i.e., <code>value</code> argument).
-This method eliminates them.</p><p>Alternative solution: improve <code>saveEqn</code> and make sure it never includes unnecessary hypotheses.
-These hypotheses are leftovers from tactics such as <code><a href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.splitMatch?">splitMatch?</a></code> used in <code><a href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.mkEqnTypes">mkEqnTypes</a></code>.</p></div>
-</div>
-<div class="decl" id="Lean.Elab.Eqns.tryURefl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L222-L224">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L237-L259">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
 <span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.tryURefl">Lean.Elab.Eqns.tryURefl</a>
+<a class="break_within" href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.removeUnusedEqnHypotheses">Lean.Elab.Eqns.removeUnusedEqnHypotheses</a>
 </span>
 <span class="decl_args">
-<span class="fn">(mvarId : <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a>)</span></span>
+<span class="fn">(declType : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(declValue : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></div></div>
-<p>Try to close goal using <code><a href="/Unicode.lean/Init/Prelude.html#rfl">rfl</a></code> with smart unfolding turned off.</p><details>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/CoreM.html#Lean.Core.CoreM">Lean.CoreM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></div></div>
+<p>Some of the hypotheses added by <code><a href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.mkEqnTypes">mkEqnTypes</a></code> may not be used by the actual proof (i.e., <code>value</code> argument).
+This method eliminates them.</p><p>Alternative solution: improve <code>saveEqn</code> and make sure it never includes unnecessary hypotheses.
+These hypotheses are leftovers from tactics such as <code><a href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.splitMatch?">splitMatch?</a></code> used in <code><a href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.mkEqnTypes">mkEqnTypes</a></code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">One or more equations did not get rendered due to their size.</li>
@@ -499,10 +508,36 @@ These hypotheses are leftovers from tactics such as <code><a href="/Unicode.lean
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Elab.Eqns.removeUnusedEqnHypotheses.go">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L240-L259">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/PreDefinition/Eqns.html#Lean.Elab.Eqns.removeUnusedEqnHypotheses.go">Lean.Elab.Eqns.removeUnusedEqnHypotheses.go</a>
+</span>
+<span class="decl_args">
+<span class="fn">(declType : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(declValue : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(type : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(value : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(xs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></span>
+<span class="decl_args">
+<span class="fn">(lctx : <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalContext">Lean.LocalContext</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/CoreM.html#Lean.Core.CoreM">Lean.CoreM</a> (<span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span>)</span></div></div>
+</div>
+</div>
 <div class="decl" id="Lean.Elab.Eqns.deltaLHS">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L227-L231">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L262-L266">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -524,7 +559,7 @@ These hypotheses are leftovers from tactics such as <code><a href="/Unicode.lean
 <div class="decl" id="Lean.Elab.Eqns.deltaRHS?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L233-L237">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L268-L272">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -548,7 +583,7 @@ These hypotheses are leftovers from tactics such as <code><a href="/Unicode.lean
 <div class="decl" id="Lean.Elab.Eqns.whnfReducibleLHS?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L247-L254">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L282-L289">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -570,7 +605,7 @@ These hypotheses are leftovers from tactics such as <code><a href="/Unicode.lean
 <div class="decl" id="Lean.Elab.Eqns.tryContradiction">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L256-L257">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L291-L292">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -592,7 +627,7 @@ These hypotheses are leftovers from tactics such as <code><a href="/Unicode.lean
 <div class="decl" id="Lean.Elab.Eqns.UnfoldEqnExtState">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L259-L261">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L294-L296">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -610,7 +645,7 @@ map : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#St
 <div class="decl" id="Lean.Elab.Eqns.instInhabitedUnfoldEqnExtState">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L261-L261">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L296-L296">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -631,7 +666,7 @@ map : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#St
 <div class="decl" id="Lean.Elab.Eqns.unfoldEqnExt">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L264-L264">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L299-L299">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -645,7 +680,7 @@ map : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMap.html#St
 <div class="decl" id="Lean.Elab.Eqns.mkUnfoldProof">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L277-L299">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L312-L343">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -673,7 +708,7 @@ until one of the equational theorems is applicable.</p><details>
 <div class="decl" id="Lean.Elab.Eqns.mkUnfoldProof.go">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L286-L298">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L325-L342">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -693,7 +728,7 @@ until one of the equational theorems is applicable.</p><details>
 <div class="decl" id="Lean.Elab.Eqns.mkUnfoldEq">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L302-L318">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L346-L362">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -717,7 +752,7 @@ until one of the equational theorems is applicable.</p><details>
 <div class="decl" id="Lean.Elab.Eqns.getUnfoldFor?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/PreDefinition/Eqns.lean#L320-L329">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/PreDefinition/Eqns.lean#L364-L373">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -921,6 +956,9 @@ until one of the equational theorems is applicable.</p><details>
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -1337,6 +1375,9 @@ until one of the equational theorems is applicable.</p><details>
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -1410,6 +1451,9 @@ until one of the equational theorems is applicable.</p><details>
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -1463,6 +1507,9 @@ until one of the equational theorems is applicable.</p><details>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1617,6 +1664,9 @@ until one of the equational theorems is applicable.</p><details>
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1628,7 +1678,13 @@ until one of the equational theorems is applicable.</p><details>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -2042,6 +2098,9 @@ until one of the equational theorems is applicable.</p><details>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

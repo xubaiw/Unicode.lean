@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Elab.Match</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -41,6 +41,12 @@ Documentation</h1>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Elab/Arg.html">Lean.Elab.Arg</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
+</li>
+<li>
+<a href="/Unicode.lean/Lean/Elab/BindersUtil.html">Lean.Elab.BindersUtil</a>
 </li>
 <li>
 <a href="/Unicode.lean/Lean/Elab/PatternVar.html">Lean.Elab.PatternVar</a>
@@ -79,9 +85,6 @@ Documentation</h1>
 </li>
 </ul>
 </details>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Term.isAuxDiscrName">Lean.Elab.Term.isAuxDiscrName</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Term.isAtomicDiscr?">Lean.Elab.Term.isAtomicDiscr?</a>
@@ -141,6 +144,9 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Elab.Term.withDepElimPatterns">Lean.Elab.Term.withDepElimPatterns</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.Elab.Term.GeneralizeResult">Lean.Elab.Term.GeneralizeResult</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Term.mkMatcher">Lean.Elab.Term.mkMatcher</a>
 </div>
 <div class="nav_link">
@@ -160,33 +166,10 @@ Documentation</h1>
 </div>
 </nav>
 <main>
-<div class="decl" id="Lean.Elab.Term.isAuxDiscrName">
-<div class="def">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L30-L31">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">def</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.isAuxDiscrName">Lean.Elab.Term.isAuxDiscrName</a>
-</span>
-<span class="decl_args">
-<span class="fn">(n : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
-<span class="decl_args">:</span>
-<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
-<p>Return true iff <code>n</code> is an auxiliary variable created by <code>expandNonAtomicDiscrs?</code></p><details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.isAuxDiscrName">Lean.Elab.Term.isAuxDiscrName</a> <span class="fn">n</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.hasMacroScopes">Lean.Name.hasMacroScopes</a> <span class="fn">n</span></span> <a href="/Unicode.lean/Init/Prelude.html#and">&amp&amp</a> <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Name.eraseMacroScopes">Lean.Name.eraseMacroScopes</a> <span class="fn">n</span></span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">`_discr</span></span></span>)</span></li>
-</ul>
-</details>
-</div>
-</div>
 <div class="decl" id="Lean.Elab.Term.isAtomicDiscr?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L52-L56">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L51-L55">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -214,7 +197,7 @@ This can happen due to error recovery. Example</p><pre><code>example : (p ∨ p)
 <div class="decl" id="Lean.Elab.Term.ElabMatchTypeAndDiscrsResult">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L71-L77">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L70-L76">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -238,7 +221,7 @@ alts : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <div class="decl" id="Lean.Elab.Term.expandMacrosInPatterns">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L154-L157">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L153-L156">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -260,7 +243,7 @@ alts : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <div class="decl" id="Lean.Elab.Term.precheckMatch">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L181-L191">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L180-L190">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -280,7 +263,7 @@ alts : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <div class="decl" id="Lean.Elab.Term.elabInaccessible">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L183-L185">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L183-L185">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -303,7 +286,7 @@ alts : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a
 <div class="decl" id="Lean.Elab.Term.PatternVarDecl">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L194-L195">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L193-L194">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -321,7 +304,7 @@ fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></li>
 <div class="decl" id="Lean.Elab.Term.PatternElabException">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L233-L236">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L232-L235">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -343,7 +326,7 @@ pathToIndex : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">Li
 <div class="decl" id="Lean.Elab.Term.ToDepElimPattern.State">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L397-L398">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L396-L397">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -361,7 +344,7 @@ patternVars : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">A
 <div class="decl" id="Lean.Elab.Term.ToDepElimPattern.Context">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L400-L410">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L399-L409">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -381,7 +364,7 @@ explicitPatternVars : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#
 <div class="decl" id="Lean.Elab.Term.ToDepElimPattern.M">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L412-L412">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L411-L411">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -406,7 +389,7 @@ explicitPatternVars : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#
 <div class="decl" id="Lean.Elab.Term.ToDepElimPattern.isExplicitPatternVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L415-L419">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L414-L418">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -428,7 +411,7 @@ explicitPatternVars : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#
 <div class="decl" id="Lean.Elab.Term.ToDepElimPattern.normalize">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L442-L521">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L441-L520">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -447,7 +430,7 @@ Recall that <code>mkLambdaFVars</code> now allows us to abstract both free varia
 <div class="decl" id="Lean.Elab.Term.ToDepElimPattern.normalize.addVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L491-L493">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L490-L492">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -469,7 +452,7 @@ Recall that <code>mkLambdaFVars</code> now allows us to abstract both free varia
 <div class="decl" id="Lean.Elab.Term.ToDepElimPattern.normalize.processVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L495-L502">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L494-L501">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -491,7 +474,7 @@ Recall that <code>mkLambdaFVars</code> now allows us to abstract both free varia
 <div class="decl" id="Lean.Elab.Term.ToDepElimPattern.normalize.processInaccessible">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L504-L521">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L503-L520">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -507,7 +490,7 @@ Recall that <code>mkLambdaFVars</code> now allows us to abstract both free varia
 <div class="decl" id="Lean.Elab.Term.ToDepElimPattern.TopSort.State">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L567-L570">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L566-L569">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -529,7 +512,7 @@ result : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array<
 <div class="decl" id="Lean.Elab.Term.ToDepElimPattern.TopSortM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L572-L572">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L571-L571">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -553,7 +536,7 @@ result : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array<
 <div class="decl" id="Lean.Elab.Term.ToDepElimPattern.main">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L619-L630">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L618-L633">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -592,7 +575,7 @@ replaced since they may depend on implicit pattern variables (i.e., metavariable
 <div class="decl" id="Lean.Elab.Term.withDepElimPatterns">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L634-L635">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L637-L638">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -622,10 +605,36 @@ replaced since they may depend on implicit pattern variables (i.e., metavariable
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Elab.Term.GeneralizeResult">
+<div class="structure">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L711-L717">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">structure</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Elab/Match.html#Lean.Elab.Term.GeneralizeResult">Lean.Elab.Term.GeneralizeResult</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<ul class="structure_fields" id="Lean.Elab.Term.GeneralizeResult.mk">
+<li class="structure_field" id="Lean.Elab.Term.GeneralizeResult.discrs">
+discrs : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></li>
+<li class="structure_field" id="Lean.Elab.Term.GeneralizeResult.toClear">
+toClear : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a></span></li>
+<li class="structure_field" id="Lean.Elab.Term.GeneralizeResult.matchType">
+matchType : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></li>
+<li class="structure_field" id="Lean.Elab.Term.GeneralizeResult.altViews">
+altViews : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Elab/MatchAltView.html#Lean.Elab.Term.MatchAltView">Lean.Elab.Term.MatchAltView</a></span></li>
+<li class="structure_field" id="Lean.Elab.Term.GeneralizeResult.refined">
+refined : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
+</ul>
+</div>
+</div>
 <div class="decl" id="Lean.Elab.Term.mkMatcher">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L829-L830">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L872-L873">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -648,7 +657,7 @@ replaced since they may depend on implicit pattern variables (i.e., metavariable
 <div class="decl" id="Lean.Elab.Term.match.ignoreUnusedAlts">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L832-L832">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L875-L875">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -662,7 +671,7 @@ replaced since they may depend on implicit pattern variables (i.e., metavariable
 <div class="decl" id="Lean.Elab.Term.reportMatcherResultErrors">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L837-L846">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L880-L889">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -686,7 +695,7 @@ replaced since they may depend on implicit pattern variables (i.e., metavariable
 <div class="decl" id="Lean.Elab.Term.elabMatch">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L976-L990">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L976-L990">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -710,7 +719,7 @@ respective matched values.</p><details>
 <div class="decl" id="Lean.Elab.Term.elabNoMatch">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L999-L1010">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L999-L1010">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -732,7 +741,7 @@ e.g. because it has no constructors.</p><details>
 <div class="decl" id="Lean.Elab.Term.elabMatch.elabMatchDefault">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Match.lean#L1085-L1093">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Match.lean#L1127-L1138">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -936,6 +945,9 @@ e.g. because it has no constructors.</p><details>
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -1352,6 +1364,9 @@ e.g. because it has no constructors.</p><details>
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -1425,6 +1440,9 @@ e.g. because it has no constructors.</p><details>
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -1478,6 +1496,9 @@ e.g. because it has no constructors.</p><details>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1632,6 +1653,9 @@ e.g. because it has no constructors.</p><details>
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1643,7 +1667,13 @@ e.g. because it has no constructors.</p><details>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -2057,6 +2087,9 @@ e.g. because it has no constructors.</p><details>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

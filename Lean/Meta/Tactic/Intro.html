@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Meta.Tactic.Intro</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Intro.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Intro.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -115,7 +115,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.tactic.hygienic">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Intro.lean#L58-L58">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Intro.lean#L58-L58">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -129,7 +129,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.getHygienicIntro">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Intro.lean#L64-L65">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Intro.lean#L64-L65">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -152,7 +152,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.introNCore">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Intro.lean#L87-L93">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Intro.lean#L87-L93">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -182,7 +182,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.introN">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Intro.lean#L95-L96">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Intro.lean#L95-L96">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -212,7 +212,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.introNP">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Intro.lean#L98-L99">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Intro.lean#L98-L99">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -238,7 +238,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.intro">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Intro.lean#L101-L103">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Intro.lean#L101-L103">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -254,7 +254,11 @@ Documentation</h1>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">One or more equations did not get rendered due to their size.</li>
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html#Lean.Meta.intro">Lean.Meta.intro</a> <span class="fn">mvarId</span> <span class="fn">name</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let discr ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Intro.html#Lean.Meta.introN">Lean.Meta.introN</a> <span class="fn">mvarId</span> <span class="fn">1</span> <span class="fn">[<span class="fn">name</span>]</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span>
+  <span class="fn">match <span class="fn">discr</span> with
+    | <span class="fn">(<span class="fn">fvarIds</span>, <span class="fn">mvarId</span>)</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Prod.mk">pure</a> <span class="fn">(<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.get!">Array.get!</a> <span class="fn">fvarIds</span> <span class="fn">0</span></span>, <span class="fn">mvarId</span>)</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -262,7 +266,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.intro1Core">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Intro.lean#L105-L107">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Intro.lean#L105-L107">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -286,7 +290,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.intro1">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Intro.lean#L109-L110">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Intro.lean#L109-L110">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -310,7 +314,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.intro1P">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Intro.lean#L112-L113">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Intro.lean#L112-L113">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -334,7 +338,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.intros">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Intro.lean#L121-L128">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Intro.lean#L121-L128">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -536,6 +540,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -952,6 +959,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -1025,6 +1035,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -1078,6 +1091,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1232,6 +1248,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1243,7 +1262,13 @@ Documentation</h1>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html" open="">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -1657,6 +1682,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Init.Control.State</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -136,7 +136,7 @@ Documentation</h1>
 <div class="decl" id="StateT">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L14-L15">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L14-L15">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -163,7 +163,7 @@ Documentation</h1>
 <div class="decl" id="StateT.run">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L17-L18">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L17-L18">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -201,7 +201,7 @@ Documentation</h1>
 <div class="decl" id="StateT.run'">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L20-L21">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L20-L21">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -243,7 +243,7 @@ Documentation</h1>
 <div class="decl" id="StateM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L23-L23">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L23-L23">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -268,7 +268,7 @@ Documentation</h1>
 <div class="decl" id="instSubsingletonStateM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L25-L31">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L25-L31">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -305,7 +305,7 @@ Documentation</h1>
 <div class="decl" id="StateT.pure">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L38-L39">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L38-L39">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -345,7 +345,7 @@ Documentation</h1>
 <div class="decl" id="StateT.bind">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L41-L42">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L41-L42">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -385,8 +385,7 @@ Documentation</h1>
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT.bind">StateT.bind</a> <span class="fn">x</span> <span class="fn">f</span> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let discr ← <span class="fn"><span class="fn">x</span> <span class="fn">s</span></span>
-  let x : <span class="fn"><span class="fn">α</span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn">σ</span></span> := <span class="fn">discr</span>
-  <span class="fn">match <span class="fn">x</span> with
+  <span class="fn">match <span class="fn">discr</span> with
     | <span class="fn">(<span class="fn">a</span>, <span class="fn">s</span>)</span> =&gt <span class="fn"><span class="fn">f</span> <span class="fn">a</span> <span class="fn">s</span></span></span></span></span></li>
 </ul>
 </details>
@@ -395,7 +394,7 @@ Documentation</h1>
 <div class="decl" id="StateT.map">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L44-L45">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L44-L45">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -435,8 +434,7 @@ Documentation</h1>
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Control/State.html#StateT.map">StateT.map</a> <span class="fn">f</span> <span class="fn">x</span> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
   let discr ← <span class="fn"><span class="fn">x</span> <span class="fn">s</span></span>
-  let x : <span class="fn"><span class="fn">α</span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn">σ</span></span> := <span class="fn">discr</span>
-  <span class="fn">match <span class="fn">x</span> with
+  <span class="fn">match <span class="fn">discr</span> with
     | <span class="fn">(<span class="fn">a</span>, <span class="fn">s</span>)</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Prod.mk">pure</a> <span class="fn">(<span class="fn"><span class="fn">f</span> <span class="fn">a</span></span>, <span class="fn">s</span>)</span></span></span></span></span></li>
 </ul>
 </details>
@@ -445,7 +443,7 @@ Documentation</h1>
 <div class="decl" id="StateT.instMonadStateT">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L47-L50">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L47-L50">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -478,7 +476,7 @@ Documentation</h1>
 <div class="decl" id="StateT.orElse">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L52-L53">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L52-L53">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -520,7 +518,7 @@ Documentation</h1>
 <div class="decl" id="StateT.failure">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L55-L56">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L55-L56">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -558,7 +556,7 @@ Documentation</h1>
 <div class="decl" id="StateT.instAlternativeStateT">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L58-L60">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L58-L60">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -595,7 +593,7 @@ Documentation</h1>
 <div class="decl" id="StateT.get">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L62-L63">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L62-L63">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -629,7 +627,7 @@ Documentation</h1>
 <div class="decl" id="StateT.set">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L65-L66">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L65-L66">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -663,7 +661,7 @@ Documentation</h1>
 <div class="decl" id="StateT.modifyGet">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L68-L69">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L68-L69">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -703,7 +701,7 @@ Documentation</h1>
 <div class="decl" id="StateT.lift">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L71-L72">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L71-L72">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -745,7 +743,7 @@ Documentation</h1>
 <div class="decl" id="StateT.instMonadLiftStateT">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L74-L74">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L74-L74">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -778,7 +776,7 @@ Documentation</h1>
 <div class="decl" id="StateT.instMonadFunctorStateT">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L76-L76">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L76-L76">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -807,7 +805,7 @@ Documentation</h1>
 <div class="decl" id="StateT.instMonadExceptOfStateT">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L78-L81">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L78-L81">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -846,7 +844,7 @@ Documentation</h1>
 <div class="decl" id="instMonadStateOfStateT">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L89-L92">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L89-L92">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -879,7 +877,7 @@ Documentation</h1>
 <div class="decl" id="StateT.monadControl">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L96-L99">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L96-L99">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -907,7 +905,7 @@ Documentation</h1>
 <div class="decl" id="StateT.tryFinally">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Control/State.lean#L101-L106">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Control/State.lean#L101-L106">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1123,6 +1121,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -1539,6 +1540,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -1612,6 +1616,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -1665,6 +1672,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1819,6 +1829,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1830,7 +1843,13 @@ Documentation</h1>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -2244,6 +2263,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

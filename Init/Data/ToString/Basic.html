@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Init.Data.ToString.Basic</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -144,6 +144,9 @@ Documentation</h1>
 <a class="break_within" href="#instToStringNat">instToStringNat</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#instToStringPos">instToStringPos</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#instToStringInt">instToStringInt</a>
 </div>
 <div class="nav_link">
@@ -208,7 +211,7 @@ Documentation</h1>
 <div class="decl" id="ToString">
 <div class="class">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L19-L20">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L19-L20">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">class</span>
@@ -350,6 +353,9 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <a href="/Unicode.lean/Init/Data/Format/Syntax.html#Lean.Syntax.instToStringSyntax">Lean.Syntax.instToStringSyntax</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Data/Lsp/Basic.html#Lean.Lsp.instToStringTextDocumentPositionParams">Lean.Lsp.instToStringTextDocumentPositionParams</a>
+</li>
+<li>
 <a href="/Unicode.lean/Init/Data/ToString/Basic.html#instToStringUInt64">instToStringUInt64</a>
 </li>
 <li>
@@ -461,6 +467,9 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <a href="/Unicode.lean/Init/Data/ToString/Basic.html#instToStringExcept">instToStringExcept</a>
 </li>
 <li>
+<a href="/Unicode.lean/Init/Data/ToString/Basic.html#instToStringPos">instToStringPos</a>
+</li>
+<li>
 <a href="/Unicode.lean/Init/Meta.html#Lean.Name.instToStringName">Lean.Name.instToStringName</a>
 </li>
 <li>
@@ -494,7 +503,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringIdType">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L25-L26">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L25-L26">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -523,7 +532,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringId">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L28-L29">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L28-L29">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -552,7 +561,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringString">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L31-L32">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L31-L32">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -573,7 +582,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringSubstring">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L34-L35">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L34-L35">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -594,7 +603,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringIterator">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L37-L38">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L37-L38">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -615,7 +624,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringBool">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L40-L41">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L40-L41">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -636,7 +645,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringDecidable">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L43-L46">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L43-L46">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -664,7 +673,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="List.toStringAux">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L48-L51">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L48-L51">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -685,11 +694,11 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#List.toStringAux">List.toStringAux</a> <span class="fn">x</span> <span class="fn">[]</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">&quot&quot</span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#List.toStringAux">List.toStringAux</a> <span class="fn">_fun_discr</span> <span class="fn">[]</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">&quot&quot</span></span></li>
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#List.toStringAux">List.toStringAux</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> (<span class="fn"><span class="fn">x_2</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">xs</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">x_2</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#List.toStringAux">List.toStringAux</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <span class="fn">xs</span></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#List.toStringAux">List.toStringAux</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> (<span class="fn"><span class="fn">x</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">xs</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#List.toStringAux">List.toStringAux</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <span class="fn">xs</span></span></span></span></li>
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#List.toStringAux">List.toStringAux</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> (<span class="fn"><span class="fn">x_2</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">xs</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><span class="fn"><span class="fn">&quot, &quot</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">x_2</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#List.toStringAux">List.toStringAux</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <span class="fn">xs</span></span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#List.toStringAux">List.toStringAux</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> (<span class="fn"><span class="fn">x</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">xs</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><span class="fn"><span class="fn">&quot, &quot</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">x</span></span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#List.toStringAux">List.toStringAux</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <span class="fn">xs</span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -697,7 +706,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="List.toString">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L53-L55">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L53-L55">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -718,7 +727,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#List.toString">List.toString</a> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#List.toString">List.toString</a> <span class="fn">_fun_discr</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">match <span class="fn">_fun_discr</span> with
   | <span class="fn">[]</span> =&gt <span class="fn">&quot[]&quot</span>
   | <span class="fn"><span class="fn">x</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">xs</span></span> =&gt <span class="fn"><span class="fn"><span class="fn">&quot[&quot</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#List.toStringAux">List.toStringAux</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> (<span class="fn"><span class="fn">x</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">xs</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">&quot]&quot</span></span></span></span></li>
 </ul>
@@ -728,7 +737,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringList">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L57-L58">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L57-L58">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -757,7 +766,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringPUnit">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L60-L61">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L60-L61">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -778,7 +787,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringULift">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L63-L64">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L63-L64">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -807,7 +816,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringUnit">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L66-L67">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L66-L67">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -828,7 +837,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringNat">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L69-L70">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L69-L70">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -846,10 +855,31 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 </details>
 </div>
 </div>
+<div class="decl" id="instToStringPos">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L72-L73">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Data/ToString/Basic.html#instToStringPos">instToStringPos</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString">ToString</a> <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#instToStringPos">instToStringPos</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ toString := <span class="fn">fun <span class="fn">p</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Data/Repr.html#Nat.repr">Nat.repr</a> <span class="fn"><span class="fn">p</span>.byteIdx</span></span></span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="instToStringInt">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L72-L75">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L75-L78">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -862,8 +892,8 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#instToStringInt">instToStringInt</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ toString := <span class="fn">fun <span class="fn">x</span> =&gt
-      <span class="fn">match <span class="fn">x</span> with
+<span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#instToStringInt">instToStringInt</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ toString := <span class="fn">fun <span class="fn">_fun_discr</span> =&gt
+      <span class="fn">match <span class="fn">_fun_discr</span> with
       | <span class="fn"><a href="/Unicode.lean/Init/Data/Int/Basic.html#Int.negSucc">Int.ofNat</a> <span class="fn">m</span></span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">m</span></span>
       | <span class="fn"><a href="/Unicode.lean/Init/Data/Int/Basic.html#Int.negSucc">Int.negSucc</a> <span class="fn">m</span></span> =&gt <span class="fn"><span class="fn">&quot-&quot</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Nat.succ">Nat.succ</a> <span class="fn">m</span></span>)</span></span></span></span> }</span></span></li>
 </ul>
@@ -873,7 +903,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringChar">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L77-L78">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L80-L81">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -894,7 +924,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringFin">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L80-L81">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L83-L84">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -917,7 +947,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringUInt8">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L83-L84">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L86-L87">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -938,7 +968,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringUInt16">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L86-L87">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L89-L90">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -959,7 +989,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringUInt32">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L89-L90">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L92-L93">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -980,7 +1010,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringUInt64">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L92-L93">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L95-L96">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1001,7 +1031,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringUSize">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L95-L96">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L98-L99">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1022,7 +1052,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringFormat">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L98-L99">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L101-L102">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1043,7 +1073,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="addParenHeuristic">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L101-L104">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L104-L107">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1065,7 +1095,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringOption">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L106-L108">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L109-L111">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1085,11 +1115,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn">instToStringOption</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ toString := <span class="fn">fun <span class="fn">x</span> =&gt
-      <span class="fn">match <span class="fn">x</span> with
-      | <span class="fn">none</span> =&gt <span class="fn">&quotnone&quot</span>
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option.some">some</a> <span class="fn">a</span></span> =&gt <span class="fn"><span class="fn"><span class="fn">&quot(some &quot</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#addParenHeuristic">addParenHeuristic</a> (<span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">a</span></span>)</span></span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn">&quot)&quot</span></span></span></span> }</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1097,7 +1123,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringSum">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L110-L112">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L113-L115">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1133,7 +1159,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringProd">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L114-L115">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L117-L118">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1172,7 +1198,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringSigma">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L117-L118">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L120-L121">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1211,7 +1237,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringSubtype">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L120-L121">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L123-L124">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1244,7 +1270,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="String.toInt?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L123-L129">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L126-L132">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1266,7 +1292,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="String.isInt">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L131-L135">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L134-L138">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1289,7 +1315,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="String.toInt!">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L137-L140">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L140-L143">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1314,7 +1340,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instToStringExcept">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L142-L145">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L145-L148">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1342,11 +1368,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn">instToStringExcept</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn">{ toString := <span class="fn">fun <span class="fn">x</span> =&gt
-      <span class="fn">match <span class="fn">x</span> with
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Except.ok">Except.error</a> <span class="fn">e</span></span> =&gt <span class="fn"><span class="fn">&quoterror: &quot</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">e</span></span></span>
-      | <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Except.ok">Except.ok</a> <span class="fn">a</span></span> =&gt <span class="fn"><span class="fn">&quotok: &quot</span> <a href="/Unicode.lean/Init/Prelude.html#HAppend.hAppend">++</a> <span class="fn"><a href="/Unicode.lean/Init/Data/ToString/Basic.html#ToString.toString">toString</a> <span class="fn">a</span></span></span></span></span> }</span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -1354,7 +1376,7 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <div class="decl" id="instReprExcept">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Init/Data/ToString/Basic.lean#L147-L150">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Data/ToString/Basic.lean#L150-L153">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1570,6 +1592,9 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -1986,6 +2011,9 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -2059,6 +2087,9 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -2112,6 +2143,9 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -2266,6 +2300,9 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -2277,7 +2314,13 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -2691,6 +2734,9 @@ toString : <span class="fn"><span class="fn">α</span> → <a href="/Unicode.lea
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

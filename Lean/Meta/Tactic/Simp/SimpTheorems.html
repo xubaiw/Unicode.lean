@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Meta.Tactic.Simp.SimpTheorems</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -141,10 +141,19 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Meta.mkSimpExt">Lean.Meta.mkSimpExt</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.Meta.SimpExtensionMap">Lean.Meta.SimpExtensionMap</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Meta.simpExtensionMapRef">Lean.Meta.simpExtensionMapRef</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Meta.registerSimpAttr">Lean.Meta.registerSimpAttr</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Meta.simpExtension">Lean.Meta.simpExtension</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Meta.getSimpExtension?">Lean.Meta.getSimpExtension?</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Meta.getSimpTheorems">Lean.Meta.getSimpTheorems</a>
@@ -167,12 +176,30 @@ Documentation</h1>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Meta.SimpTheorems.addDeclToUnfold">Lean.Meta.SimpTheorems.addDeclToUnfold</a>
 </div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Meta.SimpTheoremsArray">Lean.Meta.SimpTheoremsArray</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Meta.SimpTheoremsArray.addTheorem">Lean.Meta.SimpTheoremsArray.addTheorem</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Meta.SimpTheoremsArray.eraseTheorem">Lean.Meta.SimpTheoremsArray.eraseTheorem</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Meta.SimpTheoremsArray.isErased">Lean.Meta.SimpTheoremsArray.isErased</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Meta.SimpTheoremsArray.isDeclToUnfold">Lean.Meta.SimpTheoremsArray.isDeclToUnfold</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Meta.commandRegister_simp_attr___">Lean.Meta.commandRegister_simp_attr___</a>
+</div>
 </nav>
 <main>
 <div class="decl" id="Lean.Meta.SimpTheorem">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L23-L31">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L23-L31">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -206,7 +233,7 @@ Then, we use <code>abstractMVars</code> to abstract the universe metavariables a
 <div class="decl" id="Lean.Meta.instInhabitedSimpTheorem">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L31-L31">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L31-L31">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -226,7 +253,7 @@ Then, we use <code>abstractMVars</code> to abstract the universe metavariables a
 <div class="decl" id="Lean.Meta.SimpTheorem.getName">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L33-L36">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L33-L36">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -251,7 +278,7 @@ Then, we use <code>abstractMVars</code> to abstract the universe metavariables a
 <div class="decl" id="Lean.Meta.instToFormatSimpTheorem">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L38-L43">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L38-L43">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -271,7 +298,7 @@ Then, we use <code>abstractMVars</code> to abstract the universe metavariables a
 <div class="decl" id="Lean.Meta.instToMessageDataSimpTheorem">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L45-L46">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L45-L46">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -292,7 +319,7 @@ Then, we use <code>abstractMVars</code> to abstract the universe metavariables a
 <div class="decl" id="Lean.Meta.instBEqSimpTheorem">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L48-L49">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L48-L49">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -313,7 +340,7 @@ Then, we use <code>abstractMVars</code> to abstract the universe metavariables a
 <div class="decl" id="Lean.Meta.SimpTheorems">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L51-L58">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L51-L58">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -341,7 +368,7 @@ toUnfoldThms : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMa
 <div class="decl" id="Lean.Meta.instInhabitedSimpTheorems">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L58-L58">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L58-L58">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -364,7 +391,7 @@ toUnfoldThms : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMa
 <div class="decl" id="Lean.Meta.addSimpTheoremEntry">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L60-L69">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L60-L69">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -388,7 +415,7 @@ toUnfoldThms : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMa
 <div class="decl" id="Lean.Meta.addSimpTheoremEntry.updateLemmaNames">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L66-L69">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L66-L69">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -415,7 +442,7 @@ toUnfoldThms : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMa
 <div class="decl" id="Lean.Meta.SimpTheorems.addDeclToUnfoldCore">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L71-L72">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L71-L72">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -439,7 +466,7 @@ toUnfoldThms : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMa
 <div class="decl" id="Lean.Meta.SimpTheorems.isDeclToUnfold">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L75-L76">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L75-L76">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -464,7 +491,7 @@ toUnfoldThms : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMa
 <div class="decl" id="Lean.Meta.SimpTheorems.isLemma">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L78-L79">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L78-L79">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -489,7 +516,7 @@ toUnfoldThms : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMa
 <div class="decl" id="Lean.Meta.SimpTheorems.registerDeclToUnfoldThms">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L82-L83">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L82-L83">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -515,7 +542,7 @@ toUnfoldThms : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMa
 <div class="decl" id="Lean.Meta.SimpTheorems.eraseCore">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L85-L90">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L85-L90">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -533,7 +560,7 @@ toUnfoldThms : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMa
 <div class="decl" id="Lean.Meta.SimpTheorems.erase">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L92-L95">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L92-L95">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -569,7 +596,7 @@ toUnfoldThms : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashMa
 <div class="decl" id="Lean.Meta.SimpEntry">
 <div class="inductive">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L215-L219">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L215-L219">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">inductive</span>
@@ -591,7 +618,7 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <div class="decl" id="Lean.Meta.instInhabitedSimpEntry">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L219-L219">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L219-L219">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -612,7 +639,7 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <div class="decl" id="Lean.Meta.SimpExtension">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L221-L221">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L221-L221">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -634,7 +661,7 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <div class="decl" id="Lean.Meta.SimpExtension.getTheorems">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L223-L224">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L223-L224">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -659,7 +686,7 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <div class="decl" id="Lean.Meta.addSimpTheorem">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L226-L229">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L226-L229">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -691,7 +718,7 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <div class="decl" id="Lean.Meta.mkSimpAttr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L231-L259">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L231-L259">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -717,7 +744,7 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <div class="decl" id="Lean.Meta.mkSimpExt">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L261-L270">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L261-L270">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -736,10 +763,46 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Meta.SimpExtensionMap">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L272-L272">source</a>
+</div>
+<div class="attributes">@[inline]</div>
+<div class="decl_header">
+<span class="decl_kind">abbrev</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpExtensionMap">Lean.Meta.SimpExtensionMap</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpExtensionMap">Lean.Meta.SimpExtensionMap</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap">Std.HashMap</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpExtension">Lean.Meta.SimpExtension</a></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Meta.simpExtensionMapRef">
+<div class="constant">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L274-L274">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">constant</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.simpExtensionMapRef">Lean.Meta.simpExtensionMapRef</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO.Ref">IO.Ref</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpExtensionMap">Lean.Meta.SimpExtensionMap</a></span></div></div>
+</div>
+</div>
 <div class="decl" id="Lean.Meta.registerSimpAttr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L272-L275">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L276-L280">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -757,11 +820,7 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.registerSimpAttr">Lean.Meta.registerSimpAttr</a> <span class="fn">attrName</span> <span class="fn">attrDescr</span> <span class="fn">extName</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
-  let ext ← <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.mkSimpExt">Lean.Meta.mkSimpExt</a> <span class="fn">extName</span></span>
-  <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.mkSimpAttr">Lean.Meta.mkSimpAttr</a> <span class="fn">attrName</span> <span class="fn">attrDescr</span> <span class="fn">ext</span></span>
-  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <span class="fn">ext</span></span></span></span></li>
+<li class="equation">One or more equations did not get rendered due to their size.</li>
 </ul>
 </details>
 </div>
@@ -769,7 +828,7 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <div class="decl" id="Lean.Meta.simpExtension">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L277-L277">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L282-L282">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -780,10 +839,35 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <div class="decl_type"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpExtension">Lean.Meta.SimpExtension</a></div></div>
 </div>
 </div>
+<div class="decl" id="Lean.Meta.getSimpExtension?">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L284-L285">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.getSimpExtension?">Lean.Meta.getSimpExtension?</a>
+</span>
+<span class="decl_args">
+<span class="fn">(attrName : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/System/IO.html#IO">IO</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpExtension">Lean.Meta.SimpExtension</a></span>)</span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.getSimpExtension?">Lean.Meta.getSimpExtension?</a> <span class="fn">attrName</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let a ← <span class="fn"><a href="/Unicode.lean/Init/System/ST.html#ST.Ref.get">ST.Ref.get</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.simpExtensionMapRef">Lean.Meta.simpExtensionMapRef</a></span>
+  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Std/Data/HashMap.html#Std.HashMap.find?">Std.HashMap.find?</a> <span class="fn">a</span> <span class="fn">attrName</span></span>)</span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Meta.getSimpTheorems">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L279-L280">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L287-L288">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -804,7 +888,7 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <div class="decl" id="Lean.Meta.SimpTheorems.addConst">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L283-L286">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L291-L294">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -834,7 +918,7 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <div class="decl" id="Lean.Meta.SimpTheorem.getValue">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L288-L297">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L296-L305">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -856,7 +940,7 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <div class="decl" id="Lean.Meta.mkSimpTheorems">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L306-L308">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L314-L316">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -888,7 +972,7 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <div class="decl" id="Lean.Meta.SimpTheorems.add">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L311-L329">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L319-L337">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -922,7 +1006,7 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <div class="decl" id="Lean.Meta.SimpTheorems.add.getName?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L318-L329">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L326-L337">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -946,7 +1030,7 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <div class="decl" id="Lean.Meta.SimpTheorems.addDeclToUnfold">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L331-L341">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L339-L349">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -959,6 +1043,149 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <span class="fn">(declName : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheorems">Lean.Meta.SimpTheorems</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Meta.SimpTheoremsArray">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L351-L351">source</a>
+</div>
+<div class="attributes">@[inline]</div>
+<div class="decl_header">
+<span class="decl_kind">abbrev</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray">Lean.Meta.SimpTheoremsArray</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn">Type</span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray">Lean.Meta.SimpTheoremsArray</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheorems">Lean.Meta.SimpTheorems</a></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Meta.SimpTheoremsArray.addTheorem">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L353-L358">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray.addTheorem">Lean.Meta.SimpTheoremsArray.addTheorem</a>
+</span>
+<span class="decl_args">
+<span class="fn">(thmsArray : <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray">Lean.Meta.SimpTheoremsArray</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(h : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(name? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Option</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></span>) <span class="fn">none</span></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray">Lean.Meta.SimpTheoremsArray</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Meta.SimpTheoremsArray.eraseTheorem">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L360-L361">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray.eraseTheorem">Lean.Meta.SimpTheoremsArray.eraseTheorem</a>
+</span>
+<span class="decl_args">
+<span class="fn">(thmsArray : <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray">Lean.Meta.SimpTheoremsArray</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(thmId : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray">Lean.Meta.SimpTheoremsArray</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray.eraseTheorem">Lean.Meta.SimpTheoremsArray.eraseTheorem</a> <span class="fn">thmsArray</span> <span class="fn">thmId</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.map">Array.map</a> (<span class="fn">fun <span class="fn">thms</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheorems.eraseCore">Lean.Meta.SimpTheorems.eraseCore</a> <span class="fn">thms</span> <span class="fn">thmId</span></span></span>) <span class="fn">thmsArray</span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Meta.SimpTheoremsArray.isErased">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L363-L364">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray.isErased">Lean.Meta.SimpTheoremsArray.isErased</a>
+</span>
+<span class="decl_args">
+<span class="fn">(thmsArray : <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray">Lean.Meta.SimpTheoremsArray</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(thmId : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray.isErased">Lean.Meta.SimpTheoremsArray.isErased</a> <span class="fn">thmsArray</span> <span class="fn">thmId</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.any">Array.any</a> <span class="fn">thmsArray</span> (<span class="fn">fun <span class="fn">thms</span> =&gt <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentHashSet.html#Std.PersistentHashSet.contains">Std.PersistentHashSet.contains</a> <span class="fn"><span class="fn">thms</span>.erased</span> <span class="fn">thmId</span></span></span>) <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">thmsArray</span></span>)</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Meta.SimpTheoremsArray.isDeclToUnfold">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L366-L367">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray.isDeclToUnfold">Lean.Meta.SimpTheoremsArray.isDeclToUnfold</a>
+</span>
+<span class="decl_args">
+<span class="fn">(thmsArray : <a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray">Lean.Meta.SimpTheoremsArray</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(declName : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheoremsArray.isDeclToUnfold">Lean.Meta.SimpTheoremsArray.isDeclToUnfold</a> <span class="fn">thmsArray</span> <span class="fn">declName</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Data/Array/Basic.html#Array.any">Array.any</a> <span class="fn">thmsArray</span> (<span class="fn">fun <span class="fn">thms</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.SimpTheorems.isDeclToUnfold">Lean.Meta.SimpTheorems.isDeclToUnfold</a> <span class="fn">thms</span> <span class="fn">declName</span></span></span>) <span class="fn">0</span> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array.size">Array.size</a> <span class="fn">thmsArray</span></span>)</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="Lean.Meta.commandRegister_simp_attr___">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Tactic/Simp/SimpTheorems.lean#L369-L369">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Tactic/Simp/SimpTheorems.html#Lean.Meta.commandRegister_simp_attr___">Lean.Meta.commandRegister_simp_attr___</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><a href="/Unicode.lean/Init/Prelude.html#Lean.ParserDescr">Lean.ParserDescr</a></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
@@ -1150,6 +1377,9 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -1566,6 +1796,9 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -1639,6 +1872,9 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -1692,6 +1928,9 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -1846,6 +2085,9 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -1857,7 +2099,13 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html" open="">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -2271,6 +2519,9 @@ toUnfoldThms: <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Lean.Nam
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

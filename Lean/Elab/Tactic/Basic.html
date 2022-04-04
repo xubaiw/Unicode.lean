@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Elab.Tactic.Basic</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -90,6 +90,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </li>
 <li>
@@ -125,6 +128,9 @@ Documentation</h1>
 <li>
 <a href="/Unicode.lean/Lean/Elab/Tactic/Conv/Basic.html">Lean.Elab.Tactic.Conv.Basic</a>
 </li>
+<li>
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</li>
 </ul>
 </details>
 </div>
@@ -139,12 +145,6 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Tactic.Context">Lean.Elab.Tactic.Context</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Tactic.State">Lean.Elab.Tactic.State</a>
-</div>
-<div class="nav_link">
-<a class="break_within" href="#Lean.Elab.Tactic.instInhabitedState">Lean.Elab.Tactic.instInhabitedState</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Elab.Tactic.SavedState">Lean.Elab.Tactic.SavedState</a>
@@ -322,7 +322,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.admitGoal">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L23-L26">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L23-L26">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -344,7 +344,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.goalsToMessageData">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L28-L29">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L28-L29">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -367,7 +367,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Term.reportUnsolvedGoals">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L31-L34">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L31-L34">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -389,7 +389,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Elab.Tactic.Context">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L38-L41">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L38-L41">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -406,49 +406,10 @@ elaborator : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></
 </ul>
 </div>
 </div>
-<div class="decl" id="Lean.Elab.Tactic.State">
-<div class="structure">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L43-L45">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">structure</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.State">Lean.Elab.Tactic.State</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">Type</span></div></div>
-<ul class="structure_fields" id="Lean.Elab.Tactic.State.mk">
-<li class="structure_field" id="Lean.Elab.Tactic.State.goals">
-goals : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a> <a href="/Unicode.lean/Lean/Level.html#Lean.MVarId">Lean.MVarId</a></span></li>
-</ul>
-</div>
-</div>
-<div class="decl" id="Lean.Elab.Tactic.instInhabitedState">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L45-L45">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.instInhabitedState">Lean.Elab.Tactic.instInhabitedState</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.State">Lean.Elab.Tactic.State</a></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.instInhabitedState">Lean.Elab.Tactic.instInhabitedState</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn">{ goals := <span class="fn">default</span> }</span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
 <div class="decl" id="Lean.Elab.Tactic.SavedState">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L47-L49">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L43-L45">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -461,14 +422,14 @@ goals : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#List">List</a>
 <li class="structure_field" id="Lean.Elab.Tactic.SavedState.term">
 term : <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.SavedState">Lean.Elab.Term.SavedState</a></li>
 <li class="structure_field" id="Lean.Elab.Tactic.SavedState.tactic">
-tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.State">Lean.Elab.Tactic.State</a></li>
+tactic : <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Tactic.State">Lean.Elab.Tactic.State</a></li>
 </ul>
 </div>
 </div>
 <div class="decl" id="Lean.Elab.Tactic.TacticM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L51-L51">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L47-L47">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -484,7 +445,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.TacticM">Lean.Elab.Tactic.TacticM</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#ReaderT">ReaderT</a> <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Context">Lean.Elab.Tactic.Context</a> (<span class="fn"><a href="/Unicode.lean/Init/Control/StateRef.html#StateRefT'">StateRefT'</a> <a href="/Unicode.lean/Init/System/IO.html#IO.RealWorld">IO.RealWorld</a> <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.State">Lean.Elab.Tactic.State</a> <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a></span>)</span></span></li>
+<span class="fn"><a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.TacticM">Lean.Elab.Tactic.TacticM</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#ReaderT">ReaderT</a> <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Context">Lean.Elab.Tactic.Context</a> (<span class="fn"><a href="/Unicode.lean/Init/Control/StateRef.html#StateRefT'">StateRefT'</a> <a href="/Unicode.lean/Init/System/IO.html#IO.RealWorld">IO.RealWorld</a> <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Tactic.State">Lean.Elab.Tactic.State</a> <a href="/Unicode.lean/Lean/Elab/Term.html#Lean.Elab.Term.TermElabM">Lean.Elab.TermElabM</a></span>)</span></span></li>
 </ul>
 </details>
 </div>
@@ -492,7 +453,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.Tactic">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L52-L52">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L48-L48">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -514,7 +475,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.instMonadTacticM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L56-L56">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L52-L52">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -536,7 +497,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.getGoals">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L58-L59">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L54-L55">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -559,7 +520,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.setGoals">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L61-L62">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L57-L58">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -582,7 +543,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.pruneSolvedGoals">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L64-L67">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L60-L63">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -606,7 +567,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.getUnsolvedGoals">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L69-L71">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L65-L67">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -629,7 +590,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.run">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L79-L97">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L75-L93">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -653,7 +614,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.saveState">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L99-L100">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L95-L96">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -677,7 +638,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.SavedState.restore">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L102-L104">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L98-L100">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -702,7 +663,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.getCurrMacroScope">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L106-L106">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L102-L102">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -725,7 +686,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.getMainModule">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L107-L107">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L103-L103">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -748,7 +709,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.mkTacticAttribute">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L109-L110">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L105-L106">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">unsafe def</span>
@@ -768,7 +729,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.tacticElabAttribute">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L112-L112">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L108-L108">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -782,7 +743,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.mkTacticInfo">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L114-L122">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L110-L118">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -808,7 +769,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.mkInitialTacticInfo">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L124-L127">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L120-L123">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -834,7 +795,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.withTacticInfoContext">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L129-L130">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L125-L126">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -866,13 +827,15 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.expandTacticMacroFns">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L159-L172">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L155-L168">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
 <span class="decl_name">
 <a class="break_within" href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.expandTacticMacroFns">Lean.Elab.Tactic.expandTacticMacroFns</a>
 </span>
+<span class="decl_args">
+<span class="fn">(s : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.SavedState">Lean.Elab.Tactic.SavedState</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
 <span class="decl_args">
@@ -884,13 +847,15 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.expandTacticMacroFns.loop">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L160-L171">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L156-L167">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
 <span class="decl_name">
 <a class="break_within" href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.expandTacticMacroFns.loop">Lean.Elab.Tactic.expandTacticMacroFns.loop</a>
 </span>
+<span class="decl_args">
+<span class="fn">(s : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.SavedState">Lean.Elab.Tactic.SavedState</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
 <span class="decl_args">:</span>
@@ -900,13 +865,15 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.expandTacticMacro">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L174-L175">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L170-L171">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
 <span class="decl_name">
 <a class="break_within" href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.expandTacticMacro">Lean.Elab.Tactic.expandTacticMacro</a>
 </span>
+<span class="decl_args">
+<span class="fn">(s : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.SavedState">Lean.Elab.Tactic.SavedState</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(stx : <a href="/Unicode.lean/Init/Prelude.html#Lean.Syntax">Lean.Syntax</a>)</span></span>
 <span class="decl_args">:</span>
@@ -916,7 +883,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.evalTacticAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L177-L190">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L173-L186">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -932,7 +899,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.evalTactic">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L192-L193">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L188-L189">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -948,7 +915,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.throwNoGoalsToBeSolved">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L197-L198">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L193-L194">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -973,7 +940,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.done">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L200-L204">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L196-L200">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -993,7 +960,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.focus">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L206-L212">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L202-L208">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1019,7 +986,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.focusAndDone">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L214-L218">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L210-L214">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1049,7 +1016,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.closeUsingOrAdmit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L221-L230">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L217-L226">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1071,7 +1038,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.instMonadBacktrackSavedStateTacticM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L232-L234">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L228-L230">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1092,7 +1059,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.tryCatch">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L236-L238">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L232-L234">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1126,7 +1093,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.instMonadExceptExceptionTacticM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L240-L242">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L236-L238">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1147,7 +1114,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.orElse">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L244-L245">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L240-L241">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1177,7 +1144,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.instOrElseTacticM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L247-L248">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L243-L244">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1202,7 +1169,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.instAlternativeTacticM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L250-L252">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L246-L248">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1223,7 +1190,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.saveTacticInfoForToken">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L259-L261">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L255-L257">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1247,7 +1214,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.withMacroExpansion">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L265-L267">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L261-L263">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1278,7 +1245,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.adaptExpander">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L270-L272">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L266-L268">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1303,7 +1270,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.appendGoals">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L274-L275">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L270-L271">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1326,7 +1293,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.replaceMainGoal">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L277-L279">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L273-L275">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1348,7 +1315,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.getMainGoal">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L282-L292">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L278-L288">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1371,7 +1338,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.getMainGoal.loop">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L285-L292">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L281-L288">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1393,7 +1360,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.getMainDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L295-L296">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L291-L292">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1416,7 +1383,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.getMainTag">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L299-L300">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L295-L296">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1439,7 +1406,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.getMainTarget">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L303-L304">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L299-L300">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1462,7 +1429,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.withMainContext">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L307-L308">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L303-L304">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1491,7 +1458,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.evalTacticAt">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L311-L319">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L307-L315">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1515,7 +1482,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.ensureHasNoMVars">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L321-L326">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L317-L322">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1537,7 +1504,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.closeMainGoal">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L329-L333">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L325-L329">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1561,7 +1528,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.liftMetaMAtMain">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L335-L336">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L331-L332">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1591,7 +1558,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.liftMetaTacticAux">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L338-L342">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L334-L338">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1618,7 +1585,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.liftMetaTactic">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L344-L347">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L340-L343">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1644,7 +1611,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.liftMetaTactic1">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L349-L354">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L345-L350">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1667,7 +1634,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.tryTactic?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L356-L360">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L352-L356">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1698,7 +1665,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.tryTactic">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L362-L367">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L358-L363">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1729,7 +1696,7 @@ tactic : <a href="/Unicode.lean/Lean/Elab/Tactic/Basic.html#Lean.Elab.Tactic.Sta
 <div class="decl" id="Lean.Elab.Tactic.tagUntaggedGoals">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L372-L388">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L368-L384">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1757,7 +1724,7 @@ If there is only one new untagged goal, then we just use <code>parentTag</code><
 <div class="decl" id="Lean.Elab.Tactic.getNameOfIdent'">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L391-L392">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L387-L388">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1780,7 +1747,7 @@ If there is only one new untagged goal, then we just use <code>parentTag</code><
 <div class="decl" id="Lean.Elab.Tactic.withCaseRef">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Elab/Tactic/Basic.lean#L398-L399">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Elab/Tactic/Basic.lean#L394-L395">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2005,6 +1972,9 @@ but the "full range" for the info view will still include <code>body</code>.</p>
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -2421,6 +2391,9 @@ but the "full range" for the info view will still include <code>body</code>.</p>
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -2494,6 +2467,9 @@ but the "full range" for the info view will still include <code>body</code>.</p>
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -2547,6 +2523,9 @@ but the "full range" for the info view will still include <code>body</code>.</p>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -2701,6 +2680,9 @@ but the "full range" for the info view will still include <code>body</code>.</p>
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -2712,7 +2694,13 @@ but the "full range" for the info view will still include <code>body</code>.</p>
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -3126,6 +3114,9 @@ but the "full range" for the info view will still include <code>body</code>.</p>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>

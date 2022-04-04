@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Lean.Meta.Basic</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -180,6 +180,9 @@ Documentation</h1>
 <a href="/Unicode.lean/Lean/Meta/WHNF.html">Lean.Meta.WHNF</a>
 </li>
 <li>
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</li>
+<li>
 <a href="/Unicode.lean/Lean/Meta/Match/MatcherInfo.html">Lean.Meta.Match.MatcherInfo</a>
 </li>
 <li>
@@ -301,6 +304,9 @@ Documentation</h1>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Meta.instMonadMCtxMetaM">Lean.Meta.instMonadMCtxMetaM</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#Lean.Meta.instMonadEnvMetaM">Lean.Meta.instMonadEnvMetaM</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Lean.Meta.instAddMessageContextMetaM">Lean.Meta.instAddMessageContextMetaM</a>
@@ -684,6 +690,9 @@ Documentation</h1>
 <a class="break_within" href="#Lean.Meta.dependsOn">Lean.Meta.dependsOn</a>
 </div>
 <div class="nav_link">
+<a class="break_within" href="#Lean.Meta.localDeclDependsOn">Lean.Meta.localDeclDependsOn</a>
+</div>
+<div class="nav_link">
 <a class="break_within" href="#Lean.Meta.dependsOnPred">Lean.Meta.dependsOnPred</a>
 </div>
 <div class="nav_link">
@@ -763,7 +772,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.isDefEqStuckExceptionId">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L34-L34">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L34-L34">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">constant</span>
@@ -777,7 +786,7 @@ Documentation</h1>
 <div class="decl" id="Lean.Meta.Config">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L36-L82">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L36-L82">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -821,7 +830,7 @@ etaStruct : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.Meta.ParamInfo">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L84-L90">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L84-L90">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -847,7 +856,7 @@ isDecInst : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.Meta.instInhabitedParamInfo">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L90-L90">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L90-L90">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -869,7 +878,7 @@ isDecInst : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.Meta.ParamInfo.isImplicit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L92-L93">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L92-L93">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -892,7 +901,7 @@ isDecInst : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.Meta.ParamInfo.isInstImplicit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L95-L96">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L95-L96">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -915,7 +924,7 @@ isDecInst : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.Meta.ParamInfo.isStrictImplicit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L98-L99">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L98-L99">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -938,7 +947,7 @@ isDecInst : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.Meta.ParamInfo.isExplicit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L101-L102">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L101-L102">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -961,7 +970,7 @@ isDecInst : <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></li>
 <div class="decl" id="Lean.Meta.FunInfo">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L104-L106">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L104-L106">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -981,7 +990,7 @@ resultDeps : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Ar
 <div class="decl" id="Lean.Meta.InfoCacheKey">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L108-L112">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L108-L112">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1003,7 +1012,7 @@ nargs? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <div class="decl" id="Lean.Meta.instInhabitedInfoCacheKey">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L112-L112">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L112-L112">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1024,7 +1033,7 @@ nargs? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <div class="decl" id="Lean.Meta.instBEqInfoCacheKey">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L112-L112">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L112-L112">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1045,7 +1054,7 @@ nargs? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <div class="decl" id="Lean.Meta.InfoCacheKey.instHashableInfoCacheKey">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L115-L116">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L115-L116">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1065,7 +1074,7 @@ nargs? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <div class="decl" id="Lean.Meta.SynthInstanceCache">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L121-L121">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L121-L121">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1087,7 +1096,7 @@ nargs? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <div class="decl" id="Lean.Meta.InferTypeCache">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L123-L123">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L123-L123">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1109,7 +1118,7 @@ nargs? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <div class="decl" id="Lean.Meta.FunInfoCache">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L124-L124">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L124-L124">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1131,7 +1140,7 @@ nargs? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <div class="decl" id="Lean.Meta.WhnfCache">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L125-L125">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L125-L125">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1153,7 +1162,7 @@ nargs? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <div class="decl" id="Lean.Meta.DefEqCache">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L129-L129">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L129-L129">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1175,7 +1184,7 @@ nargs? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">Optio
 <div class="decl" id="Lean.Meta.Cache">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L131-L139">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L131-L139">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1205,7 +1214,7 @@ defEqAll : <a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.DefEqCache">Lea
 <div class="decl" id="Lean.Meta.instInhabitedCache">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L139-L139">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L139-L139">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1225,7 +1234,7 @@ defEqAll : <a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.DefEqCache">Lea
 <div class="decl" id="Lean.Meta.DefEqContext">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L145-L149">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L145-L149">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1250,7 +1259,7 @@ localInstances : <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.LocalInsta
 <div class="decl" id="Lean.Meta.PostponedEntry">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L156-L161">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L156-L161">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1276,7 +1285,7 @@ Remark: we may consider improving the error message generation in the future.</p
 <div class="decl" id="Lean.Meta.instInhabitedPostponedEntry">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L161-L161">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L161-L161">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1297,7 +1306,7 @@ Remark: we may consider improving the error message generation in the future.</p
 <div class="decl" id="Lean.Meta.State">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L163-L169">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L163-L169">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1321,7 +1330,7 @@ postponed : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.htm
 <div class="decl" id="Lean.Meta.instInhabitedState">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L169-L169">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L169-L169">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1342,7 +1351,7 @@ postponed : <span class="fn"><a href="/Unicode.lean/Std/Data/PersistentArray.htm
 <div class="decl" id="Lean.Meta.SavedState">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L171-L174">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L171-L174">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1362,7 +1371,7 @@ meta : <a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.State">Lean.Meta.St
 <div class="decl" id="Lean.Meta.instInhabitedSavedState">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L174-L174">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L174-L174">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1383,7 +1392,7 @@ meta : <a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.State">Lean.Meta.St
 <div class="decl" id="Lean.Meta.Context">
 <div class="structure">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L176-L192">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L176-L192">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">structure</span>
@@ -1411,7 +1420,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.MetaM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L194-L194">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L194-L194">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1435,7 +1444,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.instMonadMetaM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L198-L198">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L198-L198">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1457,7 +1466,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.instInhabitedMetaM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L200-L201">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L200-L201">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1482,7 +1491,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.instMonadLCtxMetaM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L203-L204">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L203-L204">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1505,7 +1514,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.instMonadMCtxMetaM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L206-L208">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L206-L208">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1522,10 +1531,30 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Meta.instMonadEnvMetaM">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L210-L212">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.instMonadEnvMetaM">Lean.Meta.instMonadEnvMetaM</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Environment.html#Lean.MonadEnv">Lean.MonadEnv</a> <a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">One or more equations did not get rendered due to their size.</li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Meta.instAddMessageContextMetaM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L210-L211">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L214-L215">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1546,7 +1575,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.saveState">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L213-L214">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L217-L218">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1570,7 +1599,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.SavedState.restore">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L217-L219">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L221-L223">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1592,7 +1621,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.instMonadBacktrackSavedStateMetaM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L221-L223">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L225-L227">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1613,7 +1642,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.MetaM.run">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L225-L226">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L229-L230">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1688,7 +1717,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.MetaM.run'">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L228-L229">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L232-L233">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1763,7 +1792,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.MetaM.toIO">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L231-L233">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L235-L237">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1833,7 +1862,11 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <details>
 <summary>Equations</summary>
 <ul class="equations">
-<li class="equation">One or more equations did not get rendered due to their size.</li>
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM.toIO">Lean.Meta.MetaM.toIO</a> <span class="fn">x</span> <span class="fn">ctxCore</span> <span class="fn">sCore</span> <span class="fn">ctx</span> <span class="fn">s</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let discr ← <span class="fn"><a href="/Unicode.lean/Lean/CoreM.html#Lean.Core.CoreM.toIO">Lean.Core.CoreM.toIO</a> (<span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM.run">Lean.Meta.MetaM.run</a> <span class="fn">x</span> <span class="fn">ctx</span> <span class="fn">s</span></span>) <span class="fn">ctxCore</span> <span class="fn">sCore</span></span>
+  <span class="fn">match <span class="fn">discr</span> with
+    | <span class="fn">(<span class="fn">(<span class="fn">a</span>, <span class="fn">s</span>)</span>, <span class="fn">sCore</span>)</span> =&gt <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Prod.mk">pure</a> <span class="fn">(<span class="fn">a</span>, <span class="fn">sCore</span>, <span class="fn">s</span>)</span></span></span></span></span></li>
 </ul>
 </details>
 </div>
@@ -1841,7 +1874,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.instMetaEvalMetaM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L235-L236">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L239-L240">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1869,7 +1902,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.throwIsDefEqStuck">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L238-L239">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L242-L243">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1894,7 +1927,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.liftMetaM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L245-L246">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L251-L252">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1930,7 +1963,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.mapMetaM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L248-L249">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L254-L255">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -1972,7 +2005,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.map1MetaM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L251-L252">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L257-L258">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2018,7 +2051,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.map2MetaM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L254-L255">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L260-L261">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2068,7 +2101,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.modifyCache">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L260-L261">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L266-L267">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2091,7 +2124,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.modifyInferTypeCache">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L263-L264">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L269-L270">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2114,7 +2147,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.getLocalInstances">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L266-L267">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L272-L273">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2137,7 +2170,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.getConfig">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L269-L270">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L275-L276">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2160,7 +2193,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.setMCtx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L272-L273">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L278-L279">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2183,7 +2216,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.resetZetaFVarIds">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L275-L276">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L281-L282">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2204,7 +2237,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.getZetaFVarIds">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L278-L279">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L284-L285">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2227,7 +2260,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.getPostponed">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L281-L282">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L287-L288">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2250,7 +2283,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.setPostponed">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L284-L285">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L290-L291">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2273,7 +2306,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.modifyPostponed">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L287-L288">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L293-L294">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -2297,7 +2330,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.whnf">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L294-L294">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L304-L304">source</a>
 </div>
 <div class="attributes">@[extern 6 lean_whnf]</div>
 <div class="decl_header">
@@ -2307,12 +2340,14 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span></div></div>
-</div>
+<p>Reduces an expression to its Weak Head Normal Form.
+This is when the topmost expression has been fully reduced,
+but may contain subexpressions which have not been reduced.</p></div>
 </div>
 <div class="decl" id="Lean.Meta.inferType">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L295-L295">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L306-L306">source</a>
 </div>
 <div class="attributes">@[extern 6 lean_infer_type]</div>
 <div class="decl_header">
@@ -2322,12 +2357,12 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 </span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span></div></div>
-</div>
+<p>Returns the inferred type of the given expression, or fails if it is not type-correct.</p></div>
 </div>
 <div class="decl" id="Lean.Meta.isExprDefEqAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L296-L296">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L307-L307">source</a>
 </div>
 <div class="attributes">@[extern 7 lean_is_expr_def_eq]</div>
 <div class="decl_header">
@@ -2342,7 +2377,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.isLevelDefEqAux">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L297-L297">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L308-L308">source</a>
 </div>
 <div class="attributes">@[extern 7 lean_is_level_def_eq]</div>
 <div class="decl_header">
@@ -2357,7 +2392,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.synthPending">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L298-L298">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L309-L309">source</a>
 </div>
 <div class="attributes">@[extern 6 lean_synth_pending]</div>
 <div class="decl_header">
@@ -2372,7 +2407,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.whnfForall">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L300-L302">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L311-L313">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2397,7 +2432,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.withIncRecDepth">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L305-L306">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L316-L317">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2436,7 +2471,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.mkFreshExprMVarAt">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L313-L317">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L324-L328">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2471,7 +2506,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.mkFreshLevelMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L319-L322">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L330-L333">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2495,7 +2530,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.mkFreshExprMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L335-L336">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L346-L347">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2522,7 +2557,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.mkFreshTypeMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L338-L340">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L349-L351">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2549,7 +2584,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.mkFreshExprMVarWithId">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L349-L355">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L360-L366">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2577,7 +2612,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.mkFreshLevelMVars">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L357-L359">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L368-L370">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2604,7 +2639,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.mkFreshLevelMVarsFor">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L361-L362">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L372-L373">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2627,7 +2662,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.mkConstWithFreshMVarLevels">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L364-L366">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L375-L377">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2653,7 +2688,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.getTransparency">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L368-L369">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L379-L380">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2676,7 +2711,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.shouldReduceAll">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L371-L372">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L382-L383">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2699,7 +2734,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.shouldReduceReducibleOnly">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L374-L375">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L385-L386">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2722,7 +2757,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.getMVarDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L377-L380">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L388-L391">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2744,7 +2779,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.setMVarKind">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L382-L383">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L393-L394">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2769,7 +2804,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.setMVarType">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L387-L388">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L398-L399">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2794,7 +2829,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.isReadOnlyExprMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L390-L391">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L401-L402">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2820,7 +2855,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.isReadOnlyOrSyntheticOpaqueExprMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L393-L397">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L404-L408">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2842,7 +2877,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.getLevelMVarDepth">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L399-L402">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L410-L413">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2864,7 +2899,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.isReadOnlyLevelMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L404-L408">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L415-L419">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2886,7 +2921,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.renameMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L410-L411">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L421-L422">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2911,7 +2946,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.isExprMVarAssigned">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L413-L414">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L424-L425">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2936,7 +2971,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.getExprMVarAssignment?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L416-L417">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L427-L428">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2961,7 +2996,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.occursCheck">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L420-L421">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L431-L432">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2988,7 +3023,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.assignExprMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L423-L424">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L434-L435">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3013,7 +3048,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.isDelayedAssigned">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L426-L427">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L437-L438">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3038,7 +3073,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.getDelayedAssignment?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L429-L430">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L440-L441">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3063,7 +3098,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.hasAssignableMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L432-L433">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L443-L444">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3088,7 +3123,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.throwUnknownFVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L435-L436">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L446-L447">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3116,7 +3151,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.findLocalDecl?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L438-L439">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L449-L450">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3141,7 +3176,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.getLocalDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L441-L444">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L452-L455">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3168,7 +3203,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.getFVarLocalDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L446-L447">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L457-L458">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3191,7 +3226,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.getLocalDeclFromUserName">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L449-L452">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L460-L463">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3213,7 +3248,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.instantiateLevelMVars">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L454-L455">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L465-L466">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3236,7 +3271,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.instantiateMVars">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L457-L458">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L468-L469">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3259,7 +3294,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.instantiateLocalDeclMVars">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L460-L465">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L471-L476">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3281,7 +3316,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.liftMkBindingM">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L467-L476">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L478-L487">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -3308,7 +3343,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.abstractRange">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L478-L479">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L489-L490">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3335,7 +3370,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.abstract">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L481-L482">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L492-L493">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3360,7 +3395,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.mkForallFVars">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L484-L485">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L500-L501">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3379,7 +3414,10 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <span class="fn">(binderInfoForMVars : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Takes an array <code>xs</code> of free variables or metavariables and a term <code>e</code> that may contain those variables, and abstracts and binds them as universal quantifiers.</p><ul>
+<li>if <code>usedOnly = true</code> then only variables that the expression body depends on will appear.</li>
+<li>if <code>usedLetOnly = true</code> same as <code>usedOnly</code> except for let-bound variables. (That is, local constants which have been assigned a value.)</li>
+</ul><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">One or more equations did not get rendered due to their size.</li>
@@ -3390,7 +3428,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.mkLambdaFVars">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L487-L488">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L506-L507">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3409,7 +3447,9 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <span class="fn">(binderInfoForMVars : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo.implicit">Lean.BinderInfo.implicit</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Takes an array <code>xs</code> of free variables and metavariables and a
+body term <code>e</code> and creates <code>fun ..xs => e</code>, suitably
+abstracting <code>e</code> and the types in <code>xs</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">One or more equations did not get rendered due to their size.</li>
@@ -3420,7 +3460,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.mkLetFVars">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L490-L491">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L509-L510">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3449,7 +3489,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.mkArrow">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L493-L494">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L513-L514">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3462,7 +3502,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <span class="fn">(b : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p>Creates the expression <code>d → b</code></p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -3476,7 +3516,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.mkFunUnit">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L497-L498">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L517-L518">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3501,7 +3541,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.elimMVarDeps">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L500-L501">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L520-L521">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3529,7 +3569,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.withConfig">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L503-L504">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L523-L524">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -3568,7 +3608,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.withTrackingZeta">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L506-L507">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L526-L527">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -3607,7 +3647,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.withoutProofIrrelevance">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L509-L510">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L529-L530">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -3646,7 +3686,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.withTransparency">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L512-L513">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L532-L533">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -3685,7 +3725,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.withDefault">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L515-L516">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L535-L536">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -3725,7 +3765,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.withReducible">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L518-L519">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L538-L539">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -3765,7 +3805,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.withReducibleAndInstances">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L521-L522">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L541-L542">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -3805,7 +3845,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.withAtLeastTransparency">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L524-L530">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L544-L550">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -3846,7 +3886,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.withAssignableSyntheticOpaque">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L533-L534">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L553-L554">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -3885,7 +3925,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.savingCache">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L541-L542">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L561-L562">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -3923,7 +3963,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.getTheoremInfo">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L544-L548">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L564-L568">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3948,7 +3988,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.saveAndResetSynthInstanceCache">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L600-L603">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L620-L623">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3968,7 +4008,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.restoreSynthInstanceCache">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L605-L606">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L625-L626">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -3990,7 +4030,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.resettingSynthInstanceCache">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L613-L614">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L633-L634">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -4028,7 +4068,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.resettingSynthInstanceCacheWhen">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L616-L617">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L636-L637">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -4070,7 +4110,7 @@ canUnfold? : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Option">O
 <div class="decl" id="Lean.Meta.withNewLocalInstance">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L633-L634">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L653-L654">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4113,7 +4153,7 @@ It resets the type class cache using <code><a href="/Unicode.lean/Lean/Meta/Basi
 <div class="decl" id="Lean.Meta.isClass?">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L756-L757">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L776-L777">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4136,7 +4176,7 @@ It resets the type class cache using <code><a href="/Unicode.lean/Lean/Meta/Basi
 <div class="decl" id="Lean.Meta.withNewLocalInstances">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L762-L763">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L782-L783">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4177,7 +4217,7 @@ It resets the type class cache using <code><a href="/Unicode.lean/Lean/Meta/Basi
 <div class="decl" id="Lean.Meta.forallTelescope">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L772-L773">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L792-L793">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4220,7 +4260,7 @@ execute <code>k</code> with updated local context, and make sure the cache is re
 <div class="decl" id="Lean.Meta.forallTelescopeReducing">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L781-L782">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L801-L802">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4262,7 +4302,7 @@ it reduces <code>A</code> and continues bulding the telescope if it is a <code>f
 <div class="decl" id="Lean.Meta.forallBoundedTelescope">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L790-L791">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L810-L811">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4306,7 +4346,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.lambdaLetTelescope">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L818-L819">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L838-L839">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4330,16 +4370,16 @@ it reaches size <code>maxFVars</code>.</p><details>
 <span class="fn">{α : <span class="fn">Type</span>}</span></span>
 </span>
 <span class="decl_args">
-<span class="fn">(type : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(k : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> → <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><span class="fn">n</span> <span class="fn">α</span></span></span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><span class="fn">n</span> <span class="fn">α</span></span></div></div>
-<p>Similar to <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallTelescope">forallTelescope</a></code> but for lambda and let expressions.</p><details>
+<p>Similar to <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.lambdaTelescope">lambdaTelescope</a></code> but for lambda and let expressions.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.lambdaLetTelescope">Lean.Meta.lambdaLetTelescope</a> <span class="fn">type</span> <span class="fn">k</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.map2MetaM">Lean.Meta.map2MetaM</a> (<span class="fn">fun {α} <span class="fn">k</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#_private.Lean.Meta.Basic.0.Lean.Meta.lambdaTelescopeImp">Lean.Meta.lambdaTelescopeImp</a> <span class="fn">type</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <span class="fn">k</span></span></span>) <span class="fn">k</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.lambdaLetTelescope">Lean.Meta.lambdaLetTelescope</a> <span class="fn">e</span> <span class="fn">k</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.map2MetaM">Lean.Meta.map2MetaM</a> (<span class="fn">fun {α} <span class="fn">k</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#_private.Lean.Meta.Basic.0.Lean.Meta.lambdaTelescopeImp">Lean.Meta.lambdaTelescopeImp</a> <span class="fn">e</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a> <span class="fn">k</span></span></span>) <span class="fn">k</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -4347,7 +4387,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.lambdaTelescope">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L822-L823">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L845-L846">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4371,16 +4411,18 @@ it reaches size <code>maxFVars</code>.</p><details>
 <span class="fn">{α : <span class="fn">Type</span>}</span></span>
 </span>
 <span class="decl_args">
-<span class="fn">(type : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
+<span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">
 <span class="fn">(k : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> → <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><span class="fn">n</span> <span class="fn">α</span></span></span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><span class="fn">n</span> <span class="fn">α</span></span></div></div>
-<p>Similar to <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallTelescope">forallTelescope</a></code> but for lambda expressions.</p><details>
+<p>Given <code>e</code> of the form <code>fun ..xs => A</code>, execute <code>k xs A</code>.
+This combinator will declare local declarations, create free variables for them,
+execute <code>k</code> with updated local context, and make sure the cache is restored after executing <code>k</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.lambdaTelescope">Lean.Meta.lambdaTelescope</a> <span class="fn">type</span> <span class="fn">k</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.map2MetaM">Lean.Meta.map2MetaM</a> (<span class="fn">fun {α} <span class="fn">k</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#_private.Lean.Meta.Basic.0.Lean.Meta.lambdaTelescopeImp">Lean.Meta.lambdaTelescopeImp</a> <span class="fn">type</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <span class="fn">k</span></span></span>) <span class="fn">k</span></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.lambdaTelescope">Lean.Meta.lambdaTelescope</a> <span class="fn">e</span> <span class="fn">k</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.map2MetaM">Lean.Meta.map2MetaM</a> (<span class="fn">fun {α} <span class="fn">k</span> =&gt <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#_private.Lean.Meta.Basic.0.Lean.Meta.lambdaTelescopeImp">Lean.Meta.lambdaTelescopeImp</a> <span class="fn">e</span> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a> <span class="fn">k</span></span></span>) <span class="fn">k</span></span></span></li>
 </ul>
 </details>
 </div>
@@ -4388,7 +4430,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.getParamNames">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L826-L830">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L849-L853">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4399,7 +4441,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <span class="fn">(declName : <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#Lean.Name">Lean.Name</a></span>)</span></div></div>
-<p>Return the parameter names for the givel global declaration.</p><details>
+<p>Return the parameter names for the given global declaration.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">One or more equations did not get rendered due to their size.</li>
@@ -4410,7 +4452,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.forallMetaTelescope">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L862-L863">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L891-L892">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4423,7 +4465,13 @@ it reaches size <code>maxFVars</code>.</p><details>
 <span class="fn">(kind : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind">Lean.MetavarKind</a> <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind.natural">Lean.MetavarKind.natural</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo</a></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span>)</span></div></div>
-<p>Similar to <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallTelescope">forallTelescope</a></code>, but creates metavariables instead of free variables.</p><details>
+<p>Given <code>e</code> of the form <code>forall ..xs, A</code>, this combinator will create a new
+metavariable for each <code>x</code> in <code>xs</code> and instantiate <code>A</code> with these.
+Returns a product containing</p><ul>
+<li>the new metavariables</li>
+<li>the binder info for the <code>xs</code></li>
+<li>the instantiated <code>A</code></li>
+</ul><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -4435,7 +4483,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.forallMetaTelescopeReducing">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L866-L867">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L896-L897">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4450,7 +4498,8 @@ it reaches size <code>maxFVars</code>.</p><details>
 <span class="fn">(kind : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind">Lean.MetavarKind</a> <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind.natural">Lean.MetavarKind.natural</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo</a></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span>)</span></div></div>
-<p>Similar to <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallTelescopeReducing">forallTelescopeReducing</a></code>, but creates metavariables instead of free variables.</p><details>
+<p>Similar to <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallMetaTelescope">forallMetaTelescope</a></code>, but if <code>e = forall ..xs, A</code>
+it will reduce <code>A</code> to construct further mvars.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -4462,7 +4511,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.forallMetaBoundedTelescope">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L870-L871">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L901-L902">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4477,7 +4526,8 @@ it reaches size <code>maxFVars</code>.</p><details>
 <span class="fn">(kind : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind">Lean.MetavarKind</a> <a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarKind.natural">Lean.MetavarKind.natural</a></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> (<span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.BinderInfo">Lean.BinderInfo</a></span> <a href="/Unicode.lean/Init/Prelude.html#Prod">×</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></span>)</span></div></div>
-<p>Similar to <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallMetaTelescopeReducing">forallMetaTelescopeReducing</a></code>, stops constructing the telescope when it reaches size <code>maxMVars</code>.</p><details>
+<p>Similar to <code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.forallMetaTelescopeReducing">forallMetaTelescopeReducing</a></code>, stops
+constructing the telescope when it reaches size <code>maxMVars</code>.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -4489,7 +4539,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.lambdaMetaTelescope">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L874-L891">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L905-L922">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4514,7 +4564,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.lambdaMetaTelescope.process">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L877-L891">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L908-L922">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -4538,7 +4588,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.withLocalDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L906-L907">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L939-L940">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4571,7 +4621,8 @@ it reaches size <code>maxFVars</code>.</p><details>
 <span class="fn">(k : <span class="fn"><a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a> → <span class="fn"><span class="fn">n</span> <span class="fn">α</span></span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><span class="fn">n</span> <span class="fn">α</span></span></div></div>
-<details>
+<p>Create a free variable <code>x</code> with name, binderInfo and type, add it to the context and run in <code>k</code>.
+Then revert the context.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -4583,7 +4634,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.withLocalDeclD">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L909-L910">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L942-L943">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4626,7 +4677,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.withLocalDecls">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L912-L924">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L952-L964">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4659,7 +4710,13 @@ it reaches size <code>maxFVars</code>.</p><details>
 <span class="fn">(k : <span class="fn"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span> → <span class="fn"><span class="fn">n</span> <span class="fn">α</span></span></span>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><span class="fn">n</span> <span class="fn">α</span></span></div></div>
-<details>
+<p>Append an array of free variables <code>xs</code> to the local context and execute <code>k xs</code>.
+declInfos takes the form of an array consisting of:</p><ul>
+<li>the name of the variable</li>
+<li>the binder info of the variable</li>
+<li>a type constructor for the variable, where the array consists of all of the free variables
+defined prior to this one. This is needed because the type of the variable may depend on prior variables.</li>
+</ul><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -4671,7 +4728,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.withLocalDecls.loop">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L919-L924">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L959-L964">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -4711,7 +4768,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.withLocalDeclsD">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L926-L928">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L966-L968">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4755,7 +4812,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.withNewBinderInfos">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L935-L936">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L975-L976">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4796,7 +4853,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.withLetDecl">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L946-L947">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L986-L987">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4841,7 +4898,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.withLocalInstancesImp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L949-L959">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L989-L999">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4869,7 +4926,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.withLocalInstances">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L962-L963">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1002-L1003">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4908,7 +4965,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.withExistingLocalDecls">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L972-L973">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1012-L1013">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4947,7 +5004,7 @@ it reaches size <code>maxFVars</code>.</p><details>
 <div class="decl" id="Lean.Meta.withNewMCtxDepth">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L986-L987">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1026-L1027">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -4985,7 +5042,7 @@ and restore saved data.</p><details>
 <div class="decl" id="Lean.Meta.withLCtx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L997-L998">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1037-L1038">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5026,7 +5083,7 @@ and restore saved data.</p><details>
 <div class="decl" id="Lean.Meta.withMVarContext">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1008-L1009">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1048-L1049">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5067,7 +5124,7 @@ different from the current ones.</p><details>
 <div class="decl" id="Lean.Meta.withMCtx">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1016-L1017">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1056-L1057">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5106,7 +5163,7 @@ different from the current ones.</p><details>
 <div class="decl" id="Lean.Meta.approxDefEq">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1023-L1024">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1063-L1064">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -5144,7 +5201,7 @@ different from the current ones.</p><details>
 <div class="decl" id="Lean.Meta.fullApproxDefEq">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1036-L1037">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1076-L1077">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -5187,7 +5244,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.normalizeLevel">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1039-L1041">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1079-L1081">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5212,7 +5269,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.assignLevelMVar">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1043-L1044">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1083-L1084">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5237,7 +5294,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.whnfR">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1046-L1047">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1087-L1088">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5248,7 +5305,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p><code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.whnf">whnf</a></code> with reducible transparency.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -5260,7 +5317,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.whnfD">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1049-L1050">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1091-L1092">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5271,7 +5328,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p><code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.whnf">whnf</a></code> with default transparency.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -5283,7 +5340,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.whnfI">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1052-L1053">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1095-L1096">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5294,7 +5351,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <span class="fn">(e : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a></span></div></div>
-<details>
+<p><code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.whnf">whnf</a></code> with instances transparency.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -5306,7 +5363,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.setInlineAttribute">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1055-L1059">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1098-L1102">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5330,7 +5387,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.instantiateForall">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1071-L1072">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1114-L1115">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5355,7 +5412,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.instantiateLambda">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1085-L1086">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1128-L1129">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5380,7 +5437,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.dependsOn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1089-L1090">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1132-L1133">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5404,10 +5461,37 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 </details>
 </div>
 </div>
+<div class="decl" id="Lean.Meta.localDeclDependsOn">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1136-L1137">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.localDeclDependsOn">Lean.Meta.localDeclDependsOn</a>
+</span>
+<span class="decl_args">
+<span class="fn">(localDecl : <a href="/Unicode.lean/Lean/LocalContext.html#Lean.LocalDecl">Lean.LocalDecl</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(fvarId : <a href="/Unicode.lean/Lean/Expr.html#Lean.FVarId">Lean.FVarId</a>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></div></div>
+<p>Return true iff <code>e</code> depends on the free variable <code>fvarId</code></p><details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.localDeclDependsOn">Lean.Meta.localDeclDependsOn</a> <span class="fn">localDecl</span> <span class="fn">fvarId</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">do
+  let a ← <span class="fn">Lean.getMCtx</span>
+  <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> (<span class="fn"><a href="/Unicode.lean/Lean/MetavarContext.html#Lean.MetavarContext.localDeclDependsOn">Lean.MetavarContext.localDeclDependsOn</a> <span class="fn">a</span> <span class="fn">localDecl</span> <span class="fn">fvarId</span></span>)</span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="decl" id="Lean.Meta.dependsOnPred">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1093-L1094">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1140-L1141">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5436,7 +5520,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.localDeclDependsOnPred">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1097-L1098">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1144-L1145">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5465,7 +5549,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.ppExpr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1100-L1102">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1147-L1149">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5487,7 +5571,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.orElse">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1104-L1106">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1151-L1153">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -5521,7 +5605,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.instOrElseMetaM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1108-L1108">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1155-L1155">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -5546,7 +5630,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.instAlternativeMetaM">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1110-L1112">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1157-L1159">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -5567,7 +5651,7 @@ solve <code>[Pure (fun _ => <a href="/Unicode.lean/Init/System/IO.html#IO">IO</a
 <div class="decl" id="Lean.Meta.orelseMergeErrors">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1137-L1140">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1184-L1187">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -5616,7 +5700,7 @@ The default <code>mergeMsg</code> combines error messages using <code>Format.lin
 <div class="decl" id="Lean.Meta.mapErrorImp">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1143-L1148">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1190-L1195">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5648,7 +5732,7 @@ The default <code>mergeMsg</code> combines error messages using <code>Format.lin
 <div class="decl" id="Lean.Meta.mapError">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1150-L1151">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1197-L1198">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -5690,7 +5774,7 @@ The default <code>mergeMsg</code> combines error messages using <code>Format.lin
 <div class="decl" id="Lean.Meta.sortFVarIds">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1156-L1163">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1203-L1210">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5713,7 +5797,7 @@ If a free variable is not in the local context, we use their id.</p><details>
 <div class="decl" id="Lean.Meta.isInductivePredicate">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1167-L1174">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1214-L1221">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5735,7 +5819,7 @@ If a free variable is not in the local context, we use their id.</p><details>
 <div class="decl" id="Lean.Meta.isListLevelDefEqAux">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1177-L1180">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1224-L1227">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5752,7 +5836,7 @@ If a free variable is not in the local context, we use their id.</p><details>
 <li class="equation">
 <span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.isListLevelDefEqAux">Lean.Meta.isListLevelDefEqAux</a> (<span class="fn"><span class="fn">u</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">us</span></span>) (<span class="fn"><span class="fn">v</span> <a href="/Unicode.lean/Init/Prelude.html#List.cons">::</a> <span class="fn">vs</span></span>)</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a>   (<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.isLevelDefEqAux">Lean.Meta.isLevelDefEqAux</a> <span class="fn">u</span> <span class="fn">v</span></span> <a href="/Unicode.lean/Init/Control/Basic.html#andM">&lt&amp&amp&gt</a> <span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.isListLevelDefEqAux">Lean.Meta.isListLevelDefEqAux</a> <span class="fn">us</span> <span class="fn">vs</span></span></span>)</span></li>
 <li class="equation">
-<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.isListLevelDefEqAux">Lean.Meta.isListLevelDefEqAux</a> <span class="fn">x</span> <span class="fn">x</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span></span></li>
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.isListLevelDefEqAux">Lean.Meta.isListLevelDefEqAux</a> <span class="fn">_fun_discr</span> <span class="fn">_fun_discr</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Pure.pure">pure</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.false">false</a></span></span></li>
 </ul>
 </details>
 </div>
@@ -5760,7 +5844,7 @@ If a free variable is not in the local context, we use their id.</p><details>
 <div class="decl" id="Lean.Meta.getResetPostponed">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1185-L1188">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1232-L1235">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5780,7 +5864,7 @@ If a free variable is not in the local context, we use their id.</p><details>
 <div class="decl" id="Lean.Meta.mkLevelStuckErrorMessage">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1213-L1214">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1260-L1261">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5803,7 +5887,7 @@ If a free variable is not in the local context, we use their id.</p><details>
 <div class="decl" id="Lean.Meta.mkLevelErrorMessage">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1216-L1217">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1263-L1264">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5826,7 +5910,7 @@ If a free variable is not in the local context, we use their id.</p><details>
 <div class="decl" id="Lean.Meta.processPostponed">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1230-L1252">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1278-L1300">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5850,7 +5934,7 @@ If a free variable is not in the local context, we use their id.</p><details>
 <div class="decl" id="Lean.Meta.processPostponed.loop">
 <div class="constant">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1235-L1251">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1283-L1299">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">partial def</span>
@@ -5868,7 +5952,7 @@ If a free variable is not in the local context, we use their id.</p><details>
 <div class="decl" id="Lean.Meta.checkpointDefEq">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1262-L1279">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1310-L1327">source</a>
 </div>
 <div class="attributes">@[specialize]</div>
 <div class="decl_header">
@@ -5896,7 +5980,7 @@ are not sure whether <code>x</code> really succeeded or not.</p><details>
 <div class="decl" id="Lean.Meta.isLevelDefEq">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1281-L1285">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1329-L1333">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5920,7 +6004,7 @@ are not sure whether <code>x</code> really succeeded or not.</p><details>
 <div class="decl" id="Lean.Meta.isExprDefEq">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1287-L1291">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1335-L1339">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5944,7 +6028,7 @@ are not sure whether <code>x</code> really succeeded or not.</p><details>
 <div class="decl" id="Lean.Meta.isDefEq">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1293-L1294">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1342-L1343">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -5958,7 +6042,7 @@ are not sure whether <code>x</code> really succeeded or not.</p><details>
 <span class="fn">(s : <a href="/Unicode.lean/Lean/Expr.html#Lean.Expr">Lean.Expr</a>)</span></span>
 <span class="decl_args">:</span>
 <div class="decl_type"><span class="fn"><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.MetaM">Lean.MetaM</a> <a href="/Unicode.lean/Init/Prelude.html#Bool">Bool</a></span></div></div>
-<details>
+<p>Determines whether two expressions are definitionally equal to each other.</p><details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
@@ -5970,7 +6054,7 @@ are not sure whether <code>x</code> really succeeded or not.</p><details>
 <div class="decl" id="Lean.Meta.isExprDefEqGuarded">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1296-L1297">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1345-L1346">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -5994,7 +6078,7 @@ are not sure whether <code>x</code> really succeeded or not.</p><details>
 <div class="decl" id="Lean.Meta.isDefEqGuarded">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1299-L1300">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1348-L1349">source</a>
 </div>
 <div class="attributes">@[inline]</div>
 <div class="decl_header">
@@ -6020,7 +6104,7 @@ are not sure whether <code>x</code> really succeeded or not.</p><details>
 <div class="decl" id="Lean.Meta.isDefEqNoConstantApprox">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1302-L1303">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1351-L1352">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -6045,7 +6129,7 @@ are not sure whether <code>x</code> really succeeded or not.</p><details>
 <div class="decl" id="Lean.Meta.etaExpand">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/d2cc5b4a8325f3da0ceec551769920b2eab4ed70/src/Lean/Meta/Basic.lean#L1313-L1314">source</a>
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Lean/Meta/Basic.lean#L1362-L1363">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -6249,6 +6333,9 @@ Example:</p><pre><code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.eta
 <a href="/Unicode.lean/Init/Data/ToString/Macro.html">Init.Data.ToString.Macro</a>
 </div>
 </details>
+<div class="nav_link">
+<a href="/Unicode.lean/Init/Data/AC.html">Init.Data.AC</a>
+</div>
 <div class="nav_link">
 <a href="/Unicode.lean/Init/Data/Basic.html">Init.Data.Basic</a>
 </div>
@@ -6665,6 +6752,9 @@ Example:</p><pre><code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.eta
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Fix.html">Lean.Elab.PreDefinition.WF.Fix</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Ite.html">Lean.Elab.PreDefinition.WF.Ite</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/PreDefinition/WF/Main.html">Lean.Elab.PreDefinition.WF.Main</a>
 </div>
 <div class="nav_link">
@@ -6738,6 +6828,9 @@ Example:</p><pre><code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.eta
 <a href="/Unicode.lean/Lean/Elab/Tactic/BuiltinTactic.html">Lean.Elab.Tactic.BuiltinTactic</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/Tactic/Cache.html">Lean.Elab.Tactic.Cache</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Tactic/Config.html">Lean.Elab.Tactic.Config</a>
 </div>
 <div class="nav_link">
@@ -6791,6 +6884,9 @@ Example:</p><pre><code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.eta
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/AuxDef.html">Lean.Elab.AuxDef</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Elab/AuxDiscr.html">Lean.Elab.AuxDiscr</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Elab/Binders.html">Lean.Elab.Binders</a>
@@ -6945,6 +7041,9 @@ Example:</p><pre><code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.eta
 <a href="/Unicode.lean/Lean/Meta/Match/MatchEqs.html">Lean.Meta.Match.MatchEqs</a>
 </div>
 <div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Match/MatchEqsExt.html">Lean.Meta.Match.MatchEqsExt</a>
+</div>
+<div class="nav_link">
 <a href="/Unicode.lean/Lean/Meta/Match/MatchPatternAttr.html">Lean.Meta.Match.MatchPatternAttr</a>
 </div>
 <div class="nav_link">
@@ -6956,7 +7055,13 @@ Example:</p><pre><code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.eta
 </details>
 <details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic.html">Lean.Meta.Tactic</a>
-</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
+</summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/AC.html">
+<summary><a href="/Unicode.lean/Lean/Meta/Tactic/AC.html">Lean.Meta.Tactic.AC</a>
+</summary><div class="nav_link">
+<a href="/Unicode.lean/Lean/Meta/Tactic/AC/Main.html">Lean.Meta.Tactic.AC.Main</a>
+</div>
+</details>
+<details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith.html">Lean.Meta.Tactic.LinearArith</a>
 </summary><details class="nav_sect" data-path="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">
 <summary><a href="/Unicode.lean/Lean/Meta/Tactic/LinearArith/Nat.html">Lean.Meta.Tactic.LinearArith.Nat</a>
@@ -7370,6 +7475,9 @@ Example:</p><pre><code><a href="/Unicode.lean/Lean/Meta/Basic.html#Lean.Meta.eta
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/ForEachExpr.html">Lean.Util.ForEachExpr</a>
+</div>
+<div class="nav_link">
+<a href="/Unicode.lean/Lean/Util/HasConstCache.html">Lean.Util.HasConstCache</a>
 </div>
 <div class="nav_link">
 <a href="/Unicode.lean/Lean/Util/MonadBacktrack.html">Lean.Util.MonadBacktrack</a>
