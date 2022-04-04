@@ -14,20 +14,8 @@ namespace Unicode
 /-- Includes the ArabicShaping.txt string. -/
 def arabicShapingStr := include_str "../UCD/ArabicShaping.txt"
 
-/-- Includes the NamedSequences.txt string. -/
-def namedSequencesStr := include_str "../UCD/NamedSequences.txt"
-
 /-- Includes the BidiBrackets.txt string. -/
 def bidiBracketsStr := include_str "../UCD/BidiBrackets.txt"
-
-/-- Includes the NamedSequencesProv.txt string. -/
-def namedSequencesProvStr := include_str "../UCD/NamedSequencesProv.txt"
-
-/-- Includes the BidiCharacterTest.txt string. -/
-def bidiCharacterTestStr := include_str "../UCD/BidiCharacterTest.txt"
-
-/-- Includes the NamesList.txt string. -/
-def namesListStr := include_str "../UCD/NamesList.txt"
 
 /-- Includes the BidiMirroring.txt string. -/
 def bidiMirroringStr := include_str "../UCD/BidiMirroring.txt"
@@ -35,20 +23,11 @@ def bidiMirroringStr := include_str "../UCD/BidiMirroring.txt"
 /-- Includes the NormalizationCorrections.txt string. -/
 def normalizationCorrectionsStr := include_str "../UCD/NormalizationCorrections.txt"
 
-/-- Includes the BidiTest.txt string. -/
-def bidiTestStr := include_str "../UCD/BidiTest.txt"
-
-/-- Includes the NormalizationTest.txt string. -/
-def normalizationTestStr := include_str "../UCD/NormalizationTest.txt"
-
 /-- Includes the Blocks.txt string. -/
 def blocksStr := include_str "../UCD/Blocks.txt"
 
 /-- Includes the NushuSources.txt string. -/
 def nushuSourcesStr := include_str "../UCD/NushuSources.txt"
-
-/-- Includes the CJKRadicals.txt string. -/
-def cjkRadicalsStr := include_str "../UCD/CJKRadicals.txt"
 
 /-- Includes the PropList.txt string. -/
 def propListStr := include_str "../UCD/PropList.txt"
@@ -56,15 +35,9 @@ def propListStr := include_str "../UCD/PropList.txt"
 /-- Includes the CaseFolding.txt string. -/
 def caseFoldingStr := include_str "../UCD/CaseFolding.txt"
 
-/-- Includes the PropertyAliases.txt string. -/
-def propertyAliasesStr := include_str "../UCD/PropertyAliases.txt"
-
 /-- Includes the CompositionExclusions.txt string. -/
 def compositionExclusionsStr := include_str "../UCD/CompositionExclusions.txt"
   
-/-- Includes the PropertyValueAliases.txt string. -/
-def propertyValueAliasesStr := include_str "../UCD/PropertyValueAliases.txt"
-
 /-- Includes the DerivedAge.txt string. -/
 def derivedAgeStr := include_str "../UCD/DerivedAge.txt"
 
@@ -86,29 +59,14 @@ def specialCasingStr := include_str "../UCD/SpecialCasing.txt"
 /-- Includes the EastAsianWidth.txt string. -/
 def eastAsianWidthStr := include_str "../UCD/EastAsianWidth.txt"
 
-/-- Includes the StandardizedVariants.txt string. -/
-def standardizedVariantsStr := include_str "../UCD/StandardizedVariants.txt"
-
-/-- Includes the EmojiSources.txt string. -/
-def emojiSourcesStr := include_str "../UCD/EmojiSources.txt"
-
-/-- Includes the TangutSources.txt string. -/
-def tangutSourcesStr := include_str "../UCD/TangutSources.txt"
-
 /-- Includes the EquivalentUnifiedIdeograph.txt string. -/
 def equivalentUnifiedIdeographStr := include_str "../UCD/EquivalentUnifiedIdeograph.txt"
-
-/-- Includes the USourceData.txt string. -/
-def uSourceDataStr := include_str "../UCD/USourceData.txt"
 
 /-- Includes the HangulSyllableType.txt string. -/
 def hangulSyllableTypeStr := include_str "../UCD/HangulSyllableType.txt"
 
 /-- Includes the UnicodeData.txt string. See `unicodeDataMap`. -/
 def unicodeDataStr := include_str "../UCD/UnicodeData.txt"
-
-/-- Includes the Index.txt string. -/
-def indexStr := include_str "../UCD/Index.txt"
 
 /-- Includes the IndicPositionalCategory.txt string. -/
 def indicPositionalCategoryStr := include_str "../UCD/IndicPositionalCategory.txt"
@@ -135,23 +93,11 @@ def nameAliasesStr := include_str "../UCD/NameAliases.txt"
 /-- Includes the GraphemeBreakProperty.txt string. -/
 def graphemeBreakPropertyStr := include_str "../UCD/auxiliary/GraphemeBreakProperty.txt"
 
-/-- Includes the GraphemeBreakTest.txt string. -/
-def graphemeBreakTestStr := include_str "../UCD/auxiliary/GraphemeBreakTest.txt"
-
 /-- Includes the WordBreakProperty.txt string. -/
 def wordBreakPropertyStr := include_str "../UCD/auxiliary/WordBreakProperty.txt"
   
-/-- Includes the LineBreakTest.txt string. -/
-def lineBreakTestStr := include_str "../UCD/auxiliary/LineBreakTest.txt"
-
-/-- Includes the WordBreakTest.txt string. -/
-def wordBreakTestStr := include_str "../UCD/auxiliary/WordBreakTest.txt"
-
 /-- Includes the SentenceBreakProperty.txt string. -/
 def sentenceBreakPropertyStr := include_str "../UCD/auxiliary/SentenceBreakProperty.txt"
-
-/-- Includes the SentenceBreakTest.txt string. -/
-def sentenceBreakTestStr := include_str "../UCD/auxiliary/SentenceBreakTest.txt"
 
 /-!
   ### Emoji Subdirectory
@@ -159,9 +105,6 @@ def sentenceBreakTestStr := include_str "../UCD/auxiliary/SentenceBreakTest.txt"
 
 /-- Includes the emoji-data.txt string. -/
 def emojiDataStr := include_str "../UCD/emoji/emoji-data.txt"
-
-/-- Includes the emoji-variation-sequences.txt string. -/
-def emojiVariationSequencesStr := include_str "../UCD/emoji/emoji-variation-sequences.txt"
 
 /-!
   ### Extracted Subdirectory
@@ -245,7 +188,7 @@ private def decodeHex! (s : String) : Nat :=
     | '5' => 5 | '6' => 6 | '7' => 7 | '8' => 8 | '9' => 9
     | 'a' => 10 | 'b' => 11 | 'c' => 12 | 'd' => 13 | 'e' => 14 | 'f' => 15
     | 'A' => 10 | 'B' => 11 | 'C' => 12 | 'D' => 13 | 'E' => 14 | 'F' => 15
-    | _ => panic! "Invalid hex digit"
+    | c => panic! s!"Invalid hex digit {c}"
     foldlHexDigits acc d := 16 * acc + d
 
 /-- Make `Char` `Hashable` as key of `HashMap`. -/
@@ -254,14 +197,14 @@ instance : Hashable Char := ⟨ λ c => String.hash $ toString c ⟩
 def parseStrToMapFn (s : String) (unit : Unit) : HashMap Char (List String)  := Id.run do
   let mut rangeStarts := HashMap.empty
   let mut result := .empty
-  for line in unicodeDataStr.splitOn "\n" |>.filterMap lineCleanup do
+  for line in s.splitOn "\n" |>.filterMap lineCleanup do
     let splits := line.splitOn ";" |>.map (·.splitOn "\t") |>.join |>.map String.trim
-    let first := splits.head!
+    let first := splits.head! |>.replace "U+" ""
     -- range
     if first.contains '.' then
-      let splits := first.splitOn "."
-      let start := splits.head!.toNat!
-      let stop := splits.getLast!.toNat!
+      let splits := first.splitOn ".."
+      let start := decodeHex! splits.head!
+      let stop := decodeHex! splits.getLast!
       for val in [start:(stop+1)] do
         result := result.insert (.ofNat val) (splits.tail!)
     -- mutiple
@@ -270,18 +213,22 @@ def parseStrToMapFn (s : String) (unit : Unit) : HashMap Char (List String)  := 
       for val in splits do
         result := result.insert (.ofNat $ decodeHex! val) (splits.tail!)
     else
-      let second := splits.get! 1
-      -- backward range start
-      if second.endsWith ", First>" then
-        let name := second |>.replace ", First>" "" |>.replace "<" ""
-        rangeStarts := rangeStarts.insert name (decodeHex! first)
-      -- backward range end
-      else if second.endsWith ", Last>" then
-        let name := second |>.replace ", Last>" "" |>.replace "<" ""
-        let start := rangeStarts.find! name
-        let stop := decodeHex! first
-        for val in [start:(stop+1)] do
-          result := result.insert (.ofNat val) (splits.tail!)
+      if let some second := splits.get? 1 then
+        -- backward range start
+        if second.endsWith ", First>" then
+          let name := second |>.replace ", First>" "" |>.replace "<" ""
+          rangeStarts := rangeStarts.insert name (decodeHex! first)
+        -- backward range end
+        else if second.endsWith ", Last>" then
+          let name := second |>.replace ", Last>" "" |>.replace "<" ""
+          let start := rangeStarts.find! name
+          let stop := decodeHex! first
+          let newTail := name::splits.tail!.tail!
+          for val in [start:(stop+1)] do
+            result := result.insert (.ofNat val) newTail
+        -- single
+        else
+          result := result.insert (.ofNat $ decodeHex! first) (splits.tail!)
       -- single
       else
         result := result.insert (.ofNat $ decodeHex! first) (splits.tail!)
@@ -300,20 +247,8 @@ where
 /-- Includes the ArabicShaping.txt data. -/
 def arabicShapingMap := Thunk.mk $ parseStrToMapFn arabicShapingStr
 
-/-- Includes the NamedSequences.txt data. -/
-def namedSequencesMap := Thunk.mk $ parseStrToMapFn namedSequencesStr
-
 /-- Includes the BidiBrackets.txt data. -/
 def bidiBracketsMap := Thunk.mk $ parseStrToMapFn bidiBracketsStr
-
-/-- Includes the NamedSequencesProv.txt data. -/
-def namedSequencesProvMap := Thunk.mk $ parseStrToMapFn namedSequencesProvStr
-
-/-- Includes the BidiCharacterTest.txt data. -/
-def bidiCharacterTestMap := Thunk.mk $ parseStrToMapFn bidiCharacterTestStr
-
-/-- Includes the NamesList.txt data. -/
-def namesListMap := Thunk.mk $ parseStrToMapFn namesListStr
 
 /-- Includes the BidiMirroring.txt data. -/
 def bidiMirroringMap := Thunk.mk $ parseStrToMapFn bidiMirroringStr
@@ -321,20 +256,11 @@ def bidiMirroringMap := Thunk.mk $ parseStrToMapFn bidiMirroringStr
 /-- Includes the NormalizationCorrections.txt data. -/
 def normalizationCorrectionsMap := Thunk.mk $ parseStrToMapFn normalizationCorrectionsStr
 
-/-- Includes the BidiTest.txt data. -/
-def bidiTestMap := Thunk.mk $ parseStrToMapFn bidiTestStr
-
-/-- Includes the NormalizationTest.txt data. -/
-def normalizationTestMap := Thunk.mk $ parseStrToMapFn normalizationTestStr
-
 /-- Includes the Blocks.txt data. -/
 def blocksMap := Thunk.mk $ parseStrToMapFn blocksStr
 
 /-- Includes the NushuSources.txt data. -/
 def nushuSourcesMap := Thunk.mk $ parseStrToMapFn nushuSourcesStr
-
-/-- Includes the CJKRadicals.txt data. -/
-def cjkRadicalsMap := Thunk.mk $ parseStrToMapFn cjkRadicalsStr
 
 /-- Includes the PropList.txt data. -/
 def propListMap := Thunk.mk $ parseStrToMapFn propListStr
@@ -342,15 +268,9 @@ def propListMap := Thunk.mk $ parseStrToMapFn propListStr
 /-- Includes the CaseFolding.txt data. -/
 def caseFoldingMap := Thunk.mk $ parseStrToMapFn caseFoldingStr
 
-/-- Includes the PropertyAliases.txt data. -/
-def propertyAliasesMap := Thunk.mk $ parseStrToMapFn propertyAliasesStr
-
 /-- Includes the CompositionExclusions.txt data. -/
 def compositionExclusionsMap := Thunk.mk $ parseStrToMapFn compositionExclusionsStr
   
-/-- Includes the PropertyValueAliases.txt data. -/
-def propertyValueAliasesMap := Thunk.mk $ parseStrToMapFn propertyValueAliasesStr
-
 /-- Includes the DerivedAge.txt data. -/
 def derivedAgeMap := Thunk.mk $ parseStrToMapFn derivedAgeStr
 
@@ -372,29 +292,14 @@ def specialCasingMap := Thunk.mk $ parseStrToMapFn specialCasingStr
 /-- Includes the EastAsianWidth.txt data. -/
 def eastAsianWidthMap := Thunk.mk $ parseStrToMapFn eastAsianWidthStr
 
-/-- Includes the StandardizedVariants.txt data. -/
-def standardizedVariantsMap := Thunk.mk $ parseStrToMapFn standardizedVariantsStr
-
-/-- Includes the EmojiSources.txt data. -/
-def emojiSourcesMap := Thunk.mk $ parseStrToMapFn emojiSourcesStr
-
-/-- Includes the TangutSources.txt data. -/
-def tangutSourcesMap := Thunk.mk $ parseStrToMapFn tangutSourcesStr
-
 /-- Includes the EquivalentUnifiedIdeograph.txt data. -/
 def equivalentUnifiedIdeographMap := Thunk.mk $ parseStrToMapFn equivalentUnifiedIdeographStr
-
-/-- Includes the USourceData.txt data. -/
-def uSourceDataMap := Thunk.mk $ parseStrToMapFn uSourceDataStr
 
 /-- Includes the HangulSyllableType.txt data. -/
 def hangulSyllableTypeMap := Thunk.mk $ parseStrToMapFn hangulSyllableTypeStr
 
 /-- Includes the UnicodeData.txt data. See `unicodeDataMap`. -/
 def unicodeDataMap := Thunk.mk $ parseStrToMapFn unicodeDataStr
-
-/-- Includes the Index.txt data. -/
-def indexMap := Thunk.mk $ parseStrToMapFn indexStr
 
 /-- Includes the IndicPositionalCategory.txt data. -/
 def indicPositionalCategoryMap := Thunk.mk $ parseStrToMapFn indicPositionalCategoryStr
@@ -421,23 +326,11 @@ def nameAliasesMap := Thunk.mk $ parseStrToMapFn nameAliasesStr
 /-- Includes the GraphemeBreakProperty.txt data. -/
 def graphemeBreakPropertyMap := Thunk.mk $ parseStrToMapFn graphemeBreakPropertyStr
 
-/-- Includes the GraphemeBreakTest.txt data. -/
-def graphemeBreakTestMap := Thunk.mk $ parseStrToMapFn graphemeBreakTestStr
-
 /-- Includes the WordBreakProperty.txt data. -/
 def wordBreakPropertyMap := Thunk.mk $ parseStrToMapFn wordBreakPropertyStr
   
-/-- Includes the LineBreakTest.txt data. -/
-def lineBreakTestMap := Thunk.mk $ parseStrToMapFn lineBreakTestStr
-
-/-- Includes the WordBreakTest.txt data. -/
-def wordBreakTestMap := Thunk.mk $ parseStrToMapFn wordBreakTestStr
-
 /-- Includes the SentenceBreakProperty.txt data. -/
 def sentenceBreakPropertyMap := Thunk.mk $ parseStrToMapFn sentenceBreakPropertyStr
-
-/-- Includes the SentenceBreakTest.txt data. -/
-def sentenceBreakTestMap := Thunk.mk $ parseStrToMapFn sentenceBreakTestStr
 
 /-!
   ### Emoji Subdirectory
@@ -445,9 +338,6 @@ def sentenceBreakTestMap := Thunk.mk $ parseStrToMapFn sentenceBreakTestStr
 
 /-- Includes the emoji-data.txt data. -/
 def emojiDataMap := Thunk.mk $ parseStrToMapFn emojiDataStr
-
-/-- Includes the emoji-variation-sequences.txt data. -/
-def emojiVariationSequencesMap := Thunk.mk $ parseStrToMapFn emojiVariationSequencesStr
 
 /-!
   ### Extracted Subdirectory
