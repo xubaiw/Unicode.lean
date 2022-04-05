@@ -50,11 +50,11 @@ def main : IO Unit := do
   printSize derivedNumericTypeMap
   printSize derivedGeneralCategoryMap
   printSize derivedNumericValuesMap
-  -- printSize unihanDictionaryIndicesMap -- stack overflow
-  -- printSize unihanOtherMappingsMap -- stack overflow
+  printSize unihanDictionaryIndicesMap -- stack overflow
+  printSize unihanOtherMappingsMap -- stack overflow
   printSize unihanDictionaryLikeDataMap
   printSize unihanRadicalStrokeCountsMap
-  -- printSize unihanIRGSourcesMap -- stack overflow
-  -- printSize unihanReadingsMap -- stack overflow
+  printSize unihanIRGSourcesMap -- stack overflow
+  printSize unihanReadingsMap -- stack overflow
   printSize unihanNumericValuesMap
   printSize unihanVariantsMap

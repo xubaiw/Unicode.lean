@@ -3,6 +3,25 @@ import Std.Data.HashMap
 
 open Std
 
+partial def String.splitOn'Aux (s sep : String) (b : Pos) (i : Pos) (j : Pos) (r : Array String) : Array String :=
+  if s.atEnd i then
+    if sep.atEnd j then
+      r.push (s.extract b (i - j)) |>.push ""
+    else
+      r.push (s.extract b i)
+  else if s.get i == sep.get j then
+    let i := s.next i
+    let j := sep.next j
+    if sep.atEnd j then
+      splitOn'Aux s sep i i 0 <| r.push (s.extract b (i - j))
+    else
+      splitOn'Aux s sep b i j r
+  else
+    splitOn'Aux s sep b (s.next i) 0 r
+
+def String.splitOn' (s : String) (sep : String := " ") : Array String :=
+  if sep == "" then #[s] else splitOn'Aux s sep 0 0 0 #[]
+
 namespace Unicode
 
 /-!
@@ -193,11 +212,12 @@ private def decodeHex! (s : String) : Nat :=
 
 /-- Make `Char` `Hashable` as key of `HashMap`. -/
 instance : Hashable Char := ⟨ λ c => String.hash $ toString c ⟩ 
+
 /-- Parse data file `String` into `HashMap`, the unit in parameter is left for `Thunk`. -/
 def parseStrToMapFn (s : String) (unit : Unit) : HashMap Char (List String)  := Id.run do
   let mut rangeStarts := HashMap.empty
   let mut result := .empty
-  for line in s.splitOn "\n" |>.filterMap lineCleanup do
+  for line in s.splitOn' "\n" |>.filterMap lineCleanup do
     let splits := line.splitOn ";" |>.map (·.splitOn "\t") |>.join |>.map String.trim
     let first := splits.head! |>.replace "U+" ""
     -- range
