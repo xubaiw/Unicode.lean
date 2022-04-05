@@ -459,16 +459,16 @@ Documentation</h1>
 <a class="break_within" href="#instInhabitedProp">instInhabitedProp</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#instInhabitedForInStep">instInhabitedForInStep</a>
+<a class="break_within" href="#instInhabitedPNonScalar">instInhabitedPNonScalar</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#instInhabitedPNonScalar">instInhabitedPNonScalar</a>
+<a class="break_within" href="#instInhabitedTrue">instInhabitedTrue</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#instInhabitedNonScalar">instInhabitedNonScalar</a>
 </div>
 <div class="nav_link">
-<a class="break_within" href="#instInhabitedTrue">instInhabitedTrue</a>
+<a class="break_within" href="#instInhabitedForInStep">instInhabitedForInStep</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#nonempty_of_exists">nonempty_of_exists</a>
@@ -4405,27 +4405,6 @@ rfl : <span class="fn">∀ (a : <span class="fn">α</span>), <span class="fn">(<
 </details>
 </div>
 </div>
-<div class="decl" id="instInhabitedForInStep">
-<div class="instance">
-<div class="gh_link">
-<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Core.lean#L511-L511">source</a>
-</div>
-<div class="decl_header">
-<span class="decl_kind">instance</span>
-<span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Init/Core.html#instInhabitedForInStep">instInhabitedForInStep</a>
-</span>
-<span class="decl_args">:</span>
-<div class="decl_type"><span class="fn">{a : <span class="fn">Type u_1</span>} → <span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <span class="fn">a</span></span>] → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep">ForInStep</a> <span class="fn">a</span></span>)</span></span></span></div></div>
-<details>
-<summary>Equations</summary>
-<ul class="equations">
-<li class="equation">
-<span class="fn"><span class="fn">instInhabitedForInStep</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">default</span></span> }</span></span></li>
-</ul>
-</details>
-</div>
-</div>
 <div class="decl" id="instInhabitedPNonScalar">
 <div class="instance">
 <div class="gh_link">
@@ -4443,6 +4422,27 @@ rfl : <span class="fn">∀ (a : <span class="fn">α</span>), <span class="fn">(<
 <ul class="equations">
 <li class="equation">
 <span class="fn"><a href="/Unicode.lean/Init/Core.html#instInhabitedPNonScalar">instInhabitedPNonScalar</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn"><a href="/Unicode.lean/Init/Core.html#PNonScalar.mk">PNonScalar.mk</a> <span class="fn">default</span></span> }</span></span></li>
+</ul>
+</details>
+</div>
+</div>
+<div class="decl" id="instInhabitedTrue">
+<div class="instance">
+<div class="gh_link">
+<a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Core.lean#L511-L511">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">instance</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Init/Core.html#instInhabitedTrue">instInhabitedTrue</a>
+</span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Init/Prelude.html#True">True</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><a href="/Unicode.lean/Init/Core.html#instInhabitedTrue">instInhabitedTrue</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <a href="/Unicode.lean/Init/Prelude.html#True.intro">True.intro</a> }</span></span></li>
 </ul>
 </details>
 </div>
@@ -4468,7 +4468,7 @@ rfl : <span class="fn">∀ (a : <span class="fn">α</span>), <span class="fn">(<
 </details>
 </div>
 </div>
-<div class="decl" id="instInhabitedTrue">
+<div class="decl" id="instInhabitedForInStep">
 <div class="instance">
 <div class="gh_link">
 <a href="https://github.com/leanprover/lean4/blob/6aee3fb30465da8e0e3df12651832f548cb0159b/src/Init/Core.lean#L511-L511">source</a>
@@ -4476,15 +4476,15 @@ rfl : <span class="fn">∀ (a : <span class="fn">α</span>), <span class="fn">(<
 <div class="decl_header">
 <span class="decl_kind">instance</span>
 <span class="decl_name">
-<a class="break_within" href="/Unicode.lean/Init/Core.html#instInhabitedTrue">instInhabitedTrue</a>
+<a class="break_within" href="/Unicode.lean/Init/Core.html#instInhabitedForInStep">instInhabitedForInStep</a>
 </span>
 <span class="decl_args">:</span>
-<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <a href="/Unicode.lean/Init/Prelude.html#True">True</a></span></div></div>
+<div class="decl_type"><span class="fn">{a : <span class="fn">Type u_1</span>} → <span class="fn">[inst : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> <span class="fn">a</span></span>] → <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Inhabited">Inhabited</a> (<span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep">ForInStep</a> <span class="fn">a</span></span>)</span></span></span></div></div>
 <details>
 <summary>Equations</summary>
 <ul class="equations">
 <li class="equation">
-<span class="fn"><a href="/Unicode.lean/Init/Core.html#instInhabitedTrue">instInhabitedTrue</a> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <a href="/Unicode.lean/Init/Prelude.html#True.intro">True.intro</a> }</span></span></li>
+<span class="fn"><span class="fn">instInhabitedForInStep</span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">{ default := <span class="fn"><a href="/Unicode.lean/Init/Core.html#ForInStep.done">ForInStep.done</a> <span class="fn">default</span></span> }</span></span></li>
 </ul>
 </details>
 </div>

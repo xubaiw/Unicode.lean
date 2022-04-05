@@ -30,7 +30,7 @@ Documentation</h1>
 <a class="break_within" href="#top">Unicode.Includes</a>
 </h3>
 <p class="gh_nav_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean">source</a>
 </p>
 <div class="imports">
 <details>
@@ -61,6 +61,12 @@ Documentation</h1>
 </li>
 </ul>
 </details>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#String.splitOn'Aux">String.splitOn'Aux</a>
+</div>
+<div class="nav_link">
+<a class="break_within" href="#String.splitOn'">String.splitOn'</a>
 </div>
 <div class="nav_link">
 <a class="break_within" href="#Unicode.arabicShapingStr">Unicode.arabicShapingStr</a>
@@ -367,12 +373,63 @@ Documentation</h1>
 </div>
 </nav>
 <main>
+<div class="decl" id="String.splitOn'Aux">
+<div class="constant">
+<div class="gh_link">
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L6-L20">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">partial def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Unicode/Includes.html#String.splitOn'Aux">String.splitOn'Aux</a>
+</span>
+<span class="decl_args">
+<span class="fn">(s : <a href="/Unicode.lean/Init/Prelude.html#String">String</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(sep : <a href="/Unicode.lean/Init/Prelude.html#String">String</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(b : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(i : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(j : <a href="/Unicode.lean/Init/Prelude.html#String.Pos">String.Pos</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(r : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#String">String</a></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#String">String</a></span></div></div>
+</div>
+</div>
+<div class="decl" id="String.splitOn'">
+<div class="def">
+<div class="gh_link">
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L22-L23">source</a>
+</div>
+<div class="decl_header">
+<span class="decl_kind">def</span>
+<span class="decl_name">
+<a class="break_within" href="/Unicode.lean/Unicode/Includes.html#String.splitOn'">String.splitOn'</a>
+</span>
+<span class="decl_args">
+<span class="fn">(s : <a href="/Unicode.lean/Init/Prelude.html#String">String</a>)</span></span>
+<span class="decl_args">
+<span class="fn">(sep : <span class="fn"><a href="/Unicode.lean/Init/Prelude.html#optParam">optParam</a> <a href="/Unicode.lean/Init/Prelude.html#String">String</a> <span class="fn">&quot &quot</span></span>)</span></span>
+<span class="decl_args">:</span>
+<div class="decl_type"><span class="fn"><a href="/Unicode.lean/Init/Prelude.html#Array">Array</a> <a href="/Unicode.lean/Init/Prelude.html#String">String</a></span></div></div>
+<details>
+<summary>Equations</summary>
+<ul class="equations">
+<li class="equation">
+<span class="fn"><span class="fn"><a href="/Unicode.lean/Unicode/Includes.html#String.splitOn'">String.splitOn'</a> <span class="fn">s</span> <span class="fn">sep</span></span> <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <span class="fn">if <span class="fn">(<span class="fn"><span class="fn">sep</span> <a href="/Unicode.lean/Init/Prelude.html#BEq.beq">==</a> <span class="fn">&quot&quot</span></span>) <a href="/Unicode.lean/Init/Prelude.html#Eq">=</a> <a href="/Unicode.lean/Init/Prelude.html#Bool.true">true</a></span> then <span class="fn">#[<span class="fn">s</span>]</span> else <span class="fn"><a href="/Unicode.lean/Unicode/Includes.html#String.splitOn'Aux">String.splitOn'Aux</a> <span class="fn">s</span> <span class="fn">sep</span> <span class="fn">0</span> <span class="fn">0</span> <span class="fn">0</span> <span class="fn">#[]</span></span></span></span></li>
+</ul>
+</details>
+</div>
+</div>
 <div class="mod_doc">
 <h2 class="markdown-heading" id="Included-Raw-Strings">Included Raw Strings <a class="hover-link" href="#Included-Raw-Strings">#</a></h2><h3 class="markdown-heading" id="UCD-Main-Directory">UCD Main Directory <a class="hover-link" href="#UCD-Main-Directory">#</a></h3></div>
 <div class="decl" id="Unicode.arabicShapingStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L15-L15">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L34-L34">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -392,7 +449,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.bidiBracketsStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L18-L18">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L37-L37">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -412,7 +469,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.bidiMirroringStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L21-L21">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L40-L40">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -432,7 +489,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.normalizationCorrectionsStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L24-L24">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L43-L43">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -452,7 +509,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.blocksStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L27-L27">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L46-L46">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -472,7 +529,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.nushuSourcesStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L30-L30">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L49-L49">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -492,7 +549,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.propListStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L33-L33">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L52-L52">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -512,7 +569,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.caseFoldingStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L36-L36">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L55-L55">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -532,7 +589,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.compositionExclusionsStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L39-L39">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L58-L58">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -552,7 +609,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedAgeStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L42-L42">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L61-L61">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -572,7 +629,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.scriptExtensionsStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L45-L45">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L64-L64">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -592,7 +649,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedCorePropertiesStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L48-L48">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L67-L67">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -612,7 +669,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.scriptsStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L51-L51">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L70-L70">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -632,7 +689,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedNormalizationPropsStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L54-L54">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L73-L73">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -652,7 +709,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.specialCasingStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L57-L57">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L76-L76">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -672,7 +729,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.eastAsianWidthStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L60-L60">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L79-L79">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -692,7 +749,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.equivalentUnifiedIdeographStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L63-L63">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L82-L82">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -712,7 +769,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.hangulSyllableTypeStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L66-L66">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L85-L85">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -732,7 +789,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unicodeDataStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L69-L69">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L88-L88">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -752,7 +809,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.indicPositionalCategoryStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L72-L72">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L91-L91">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -772,7 +829,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.verticalOrientationStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L75-L75">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L94-L94">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -792,7 +849,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.indicSyllabicCategoryStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L78-L78">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L97-L97">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -812,7 +869,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.jamoStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L81-L81">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L100-L100">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -832,7 +889,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.lineBreakStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L84-L84">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L103-L103">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -852,7 +909,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.nameAliasesStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L87-L87">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L106-L106">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -873,7 +930,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.graphemeBreakPropertyStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L94-L94">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L113-L113">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -893,7 +950,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.wordBreakPropertyStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L97-L97">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L116-L116">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -913,7 +970,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.sentenceBreakPropertyStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L100-L100">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L119-L119">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -934,7 +991,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.emojiDataStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L107-L107">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L126-L126">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -955,7 +1012,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedBidiClassStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L114-L114">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L133-L133">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -975,7 +1032,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedJoiningGroupStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L117-L117">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L136-L136">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -995,7 +1052,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedBinaryPropertiesStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L120-L120">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L139-L139">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1015,7 +1072,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedJoiningTypeStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L123-L123">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L142-L142">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1035,7 +1092,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedCombiningClassStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L126-L126">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L145-L145">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1055,7 +1112,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedLineBreakStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L129-L129">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L148-L148">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1075,7 +1132,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedDecompositionTypeStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L132-L132">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L151-L151">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1095,7 +1152,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedNameStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L135-L135">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L154-L154">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1115,7 +1172,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedEastAsianWidthStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L138-L138">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L157-L157">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1135,7 +1192,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedNumericTypeStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L141-L141">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L160-L160">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1155,7 +1212,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedGeneralCategoryStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L144-L144">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L163-L163">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1175,7 +1232,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedNumericValuesStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L147-L147">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L166-L166">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1196,7 +1253,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanDictionaryIndicesStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L154-L154">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L173-L173">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1216,7 +1273,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanOtherMappingsStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L157-L157">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L176-L176">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1236,7 +1293,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanDictionaryLikeDataStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L160-L160">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L179-L179">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1256,7 +1313,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanRadicalStrokeCountsStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L163-L163">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L182-L182">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1276,7 +1333,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanIRGSourcesStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L166-L166">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L185-L185">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1296,7 +1353,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanReadingsStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L169-L169">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L188-L188">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1316,7 +1373,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanNumericValuesStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L172-L172">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L191-L191">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1336,7 +1393,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanVariantsStr">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L175-L175">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L194-L194">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1357,7 +1414,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.instHashableChar">
 <div class="instance">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L195-L195">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L214-L214">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">instance</span>
@@ -1378,7 +1435,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.parseStrToMapFn">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L197-L241">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L217-L261">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1402,7 +1459,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.parseStrToMapFn.lineCleanup">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L238-L241">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L258-L261">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1426,7 +1483,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.arabicShapingMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L248-L248">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L268-L268">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1447,7 +1504,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.bidiBracketsMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L251-L251">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L271-L271">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1468,7 +1525,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.bidiMirroringMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L254-L254">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L274-L274">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1489,7 +1546,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.normalizationCorrectionsMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L257-L257">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L277-L277">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1510,7 +1567,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.blocksMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L260-L260">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L280-L280">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1531,7 +1588,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.nushuSourcesMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L263-L263">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L283-L283">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1552,7 +1609,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.propListMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L266-L266">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L286-L286">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1573,7 +1630,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.caseFoldingMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L269-L269">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L289-L289">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1594,7 +1651,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.compositionExclusionsMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L272-L272">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L292-L292">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1615,7 +1672,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedAgeMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L275-L275">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L295-L295">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1636,7 +1693,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.scriptExtensionsMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L278-L278">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L298-L298">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1657,7 +1714,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedCorePropertiesMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L281-L281">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L301-L301">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1678,7 +1735,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.scriptsMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L284-L284">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L304-L304">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1699,7 +1756,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedNormalizationPropsMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L287-L287">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L307-L307">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1720,7 +1777,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.specialCasingMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L290-L290">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L310-L310">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1741,7 +1798,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.eastAsianWidthMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L293-L293">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L313-L313">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1762,7 +1819,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.equivalentUnifiedIdeographMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L296-L296">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L316-L316">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1783,7 +1840,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.hangulSyllableTypeMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L299-L299">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L319-L319">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1804,7 +1861,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unicodeDataMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L302-L302">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L322-L322">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1825,7 +1882,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.indicPositionalCategoryMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L305-L305">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L325-L325">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1846,7 +1903,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.verticalOrientationMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L308-L308">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L328-L328">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1867,7 +1924,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.indicSyllabicCategoryMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L311-L311">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L331-L331">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1888,7 +1945,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.jamoMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L314-L314">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L334-L334">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1909,7 +1966,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.lineBreakMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L317-L317">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L337-L337">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1930,7 +1987,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.nameAliasesMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L320-L320">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L340-L340">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1952,7 +2009,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.graphemeBreakPropertyMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L327-L327">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L347-L347">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1973,7 +2030,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.wordBreakPropertyMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L330-L330">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L350-L350">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -1994,7 +2051,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.sentenceBreakPropertyMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L333-L333">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L353-L353">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2016,7 +2073,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.emojiDataMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L340-L340">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L360-L360">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2038,7 +2095,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedBidiClassMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L347-L347">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L367-L367">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2059,7 +2116,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedJoiningGroupMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L350-L350">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L370-L370">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2080,7 +2137,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedBinaryPropertiesMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L353-L353">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L373-L373">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2101,7 +2158,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedJoiningTypeMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L356-L356">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L376-L376">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2122,7 +2179,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedCombiningClassMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L359-L359">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L379-L379">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2143,7 +2200,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedLineBreakMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L362-L362">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L382-L382">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2164,7 +2221,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedDecompositionTypeMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L365-L365">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L385-L385">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2185,7 +2242,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedNameMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L368-L368">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L388-L388">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2206,7 +2263,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedEastAsianWidthMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L371-L371">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L391-L391">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2227,7 +2284,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedNumericTypeMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L374-L374">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L394-L394">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2248,7 +2305,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedGeneralCategoryMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L377-L377">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L397-L397">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2269,7 +2326,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.derivedNumericValuesMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L380-L380">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L400-L400">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2291,7 +2348,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanDictionaryIndicesMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L387-L387">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L407-L407">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2312,7 +2369,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanOtherMappingsMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L390-L390">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L410-L410">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2333,7 +2390,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanDictionaryLikeDataMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L393-L393">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L413-L413">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2354,7 +2411,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanRadicalStrokeCountsMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L396-L396">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L416-L416">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2375,7 +2432,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanIRGSourcesMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L399-L399">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L419-L419">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2396,7 +2453,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanReadingsMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L402-L402">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L422-L422">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2417,7 +2474,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanNumericValuesMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L405-L405">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L425-L425">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
@@ -2438,7 +2495,7 @@ Documentation</h1>
 <div class="decl" id="Unicode.unihanVariantsMap">
 <div class="def">
 <div class="gh_link">
-<a href="https://github.com/xubaiw/Unicode.lean/blob/02868d5d33a22af630effc5f04c545e41a93d9a5/Unicode/Includes.lean#L408-L408">source</a>
+<a href="https://github.com/xubaiw/Unicode.lean/blob/bc2c796e908ffc2c671a65c5ed989f3373817615/Unicode/Includes.lean#L428-L428">source</a>
 </div>
 <div class="decl_header">
 <span class="decl_kind">def</span>
