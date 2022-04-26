@@ -2,6 +2,7 @@ import Lake
 open Lake DSL
 
 package Unicode {
+  src := "./src"
   defaultFacet := PackageFacet.staticLib
   dependencies := #[
     {
