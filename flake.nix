@@ -38,10 +38,12 @@
         name = "Unicode";  # must match the name of the top-level .lean file
         project = leanPkgs.buildLeanPackage {
           inherit name;
-          deps = [ Mathlib-lean.project.${system} ];
+          deps = [
+            Mathlib-lean.project.${system}
+          ];
           # Where the lean files are located
           src = ./src;
-          extraDrvArgs = {
+          extraModArgs = {
             UCD_DIR = ./UCD;
           };
         };

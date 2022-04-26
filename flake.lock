@@ -9,11 +9,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1650748494,
-        "narHash": "sha256-2TmcwgTLaEMfu30RH1KEhMZl0NGgqs7emDB4LBdjxbg=",
+        "lastModified": 1650799993,
+        "narHash": "sha256-IrczK95v97n5lrs+CNSCbPVjR6Ev3Bh10YIP+pelflg=",
         "owner": "yatima-inc",
         "repo": "mathlib4",
-        "rev": "5d94de4c15311e16afc70201af50bec7cb51040a",
+        "rev": "ebfb93152bfed6175a1857bd176ddc55e5f5f068",
         "type": "github"
       },
       "original": {
@@ -77,11 +77,11 @@
         "temci": "temci"
       },
       "locked": {
-        "lastModified": 1650833494,
-        "narHash": "sha256-/28NjH4ddO2YhWNFKXsYJZtD0HNcZiUsL5uuxia4RPg=",
+        "lastModified": 1651002621,
+        "narHash": "sha256-G7EwtO1L2jJ2rO1j/EsCSK+NdUYa52e8sZuP3/pffew=",
         "owner": "yatima-inc",
         "repo": "lean4",
-        "rev": "f0e5119ae2fd4c61965c67727029093368bcebad",
+        "rev": "9fe1ec2a499d92993c3e425c2b779e8a3f1bcbb4",
         "type": "github"
       },
       "original": {
@@ -221,11 +221,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1650647313,
-        "narHash": "sha256-6ghnNPXDlG6/tXeIFdbP0cGnik6TGNwc615hhG9dpl4=",
+        "lastModified": 1650921206,
+        "narHash": "sha256-RGlfTC2ktqLVw0gBvZeCM//B4ig2CdQJm39sDvm0DBQ=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "a318a09a96a38382fe61a7f85d03ea6e25c46c56",
+        "rev": "3a9e0f239d80fa134e8fcbdee4dfc793902da37e",
         "type": "github"
       },
       "original": {
