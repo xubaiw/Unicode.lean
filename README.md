@@ -12,12 +12,10 @@ Unicode related operations for Lean 4.
 In your lakefile.lean add `Unicode.lean` as dependency:
 
 ```lean
-package foo {
-  dependencies := #[{
-    name := `Unicode
-    src := Source.git "https://github.com/xubaiw/Unicode.lean" "main" 
-  }]
-}
+package foo
+
+require Unicode from git
+  "https://github.com/xubaiw/Unicode.lean" @ "main" 
 ```
 
 ## Usage
