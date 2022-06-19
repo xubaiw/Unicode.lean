@@ -18,7 +18,7 @@ jobs:
       uses: xubaiw/actions-doc-gen4@5ad4ea40c61458a2ffbfaa62019295d738cfc1e9
       with:
         modules: Unicode
-        root-url: /Unicode.lean/
+        root-url: Unicode
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4.2.2
