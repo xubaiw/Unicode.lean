@@ -1,12 +1,11 @@
 import Lake
 open Lake DSL
 
-package Unicode {
-  defaultFacet := PackageFacet.staticLib
-  dependencies := #[
-    {
-      name := `mathlib
-      src := Source.git "https://github.com/leanprover-community/mathlib4" "0bdee9fa7f180c43a9ca75fd714e49125d0a2861"
-    }
-  ]
-}
+package Unicode
+
+@[defaultTarget]
+lean_lib Unicode
+
+require mathlib from git
+  "https://github.com/leanprover-community/mathlib4.git"@"ecd37441047e490ff2ad339e16f45bb8b58591bd"
+
