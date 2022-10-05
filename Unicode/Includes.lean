@@ -1,7 +1,5 @@
 import Lean.Data.HashMap
 
-open Std
-
 partial def String.splitOn'Aux (s sep : String) (b : Pos) (i : Pos) (j : Pos) (r : Array String) : Array String :=
   if s.atEnd i then
     if sep.atEnd j then
@@ -213,8 +211,8 @@ private def decodeHex! (s : String) : Nat :=
 instance : Hashable Char := ⟨ λ c => String.hash $ toString c ⟩ 
 
 /-- Parse data file `String` into `HashMap`, the unit in parameter is left for `Thunk`. -/
-def parseStrToMapFn (s : String) (unit : Unit) : HashMap Char (List String)  := Id.run do
-  let mut rangeStarts := HashMap.empty
+def parseStrToMapFn (s : String) (unit : Unit) : Lean.HashMap Char (List String)  := Id.run do
+  let mut rangeStarts := Lean.HashMap.empty
   let mut result := .empty
   for line in s.splitOn' "\n" |>.filterMap lineCleanup do
     let splits := line.splitOn ";" |>.map (·.splitOn "\t") |>.join |>.map String.trim
