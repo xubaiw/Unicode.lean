@@ -3,5 +3,5 @@ open Lake DSL
 
 package Unicode
 
-@[defaultTarget]
+@[default_target]
 lean_lib Unicode
