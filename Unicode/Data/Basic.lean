@@ -171,8 +171,11 @@ def simpleUppercaseMap : Std.HashMap Char Char :=
 /-- Simple titlecase map from UnicodeData.txt -/
 -- small so no need to thunk
 def simpleTitlecaseMap : Std.HashMap Char Char :=
-  unicodeDataMap.filterMap fun _ lst =>
-    if (lst.get! 12).isEmpty then none else
+  unicodeDataMap.filterMap fun chr lst =>
+    if (lst.get! 12).isEmpty then
+      -- default to uppercase
+      simpleUppercaseMap.find? chr
+    else
       some (Char.ofHexString! (lst.get! 12))
 
 /-- Simple case folding map from CaseFolding.txt -/
