@@ -1,4 +1,4 @@
-import Unicode.Includes
+import Unicode.Data
 
 namespace Unicode
 
@@ -96,15 +96,15 @@ def toString : GeneralCategory → String
   | casedLetter           => "LC"
   | modifierLetter        => "Lm"
   | otherLetter           => "Lo"
-  | letter                => "L" 
+  | letter                => "L"
   | nonspacingMark        => "Mn"
   | spacingMark           => "Mc"
   | enclosingMark         => "Me"
-  | mark                  => "M" 
+  | mark                  => "M"
   | decimalNumber         => "Nd"
   | letterNumber          => "Nl"
   | otherNumber           => "No"
-  | number                => "N" 
+  | number                => "N"
   | connectorPunctuation  => "Pc"
   | dashPunctuation       => "Pd"
   | openPunctuation       => "Ps"
@@ -112,25 +112,25 @@ def toString : GeneralCategory → String
   | initialPunctuation    => "Pi"
   | finalPunctuation      => "Pf"
   | otherPunctuation      => "Po"
-  | punctuation           => "P" 
+  | punctuation           => "P"
   | mathSymbol            => "Sm"
   | currencySymbol        => "Sc"
   | modifierSymbol        => "Sk"
   | otherSymbol           => "So"
-  | symbol                => "S" 
+  | symbol                => "S"
   | spaceSeparator        => "Zs"
   | lineSeparator         => "Zl"
   | paragraphSeparator    => "Zp"
-  | separator             => "Z" 
+  | separator             => "Z"
   | control               => "Cc"
   | format                => "Cf"
   | surrogate             => "Cs"
   | privateUse            => "Co"
   | unassigned            => "Cn"
-  | other                 => "C" 
+  | other                 => "C"
 
 /-- Convert `GeneralCategory` to abbrevation `String`. -/
-instance : ToString GeneralCategory := ⟨ GeneralCategory.toString ⟩ 
+instance : ToString GeneralCategory := ⟨GeneralCategory.toString⟩
 
 end GeneralCategory
 
@@ -142,9 +142,8 @@ end GeneralCategory
   use `charInGeneralCategory` instead.
 -/
 def getGeneralCategory (c : Char) : GeneralCategory :=
-  let map := unicodeDataMap.get
-  match map.find? c |>.bind (·.get? 1) with
-  | some s => GeneralCategory.fromString s
+  match CharMap.find? Data.unicodeDataMap c with
+  | some data => .fromString <| data.get! 1
   | none => GeneralCategory.unassigned
 
 open GeneralCategory in

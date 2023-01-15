@@ -1,7 +1,10 @@
-import Unicode.Includes
+import Unicode.Data
 
 namespace Unicode
 
+/-- Get unicode character name -/
+@[inline]
 def getName (c : Char) : Option String :=
-  let map := unicodeDataMap.get
-  map.find? c |>.bind (·.get? 0)
+  CharMap.find? Data.unicodeDataMap c |>.bind (·.get? 0)
+
+end Unicode
