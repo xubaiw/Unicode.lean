@@ -145,8 +145,7 @@ def parseStrToMapFn (s : String) : Std.HashMap Char (List String) := Id.run do
   return result
 
 /-- Map from UnicodeData.txt -/
--- ubiquitous so it's not thunked
-def unicodeDataMap : Std.HashMap Char (List String) := Id.run do
+def unicodeDataMap : Thunk <| Std.HashMap Char (List String) := Id.run do
   let mut m := Std.HashMap.empty
   for line in splitLines unicodeDataStr do
     match line.splitOn ";" with
@@ -155,32 +154,29 @@ def unicodeDataMap : Std.HashMap Char (List String) := Id.run do
   return m
 
 /-- Simple lowercase map from UnicodeData.txt -/
--- small so no need to thunk
-def simpleLowercaseMap : Std.HashMap Char Char :=
-  unicodeDataMap.filterMap fun _ lst =>
+def simpleLowercaseMap : Thunk <| Std.HashMap Char Char :=
+  unicodeDataMap.get.filterMap fun _ lst =>
     if (lst.get! 11).isEmpty then none else
       some (Char.ofHexString! (lst.get! 11))
 
 /-- Simple uppercase map from UnicodeData.txt -/
--- small so no need to thunk
-def simpleUppercaseMap : Std.HashMap Char Char :=
-  unicodeDataMap.filterMap fun _ lst =>
+def simpleUppercaseMap : Thunk <| Std.HashMap Char Char :=
+  unicodeDataMap.get.filterMap fun _ lst =>
     if (lst.get! 13).isEmpty then none else
       some (Char.ofHexString! (lst.get! 13))
 
 /-- Simple titlecase map from UnicodeData.txt -/
 -- small so no need to thunk
 def simpleTitlecaseMap : Std.HashMap Char Char :=
-  unicodeDataMap.filterMap fun chr lst =>
+  unicodeDataMap.get.filterMap fun chr lst =>
     if (lst.get! 12).isEmpty then
       -- default to uppercase
-      simpleUppercaseMap.find? chr
+      CharMap.find? simpleUppercaseMap chr
     else
       some (Char.ofHexString! (lst.get! 12))
 
 /-- Simple case folding map from CaseFolding.txt -/
--- small so no need to thunk
-def simpleCaseFoldMap : Std.HashMap Char Char := Id.run do
+def simpleCaseFoldMap : Thunk <| Std.HashMap Char Char := Id.run do
   let mut m := Std.HashMap.empty
   for line in splitLines caseFoldingStr do
     match (line.push ' ').splitOn "; " with
@@ -192,9 +188,8 @@ def simpleCaseFoldMap : Std.HashMap Char Char := Id.run do
   return m
 
 /-- Full lowercase map from UnicodeData.txt and SpecialCasing.txt -/
--- small so no need to thunk
-def fullLowercaseMap : Std.HashMap Char String := Id.run do
-  let mut m := simpleLowercaseMap.mapVal fun _ v => v.toString
+def fullLowercaseMap : Thunk <| Std.HashMap Char String := Id.run do
+  let mut m := simpleLowercaseMap.get.mapVal fun _ v => v.toString
   for line in splitLines specialCasingStr do
     match (line.push ' ').splitOn "; " with
     | chr :: lst =>
@@ -206,9 +201,8 @@ def fullLowercaseMap : Std.HashMap Char String := Id.run do
   return m
 
 /-- Full lowercase map from UnicodeData.txt and SpecialCasing.txt -/
--- small so no need to thunk
-def fullUppercaseMap : Std.HashMap Char String := Id.run do
-  let mut m := simpleUppercaseMap.mapVal fun _ v => v.toString
+def fullUppercaseMap : Thunk <| Std.HashMap Char String := Id.run do
+  let mut m := simpleUppercaseMap.get.mapVal fun _ v => v.toString
   for line in splitLines specialCasingStr do
     match (line.push ' ').splitOn "; " with
     | chr :: lst =>
@@ -220,9 +214,8 @@ def fullUppercaseMap : Std.HashMap Char String := Id.run do
   return m
 
 /-- Full titlecase map from UnicodeData.txt and SpecialCasing.txt -/
--- small so no need to thunk
-def fullTitlecaseMap : Std.HashMap Char String := Id.run do
-  let mut m := simpleUppercaseMap.mapVal fun _ v => v.toString
+def fullTitlecaseMap : Thunk <| Std.HashMap Char String := Id.run do
+  let mut m := simpleUppercaseMap.get.mapVal fun _ v => v.toString
   for line in splitLines specialCasingStr do
     match (line.push ' ').splitOn "; " with
     | chr :: lst =>
@@ -234,8 +227,7 @@ def fullTitlecaseMap : Std.HashMap Char String := Id.run do
   return m
 
 /-- Full case folding map from CaseFolding.txt -/
--- small so no need to thunk
-def fullCaseFoldMap : Std.HashMap Char String := Id.run do
+def fullCaseFoldMap : Thunk <| Std.HashMap Char String := Id.run do
   let mut m := Std.HashMap.empty
   for line in splitLines caseFoldingStr do
     match (line.push ' ').splitOn "; " with
