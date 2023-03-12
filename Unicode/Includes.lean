@@ -53,7 +53,7 @@ def caseFoldingStr := include_str "../UCD/CaseFolding.txt"
 
 /-- Includes the CompositionExclusions.txt string. -/
 def compositionExclusionsStr := include_str "../UCD/CompositionExclusions.txt"
-  
+
 /-- Includes the DerivedAge.txt string. -/
 def derivedAgeStr := include_str "../UCD/DerivedAge.txt"
 
@@ -111,7 +111,7 @@ def graphemeBreakPropertyStr := include_str "../UCD/auxiliary/GraphemeBreakPrope
 
 /-- Includes the WordBreakProperty.txt string. -/
 def wordBreakPropertyStr := include_str "../UCD/auxiliary/WordBreakProperty.txt"
-  
+
 /-- Includes the SentenceBreakProperty.txt string. -/
 def sentenceBreakPropertyStr := include_str "../UCD/auxiliary/SentenceBreakProperty.txt"
 
@@ -207,8 +207,36 @@ private def decodeHex! (s : String) : Nat :=
     | c => panic! s!"Invalid hex digit {c}"
     foldlHexDigits acc d := 16 * acc + d
 
+/-- Encode number into hex string of length at least four. -/
+private def encodeHex (n : Nat) : String := Id.run do
+  let hex := #['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
+  let mut ds := []
+  let mut n := n
+  for _ in [:4] do
+    ds := hex[n % 16]! :: ds
+    n := n / 16
+  while n > 0 do
+    ds := hex[n % 16]! :: ds
+    n := n / 16
+  return String.mk ds
+
+/-- Encode Hangul syllable into string -/
+private def encodeHangulSyllable! (n : Nat) : String :=
+  -- See Unicode Standard 3.12
+  let JamoL := #["G", "GG", "N", "D", "DD", "R", "M", "B", "BB", "S", "SS", "", "J", "JJ", "C", "K", "T", "P", "H"]
+  let JamoV := #["A", "AE", "YA", "YAE", "EO", "E", "YEO", "YE", "O", "WA", "WAE", "OE", "YO", "U", "WEO", "WE", "WI", "YU", "EU", "YI", "I"]
+  let JamoT := #["", "G", "GG", "GS", "N", "NJ", "NH", "D", "L", "LG", "LM", "LB", "LS", "LT", "LP", "LH", "M", "B", "BS", "S", "SS", "NG", "J", "C", "K", "T", "P", "H"]
+  assert! (n ≥ 0xAC00)
+  assert! (n < 0xAC00 + JamoL.size * JamoV.size * JamoT.size)
+  let SIndex := n - 0xAC00
+  let LIndex := SIndex / (JamoV.size * JamoT.size)
+  let NIndex := SIndex % (JamoV.size * JamoT.size)
+  let VIndex := NIndex / JamoT.size
+  let TIndex := NIndex % JamoT.size
+  JamoL[LIndex]! ++ JamoV[VIndex]! ++ JamoT[TIndex]!
+
 /-- Make `Char` `Hashable` as key of `HashMap`. -/
-instance : Hashable Char := ⟨ λ c => String.hash $ toString c ⟩ 
+instance : Hashable Char := ⟨ λ c => String.hash $ toString c ⟩
 
 /-- Parse data file `String` into `HashMap`, the unit in parameter is left for `Thunk`. -/
 def parseStrToMapFn (s : String) (unit : Unit) : Lean.HashMap Char (List String)  := Id.run do
@@ -233,16 +261,24 @@ def parseStrToMapFn (s : String) (unit : Unit) : Lean.HashMap Char (List String)
       if let some second := splits.get? 1 then
         -- backward range start
         if second.endsWith ", First>" then
-          let name := second |>.replace ", First>" "" |>.replace "<" ""
-          rangeStarts := rangeStarts.insert name (decodeHex! first)
+          let rangeName := second |>.replace ", First>" "" |>.replace "<" ""
+          rangeStarts := rangeStarts.insert rangeName (decodeHex! first)
         -- backward range end
         else if second.endsWith ", Last>" then
-          let name := second |>.replace ", Last>" "" |>.replace "<" ""
-          let start := rangeStarts.find! name
-          let stop := decodeHex! first
-          let newTail := name::splits.tail!.tail!
-          for val in [start:(stop+1)] do
-            result := result.insert (.ofNat val) newTail
+          let rangeName := second |>.replace ", Last>" "" |>.replace "<" ""
+          let rangeStart := rangeStarts.find! rangeName
+          let rangeStop := decodeHex! first
+          let newTail (val : Nat) :=
+            if "Hangul Syllable".isPrefixOf rangeName then
+              s!"HANGUL SYLLABLE {encodeHangulSyllable! val}"::splits.tail!.tail!
+            else if "CJK Ideograph".isPrefixOf rangeName then
+              s!"CJK UNIFIED IDEOGRAPH-{encodeHex val}"::splits.tail!.tail!
+            else if "Tangut Ideograph".isPrefixOf rangeName then
+              s!"TANGUT IDEOGRAPH-{encodeHex val}"::splits.tail!.tail!
+            else
+              s!"<{rangeName}>"::splits.tail!.tail!
+          for val in [rangeStart:rangeStop+1] do
+            result := result.insert (.ofNat val) (newTail val)
         -- single
         else
           result := result.insert (.ofNat $ decodeHex! first) (splits.tail!)
@@ -287,7 +323,7 @@ def caseFoldingMap := Thunk.mk $ parseStrToMapFn caseFoldingStr
 
 /-- Includes the CompositionExclusions.txt data. -/
 def compositionExclusionsMap := Thunk.mk $ parseStrToMapFn compositionExclusionsStr
-  
+
 /-- Includes the DerivedAge.txt data. -/
 def derivedAgeMap := Thunk.mk $ parseStrToMapFn derivedAgeStr
 
@@ -345,7 +381,7 @@ def graphemeBreakPropertyMap := Thunk.mk $ parseStrToMapFn graphemeBreakProperty
 
 /-- Includes the WordBreakProperty.txt data. -/
 def wordBreakPropertyMap := Thunk.mk $ parseStrToMapFn wordBreakPropertyStr
-  
+
 /-- Includes the SentenceBreakProperty.txt data. -/
 def sentenceBreakPropertyMap := Thunk.mk $ parseStrToMapFn sentenceBreakPropertyStr
 
