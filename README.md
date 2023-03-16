@@ -1,5 +1,7 @@
 # Unicode.lean
 
+**UNMAINTAINED: For Lean Unicode library refer to fgdorais' [fork](https://github.com/fgdorais/Unicode.lean/) or his [another library](https://github.com/fgdorais/lean4-unicode-basic).**
+
 Unicode related operations for Lean 4.
 
 - [x] Unicode General Category
